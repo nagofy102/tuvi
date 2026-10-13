@@ -119,6 +119,10 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+Kế hoạch thẩm định chuyên môn đề xuất được lưu tại `../design/chart-validation-plan.md`.
+Bộ lá số chuẩn 200–300 ca, việc thuê chuyên gia và các mốc nghiệm thu trong kế hoạch chưa
+được triển khai; không coi chúng là bằng chứng pass hiện tại.
+
 Sau mỗi lần chạy, ghi ngày, revision Git, lệnh, môi trường, số ca và lỗi còn tồn tại.
 Fixture Tử Vi phải ghi nguồn, trường phái và phiên bản quy tắc; không tự lấy output của
 thuật toán làm expected output rồi coi là kiểm chứng.

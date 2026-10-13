@@ -19,6 +19,10 @@ There is no account storage, AI integration, PWA service worker or database migr
 - `schema.sql`: proposed PostgreSQL persistence model; not an applied migration.
 - `implementation.md`: actual implementation, supported scope, commands and known limitations.
 - `font-assets.md`: local font derivatives, licenses and reproducibility.
+- `ai-interpretation-research.md`: researched AI/open-weight options, quality gates and proposed
+  interpretation architecture; not an approved implementation or spending decision.
+- `../design/chart-validation-plan.md`: proposed calendar remediation options, expert review
+  milestones, responsibilities and release gates; not implemented or signed off.
 - `../test/README.md`: verification status and acceptance gates.
 
 ## Decisions
@@ -35,6 +39,10 @@ Review the selected Zi Wei profile against expert-authored Vietnamese chart fixt
 school-specific production accuracy. Extend unsupported Vietnamese/Chinese lunar-month differences
 through a verified engine adapter rather than silently normalizing dates. Persistence, AI and PWA
 are separate implementation phases; do not advertise them as available.
+
+The user requested documenting the retention roadmap and researching high-quality interpretation
+before deciding on further coding. Do not start AI integration or paid experiments from these proposals.
+See `../design/retention-roadmap.md` and `ai-interpretation-research.md` for the pending decisions.
 
 ## Remaining domain decisions
 

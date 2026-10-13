@@ -13,10 +13,15 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
   đổi cỡ chữ, reduced motion, CTA mobile và in qua trình duyệt.
 - Thiết kế giấy lụa, xanh đậm, vàng trầm; bộ font Việt hóa phục vụ từ cùng website.
 - Kiểm tra tương phản và Lighthouse được ghi ở `../test/README.md`.
+- Lộ trình giữ chân đã lưu; chưa được phê duyệt triển khai. Người dùng sẽ quyết định code sau
+  và muốn ưu tiên nghiên cứu luận giải chất lượng cao.
 
 ## Tài liệu
 
 - `product-spec.md`: trải nghiệm, màu sắc, khả năng tiếp cận và tiêu chí sản phẩm.
+- `retention-roadmap.md`: ưu tiên chức năng, yêu cầu BA, chỉ số và lộ trình đề xuất; chưa triển khai.
+- `chart-validation-plan.md`: phương án xử lý giới hạn lịch, 5 mốc thẩm định an sao và điều kiện nghiệm thu; chưa triển khai.
+- `../dev/ai-interpretation-research.md`: lựa chọn AI/mã nguồn mở và điều kiện chất lượng cho luận giải.
 - `../dev/architecture.md`: cấu trúc ứng dụng và trách nhiệm từng module.
 
 ## Bước tiếp theo
