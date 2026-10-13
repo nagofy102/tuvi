@@ -1,0 +1,124 @@
+# Test context and acceptance plan
+
+## Mục đích
+
+Lưu tiêu chí nghiệm thu, dữ liệu tham chiếu, kết quả kiểm tra và lỗi còn mở.
+Không đánh dấu “pass” cho kiểm tra chưa chạy. Mã kiểm thử sẽ nằm trong `tests/`.
+
+## Trạng thái hiện tại
+
+Bước 2–4 đã có ứng dụng, bộ chuyển lịch, adapter an sao, trang SEO và ảnh OpenGraph thật.
+`dev/schema.sql` chưa được thực thi trên PostgreSQL; kiểm tra SQL và migration ở giai đoạn tích hợp DB.
+Các kiểm tra bên dưới xác nhận phần mềm và cấu hình tham khảo; không xác nhận khả năng
+dự đoán hoặc độ chính xác theo mọi trường phái Tử Vi Việt Nam.
+
+## Kết quả Bước 2–4 — 2026-10-13
+
+Môi trường: Node.js 24.19.0, Next.js 16.4.0, TypeScript 7.0.2, Chromium hệ thống.
+Checkout nền `f1eccda`; các kết quả này được ghi nhận trước khi tạo commit triển khai Bước 2–4.
+
+| Lệnh/kiểm tra | Kết quả thực tế |
+| --- | --- |
+| `npm --cache /tmp/tuvi-npm-cache ci` | Cài lại 213 package từ lockfile thành công |
+| `npm run typecheck` | Pass |
+| `npm test` | 59/59 ca qua, 3 file test |
+| `npm run build` | Pass; 35 trang/tài nguyên prerender, route còn lại render khi cần |
+| `npm run test:e2e` | 8/8 ca qua trên bản production mới |
+| `npm run format:check` và `git diff --check` | Pass |
+| Axe WCAG A/AA landing page | Không có vi phạm tự động phát hiện |
+| Axe enhanced color contrast landing page | Không có vi phạm ngưỡng tương phản chữ AAA tự động phát hiện |
+| Lighthouse mobile giả lập | Performance 95, Accessibility 100, SEO 100 |
+
+Lighthouse 13.5.0 đo ngày 13/10/2026 lúc 12:27 (Asia/Bangkok) trên server production cục bộ,
+cấu hình mobile/network/CPU throttling mặc định. FCP 1.0s, LCP 2.6s, TBT 150ms, CLS 0.
+Đây là một lần đo của môi trường này, không cam kết mọi thiết bị hoặc domain triển khai đạt cùng điểm.
+Kiểm tra tự động tương phản không thay thế đánh giá khả năng tiếp cận thủ công đầy đủ.
+Kiểm tra lần gửi biểu mẫu đầu tiên trong Chromium cục bộ (không throttling) đo từ click
+đến thông báo kết quả: 366ms. Chưa xác nhận mục tiêu <1 giây trên mọi mạng/thiết bị thực.
+
+## Bằng chứng và cách chạy lại
+
+- Fixture lịch độc lập gồm 11 ngày Tết (1968, 1985, 2007 và 2020–2027), ngày trước Tết,
+  tháng nhuận 2023 và Gregorian leap-year edge cases.
+- Test adapter kiểm tra công thức đếm Mệnh/Thân ở 12 tháng × 12 giờ, 14 chính tinh,
+  cấu trúc 12 cung, một Thân, mốc giờ Tý, chính sách tháng nhuận và đầu năm âm lịch.
+- Ca Tử Vi cục/ngày áp dụng công thức đã ghi nguồn; không phải corpus được chuyên gia thẩm định.
+- Ca tháng nhuận 2 năm 1985 xác nhận bộ an sao từ chối rõ ràng ngày lịch Việt Nam mà
+  thư viện không biểu diễn được, thay vì làm sai lệch dữ liệu.
+- E2E kiểm tra sinh lá số không POST thông tin cá nhân, đổi lịch giữ ngày, dialog/Escape,
+  mobile 320px với cỡ chữ lớn, lỗi ngày sinh, SEO/JSON-LD, route 404, sitemap và ảnh PNG 1200×630.
+- Ảnh kiểm tra được tạo trong `test-results/` (ignored): desktop, mobile, trang năm tuổi và OG.
+
+Để đo lại Lighthouse, chạy `npm run build` và `npm run start`, rồi ở terminal khác:
+
+```sh
+CHROME_PATH=/usr/bin/chromium npx --no-install lighthouse http://127.0.0.1:3000 \
+  --chrome-flags='--headless --no-sandbox' \
+  --only-categories=performance,accessibility,seo \
+  --output=json --output-path=/tmp/tuvi-lighthouse.json
+```
+
+Playwright tự chạy server production và yêu cầu port 3000 trống. Đã sửa cấu hình để không
+tái sử dụng server cũ: server còn chạy sau rebuild có thể trỏ đến chunk JavaScript đã thay đổi,
+khiến hydration thất bại dù code build mới đúng. Dừng/restart server do mình khởi chạy trước khi test.
+
+## Giới hạn chưa nghiệm thu
+
+- Chưa thẩm định trường phái Tử Vi bởi chuyên gia; chưa hỗ trợ mọi khác biệt tháng nhuận Việt–Trung.
+- Chưa kiểm chứng toàn bộ ngày 1900–2099 bằng một bộ fixture độc lập đầy đủ.
+- Chưa kiểm thử trên thiết bị thật, screen reader thực hoặc mọi trình duyệt.
+- Chưa có DB, AI, tài khoản, PWA, HD PNG export hoặc triển khai công khai để nghiệm thu.
+
+## Kết quả kiểm tra Bước 1 — 2026-10-13
+
+Trên checkout nền `f1eccda` với thay đổi Bước 1 chưa commit:
+
+- `git diff --check`: pass cho diff tracked.
+- Kiểm tra bằng Node.js: 9 file tài liệu/schema tồn tại, không có trailing whitespace,
+  có newline cuối file, code fence Markdown cân bằng.
+- So sánh mô hình với schema: đủ 12 mã cung duy nhất, thứ tự/mã khớp nhau.
+- Kiểm tra tham chiếu tên bảng dạng văn bản: 14 bảng, không có tên bảng tham chiếu bị thiếu.
+
+Đây là kiểm tra tài liệu, không xác nhận SQL hợp lệ khi chạy, migration thành công
+hoặc đúng thuật toán Tử Vi. Chưa chạy test ứng dụng, lịch âm, build hay Lighthouse.
+
+## Ma trận nghiệm thu
+
+| Giai đoạn | Kiểm tra bắt buộc | Bằng chứng cần lưu |
+| --- | --- | --- |
+| Bước 1 | Liên kết tài liệu, mô hình sao/cung/phiên bản, phạm vi đã làm/chưa làm | Kiểm tra file và diff |
+| Bước 2 | Build/typecheck, form, 12 cung, tooltip bàn phím, mobile, cỡ chữ | Lệnh thực tế, kết quả tương tác và viewport |
+| Bước 3 | Solar/lunar đối chiếu nguồn độc lập, lá số được chuyên gia duyệt | Fixture có nguồn, số ca pass/fail, profile và engine version |
+| Bước 4 | Route SEO, canonical, robots, JSON-LD, OG tiếng Việt | Response thật và kiểm tra ảnh |
+| Persistence | Migration, FK/uniqueness/cascade, giao dịch đủ 12 cung, phân quyền | PostgreSQL integration tests, rollback và migration replay |
+| Production | PWA/export/AI, rate limit, riêng tư, backup, Lighthouse >90 | Kết quả thực đo trên bản build production |
+
+## Các ca biên Bước 3
+
+- Ngày dương không tồn tại; 29/02 năm nhuận và năm thế kỷ không nhuận.
+- Âm lịch tháng 29/30 ngày; tháng nhuận thật và cờ nhuận sai.
+- Giao thừa, ngày đầu/cuối tháng, âm lịch thuộc năm khác năm dương lịch.
+- 22:59, 23:00, 23:59, 00:00, 00:59, 01:00; kiểm tra từng chính sách giờ Tý.
+- Múi giờ khác Việt Nam, thay đổi offset lịch sử và giờ DST trùng/không tồn tại.
+- Thiếu giờ sinh, ngoài khoảng hỗ trợ, input không hợp lệ và profile chưa duyệt.
+- Cùng input/quy tắc cho cùng kết quả; đổi tên không đổi sao; chuyển lịch giữ nguyên ngày sinh.
+- Đủ 12 cung duy nhất, đúng một Thân, sao hợp catalog; đại hạn/tiểu hạn theo profile.
+
+Round-trip solar→lunar→solar là kiểm tra bổ sung, không thay thế đối chiếu độc lập:
+hai chiều cùng sai vẫn có thể round-trip thành công.
+
+## Các ca UI, SEO và riêng tư
+
+- Toàn bộ tác vụ bằng bàn phím; focus/tooltip, trình đọc màn hình, zoom 200%, reduced motion.
+- Không tràn ở 320px; CTA không che nội dung; tăng font không làm mất hành động.
+- Kiểm tra tương phản từng cặp màu, không kết luận AAA từ bảng màu đơn thuần.
+- Dữ liệu mẫu được gắn nhãn; thiếu điểm vận hạn không hiện phần trăm bịa đặt.
+- Route năm/slug không hợp lệ trả 404; trang cá nhân không lọt sitemap hoặc cache công khai.
+- Không truy cập được lá số người khác; share hết hạn/thu hồi không truy cập được.
+- AI lỗi/timeout không làm hỏng lá số; thiếu provider không giả phản hồi từ AI.
+
+## Handoff
+
+Sau mỗi lần chạy, ghi ngày, revision Git, lệnh, môi trường, số ca và lỗi còn tồn tại.
+Fixture Tử Vi phải ghi nguồn, trường phái và phiên bản quy tắc; không tự lấy output của
+thuật toán làm expected output rồi coi là kiểm chứng.
