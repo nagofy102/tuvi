@@ -101,12 +101,15 @@ describe('chart adapter and independently specified palace rules', () => {
     expect(chart.lunar).toEqual({ year: 1985, month: 1, day: 1, isLeapMonth: false });
     expect(chart.yearName).toBe('Ất Sửu');
   });
-  it('clearly rejects a valid Vietnamese leap month absent from the upstream chart calendar', () => {
+  it('preserves a valid Vietnamese leap month absent from the upstream chart calendar', () => {
     const input: BirthInput = {
       ...BASE,
       date: { year: 1985, month: 2, day: 1, isLeapMonth: true },
     };
-    expect(() => calculateChart(input)).toThrow(/chưa hỗ trợ ngày âm lịch Việt Nam/);
+    const chart = calculateChart(input);
+    expect(chart.lunar).toEqual(input.date);
+    expect(chart.effectiveLunar).toEqual(input.date);
+    expect(chart.palaces.find((p) => p.name === 'Mệnh')?.branch).toBe('Mão');
   });
   it('supports gender independently without leaking global config', () => {
     const first = calculateChart(BASE);

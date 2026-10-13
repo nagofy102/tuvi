@@ -75,7 +75,7 @@ test('generates sourced reference interpretations and refreshes them for a new c
   expect(transfers).toEqual([]);
 });
 
-test('does not show a stale interpretation after an unsupported leap-month birth', async ({
+test('supports the Vietnamese 1985 leap month and hides readings on an invalid leap input', async ({
   page,
 }) => {
   await page.goto('/');
@@ -87,7 +87,12 @@ test('does not show a stale interpretation after an unsupported leap-month birth
   await page.getByLabel('Ngày sinh', { exact: true }).fill('1');
   await page.getByRole('checkbox', { name: /tháng nhuận/i }).check();
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
-  await expect(page.locator('#form-error')).toContainText('chưa hỗ trợ');
+  await expect(page.getByRole('status')).toContainText('Đã lập lá số');
+  await expect(page.locator('.interpretation-panel')).toBeVisible();
+  await expect(page.locator('#la-so')).toContainText('1985');
+  await page.getByLabel('Năm sinh', { exact: true }).fill('1986');
+  await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
+  await expect(page.locator('#form-error')).toContainText('không tồn tại');
   await expect(page.locator('.interpretation-panel')).toHaveCount(0);
   await expect(page.locator('#la-so')).toContainText(
     'không phải kết quả của lần nhập chưa thành công',

@@ -1,5 +1,11 @@
 # RUN_TECH_AUDIT — Milestone 2 technical investigation
 
+Current status: the findings below describe the original upstream investigation.
+The later authorized calendar patch uses an isolated Vietnamese seam; see
+`calendar-remediation.md` and `../dev/calendar-remediation.md` for current verification.
+The unchanged upstream comparison remains in reports; use `AUDIT_PROJECT_STRICT=1`
+for the current project gate rather than treating upstream findings as patched-engine failures.
+
 ## Scope and execution
 
 Authorized task: implement and run the technical audit first. This does not authorize an

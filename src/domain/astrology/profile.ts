@@ -1,2 +1,2 @@
 // Shared provenance identifier; importing it must not load the chart engine in the client.
-export const RULE_PROFILE = 'iztro-default-vietnamese-lunar-v1';
+export const RULE_PROFILE = 'iztro-default-vietnamese-lunar-v2';

@@ -1,4 +1,4 @@
-import { astro } from 'iztro';
+import { astro } from './vendor/iztro-vietnam.cjs';
 import { CALENDAR_VERSION } from '../calendar/types';
 import { normalizeDate, dateString, solarToLunar } from '../calendar/convert';
 import { BRANCHES, mod, napAm, timeIndex, yearName } from './sexagenary';
@@ -18,20 +18,22 @@ export function calculateChart(input: BirthInput): ChartResult {
   )
     throw new Error('Cấu hình an lá số không hợp lệ.');
   let effectiveLunar = birth.lunar;
+  let effectiveSolar = birth.solar;
   if (index === 12 && input.ziPolicy === 'next_day_at_23') {
     const next = new Date(Date.UTC(birth.solar.year, birth.solar.month - 1, birth.solar.day + 1));
-    effectiveLunar = solarToLunar({
+    effectiveSolar = {
       year: next.getUTCFullYear(),
       month: next.getUTCMonth() + 1,
       day: next.getUTCDate(),
-    });
+    };
+    effectiveLunar = solarToLunar(effectiveSolar);
   }
-  // Pass the Vietnamese lunar date explicitly. Never treat Chinese solar conversion as Vietnam's calendar.
+  // The isolated engine bridge reads this real civil date using Vietnam's calendar.
   const chart = (() => {
     try {
       return astro.withOptions({
-        type: 'lunar',
-        dateStr: dateString(effectiveLunar),
+        type: 'solar',
+        dateStr: dateString(effectiveSolar),
         timeIndex: index % 12,
         gender: input.gender,
         isLeapMonth: effectiveLunar.isLeapMonth,
@@ -111,7 +113,7 @@ export function calculateChart(input: BirthInput): ChartResult {
     cuc: chart.fiveElementsClass,
     palaces,
     provenance: {
-      engine: 'iztro-2.6.2',
+      engine: 'iztro-2.6.2-vn-bridge-v1',
       calendar: CALENDAR_VERSION,
       profile: RULE_PROFILE,
       leapPolicy: input.leapPolicy,

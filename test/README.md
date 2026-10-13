@@ -64,7 +64,8 @@ khiến hydration thất bại dù code build mới đúng. Dừng/restart serve
 
 ## Giới hạn chưa nghiệm thu
 
-- Chưa thẩm định trường phái Tử Vi bởi chuyên gia; chưa hỗ trợ mọi khác biệt tháng nhuận Việt–Trung.
+- Chưa thẩm định trường phái Tử Vi bởi chuyên gia. Seam lịch Việt Nam hiện đã được triển khai;
+  phạm vi kiểm tra được ghi riêng tại `calendar-remediation.md`, không xác nhận mọi trường phái.
 - Chưa kiểm chứng toàn bộ ngày 1900–2099 bằng một bộ fixture độc lập đầy đủ.
 - Chưa kiểm thử trên thiết bị thật, screen reader thực hoặc mọi trình duyệt.
 - Chưa có DB, AI, tài khoản, PWA, HD PNG export hoặc triển khai công khai để nghiệm thu.
@@ -119,6 +120,19 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Mốc 1 theo lộ trình PM mới — sửa lịch Việt Nam
+
+Bản tích hợp engine có seam lịch Việt Nam và profile v2 đã triển khai. Xem
+`calendar-remediation.md` cho lệnh, kết quả và phạm vi; các kết quả phía dưới là
+lịch sử trước bản sửa. Không suy ra thẩm định chuyên môn từ kết quả kiểm thử kỹ thuật.
+
+- Audit 1950–2026 đã hoàn tất: 28.124 round-trip và tuple bridge qua; 447 ngày 30 sai bị từ chối.
+- Lá số có chọn lọc: 10.900/10.900 lượt qua trên 1.144 ngày đầu vào.
+- Quan hệ giờ Tý: 5.420/5.420 qua, không còn ca thiếu lá số trong ma trận.
+- Unit 117/117, E2E production 10/10; build, typecheck, engine reproducibility và format qua.
+- 85 ca lỗi vẫn thấy ở converter upstream nguyên bản nhưng không còn làm hỏng các
+  ca lập lá số được kiểm tra qua seam mới. Chưa xác nhận chuyên môn độc lập hoặc Performance >90.
+
 ### Luận giải tham khảo — 2026-10-13
 
 - Typecheck và build qua; unit tests 102/102, gồm 31 ca kiểm tra nội dung/cấu trúc luận giải.
@@ -132,7 +146,8 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
   chưa được nghiệm thu ổn định; không dùng lần đo 93 trước đó để kết luận bản cuối đạt.
 
 Xem `../dev/interpretation-implementation.md` để biết đầy đủ lệnh, phạm vi, lỗi tương phản
-đã sửa và giới hạn. Luận giải không xác nhận độ chính xác dự báo; lỗi lịch của audit vẫn còn.
+đã sửa và giới hạn. Đây là kết quả trước bản sửa lịch; xem `calendar-remediation.md`
+cho trạng thái sau sửa. Luận giải không xác nhận độ chính xác dự báo.
 
 ### RUN_TECH_AUDIT — 2026-10-13
 

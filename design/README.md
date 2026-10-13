@@ -23,13 +23,18 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 - `product-spec.md`: trải nghiệm, màu sắc, khả năng tiếp cận và tiêu chí sản phẩm.
 - `retention-roadmap.md`: ưu tiên chức năng, yêu cầu BA, chỉ số và lộ trình đề xuất; chưa triển khai.
-- `chart-validation-plan.md`: phương án xử lý giới hạn lịch, 5 mốc thẩm định an sao và điều kiện nghiệm thu; chưa triển khai.
+- `chart-validation-plan.md`: kế hoạch thẩm định gốc; seam lịch hiện đã triển khai,
+  các mốc kiểm chứng chuyên môn còn mở.
 - `../dev/ai-interpretation-research.md`: lựa chọn AI/mã nguồn mở và điều kiện chất lượng cho luận giải.
 - `../dev/interpretation-implementation.md`: phạm vi luận giải đã triển khai và kiểm chứng thực tế.
 - `../dev/interpretation-sources.md`: tài liệu cổ đã đọc, chủ đề sao và khác biệt quy tắc.
 - `../dev/architecture.md`: cấu trúc ứng dụng và trách nhiệm từng module.
 
 ## Bước tiếp theo
+
+Mốc 1 kỹ thuật của lộ trình PM mới nhất đã sửa tích hợp lịch Việt Nam và qua audit; xem
+`../dev/calendar-remediation.md` và `../test/calendar-remediation.md`.
+Việc này không mở rộng luận giải hoặc xác nhận trường phái bởi chuyên gia.
 
 Kiểm tra thêm với người dùng 35–65+ tuổi và thiết bị thực. Lá số ban đầu có nhãn minh họa;
 sau khi gửi biểu mẫu, giao diện hiển thị kết quả thật theo cấu hình iztro đã công bố,

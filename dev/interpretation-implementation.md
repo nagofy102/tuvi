@@ -64,6 +64,12 @@ identified in the prior audit. No expert-reviewed golden chart corpus was create
 
 ## Verification — 2026-10-13
 
+Later calendar remediation updates the supported chart profile to v2 and integrates
+Vietnamese lunar data throughout chart construction. The paragraph above describes the
+earlier interpretation-only delivery. See `calendar-remediation.md` for the subsequent
+calendar fix and `../test/calendar-remediation.md` for verification. Reading themes and
+unvalidated-reference status are unchanged.
+
 Base revision `26b036b`, worktree includes earlier uncommitted audit changes and this feature.
 Node 24.19.0; pinned dependencies unchanged.
 

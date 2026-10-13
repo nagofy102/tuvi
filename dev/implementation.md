@@ -34,14 +34,15 @@ convenience method for leap births (its implementation does not apply the leap f
 The dependency normalizes invalid dates/leap flags; the wrapper validates civil dates and
 round-trips lunar input to reject normalization. Round-trip checks supplement independent fixtures.
 
-Star engine: iztro 2.6.2, MIT, profile `iztro-default-vietnamese-lunar-v1`. Its default Zi Wei
+Star engine: isolated iztro 2.6.2 Vietnamese calendar integration, MIT,
+profile `iztro-default-vietnamese-lunar-v2`. Its default Zi Wei
 rules, brightness and Vietnamese labels provide Mệnh/Thân, 14 major stars, supporting stars,
 life stages and decade age ranges. A separate reviewed interpretation/scoring model is not present.
 
-Pass the already converted Vietnamese lunar date explicitly; do not call `bySolar` on a Vietnamese
-birth and assume the library's Chinese calendar is equivalent. Verify its returned raw lunar date
-matches the intended effective date. Dates unrepresentable by that calendar (e.g. Vietnamese leap
-month 2 in 1985) fail clearly in Vietnamese; the independent converter remains usable.
+Pass the actual effective solar date to the isolated engine with Vietnamese calendar data
+throughout chart construction. Do not call upstream `bySolar` and assume its Chinese calendar
+is equivalent. Verify the returned raw lunar date matches the intended effective date.
+See `calendar-remediation.md` for generation, provenance, verification and supported scope.
 
 Defaults: normal lunar-year boundary, common/default Zi Wei algorithm, leap day 1–15 uses the
 current month and day 16+ the following month; late Tý retains the civil date until midnight.

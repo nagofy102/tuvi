@@ -2,6 +2,11 @@
 
 Ngày ghi nhận: 13/10/2026.
 Trạng thái: đề xuất PM/BA đã trao đổi, chưa phê duyệt triển khai, ngân sách hoặc thuê chuyên gia.
+
+Cập nhật: người dùng đã ưu tiên sửa lịch ở **Mốc 1 của lộ trình PM mới nhất**.
+Đánh số mới này khác các mốc gốc bên dưới. Phương án B (tách seam lịch) được triển khai;
+xem `../dev/calendar-remediation.md` và `../test/calendar-remediation.md`.
+Không có chuyên gia con người hoặc bộ lá số độc lập đã ký duyệt.
 Việc lưu và commit tài liệu không đồng nghĩa phê duyệt code hoặc phát hành luận giải cao cấp.
 
 ## Mục tiêu và bằng chứng hiện có

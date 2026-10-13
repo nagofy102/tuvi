@@ -6,6 +6,7 @@ import { calculateChart, RULE_PROFILE } from '../src/domain/astrology/calculate'
 import { dateString, lunarToSolar, solarToLunar } from '../src/domain/calendar/convert';
 import type { CivilDate, LunarDate } from '../src/domain/calendar/types';
 import type { BirthInput, ChartResult } from '../src/domain/astrology/types';
+import { solar2lunar as bridgeLunar } from '../src/domain/calendar/engine-bridge';
 
 // Inspect the actual transitive converter used by iztro, not an alternative installation.
 const requireEngine = createRequire(createRequire(import.meta.url).resolve('iztro'));
@@ -57,6 +58,8 @@ export interface AuditReport {
     invalidDay30Attempted: number;
     invalidDay30Accepted: number;
     continuationErrors: number;
+    bridgePassed: number;
+    bridgeFailed: number;
   };
   charts: { dates: number; attempts: number; passed: number; failed: number };
   relations: { checked: number; passed: number; failed: number; unavailable: number };
@@ -216,6 +219,7 @@ export async function runAudit(
         '@dqcai/vn-lunar',
       ),
       node: process.version,
+      engineBridge: 'vn-bridge-v1',
     },
     range: { startYear: options.startYear, endYear: options.endYear },
     calendar: {
@@ -229,6 +233,8 @@ export async function runAudit(
       invalidDay30Attempted: 0,
       invalidDay30Accepted: 0,
       continuationErrors: 0,
+      bridgePassed: 0,
+      bridgeFailed: 0,
     },
     charts: { dates: 0, attempts: 0, passed: 0, failed: 0 },
     relations: { checked: 0, passed: 0, failed: 0, unavailable: 0 },
@@ -269,6 +275,27 @@ export async function runAudit(
         detail: message(error),
       });
       continue;
+    }
+    try {
+      const bridged = bridgeLunar(dateString(solar));
+      if (
+        bridged.lunarYear !== lunar.year ||
+        bridged.lunarMonth !== lunar.month ||
+        bridged.lunarDay !== lunar.day ||
+        bridged.isLeap !== lunar.isLeapMonth
+      ) {
+        throw new Error('Engine bridge changed the Vietnamese lunar tuple.');
+      }
+      report.calendar.bridgePassed++;
+    } catch (error) {
+      report.calendar.bridgeFailed++;
+      report.findings.push({
+        stage: 'calendar',
+        category: 'project_adapter_error',
+        solar,
+        lunar,
+        detail: message(error),
+      });
     }
     const probe = inspectUpstream(lunar);
     if (probe.category) {

@@ -13,6 +13,9 @@ pages and server-generated OpenGraph PNGs handle public SEO. PostgreSQL remains 
 There is no account storage, AI integration, PWA service worker or database migration yet.
 General/detailed reference interpretation is now implemented locally using sourced fixed rules;
 this is not live AI inference or independent expert sign-off.
+The v2 chart profile now integrates the Vietnamese calendar seam. Full 1950–2026
+technical audit passes the project gate: 28,124 bridge tuples and 10,900 selected chart
+attempts; see `../test/calendar-remediation.md`. These are not expert accuracy metrics.
 
 ## References
 
@@ -20,6 +23,7 @@ this is not live AI inference or independent expert sign-off.
 - `data-models.md`: calculation inputs/outputs, catalogs, rule provenance and validation.
 - `schema.sql`: proposed PostgreSQL persistence model; not an applied migration.
 - `implementation.md`: actual implementation, supported scope, commands and known limitations.
+- `calendar-remediation.md`: current calendar patch, isolated v2 engine seam and verification scope.
 - `font-assets.md`: local font derivatives, licenses and reproducibility.
 - `ai-interpretation-research.md`: researched AI/open-weight options, quality gates and proposed
   interpretation architecture; not an approved implementation or spending decision.
@@ -29,7 +33,7 @@ this is not live AI inference or independent expert sign-off.
   milestones, responsibilities and release gates; not implemented or signed off.
 - `../test/README.md`: verification status and acceptance gates.
 - `../test/tech-audit.md`: authorized RUN_TECH_AUDIT scope, reproduction and diagnostic findings;
-  no production calculation patch or expert sign-off.
+  original audit, followed by the authorized patch in `calendar-remediation.md`; no expert sign-off.
 
 ## Decisions
 
@@ -42,8 +46,8 @@ this is not live AI inference or independent expert sign-off.
 ## Next action
 
 Review the selected Zi Wei profile against expert-authored Vietnamese chart fixtures before claiming
-school-specific production accuracy. Extend unsupported Vietnamese/Chinese lunar-month differences
-through a verified engine adapter rather than silently normalizing dates. Persistence, AI and PWA
+school-specific production accuracy. The current v2 engine integrates a Vietnamese calendar seam;
+see `calendar-remediation.md`. Invalid dates are still rejected. Persistence, AI and PWA
 are separate implementation phases; do not advertise them as available.
 
 The user requested documenting the retention roadmap and researching high-quality interpretation
@@ -54,7 +58,8 @@ The later RUN_TECH_AUDIT request authorizes the audit scripts and regression che
 1950–2026. It does not yet authorize a production engine replacement or fabricated golden charts.
 
 The latest user authorization enables AI-assisted research and a bounded reference-reading feature.
-That feature is implemented; it does not constitute human expert certification, authorization
+The later user request prioritizes calendar remediation; see `calendar-remediation.md`.
+The reference feature is implemented; it does not constitute human expert certification, authorization
 to fabricate golden data or selection of a paid external AI provider.
 
 ## Remaining domain decisions

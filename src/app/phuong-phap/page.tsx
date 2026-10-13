@@ -26,9 +26,10 @@ export default function MethodsPage() {
       <h2>An sao và bố cục 12 cung</h2>
       <p>
         Bộ tính dùng <a href="https://github.com/SylarLong/iztro">iztro 2.6.2</a> (MIT), cấu hình Zi
-        Wei phổ thông, nhãn tiếng Việt và năm tính từ đầu năm âm lịch. Ngày âm Việt Nam được truyền
-        rõ ràng; nếu thư viện không biểu diễn đúng ngày đó, ứng dụng từ chối lập lá số thay vì đổi
-        ngày sinh.
+        Wei phổ thông, nhãn tiếng Việt và năm tính từ đầu năm âm lịch. Bản tích hợp riêng của dự án
+        dùng adapter lịch Việt Nam cho ngày, tháng nhuận, độ dài tháng và can chi năm âm lịch. Không
+        chuyển ngày sinh sang một ngày dương khác chỉ để khớp lịch Trung Quốc. Kết quả không bảo
+        toàn dữ kiện ngày sinh vẫn bị từ chối.
       </p>
       <p>
         Mặc định tháng nhuận chia ở ngày 15: ngày 1–15 giữ tháng, từ ngày 16 dùng tháng kế để an
@@ -48,9 +49,9 @@ export default function MethodsPage() {
         năng dự đoán sự kiện.
       </p>
       <p>
-        Nếu tháng nhuận Việt Nam khác tháng nhuận mà thư viện an sao hỗ trợ, lá số có thể bị từ
-        chối; công cụ chuyển lịch vẫn cho kết quả riêng. Luận hạn, điểm phần trăm và dự báo AI chưa
-        được cung cấp.
+        Bản tích hợp lịch Việt Nam không thay đổi bảng sao hoặc chứng nhận quy tắc của một trường
+        phái. Lịch lịch sử, múi giờ nơi sinh và giờ mặt trời thực chưa được hỗ trợ. Luận hạn, điểm
+        phần trăm và dự báo AI chưa được cung cấp.
       </p>
       <h2>Nội dung năm tuổi và quyền quyết định</h2>
       <p>
