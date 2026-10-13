@@ -19,6 +19,12 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `source-registry.md`, `source-registry.json`: reviewed admission records and
+  offline `audit:sources`; no new oracle fields or star activation.
+- `catalogue-verification.md`: actually read title leaf and institutional catalogue
+  leads; historic-copy identity still pending. `published-chart-intake.md` sets
+  the contract for future genuinely external worked-chart candidates.
+
 - `source-corpus-intake.md`: expanded partial-source corpus and stricter intake;
   smaller initial mobile payload but >90 remains unstable. Source artifact
   crosscheck and unresolved edition/Khôi–Việt differences: `source-crosscheck.md`.

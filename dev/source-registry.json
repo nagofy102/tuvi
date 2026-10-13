@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "reviewed-reference-sources-v1",
+  "registryVersion": "source-admission-2026-10-13-v1",
+  "reviewedOn": "2026-10-13",
+  "reviewMethod": "AI-assisted review of pinned transcription and bounded facsimile collation; not independent practitioner certification",
+  "bibliographicIdentity": "pending",
+  "independentEditionsVerified": false,
+  "completeGoldenCharts": 0,
+  "researchDocuments": [
+    "dev/knowledge-source-review.md",
+    "dev/source-crosscheck.md",
+    "dev/catalogue-verification.md",
+    "dev/source-corpus-intake.md"
+  ],
+  "limitations": [
+    "Reviewed partial source scope does not certify a complete chart or predictive accuracy.",
+    "The scan and transcription are not established as two independent textual editions.",
+    "Digests identify retrieved image bytes, not source authenticity or independence.",
+    "New oracle scope requires a reviewed registry change; fixture metadata alone cannot admit a source."
+  ],
+  "sources": [
+    {
+      "id": "zwds-vol2-1963110",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+      "revision": 1963110,
+      "kind": "pinned-transcription",
+      "status": "reviewed-partial-oracle",
+      "locator": "Wikisource transcription 卷二, pinned revision 1963110",
+      "bibliographicIdentity": "Transcription source edition pending; traditional authorship not independently established",
+      "allowedInputScope": "Known-hour non-leap lunar input only; no solar conversion or late-Tý oracle",
+      "rights": "Classical text classified public domain by Wikisource; site editorial content separately licensed",
+      "passages": [
+        {
+          "id": "v2-ming-body",
+          "heading": "安身命例",
+          "text": "大抵人命俱从寅上起正月，顺数至本生月止，又自人生月起子时逆至本生时安命，顺至本生时安身。",
+          "allowedExpectedFields": ["mingBranch", "bodyBranch"]
+        },
+        {
+          "id": "v2-ming-body-example",
+          "heading": "安身命例",
+          "text": "假如正月生子时就在寅宫安身命，丑时逆转丑安命，顺去卯安身，寅时逆转子安命，顺至辰安身，余宫仿此，",
+          "allowedExpectedFields": ["mingBranch", "bodyBranch"]
+        },
+        {
+          "id": "v2-left-right",
+          "heading": "安左辅右弼星诀",
+          "text": "左辅从辰上起正月顺行，如正月生者就辰宫安之。二月在巳宫，右弼从戌宫逆转如正月便成戌宫安之，二月在酉宫余仿此。",
+          "allowedExpectedFields": ["minorStars.Tả Phụ", "minorStars.Hữu Bật"]
+        },
+        {
+          "id": "v2-wenchang-wenqu",
+          "heading": "安文昌文曲星诀",
+          "text": "子时戌上起文昌，逆到生时是贵乡，文曲数从辰上起，顺到生时是本乡。",
+          "allowedExpectedFields": ["minorStars.Văn Xương", "minorStars.Văn Khúc"]
+        },
+        {
+          "id": "v2-fire-ziwei-example",
+          "heading": "安身命例",
+          "text": "如甲生人安命在寅却起甲己之年丙为首，是丙寅丁卯炉中火，却去火局寻某日生期起紫微帝王，如是正月初一生者是火局，酉宫起初一日，就从酉宫起紫微，数无差迟",
+          "allowedExpectedFields": ["cuc", "majorStars.Tử Vi"]
+        },
+        {
+          "id": "v2-fire-number",
+          "heading": "Unnamed ASCII cục tables following star classifications in 卷二",
+          "text": "火六局",
+          "allowedExpectedFields": ["cuc"]
+        }
+      ]
+    },
+    {
+      "id": "zwds-vol1-7913704",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+      "revision": 7913704,
+      "kind": "pinned-transcription",
+      "status": "reading-reference-only",
+      "locator": "Wikisource transcription 卷一, pinned revision 7913704",
+      "bibliographicIdentity": "Transcription source edition pending; not an admitted placement oracle",
+      "allowedInputScope": "No expected chart fields admitted",
+      "rights": "Classical text classified public domain by Wikisource; site editorial content separately licensed",
+      "passages": []
+    },
+    {
+      "id": "archive-20260506_20260506_1217-n72",
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n72.jpg",
+      "revision": null,
+      "kind": "facsimile-artifact",
+      "status": "facsimile-crosscheck-only",
+      "locator": "Archive leaf index 72; visible 卷之三 安身命例, not printed page 72",
+      "artifacts": [
+        {
+          "id": "scan-leaf-0",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n0.jpg",
+          "sha256": "d48a61a316d7a3cb31995f1e689731f75b871f6a49e12aa9d1f94e725d7daa2d"
+        },
+        {
+          "id": "scan-leaf-1",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n1.jpg",
+          "sha256": "4881bc6855ae3a1f3260d5458da59055e38e35d36917e94502b9c9fcb3b7f1d3"
+        },
+        {
+          "id": "scan-leaf-72",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n72.jpg",
+          "sha256": "65140c8bcfcfa22fdfc9fe99ddd19e6f58a31449d2fb13ba75d3555aa1a326a1"
+        }
+      ],
+      "bibliographicIdentity": "Uploader edition/date/publisher claims and relationship to transcription pending",
+      "allowedInputScope": "Bounded visual collation only; no expected chart fields admitted",
+      "rights": "No explicit scan licence or authenticated institutional catalogue link found; no scan redistribution",
+      "passages": []
+    },
+    {
+      "id": "archive-20260506_20260506_1217-n74",
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n74.jpg",
+      "revision": null,
+      "kind": "facsimile-artifact",
+      "status": "facsimile-crosscheck-only",
+      "locator": "Archive leaf index 74; auxiliary placement passages and disputed Khôi/Việt mnemonic",
+      "artifacts": [
+        {
+          "id": "scan-leaf-74",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n74.jpg",
+          "sha256": "2b815c2353c085ca906b73750aa988eabdc32cdd0335d09c0a1f2367f274e7d9"
+        }
+      ],
+      "bibliographicIdentity": "Uploader edition/date/publisher claims and relationship to transcription pending",
+      "allowedInputScope": "Bounded visual collation only; no expected chart fields admitted",
+      "rights": "No explicit scan licence or authenticated institutional catalogue link found; no scan redistribution",
+      "passages": []
+    }
+  ]
+}

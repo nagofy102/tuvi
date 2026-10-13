@@ -21,6 +21,11 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `pm-milestone-status.md`: bảng trạng thái A–D hiện tại; A còn xác minh nguồn/corpus,
+  B chạy giới hạn, chưa mở C/D.
+- `../dev/source-registry.md`: sổ nguồn và cổng đối chiếu đã chạy; catalogue mới ở
+  `../dev/catalogue-verification.md`, không tự xác nhận ấn bản độc lập.
+
 - `../dev/source-crosscheck.md`: đối chiếu scan thật, hướng đếm tháng thường
   khớp nhưng ấn bản/Khôi–Việt còn khác biệt; không mở nhóm sao mới.
 - `../dev/source-corpus-intake.md`: mở corpus từng phần và cổng tiếp nhận;

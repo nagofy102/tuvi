@@ -120,6 +120,13 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Mốc A — sổ nguồn được duyệt
+
+Xem `source-registry.md`: chặn thay trích đoạn/URL/revision bằng metadata fixture,
+quyền dùng từng trường expected và audit mã ảnh cục bộ. Không thêm ca, không lấy
+scan hay catalogue làm đáp án an sao; không mở C/D. Bảng PM tại
+`../design/pm-milestone-status.md`.
+
 ### Đối chiếu scan và mở corpus từng phần
 
 Xem `source-corpus-intake.md` cho bằng chứng của increment sau `24e9dfb`:

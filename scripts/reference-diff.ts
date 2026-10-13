@@ -2,6 +2,7 @@ import { calculateChart } from '../src/domain/astrology/calculate';
 import type { BirthInput, ChartResult } from '../src/domain/astrology/types';
 import { RULE_PROFILE } from '../src/domain/astrology/profile';
 import { canonicalStarName } from '../src/domain/interpretation/context';
+import { assertReviewedReferenceSources } from './source-admission';
 
 export interface ReferenceCase {
   id: string;
@@ -197,6 +198,7 @@ export function assertIndependentOrigins(corpus: ReferenceCorpus): void {
     if ([...requiredPassages].some((id) => !item.provenance.excerptIds.includes(id)))
       throw new Error(`Missing field-specific source passage: ${item.id}`);
   }
+  assertReviewedReferenceSources(corpus);
 }
 
 export interface FieldComparison {

@@ -2,6 +2,8 @@
 
 Ngày lập: 13/10/2026. Baseline: `3c9cc79`. Đây là đặc tả quản trị chất lượng và
 cổng phát hành, không phải chứng nhận chuyên môn hoặc dự báo đã được kiểm chứng.
+Trạng thái triển khai mới nhất ở [pm-milestone-status.md](pm-milestone-status.md);
+các số liệu baseline dưới đây là lịch sử, không phải độ phủ hiện tại.
 Người dùng cho phép PM điều phối triển khai; quyền đó không thay thế nguồn tài liệu,
 không cho phép bịa đáp án chuẩn hoặc gửi dữ liệu sinh ra dịch vụ ngoài mặc định.
 
