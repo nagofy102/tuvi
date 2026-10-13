@@ -29,6 +29,11 @@ chứng nhận chuyên môn. Kế hoạch gốc: [reading-synthesis-plan.md](rea
 
 ## Bước tiếp theo và ranh giới nghiệm thu
 
+Đợt kế tiếp trên baseline `0958a68` củng cố B bằng nội dung v6: bài tập riêng theo
+ba chủ đề và trạng thái hai cặp hiện hữu, hành động ở đoạn đọc đầu trên mobile.
+Không mở C/D; chưa đóng gate rubric toàn bản đọc. Xem
+`../dev/thematic-exercises.md` và `../test/thematic-exercises.md`.
+
 Ưu tiên nguồn/corpus A để mở từng nhóm C có điều kiện; tiếp tục hoàn thiện B bằng
 tri thức đã duyệt. Không chuyển sang D chỉ vì test kỹ thuật qua. Hồ sơ ứng viên lá
 số công bố phải đi qua [hợp đồng tiếp nhận](../dev/published-chart-intake.md).

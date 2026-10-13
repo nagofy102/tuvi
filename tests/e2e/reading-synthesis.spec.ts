@@ -25,6 +25,10 @@ test('conditional readings disclose applicability, sources and limits without se
     await page.getByLabel('Bạn muốn bắt đầu từ điều gì?').selectOption(concern);
     const theme = panel.locator('.reading-theme').first();
     await expect(theme).toHaveAttribute('data-concern', concern);
+    const action = theme.locator('.theme-deep > p').nth(1);
+    await expect(action).toBeVisible();
+    await expect(action).toHaveText(/^Nếu /u);
+    await expect(theme.locator('.reading-exercise')).not.toHaveAttribute('open');
     const conditions = theme.locator('.reading-claims');
     await expect(conditions).not.toHaveAttribute('open');
     await conditions.getByText('Điều kiện của mạch luận', { exact: true }).click();
@@ -71,6 +75,12 @@ test('conditional details are keyboard accessible at mobile extra-large text wit
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   const panel = page.locator('.interpretation-panel');
   await expect(panel.locator('.reading-claims')).toHaveCount(3);
+  await expect(
+    panel.locator('.reading-theme').first().locator('.theme-deep > p').nth(1),
+  ).toBeVisible();
+  await expect(
+    panel.locator('.reading-theme').first().locator('.reading-exercise'),
+  ).not.toHaveAttribute('open');
   expect(await panel.evaluate((node) => node.getBoundingClientRect().height)).toBeLessThan(6000);
   const conditions = panel.locator('.reading-theme').first().locator('.reading-claims');
   await conditions.locator(':scope > summary').focus();

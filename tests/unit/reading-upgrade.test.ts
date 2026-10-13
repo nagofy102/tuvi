@@ -31,6 +31,40 @@ function minor(name: string): ChartStar {
 }
 
 describe('thematic behavioral reading (not personality or prediction validation)', () => {
+  it.each([
+    { support: false, literacy: false },
+    { support: true, literacy: false },
+    { support: false, literacy: true },
+    { support: true, literacy: true },
+  ])('keeps concern-specific situations for group state %j', ({ support, literacy }) => {
+    const markers = ['việc', 'tiền|chi|phí', 'người bạn đời'];
+    const names = ['Mệnh', 'Tài Bạch', 'Phu Thê'];
+    const checks: string[] = [];
+    for (let index = 0; index < names.length; index++) {
+      const input = chart();
+      for (const palace of input.palaces)
+        palace.stars = palace.stars.filter((star) => star.group === 'major');
+      const origin = input.palaces.find((palace) => palace.name === names[index])!;
+      if (support) origin.stars.push(minor('Tả Phù'), minor('Hữu Bật'));
+      if (literacy) origin.stars.push(minor('Văn Xương'), minor('Văn Khúc'));
+      const theme = readThemes(input.palaces)[index];
+      expect(theme.selfCheck).toMatch(new RegExp(markers[index], 'u'));
+      expect(theme.paragraphs[1]).toBe(theme.adjustment);
+      expect(theme.adjustment).toMatch(/^Nếu /u);
+      if (support || literacy) {
+        expect(theme.selfCheck).toMatch(/^Nếu /u);
+        expect(theme.selfCheck).toContain('bỏ qua bài tập');
+      } else {
+        expect(theme.title).toMatch(/^Bài tập chung:/u);
+        expect(theme.paragraphs[0]).toContain('Chưa có nhóm đủ điều kiện');
+      }
+      expect(theme.insights.some((item) => item.ruleId === 'pair-support')).toBe(support);
+      expect(theme.insights.some((item) => item.ruleId === 'pair-literacy')).toBe(literacy);
+      checks.push(theme.selfCheck);
+    }
+    expect(new Set(checks).size).toBe(3);
+  });
+
   it('starts from three cross-palace themes with actual provenance', () => {
     const input = chart();
     const value = report(input);

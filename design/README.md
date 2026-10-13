@@ -21,6 +21,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `../dev/thematic-exercises.md`: mốc B v6, bài tập riêng theo chủ đề/nhóm đã mở;
+  hành động hiện ngay, phạm vi rubric tại `../test/thematic-exercises.md`.
+
 - `pm-milestone-status.md`: bảng trạng thái A–D hiện tại; A còn xác minh nguồn/corpus,
   B chạy giới hạn, chưa mở C/D.
 - `../dev/source-registry.md`: sổ nguồn và cổng đối chiếu đã chạy; catalogue mới ở

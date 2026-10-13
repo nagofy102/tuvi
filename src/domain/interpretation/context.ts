@@ -1,7 +1,6 @@
 import type { ChartPalace, ChartStar } from '../astrology/types';
 import { mod } from '../astrology/sexagenary';
 import { resolveRule } from './knowledge';
-import { PALACE_ACTIONS } from './palace-actions';
 import type { ContextualInsight, ReadingEvidence } from './types';
 
 // The upstream Vietnamese label for 左輔 is Tả Phù. Preserve it in evidence.
@@ -91,7 +90,7 @@ export function readContextualGroups(
   const contextual: ContextualInsight = {
     ruleId: 'four-directions-context',
     title: 'Đối chiếu các góc nhìn liên hệ',
-    text: `${PALACE_ACTIONS[origin.name].overview} Đối chiếu tình huống đó với các góc nhìn từ ${scope
+    text: `Với tình huống bạn vừa chọn ở cung ${origin.name}, đối chiếu thêm các góc nhìn từ ${scope
       .slice(1)
       .map((p) => p.name)
       .join(', ')}; chọn một việc bạn sẽ làm khác trong lần tiếp theo.`,

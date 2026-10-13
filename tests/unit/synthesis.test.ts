@@ -176,10 +176,10 @@ describe('source-bounded conditional synthesis', () => {
     const menh = input.find((palace) => palace.name === 'Mệnh')!;
     menh.stars.push(minor('Tả Phù'), minor('Hữu Bật'), minor('Văn Xương'), minor('Văn Khúc'));
     const theme = readThemes(input)[0];
-    expect(theme.selfCheck).toContain('ai nhận từng phần');
-    expect(theme.selfCheck).toContain('nguồn kiểm tra');
+    expect(theme.selfCheck).toContain('người nhận');
+    expect(theme.selfCheck).toContain('yêu cầu nào đã đổi');
     expect(theme.adjustment).toContain('người phụ trách');
-    expect(theme.adjustment).toContain('dữ kiện đã kiểm tra');
+    expect(theme.adjustment).toContain('thay đổi đã xác nhận');
     expect(theme.claims.some((claim) => claim.state === 'mixed')).toBe(false);
     expect(theme.claims.map((claim) => claim.ruleId)).not.toContain('pair-assistance');
   });

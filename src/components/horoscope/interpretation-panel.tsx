@@ -432,13 +432,6 @@ export function InterpretationPanel({
                         <strong>Tự kiểm chứng: </strong>
                         {theme.selfCheck}
                       </p>
-                      {theme.paragraphs.slice(2).map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
-                      <p>
-                        <strong>Điều chỉnh: </strong>
-                        {theme.adjustment}
-                      </p>
                     </details>
                     <details className="interpretation-reason">
                       <summary>Vì sao luận như vậy?</summary>

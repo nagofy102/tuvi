@@ -120,6 +120,12 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Mốc B — bài tập theo chủ đề v6
+
+Xem `thematic-exercises.md`: phân biệt tình huống công việc/tiền bạc/đồng hành,
+cho phép bỏ qua bài tập không phù hợp và hiện hành động trước phần đọc sâu.
+Không mở nhóm sao mới hoặc đóng gate toàn bộ rubric.
+
 ### Mốc A — sổ nguồn được duyệt
 
 Xem `source-registry.md`: chặn thay trích đoạn/URL/revision bằng metadata fixture,

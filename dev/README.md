@@ -19,6 +19,9 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `thematic-exercises.md`: v6 separates work, finance and relationship exercises
+  by admitted group state and shows the conditional action in the first reading.
+
 - `source-registry.md`, `source-registry.json`: reviewed admission records and
   offline `audit:sources`; no new oracle fields or star activation.
 - `catalogue-verification.md`: actually read title leaf and institutional catalogue
