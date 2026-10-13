@@ -17,7 +17,7 @@ import type {
   StarReading,
 } from './types';
 
-export const INTERPRETATION_VERSION = 'reference-reading-v3';
+export const INTERPRETATION_VERSION = 'reference-reading-v4';
 
 const MAJOR_STAR_NAMES = [
   'Tử Vi',

@@ -55,6 +55,68 @@
   border-radius: 12px;
   background: #faf6ed;
 }
+.theme-deep > summary,
+.reading-more > summary,
+.reading-exercise > summary,
+.full-chart > summary {
+  min-height: 48px;
+  padding-block: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.reading-more {
+  margin-top: 1rem;
+}
+.full-chart {
+  margin-top: 1.5rem;
+  scroll-margin-top: 6rem;
+}
+.full-chart > summary {
+  color: #17322e;
+  border: 1px solid #596a5f;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+}
+.local-profiles {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #869783;
+  border-radius: 12px;
+  color: #17322e;
+  background: #fdfbf7;
+  overflow-wrap: anywhere;
+  scroll-margin-top: 6rem;
+}
+.local-profiles h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+.local-profiles li,
+.profile-save {
+  display: grid;
+  gap: 0.7rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid #869783;
+}
+.local-profiles button:not(.primary-button) {
+  min-height: 48px;
+  padding: 0.7rem;
+  border: 1px solid #596a5f;
+  border-radius: 8px;
+  color: #17322e;
+  background: #fff;
+}
+.local-profiles button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.unknown-time-reading h4 {
+  margin-top: 1rem;
+}
+.reading-theme p:first-of-type {
+  margin-top: 0.6rem;
+}
 .reading-concern {
   display: grid;
   gap: 0.5rem;
@@ -196,6 +258,16 @@
   }
 }
 @media print {
+  .local-profiles {
+    display: none;
+  }
+  .full-chart::details-content,
+  .theme-deep::details-content,
+  .reading-more::details-content,
+  .reading-exercise::details-content {
+    display: block;
+    content-visibility: visible;
+  }
   .interpretation-panel {
     border: 0;
     color: #000;

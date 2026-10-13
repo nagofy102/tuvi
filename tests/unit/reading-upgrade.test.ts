@@ -111,6 +111,8 @@ describe('thematic behavioral reading (not personality or prediction validation)
       ),
     );
     expect(new Set(texts).size).toBeGreaterThan(1);
+    for (let index = 0; index < 3; index++)
+      expect(new Set(themes.map((items) => items[index].paragraphs[0])).size).toBeGreaterThan(1);
   });
 
   it('keeps Mệnh–Thân synthesis relevant instead of repeating in every theme', () => {

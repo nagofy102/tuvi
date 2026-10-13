@@ -120,6 +120,13 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Ba ưu tiên PM sau trải nghiệm giả lập
+
+Xem `pm-priorities.md`: 166 unit, 20 E2E qua; mở đầu theo dữ kiện thật, đọc ngắn trước
+biểu đồ, giờ chưa biết không gán giờ và lưu hồ sơ cục bộ có đồng ý/mở lại/xóa.
+Đo lại 8 cấu hình; cùng ca mobile 320px/chữ cực lớn giảm chiều cao mặc định khoảng
+78%. Đây không phải kiểm chứng dự báo; dữ liệu lưu không mã hóa và không đồng bộ.
+
 ### Nâng cấp UI và văn phong theo chủ đề
 
 Xem `ui-content-upgrade.md` cho bằng chứng popup căn giữa, theme navy/vàng,

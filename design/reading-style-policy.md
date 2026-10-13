@@ -2,6 +2,9 @@
 
 ## Phạm vi đã triển khai
 
+Bản v4 bổ sung mở đầu từ dữ kiện thật của từng nhóm cung và bản đọc ngắn trước biểu đồ;
+chi tiết xem `../dev/pm-priorities.md`. Giờ chưa biết không tạo bản đọc cá nhân theo sao.
+
 Bản đọc sinh cục bộ bằng quy tắc cố định, không gọi AI trực tuyến. Ba mạch công việc,
 tiền bạc và đồng hành kết nối nhiều cung trước phần tra cứu 12 cung. Chọn mối quan tâm
 chỉ đổi thứ tự mạch đọc; không đổi sao, nguồn hoặc kết quả an sao.

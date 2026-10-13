@@ -8,10 +8,6 @@ const TOPICS = [
     concern: 'career',
     title: 'Làm việc rõ trách nhiệm, giữ sức cho đường dài',
     names: ['Mệnh', 'Quan Lộc', 'Nô Bộc'],
-    paragraphs: [
-      'Chọn một việc đang chậm tiến độ: ghi riêng phần bạn trực tiếp làm, phần cần người khác phối hợp và người chốt quyết định. Đặt ba danh sách cạnh nhau để tìm chỗ một người đang phải nhận quá nhiều vai.',
-      'Trong buổi trao đổi tiếp theo, chốt người phụ trách, hạn hoàn thành và một mốc báo vướng mắc trước hạn. Sau một tuần, đối chiếu số đầu việc hoàn tất với số buổi bạn phải làm bù ngoài giờ.',
-    ],
     selfCheck:
       'Trong ba việc gần nhất, bạn nhận làm thay bao nhiêu lần khi người khác chưa kịp hoàn thành? Ghi lại việc cụ thể thay vì tự gắn nhãn mình là người giỏi hay yếu.',
     adjustment:
@@ -21,10 +17,6 @@ const TOPICS = [
     concern: 'finance',
     title: 'Nối công sức với cách giữ và dùng tiền',
     names: ['Tài Bạch', 'Quan Lộc', 'Điền Trạch'],
-    paragraphs: [
-      'Mở bảng chi của 30 ngày vừa qua, tách khoản thiết yếu, khoản phục vụ công việc và khoản mua ngay khi thấy hứng thú. Đối chiếu từng nhóm với thu nhập thực nhận, không dùng thu nhập dự kiến để cân đối.',
-      'Trước một khoản mua lớn, viết tổng chi phí sau phí phát sinh, phần tiền còn lại và việc cần hoãn nếu mua ngay. Hẹn một thời điểm xem lại bảng trước khi đặt cọc hoặc chuyển tiền.',
-    ],
     selfCheck:
       'Ba khoản mua gần nhất có khoản nào bạn quyết định trong ngày rồi phải cắt một chi phí thiết yếu? Ghi số tiền và thời điểm quyết định để kiểm tra chính hành vi đó.',
     adjustment:
@@ -34,10 +26,6 @@ const TOPICS = [
     concern: 'relationship',
     title: 'Nói rõ nhu cầu, chăm sóc sự đồng hành',
     names: ['Phu Thê', 'Phúc Đức', 'Thiên Di'],
-    paragraphs: [
-      'Khi có chuyện chưa thống nhất với người bạn đời, kể lại một tình huống cụ thể, nói bạn cần điều gì và hỏi nhu cầu của người bạn đời. Nhắc lại điều vừa nghe trước khi đề xuất cách giải quyết.',
-      'Chọn một việc chung trong tuần, thống nhất ai làm phần nào và lúc nào cùng xem lại. Nếu chưa có người bạn đời, dùng bài tập này cho một quan hệ gắn bó bạn đang xây dựng.',
-    ],
     selfCheck:
       'Trong lần trao đổi gần nhất, bạn đã hỏi một câu để hiểu người bạn đời hay chuyển ngay sang giải pháp? Ghi lại câu hỏi và câu trả lời, không đoán ý từ sự im lặng.',
     adjustment:
@@ -99,7 +87,21 @@ export function readThemes(palaces: ChartPalace[]): ThematicReading[] {
       id: `theme-${topic.concern}`,
       concern: topic.concern,
       title: topic.title,
-      paragraphs: [...topic.paragraphs, ...groupActions],
+      paragraphs: [
+        `Trong mạch ${topic.concern === 'career' ? 'công việc' : topic.concern === 'finance' ? 'nguồn lực' : 'đồng hành'}, lá số của bạn có ${topic.names
+          .map((name) => {
+            const palace = palaces.find((item) => item.name === name)!;
+            const stars = palace.stars
+              .filter((star) => star.group === 'major')
+              .map((star) => star.name);
+            return `${name} tại ${palace.branch} (${stars.length ? stars.join(', ') : 'không có chính tinh riêng'})`;
+          })
+          .join('; ')}.`,
+        distinctGroups.length
+          ? `Từ các nhóm đủ điều kiện trong những cung liên hệ, bản đọc chọn ${distinctGroups.map((item) => item.title.toLocaleLowerCase('vi')).join(' và ')} làm góc tự đối chiếu cho bạn.`
+          : `Mạch này chưa có nhóm phụ tinh đủ điều kiện để diễn giải riêng; bắt đầu bằng đối chiếu ${topic.names[0]} với ${topic.names[1]}${topic.names.some((name) => name === than.name) ? `, đồng thời giữ ngữ cảnh Thân cư ${than.name}` : ''}, không gán tính cách từ một sao.`,
+        ...groupActions,
+      ],
       selfCheck,
       adjustment,
       palaceNames: [...topic.names],

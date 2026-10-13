@@ -25,6 +25,14 @@ import { MAX_YEAR, MIN_YEAR, type CalendarInput } from '@/domain/calendar/types'
 import type { BirthInput, ChartResult } from '@/domain/astrology/types';
 import { ChartWidget } from './horoscope/chart-widget';
 import { CelestialWheel } from './ui/celestial-wheel';
+import { LocalProfiles } from './horoscope/local-profiles';
+import { UnknownTimeReading } from './horoscope/unknown-time-reading';
+import {
+  validateProfileInput,
+  type LocalProfile,
+  type ProfileInput,
+} from '@/domain/profiles/local';
+import './horoscope/interpretation-panel.css';
 
 const loadMotionFeatures = () => import('./ui/motion-features').then((module) => module.default);
 const InterpretationPanel = dynamic(
@@ -43,6 +51,9 @@ export function LandingExperience({ example }: { example: ChartResult }) {
   const [year, setYear] = useState(1990);
   const [leap, setLeap] = useState(false);
   const [time, setTime] = useState('09:30');
+  const [unknownTime, setUnknownTime] = useState(false);
+  const [partial, setPartial] = useState<ProfileInput | null>(null);
+  const [submittedProfile, setSubmittedProfile] = useState<Omit<LocalProfile, 'id'> | null>(null);
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [leapPolicy, setLeapPolicy] = useState<BirthInput['leapPolicy']>('split_at_15');
   const [ziPolicy, setZiPolicy] = useState<BirthInput['ziPolicy']>('civil_midnight');
@@ -87,27 +98,36 @@ export function LandingExperience({ example }: { example: ChartResult }) {
   }
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    await generate(
+      { ...input, time: unknownTime ? null : time, gender, leapPolicy, ziPolicy },
+      name,
+    );
+  }
+  async function generate(value: ProfileInput, displayName: string) {
     setError('');
     setNotice('');
     setReadingAvailable(false);
-    if (converted.error) {
-      setError(converted.error);
-      return;
-    }
-    if (!/^\d{2}:\d{2}$/.test(time)) {
-      setError('Vui lòng nhập giờ sinh đầy đủ.');
-      return;
-    }
-    const [hour, minute] = time.split(':').map(Number);
+    setPartial(null);
+    setSubmittedProfile(null);
     setLoading(true);
     try {
-      const { calculateChart } = await import('@/domain/astrology/calculate');
-      const result = calculateChart({ ...input, hour, minute, gender, leapPolicy, ziPolicy });
-      setChart(result);
-      setChartName(name.trim());
-      setIsExample(false);
-      setReadingAvailable(true);
-      setNotice('Đã lập lá số. Thông tin sinh chỉ được xử lý trên thiết bị của bạn.');
+      const accepted = validateProfileInput(value);
+      if (accepted.time === null) {
+        setPartial(accepted);
+        setNotice(
+          'Đã chuyển đổi ngày sinh. Chưa biết giờ nên không lập lá số hoặc đoán vị trí sao.',
+        );
+      } else {
+        const [hour, minute] = accepted.time.split(':').map(Number);
+        const { calculateChart } = await import('@/domain/astrology/calculate');
+        const result = calculateChart({ ...accepted, hour, minute });
+        setChart(result);
+        setChartName(displayName.trim());
+        setIsExample(false);
+        setReadingAvailable(true);
+        setNotice('Đã lập lá số. Thông tin sinh chỉ được xử lý trên thiết bị của bạn.');
+      }
+      setSubmittedProfile({ name: displayName.trim(), input: accepted });
       requestAnimationFrame(() => {
         resultHeading.current?.focus({ preventScroll: true });
         resultHeading.current?.scrollIntoView({
@@ -120,6 +140,21 @@ export function LandingExperience({ example }: { example: ChartResult }) {
     } finally {
       setLoading(false);
     }
+  }
+  async function openProfile(profile: LocalProfile) {
+    const value = profile.input;
+    setName(profile.name);
+    setCalendar(value.calendar);
+    setDay(value.date.day);
+    setMonth(value.date.month);
+    setYear(value.date.year);
+    setLeap(value.calendar === 'lunar' && value.date.isLeapMonth);
+    setUnknownTime(value.time === null);
+    setTime(value.time ?? '');
+    setGender(value.gender);
+    setLeapPolicy(value.leapPolicy);
+    setZiPolicy(value.ziPolicy);
+    await generate(value, profile.name);
   }
   async function shareSite() {
     const url = new URL('/', window.location.origin).href;
@@ -295,7 +330,8 @@ export function LandingExperience({ example }: { example: ChartResult }) {
                     <Clock3 size={17} />
                     <input
                       type="time"
-                      required
+                      required={!unknownTime}
+                      disabled={unknownTime}
                       value={time}
                       onChange={(e) => setTime(e.target.value)}
                       aria-label="Giờ sinh"
@@ -314,6 +350,17 @@ export function LandingExperience({ example }: { example: ChartResult }) {
                   </select>
                 </label>
               </div>
+              <label className="checkbox-label">
+                <input
+                  type="checkbox"
+                  checked={unknownTime}
+                  onChange={(event) => setUnknownTime(event.target.checked)}
+                />
+                Chưa biết giờ sinh
+              </label>
+              {unknownTime && (
+                <p>Chỉ xem ngày âm/dương và thông tin năm sinh; không gán giờ để lập lá số.</p>
+              )}
               <details className="calculation-settings">
                 <summary>
                   Quy ước lịch & an sao <ChevronDown size={15} />
@@ -353,9 +400,16 @@ export function LandingExperience({ example }: { example: ChartResult }) {
                 </p>
               )}
               <button type="submit" className="primary-button generate-button" disabled={loading}>
-                {loading ? 'Đang an lá số…' : 'Khám phá lá số của tôi'}
+                {loading
+                  ? 'Đang chuẩn bị kết quả…'
+                  : unknownTime
+                    ? 'Xem thông tin không cần giờ sinh'
+                    : 'Khám phá lá số của tôi'}
                 <ArrowRight size={19} />
               </button>
+              <a className="text-link" href="#ho-so-da-luu">
+                Mở hồ sơ đã lưu trên thiết bị
+              </a>
               <p className="privacy-note">
                 <LockKeyhole size={13} />
                 Không cần tài khoản. Không gửi thông tin sinh lên máy chủ.
@@ -382,12 +436,22 @@ export function LandingExperience({ example }: { example: ChartResult }) {
           <div>
             <span className="eyebrow">BẢN ĐỒ CUỘC ĐỜI</span>
             <h2 ref={resultHeading} tabIndex={-1} id="chart-heading">
-              Mười hai cung. <em>Một bản thể.</em>
+              {partial ? (
+                <>
+                  Chưa biết giờ. <em>Không đoán thay bạn.</em>
+                </>
+              ) : (
+                <>
+                  Mười hai cung. <em>Một bản thể.</em>
+                </>
+              )}
             </h2>
             <p>
-              {isExample
-                ? 'Khám phá một lá số minh họa, hoặc nhập ngày sinh để xem lá số của bạn.'
-                : `${chartName ? `${chartName} · ` : ''}${chart.yearName} · ${chart.napAm.name}. Chọn từng cung để đọc chi tiết.`}
+              {partial
+                ? `${submittedProfile?.name || 'Thông tin của bạn'} · kết quả theo ngày sinh, chưa có lá số 12 cung.`
+                : isExample
+                  ? 'Khám phá một lá số minh họa, hoặc nhập ngày sinh để xem lá số của bạn.'
+                  : `${chartName ? `${chartName} · ` : ''}${chart.yearName} · ${chart.napAm.name}. Chọn từng cung để đọc chi tiết.`}
             </p>
           </div>
           <div className="chart-actions">
@@ -404,7 +468,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
         <p className="status-note" role="status" aria-live="polite">
           {notice}
         </p>
-        {!isExample && (
+        {!isExample && !partial && (
           <div className="result-badges">
             <div>
               <span>NGŨ HÀNH NẠP ÂM</span>
@@ -425,8 +489,9 @@ export function LandingExperience({ example }: { example: ChartResult }) {
             </div>
           </div>
         )}
-        <ChartWidget chart={chart} displayName={chartName} isExample={isExample} />
-        {readingAvailable && isExample && !showExampleReading ? (
+        {partial ? (
+          <UnknownTimeReading input={partial} />
+        ) : readingAvailable && isExample && !showExampleReading ? (
           <div className="source-note">
             <h3>Luận giải tổng quát &amp; chi tiết</h3>
             <p>Lập lá số để nhận bản đọc tham khảo, hoặc mở bản minh họa để khám phá cách đọc.</p>
@@ -446,26 +511,37 @@ export function LandingExperience({ example }: { example: ChartResult }) {
             minh họa, không phải kết quả của lần nhập chưa thành công.
           </p>
         )}
-        <details className="source-note">
-          <summary>
-            <ShieldCheck size={15} />
-            Nguồn và quy tắc của lá số <ChevronDown size={15} />
-          </summary>
-          <p>
-            Lịch Việt Nam; cấu hình an sao tham khảo. Tháng nhuận:{' '}
-            {chart.provenance.leapPolicy === 'split_at_15'
-              ? 'chia theo ngày 15'
-              : 'giữ nguyên tháng'}
-            . Giờ Tý:{' '}
-            {chart.provenance.ziPolicy === 'civil_midnight'
-              ? 'đổi ngày lúc 00:00'
-              : 'đổi ngày lúc 23:00'}
-            .
-          </p>
-          <a href="/phuong-phap">
-            Đọc phương pháp và giới hạn <ArrowUpRight size={14} />
-          </a>
-        </details>
+        {!partial && (
+          <details className="full-chart" open={isExample}>
+            <summary>Xem lá số 12 cung</summary>
+            <ChartWidget chart={chart} displayName={chartName} isExample={isExample} />
+          </details>
+        )}
+        {!partial && (
+          <details className="source-note">
+            <summary>
+              <ShieldCheck size={15} />
+              Nguồn và quy tắc của lá số <ChevronDown size={15} />
+            </summary>
+            <p>
+              Lịch Việt Nam; cấu hình an sao tham khảo. Tháng nhuận:{' '}
+              {chart.provenance.leapPolicy === 'split_at_15'
+                ? 'chia theo ngày 15'
+                : 'giữ nguyên tháng'}
+              . Giờ Tý:{' '}
+              {chart.provenance.ziPolicy === 'civil_midnight'
+                ? 'đổi ngày lúc 00:00'
+                : 'đổi ngày lúc 23:00'}
+              .
+            </p>
+            <a href="/phuong-phap">
+              Đọc phương pháp và giới hạn <ArrowUpRight size={14} />
+            </a>
+          </details>
+        )}
+        <div id="ho-so-da-luu">
+          <LocalProfiles current={submittedProfile} onOpen={openProfile} />
+        </div>
       </section>
       <section className="explore-section">
         <div className="page-width">
@@ -568,7 +644,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
             ],
             [
               'Thông tin của tôi có được lưu lại không?',
-              'Ứng dụng xử lý ngày sinh trên thiết bị của bạn, không gửi thông tin sinh lên máy chủ và không tự lưu lá số. Nút chia sẻ chỉ chia sẻ liên kết trang, không chứa tên hay ngày sinh.',
+              'Ứng dụng không gửi thông tin sinh lên máy chủ và không tự lưu. Bạn có thể đồng ý lưu hồ sơ trên trình duyệt này, mở lại hoặc xóa bất cứ lúc nào; người dùng chung thiết bị có thể đọc hồ sơ. Nút chia sẻ chỉ chia sẻ liên kết trang.',
             ],
             [
               'Vì sao không có phần trăm vận hạn?',
@@ -586,9 +662,15 @@ export function LandingExperience({ example }: { example: ChartResult }) {
         </div>
       </section>
       <div className="mobile-start">
-        <a href="#lap-la-so">
-          Lập lá số của bạn <ArrowRight size={17} />
-        </a>
+        {submittedProfile ? (
+          <a href="#la-so">
+            Đọc kết quả của bạn <ArrowRight size={17} />
+          </a>
+        ) : (
+          <a href="#lap-la-so">
+            Lập lá số của bạn <ArrowRight size={17} />
+          </a>
+        )}
       </div>
     </>
   );

@@ -19,6 +19,7 @@ test('calculates a chart privately, switches calendar, and opens a keyboard-dism
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   await expect(page.getByRole('status')).toContainText('Đã lập lá số');
   await expect(page.locator('.chart-center h3')).toHaveText('Private Test');
+  await page.getByText('Xem lá số 12 cung', { exact: true }).click();
   await expect(page.locator('.palace-cell')).toHaveCount(12);
   await page.getByRole('button', { name: 'Giải thích sao Vũ Khúc tại cung Mệnh' }).click();
   await expect(page.getByRole('dialog')).toBeVisible();
@@ -54,6 +55,7 @@ test('generates sourced reference interpretations and refreshes them for a new c
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   await expect(page.getByRole('status')).toContainText('Đã lập lá số');
   await expect(panel).not.toContainText('Bản đọc lá số minh họa');
+  await panel.getByText('Tra cứu dữ kiện và chi tiết 12 cung', { exact: true }).click();
   await expect(panel.locator('.interpretation-palace')).toHaveCount(12);
   const before = await panel.locator('.interpretation-facts').innerText();
   const menh = panel
@@ -109,6 +111,7 @@ test('shows source-bounded group reasoning and publicly marks deferred rules', a
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   const panel = page.locator('.interpretation-panel');
   await expect(panel).toContainText('Đối chiếu Mệnh và cung an Thân');
+  await panel.getByText('Tra cứu dữ kiện và chi tiết 12 cung', { exact: true }).click();
   const palace = panel
     .locator('.interpretation-palace')
     .filter({ has: page.locator('[data-rule-id="pair-support"]') })
@@ -143,6 +146,7 @@ test('mobile layout, large text and list view stay inside the viewport', async (
   await page.getByRole('button', { name: 'Dạng danh sách dễ đọc' }).click();
   await expect(page.locator('.palace-list .palace-cell')).toHaveCount(12);
   await page.getByRole('button', { name: 'Đọc luận giải lá số minh họa' }).click();
+  await page.getByText('Tra cứu dữ kiện và chi tiết 12 cung', { exact: true }).click();
   await page
     .locator('.interpretation-palace')
     .filter({ has: page.locator('summary', { hasText: /^Mệnh ·/ }) })

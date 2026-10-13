@@ -20,6 +20,9 @@ export function ChartWidget({
   const [selected, setSelected] = useState('Mệnh');
   const [star, setStar] = useState<ChartStar | null>(null);
   const [view, setView] = useState<'chart' | 'list'>('chart');
+  useEffect(() => {
+    if (window.matchMedia('(max-width: 500px)').matches) setView('list');
+  }, []);
   const lastStarTrigger = useRef<HTMLButtonElement | null>(null);
   useEffect(() => {
     setSelected('Mệnh');

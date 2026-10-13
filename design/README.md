@@ -21,6 +21,8 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `../dev/pm-priorities.md`: bản đọc ngắn trước lá số, mở đầu theo dữ kiện riêng, giờ chưa biết và hồ sơ cục bộ có đồng ý; xem nghiệm thu tại `../test/pm-priorities.md`.
+
 - `reading-style-policy.md`: ba mạch đọc xuyên cung, chuẩn hành vi tự kiểm chứng và prompt biên tập cục bộ; lá số nay dùng navy/vàng theo yêu cầu mới.
 
 - `interpretation-milestones.md`: mốc 2–3 có giới hạn, hồ sơ nguồn và nhóm chờ kích hoạt.

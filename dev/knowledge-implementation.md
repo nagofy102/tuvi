@@ -1,7 +1,8 @@
 # Source-bounded knowledge and contextual readings
 
-This records the v2 milestone. The running content is now v3 with the same source
-profile and placement gates; see `ui-content-upgrade.md` for thematic copy and UI.
+This records the v2 milestone. The running content is now v4 with the same source
+profile and placement gates; see `pm-priorities.md` for the current opening/short flow
+and `ui-content-upgrade.md` for the preceding v3 UI.
 
 ## Implemented artifacts
 

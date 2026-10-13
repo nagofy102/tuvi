@@ -52,14 +52,21 @@ function PassageEvidence({ ids }: { ids: string[] }) {
   );
 }
 
-function InsightEntry({ insight }: { insight: ContextualInsight }) {
+function InsightEntry({
+  insight,
+  expanded = false,
+}: {
+  insight: ContextualInsight;
+  expanded?: boolean;
+}) {
   const rule = resolveRule(insight.ruleId);
+  const Evidence = expanded ? 'div' : 'details';
   return (
     <article className="interpretation-entry interpretation-insight" data-rule-id={rule.id}>
       <h4>{insight.title}</h4>
       <p>{insight.text}</p>
-      <details className="interpretation-evidence interpretation-reason">
-        <summary>Vì sao luận như vậy?</summary>
+      <Evidence className="interpretation-evidence interpretation-reason">
+        {!expanded && <summary>Vì sao luận như vậy?</summary>}
         <p>{insight.why}</p>
         <ul>
           {insight.evidence.map((item, index) => (
@@ -93,7 +100,7 @@ function InsightEntry({ insight }: { insight: ContextualInsight }) {
           .
         </p>
         <PassageEvidence ids={insight.passageIds} />
-      </details>
+      </Evidence>
     </article>
   );
 }
@@ -293,81 +300,99 @@ export function InterpretationPanel({
               <h4>Ba mạch đọc xuyên cung</h4>
               {sortThemes(report.themes, concern).map((theme) => (
                 <article className="reading-theme" key={theme.id} data-concern={theme.concern}>
-                  <h4>{theme.title}</h4>
-                  {theme.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                  <p>
-                    <strong>Tự kiểm chứng: </strong>
-                    {theme.selfCheck}
-                  </p>
-                  <p>
-                    <strong>Điều chỉnh: </strong>
-                    {theme.adjustment}
-                  </p>
-                  <details className="interpretation-reason">
-                    <summary>Vì sao luận như vậy?</summary>
-                    <p>
-                      Các cung đối chiếu: {theme.palaceNames.join(' – ')}. Chỉ những nhóm đủ điều
-                      kiện trong lá số này mới xuất hiện dưới đây.
-                    </p>
-                    {theme.insights.map((insight, index) => (
-                      <InsightEntry key={`${insight.ruleId}-${index}`} insight={insight} />
+                  <details className="theme-deep" open={theme.concern === concern}>
+                    <summary>{theme.title}</summary>
+                    {theme.paragraphs.slice(0, 2).map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
                     ))}
+                    <details className="reading-exercise">
+                      <summary>Đọc sâu: tự kiểm chứng và điều chỉnh</summary>
+                      <p>
+                        <strong>Tự kiểm chứng: </strong>
+                        {theme.selfCheck}
+                      </p>
+                      {theme.paragraphs.slice(2).map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                      <p>
+                        <strong>Điều chỉnh: </strong>
+                        {theme.adjustment}
+                      </p>
+                    </details>
+                    <details className="interpretation-reason">
+                      <summary>Vì sao luận như vậy?</summary>
+                      <p>
+                        Các cung đối chiếu: {theme.palaceNames.join(' – ')}. Chỉ những nhóm đủ điều
+                        kiện trong lá số này mới xuất hiện dưới đây.
+                      </p>
+                      {theme.insights.map((insight, index) => (
+                        <InsightEntry
+                          key={`${insight.ruleId}-${index}`}
+                          insight={insight}
+                          expanded
+                        />
+                      ))}
+                    </details>
                   </details>
                 </article>
               ))}
             </section>
-            <section className="interpretation-section" aria-label="Tổng quan lá số">
-              <h4>Tổng quan của {isExample ? 'lá số minh họa' : 'lá số vừa lập'}</h4>
-              <dl className="interpretation-facts">
-                {report.summary.facts.map((fact) => (
-                  <div key={fact.label}>
-                    <dt>{fact.label} · dữ kiện</dt>
-                    <dd>{fact.value}</dd>
-                  </div>
+            <details className="reading-more">
+              <summary>Tra cứu dữ kiện và chi tiết 12 cung</summary>
+              <section className="interpretation-section" aria-label="Tổng quan lá số">
+                <h4>Tổng quan của {isExample ? 'lá số minh họa' : 'lá số vừa lập'}</h4>
+                <dl className="interpretation-facts">
+                  {report.summary.facts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt>{fact.label} · dữ kiện</dt>
+                      <dd>{fact.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                {report.summary.insights.map((insight) => (
+                  <InsightEntry key={insight.ruleId} insight={insight} />
                 ))}
-              </dl>
-              {report.summary.insights.map((insight) => (
-                <InsightEntry key={insight.ruleId} insight={insight} />
-              ))}
-            </section>
-            <section className="interpretation-section" aria-label="Chi tiết 12 cung">
-              <h4>Khám phá 12 cung</h4>
-              <p>
-                Chính tinh (nhóm sao chính), phụ tinh (nhóm sao bổ trợ) và trạng thái
-                Miếu/Vượng/Đắc/Bình/Hãm (mức phân loại biểu tượng trong bảng an sao) được giữ làm dữ
-                kiện. Tứ Hóa (bốn biến hóa biểu tượng) gồm Hóa Lộc (nguồn lực), Hóa Quyền (quyền chủ
-                động), Hóa Khoa (học hỏi, danh tiếng) và Hóa Kỵ (điểm cần rà soát); chưa dùng chúng
-                để phán kết quả.
-              </p>
-              <p>
-                Chọn một cung để xem thêm bằng chứng. Bắt đầu với cung Mệnh và cung{' '}
-                {report.summary.focusPalace}, nơi an Thân.
-              </p>
-              {report.palaces.map((palace) => (
-                <PalaceDetail key={palace.name} palace={palace} />
-              ))}
-            </section>
+              </section>
+              <section className="interpretation-section" aria-label="Chi tiết 12 cung">
+                <h4>Khám phá 12 cung</h4>
+                <p>
+                  Chính tinh (nhóm sao chính), phụ tinh (nhóm sao bổ trợ) và trạng thái
+                  Miếu/Vượng/Đắc/Bình/Hãm (mức phân loại biểu tượng trong bảng an sao) được giữ làm
+                  dữ kiện. Tứ Hóa (bốn biến hóa biểu tượng) gồm Hóa Lộc (nguồn lực), Hóa Quyền
+                  (quyền chủ động), Hóa Khoa (học hỏi, danh tiếng) và Hóa Kỵ (điểm cần rà soát);
+                  chưa dùng chúng để phán kết quả.
+                </p>
+                <p>
+                  Chọn một cung để xem thêm bằng chứng. Bắt đầu với cung Mệnh và cung{' '}
+                  {report.summary.focusPalace}, nơi an Thân.
+                </p>
+                {report.palaces.map((palace) => (
+                  <PalaceDetail key={palace.name} palace={palace} />
+                ))}
+              </section>
+            </details>
             <section className="interpretation-sources" aria-label="Nguồn và phương pháp">
-              <h4>Nguồn &amp; phương pháp</h4>
-              <p>
-                Dữ kiện lấy từ lá số; lời diễn giải là nội dung biên soạn theo từng chính tinh, nhóm
-                phụ tinh và ngữ cảnh cung. Mỗi kết nối công bố dữ kiện, đoạn nguồn và phần biên tập.
-                Nguồn cổ điển dùng để tham khảo biểu tượng, không chứng nhận toàn bộ thuật toán hay
-                mọi quy tắc giờ Tý và tháng nhuận.
-              </p>
-              <SourceLinks sourceIds={report.sourceIds} />
-              <ul>
-                {INTERPRETATION_SOURCES.filter((source) =>
-                  report.sourceIds.includes(source.id),
-                ).map((source) => (
-                  <li key={source.id}>{source.description}</li>
-                ))}
-              </ul>
-              <p className="interpretation-method">
-                Bản đọc tạo trên thiết bị; ngày sinh không được gửi đến dịch vụ AI.
-              </p>
+              <details className="reading-more">
+                <summary>Nguồn và phương pháp</summary>
+                <h4>Nguồn &amp; phương pháp</h4>
+                <p>
+                  Dữ kiện lấy từ lá số; lời diễn giải là nội dung biên soạn theo từng chính tinh,
+                  nhóm phụ tinh và ngữ cảnh cung. Mỗi kết nối công bố dữ kiện, đoạn nguồn và phần
+                  biên tập. Nguồn cổ điển dùng để tham khảo biểu tượng, không chứng nhận toàn bộ
+                  thuật toán hay mọi quy tắc giờ Tý và tháng nhuận.
+                </p>
+                <SourceLinks sourceIds={report.sourceIds} />
+                <ul>
+                  {INTERPRETATION_SOURCES.filter((source) =>
+                    report.sourceIds.includes(source.id),
+                  ).map((source) => (
+                    <li key={source.id}>{source.description}</li>
+                  ))}
+                </ul>
+                <p className="interpretation-method">
+                  Bản đọc tạo trên thiết bị; ngày sinh không được gửi đến dịch vụ AI.
+                </p>
+              </details>
             </section>
           </>
         )}
