@@ -23,7 +23,12 @@ Adopt the requested role tag (`[PM]`, `[BA]`, `[DEV]`, `[QA]`) at the start of e
 
 ## 3. GIT WORKFLOW & TOKEN OPTIMIZATION
 - **Git as Single Source of Truth**: Use `git status`, `git diff`, and `git log` to inspect changes. Never rescan unmodified files.
-- **Atomic Commits**: Suggest standard Conventional Commits (`feat:`, `fix:`, `refactor:`, `docs:`).
+- **Atomic Commits**: Create scoped commits using Conventional Commits (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`).
+- **Automatic Commit and Push**: After completing each authorized change and running appropriate checks, proactively commit and push it without waiting for another user request. This applies to code, tests, rules and documentation; no empty commits for read-only tasks.
+  - Inspect the diff and stage only task-owned changes; preserve unrelated user work. Do not commit secrets, personal birth data or generated/ignored reports.
+  - Use the agreed Git destination (currently `origin/main`); inspect the remote before pushing. Never force-push, rewrite history or silently switch destinations.
+  - Verify the remote branch contains the pushed commit and report the commit ID, destination and remaining limitations. Do not describe failed checks or incomplete features as completed.
+  - If checks, authentication, branch protection or remote divergence block completion, report the exact blocker and retained local state. Do not claim a successful push or bypass safeguards.
 - **Token Saver**:
   - Do not reproduce unchanged full files.
   - Output targeted code diffs or localized block updates.
