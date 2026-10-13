@@ -19,6 +19,10 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `source-corpus-intake.md`: expanded partial-source corpus and stricter intake;
+  smaller initial mobile payload but >90 remains unstable. Source artifact
+  crosscheck and unresolved edition/Khôi–Việt differences: `source-crosscheck.md`.
+
 - `reading-synthesis.md`: v5 đánh giá điều kiện, giữ bằng chứng theo cung gốc và
   kết hợp hai nhóm đã mở; không giả lập tín hiệu đối nghịch hoặc mở luận vận.
 
@@ -61,7 +65,7 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 Latest authorization covers knowledge standardization and deeper contextual readings.
 Bounded implementation: two active auxiliary pairs, Tử Vi with support, Mệnh–Thân,
 four-palace context and why/evidence. Khôi–Việt remains deferred; active syntheses are
-editorial reference, not certified prediction. The 24 partial cases are not complete
+editorial reference, not certified prediction. The expanded 36 partial cases are not complete
 golden charts. Expand independent sources before deferred rules/named formations;
 see `knowledge-implementation.md` and `../test/knowledge-validation.md`.
 

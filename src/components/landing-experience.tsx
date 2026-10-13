@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useRef, useState } from 'react';
-import { LazyMotion, m, useReducedMotion } from 'framer-motion';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -35,7 +34,6 @@ import {
 } from '@/domain/profiles/local';
 import './horoscope/interpretation-panel.css';
 
-const loadMotionFeatures = () => import('./ui/motion-features').then((module) => module.default);
 const InterpretationPanel = dynamic(
   () => import('./horoscope/interpretation-panel').then((module) => module.InterpretationPanel),
   {
@@ -67,7 +65,6 @@ export function LandingExperience({ example }: { example: ChartResult }) {
   const [readingAvailable, setReadingAvailable] = useState(true);
   const [showExampleReading, setShowExampleReading] = useState(false);
   const resultHeading = useRef<HTMLHeadingElement>(null);
-  const reducedMotion = useReducedMotion();
   const input = useMemo<CalendarInput>(
     () =>
       calendar === 'solar'
@@ -132,7 +129,9 @@ export function LandingExperience({ example }: { example: ChartResult }) {
       requestAnimationFrame(() => {
         resultHeading.current?.focus({ preventScroll: true });
         resultHeading.current?.scrollIntoView({
-          behavior: reducedMotion ? 'instant' : 'smooth',
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ? 'instant'
+            : 'smooth',
           block: 'start',
         });
       });
@@ -210,212 +209,198 @@ export function LandingExperience({ example }: { example: ChartResult }) {
             <span>THUẬN TỰ NHIÊN · AN TÂM SỐNG</span>
           </div>
         </div>
-        <LazyMotion features={loadMotionFeatures}>
-          <m.div
-            className="birth-card"
-            initial={reducedMotion ? false : { y: 12 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="card-heading">
-              <span className="form-icon">
-                <Compass size={24} strokeWidth={1.3} />
-              </span>
-              <div>
-                <h2>Lập lá số của bạn</h2>
-                <p>Một khởi đầu nhỏ, một góc nhìn mới.</p>
-              </div>
-              <span className="free-tag">MIỄN PHÍ</span>
+        <div className="birth-card">
+          <div className="card-heading">
+            <span className="form-icon">
+              <Compass size={24} strokeWidth={1.3} />
+            </span>
+            <div>
+              <h2>Lập lá số của bạn</h2>
+              <p>Một khởi đầu nhỏ, một góc nhìn mới.</p>
             </div>
-            <form
-              onSubmit={submit}
-              aria-describedby={error ? 'form-error' : 'calendar-confirmation'}
-            >
+            <span className="free-tag">MIỄN PHÍ</span>
+          </div>
+          <form onSubmit={submit} aria-describedby={error ? 'form-error' : 'calendar-confirmation'}>
+            <label className="field">
+              Họ và tên <span className="optional">(không bắt buộc)</span>
+              <input
+                id="birth-name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Bạn muốn được gọi là gì?"
+                autoComplete="name"
+                maxLength={80}
+              />
+            </label>
+            <div className="field-heading">
+              <span>Ngày tháng năm sinh</span>
+              <div className="calendar-switch" role="group" aria-label="Loại lịch">
+                <button
+                  type="button"
+                  aria-pressed={calendar === 'solar'}
+                  onClick={() => switchCalendar('solar')}
+                >
+                  Dương lịch
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={calendar === 'lunar'}
+                  onClick={() => switchCalendar('lunar')}
+                >
+                  Âm lịch
+                </button>
+              </div>
+            </div>
+            <div className="date-fields">
               <label className="field">
-                Họ và tên <span className="optional">(không bắt buộc)</span>
+                <span className="sr-only">Ngày sinh</span>
                 <input
-                  id="birth-name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Bạn muốn được gọi là gì?"
-                  autoComplete="name"
-                  maxLength={80}
+                  type="number"
+                  aria-label="Ngày sinh"
+                  min={1}
+                  max={31}
+                  value={day || ''}
+                  onChange={(e) => setDay(Number(e.target.value))}
+                  required
+                  inputMode="numeric"
                 />
               </label>
-              <div className="field-heading">
-                <span>Ngày tháng năm sinh</span>
-                <div className="calendar-switch" role="group" aria-label="Loại lịch">
-                  <button
-                    type="button"
-                    aria-pressed={calendar === 'solar'}
-                    onClick={() => switchCalendar('solar')}
-                  >
-                    Dương lịch
-                  </button>
-                  <button
-                    type="button"
-                    aria-pressed={calendar === 'lunar'}
-                    onClick={() => switchCalendar('lunar')}
-                  >
-                    Âm lịch
-                  </button>
-                </div>
-              </div>
-              <div className="date-fields">
-                <label className="field">
-                  <span className="sr-only">Ngày sinh</span>
-                  <input
-                    type="number"
-                    aria-label="Ngày sinh"
-                    min={1}
-                    max={31}
-                    value={day || ''}
-                    onChange={(e) => setDay(Number(e.target.value))}
-                    required
-                    inputMode="numeric"
-                  />
-                </label>
-                <label className="field">
-                  <span className="sr-only">Tháng sinh</span>
-                  <select
-                    aria-label="Tháng sinh"
-                    value={month}
-                    onChange={(e) => setMonth(Number(e.target.value))}
-                  >
-                    {Array.from({ length: 12 }, (_, i) => (
-                      <option value={i + 1} key={i}>
-                        Tháng {i + 1}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="field">
-                  <span className="sr-only">Năm sinh</span>
-                  <input
-                    aria-label="Năm sinh"
-                    type="number"
-                    min={MIN_YEAR}
-                    max={MAX_YEAR}
-                    required
-                    value={year || ''}
-                    onChange={(e) => setYear(Number(e.target.value))}
-                    inputMode="numeric"
-                  />
-                </label>
-              </div>
-              {calendar === 'lunar' && (
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={leap}
-                    onChange={(e) => setLeap(e.target.checked)}
-                  />
-                  Sinh trong tháng nhuận
-                </label>
-              )}
-              <p
-                className={`calendar-confirmation ${converted.error ? 'date-warning' : ''}`}
-                id="calendar-confirmation"
-              >
-                <CalendarDays size={15} />
-                {converted.dates
-                  ? `${calendar === 'solar' ? 'Âm lịch' : 'Dương lịch'}: ${formatDate(calendar === 'solar' ? converted.dates.lunar : converted.dates.solar)}${calendar === 'solar' && converted.dates.lunar.isLeapMonth ? ' · tháng nhuận' : ''}`
-                  : converted.error}
-              </p>
-              <div className="form-two-column">
-                <label className="field">
-                  Giờ sinh{' '}
-                  <span className="input-icon">
-                    <Clock3 size={17} />
-                    <input
-                      type="time"
-                      required={!unknownTime}
-                      disabled={unknownTime}
-                      value={time}
-                      onChange={(e) => setTime(e.target.value)}
-                      aria-label="Giờ sinh"
-                    />
-                  </span>
-                </label>
-                <label className="field">
-                  Giới tính an lá số
-                  <select
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value as 'male' | 'female')}
-                    aria-label="Giới tính an lá số"
-                  >
-                    <option value="male">Nam</option>
-                    <option value="female">Nữ</option>
-                  </select>
-                </label>
-              </div>
+              <label className="field">
+                <span className="sr-only">Tháng sinh</span>
+                <select
+                  aria-label="Tháng sinh"
+                  value={month}
+                  onChange={(e) => setMonth(Number(e.target.value))}
+                >
+                  {Array.from({ length: 12 }, (_, i) => (
+                    <option value={i + 1} key={i}>
+                      Tháng {i + 1}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="field">
+                <span className="sr-only">Năm sinh</span>
+                <input
+                  aria-label="Năm sinh"
+                  type="number"
+                  min={MIN_YEAR}
+                  max={MAX_YEAR}
+                  required
+                  value={year || ''}
+                  onChange={(e) => setYear(Number(e.target.value))}
+                  inputMode="numeric"
+                />
+              </label>
+            </div>
+            {calendar === 'lunar' && (
               <label className="checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={unknownTime}
-                  onChange={(event) => setUnknownTime(event.target.checked)}
-                />
-                Chưa biết giờ sinh
+                <input type="checkbox" checked={leap} onChange={(e) => setLeap(e.target.checked)} />
+                Sinh trong tháng nhuận
               </label>
-              {unknownTime && (
-                <p>Chỉ xem ngày âm/dương và thông tin năm sinh; không gán giờ để lập lá số.</p>
-              )}
-              <details className="calculation-settings">
-                <summary>
-                  Quy ước lịch & an sao <ChevronDown size={15} />
-                </summary>
-                <p>
-                  Lịch Việt Nam UTC+7. Giờ nhập là giờ địa phương trên giấy khai sinh. Giới tính
-                  được dùng cho quy tắc đại hạn truyền thống, không suy luận từ tên.
-                </p>
-                <label className="field">
-                  Tháng nhuận
-                  <select
-                    value={leapPolicy}
-                    onChange={(e) => setLeapPolicy(e.target.value as BirthInput['leapPolicy'])}
-                  >
-                    <option value="split_at_15">Ngày 1–15: cùng tháng; từ 16: tháng kế</option>
-                    <option value="same_month">Giữ nguyên tháng âm lịch</option>
-                  </select>
-                </label>
-                <label className="field">
-                  Giờ Tý từ 23:00
-                  <select
-                    value={ziPolicy}
-                    onChange={(e) => setZiPolicy(e.target.value as BirthInput['ziPolicy'])}
-                  >
-                    <option value="civil_midnight">Giữ ngày đến 00:00</option>
-                    <option value="next_day_at_23">Chuyển ngày từ 23:00</option>
-                  </select>
-                </label>
-                <p>
-                  Đây là cấu hình Tử Vi tham khảo, chưa được chuyên gia thẩm định riêng theo trường
-                  phái Việt Nam. Không hỗ trợ điều chỉnh múi giờ lịch sử hoặc giờ mặt trời thực.
-                </p>
-              </details>
-              {error && (
-                <p className="form-error" role="alert" id="form-error">
-                  {error}
-                </p>
-              )}
-              <button type="submit" className="primary-button generate-button" disabled={loading}>
-                {loading
-                  ? 'Đang chuẩn bị kết quả…'
-                  : unknownTime
-                    ? 'Xem thông tin không cần giờ sinh'
-                    : 'Khám phá lá số của tôi'}
-                <ArrowRight size={19} />
-              </button>
-              <a className="text-link" href="#ho-so-da-luu">
-                Mở hồ sơ đã lưu trên thiết bị
-              </a>
-              <p className="privacy-note">
-                <LockKeyhole size={13} />
-                Không cần tài khoản. Không gửi thông tin sinh lên máy chủ.
+            )}
+            <p
+              className={`calendar-confirmation ${converted.error ? 'date-warning' : ''}`}
+              id="calendar-confirmation"
+            >
+              <CalendarDays size={15} />
+              {converted.dates
+                ? `${calendar === 'solar' ? 'Âm lịch' : 'Dương lịch'}: ${formatDate(calendar === 'solar' ? converted.dates.lunar : converted.dates.solar)}${calendar === 'solar' && converted.dates.lunar.isLeapMonth ? ' · tháng nhuận' : ''}`
+                : converted.error}
+            </p>
+            <div className="form-two-column">
+              <label className="field">
+                Giờ sinh{' '}
+                <span className="input-icon">
+                  <Clock3 size={17} />
+                  <input
+                    type="time"
+                    required={!unknownTime}
+                    disabled={unknownTime}
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                    aria-label="Giờ sinh"
+                  />
+                </span>
+              </label>
+              <label className="field">
+                Giới tính an lá số
+                <select
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value as 'male' | 'female')}
+                  aria-label="Giới tính an lá số"
+                >
+                  <option value="male">Nam</option>
+                  <option value="female">Nữ</option>
+                </select>
+              </label>
+            </div>
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={unknownTime}
+                onChange={(event) => setUnknownTime(event.target.checked)}
+              />
+              Chưa biết giờ sinh
+            </label>
+            {unknownTime && (
+              <p>Chỉ xem ngày âm/dương và thông tin năm sinh; không gán giờ để lập lá số.</p>
+            )}
+            <details className="calculation-settings">
+              <summary>
+                Quy ước lịch & an sao <ChevronDown size={15} />
+              </summary>
+              <p>
+                Lịch Việt Nam UTC+7. Giờ nhập là giờ địa phương trên giấy khai sinh. Giới tính được
+                dùng cho quy tắc đại hạn truyền thống, không suy luận từ tên.
               </p>
-            </form>
-          </m.div>
-        </LazyMotion>
+              <label className="field">
+                Tháng nhuận
+                <select
+                  value={leapPolicy}
+                  onChange={(e) => setLeapPolicy(e.target.value as BirthInput['leapPolicy'])}
+                >
+                  <option value="split_at_15">Ngày 1–15: cùng tháng; từ 16: tháng kế</option>
+                  <option value="same_month">Giữ nguyên tháng âm lịch</option>
+                </select>
+              </label>
+              <label className="field">
+                Giờ Tý từ 23:00
+                <select
+                  value={ziPolicy}
+                  onChange={(e) => setZiPolicy(e.target.value as BirthInput['ziPolicy'])}
+                >
+                  <option value="civil_midnight">Giữ ngày đến 00:00</option>
+                  <option value="next_day_at_23">Chuyển ngày từ 23:00</option>
+                </select>
+              </label>
+              <p>
+                Đây là cấu hình Tử Vi tham khảo, chưa được chuyên gia thẩm định riêng theo trường
+                phái Việt Nam. Không hỗ trợ điều chỉnh múi giờ lịch sử hoặc giờ mặt trời thực.
+              </p>
+            </details>
+            {error && (
+              <p className="form-error" role="alert" id="form-error">
+                {error}
+              </p>
+            )}
+            <button type="submit" className="primary-button generate-button" disabled={loading}>
+              {loading
+                ? 'Đang chuẩn bị kết quả…'
+                : unknownTime
+                  ? 'Xem thông tin không cần giờ sinh'
+                  : 'Khám phá lá số của tôi'}
+              <ArrowRight size={19} />
+            </button>
+            <a className="text-link" href="#ho-so-da-luu">
+              Mở hồ sơ đã lưu trên thiết bị
+            </a>
+            <p className="privacy-note">
+              <LockKeyhole size={13} />
+              Không cần tài khoản. Không gửi thông tin sinh lên máy chủ.
+            </p>
+          </form>
+        </div>
       </section>
       <div className="principles-strip">
         <div className="page-width">

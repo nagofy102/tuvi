@@ -72,7 +72,7 @@
   },
   "coverage": {
     "lunarMonths": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    "caseCount": 24,
+    "caseCount": 36,
     "hourBranches": 12,
     "mingBranches": 12,
     "bodyBranches": 12,
@@ -1203,6 +1203,558 @@
         "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
         "engineUsedForExpected": false,
         "derivation": "Tháng 12 đếm thuận 11 bước từ Dần -> Sửu. Giờ Hợi cách Tý 11 bước: Mệnh đếm nghịch từ Sửu -> Dần; Thân đếm thuận từ Sửu -> Tý. Tả Phụ tháng 12 đếm thuận 11 bước từ Thìn -> Mão; Hữu Bật đếm nghịch 11 bước từ Tuất -> Hợi. Văn Xương đếm nghịch 11 bước từ Tuất -> Hợi; Văn Khúc đếm thuận 11 bước từ Thìn -> Mão."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-ty-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Mùi",
+        "bodyBranch": "Mùi",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Tý cách Tý 0 bước: Mệnh đếm nghịch từ Mùi -> Mùi; Thân đếm thuận từ Mùi -> Mùi. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 0 bước từ Tuất -> Tuất; Văn Khúc đếm thuận 0 bước từ Thìn -> Thìn. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-suu-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 2,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Sửu",
+      "expected": {
+        "mingBranch": "Ngọ",
+        "bodyBranch": "Thân",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Dậu",
+          "Văn Khúc": "Tỵ"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Sửu cách Tý 1 bước: Mệnh đếm nghịch từ Mùi -> Ngọ; Thân đếm thuận từ Mùi -> Thân. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 1 bước từ Tuất -> Dậu; Văn Khúc đếm thuận 1 bước từ Thìn -> Tỵ. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-dan-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 4,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Dần",
+      "expected": {
+        "mingBranch": "Tỵ",
+        "bodyBranch": "Dậu",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Thân",
+          "Văn Khúc": "Ngọ"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Dần cách Tý 2 bước: Mệnh đếm nghịch từ Mùi -> Tỵ; Thân đếm thuận từ Mùi -> Dậu. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 2 bước từ Tuất -> Thân; Văn Khúc đếm thuận 2 bước từ Thìn -> Ngọ. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-mao-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 6,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Mão",
+      "expected": {
+        "mingBranch": "Thìn",
+        "bodyBranch": "Tuất",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Mùi",
+          "Văn Khúc": "Mùi"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Mão cách Tý 3 bước: Mệnh đếm nghịch từ Mùi -> Thìn; Thân đếm thuận từ Mùi -> Tuất. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 3 bước từ Tuất -> Mùi; Văn Khúc đếm thuận 3 bước từ Thìn -> Mùi. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-thin-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 8,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Thìn",
+      "expected": {
+        "mingBranch": "Mão",
+        "bodyBranch": "Hợi",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Ngọ",
+          "Văn Khúc": "Thân"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Thìn cách Tý 4 bước: Mệnh đếm nghịch từ Mùi -> Mão; Thân đếm thuận từ Mùi -> Hợi. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 4 bước từ Tuất -> Ngọ; Văn Khúc đếm thuận 4 bước từ Thìn -> Thân. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-ti-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 10,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tỵ",
+      "expected": {
+        "mingBranch": "Dần",
+        "bodyBranch": "Tý",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Tỵ",
+          "Văn Khúc": "Dậu"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Tỵ cách Tý 5 bước: Mệnh đếm nghịch từ Mùi -> Dần; Thân đếm thuận từ Mùi -> Tý. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 5 bước từ Tuất -> Tỵ; Văn Khúc đếm thuận 5 bước từ Thìn -> Dậu. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-ngo-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 12,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Ngọ",
+      "expected": {
+        "mingBranch": "Sửu",
+        "bodyBranch": "Sửu",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Thìn",
+          "Văn Khúc": "Tuất"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Ngọ cách Tý 6 bước: Mệnh đếm nghịch từ Mùi -> Sửu; Thân đếm thuận từ Mùi -> Sửu. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 6 bước từ Tuất -> Thìn; Văn Khúc đếm thuận 6 bước từ Thìn -> Tuất. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-mui-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 14,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Mùi",
+      "expected": {
+        "mingBranch": "Tý",
+        "bodyBranch": "Dần",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Mão",
+          "Văn Khúc": "Hợi"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Mùi cách Tý 7 bước: Mệnh đếm nghịch từ Mùi -> Tý; Thân đếm thuận từ Mùi -> Dần. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 7 bước từ Tuất -> Mão; Văn Khúc đếm thuận 7 bước từ Thìn -> Hợi. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-than-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 16,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Thân",
+      "expected": {
+        "mingBranch": "Hợi",
+        "bodyBranch": "Mão",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Dần",
+          "Văn Khúc": "Tý"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Thân cách Tý 8 bước: Mệnh đếm nghịch từ Mùi -> Hợi; Thân đếm thuận từ Mùi -> Mão. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 8 bước từ Tuất -> Dần; Văn Khúc đếm thuận 8 bước từ Thìn -> Tý. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-dau-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 18,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Dậu",
+      "expected": {
+        "mingBranch": "Tuất",
+        "bodyBranch": "Thìn",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Sửu",
+          "Văn Khúc": "Sửu"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Dậu cách Tý 9 bước: Mệnh đếm nghịch từ Mùi -> Tuất; Thân đếm thuận từ Mùi -> Thìn. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 9 bước từ Tuất -> Sửu; Văn Khúc đếm thuận 9 bước từ Thìn -> Sửu. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-tuat-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 20,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tuất",
+      "expected": {
+        "mingBranch": "Dậu",
+        "bodyBranch": "Tỵ",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Tý",
+          "Văn Khúc": "Dần"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Tuất cách Tý 10 bước: Mệnh đếm nghịch từ Mùi -> Dậu; Thân đếm thuận từ Mùi -> Tỵ. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 10 bước từ Tuất -> Tý; Văn Khúc đếm thuận 10 bước từ Thìn -> Dần. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-hoi-day15",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 15,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 22,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Hợi",
+      "expected": {
+        "mingBranch": "Thân",
+        "bodyBranch": "Ngọ",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Hợi",
+          "Văn Khúc": "Mão"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Hợi cách Tý 11 bước: Mệnh đếm nghịch từ Mùi -> Thân; Thân đếm thuận từ Mùi -> Ngọ. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Văn Xương đếm nghịch 11 bước từ Tuất -> Hợi; Văn Khúc đếm thuận 11 bước từ Thìn -> Mão. Ngày 15 không tham gia các phép đếm này; không suy Cục, chính tinh hoặc vận. Đây là ca đếm thủ công từng phần từ cùng nguồn, không phải lá số hoàn chỉnh hay thẩm định độc lập."
       },
       "unverifiedFields": [
         "cuc",

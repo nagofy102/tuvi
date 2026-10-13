@@ -120,6 +120,13 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Đối chiếu scan và mở corpus từng phần
+
+Xem `source-corpus-intake.md` cho bằng chứng của increment sau `24e9dfb`:
+đếm đáp án trước engine, siết cổng metadata và giữ trường chưa kiểm chứng.
+Không coi bản scan là ấn bản độc lập đã xác thực hoặc tự mở sao/luận vận.
+Payload mobile giảm nhưng đo lặp vẫn chưa đạt >90 ổn định.
+
 ### Tổng hợp biên tập có điều kiện — v5
 
 Xem `reading-synthesis.md` cho tiêu chí và kết quả chạy gói nâng cấp trên nền

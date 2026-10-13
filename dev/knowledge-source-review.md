@@ -6,7 +6,10 @@ Reviewed on 2026-10-13 by the authorized AI research stream. This is a
 source-traceable, restricted reference profile, not independent practitioner
 certification or empirical evidence that astrology predicts personal outcomes.
 The source is a historical transcription, not a modern accredited textbook.
-No facsimile edition or second independent edition has yet been collated.
+A later bounded facsimile passage crosscheck is recorded in
+[source-crosscheck.md](source-crosscheck.md). Its bibliographic identity and
+relationship to this transcription are not yet established; it does not provide
+two authenticated independent editions. Original research below remains historical.
 
 ## Documents actually retrieved
 

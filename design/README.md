@@ -21,6 +21,11 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `../dev/source-crosscheck.md`: đối chiếu scan thật, hướng đếm tháng thường
+  khớp nhưng ấn bản/Khôi–Việt còn khác biệt; không mở nhóm sao mới.
+- `../dev/source-corpus-intake.md`: mở corpus từng phần và cổng tiếp nhận;
+  xem `../test/source-corpus-intake.md` cho đo mobile lặp chưa đạt >90.
+
 - `reading-synthesis-plan.md`: kế hoạch PM được giao quyền triển khai, hợp đồng
   quy tắc/nhận định, rubric và cổng phát hành; gói tổng hợp biên tập v5 xem
   `../dev/reading-synthesis.md`. Chưa mở thêm sao hoặc dự báo.
@@ -45,7 +50,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Bước tiếp theo
 
-Mốc 2–3 có hồ sơ truy nguồn và 24 ca đối chiếu từng phần. Đã mở nhóm Tả–Hữu/Xương–Khúc,
+Corpus nay có 36 ca đối chiếu từng phần (218 trường); đợt đối chiếu scan và mở ca
+mới ở `../dev/source-corpus-intake.md`, vẫn chưa có lá số chuẩn hoàn chỉnh.
+Đã mở nhóm Tả–Hữu/Xương–Khúc,
 Tử Vi với hỗ trợ, Mệnh–Thân và tam phương tứ chính có “Vì sao”. Khôi–Việt/cách cục/vận hạn
 chưa kích hoạt; chưa có chứng nhận độc lập. Xem `interpretation-milestones.md` và
 `../test/knowledge-validation.md`.
