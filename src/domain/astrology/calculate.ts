@@ -1,10 +1,11 @@
-import { astro } from './vendor/iztro-vietnam.cjs';
+import { astro } from 'iztro';
 import { CALENDAR_VERSION } from '../calendar/types';
 import { normalizeDate, dateString, solarToLunar } from '../calendar/convert';
 import { BRANCHES, mod, napAm, timeIndex, yearName } from './sexagenary';
 import type { BirthInput, ChartResult, ChartStar } from './types';
 
-import { RULE_PROFILE } from './profile';
+import { RULE_PROFILE, FIXED_LEAP_POLICY, FIXED_ZI_POLICY } from './profile';
+import { NAM_PHAI_TRANSFORMATIONS } from './nam-phai';
 export { RULE_PROFILE } from './profile';
 
 export function calculateChart(input: BirthInput): ChartResult {
@@ -12,10 +13,7 @@ export function calculateChart(input: BirthInput): ChartResult {
   const index = timeIndex(input.hour, input.minute);
   if (!['male', 'female'].includes(input.gender))
     throw new Error('Vui lòng chọn giới tính dùng để an lá số.');
-  if (
-    !['split_at_15', 'same_month'].includes(input.leapPolicy) ||
-    !['civil_midnight', 'next_day_at_23'].includes(input.ziPolicy)
-  )
+  if (input.leapPolicy !== FIXED_LEAP_POLICY || input.ziPolicy !== FIXED_ZI_POLICY)
     throw new Error('Cấu hình an lá số không hợp lệ.');
   let effectiveLunar = birth.lunar;
   let effectiveSolar = birth.solar;
@@ -28,7 +26,7 @@ export function calculateChart(input: BirthInput): ChartResult {
     };
     effectiveLunar = solarToLunar(effectiveSolar);
   }
-  // The isolated engine bridge reads this real civil date using Vietnam's calendar.
+  // Whole-day late-Ty convention: retain birth dates separately from calculation dates.
   const chart = (() => {
     try {
       return astro.withOptions({
@@ -40,6 +38,7 @@ export function calculateChart(input: BirthInput): ChartResult {
         fixLeap: input.leapPolicy === 'split_at_15',
         language: 'vi-VN',
         config: {
+          mutagens: NAM_PHAI_TRANSFORMATIONS,
           algorithm: 'default',
           yearDivide: 'normal',
           horoscopeDivide: 'normal',
@@ -49,7 +48,7 @@ export function calculateChart(input: BirthInput): ChartResult {
       });
     } catch (cause) {
       throw new Error(
-        'Bộ an sao chưa hỗ trợ ngày âm lịch Việt Nam này. Vui lòng đối chiếu kết quả chuyển lịch; hệ thống không tự đổi ngày sinh.',
+        'Không thể an lá số theo âm lịch Trung Quốc cho ngày đã nhập. Vui lòng đối chiếu ngày sinh.',
         { cause },
       );
     }
@@ -62,7 +61,7 @@ export function calculateChart(input: BirthInput): ChartResult {
     raw.isLeap !== effectiveLunar.isLeapMonth
   ) {
     throw new Error(
-      'Bộ an sao chưa hỗ trợ ngày âm lịch Việt Nam này. Vui lòng giữ kết quả chuyển lịch để đối chiếu; hệ thống không tự đổi ngày sinh.',
+      'Ngày âm lịch của bộ an sao không khớp bộ chuyển lịch. Vui lòng đối chiếu ngày sinh.',
     );
   }
   const mapStar = (
@@ -113,14 +112,14 @@ export function calculateChart(input: BirthInput): ChartResult {
     cuc: chart.fiveElementsClass,
     palaces,
     provenance: {
-      engine: 'iztro-2.6.2-vn-bridge-v1',
+      engine: 'iztro-2.6.2-nam-phai-v1',
       calendar: CALENDAR_VERSION,
       profile: RULE_PROFILE,
       leapPolicy: input.leapPolicy,
       ziPolicy: input.ziPolicy,
     },
     warnings: [
-      'Lá số theo cấu hình Zi Wei phổ thông của iztro; chưa được chuyên gia thẩm định theo từng trường phái Tử Vi Việt Nam.',
+      'Hồ sơ Nam phái của dự án dùng âm lịch Trung Quốc; quy ước tháng nhuận và giờ Tý được công bố tại trang phương pháp.',
     ],
   };
 }

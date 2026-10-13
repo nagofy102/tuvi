@@ -217,14 +217,14 @@ export const KNOWLEDGE_RULES: readonly KnowledgeRule[] = [
 ];
 
 export const KNOWLEDGE_PROFILE = {
-  id: 'huyenvi-source-bounded-v1',
+  id: 'huyenvi-nam-phai-source-bounded-v2',
   chartProfile: RULE_PROFILE,
-  school: 'Cấu hình iztro + lịch Việt Nam; chưa gán nhãn Nam Phái/Bắc Phái',
+  school: 'Hồ sơ Nam phái của dự án · âm lịch Trung Quốc',
   review: 'AI-assisted textual review; not independent practitioner validation',
-  defaults: { ziPolicy: 'civil_midnight', leapPolicy: 'split_at_15' },
+  defaults: { ziPolicy: 'next_day_at_23', leapPolicy: 'split_at_15' },
   allowedVariants: {
-    ziPolicy: ['civil_midnight', 'next_day_at_23'],
-    leapPolicy: ['split_at_15', 'same_month'],
+    ziPolicy: ['next_day_at_23'],
+    leapPolicy: ['split_at_15'],
   },
   differences: [
     {
@@ -232,19 +232,19 @@ export const KNOWLEDGE_PROFILE = {
       status: 'disputed',
       ruleId: 'leap-policy-conflict',
       detail:
-        'Nguồn cổ dùng tháng kế theo ví dụ tháng giêng nhuận và khái quát cho tháng nhuận khác; khác cả hai lựa chọn hiện có, chưa hòa giải an sao đầy đủ.',
+        'Hồ sơ cố định chia tháng nhuận tại ngày 15 theo quy ước phần mềm. Đoạn cổ dùng toàn tháng kế là dị bản được lưu, không áp dụng vào hồ sơ này.',
     },
     {
       id: 'zi',
       status: 'deferred',
       detail:
-        '00:00/23:00 là lựa chọn kỹ thuật được công bố; chưa có nguồn trong hồ sơ này chốt trường phái.',
+        'Hồ sơ cố định tăng đầy đủ ngày dân sự từ 23:00 rồi an theo giờ Tý đầu ngày; đây là quy ước dự án, chưa suy rộng cho mọi truyền thừa Nam phái.',
     },
     {
       id: 'transformations',
       status: 'deferred',
       detail:
-        'Tứ Hóa và miếu/vượng chỉ hiển thị theo iztro; chưa hòa giải bảng giữa các bản/trường phái.',
+        'Bảng Tứ Hóa Nam phái được ghim theo tài liệu An tinh quyết; miếu/vượng vẫn theo bảng của bộ an sao. Chưa dùng hai nhóm dữ kiện này để mở quy tắc luận mới.',
     },
     {
       id: 'other-stars',

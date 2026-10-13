@@ -15,6 +15,7 @@
     "audit:tech": "vitest run --config vitest.audit.config.ts",
     "audit:reference": "node scripts/run-reference-diff.mjs",
     "audit:sources": "node scripts/audit-source-registry.mjs",
+    "audit:competitors": "node scripts/run-competitor-diff.mjs",
     "format:check": "prettier --check src tests scripts package.json tsconfig.json next.config.ts playwright.config.ts vitest.config.ts vitest.audit.config.ts postcss.config.mjs"
   },
   "engines": {
@@ -29,6 +30,7 @@
     "iztro": "2.6.2",
     "lucide-react": "1.55.0",
     "lunar-lite": "0.2.8",
+    "lunar-typescript": "1.8.6",
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",

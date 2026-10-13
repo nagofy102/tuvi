@@ -1,4 +1,5 @@
-import { getLunarDate, getSolarDate } from '@dqcai/vn-lunar';
+import { solar2lunar } from 'lunar-lite';
+import { Lunar } from 'lunar-typescript';
 import { MAX_YEAR, MIN_YEAR, type CalendarInput, type CivilDate, type LunarDate } from './types';
 
 export class CalendarError extends Error {}
@@ -25,9 +26,21 @@ export function validateSolarDate(date: CivilDate): void {
 
 export function solarToLunar(date: CivilDate): LunarDate {
   validateSolarDate(date);
-  const lunar = getLunarDate(date.day, date.month, date.year);
-  if (!lunar.isValid()) throw new CalendarError('Ngày này nằm ngoài phạm vi lịch được hỗ trợ.');
-  return { day: lunar.day, month: lunar.month, year: lunar.year, isLeapMonth: lunar.leap };
+  const lunar = solar2lunar(dateString(date));
+  // Early supported Gregorian dates can belong to the preceding lunar year.
+  if (
+    !Number.isInteger(lunar.lunarYear) ||
+    lunar.lunarYear < MIN_YEAR - 1 ||
+    lunar.lunarYear > MAX_YEAR
+  ) {
+    throw new CalendarError('Ngày này nằm ngoài phạm vi lịch được hỗ trợ.');
+  }
+  return {
+    day: lunar.lunarDay,
+    month: lunar.lunarMonth,
+    year: lunar.lunarYear,
+    isLeapMonth: lunar.isLeap,
+  };
 }
 
 export function lunarToSolar(date: LunarDate): CivilDate {
@@ -43,8 +56,21 @@ export function lunarToSolar(date: LunarDate): CivilDate {
   ) {
     throw new CalendarError('Ngày âm lịch không hợp lệ.');
   }
-  const raw = getSolarDate(date.day, date.month, date.year, date.isLeapMonth);
-  const solar = { year: raw.year, month: raw.month, day: raw.day };
+  let solar: CivilDate;
+  try {
+    // Construct the requested signed month directly: lunar-lite first constructs
+    // the regular month, which rejects a valid leap day 30 if that month has 29 days.
+    const raw = Lunar.fromYmd(
+      date.year,
+      date.isLeapMonth ? -date.month : date.month,
+      date.day,
+    ).getSolar();
+    solar = { year: raw.getYear(), month: raw.getMonth(), day: raw.getDay() };
+  } catch (cause) {
+    throw new CalendarError('Ngày hoặc tháng nhuận không tồn tại trong năm âm lịch đã chọn.', {
+      cause,
+    });
+  }
   validateSolarDate(solar);
   // The dependency normalizes invalid leap flags and days: reject instead of silently correcting.
   const back = solarToLunar(solar);

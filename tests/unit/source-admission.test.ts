@@ -5,7 +5,7 @@ import {
   runReferenceDiff,
   type ReferenceCorpus,
 } from '../../scripts/reference-diff';
-import * as engine from '@/domain/astrology/calculate';
+import * as engine from '@/domain/astrology/legacy-vietnamese';
 import {
   SOURCE_REGISTRY,
   assertReviewedReferenceSources,

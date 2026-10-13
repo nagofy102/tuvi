@@ -13,11 +13,21 @@ pages and server-generated OpenGraph PNGs handle public SEO. PostgreSQL remains 
 There is no account storage, AI integration, PWA service worker or database migration yet.
 General/detailed reference interpretation is now implemented locally using sourced fixed rules;
 this is not live AI inference or independent expert sign-off.
-The v2 chart profile now integrates the Vietnamese calendar seam. Full 1950–2026
-technical audit passes the project gate: 28,124 bridge tuples and 10,900 selected chart
-attempts; see `../test/calendar-remediation.md`. These are not expert accuracy metrics.
+Production now uses `nam-phai-chinese-lunar-v1` with Chinese lunar conversion,
+explicit Southern Tứ Hóa and fixed leap/Tý rules; see `nam-phai-implementation.md`.
+The former Vietnamese v2 profile is archived for its original corpus/audit. Its
+1950–2026 results (28,124 bridge tuples and 10,900 selected charts) do not validate
+the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 ## References
+
+- `../design/nam-phai-transition.md`: latest product direction is one Nam Phai
+  profile with Chinese leap handling. BA/specialist define exact rules before DEV migration.
+- `nam-phai-source-decision.md`, `nam-phai-migration-spec.md`,
+  `nam-phai-implementation.md`: specialist/BA decisions and actual implementation;
+  final checks are in `../test/nam-phai-migration.md`.
+- `competitor-chart-intake.md`: four actually observed external charts and scoped
+  comparison, not independent Nam Phái certification or engine-generated answers.
 
 - `thematic-exercises.md`: v6 separates work, finance and relationship exercises
   by admitted group state and shows the conditional action in the first reading.
@@ -79,7 +89,7 @@ golden charts. Expand independent sources before deferred rules/named formations
 see `knowledge-implementation.md` and `../test/knowledge-validation.md`.
 
 Review the selected Zi Wei profile against expert-authored Vietnamese chart fixtures before claiming
-school-specific production accuracy. The current v2 engine integrates a Vietnamese calendar seam;
+school-specific production accuracy. The archived v2 engine integrates a Vietnamese calendar seam;
 see `calendar-remediation.md`. Invalid dates are still rejected. Persistence, AI and PWA
 are separate implementation phases; do not advertise them as available.
 
@@ -97,8 +107,14 @@ to fabricate golden data or selection of a paid external AI provider.
 
 ## Remaining domain decisions
 
-The UI now explicitly selects leap-month splitting (default day 15) and late Tý boundaries
-(default civil midnight). The current calendar is the Vietnamese tabular calendar, not an IANA
-historical-timezone engine. Star dignity and placements come from iztro's default configuration.
-Expert school validation, historical offsets, annual prediction/scoring and birth-time rectification
-remain unresolved. See `implementation.md` for the supported reference profile.
+Latest user decision supersedes the selectable-profile description below: BA and
+specialist selected `nam-phai-chinese-lunar-v1`, Chinese lunar conversion, fixed
+split-at-15 placement and full next-day rollover at 23:00. See
+`nam-phai-source-decision.md` and `nam-phai-migration-spec.md`; implementation and
+QA are recorded separately. The Vietnamese profile remains archival regression
+evidence, not an alternative school offered in the current product.
+
+Historical birth-place offsets, DST/true-solar-time correction, independent full
+school validation, annual prediction/scoring and birth-time rectification remain
+outside the selected application profile. Old `implementation.md` records the
+previous Vietnamese-calendar implementation and does not certify the new profile.

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-const key = 'huyenvi:consented-profiles:v1';
+const key = 'huyenvi:consented-profiles:v2';
 test('multiple profiles stay separate and corrupt local data can be cleared without breaking lookup', async ({
   page,
 }) => {

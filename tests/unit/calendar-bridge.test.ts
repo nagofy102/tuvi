@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { astro as upstream } from 'iztro';
 import { astro as bridged } from '@/domain/astrology/vendor/iztro-vietnam.cjs';
-import { calculateChart } from '@/domain/astrology/calculate';
+import { calculateChart } from '@/domain/astrology/legacy-vietnamese';
 import { calculateInterpretation } from '@/domain/interpretation/calculate';
-import { dateString, solarToLunar } from '@/domain/calendar/convert';
+import { dateString, solarToLunar } from '@/domain/calendar/legacy-vietnamese';
 import {
   getTotalDaysOfLunarMonth,
   getHeavenlyStemAndEarthlyBranchBySolarDate,
@@ -66,13 +66,13 @@ describe('isolated Vietnamese calendar seam, not expert star-placement certifica
     { year: 1985, month: 4, day: 1 },
     { year: 1987, month: 8, day: 24 },
     { year: 2017, month: 8, day: 21 },
-  ])('retains real birth dates and creates readings for regression %j', (date) => {
+  ])('retains legacy birth dates but refuses active-profile readings for regression %j', (date) => {
     const chart = calculateChart({ ...base, date });
     expect(chart.solar).toEqual(date);
     expect(chart.lunar).toEqual(solarToLunar(date));
     expect(chart.effectiveLunar).toEqual(chart.lunar);
     expect(chart.palaces).toHaveLength(12);
-    expect(calculateInterpretation(chart).status).toBe('ready');
+    expect(calculateInterpretation(chart).status).toBe('unavailable');
   });
   it('uses the Vietnamese year at the 1985 Tết boundary', () => {
     const pillars = getHeavenlyStemAndEarthlyBranchBySolarDate('1985-01-21', 0, {

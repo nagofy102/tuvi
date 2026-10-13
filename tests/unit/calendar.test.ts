@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { lunarToSolar, normalizeDate, parseDate, solarToLunar } from '@/domain/calendar/convert';
+import {
+  lunarToSolar,
+  normalizeDate,
+  parseDate,
+  solarToLunar,
+} from '@/domain/calendar/legacy-vietnamese';
 
 // Independent civil-date fixtures: Vietnamese New Year / Vietnamese calendar references.
 // https://en.wikipedia.org/wiki/Vietnamese_calendar (1968, 1985, 2007 differences)

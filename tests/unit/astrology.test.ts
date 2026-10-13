@@ -17,7 +17,7 @@ const BASE: BirthInput = {
   minute: 0,
   gender: 'male',
   leapPolicy: 'split_at_15',
-  ziPolicy: 'civil_midnight',
+  ziPolicy: 'next_day_at_23',
 };
 
 describe('chart adapter and independently specified palace rules', () => {
@@ -55,7 +55,7 @@ describe('chart adapter and independently specified palace rules', () => {
       14,
     );
   });
-  it('advances a late Tý birth across the full lunar year boundary only under the selected policy', () => {
+  it('advances a late Tý birth across the full lunar year boundary under the fixed profile', () => {
     const beforeTet: BirthInput = {
       ...BASE,
       calendar: 'solar',
@@ -63,8 +63,8 @@ describe('chart adapter and independently specified palace rules', () => {
       hour: 23,
       minute: 59,
     };
-    const current = calculateChart(beforeTet);
-    const forward = calculateChart({ ...beforeTet, ziPolicy: 'next_day_at_23' });
+    const current = calculateChart({ ...beforeTet, hour: 22 });
+    const forward = calculateChart(beforeTet);
     expect(current.effectiveLunar).toEqual({ year: 2023, month: 12, day: 30, isLeapMonth: false });
     expect(forward.effectiveLunar).toEqual({ year: 2024, month: 1, day: 1, isLeapMonth: false });
     expect(forward.lunar).toEqual(current.lunar);
@@ -72,16 +72,19 @@ describe('chart adapter and independently specified palace rules', () => {
       calculateChart({ ...beforeTet, date: { year: 2024, month: 2, day: 10 }, hour: 0 }).palaces,
     );
   });
-  it('uses explicit leap-month policy and splits after day 15', () => {
+  it('uses the fixed leap-month policy and splits after day 15', () => {
     const leap: BirthInput = {
       ...BASE,
       date: { year: 2023, month: 2, day: 16, isLeapMonth: true },
     };
     expect(calculateChart(leap).palaces.find((p) => p.name === 'Mệnh')?.branch).toBe('Thìn');
     expect(
-      calculateChart({ ...leap, leapPolicy: 'same_month' }).palaces.find((p) => p.name === 'Mệnh')
-        ?.branch,
+      calculateChart({ ...leap, date: { ...leap.date, day: 15 } }).palaces.find(
+        (p) => p.name === 'Mệnh',
+      )?.branch,
     ).toBe('Mão');
+    expect(() => calculateChart({ ...leap, leapPolicy: 'same_month' })).toThrow(/Cấu hình/);
+    expect(() => calculateChart({ ...leap, ziPolicy: 'civil_midnight' })).toThrow(/Cấu hình/);
   });
   it('returns deterministic results and equivalent solar/lunar inputs', () => {
     const solar: BirthInput = {
@@ -92,24 +95,21 @@ describe('chart adapter and independently specified palace rules', () => {
     expect(calculateChart(BASE)).toEqual(calculateChart(BASE));
     expect(calculateChart(solar)).toEqual(calculateChart(BASE));
   });
-  it('does not silently drop the calendar distinction on Vietnamese Tết 1985', () => {
+  it('uses the Chinese calendar on the distinct Vietnamese Tết 1985 date', () => {
     const chart = calculateChart({
       ...BASE,
       calendar: 'solar',
       date: { year: 1985, month: 1, day: 21 },
     });
-    expect(chart.lunar).toEqual({ year: 1985, month: 1, day: 1, isLeapMonth: false });
-    expect(chart.yearName).toBe('Ất Sửu');
+    expect(chart.lunar).toEqual({ year: 1984, month: 12, day: 1, isLeapMonth: false });
+    expect(chart.yearName).toBe('Giáp Tý');
   });
-  it('preserves a valid Vietnamese leap month absent from the upstream chart calendar', () => {
+  it('rejects a Vietnamese-only leap month rather than reinterpreting it as Chinese', () => {
     const input: BirthInput = {
       ...BASE,
       date: { year: 1985, month: 2, day: 1, isLeapMonth: true },
     };
-    const chart = calculateChart(input);
-    expect(chart.lunar).toEqual(input.date);
-    expect(chart.effectiveLunar).toEqual(input.date);
-    expect(chart.palaces.find((p) => p.name === 'Mệnh')?.branch).toBe('Mão');
+    expect(() => calculateChart(input)).toThrow(/nhuận/);
   });
   it('supports gender independently without leaking global config', () => {
     const first = calculateChart(BASE);

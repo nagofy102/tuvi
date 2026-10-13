@@ -1,6 +1,6 @@
-import { calculateChart } from '../src/domain/astrology/calculate';
+import { calculateChart } from '../src/domain/astrology/legacy-vietnamese';
 import type { BirthInput, ChartResult } from '../src/domain/astrology/types';
-import { RULE_PROFILE } from '../src/domain/astrology/profile';
+import { RULE_PROFILE } from '../src/domain/astrology/legacy-profile';
 import { canonicalStarName } from '../src/domain/interpretation/context';
 import { assertReviewedReferenceSources } from './source-admission';
 

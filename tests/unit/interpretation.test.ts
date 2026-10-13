@@ -13,7 +13,7 @@ const INPUT: BirthInput = {
   hour: 0,
   minute: 0,
   leapPolicy: 'split_at_15',
-  ziPolicy: 'civil_midnight',
+  ziPolicy: 'next_day_at_23',
 };
 
 function chart(): ChartResult {
@@ -257,7 +257,7 @@ describe('reference interpretation integrity (not predictive validation)', () =>
     expect(ready(input).status).toBe('ready');
   });
 
-  it.each(['split_at_15', 'same_month'] as const)(
+  it.each(['split_at_15'] as const)(
     'retains explicit source/engine uncertainty for leap policy %s',
     (leapPolicy) => {
       const input = calculateChart({

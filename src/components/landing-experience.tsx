@@ -23,6 +23,7 @@ import dynamic from 'next/dynamic';
 import { normalizeDate, formatDate } from '@/domain/calendar/convert';
 import { MAX_YEAR, MIN_YEAR, type CalendarInput } from '@/domain/calendar/types';
 import type { BirthInput, ChartResult } from '@/domain/astrology/types';
+import { FIXED_LEAP_POLICY, FIXED_ZI_POLICY } from '@/domain/astrology/profile';
 import { ChartWidget } from './horoscope/chart-widget';
 import { CelestialWheel } from './ui/celestial-wheel';
 import { LocalProfiles } from './horoscope/local-profiles';
@@ -54,8 +55,8 @@ export function LandingExperience({ example }: { example: ChartResult }) {
   const [partial, setPartial] = useState<ProfileInput | null>(null);
   const [submittedProfile, setSubmittedProfile] = useState<Omit<LocalProfile, 'id'> | null>(null);
   const [gender, setGender] = useState<'male' | 'female'>('male');
-  const [leapPolicy, setLeapPolicy] = useState<BirthInput['leapPolicy']>('split_at_15');
-  const [ziPolicy, setZiPolicy] = useState<BirthInput['ziPolicy']>('civil_midnight');
+  const leapPolicy = FIXED_LEAP_POLICY;
+  const ziPolicy = FIXED_ZI_POLICY;
   const [chart, setChart] = useState(example);
   const [chartName, setChartName] = useState('');
   const [isExample, setIsExample] = useState(true);
@@ -152,8 +153,6 @@ export function LandingExperience({ example }: { example: ChartResult }) {
     setUnknownTime(value.time === null);
     setTime(value.time ?? '');
     setGender(value.gender);
-    setLeapPolicy(value.leapPolicy);
-    setZiPolicy(value.ziPolicy);
     await generate(value, profile.name);
   }
   async function shareSite() {
@@ -351,32 +350,17 @@ export function LandingExperience({ example }: { example: ChartResult }) {
                 Quy ước lịch & an sao <ChevronDown size={15} />
               </summary>
               <p>
-                Lịch Việt Nam UTC+7. Giờ nhập là giờ địa phương trên giấy khai sinh. Giới tính được
-                dùng cho quy tắc đại hạn truyền thống, không suy luận từ tên.
+                Âm lịch Trung Quốc, quy ước UTC+8. Giữ nguyên giờ địa phương bạn nhập, không tự cộng
+                một giờ. Giới tính được dùng cho quy tắc đại hạn truyền thống, không suy luận từ
+                tên.
               </p>
-              <label className="field">
-                Tháng nhuận
-                <select
-                  value={leapPolicy}
-                  onChange={(e) => setLeapPolicy(e.target.value as BirthInput['leapPolicy'])}
-                >
-                  <option value="split_at_15">Ngày 1–15: cùng tháng; từ 16: tháng kế</option>
-                  <option value="same_month">Giữ nguyên tháng âm lịch</option>
-                </select>
-              </label>
-              <label className="field">
-                Giờ Tý từ 23:00
-                <select
-                  value={ziPolicy}
-                  onChange={(e) => setZiPolicy(e.target.value as BirthInput['ziPolicy'])}
-                >
-                  <option value="civil_midnight">Giữ ngày đến 00:00</option>
-                  <option value="next_day_at_23">Chuyển ngày từ 23:00</option>
-                </select>
-              </label>
               <p>
-                Đây là cấu hình Tử Vi tham khảo, chưa được chuyên gia thẩm định riêng theo trường
-                phái Việt Nam. Không hỗ trợ điều chỉnh múi giờ lịch sử hoặc giờ mặt trời thực.
+                Hồ sơ Nam phái: tháng nhuận ngày 1–15 giữ tháng, từ 16 dùng tháng kế để an cung/sao.
+                Từ 23:00 an sao theo ngày kế; ngày sinh gốc vẫn giữ nguyên.
+              </p>
+              <p>
+                Đây là quy ước cố định của hồ sơ dự án. Không hỗ trợ điều chỉnh múi giờ lịch sử hoặc
+                giờ mặt trời thực.
               </p>
             </details>
             {error && (
@@ -530,7 +514,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
               Nguồn và quy tắc của lá số <ChevronDown size={15} />
             </summary>
             <p>
-              Lịch Việt Nam; cấu hình an sao tham khảo. Tháng nhuận:{' '}
+              Hồ sơ Nam phái · âm lịch Trung Quốc. Tháng nhuận:{' '}
               {chart.provenance.leapPolicy === 'split_at_15'
                 ? 'chia theo ngày 15'
                 : 'giữ nguyên tháng'}
@@ -538,7 +522,9 @@ export function LandingExperience({ example }: { example: ChartResult }) {
               {chart.provenance.ziPolicy === 'civil_midnight'
                 ? 'đổi ngày lúc 00:00'
                 : 'đổi ngày lúc 23:00'}
-              .
+              .{' '}
+              {chart.timeLabel.startsWith('23:') &&
+                `Ngày dùng để an sao: ${formatDate(chart.effectiveLunar)} âm lịch; ngày sinh gốc ở lá số vẫn giữ nguyên.`}
             </p>
             <a href="/phuong-phap">
               Đọc phương pháp và giới hạn <ArrowUpRight size={14} />
@@ -642,7 +628,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
           {[
             [
               'Tôi nên nhập ngày sinh âm lịch hay dương lịch?',
-              'Bạn có thể chọn cả hai. Hệ thống chuyển đổi theo lịch Việt Nam và hiển thị ngày đối chiếu ngay trong biểu mẫu. Nếu nhập âm lịch, hãy đánh dấu tháng nhuận khi đúng với ngày sinh.',
+              'Bạn có thể chọn cả hai. Hệ thống chuyển đổi theo âm lịch Trung Quốc và hiển thị ngày đối chiếu ngay trong biểu mẫu. Nếu ngày âm của bạn ghi theo lịch Việt Nam, hãy nhập ngày dương để tránh khác biệt lịch. Đánh dấu tháng nhuận khi đúng với ngày sinh.',
             ],
             [
               'Nếu tôi không biết chính xác giờ sinh thì sao?',

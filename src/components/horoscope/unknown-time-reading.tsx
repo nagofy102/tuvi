@@ -21,7 +21,7 @@ export function UnknownTimeReading({ input }: { input: ProfileInput }) {
             <dd>{formatDate(dates.solar)}</dd>
           </div>
           <div>
-            <dt>Âm lịch Việt Nam</dt>
+            <dt>Âm lịch Trung Quốc</dt>
             <dd>
               {formatDate(dates.lunar)}
               {dates.lunar.isLeapMonth ? ' · tháng nhuận' : ''}

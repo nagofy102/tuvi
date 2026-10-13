@@ -5,7 +5,7 @@ import { getHeavenlyStemAndEarthlyBranchBySolarDate as upstreamPillars } from 'l
 import { getSign, getZodiac } from 'lunar-lite/lib/misc';
 import { HEAVENLY_STEMS, EARTHLY_BRANCHES } from 'lunar-lite/lib/constants';
 import type { Options } from 'lunar-lite/lib/types';
-import { dateString, lunarToSolar, solarToLunar } from './convert';
+import { dateString, lunarToSolar, solarToLunar } from './legacy-vietnamese';
 
 export { normalizeDateStr, getSign, getZodiac };
 

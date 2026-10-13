@@ -5,6 +5,7 @@ import {
   encodeProfiles,
   MAX_PROFILES,
   PROFILE_STORAGE_KEY,
+  LEGACY_PROFILE_STORAGE_KEY,
   type LocalProfile,
 } from '@/domain/profiles/local';
 import { formatDate } from '@/domain/calendar/convert';
@@ -21,9 +22,11 @@ export function LocalProfiles({
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
+  const [hasLegacy, setHasLegacy] = useState(false);
   useEffect(() => {
     function read() {
       try {
+        setHasLegacy(localStorage.getItem(LEGACY_PROFILE_STORAGE_KEY) !== null);
         setProfiles(decodeProfiles(localStorage.getItem(PROFILE_STORAGE_KEY)));
         setMessage('');
       } catch {
@@ -84,15 +87,41 @@ export function LocalProfiles({
       );
     }
   }
+  function removeLegacy() {
+    if (
+      !window.confirm(
+        'Xóa hồ sơ theo lịch Việt Nam cũ khỏi trình duyệt? Không thể khôi phục sau khi xóa.',
+      )
+    )
+      return;
+    try {
+      localStorage.removeItem(LEGACY_PROFILE_STORAGE_KEY);
+      setHasLegacy(false);
+      setMessage('Đã xóa hồ sơ theo lịch cũ.');
+    } catch {
+      setMessage('Chưa thể xóa hồ sơ theo lịch cũ trên trình duyệt này.');
+    }
+  }
   return (
     <section className="local-profiles" aria-labelledby="local-profiles-title">
       <h3 id="local-profiles-title">Hồ sơ trên thiết bị của bạn</h3>
       <p>
         Không tự lưu. Chỉ lưu ngày sinh, giờ sinh nếu biết, tên bạn nhập và quy ước tính khi bạn
         đồng ý. Người dùng chung trình duyệt có thể đọc hồ sơ; dữ liệu không được mã hóa và không
-        đồng bộ tài khoản. Khi mở hồ sơ, lá số được tính lại theo quy tắc hiện hành, không giữ bản
-        luận giải cũ.
+        đồng bộ tài khoản. Hồ sơ lưu kèm mã lịch và hồ sơ Nam phái. Khi mở hồ sơ tương thích, lá số
+        được tính lại, không giữ bản luận giải cũ.
       </p>
+      {hasLegacy && (
+        <div className="source-note">
+          <p>
+            Bạn có hồ sơ lưu theo lịch Việt Nam cũ. Hãy nhập lại ngày dương hoặc xác nhận ngày âm
+            theo lịch Trung Quốc để tra cứu và lưu mới. Dữ liệu cũ được giữ nguyên, chưa tự chuyển.
+          </p>
+          <button type="button" onClick={removeLegacy}>
+            Xóa hồ sơ theo lịch cũ
+          </button>
+        </div>
+      )}
       {current && (
         <div className="profile-save">
           <p>

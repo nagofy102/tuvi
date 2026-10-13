@@ -10,7 +10,7 @@ const chart = () =>
     hour: 9,
     minute: 30,
     leapPolicy: 'split_at_15',
-    ziPolicy: 'civil_midnight',
+    ziPolicy: 'next_day_at_23',
   });
 
 describe('present anchoring is a calendar/range lookup, not a forecast', () => {

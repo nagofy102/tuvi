@@ -18,32 +18,37 @@ export default function MethodsPage() {
         <br />
         <em>và nguồn.</em>
       </h1>
-      <h2>Chuyển đổi lịch Việt Nam</h2>
+      <h2>Hồ sơ Nam phái và âm lịch Trung Quốc</h2>
       <p>
         Hệ thống dùng{' '}
-        <a href="https://github.com/cuongdqpayment/dqcai-vn-lunar">
-          bảng lịch Việt Nam mã nguồn mở
+        <a href="https://github.com/SylarLong/lunar-lite">
+          bộ chuyển âm lịch Trung Quốc mã nguồn mở
         </a>
-        . Chúng tôi đối chiếu các ngày Tết và các mốc khác biệt Việt–Trung, đồng thời kiểm tra lại
-        ngày khi chuyển ngược để không âm thầm sửa ngày sai hoặc cờ tháng nhuận.
+        . Quy ước lịch là UTC+8. Chúng tôi đối chiếu các ngày Tết và các mốc khác biệt Việt–Trung,
+        đồng thời kiểm tra lại ngày khi chuyển ngược để không âm thầm sửa ngày sai hoặc cờ tháng
+        nhuận.
       </p>
       <p>
-        Phạm vi công cụ là 1900–2099. Đây là lịch Việt Nam; không tự đổi sang múi giờ nơi ở của
-        người dùng và không thực hiện điều chỉnh giờ lịch sử hoặc giờ mặt trời thực.
+        Phạm vi nhập là 1900–2099; ngày dương đầu năm 1900 có thể hiển thị năm âm 1899. Giữ nguyên
+        giờ địa phương bạn nhập; không tự cộng một giờ vào giờ sinh Việt Nam. Nếu giấy tờ ghi ngày
+        âm theo lịch Việt Nam, hãy nhập ngày dương để đối chiếu. Không thực hiện điều chỉnh giờ lịch
+        sử hoặc giờ mặt trời thực.
       </p>
       <h2>An sao và bố cục 12 cung</h2>
       <p>
         Bộ tính dùng <a href="https://github.com/SylarLong/iztro">bộ an sao mã nguồn mở</a>, cấu
-        hình Tử Vi phổ thông, nhãn tiếng Việt và năm tính từ đầu năm âm lịch. Bản tích hợp riêng của
-        dự án dùng lịch Việt Nam cho ngày, tháng nhuận, độ dài tháng và can chi năm âm lịch. Không
-        chuyển ngày sinh sang một ngày dương khác chỉ để khớp lịch Trung Quốc. Kết quả không bảo
-        toàn dữ kiện ngày sinh vẫn bị từ chối.
+        hình thông hành, nhãn tiếng Việt và năm tính từ đầu năm âm lịch Trung Quốc. Bảng Tứ Hóa được
+        ghim theo{' '}
+        <a href="https://iztro.com/learn/setup.html">An tinh quyết, mục 18 — bảng Nam phái</a>. Nhãn
+        này có căn cứ cho bảng Tứ Hóa; hồ sơ dự án vẫn công bố riêng từng quy ước để tránh suy rộng
+        sang mọi truyền thừa Nam phái. Kết quả không khớp tuple âm lịch vẫn bị từ chối.
       </p>
       <p>
         Mặc định tháng nhuận chia ở ngày 15: ngày 1–15 giữ tháng, từ ngày 16 dùng tháng kế để an
-        cung. Giờ Tý mặc định đổi ngày lúc 00:00. Biểu mẫu cho phép đổi cả hai quy ước. Nếu chọn đổi
-        ngày từ 23:00, hệ thống chuyển đầy đủ sang ngày kế trước khi an sao, kể cả khi qua
-        tháng/năm.
+        cung/sao. Giờ Tý cố định đổi ngày từ 23:00: hệ thống chuyển đầy đủ sang ngày dân sự kế rồi
+        an sao theo giờ Tý đầu ngày, kể cả khi qua tháng/năm. Ngày sinh gốc vẫn giữ nguyên. Đây là
+        lựa chọn cố định của dự án dựa trên quy ước phần mềm, không phải kết luận mọi sách Nam phái
+        dùng cùng cách.
       </p>
       <p>
         Vị trí Mệnh, Thân, 14 chính tinh, phụ tinh và đại hạn được tính bằng thư viện. Nạp âm được
@@ -52,14 +57,15 @@ export default function MethodsPage() {
       </p>
       <h2>Giới hạn kiểm chứng</h2>
       <p>
-        Bộ an sao là bản triển khai tham khảo theo cấu hình thư viện, chưa được chuyên gia thẩm định
-        cho từng trường phái Tử Vi Việt Nam. Kiểm thử phần mềm và đối chiếu lịch không xác nhận khả
-        năng dự đoán sự kiện.
+        Bộ an sao là bản triển khai theo hồ sơ Nam phái của dự án; BA và luồng chuyên môn AI đối
+        chiếu nguồn, chưa có thẩm định độc lập bởi chuyên gia con người. Kiểm thử phần mềm và đối
+        chiếu lịch không xác nhận khả năng dự đoán sự kiện.
       </p>
       <p>
-        Bản tích hợp lịch Việt Nam không thay đổi bảng sao hoặc chứng nhận quy tắc của một trường
-        phái. Lịch lịch sử, múi giờ nơi sinh và giờ mặt trời thực chưa được hỗ trợ. Luận hạn, điểm
-        phần trăm và dự báo AI chưa được cung cấp.
+        Hồ sơ lịch Việt Nam cũ chỉ giữ cho audit lịch sử, không được dùng để lập lá số mới. Hồ sơ đã
+        lưu theo lịch cũ cần nhập lại; website giữ nguyên dữ liệu cũ cho đến khi bạn chủ động xóa.
+        Lịch lịch sử, múi giờ nơi sinh và giờ mặt trời thực chưa được hỗ trợ. Luận hạn, điểm phần
+        trăm và dự báo AI chưa được cung cấp.
       </p>
       <h2>Nội dung năm tuổi và quyền quyết định</h2>
       <p>
@@ -85,9 +91,9 @@ export default function MethodsPage() {
         <a href="https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110">
           Quyển II — An thập nhị cung
         </a>
-        . Đây là bản chép văn bản cổ trên Wikisource, chưa đối chiếu bản chụp sách; không phải giáo
-        trình được kiểm định hiện đại. Văn bản cổ được website ghi thuộc phạm vi công cộng; phần
-        biên tập website có điều khoản riêng.
+        . Đây là bản chép văn bản cổ trên Wikisource, đã đối chiếu một số đoạn với ảnh sách nhưng
+        chưa xác minh đầy đủ quan hệ ấn bản; không phải giáo trình được kiểm định hiện đại. Văn bản
+        cổ được website ghi thuộc phạm vi công cộng; phần biên tập website có điều khoản riêng.
       </p>
       <p>
         Diễn giải tiếng Việt là nội dung hiện đại do dự án biên soạn với hỗ trợ AI, không phải dịch
@@ -97,20 +103,22 @@ export default function MethodsPage() {
       </p>
       <p>
         Nguồn cổ dùng tháng nhuận theo tháng kế tiếp trong mục An Thân Mệnh, khác chính sách chia
-        ngày 15 hoặc giữ nguyên tháng của công cụ hiện tại. Nguồn này không xác nhận toàn bộ cấu
-        hình an sao; khác biệt được công bố, không âm thầm đổi ngày sinh. Bản đọc đang ở mức tham
-        khảo nghiên cứu, chưa được thẩm định độc lập và không xác nhận khả năng dự đoán.
+        ngày 15 cố định của công cụ hiện tại. Dị bản được lưu làm tham chiếu và không áp dụng vào hồ
+        sơ hiện hành. Nguồn này không xác nhận toàn bộ cấu hình an sao; khác biệt được công bố,
+        không âm thầm đổi ngày sinh. Bản đọc đang ở mức tham khảo nghiên cứu, chưa được thẩm định
+        độc lập và không xác nhận khả năng dự đoán.
       </p>
       <h2 id="ho-so-quy-tac">Hồ sơ quy tắc và truy nguồn</h2>
       <p>
-        Nội dung luận giải tách riêng khỏi cấu hình an sao; chưa gán nhãn trường phái Nam Phái hay
-        Bắc Phái. Quy ước mặc định không thay thế lựa chọn giờ Tý/tháng nhuận đã nhập.
+        Nội dung luận giải tách riêng khỏi cấu hình an sao. Website chỉ có một hồ sơ Nam phái; các
+        quy tắc chưa đủ nguồn vẫn giữ trạng thái chờ duyệt.
       </p>
       <p>
-        Đối chiếu hiện có 24 ca từng phần được đếm từ đoạn sách ghim phiên bản, 146 trường
+        Corpus nguồn sách giữ 36 ca từng phần được đếm từ đoạn sách ghim phiên bản, 218 trường
         Mệnh/Thân, Tả–Hữu, Xương–Khúc và một ví dụ Cục/Tử Vi. Không lấy kết quả bộ tính làm đáp án.
-        Những trường chưa có nguồn không được tính là đã kiểm chứng; đây không phải 24 lá số chuẩn
-        hoàn chỉnh.
+        Những trường chưa có nguồn không được tính là đã kiểm chứng; đây là bằng chứng của hồ sơ
+        lịch Việt Nam v2 đã lưu trữ, không tự xác nhận hồ sơ hiện hành hoặc tạo thành 36 lá số chuẩn
+        hoàn chỉnh. Đối chiếu website bên ngoài được ghi riêng kèm lịch và quy tắc tương thích.
       </p>
       <p>
         Các bộ lọc đủ cặp, có chính tinh và quan hệ bốn cung là quyết định biên tập giới hạn của dự

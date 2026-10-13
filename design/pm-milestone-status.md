@@ -1,18 +1,24 @@
 # Trạng thái mốc A–D
 
-Baseline: `9831010`, ngày 13/10/2026. Đây là bảng bàn giao hiện tại, không phải
+Baseline đợt chuyển hồ sơ mới: `49512a2`, ngày 13/10/2026. Đây là bảng bàn giao hiện tại, không phải
 chứng nhận chuyên môn. Kế hoạch gốc: [reading-synthesis-plan.md](reading-synthesis-plan.md).
 
-| Mốc                       | Trạng thái thực tế                           | Điều kiện còn mở                                                                                          |
-| ------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| A — Hồ sơ và kiểm kê      | Đang củng cố nguồn, corpus và cổng tiếp nhận | Xác minh catalogue/ấn bản; corpus lá số công bố độc lập; chưa có lá số chuẩn hoàn chỉnh                   |
-| B — Tổng hợp có điều kiện | Đã có bản chạy giới hạn với hai cặp hiện hữu | Chưa có bộ quy tắc đối nghịch được duyệt; chưa chấm toàn bộ rubric chống Barnum                           |
-| C — Mở nhóm kiến thức     | Chưa kích hoạt nhóm mới                      | Khôi–Việt còn dị bản và thiếu phép gán sao được đối chiếu; các nhóm khác cần nguồn và ca kiểm chứng riêng |
-| D1 — Cách cục             | Chưa triển khai                              | Cần điều kiện nhận diện, phá cách và ca gần đúng bị loại                                                  |
-| D2 — Luận vận             | Chưa triển khai                              | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                 |
-| D3 — Hỏi tiếp AI          | Chưa triển khai                              | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                 |
+| Mốc                       | Trạng thái thực tế                           | Điều kiện còn mở                                                                                                 |
+| ------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| A1 — Hồ sơ và truy nguồn  | PM nghiệm thu phạm vi quản trị/truy nguồn    | Không bao gồm xác thực ấn bản hoặc chứng nhận Nam phái; xem `nam-phai-transition.md`                             |
+| A2 — Chốt hồ sơ Nam phái  | Đã chốt và triển khai hồ sơ cố định          | Lịch Trung Quốc, Tứ Hóa Nam phái, chia nhuận ngày 15, tăng ngày từ 23:00; QA tại `../test/nam-phai-migration.md` |
+| A3 — Corpus bên ngoài     | Đã thu 4 lá số/2 website, so 140 trường      | 139 khớp, 1 khác lịch; Mèo Béo công bố Bắc phái, AItuvi chưa rõ; chưa có golden Nam phái                         |
+| B — Tổng hợp có điều kiện | Đã có bản chạy giới hạn với hai cặp hiện hữu | Chưa có bộ quy tắc đối nghịch được duyệt; chưa chấm toàn bộ rubric chống Barnum                                  |
+| C — Mở nhóm kiến thức     | Chưa kích hoạt nhóm mới                      | Khôi–Việt còn dị bản và thiếu phép gán sao được đối chiếu; các nhóm khác cần nguồn và ca kiểm chứng riêng        |
+| D1 — Cách cục             | Chưa triển khai                              | Cần điều kiện nhận diện, phá cách và ca gần đúng bị loại                                                         |
+| D2 — Luận vận             | Chưa triển khai                              | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                        |
+| D3 — Hỏi tiếp AI          | Chưa triển khai                              | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                        |
 
 ## Đợt hiện tại — tiếp tục A
+
+Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
+tại [nam-phai-transition.md](nam-phai-transition.md): A1 đóng trong phạm vi đã
+ghi; A2 giao BA/chuyên môn chốt Nam phái; A3 chuyển ưu tiên sang đối thủ.
 
 - Xác minh nguồn sách từ trang nhan đề và catalogue công khai; chỉ nâng trạng thái
   khi có bằng chứng đủ, không lấy lời uploader làm xác nhận thư mục.

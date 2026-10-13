@@ -15,8 +15,8 @@ function chart(hour = 0): ChartResult {
     gender: 'male',
     hour,
     minute: 30,
-    leapPolicy: 'same_month',
-    ziPolicy: 'civil_midnight',
+    leapPolicy: 'split_at_15',
+    ziPolicy: 'next_day_at_23',
   });
 }
 

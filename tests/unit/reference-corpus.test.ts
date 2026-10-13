@@ -6,8 +6,8 @@ import {
   runReferenceDiff,
   type ReferenceCorpus,
 } from '../../scripts/reference-diff';
-import { calculateChart } from '@/domain/astrology/calculate';
-import * as engine from '@/domain/astrology/calculate';
+import { calculateChart } from '@/domain/astrology/legacy-vietnamese';
+import * as engine from '@/domain/astrology/legacy-vietnamese';
 
 // Static source-counted fields are partial expectations, not certified full charts.
 // Tests never copy actual values into expected fields; origin flags are not proof.

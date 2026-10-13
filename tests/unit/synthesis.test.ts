@@ -14,8 +14,8 @@ function palaces(): ChartPalace[] {
     gender: 'male',
     hour: 0,
     minute: 30,
-    leapPolicy: 'same_month',
-    ziPolicy: 'civil_midnight',
+    leapPolicy: 'split_at_15',
+    ziPolicy: 'next_day_at_23',
   }).palaces.map((palace) => ({
     ...palace,
     stars: palace.stars.filter((star) => star.group === 'major'),

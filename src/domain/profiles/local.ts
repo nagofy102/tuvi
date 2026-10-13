@@ -1,9 +1,12 @@
 import { normalizeDate } from '../calendar/convert';
 import type { CalendarInput, CivilDate } from '../calendar/types';
 import type { BirthInput } from '../astrology/types';
+import { RULE_PROFILE, FIXED_LEAP_POLICY, FIXED_ZI_POLICY } from '../astrology/profile';
+import { CALENDAR_VERSION } from '../calendar/types';
 import { vietnamToday } from '../interpretation/present';
 
-export const PROFILE_STORAGE_KEY = 'huyenvi:consented-profiles:v1';
+export const LEGACY_PROFILE_STORAGE_KEY = 'huyenvi:consented-profiles:v1';
+export const PROFILE_STORAGE_KEY = 'huyenvi:consented-profiles:v2';
 export const MAX_PROFILES = 10;
 export type ProfileInput = CalendarInput & {
   gender: BirthInput['gender'];
@@ -42,10 +45,8 @@ export function validateProfileInput(
     throw new Error('Ngày sinh không được nằm trong tương lai. Vui lòng kiểm tra lại.');
   if (value.gender !== 'male' && value.gender !== 'female')
     throw new Error('Giới tính an lá số chưa hợp lệ.');
-  if (value.leapPolicy !== 'split_at_15' && value.leapPolicy !== 'same_month')
-    throw new Error('Quy ước tháng nhuận chưa hợp lệ.');
-  if (value.ziPolicy !== 'civil_midnight' && value.ziPolicy !== 'next_day_at_23')
-    throw new Error('Quy ước giờ Tý chưa hợp lệ.');
+  if (value.leapPolicy !== FIXED_LEAP_POLICY) throw new Error('Quy ước tháng nhuận chưa hợp lệ.');
+  if (value.ziPolicy !== FIXED_ZI_POLICY) throw new Error('Quy ước giờ Tý chưa hợp lệ.');
   if (
     value.time !== null &&
     (typeof value.time !== 'string' || !/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value.time))
@@ -66,7 +67,9 @@ export function decodeProfiles(raw: string | null): LocalProfile[] {
   const data: unknown = JSON.parse(raw);
   if (
     !record(data) ||
-    data.version !== 1 ||
+    data.version !== 2 ||
+    data.calculationProfile !== RULE_PROFILE ||
+    data.calendarVersion !== CALENDAR_VERSION ||
     !Array.isArray(data.profiles) ||
     data.profiles.length > MAX_PROFILES
   )
@@ -88,7 +91,12 @@ export function decodeProfiles(raw: string | null): LocalProfile[] {
 }
 export function encodeProfiles(profiles: LocalProfile[], consent: boolean): string {
   if (!consent) throw new Error('Bạn cần đồng ý trước khi lưu hồ sơ.');
-  const encoded = JSON.stringify({ version: 1, profiles });
+  const encoded = JSON.stringify({
+    version: 2,
+    calculationProfile: RULE_PROFILE,
+    calendarVersion: CALENDAR_VERSION,
+    profiles,
+  });
   decodeProfiles(encoded);
   return encoded;
 }

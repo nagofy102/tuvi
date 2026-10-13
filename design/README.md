@@ -11,6 +11,8 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 - Bước 2: landing page và widget 12 cung đã có component React chạy được.
 - Có biểu mẫu đổi lịch, chế độ biểu đồ/danh sách, giải thích sao qua dialog,
   đổi cỡ chữ, reduced motion, CTA mobile và in qua trình duyệt.
+- Hồ sơ mới Nam phái dùng âm lịch Trung Quốc, cố định tháng nhuận/giờ Tý; hồ sơ
+  lưu lịch Việt Nam cũ giữ nguyên và yêu cầu nhập lại. Xem `nam-phai-transition.md`.
 - Thiết kế giấy lụa, xanh đậm, vàng trầm; bộ font Việt hóa phục vụ từ cùng website.
 - Kiểm tra tương phản và Lighthouse được ghi ở `../test/README.md`.
 - Lộ trình giữ chân đã lưu; phần lớn vẫn là đề xuất. Người dùng đã cho phép nghiên cứu AI
@@ -21,11 +23,14 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `nam-phai-transition.md`: quyết định mới Nam phái, PM điều phối BA/chuyên môn;
+  A1 nghiệm thu riêng, A2 chốt hồ sơ, A3 ưu tiên lá số đối thủ.
+
 - `../dev/thematic-exercises.md`: mốc B v6, bài tập riêng theo chủ đề/nhóm đã mở;
   hành động hiện ngay, phạm vi rubric tại `../test/thematic-exercises.md`.
 
-- `pm-milestone-status.md`: bảng trạng thái A–D hiện tại; A còn xác minh nguồn/corpus,
-  B chạy giới hạn, chưa mở C/D.
+- `pm-milestone-status.md`: A1 nghiệm thu riêng, A2 hồ sơ Nam phái đã triển khai,
+  A3 đang đối chiếu đối thủ; B chạy giới hạn, chưa mở C/D.
 - `../dev/source-registry.md`: sổ nguồn và cổng đối chiếu đã chạy; catalogue mới ở
   `../dev/catalogue-verification.md`, không tự xác nhận ấn bản độc lập.
 

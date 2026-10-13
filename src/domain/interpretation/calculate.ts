@@ -1,5 +1,5 @@
 import { PALACE_CONTENT } from '../../data/palace-content';
-import { RULE_PROFILE } from '../astrology/profile';
+import { RULE_PROFILE, FIXED_LEAP_POLICY, FIXED_ZI_POLICY } from '../astrology/profile';
 import { BRANCHES, mod } from '../astrology/sexagenary';
 import type { ChartPalace, ChartResult, ChartStar } from '../astrology/types';
 import { solarToLunar, validateSolarDate } from '../calendar/convert';
@@ -97,8 +97,8 @@ function isStructurallyValid(chart: ChartResult): boolean {
     ) ||
     !chart.napAm?.name ||
     !['Kim', 'Mộc', 'Thủy', 'Hỏa', 'Thổ'].includes(chart.napAm.element) ||
-    !['split_at_15', 'same_month'].includes(chart.provenance.leapPolicy) ||
-    !['civil_midnight', 'next_day_at_23'].includes(chart.provenance.ziPolicy)
+    chart.provenance.leapPolicy !== FIXED_LEAP_POLICY ||
+    chart.provenance.ziPolicy !== FIXED_ZI_POLICY
   ) {
     return false;
   }

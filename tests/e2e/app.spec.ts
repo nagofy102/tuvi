@@ -82,22 +82,22 @@ test('generates sourced reference interpretations and refreshes them for a new c
   expect(transfers).toEqual([]);
 });
 
-test('supports the Vietnamese 1985 leap month and hides readings on an invalid leap input', async ({
+test('supports Chinese leap month 2023 and rejects Vietnamese-only leap month 1985', async ({
   page,
 }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   await expect(page.locator('.interpretation-panel')).toBeVisible();
   await page.getByRole('button', { name: 'Âm lịch', exact: true }).click();
-  await page.getByLabel('Năm sinh', { exact: true }).fill('1985');
+  await page.getByLabel('Năm sinh', { exact: true }).fill('2023');
   await page.getByLabel('Tháng sinh', { exact: true }).selectOption('2');
   await page.getByLabel('Ngày sinh', { exact: true }).fill('1');
   await page.getByRole('checkbox', { name: /tháng nhuận/i }).check();
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   await expect(page.getByRole('status')).toContainText('Đã lập lá số');
   await expect(page.locator('.interpretation-panel')).toBeVisible();
-  await expect(page.locator('#la-so')).toContainText('1985');
-  await page.getByLabel('Năm sinh', { exact: true }).fill('1986');
+  await expect(page.locator('#la-so')).toContainText('2023');
+  await page.getByLabel('Năm sinh', { exact: true }).fill('1985');
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   await expect(page.locator('#form-error')).toContainText('không tồn tại');
   await expect(page.locator('.interpretation-panel')).toHaveCount(0);

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: 'Huyền Vi — Hiểu vận mệnh, sống an nhiên', template: `%s | ${SITE_NAME}` },
   description:
-    'Lập lá số 12 cung, chuyển đổi âm dương lịch Việt Nam và tìm một góc nhìn bình tâm về bản thân. Không cần tài khoản.',
+    'Lập lá số 12 cung theo hồ sơ Nam phái, chuyển đổi âm lịch Trung Quốc và tìm một góc nhìn bình tâm về bản thân. Không cần tài khoản.',
   openGraph: { locale: 'vi_VN', type: 'website', siteName: SITE_NAME },
   twitter: { card: 'summary_large_image' },
   icons: { icon: '/icon.svg' },

@@ -6,8 +6,8 @@ import {
   runAudit,
   validStructure,
 } from '../../scripts/tech-audit';
-import { calculateChart } from '@/domain/astrology/calculate';
-import { lunarToSolar, solarToLunar } from '@/domain/calendar/convert';
+import { calculateChart } from '@/domain/astrology/legacy-vietnamese';
+import { lunarToSolar, solarToLunar } from '@/domain/calendar/legacy-vietnamese';
 import type { BirthInput } from '@/domain/astrology/types';
 import type { LunarDate } from '@/domain/calendar/types';
 import { createRequire } from 'node:module';

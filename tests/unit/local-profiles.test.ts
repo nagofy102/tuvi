@@ -11,7 +11,7 @@ const input = {
   gender: 'male' as const,
   time: '09:30',
   leapPolicy: 'split_at_15' as const,
-  ziPolicy: 'civil_midnight' as const,
+  ziPolicy: 'next_day_at_23' as const,
 };
 const profile: LocalProfile = { id: 'test-profile', name: 'Hồ sơ giả lập', input };
 describe('consented local input profiles', () => {
@@ -40,7 +40,7 @@ describe('consented local input profiles', () => {
       validateProfileInput({ ...input, date: { year: 1990, month: 2, day: 30 } }),
     ).toThrow('không tồn tại');
   });
-  it.each(['null', '{}', '{"version":2,"profiles":[]}', 'not-json'])(
+  it.each(['null', '{}', '{"version":1,"profiles":[]}', '{"version":2,"profiles":[]}', 'not-json'])(
     'rejects malformed/unsupported storage %s',
     (raw) => expect(() => decodeProfiles(raw)).toThrow(),
   );
@@ -54,7 +54,7 @@ describe('consented local input profiles', () => {
     ).toThrow();
     expect(() => encodeProfiles([profile, profile], true)).toThrow();
     expect(() =>
-      decodeProfiles(JSON.stringify({ version: 1, profiles: [{ ...profile, name: 5 }] })),
+      decodeProfiles(encodeProfiles([profile], true).replace('"name":"Hồ sơ giả lập"', '"name":5')),
     ).toThrow();
   });
   it('keeps leap flags and late Ty policy independently of local storage', () => {
@@ -63,10 +63,21 @@ describe('consented local input profiles', () => {
       input: {
         ...input,
         calendar: 'lunar' as const,
-        date: { year: 1985, month: 2, day: 1, isLeapMonth: true },
+        date: { year: 2023, month: 2, day: 1, isLeapMonth: true },
         ziPolicy: 'next_day_at_23' as const,
       },
     };
     expect(decodeProfiles(encodeProfiles([value], true))).toEqual([value]);
+  });
+  it('rejects old selectable rules and mismatched stored provenance', () => {
+    expect(() => validateProfileInput({ ...input, ziPolicy: 'civil_midnight' })).toThrow();
+    expect(() => validateProfileInput({ ...input, leapPolicy: 'same_month' })).toThrow();
+    const encoded: unknown = JSON.parse(encodeProfiles([profile], true));
+    expect(encoded).toMatchObject({ version: 2, calculationProfile: 'nam-phai-chinese-lunar-v1' });
+    expect(() =>
+      decodeProfiles(
+        encodeProfiles([profile], true).replace('nam-phai-chinese-lunar-v1', 'legacy'),
+      ),
+    ).toThrow();
   });
 });

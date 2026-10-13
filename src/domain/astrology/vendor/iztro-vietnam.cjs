@@ -663,7 +663,7 @@ var init_types = __esm({
   }
 });
 
-// src/domain/calendar/convert.ts
+// src/domain/calendar/legacy-vietnamese.ts
 function assertYear(year) {
   if (!Number.isInteger(year) || year < MIN_YEAR || year > MAX_YEAR) {
     throw new CalendarError(`Vui l\xF2ng ch\u1ECDn n\u0103m t\u1EEB ${MIN_YEAR} \u0111\u1EBFn ${MAX_YEAR}.`);
@@ -702,8 +702,8 @@ function dateString(date) {
   return `${date.year}-${String(date.month).padStart(2, "0")}-${String(date.day).padStart(2, "0")}`;
 }
 var CalendarError;
-var init_convert = __esm({
-  "src/domain/calendar/convert.ts"() {
+var init_legacy_vietnamese = __esm({
+  "src/domain/calendar/legacy-vietnamese.ts"() {
     "use strict";
     init_lib();
     init_types();
@@ -790,7 +790,7 @@ var init_engine_bridge = __esm({
     import_ganzhi = require("lunar-lite/lib/ganzhi");
     import_misc = require("lunar-lite/lib/misc");
     import_constants = require("lunar-lite/lib/constants");
-    init_convert();
+    init_legacy_vietnamese();
   }
 });
 

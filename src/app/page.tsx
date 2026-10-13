@@ -12,7 +12,7 @@ export default function HomePage() {
     minute: 30,
     gender: 'male',
     leapPolicy: 'split_at_15',
-    ziPolicy: 'civil_midnight',
+    ziPolicy: 'next_day_at_23',
   });
   return (
     <>

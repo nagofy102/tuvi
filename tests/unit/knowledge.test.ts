@@ -27,8 +27,8 @@ function base(): ChartResult {
     gender: 'male',
     hour: 0,
     minute: 30,
-    leapPolicy: 'same_month',
-    ziPolicy: 'civil_midnight',
+    leapPolicy: 'split_at_15',
+    ziPolicy: 'next_day_at_23',
   });
 }
 function clean(): ChartResult {
@@ -71,7 +71,7 @@ describe('versioned knowledge traceability', () => {
     if (report.status !== 'ready') throw new Error(report.message);
     expect(report.knowledgeProfile).toBe(KNOWLEDGE_PROFILE.id);
     expect(report.profile).not.toBe(report.knowledgeProfile);
-    expect(KNOWLEDGE_PROFILE.school).toContain('chưa gán nhãn');
+    expect(KNOWLEDGE_PROFILE.school).toContain('Nam phái');
     expect(resolveRule('leap-policy-conflict').status).toBe('disputed');
     expect(resolveRule('formations-gate').status).toBe('deferred');
   });

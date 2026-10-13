@@ -120,6 +120,12 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### A1 nghiệm thu riêng; A2/A3 đổi hướng
+
+Xem `../design/nam-phai-transition.md`: A1 đóng trong phạm vi hồ sơ/truy nguồn.
+Audit metadata đợt này qua, không kiểm tra lại ảnh. Kiểm tra cũ giữ phạm vi hồ sơ
+cũ; kết quả đối thủ cần nguồn và cấu hình tương thích trước nhận làm đáp án.
+
 ### Mốc B — bài tập theo chủ đề v6
 
 Xem `thematic-exercises.md`: phân biệt tình huống công việc/tiền bạc/đồng hành,

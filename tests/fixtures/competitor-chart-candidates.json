@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "competitor-chart-candidates-v1",
+  "status": "external-comparison-only",
+  "oraclePolicy": {
+    "engineGeneratedObservations": false,
+    "approvedGoldenCharts": 0,
+    "sourceIndependenceVerified": false,
+    "promoteFromAgreement": false
+  },
+  "sources": [
+    {
+      "id": "meobeostudio-public-chart",
+      "url": "https://meobeostudio.com/tu-vi",
+      "resultUrl": "https://meobeostudio.com/tu-vi/lap-la-so",
+      "method": "public-form-post",
+      "declaredSchool": "Bắc phái phổ biến tại Việt Nam (website FAQ claim)",
+      "declaredCalendar": "Hồ Ngọc Đức (website claim)",
+      "namPhaiCompatibility": "incompatible-declared-school-and-calendar",
+      "engineIdentity": "unknown-server-engine",
+      "profileSettings": {
+        "lateTy": "23h–23h59 tính sang ngày hôm sau; 0h–0h59 giữ nguyên ngày",
+        "leapMonthStarPolicy": "not-disclosed-in-form",
+        "optionalTuongTinh": false,
+        "optionalForecast": false
+      }
+    },
+    {
+      "id": "aituvi-public-chart",
+      "url": "https://aituvi.com/",
+      "method": "public-horoscope-get-with-synthetic-input",
+      "declaredSchool": "not-established",
+      "declaredCalendar": "not-established",
+      "namPhaiCompatibility": "unresolved",
+      "engineIdentity": "unknown",
+      "profileSettings": {
+        "dateEncoding": "plus-prefixed ISO solar date; confirmed against displayed lunar date",
+        "timeEncoding": "time=0 displayed 0h–0h59",
+        "viewedYear": 2026,
+        "leapMonthStarPolicy": "not-established",
+        "lateTy": "not-established",
+        "optionalForecast": "An lưu đại vận/An lưu tiểu vận not enabled"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "meobeo-1985-leap-month-vn",
+      "displayedLunarBasis": "same-for-observed-input",
+      "sourceId": "meobeostudio-public-chart",
+      "capturedAt": "2026-10-13T16:53:22.688Z",
+      "status": "external-comparison-only",
+      "input": {
+        "calendar": "solar",
+        "date": { "year": 1985, "month": 4, "day": 11 },
+        "gender": "male",
+        "hour": 9,
+        "minute": 0,
+        "leapPolicy": "split_at_15",
+        "ziPolicy": "next_day_at_23"
+      },
+      "submittedSettings": {
+        "calendarValue": "duong",
+        "genderValue": "1",
+        "hourSelectValue": "6",
+        "hourLabel": "Tỵ (9h–10h59)",
+        "syntheticName": "Mẫu đối chiếu",
+        "inputLeapCheckbox": false,
+        "preciseMinuteNotSpecifiedBySource": true
+      },
+      "observation": {
+        "displayedSolar": "1985-04-11",
+        "displayedLunar": "1985-02-22-leap",
+        "mingBranch": "Tuất",
+        "bodyBranch": "Thân",
+        "cuc": "Thổ ngũ Cục",
+        "majorStars": {
+          "Tử Vi": "Mão",
+          "Thiên Cơ": "Dần",
+          "Thái Dương": "Tý",
+          "Vũ Khúc": "Hợi",
+          "Thiên Đồng": "Tuất",
+          "Liêm Trinh": "Mùi",
+          "Thiên Phủ": "Sửu",
+          "Thái Âm": "Dần",
+          "Tham Lang": "Mão",
+          "Cự Môn": "Thìn",
+          "Thiên Tướng": "Tỵ",
+          "Thiên Lương": "Ngọ",
+          "Thất Sát": "Mùi",
+          "Phá Quân": "Hợi"
+        },
+        "minorStars": { "Tả Phụ": "Tỵ", "Hữu Bật": "Dậu", "Văn Xương": "Tỵ", "Văn Khúc": "Dậu" },
+        "palaceBranches": {
+          "Mệnh": "Tuất",
+          "Phụ Mẫu": "Hợi",
+          "Phúc Đức": "Tý",
+          "Điền Trạch": "Sửu",
+          "Quan Lộc": "Dần",
+          "Nô Bộc": "Mão",
+          "Thiên Di": "Thìn",
+          "Tật Ách": "Tỵ",
+          "Tài Bạch": "Ngọ",
+          "Tử Tức": "Mùi",
+          "Phu Thê": "Thân",
+          "Huynh Đệ": "Dậu"
+        }
+      },
+      "notes": [
+        "Observed complete visible 12-palace chart; persisted only declared fields.",
+        "1985 Vietnamese leap month differs from the new Chinese-calendar project scope.",
+        "Source displays Tả phù; normalized observation key Tả Phụ does not rewrite the source claim."
+      ]
+    },
+    {
+      "id": "meobeo-1984-lunar-newyear",
+      "displayedLunarBasis": "same-for-observed-input",
+      "sourceId": "meobeostudio-public-chart",
+      "capturedAt": "2026-10-13T16:53:26.060Z",
+      "status": "external-comparison-only",
+      "input": {
+        "calendar": "lunar",
+        "date": { "year": 1984, "month": 1, "day": 1, "isLeapMonth": false },
+        "gender": "male",
+        "hour": 0,
+        "minute": 0,
+        "leapPolicy": "split_at_15",
+        "ziPolicy": "next_day_at_23"
+      },
+      "submittedSettings": {
+        "calendarValue": "am",
+        "genderValue": "1",
+        "hourSelectValue": "1",
+        "hourLabel": "Tý (0h–0h59)",
+        "syntheticName": "Mẫu đối chiếu",
+        "inputLeapCheckbox": false,
+        "preciseMinuteNotSpecifiedBySource": true
+      },
+      "observation": {
+        "displayedSolar": "1984-02-02",
+        "displayedLunar": "1984-01-01-normal",
+        "mingBranch": "Dần",
+        "bodyBranch": "Dần",
+        "cuc": "Hỏa lục Cục",
+        "majorStars": {
+          "Tử Vi": "Dậu",
+          "Thiên Cơ": "Thân",
+          "Thái Dương": "Ngọ",
+          "Vũ Khúc": "Tỵ",
+          "Thiên Đồng": "Thìn",
+          "Liêm Trinh": "Sửu",
+          "Thiên Phủ": "Mùi",
+          "Thái Âm": "Thân",
+          "Tham Lang": "Dậu",
+          "Cự Môn": "Tuất",
+          "Thiên Tướng": "Hợi",
+          "Thiên Lương": "Tý",
+          "Thất Sát": "Sửu",
+          "Phá Quân": "Tỵ"
+        },
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        },
+        "palaceBranches": {
+          "Mệnh": "Dần",
+          "Phụ Mẫu": "Mão",
+          "Phúc Đức": "Thìn",
+          "Điền Trạch": "Tỵ",
+          "Quan Lộc": "Ngọ",
+          "Nô Bộc": "Mùi",
+          "Thiên Di": "Thân",
+          "Tật Ách": "Dậu",
+          "Tài Bạch": "Tuất",
+          "Tử Tức": "Hợi",
+          "Phu Thê": "Tý",
+          "Huynh Đệ": "Sửu"
+        }
+      },
+      "notes": [
+        "Source displays Văn Khúc(H) at Thìn; brightness is deliberately not admitted as a golden field."
+      ]
+    },
+    {
+      "id": "meobeo-2000-late-ty",
+      "displayedLunarBasis": "calculation-date",
+      "sourceId": "meobeostudio-public-chart",
+      "capturedAt": "2026-10-13T16:53:29.817Z",
+      "status": "external-comparison-only",
+      "input": {
+        "calendar": "solar",
+        "date": { "year": 2000, "month": 5, "day": 29 },
+        "gender": "female",
+        "hour": 23,
+        "minute": 0,
+        "leapPolicy": "split_at_15",
+        "ziPolicy": "next_day_at_23"
+      },
+      "submittedSettings": {
+        "calendarValue": "duong",
+        "genderValue": "-1",
+        "hourSelectValue": "13",
+        "hourLabel": "Tý sớm (23h–23h59) — tính sang ngày hôm sau",
+        "syntheticName": "Mẫu đối chiếu",
+        "inputLeapCheckbox": false,
+        "preciseMinuteNotSpecifiedBySource": true
+      },
+      "observation": {
+        "displayedSolar": "2000-05-29",
+        "displayedLunar": "2000-04-27-normal",
+        "mingBranch": "Tỵ",
+        "bodyBranch": "Tỵ",
+        "cuc": "Kim tứ Cục",
+        "majorStars": {
+          "Tử Vi": "Mùi",
+          "Thiên Cơ": "Ngọ",
+          "Thái Dương": "Thìn",
+          "Vũ Khúc": "Mão",
+          "Thiên Đồng": "Dần",
+          "Liêm Trinh": "Hợi",
+          "Thiên Phủ": "Dậu",
+          "Thái Âm": "Tuất",
+          "Tham Lang": "Hợi",
+          "Cự Môn": "Tý",
+          "Thiên Tướng": "Sửu",
+          "Thiên Lương": "Dần",
+          "Thất Sát": "Mão",
+          "Phá Quân": "Mùi"
+        },
+        "minorStars": {
+          "Tả Phụ": "Mùi",
+          "Hữu Bật": "Mùi",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        },
+        "palaceBranches": {
+          "Mệnh": "Tỵ",
+          "Phụ Mẫu": "Ngọ",
+          "Phúc Đức": "Mùi",
+          "Điền Trạch": "Thân",
+          "Quan Lộc": "Dậu",
+          "Nô Bộc": "Tuất",
+          "Thiên Di": "Hợi",
+          "Tật Ách": "Tý",
+          "Tài Bạch": "Sửu",
+          "Tử Tức": "Dần",
+          "Phu Thê": "Mão",
+          "Huynh Đệ": "Thìn"
+        }
+      },
+      "notes": [
+        "Header retains submitted solar 29/5/2000 but lunar display is 27/4/2000 after late-Ty shift; compare displayedLunar to effectiveLunar, not original lunar tuple."
+      ]
+    },
+    {
+      "id": "aituvi-1984-solar-newyear",
+      "displayedLunarBasis": "same-for-observed-input",
+      "sourceId": "aituvi-public-chart",
+      "capturedAt": "2026-10-13T16:55:24.916Z",
+      "status": "external-comparison-only",
+      "resultUrl": "https://aituvi.com/horoscope?name=Mau%20doi%20chieu&gender=Nam&date=%2B1984-02-02&time=0&viewedYear=2026",
+      "input": {
+        "calendar": "solar",
+        "date": { "year": 1984, "month": 2, "day": 2 },
+        "gender": "male",
+        "hour": 0,
+        "minute": 0,
+        "leapPolicy": "split_at_15",
+        "ziPolicy": "next_day_at_23"
+      },
+      "submittedSettings": {
+        "dateParameter": "+1984-02-02",
+        "timeParameter": 0,
+        "hourLabel": "0h - 0h59",
+        "genderParameter": "Nam",
+        "syntheticName": "Mau doi chieu",
+        "viewedYear": 2026,
+        "preciseMinuteNotSpecifiedBySource": true
+      },
+      "observation": {
+        "displayedSolar": "1984-02-02",
+        "displayedLunar": "1984-01-01-normal",
+        "mingBranch": "Dần",
+        "bodyBranch": "Dần",
+        "cuc": "Hỏa lục Cục",
+        "majorStars": {
+          "Tử Vi": "Dậu",
+          "Thiên Cơ": "Thân",
+          "Thái Dương": "Ngọ",
+          "Vũ Khúc": "Tỵ",
+          "Thiên Đồng": "Thìn",
+          "Liêm Trinh": "Sửu",
+          "Thiên Phủ": "Mùi",
+          "Thái Âm": "Thân",
+          "Tham Lang": "Dậu",
+          "Cự Môn": "Tuất",
+          "Thiên Tướng": "Hợi",
+          "Thiên Lương": "Tý",
+          "Thất Sát": "Sửu",
+          "Phá Quân": "Tỵ"
+        },
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        },
+        "palaceBranches": {
+          "Mệnh": "Dần",
+          "Phụ Mẫu": "Mão",
+          "Phúc Đức": "Thìn",
+          "Điền Trạch": "Tỵ",
+          "Quan Lộc": "Ngọ",
+          "Nô Bộc": "Mùi",
+          "Thiên Di": "Thân",
+          "Tật Ách": "Dậu",
+          "Tài Bạch": "Tuất",
+          "Tử Tức": "Hợi",
+          "Phu Thê": "Tý",
+          "Huynh Đệ": "Sửu"
+        }
+      },
+      "notes": [
+        "Website renders Văn Khúc(Đ) at Thìn, while Mèo Béo renders H; agreement in placement is not agreement in dignity.",
+        "School/calendar/source-engine identity are unresolved; this result cannot certify Nam phái or source independence."
+      ]
+    }
+  ]
+}
