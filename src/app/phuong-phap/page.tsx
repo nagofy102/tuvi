@@ -1,4 +1,10 @@
 import type { Metadata } from 'next';
+import {
+  KNOWLEDGE_PROFILE,
+  KNOWLEDGE_RULES,
+  resolvePassage,
+} from '@/domain/interpretation/knowledge';
+import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
 export const metadata: Metadata = {
   title: 'Phương pháp và nguồn tham khảo',
   alternates: { canonical: '/phuong-phap' },
@@ -64,7 +70,9 @@ export default function MethodsPage() {
         Bản đọc tham khảo được tạo trên thiết bị sau khi lập lá số thành công. Tổng quan dùng vị trí
         Mệnh, Thân, Cục và nạp âm; chi tiết 12 cung giữ nguyên chính tinh, trạng thái sao và Tứ Hóa
         từ engine. Các sao ở cung tam hợp hoặc đối cung không được chuyển thành sao tọa thủ. Chưa
-        luận phụ tinh, cách cục, đại hạn hoặc lưu niên.
+        nhận diện cách cục, đại hạn hoặc lưu niên. Chỉ mở rộng các nhóm Tả Phụ–Hữu Bật và Văn
+        Xương–Văn Khúc khi đủ cả cặp cùng ngữ cảnh chính tinh; Khôi–Việt chưa kích hoạt vì cách an
+        sao chưa được đối chiếu đầy đủ.
       </p>
       <p>
         Chủ đề biểu tượng của 14 chính tinh được nghiên cứu từ{' '}
@@ -91,6 +99,63 @@ export default function MethodsPage() {
         an sao; khác biệt được công bố, không âm thầm đổi ngày sinh. Bản đọc đang ở mức tham khảo
         nghiên cứu, chưa được thẩm định độc lập và không xác nhận khả năng dự đoán.
       </p>
+      <h2 id="ho-so-quy-tac">Hồ sơ quy tắc và truy nguồn</h2>
+      <p>
+        Hồ sơ {KNOWLEDGE_PROFILE.id}, tách riêng khỏi cấu hình an sao{' '}
+        {KNOWLEDGE_PROFILE.chartProfile}. {KNOWLEDGE_PROFILE.school}. Quy ước mặc định không thay
+        thế lựa chọn giờ Tý/tháng nhuận đã nhập.
+      </p>
+      <p>
+        Đối chiếu hiện có 24 ca từng phần được đếm từ đoạn sách ghim phiên bản, 146 trường
+        Mệnh/Thân, Tả–Hữu, Xương–Khúc và một ví dụ Cục/Tử Vi. Không lấy kết quả engine làm đáp án.
+        Những trường chưa có nguồn không được tính là đã kiểm chứng; đây không phải 24 lá số chuẩn
+        hoàn chỉnh.
+      </p>
+      <p>
+        Các bộ lọc đủ cặp, có chính tinh và quan hệ bốn cung là quyết định biên tập giới hạn của dự
+        án, không phải toàn bộ điều kiện cách cục cổ. Mỗi kết nối có “Vì sao luận như vậy”, giữ vị
+        trí sao thật và không tạo điểm vận may.
+      </p>
+      {KNOWLEDGE_PROFILE.differences.map((difference) => (
+        <p key={difference.id}>
+          {difference.status === 'disputed' ? 'Chưa thống nhất' : 'Chưa chốt chuyên môn'}:{' '}
+          {difference.detail}
+        </p>
+      ))}
+      {KNOWLEDGE_RULES.map((rule) => (
+        <details key={rule.id} className="knowledge-rule">
+          <summary>
+            {rule.id} ·{' '}
+            {rule.status === 'disputed'
+              ? 'chưa thống nhất'
+              : rule.status === 'deferred'
+                ? 'chưa kích hoạt'
+                : rule.status === 'editorial'
+                  ? 'diễn giải biên tập'
+                  : 'đã đối chiếu văn bản, không kiểm chứng dự báo'}
+          </summary>
+          <p>{rule.interpretation}</p>
+          <p>Giới hạn: {rule.limits}</p>
+          <ul>
+            {rule.passageIds.map((id) => {
+              const passage = resolvePassage(id);
+              const source = INTERPRETATION_SOURCES.find((item) => item.id === passage.sourceId)!;
+              return (
+                <li key={id}>
+                  <p>
+                    {passage.heading} · {id}
+                  </p>
+                  <blockquote lang="zh">{passage.excerpt}</blockquote>
+                  <p>{passage.reading}</p>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">
+                    {source.title} — {source.section} (mở tab mới)
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </details>
+      ))}
     </article>
   );
 }

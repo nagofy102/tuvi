@@ -1,0 +1,1219 @@
+{
+  "schemaVersion": "source-reference-charts-v1",
+  "profileId": "iztro-default-vietnamese-lunar-v2",
+  "status": "manual-source-derived-partial-not-expert-certified",
+  "purpose": "Compare independently hand-counted known fields only; never replace expectations with engine output.",
+  "createdOn": "2026-10-13",
+  "sourceDocuments": [
+    {
+      "id": "zwds-vol2-1963110",
+      "title": "紫微斗數全書",
+      "volume": "卷二",
+      "revision": 1963110,
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+      "retrievedOn": "2026-10-13",
+      "editionStatus": "Wikisource transcription, not facsimile-collated",
+      "classicalTextRights": "Public domain classification on Wikisource; site editorial content separately licensed",
+      "authorshipStatus": "Traditional textual attribution, not independently established"
+    }
+  ],
+  "excerpts": [
+    {
+      "id": "v2-ming-body",
+      "sourceId": "zwds-vol2-1963110",
+      "heading": "安身命例",
+      "text": "大抵人命俱从寅上起正月，顺数至本生月止，又自人生月起子时逆至本生时安命，顺至本生时安身。",
+      "anchor": "安身命例"
+    },
+    {
+      "id": "v2-ming-body-example",
+      "sourceId": "zwds-vol2-1963110",
+      "heading": "安身命例",
+      "text": "假如正月生子时就在寅宫安身命，丑时逆转丑安命，顺去卯安身，寅时逆转子安命，顺至辰安身，余宫仿此，",
+      "anchor": "安身命例"
+    },
+    {
+      "id": "v2-left-right",
+      "sourceId": "zwds-vol2-1963110",
+      "heading": "安左辅右弼星诀",
+      "text": "左辅从辰上起正月顺行，如正月生者就辰宫安之。二月在巳宫，右弼从戌宫逆转如正月便成戌宫安之，二月在酉宫余仿此。",
+      "anchor": "安身命例"
+    },
+    {
+      "id": "v2-wenchang-wenqu",
+      "sourceId": "zwds-vol2-1963110",
+      "heading": "安文昌文曲星诀",
+      "text": "子时戌上起文昌，逆到生时是贵乡，文曲数从辰上起，顺到生时是本乡。",
+      "anchor": "安身命例"
+    },
+    {
+      "id": "v2-fire-ziwei-example",
+      "sourceId": "zwds-vol2-1963110",
+      "heading": "安身命例",
+      "text": "如甲生人安命在寅却起甲己之年丙为首，是丙寅丁卯炉中火，却去火局寻某日生期起紫微帝王，如是正月初一生者是火局，酉宫起初一日，就从酉宫起紫微，数无差迟",
+      "anchor": "安身命例"
+    },
+    {
+      "id": "v2-fire-number",
+      "sourceId": "zwds-vol2-1963110",
+      "heading": "Unnamed ASCII cục tables following star classifications in 卷二",
+      "text": "火六局",
+      "anchor": "安身命例"
+    }
+  ],
+  "oraclePolicy": {
+    "engineUsedForExpected": false,
+    "method": "Manual enumeration from a pinned external historical source before engine comparison",
+    "reviewStatus": "AI-assisted transcription review only; no independent practitioner certification",
+    "compareOnlyPresentFields": true,
+    "missingFieldMeaning": "Unverified and excluded from comparisons, never implicit pass",
+    "regressionSnapshotsAreGroundTruth": false,
+    "solarConversionValidatedByThisCorpus": false
+  },
+  "coverage": {
+    "lunarMonths": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "caseCount": 24,
+    "hourBranches": 12,
+    "mingBranches": 12,
+    "bodyBranches": 12,
+    "completeGoldenCharts": 0,
+    "excluded": [
+      "leap months",
+      "late Tý policy boundary",
+      "independent solar-to-lunar expectations",
+      "most cục values",
+      "most principal placements",
+      "other auxiliary placements",
+      "dignity",
+      "Tứ Hóa",
+      "annual forecasts",
+      "alternate-school certification"
+    ]
+  },
+  "cases": [
+    {
+      "id": "source-lunar-month1-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Dần",
+        "bodyBranch": "Dần",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        },
+        "cuc": "Hỏa Lục Cục",
+        "majorStars": {
+          "Tử Vi": "Dậu"
+        }
+      },
+      "provenance": {
+        "method": "literal-source-example-and-manual-count",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": [
+          "v2-ming-body",
+          "v2-ming-body-example",
+          "v2-left-right",
+          "v2-wenchang-wenqu",
+          "v2-fire-ziwei-example",
+          "v2-fire-number"
+        ],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Tý cách Tý 0 bước. Mệnh đếm nghịch 0 bước từ Dần -> Dần; Thân đếm thuận 0 bước -> Dần. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 0 bước từ Tuất -> Tuất; Văn Khúc đếm thuận 0 bước từ Thìn -> Thìn. Năm 1984 là Giáp Tý theo chu kỳ can chi; source example Giáp/Mệnh Dần -> Bính Dần nạp âm Hỏa, bảng Hỏa Lục Cục, ngày 1 -> Tử Vi Dậu. Không suy thêm chính tinh khác."
+      },
+      "unverifiedFields": [
+        "all majorStars except Tử Vi",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-suu",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 2,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Sửu",
+      "expected": {
+        "mingBranch": "Sửu",
+        "bodyBranch": "Mão",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Dậu",
+          "Văn Khúc": "Tỵ"
+        }
+      },
+      "provenance": {
+        "method": "literal-source-example-and-manual-count",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": [
+          "v2-ming-body",
+          "v2-ming-body-example",
+          "v2-left-right",
+          "v2-wenchang-wenqu"
+        ],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Sửu cách Tý 1 bước. Mệnh đếm nghịch 1 bước từ Dần -> Sửu; Thân đếm thuận 1 bước -> Mão. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 1 bước từ Tuất -> Dậu; Văn Khúc đếm thuận 1 bước từ Thìn -> Tỵ."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-dan",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 4,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Dần",
+      "expected": {
+        "mingBranch": "Tý",
+        "bodyBranch": "Thìn",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Thân",
+          "Văn Khúc": "Ngọ"
+        }
+      },
+      "provenance": {
+        "method": "literal-source-example-and-manual-count",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": [
+          "v2-ming-body",
+          "v2-ming-body-example",
+          "v2-left-right",
+          "v2-wenchang-wenqu"
+        ],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Dần cách Tý 2 bước. Mệnh đếm nghịch 2 bước từ Dần -> Tý; Thân đếm thuận 2 bước -> Thìn. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 2 bước từ Tuất -> Thân; Văn Khúc đếm thuận 2 bước từ Thìn -> Ngọ."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-mao",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 6,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Mão",
+      "expected": {
+        "mingBranch": "Hợi",
+        "bodyBranch": "Tỵ",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Mùi",
+          "Văn Khúc": "Mùi"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Mão cách Tý 3 bước. Mệnh đếm nghịch 3 bước từ Dần -> Hợi; Thân đếm thuận 3 bước -> Tỵ. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 3 bước từ Tuất -> Mùi; Văn Khúc đếm thuận 3 bước từ Thìn -> Mùi."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-thin",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 8,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Thìn",
+      "expected": {
+        "mingBranch": "Tuất",
+        "bodyBranch": "Ngọ",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Ngọ",
+          "Văn Khúc": "Thân"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Thìn cách Tý 4 bước. Mệnh đếm nghịch 4 bước từ Dần -> Tuất; Thân đếm thuận 4 bước -> Ngọ. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 4 bước từ Tuất -> Ngọ; Văn Khúc đếm thuận 4 bước từ Thìn -> Thân."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-ty-snake",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 10,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tỵ",
+      "expected": {
+        "mingBranch": "Dậu",
+        "bodyBranch": "Mùi",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Tỵ",
+          "Văn Khúc": "Dậu"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Tỵ cách Tý 5 bước. Mệnh đếm nghịch 5 bước từ Dần -> Dậu; Thân đếm thuận 5 bước -> Mùi. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 5 bước từ Tuất -> Tỵ; Văn Khúc đếm thuận 5 bước từ Thìn -> Dậu."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-ngo",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 12,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Ngọ",
+      "expected": {
+        "mingBranch": "Thân",
+        "bodyBranch": "Thân",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Thìn",
+          "Văn Khúc": "Tuất"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Ngọ cách Tý 6 bước. Mệnh đếm nghịch 6 bước từ Dần -> Thân; Thân đếm thuận 6 bước -> Thân. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 6 bước từ Tuất -> Thìn; Văn Khúc đếm thuận 6 bước từ Thìn -> Tuất."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-mui",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 14,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Mùi",
+      "expected": {
+        "mingBranch": "Mùi",
+        "bodyBranch": "Dậu",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Mão",
+          "Văn Khúc": "Hợi"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Mùi cách Tý 7 bước. Mệnh đếm nghịch 7 bước từ Dần -> Mùi; Thân đếm thuận 7 bước -> Dậu. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 7 bước từ Tuất -> Mão; Văn Khúc đếm thuận 7 bước từ Thìn -> Hợi."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-than",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 16,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Thân",
+      "expected": {
+        "mingBranch": "Ngọ",
+        "bodyBranch": "Tuất",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Dần",
+          "Văn Khúc": "Tý"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Thân cách Tý 8 bước. Mệnh đếm nghịch 8 bước từ Dần -> Ngọ; Thân đếm thuận 8 bước -> Tuất. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 8 bước từ Tuất -> Dần; Văn Khúc đếm thuận 8 bước từ Thìn -> Tý."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-dau",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 18,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Dậu",
+      "expected": {
+        "mingBranch": "Tỵ",
+        "bodyBranch": "Hợi",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Sửu",
+          "Văn Khúc": "Sửu"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Dậu cách Tý 9 bước. Mệnh đếm nghịch 9 bước từ Dần -> Tỵ; Thân đếm thuận 9 bước -> Hợi. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 9 bước từ Tuất -> Sửu; Văn Khúc đếm thuận 9 bước từ Thìn -> Sửu."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-tuat",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "male",
+        "hour": 20,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tuất",
+      "expected": {
+        "mingBranch": "Thìn",
+        "bodyBranch": "Tý",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Tý",
+          "Văn Khúc": "Dần"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Tuất cách Tý 10 bước. Mệnh đếm nghịch 10 bước từ Dần -> Thìn; Thân đếm thuận 10 bước -> Tý. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 10 bước từ Tuất -> Tý; Văn Khúc đếm thuận 10 bước từ Thìn -> Dần."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month1-hoi",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 22,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Hợi",
+      "expected": {
+        "mingBranch": "Mão",
+        "bodyBranch": "Sửu",
+        "minorStars": {
+          "Tả Phụ": "Thìn",
+          "Hữu Bật": "Tuất",
+          "Văn Xương": "Hợi",
+          "Văn Khúc": "Mão"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 1 bắt đầu tại Dần; giờ Hợi cách Tý 11 bước. Mệnh đếm nghịch 11 bước từ Dần -> Mão; Thân đếm thuận 11 bước -> Sửu. Tả Phụ tháng 1 ở Thìn; Hữu Bật tháng 1 ở Tuất. Văn Xương đếm nghịch 11 bước từ Tuất -> Hợi; Văn Khúc đếm thuận 11 bước từ Thìn -> Mão."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month2-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 2,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Mão",
+        "bodyBranch": "Mão",
+        "minorStars": {
+          "Tả Phụ": "Tỵ",
+          "Hữu Bật": "Dậu",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 2 đếm thuận 1 bước từ Dần -> Mão. Giờ Tý không dịch thêm: Mệnh và Thân cùng Mão. Tả Phụ đếm thuận 1 bước từ Thìn -> Tỵ; Hữu Bật đếm nghịch 1 bước từ Tuất -> Dậu. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month3-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 3,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Thìn",
+        "bodyBranch": "Thìn",
+        "minorStars": {
+          "Tả Phụ": "Ngọ",
+          "Hữu Bật": "Thân",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 3 đếm thuận 2 bước từ Dần -> Thìn. Giờ Tý không dịch thêm: Mệnh và Thân cùng Thìn. Tả Phụ đếm thuận 2 bước từ Thìn -> Ngọ; Hữu Bật đếm nghịch 2 bước từ Tuất -> Thân. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month4-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 4,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Tỵ",
+        "bodyBranch": "Tỵ",
+        "minorStars": {
+          "Tả Phụ": "Mùi",
+          "Hữu Bật": "Mùi",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 4 đếm thuận 3 bước từ Dần -> Tỵ. Giờ Tý không dịch thêm: Mệnh và Thân cùng Tỵ. Tả Phụ đếm thuận 3 bước từ Thìn -> Mùi; Hữu Bật đếm nghịch 3 bước từ Tuất -> Mùi. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month5-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 5,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Ngọ",
+        "bodyBranch": "Ngọ",
+        "minorStars": {
+          "Tả Phụ": "Thân",
+          "Hữu Bật": "Ngọ",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 5 đếm thuận 4 bước từ Dần -> Ngọ. Giờ Tý không dịch thêm: Mệnh và Thân cùng Ngọ. Tả Phụ đếm thuận 4 bước từ Thìn -> Thân; Hữu Bật đếm nghịch 4 bước từ Tuất -> Ngọ. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month6-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 6,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Mùi",
+        "bodyBranch": "Mùi",
+        "minorStars": {
+          "Tả Phụ": "Dậu",
+          "Hữu Bật": "Tỵ",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 6 đếm thuận 5 bước từ Dần -> Mùi. Giờ Tý không dịch thêm: Mệnh và Thân cùng Mùi. Tả Phụ đếm thuận 5 bước từ Thìn -> Dậu; Hữu Bật đếm nghịch 5 bước từ Tuất -> Tỵ. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month7-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 7,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Thân",
+        "bodyBranch": "Thân",
+        "minorStars": {
+          "Tả Phụ": "Tuất",
+          "Hữu Bật": "Thìn",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 7 đếm thuận 6 bước từ Dần -> Thân. Giờ Tý không dịch thêm: Mệnh và Thân cùng Thân. Tả Phụ đếm thuận 6 bước từ Thìn -> Tuất; Hữu Bật đếm nghịch 6 bước từ Tuất -> Thìn. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month8-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 8,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Dậu",
+        "bodyBranch": "Dậu",
+        "minorStars": {
+          "Tả Phụ": "Hợi",
+          "Hữu Bật": "Mão",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 8 đếm thuận 7 bước từ Dần -> Dậu. Giờ Tý không dịch thêm: Mệnh và Thân cùng Dậu. Tả Phụ đếm thuận 7 bước từ Thìn -> Hợi; Hữu Bật đếm nghịch 7 bước từ Tuất -> Mão. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month9-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 9,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Tuất",
+        "bodyBranch": "Tuất",
+        "minorStars": {
+          "Tả Phụ": "Tý",
+          "Hữu Bật": "Dần",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 9 đếm thuận 8 bước từ Dần -> Tuất. Giờ Tý không dịch thêm: Mệnh và Thân cùng Tuất. Tả Phụ đếm thuận 8 bước từ Thìn -> Tý; Hữu Bật đếm nghịch 8 bước từ Tuất -> Dần. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month10-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 10,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Hợi",
+        "bodyBranch": "Hợi",
+        "minorStars": {
+          "Tả Phụ": "Sửu",
+          "Hữu Bật": "Sửu",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 10 đếm thuận 9 bước từ Dần -> Hợi. Giờ Tý không dịch thêm: Mệnh và Thân cùng Hợi. Tả Phụ đếm thuận 9 bước từ Thìn -> Sửu; Hữu Bật đếm nghịch 9 bước từ Tuất -> Sửu. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month11-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 11,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Tý",
+        "bodyBranch": "Tý",
+        "minorStars": {
+          "Tả Phụ": "Dần",
+          "Hữu Bật": "Tý",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 11 đếm thuận 10 bước từ Dần -> Tý. Giờ Tý không dịch thêm: Mệnh và Thân cùng Tý. Tả Phụ đếm thuận 10 bước từ Thìn -> Dần; Hữu Bật đếm nghịch 10 bước từ Tuất -> Tý. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month12-ty",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 12,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 0,
+        "minute": 30,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Tý",
+      "expected": {
+        "mingBranch": "Sửu",
+        "bodyBranch": "Sửu",
+        "minorStars": {
+          "Tả Phụ": "Mão",
+          "Hữu Bật": "Hợi",
+          "Văn Xương": "Tuất",
+          "Văn Khúc": "Thìn"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 12 đếm thuận 11 bước từ Dần -> Sửu. Giờ Tý không dịch thêm: Mệnh và Thân cùng Sửu. Tả Phụ đếm thuận 11 bước từ Thìn -> Mão; Hữu Bật đếm nghịch 11 bước từ Tuất -> Hợi. Giờ Tý: Văn Xương ở Tuất, Văn Khúc ở Thìn."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    },
+    {
+      "id": "source-lunar-month12-hoi",
+      "status": "manual-source-derived-partial",
+      "input": {
+        "calendar": "lunar",
+        "date": {
+          "year": 1984,
+          "month": 12,
+          "day": 1,
+          "isLeapMonth": false
+        },
+        "gender": "female",
+        "hour": 22,
+        "minute": 0,
+        "leapPolicy": "same_month",
+        "ziPolicy": "civil_midnight"
+      },
+      "hourBranch": "Hợi",
+      "expected": {
+        "mingBranch": "Dần",
+        "bodyBranch": "Tý",
+        "minorStars": {
+          "Tả Phụ": "Mão",
+          "Hữu Bật": "Hợi",
+          "Văn Xương": "Hợi",
+          "Văn Khúc": "Mão"
+        }
+      },
+      "provenance": {
+        "method": "manual-source-counting",
+        "sourceIds": ["zwds-vol2-1963110"],
+        "excerptIds": ["v2-ming-body", "v2-left-right", "v2-wenchang-wenqu"],
+        "engineUsedForExpected": false,
+        "derivation": "Tháng 12 đếm thuận 11 bước từ Dần -> Sửu. Giờ Hợi cách Tý 11 bước: Mệnh đếm nghịch từ Sửu -> Dần; Thân đếm thuận từ Sửu -> Tý. Tả Phụ tháng 12 đếm thuận 11 bước từ Thìn -> Mão; Hữu Bật đếm nghịch 11 bước từ Tuất -> Hợi. Văn Xương đếm nghịch 11 bước từ Tuất -> Hợi; Văn Khúc đếm thuận 11 bước từ Thìn -> Mão."
+      },
+      "unverifiedFields": [
+        "cuc",
+        "all majorStars",
+        "solarDate",
+        "other auxiliary stars",
+        "dignity",
+        "Tứ Hóa",
+        "decades",
+        "annual forecasts"
+      ]
+    }
+  ]
+}

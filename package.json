@@ -13,6 +13,7 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "audit:tech": "vitest run --config vitest.audit.config.ts",
+    "audit:reference": "node scripts/run-reference-diff.mjs",
     "format:check": "prettier --check src tests scripts package.json tsconfig.json next.config.ts playwright.config.ts vitest.config.ts vitest.audit.config.ts postcss.config.mjs"
   },
   "engines": {

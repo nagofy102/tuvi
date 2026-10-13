@@ -272,16 +272,24 @@ describe('reference interpretation integrity (not predictive validation)', () =>
     },
   );
 
-  it('does not imply auxiliary stars, dignities, combinations or annual forecasts were interpreted', () => {
+  it('only removes auxiliary stars actually considered by a matched group, without implying forecasts', () => {
     const input = chart();
     const report = ready(input);
     for (const palace of report.palaces) {
       const original = input.palaces.find((item) => item.name === palace.name)!;
+      const considered = new Set(
+        palace.insights
+          .filter((i) => i.ruleId.startsWith('pair-'))
+          .flatMap((i) => i.evidence.flatMap((e) => e.stars.map((s) => s.name))),
+      );
       expect(palace.uninterpretedStars).toEqual(
-        original.stars.filter((star) => star.group !== 'major').map((star) => star.name),
+        original.stars
+          .filter((star) => star.group !== 'major' && !considered.has(star.name))
+          .map((star) => star.name),
       );
     }
-    expect(report.warnings.join(' ')).toContain('Chưa luận phụ tinh');
+    expect(report.warnings.join(' ')).toContain('Chỉ xét nhóm');
+    expect(report.warnings.join(' ')).toContain('Chưa luận cách cục');
     expect(report.warnings.join(' ')).toContain('đại hạn hay lưu niên');
   });
 });

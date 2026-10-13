@@ -59,11 +59,16 @@ test('generates sourced reference interpretations and refreshes them for a new c
   const menh = panel
     .locator('.interpretation-palace')
     .filter({ has: page.locator('summary', { hasText: /^Mệnh ·/ }) });
-  await menh.locator('summary').focus();
+  await menh.locator(':scope > summary').focus();
   await page.keyboard.press('Enter');
   await expect(menh).toHaveAttribute('open', '');
   await expect(menh).toContainText('Vũ Khúc');
   await expect(menh).toContainText('Vì sao có các cung liên hệ?');
+  await menh
+    .locator('.interpretation-insight')
+    .first()
+    .getByText('Vì sao luận như vậy?', { exact: true })
+    .click();
   await expect(menh.locator('a[href*="oldid=7913704"]').first()).toBeVisible();
   await panel.locator('.interpretation-header').scrollIntoViewIfNeeded();
   await page.screenshot({ path: 'test-results/interpretation-desktop.png' });
@@ -99,6 +104,35 @@ test('supports the Vietnamese 1985 leap month and hides readings on an invalid l
   );
 });
 
+test('shows source-bounded group reasoning and publicly marks deferred rules', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
+  const panel = page.locator('.interpretation-panel');
+  await expect(panel).toContainText('Đối chiếu Mệnh và cung an Thân');
+  const palace = panel
+    .locator('.interpretation-palace')
+    .filter({ has: page.locator('[data-rule-id="pair-support"]') })
+    .first();
+  await palace.locator('summary').first().click();
+  const group = palace.locator('[data-rule-id="pair-support"]');
+  await group.getByText('Vì sao luận như vậy?', { exact: true }).click();
+  await expect(group).toContainText('Có đủ hai thành viên');
+  await expect(group).toContainText('Tả Phù');
+  await expect(group).toContainText('辅弼为上相，辅佐紫微星');
+  await expect(group).toContainText('kết nối biên tập');
+  await expect(group.locator('a[href*="oldid=7913704"]').first()).toBeVisible();
+  await expect(panel.locator('[data-rule-id="pair-assistance"]')).toHaveCount(0);
+  await expect(panel.locator('[data-rule-id="formations-gate"]')).toHaveCount(0);
+  await page.goto('/phuong-phap#ho-so-quy-tac');
+  await expect(page.getByText('pair-assistance · chưa kích hoạt', { exact: true })).toBeVisible();
+  await expect(
+    page.getByText('leap-policy-conflict · chưa thống nhất', { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText(/Không lấy kết quả engine làm đáp án/u)).toBeVisible();
+  await page.setViewportSize({ width: 320, height: 800 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+});
+
 test('mobile layout, large text and list view stay inside the viewport', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
@@ -110,7 +144,7 @@ test('mobile layout, large text and list view stay inside the viewport', async (
   await page
     .locator('.interpretation-palace')
     .filter({ has: page.locator('summary', { hasText: /^Mệnh ·/ }) })
-    .locator('summary')
+    .locator(':scope > summary')
     .click();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
   expect(overflow).toBe(false);

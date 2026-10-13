@@ -21,6 +21,8 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `interpretation-milestones.md`: mốc 2–3 có giới hạn, hồ sơ nguồn và nhóm chờ kích hoạt.
+
 - `product-spec.md`: trải nghiệm, màu sắc, khả năng tiếp cận và tiêu chí sản phẩm.
 - `retention-roadmap.md`: ưu tiên chức năng, yêu cầu BA, chỉ số và lộ trình đề xuất; chưa triển khai.
 - `chart-validation-plan.md`: kế hoạch thẩm định gốc; seam lịch hiện đã triển khai,
@@ -31,6 +33,11 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 - `../dev/architecture.md`: cấu trúc ứng dụng và trách nhiệm từng module.
 
 ## Bước tiếp theo
+
+Mốc 2–3 có hồ sơ truy nguồn và 24 ca đối chiếu từng phần. Đã mở nhóm Tả–Hữu/Xương–Khúc,
+Tử Vi với hỗ trợ, Mệnh–Thân và tam phương tứ chính có “Vì sao”. Khôi–Việt/cách cục/vận hạn
+chưa kích hoạt; chưa có chứng nhận độc lập. Xem `interpretation-milestones.md` và
+`../test/knowledge-validation.md`.
 
 Mốc 1 kỹ thuật của lộ trình PM mới nhất đã sửa tích hợp lịch Việt Nam và qua audit; xem
 `../dev/calendar-remediation.md` và `../test/calendar-remediation.md`.

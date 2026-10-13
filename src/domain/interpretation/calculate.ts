@@ -5,6 +5,8 @@ import type { ChartPalace, ChartResult, ChartStar } from '../astrology/types';
 import { solarToLunar, validateSolarDate } from '../calendar/convert';
 import { MAX_YEAR, MIN_YEAR, type LunarDate } from '../calendar/types';
 import { INTERPRETATION_SOURCES, PALACE_SOURCE_IDS, STAR_CATALOG } from './catalog';
+import { canonicalStarName, readContextualGroups, readMenhThan, AUXILIARY_GROUPS } from './context';
+import { KNOWLEDGE_PROFILE, resolvePassage, STAR_PASSAGE_IDS } from './knowledge';
 import type {
   InterpretationResult,
   PalaceReading,
@@ -13,7 +15,7 @@ import type {
   StarReading,
 } from './types';
 
-export const INTERPRETATION_VERSION = 'reference-reading-v1';
+export const INTERPRETATION_VERSION = 'reference-reading-v2';
 
 const MAJOR_STAR_NAMES = [
   'Tử Vi',
@@ -99,6 +101,7 @@ function isStructurallyValid(chart: ChartResult): boolean {
     return false;
   }
   const stars: ChartStar[] = [];
+  const auxiliaryNames: string[] = [];
   for (const palace of chart.palaces) {
     if (
       !Object.hasOwn(PALACE_CONTENT, palace.name) ||
@@ -120,12 +123,19 @@ function isStructurallyValid(chart: ChartResult): boolean {
         return false;
       }
       if (star.group === 'major') stars.push(star);
+      else if (
+        AUXILIARY_GROUPS.some((group) =>
+          group.names.some((name) => name === canonicalStarName(star.name)),
+        )
+      )
+        auxiliaryNames.push(canonicalStarName(star.name));
     }
   }
   return (
     stars.length === 14 &&
     new Set(stars.map((star) => star.name)).size === 14 &&
-    MAJOR_STAR_NAMES.every((name) => stars.some((star) => star.name === name))
+    MAJOR_STAR_NAMES.every((name) => stars.some((star) => star.name === name)) &&
+    new Set(auxiliaryNames).size === auxiliaryNames.length
   );
 }
 
@@ -143,6 +153,7 @@ function readStars(
       theme: catalog[star.name].theme,
       reflection: catalog[star.name].reflection,
       sourceIds: [...catalog[star.name].sourceIds],
+      passageIds: [STAR_PASSAGE_IDS[star.name], 'context-not-uniform'],
     }));
 }
 
@@ -173,6 +184,14 @@ function readPalace(
   const placement = directStars.length
     ? `Chính tinh tọa thủ tại ${palace.branch}: ${starDescription(directStars)}.`
     : `Cung tại ${palace.branch} không có chính tinh tọa thủ (vô chính diệu). Các sao ở cung liên hệ vẫn ở cung gốc, không được chuyển thành sao tọa thủ.`;
+  const insights = readContextualGroups(palace, palaces);
+  const consideredNames = new Set(
+    insights
+      .filter((insight) => insight.ruleId.startsWith('pair-'))
+      .flatMap((insight) =>
+        insight.evidence.flatMap((item) => item.stars.map((star) => star.name)),
+      ),
+  );
   return {
     name: palace.name,
     branch: palace.branch,
@@ -181,7 +200,7 @@ function readPalace(
     reflection: content.question,
     directStars,
     uninterpretedStars: palace.stars
-      .filter((star) => star.group !== 'major')
+      .filter((star) => star.group !== 'major' && !consideredNames.has(star.name))
       .map((star) => star.name),
     relatedPalaces,
     sourceIds: unique([
@@ -189,7 +208,9 @@ function readPalace(
       'structure-reference',
       ...directStars.flatMap((star) => star.sourceIds),
       ...relatedPalaces.flatMap((related) => related.stars.flatMap((star) => star.sourceIds)),
+      ...insights.flatMap((insight) => insight.passageIds.map((id) => resolvePassage(id).sourceId)),
     ]),
+    insights,
   };
 }
 
@@ -246,6 +267,7 @@ export function calculateInterpretation(
     status: 'ready',
     version: INTERPRETATION_VERSION,
     profile: chart.provenance.profile,
+    knowledgeProfile: KNOWLEDGE_PROFILE.id,
     reviewStatus: 'reference-unvalidated',
     summary: {
       paragraphs,
@@ -258,16 +280,20 @@ export function calculateInterpretation(
         { label: 'Thân chủ', value: chart.body },
       ],
       focusPalace: than.name,
+      insights: [readMenhThan(menh, than)],
     },
     palaces,
-    sourceIds: unique(palaces.flatMap((palace) => palace.sourceIds)),
+    sourceIds: unique([
+      ...palaces.flatMap((palace) => palace.sourceIds),
+      ...readMenhThan(menh, than).passageIds.map((id) => resolvePassage(id).sourceId),
+    ]),
     warnings: unique([
       ...chart.warnings,
-      'Chưa luận phụ tinh, tổ hợp cách cục, đại hạn hay lưu niên. Miếu/vượng/đắc/hãm và Tứ Hóa chỉ được hiển thị theo engine, chưa có quy tắc tổng hợp để kết luận.',
+      'Chỉ xét nhóm Tả Phụ–Hữu Bật và Văn Xương–Văn Khúc khi đủ cả cặp và ngữ cảnh chính tinh. Khôi–Việt chưa kích hoạt vì chưa đối chiếu đủ cách an sao. Các kết nối là diễn giải biên tập có nguồn biểu tượng, chưa phải quy tắc dự báo được kiểm chứng. Chưa luận cách cục, đại hạn hay lưu niên; miếu/vượng và Tứ Hóa chỉ hiển thị.',
       'Tài liệu cổ được dùng để tham khảo biểu tượng sao, không chứng nhận cấu hình an sao hiện tại. Quy tắc tháng nhuận trong nguồn cổ và engine có thể khác nhau.',
       ...(chart.effectiveLunar.isLeapMonth
         ? [
-            'Ngày sinh dùng tháng nhuận: cấu hình engine hiện tại không trùng quy tắc dùng toàn tháng nhuận như tháng kế tiếp trong mục An Thân Mệnh của nguồn cổ. Bản đọc này không xác nhận cách an tháng nhuận theo nguồn đó.',
+            'Ngày sinh dùng tháng nhuận: nguồn cổ nêu tháng giêng nhuận an như tháng hai và yêu cầu tháng nhuận khác theo ví dụ này; khác chính sách chia ngày 15 hoặc giữ tháng hiện tại, chưa hòa giải cách an sao đầy đủ. Bản đọc này không xác nhận cách an tháng nhuận theo nguồn đó.',
           ]
         : []),
       'Bản đọc tham khảo theo biểu tượng truyền thống, được tổng hợp bằng quy tắc và nội dung cố định; không phải phản hồi từ AI trực tuyến hoặc chứng nhận của chuyên gia con người.',

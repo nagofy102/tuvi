@@ -1201,8 +1201,29 @@ input::placeholder {
   display: none;
 }
 .prose-page {
+  overflow-wrap: anywhere;
   max-width: 870px;
   padding-block: 65px 85px;
+}
+.knowledge-rule {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+.knowledge-rule > summary {
+  min-height: 48px;
+  padding-block: 0.65rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.knowledge-rule ul {
+  padding-left: 1.2rem;
+}
+.knowledge-rule blockquote {
+  margin-block: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid #455f4e;
 }
 .prose-page h1,
 .converter-page h1,

@@ -19,6 +19,9 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `knowledge-implementation.md`: current v2 reading, source registry, contextual gates and partial-fixture diff.
+- `knowledge-source-review.md`: pinned passages and manual derivations for milestones 2–3.
+
 - `architecture.md`: exact planned source tree, module boundaries, delivery sequence.
 - `data-models.md`: calculation inputs/outputs, catalogs, rule provenance and validation.
 - `schema.sql`: proposed PostgreSQL persistence model; not an applied migration.
@@ -44,6 +47,13 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 - Engine output and AI interpretation are distinct, versioned artifacts.
 
 ## Next action
+
+Latest authorization covers knowledge standardization and deeper contextual readings.
+Bounded implementation: two active auxiliary pairs, Tử Vi with support, Mệnh–Thân,
+four-palace context and why/evidence. Khôi–Việt remains deferred; active syntheses are
+editorial reference, not certified prediction. The 24 partial cases are not complete
+golden charts. Expand independent sources before deferred rules/named formations;
+see `knowledge-implementation.md` and `../test/knowledge-validation.md`.
 
 Review the selected Zi Wei profile against expert-authored Vietnamese chart fixtures before claiming
 school-specific production accuracy. The current v2 engine integrates a Vietnamese calendar seam;

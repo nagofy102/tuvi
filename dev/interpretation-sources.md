@@ -1,5 +1,10 @@
 # Interpretation source research
 
+Milestones 2–3 add a machine-readable passage/rule registry and two active auxiliary
+pairs. See `knowledge-source-review.md` for additional verified excerpts and full
+leap sentence; `knowledge-implementation.md` for actual gates. Khôi–Việt is researched
+but not activated. The earlier source scope below remains historical context.
+
 ## Scope and status
 
 Retrieved and read primary-text passages on 2026-10-13 from Chinese Wikisource.
@@ -17,11 +22,11 @@ classical work public domain. Its opening preface attributes a transmission to
 verified authorship or proof of the system's historical origin. Do not advertise
 this source as a modern accredited textbook or scientific evidence.
 
-| ID | Edition/transcription actually read | Scope |
-| --- | --- | --- |
-| `zwds-qs-v1-stars` | [卷一, 諸星問答論](https://zh.wikisource.org/wiki/紫微斗數全書/卷一#諸星問答論), [revision 7913704](https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704) | All fourteen principal-star question/answer sections; opening and selected contextual passages |
-| `zwds-qs-v1-context` | [卷一, 太微賦](https://zh.wikisource.org/wiki/紫微斗數全書/卷一#太微賦), [增補太微賦](https://zh.wikisource.org/wiki/紫微斗數全書/卷一#增補太微賦) | Palace, dignity and accompanying-star context; warnings against treating good/bad as absolute |
-| `zwds-qs-v2-layout` | [卷二](https://zh.wikisource.org/wiki/紫微斗數全書/卷二), [revision 1963110](https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110) | 安身命例, 安十二宫例, rule sections and star classifications |
+| ID                   | Edition/transcription actually read                                                                                                                                              | Scope                                                                                          |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `zwds-qs-v1-stars`   | [卷一, 諸星問答論](https://zh.wikisource.org/wiki/紫微斗數全書/卷一#諸星問答論), [revision 7913704](https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704) | All fourteen principal-star question/answer sections; opening and selected contextual passages |
+| `zwds-qs-v1-context` | [卷一, 太微賦](https://zh.wikisource.org/wiki/紫微斗數全書/卷一#太微賦), [增補太微賦](https://zh.wikisource.org/wiki/紫微斗數全書/卷一#增補太微賦)                               | Palace, dignity and accompanying-star context; warnings against treating good/bad as absolute  |
+| `zwds-qs-v2-layout`  | [卷二](https://zh.wikisource.org/wiki/紫微斗數全書/卷二), [revision 1963110](https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110)                        | 安身命例, 安十二宫例, rule sections and star classifications                                   |
 
 Wikisource's editorial material is subject to its CC BY-SA terms; public-domain
 classification of the original is not a blanket license for every modern edition,
@@ -37,22 +42,22 @@ are **modern symbolic paraphrases**, not literal translations or factual persona
 assessments. Use conditional phrasing such as “trong hệ biểu tượng truyền thống”.
 The question/answer heading uniquely identifies the exact passage in Volume 1.
 
-| Star | Heading | Brief textual anchor | Permitted modern theme |
-| --- | --- | --- | --- |
-| Tử Vi | 問紫微所主若何？ | 帝座; 無輔弼同行則為孤君 | Điều phối, trách nhiệm; giá trị của sự hỗ trợ |
-| Thiên Cơ | 問天機所主如何？ | 有靈機應變之志 | Suy xét, tìm phương án, thích nghi |
-| Thái Dương | 問太陽所主若何？ | 日之精也; 官祿之樞機 | Sự hiện diện, đóng góp và trách nhiệm công khai |
-| Vũ Khúc | 問武曲星所主為何？ | 財帛宮主; 性剛果決 | Quản lý nguồn lực, quyết đoán, thực hành |
-| Thiên Đồng | 問天同星所主若何？ | 福德宮之主宰; 稟性溫和 | Sự hài hòa, an ổn, nhu cầu nghỉ ngơi |
-| Liêm Trinh | 問廉貞所主若何？ | 司品秩; 司權令 | Quy tắc, trách nhiệm, ranh giới |
-| Thiên Phủ | 問天府所主若何？ | 職掌財帛、田宅; 天府為祿庫 | Gìn giữ, tổ chức và phân bổ nguồn lực |
-| Thái Âm | 問太陰星所主若何？ | 水之精; 為田宅主 | Sự chăm chút, đời sống riêng, nền tảng ổn định |
-| Tham Lang | 問貪狼所主若何？ | 化氣為桃花; 好高吟 | Giao tiếp, mong muốn trải nghiệm; suy ngẫm về giới hạn |
-| Cự Môn | 問巨門所主若何？ | 掌執是非; 口舌 | Lời nói, phân tích vấn đề và làm rõ hiểu lầm |
-| Thiên Tướng | 問天相星所主若何？ | 化氣曰印; 見人難，有惻隱之心 | Hỗ trợ, công bằng, phối hợp |
-| Thiên Lương | 問天梁星所主若何？ | 化氣為蔭; 循直無私 | Bảo trợ, nguyên tắc, kinh nghiệm |
-| Thất Sát | 問七殺星所主若何？ | 斗中之上將 | Tính quyết liệt, tự chủ; cân nhắc trước hành động |
-| Phá Quân | 問破軍所主若何？ | 在數為耗星; 化氣曰耗 | Thay đổi, tái cấu trúc; quản lý hao phí |
+| Star        | Heading            | Brief textual anchor         | Permitted modern theme                                 |
+| ----------- | ------------------ | ---------------------------- | ------------------------------------------------------ |
+| Tử Vi       | 問紫微所主若何？   | 帝座; 無輔弼同行則為孤君     | Điều phối, trách nhiệm; giá trị của sự hỗ trợ          |
+| Thiên Cơ    | 問天機所主如何？   | 有靈機應變之志               | Suy xét, tìm phương án, thích nghi                     |
+| Thái Dương  | 問太陽所主若何？   | 日之精也; 官祿之樞機         | Sự hiện diện, đóng góp và trách nhiệm công khai        |
+| Vũ Khúc     | 問武曲星所主為何？ | 財帛宮主; 性剛果決           | Quản lý nguồn lực, quyết đoán, thực hành               |
+| Thiên Đồng  | 問天同星所主若何？ | 福德宮之主宰; 稟性溫和       | Sự hài hòa, an ổn, nhu cầu nghỉ ngơi                   |
+| Liêm Trinh  | 問廉貞所主若何？   | 司品秩; 司權令               | Quy tắc, trách nhiệm, ranh giới                        |
+| Thiên Phủ   | 問天府所主若何？   | 職掌財帛、田宅; 天府為祿庫   | Gìn giữ, tổ chức và phân bổ nguồn lực                  |
+| Thái Âm     | 問太陰星所主若何？ | 水之精; 為田宅主             | Sự chăm chút, đời sống riêng, nền tảng ổn định         |
+| Tham Lang   | 問貪狼所主若何？   | 化氣為桃花; 好高吟           | Giao tiếp, mong muốn trải nghiệm; suy ngẫm về giới hạn |
+| Cự Môn      | 問巨門所主若何？   | 掌執是非; 口舌               | Lời nói, phân tích vấn đề và làm rõ hiểu lầm           |
+| Thiên Tướng | 問天相星所主若何？ | 化氣曰印; 見人難，有惻隱之心 | Hỗ trợ, công bằng, phối hợp                            |
+| Thiên Lương | 問天梁星所主若何？ | 化氣為蔭; 循直無私           | Bảo trợ, nguyên tắc, kinh nghiệm                       |
+| Thất Sát    | 問七殺星所主若何？ | 斗中之上將                   | Tính quyết liệt, tự chủ; cân nhắc trước hành động      |
+| Phá Quân    | 問破軍所主若何？   | 在數為耗星; 化氣曰耗         | Thay đổi, tái cấu trúc; quản lý hao phí                |
 
 Some modern themes (e.g. “tái cấu trúc”) are editorial reframing of the historical
 symbol, not words actually present in the ancient text. Do not fabricate quotations.

@@ -5,7 +5,8 @@ import { BookOpen } from 'lucide-react';
 import type { ChartResult } from '@/domain/astrology/types';
 import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
-import type { PalaceReading, StarReading } from '@/domain/interpretation/types';
+import type { ContextualInsight, PalaceReading, StarReading } from '@/domain/interpretation/types';
+import { KNOWLEDGE_PROFILE, resolvePassage, resolveRule } from '@/domain/interpretation/knowledge';
 import './interpretation-panel.css';
 
 function SourceLinks({ sourceIds }: { sourceIds: string[] }) {
@@ -30,10 +31,77 @@ function SourceLinks({ sourceIds }: { sourceIds: string[] }) {
   );
 }
 
+function PassageEvidence({ ids }: { ids: string[] }) {
+  return (
+    <ul>
+      {[...new Set(ids)].map((id) => {
+        const passage = resolvePassage(id);
+        return (
+          <li key={id}>
+            <p>
+              {passage.heading} · đoạn {id}
+            </p>
+            <blockquote lang="zh">{passage.excerpt}</blockquote>
+            <p>{passage.reading}</p>
+            <SourceLinks sourceIds={[passage.sourceId]} />
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function InsightEntry({ insight }: { insight: ContextualInsight }) {
+  const rule = resolveRule(insight.ruleId);
+  return (
+    <article className="interpretation-entry interpretation-insight" data-rule-id={rule.id}>
+      <h4>{insight.title}</h4>
+      <p>{insight.text}</p>
+      <details className="interpretation-evidence interpretation-reason">
+        <summary>Vì sao luận như vậy?</summary>
+        <p>{insight.why}</p>
+        <ul>
+          {insight.evidence.map((item, index) => (
+            <li key={`${item.branch}-${index}`}>
+              {item.palace} tại {item.branch} ·{' '}
+              {item.relation === 'direct'
+                ? 'tọa thủ'
+                : item.relation === 'body'
+                  ? 'cung an Thân'
+                  : item.relation === 'trine'
+                    ? 'tam hợp'
+                    : 'đối cung'}
+              :{' '}
+              {item.stars.length
+                ? item.stars
+                    .map(
+                      (s) =>
+                        `${s.name}${s.brightness ? ` (${s.brightness})` : ''}${s.transformation ? ` · ${s.transformation}` : ''}`,
+                    )
+                    .join('; ')
+                : 'không có chính tinh trong dữ kiện đang xét'}
+              .
+            </li>
+          ))}
+        </ul>
+        <p>
+          Quy tắc {rule.id} ·{' '}
+          {rule.status === 'editorial'
+            ? 'kết nối biên tập có nguồn tham chiếu, chưa kiểm chứng dự báo'
+            : 'tham khảo văn bản'}
+          .
+        </p>
+        <p>Giới hạn: {rule.limits}</p>
+        <PassageEvidence ids={insight.passageIds} />
+      </details>
+    </article>
+  );
+}
+
 function StarEntry({ star }: { star: StarReading }) {
   return (
     <article className="interpretation-entry">
-      <h4>{star.name}</h4>
+      <h4>{star.name} · từ điển biểu tượng, không phải kết luận cá nhân</h4>
       <p>
         <span className="interpretation-label">Dữ kiện engine: </span>
         {star.brightness ? `Trạng thái ${star.brightness}` : 'Chưa ghi trạng thái'}
@@ -47,10 +115,14 @@ function StarEntry({ star }: { star: StarReading }) {
         <span className="interpretation-label">Gợi ý tự đối chiếu: </span>
         {star.reflection}
       </p>
-      <div className="interpretation-evidence">
-        <p className="interpretation-label">Căn cứ nội dung</p>
-        <SourceLinks sourceIds={star.sourceIds} />
-      </div>
+      <details className="interpretation-evidence interpretation-reason">
+        <summary>Vì sao có chủ đề này?</summary>
+        <p>
+          Đoạn dưới là căn cứ giải nghĩa thuật ngữ, không đủ để kết luận về bạn từ một sao. Câu hỏi
+          tự đối chiếu là biên tập hiện đại.
+        </p>
+        <PassageEvidence ids={star.passageIds} />
+      </details>
     </article>
   );
 }
@@ -68,6 +140,9 @@ function PalaceDetail({ palace }: { palace: PalaceReading }) {
           <span className="interpretation-label">Câu hỏi suy ngẫm: </span>
           {palace.reflection}
         </p>
+        {palace.insights.map((insight) => (
+          <InsightEntry key={insight.ruleId} insight={insight} />
+        ))}
         {palace.directStars.map((star) => (
           <StarEntry key={star.name} star={star} />
         ))}
@@ -75,7 +150,7 @@ function PalaceDetail({ palace }: { palace: PalaceReading }) {
           <p>
             <span className="interpretation-label">Chưa có nội dung luận giải: </span>
             {palace.uninterpretedStars.join(', ')}. Các sao này vẫn có trong lá số, nhưng bản đọc
-            hiện tại chưa diễn giải ý nghĩa của chúng.
+            hiện tại chưa đủ quy tắc hoặc ngữ cảnh nhóm để diễn giải chúng.
           </p>
         )}
         <div className="interpretation-evidence">
@@ -126,7 +201,7 @@ export function InterpretationPanel({
         <p>
           {isExample
             ? 'Nội dung dưới đây thuộc lá số minh họa. Lập lá số của bạn để xem bản đọc theo dữ kiện đã nhập.'
-            : 'Nội dung dưới đây dựa trên cung và chính tinh trong lá số vừa lập của bạn.'}
+            : 'Nội dung dưới đây dựa trên cung, chính tinh và các nhóm phụ tinh đủ điều kiện trong lá số vừa lập của bạn.'}
         </p>
       </header>
       <div className="interpretation-content">
@@ -140,13 +215,31 @@ export function InterpretationPanel({
           <>
             <div className="interpretation-notice">
               <p>
-                Bản đọc tham khảo theo biểu tượng của 14 chính tinh, chưa thẩm định độc lập. Không
-                dự báo vận hạn hoặc thay thế tư vấn chuyên môn.
+                Bản đọc tham khảo theo biểu tượng của 14 chính tinh và hai nhóm phụ tinh có nguồn,
+                chưa thẩm định độc lập. Không dự báo vận hạn hoặc thay thế tư vấn chuyên môn.
               </p>
               <details>
                 <summary>Phạm vi và khác biệt quy tắc</summary>
                 {report.warnings.map((warning) => (
                   <p key={warning}>{warning}</p>
+                ))}
+                <p>
+                  Hồ sơ kiến thức: {report.knowledgeProfile}. Quy ước đang dùng: giờ Tý{' '}
+                  {chart.provenance.ziPolicy === 'civil_midnight'
+                    ? 'đổi ngày lúc 00:00'
+                    : 'đổi ngày lúc 23:00'}
+                  ; tháng nhuận{' '}
+                  {chart.provenance.leapPolicy === 'split_at_15'
+                    ? 'chia ở ngày 15'
+                    : 'giữ nguyên tháng'}
+                  .
+                </p>
+                <p>{KNOWLEDGE_PROFILE.school}.</p>
+                {KNOWLEDGE_PROFILE.differences.map((item) => (
+                  <p key={item.id}>
+                    {item.status === 'disputed' ? 'Chưa thống nhất' : 'Chưa chốt chuyên môn'}:{' '}
+                    {item.detail}
+                  </p>
                 ))}
               </details>
             </div>
@@ -163,6 +256,9 @@ export function InterpretationPanel({
               {report.summary.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {report.summary.insights.map((insight) => (
+                <InsightEntry key={insight.ruleId} insight={insight} />
+              ))}
             </section>
             <section className="interpretation-section" aria-label="Chi tiết 12 cung">
               <h4>Khám phá 12 cung</h4>
@@ -178,8 +274,9 @@ export function InterpretationPanel({
               <h4>Nguồn &amp; phương pháp</h4>
               <p>
                 Dữ kiện lấy từ engine an sao; lời diễn giải là nội dung biên soạn cố định theo từng
-                chính tinh và ngữ cảnh cung. Nguồn cổ điển dùng để tham khảo biểu tượng, không chứng
-                nhận toàn bộ thuật toán hay mọi quy tắc giờ Tý và tháng nhuận.
+                chính tinh, nhóm phụ tinh và ngữ cảnh cung. Mỗi kết nối công bố dữ kiện, đoạn nguồn
+                và phần biên tập. Nguồn cổ điển dùng để tham khảo biểu tượng, không chứng nhận toàn
+                bộ thuật toán hay mọi quy tắc giờ Tý và tháng nhuận.
               </p>
               <SourceLinks sourceIds={report.sourceIds} />
               <ul>
@@ -190,8 +287,9 @@ export function InterpretationPanel({
                 ))}
               </ul>
               <p className="interpretation-method">
-                Phiên bản nội dung: {report.version}. Cấu hình an sao: {report.profile}. Bản đọc tạo
-                trên thiết bị, không gửi ngày sinh đến dịch vụ AI.
+                Phiên bản nội dung: {report.version}. Hồ sơ kiến thức: {report.knowledgeProfile}.
+                Cấu hình an sao: {report.profile}. Bản đọc tạo trên thiết bị, không gửi ngày sinh
+                đến dịch vụ AI.
               </p>
             </section>
           </>

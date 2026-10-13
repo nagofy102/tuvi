@@ -8,6 +8,23 @@ export interface StarReading extends StarMeaning {
   name: string;
   brightness: string;
   transformation: string;
+  passageIds: string[];
+}
+
+export interface ReadingEvidence {
+  palace: string;
+  branch: string;
+  relation: 'direct' | 'trine' | 'opposition' | 'body';
+  stars: { name: string; brightness: string; transformation: string }[];
+}
+
+export interface ContextualInsight {
+  ruleId: string;
+  title: string;
+  text: string;
+  why: string;
+  passageIds: string[];
+  evidence: ReadingEvidence[];
 }
 
 export interface RelatedPalaceReading {
@@ -27,17 +44,20 @@ export interface PalaceReading {
   uninterpretedStars: string[];
   relatedPalaces: RelatedPalaceReading[];
   sourceIds: string[];
+  insights: ContextualInsight[];
 }
 
 export interface InterpretationReport {
   status: 'ready';
   version: string;
   profile: string;
+  knowledgeProfile: string;
   reviewStatus: 'reference-unvalidated';
   summary: {
     paragraphs: string[];
     facts: { label: string; value: string }[];
     focusPalace: string;
+    insights: ContextualInsight[];
   };
   palaces: PalaceReading[];
   sourceIds: string[];

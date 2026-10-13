@@ -81,6 +81,18 @@
   padding-block: 1rem;
   border-top: 1px solid var(--line);
 }
+.interpretation-reason > summary {
+  min-height: 48px;
+  padding-block: 0.65rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.interpretation-reason blockquote {
+  margin: 0.5rem 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid #455f4e;
+  color: #35493e;
+}
 .interpretation-evidence {
   margin-top: 0.7rem;
   padding: 0.7rem 0.85rem;
@@ -172,6 +184,10 @@
     display: block;
   }
   .interpretation-palace::details-content {
+    display: block;
+    content-visibility: visible;
+  }
+  .interpretation-reason::details-content {
     display: block;
     content-visibility: visible;
   }

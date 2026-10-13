@@ -15,7 +15,23 @@ export const INTERPRETATION_SOURCES: InterpretationSource[] = [
     url: 'https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704#諸星問答論',
     section: 'Quyển I · Chư tinh vấn đáp luận',
     description:
-      'Bản chép Wikisource, revision 7913704. Chủ đề tiếng Việt là diễn đạt biểu tượng hiện đại từ các mục về 14 chính tinh, không phải bản dịch nguyên văn hay dự báo. Văn bản cổ được Wikisource ghi thuộc phạm vi công cộng; phần biên tập website có điều khoản riêng. Chưa đối chiếu bản chụp sách.',
+      'Bản chép Wikisource, revision 7913704. Chủ đề tiếng Việt là diễn đạt biểu tượng hiện đại từ các mục về chính tinh và phụ tinh, không phải bản dịch nguyên văn hay dự báo. Văn bản cổ được Wikisource ghi thuộc phạm vi công cộng; phần biên tập website có điều khoản riêng. Chưa đối chiếu bản chụp sách.',
+  },
+  {
+    id: 'classical-context-vol1',
+    title: 'Tử Vi Đẩu Số Toàn Thư · ngữ cảnh',
+    url: 'https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704#太微賦',
+    section: 'Quyển I · Thái vi phú / Tăng bổ Thái vi phú',
+    description:
+      'Đoạn tham chiếu về việc không luận đồng loạt và không coi cát/hung là tuyệt đối; không phải bằng chứng dự báo.',
+  },
+  {
+    id: 'classical-layout-vol2',
+    title: 'Tử Vi Đẩu Số Toàn Thư · bố cục',
+    url: 'https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110',
+    section: 'Quyển II · An Thân Mệnh / An thập nhị cung',
+    description:
+      'Bản chép revision 1963110; công thức và ví dụ dùng cho đối chiếu từng trường có nguồn, không chứng nhận mọi quy tắc của engine.',
   },
   {
     id: 'editorial-palace-context',

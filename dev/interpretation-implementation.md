@@ -1,5 +1,11 @@
 # Reference interpretation implementation
 
+Current status: this file records the original v1 reading release below. The running
+feature is now `reference-reading-v2` on chart profile v2, with source knowledge,
+two active auxiliary pairs and contextual why/evidence; see
+`knowledge-implementation.md` and `../test/knowledge-validation.md`. Old limitations
+and measurements below are historical, not a claim that the newer groups are absent.
+
 ## Authorization and status
 
 On 2026-10-13 the user authorized AI-assisted domain research and implementation of general

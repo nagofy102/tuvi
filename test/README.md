@@ -17,17 +17,17 @@ dự đoán hoặc độ chính xác theo mọi trường phái Tử Vi Việt N
 Môi trường: Node.js 24.19.0, Next.js 16.4.0, TypeScript 7.0.2, Chromium hệ thống.
 Checkout nền `f1eccda`; các kết quả này được ghi nhận trước khi tạo commit triển khai Bước 2–4.
 
-| Lệnh/kiểm tra | Kết quả thực tế |
-| --- | --- |
-| `npm --cache /tmp/tuvi-npm-cache ci` | Cài lại 213 package từ lockfile thành công |
-| `npm run typecheck` | Pass |
-| `npm test` | 59/59 ca qua, 3 file test |
-| `npm run build` | Pass; 35 trang/tài nguyên prerender, route còn lại render khi cần |
-| `npm run test:e2e` | 8/8 ca qua trên bản production mới |
-| `npm run format:check` và `git diff --check` | Pass |
-| Axe WCAG A/AA landing page | Không có vi phạm tự động phát hiện |
-| Axe enhanced color contrast landing page | Không có vi phạm ngưỡng tương phản chữ AAA tự động phát hiện |
-| Lighthouse mobile giả lập | Performance 95, Accessibility 100, SEO 100 |
+| Lệnh/kiểm tra                                | Kết quả thực tế                                                   |
+| -------------------------------------------- | ----------------------------------------------------------------- |
+| `npm --cache /tmp/tuvi-npm-cache ci`         | Cài lại 213 package từ lockfile thành công                        |
+| `npm run typecheck`                          | Pass                                                              |
+| `npm test`                                   | 59/59 ca qua, 3 file test                                         |
+| `npm run build`                              | Pass; 35 trang/tài nguyên prerender, route còn lại render khi cần |
+| `npm run test:e2e`                           | 8/8 ca qua trên bản production mới                                |
+| `npm run format:check` và `git diff --check` | Pass                                                              |
+| Axe WCAG A/AA landing page                   | Không có vi phạm tự động phát hiện                                |
+| Axe enhanced color contrast landing page     | Không có vi phạm ngưỡng tương phản chữ AAA tự động phát hiện      |
+| Lighthouse mobile giả lập                    | Performance 95, Accessibility 100, SEO 100                        |
 
 Lighthouse 13.5.0 đo ngày 13/10/2026 lúc 12:27 (Asia/Bangkok) trên server production cục bộ,
 cấu hình mobile/network/CPU throttling mặc định. FCP 1.0s, LCP 2.6s, TBT 150ms, CLS 0.
@@ -85,14 +85,14 @@ hoặc đúng thuật toán Tử Vi. Chưa chạy test ứng dụng, lịch âm,
 
 ## Ma trận nghiệm thu
 
-| Giai đoạn | Kiểm tra bắt buộc | Bằng chứng cần lưu |
-| --- | --- | --- |
-| Bước 1 | Liên kết tài liệu, mô hình sao/cung/phiên bản, phạm vi đã làm/chưa làm | Kiểm tra file và diff |
-| Bước 2 | Build/typecheck, form, 12 cung, tooltip bàn phím, mobile, cỡ chữ | Lệnh thực tế, kết quả tương tác và viewport |
-| Bước 3 | Solar/lunar đối chiếu nguồn độc lập, lá số được chuyên gia duyệt | Fixture có nguồn, số ca pass/fail, profile và engine version |
-| Bước 4 | Route SEO, canonical, robots, JSON-LD, OG tiếng Việt | Response thật và kiểm tra ảnh |
-| Persistence | Migration, FK/uniqueness/cascade, giao dịch đủ 12 cung, phân quyền | PostgreSQL integration tests, rollback và migration replay |
-| Production | PWA/export/AI, rate limit, riêng tư, backup, Lighthouse >90 | Kết quả thực đo trên bản build production |
+| Giai đoạn   | Kiểm tra bắt buộc                                                      | Bằng chứng cần lưu                                           |
+| ----------- | ---------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Bước 1      | Liên kết tài liệu, mô hình sao/cung/phiên bản, phạm vi đã làm/chưa làm | Kiểm tra file và diff                                        |
+| Bước 2      | Build/typecheck, form, 12 cung, tooltip bàn phím, mobile, cỡ chữ       | Lệnh thực tế, kết quả tương tác và viewport                  |
+| Bước 3      | Solar/lunar đối chiếu nguồn độc lập, lá số được chuyên gia duyệt       | Fixture có nguồn, số ca pass/fail, profile và engine version |
+| Bước 4      | Route SEO, canonical, robots, JSON-LD, OG tiếng Việt                   | Response thật và kiểm tra ảnh                                |
+| Persistence | Migration, FK/uniqueness/cascade, giao dịch đủ 12 cung, phân quyền     | PostgreSQL integration tests, rollback và migration replay   |
+| Production  | PWA/export/AI, rate limit, riêng tư, backup, Lighthouse >90            | Kết quả thực đo trên bản build production                    |
 
 ## Các ca biên Bước 3
 
@@ -119,6 +119,15 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 - AI lỗi/timeout không làm hỏng lá số; thiếu provider không giả phản hồi từ AI.
 
 ## Handoff
+
+### Mốc 2–3 — kiến thức và luận giải nhóm có căn cứ
+
+Xem `knowledge-validation.md`: 24 ca JSON từng phần với 146 trường có nguồn độc lập
+với engine; không có lá số golden hoàn chỉnh. Unit 139/139 và E2E production 11/11 qua;
+build/typecheck/auto-diff qua. Tả–Hữu/Xương–Khúc và Tử Vi với hỗ trợ có bộ lọc ngữ cảnh,
+Mệnh–Thân/tam phương tứ chính có “Vì sao”. Khôi–Việt và cách cục/vận hạn chưa kích hoạt.
+Mọi nguồn truy về bản sách ghim phiên bản; bất đồng vẫn mở, không coi AI review là thẩm
+định độc lập hoặc khả năng dự báo đã được kiểm chứng. Chưa đo lại Performance.
 
 ### Mốc 1 theo lộ trình PM mới — sửa lịch Việt Nam
 
