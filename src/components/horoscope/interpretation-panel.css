@@ -257,6 +257,170 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* Editorial reading surface: quiet paper for long text, imperial header for orientation. */
+.interpretation-header .reading-chart-anchor {
+  color: #fff5da;
+  font-size: 0.95rem;
+  border: 1px solid #8d7c55;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-block: 16px;
+  background: #17243a;
+}
+.interpretation-panel {
+  border-color: #c5bba7;
+  border-radius: 24px;
+  box-shadow: 0 16px 48px #0f172a0a;
+  scroll-margin-top: 100px;
+}
+.interpretation-panel .interpretation-header {
+  background: radial-gradient(ellipse at top right, #2b3b55, #0f172a 75%);
+  color: #f6f0e3;
+  border-radius: 23px 23px 0 0;
+  padding: clamp(22px, 4vw, 40px);
+}
+.interpretation-panel .interpretation-kicker {
+  color: #e8cc78;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
+}
+.interpretation-panel .interpretation-header h3 {
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+  color: #fff5da;
+}
+.interpretation-panel .reading-subtitle {
+  color: #e3e8f0;
+  font-size: 1rem;
+}
+.interpretation-header .reading-disclaimer {
+  color: #d0d7e3;
+  font-size: 0.8rem;
+  margin-block: 12px;
+}
+.interpretation-header > p:last-child {
+  font-size: 0.9rem;
+  color: #d0d7e3;
+}
+.interpretation-content {
+  max-width: 920px;
+  margin-inline: auto;
+  padding: clamp(18px, 4vw, 36px);
+}
+.interpretation-panel h4 {
+  font-size: 1.15rem;
+}
+.interpretation-panel .reading-theme {
+  border-color: #c5bba7;
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 24px);
+  background: #fffdf9;
+  box-shadow: 0 6px 22px #17243a05;
+}
+.theme-caption {
+  display: flex;
+  justify-content: space-between;
+  color: #644721;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.theme-caption > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.theme-deep > summary {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+.theme-deep > p {
+  line-height: 1.8;
+}
+.reading-exercise {
+  border-left: 3px solid #96703b;
+  padding-left: 14px;
+  margin-top: 16px;
+  background: #f6f1e7;
+  border-radius: 0 10px 10px 0;
+  padding-right: 12px;
+}
+.reading-exercise[open] {
+  padding-bottom: 14px;
+}
+.reading-theme .interpretation-reason {
+  margin-top: 12px;
+  border-top: 1px solid #c5bba7;
+}
+.reading-more > summary {
+  padding: 16px;
+  border: 1px solid #c5bba7;
+  border-radius: 12px;
+  background: #f5f0e6;
+}
+.reading-palace-directory[open] > .interpretation-section {
+  margin: 20px 0;
+}
+.interpretation-palace > summary {
+  background: #fffdf9;
+  border-radius: 10px;
+}
+.interpretation-panel .present-facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.present-facts dt {
+  font-size: 0.8rem;
+}
+.present-facts dd {
+  font-size: 0.9rem;
+}
+.reading-concern select {
+  border: 1px solid #644721;
+  border-radius: 12px;
+  background: #fffdf9;
+}
+@media (max-width: 800px) {
+  .interpretation-panel {
+    border-radius: 18px;
+    margin-top: 20px;
+  }
+  .interpretation-panel .interpretation-header {
+    border-radius: 17px 17px 0 0;
+    padding: 22px 18px;
+  }
+  .interpretation-panel .interpretation-content {
+    padding: 18px;
+  }
+  .interpretation-panel .present-facts {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: 1px solid #c5bba7;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .interpretation-panel .present-facts > div {
+    border: 0;
+    border-bottom: 1px solid #c5bba7;
+    border-radius: 0;
+    padding: 12px;
+  }
+  .interpretation-panel .present-facts > div:last-child {
+    border-bottom: 0;
+  }
+  .theme-deep > summary {
+    font-size: 1.35rem;
+  }
+  .interpretation-panel .interpretation-notice {
+    margin-bottom: 20px;
+    padding: 4px 12px;
+    border-radius: 0 10px 10px 0;
+  }
+  .reading-present > p {
+    font-size: 0.85rem;
+  }
+  .interpretation-palace-body {
+    padding: 14px;
+  }
+}
 @media print {
   .local-profiles {
     display: none;
@@ -265,6 +429,10 @@
   .theme-deep::details-content,
   .reading-more::details-content,
   .reading-exercise::details-content {
+    display: block;
+    content-visibility: visible;
+  }
+  .present-detail::details-content {
     display: block;
     content-visibility: visible;
   }
@@ -277,6 +445,17 @@
   .interpretation-notice,
   .interpretation-evidence {
     background: #fff;
+  }
+  .interpretation-panel .interpretation-header {
+    background: #fff;
+    color: #000;
+  }
+  .interpretation-header .reading-chart-anchor {
+    background: #fff;
+  }
+  .interpretation-panel .interpretation-header p,
+  .interpretation-panel .interpretation-header h3 {
+    color: #000;
   }
   .interpretation-palace {
     break-inside: avoid;

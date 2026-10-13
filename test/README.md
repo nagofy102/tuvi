@@ -120,6 +120,13 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Mobile-first redesign theo khảo sát đối thủ
+
+Xem `mobile-redesign.md` cho kết quả kiểm tra giao diện và regression của bản này;
+nghiên cứu, giới hạn khảo sát và đề xuất kiến thức nằm ở
+`../design/competitor-mobile-review.md`. Không coi khảo sát trang công khai là
+thẩm định nội dung trả phí, hiệu quả giữ chân hoặc độ chính xác thuật toán.
+
 ### Ba ưu tiên PM sau trải nghiệm giả lập
 
 Xem `pm-priorities.md`: 166 unit, 20 E2E qua; mở đầu theo dữ kiện thật, đọc ngắn trước

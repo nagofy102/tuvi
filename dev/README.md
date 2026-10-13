@@ -19,6 +19,9 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `mobile-redesign.md`: mobile result navigation, editorial reading surface and palace chooser;
+  source/calculation rules are unchanged. Research: `../design/competitor-mobile-review.md`.
+
 - `pm-priorities.md`: nội dung v4, hành trình mobile ngắn, xử lý giờ chưa biết và tối đa 10 hồ sơ lưu cục bộ bằng đồng ý rõ ràng; không có đồng bộ tài khoản.
 
 - `ui-content-upgrade.md`: popup/navy-gold, UI sạch nhãn kỹ thuật, chủ đề xuyên cung và dữ kiện hiện tại; không mở dự báo hay Phi Hóa.

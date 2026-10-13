@@ -6,6 +6,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
+  BookOpen,
   CalendarDays,
   ChevronDown,
   Clock3,
@@ -178,15 +179,13 @@ export function LandingExperience({ example }: { example: ChartResult }) {
             TRÍ TUỆ CỔ XƯA · GÓC NHÌN MỚI
           </div>
           <h1 id="hero-title">
-            Hiểu vận mệnh.
+            Lá số của bạn.
             <br />
-            <em>Sống an nhiên.</em>
+            <em>Một góc nhìn riêng.</em>
           </h1>
           <p className="hero-description">
-            Mỗi người là một vũ trụ riêng.
-            <br />
-            Khám phá lá số của bạn, thấu hiểu bản thân và
-            <br className="desktop-break" /> tìm một hướng đi bình tâm hơn.
+            Lập lá số tử vi miễn phí, đọc theo điều bạn quan tâm và khám phá từng cung — ngay trên
+            thiết bị của bạn.
           </p>
           <a href="#birth-name" className="text-link">
             Bắt đầu hành trình của bạn <ArrowUpRight size={20} />
@@ -468,6 +467,28 @@ export function LandingExperience({ example }: { example: ChartResult }) {
         <p className="status-note" role="status" aria-live="polite">
           {notice}
         </p>
+        {!isExample && !partial && readingAvailable && (
+          <nav className="result-navigation" aria-label="Đi nhanh trong kết quả">
+            <a href="#ban-doc">
+              <BookOpen size={18} aria-hidden="true" />
+              Bản đọc của bạn
+            </a>
+            <a
+              href="#ban-do-12-cung"
+              onClick={() => {
+                const chartDetails = document.getElementById('ban-do-12-cung');
+                if (chartDetails instanceof HTMLDetailsElement) chartDetails.open = true;
+              }}
+            >
+              <Compass size={18} aria-hidden="true" />
+              12 cung
+            </a>
+            <a href="#ho-so-da-luu">
+              <LockKeyhole size={18} aria-hidden="true" />
+              Lưu hồ sơ
+            </a>
+          </nav>
+        )}
         {!isExample && !partial && (
           <div className="result-badges">
             <div>
@@ -512,7 +533,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
           </p>
         )}
         {!partial && (
-          <details className="full-chart" open={isExample}>
+          <details id="ban-do-12-cung" className="full-chart" open={isExample}>
             <summary>Xem lá số 12 cung</summary>
             <ChartWidget chart={chart} displayName={chartName} isExample={isExample} />
           </details>

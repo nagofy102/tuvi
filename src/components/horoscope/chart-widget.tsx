@@ -24,6 +24,17 @@ export function ChartWidget({
     if (window.matchMedia('(max-width: 500px)').matches) setView('list');
   }, []);
   const lastStarTrigger = useRef<HTMLButtonElement | null>(null);
+  const insightRef = useRef<HTMLElement | null>(null);
+  function selectPalace(name: string, reveal = false) {
+    setSelected(name);
+    setStar(null);
+    if (reveal && window.matchMedia('(max-width: 800px)').matches) {
+      requestAnimationFrame(() => {
+        insightRef.current?.focus({ preventScroll: true });
+        insightRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' });
+      });
+    }
+  }
   useEffect(() => {
     setSelected('Mệnh');
     setStar(null);
@@ -32,6 +43,26 @@ export function ChartWidget({
   const content = PALACE_CONTENT[palace.name];
   return (
     <div className="chart-layout">
+      <nav className="palace-navigator" aria-label="Chọn cung để khám phá">
+        <div className="palace-navigator-heading">
+          <span className="eyebrow">CHẠM MỘT CUNG · HIỂU TỪNG PHẦN</span>
+          <p>Chọn cung để xem dữ kiện và ý nghĩa, không cần đọc hết lá số.</p>
+        </div>
+        <div className="palace-chips">
+          {chart.palaces.map((p) => (
+            <button
+              type="button"
+              key={p.name}
+              aria-pressed={selected === p.name}
+              aria-label={`Khám phá cung ${p.name}`}
+              onClick={() => selectPalace(p.name, true)}
+            >
+              {p.name}
+              {p.isBodyPalace && <span> · Thân</span>}
+            </button>
+          ))}
+        </div>
+      </nav>
       <div className="chart-sheet">
         <div className="chart-toolbar">
           <span className="label">
@@ -120,8 +151,7 @@ export function ChartWidget({
                     className="palace-name"
                     aria-pressed={selected === p.name}
                     onClick={() => {
-                      setSelected(p.name);
-                      setStar(null);
+                      selectPalace(p.name, true);
                     }}
                   >
                     {p.name}
@@ -182,13 +212,22 @@ export function ChartWidget({
           Chọn tên cung hoặc chính tinh để khám phá. Đại hạn hiển thị theo tuổi mụ.
         </p>
       </div>
-      <aside className="palace-insight" aria-label="Giải thích cung được chọn">
-        <span className="eyebrow">MỘT GÓC NHÌN VỀ BẠN</span>
+      <aside
+        ref={insightRef}
+        tabIndex={-1}
+        className="palace-insight"
+        aria-label="Giải thích cung được chọn"
+      >
+        <span className="eyebrow">TỪNG CUNG TRÊN LÁ SỐ</span>
         <div className="insight-symbol">
           <Sparkles size={28} strokeWidth={1.2} />
         </div>
         <span className="insight-tag">CUNG {palace.name.toLocaleUpperCase('vi')}</span>
         <h3>{content.title}</h3>
+        <p className="selected-palace-facts">
+          {palace.stem} {palace.branch} · Đại hạn {palace.decade.join('–')} tuổi mụ
+          {palace.isBodyPalace ? ' · Nơi an Thân' : ''}
+        </p>
         <p>{content.text}</p>
         <div className="insight-stars">
           <span className="label">CHÍNH TINH TẠI CUNG</span>
@@ -231,6 +270,21 @@ export function ChartWidget({
               </li>
             ))}
           </ul>
+        </details>
+        <details className="chart-glossary">
+          <summary>Hiểu các ký hiệu trong lá số</summary>
+          <p>
+            Vô chính diệu: cung không có chính tinh tọa thủ; cần xem các cung liên hệ, không có
+            nghĩa là thiếu năng lực.
+          </p>
+          <p>
+            Miếu, Vượng, Đắc, Lợi, Bình, Hãm là nhãn phân loại sao theo bảng an sao, không phải điểm
+            tốt/xấu của bạn.
+          </p>
+          <p>
+            Trường Sinh là vòng tên giai đoạn biểu tượng. Những tên như Bệnh hoặc Tử không phải chẩn
+            đoán sức khỏe hay dự đoán tuổi thọ.
+          </p>
         </details>
       </aside>
       {star && (

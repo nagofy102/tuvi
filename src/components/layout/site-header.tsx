@@ -31,6 +31,11 @@ export function SiteHeader() {
             </Link>
           </div>
         </div>
+        <nav className="mobile-primary-nav page-width" aria-label="Công cụ tra cứu trên điện thoại">
+          <Link href="/#lap-la-so">Lập lá số</Link>
+          <Link href="/tu-vi-nam-2026">Tử vi 2026</Link>
+          <Link href="/lich-am-duong">Đổi lịch âm</Link>
+        </nav>
       </header>
     </>
   );

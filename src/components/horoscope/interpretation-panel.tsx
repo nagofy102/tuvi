@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Compass, Heart, Wallet } from 'lucide-react';
 import type { ChartResult } from '@/domain/astrology/types';
 import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
@@ -198,22 +198,29 @@ export function InterpretationPanel({
   const [concern, setConcern] = useState<ReadingConcern>('career');
   const present = presentContext(chart, vietnamToday());
   return (
-    <section className="interpretation-panel" aria-labelledby="interpretation-heading">
+    <section id="ban-doc" className="interpretation-panel" aria-labelledby="interpretation-heading">
       <header className="interpretation-header">
         <p className="interpretation-kicker">
           <BookOpen size={20} aria-hidden="true" />
           ĐỌC VÀ HIỂU LÁ SỐ
         </p>
-        <h3 id="interpretation-heading">Luận giải tổng quát &amp; chi tiết</h3>
+        <h3 id="interpretation-heading">Bản đọc dành cho bạn</h3>
+        <p className="reading-subtitle">Ngắn gọn trước, chi tiết sau.</p>
+        {report.status === 'ready' && (
+          <p className="reading-chart-anchor">
+            Mệnh tại {chart.palaces.find((palace) => palace.name === 'Mệnh')?.branch}
+            {' · '}Thân cư {report.summary.focusPalace}
+          </p>
+        )}
         {isExample && <p className="interpretation-example">Bản đọc lá số minh họa</p>}
         <p className="reading-disclaimer">
           Bản đọc văn hóa tham khảo, chưa thẩm định độc lập; không thay thế tư vấn chuyên môn.
         </p>
-        <p>
-          {isExample
-            ? 'Nội dung dưới đây thuộc lá số minh họa. Lập lá số của bạn để xem bản đọc theo dữ kiện đã nhập.'
-            : 'Nội dung dưới đây dựa trên cung, chính tinh và các nhóm phụ tinh đủ điều kiện trong lá số vừa lập của bạn.'}
-        </p>
+        {isExample && (
+          <p>
+            Nội dung thuộc lá số minh họa. Lập lá số của bạn để xem bản đọc theo dữ kiện đã nhập.
+          </p>
+        )}
       </header>
       <div className="interpretation-content">
         {report.status === 'unavailable' ? (
@@ -255,32 +262,43 @@ export function InterpretationPanel({
               aria-label="Bối cảnh hiện tại"
             >
               <h4>Điểm bắt đầu của bạn</h4>
-              <dl className="present-facts">
-                <div>
-                  <dt>Tuổi mụ (đếm theo năm âm lịch)</dt>
-                  <dd>
-                    {present.age === null
-                      ? 'Ngày sinh ở tương lai'
-                      : `${present.age} tuổi · năm âm lịch ${present.lunarYear}`}
-                  </dd>
-                </div>
-                <div>
-                  <dt>Đại hạn (khoảng tuổi mười năm trong lá số)</dt>
-                  <dd>
+              <details className="present-detail">
+                <summary>
+                  {present.age === null ? 'Chưa xác định tuổi mụ' : `${present.age} tuổi mụ`}
+                  {' · '}Mốc đối chiếu 2026
+                  <span>
                     {present.decade
-                      ? `${present.decade.range.join('–')} tuổi · cung ${present.decade.palace} tại ${present.decade.branch}`
-                      : 'Chưa có khoảng tuổi tương ứng'}
-                  </dd>
-                </div>
-                <div>
-                  <dt>Lưu niên (năm dùng để đối chiếu)</dt>
-                  <dd>2026 · Bính Ngọ</dd>
-                </div>
-              </dl>
-              <p>
-                Khoảng Đại hạn chỉ xác định vị trí theo tuổi, chưa luận tốt/xấu; năm 2026 là mốc đối
-                chiếu, chưa an sao Lưu niên.
-              </p>
+                      ? `Đại hạn ${present.decade.range.join('–')} tuổi · ${present.decade.palace}`
+                      : 'Chưa có khoảng Đại hạn tương ứng'}
+                  </span>
+                </summary>
+                <dl className="present-facts">
+                  <div>
+                    <dt>Tuổi mụ (đếm theo năm âm lịch)</dt>
+                    <dd>
+                      {present.age === null
+                        ? 'Ngày sinh ở tương lai'
+                        : `${present.age} tuổi · năm âm lịch ${present.lunarYear}`}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Đại hạn (khoảng tuổi mười năm trong lá số)</dt>
+                    <dd>
+                      {present.decade
+                        ? `${present.decade.range.join('–')} tuổi · cung ${present.decade.palace} tại ${present.decade.branch}`
+                        : 'Chưa có khoảng tuổi tương ứng'}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Lưu niên (năm dùng để đối chiếu)</dt>
+                    <dd>2026 · Bính Ngọ</dd>
+                  </div>
+                </dl>
+                <p>
+                  Khoảng Đại hạn chỉ xác định vị trí theo tuổi, chưa luận tốt/xấu; năm 2026 là mốc
+                  đối chiếu, chưa an sao Lưu niên.
+                </p>
+              </details>
               <label className="reading-concern">
                 Bạn muốn bắt đầu từ điều gì?
                 <select
@@ -298,8 +316,25 @@ export function InterpretationPanel({
               aria-label="Chủ đề xuyên cung"
             >
               <h4>Ba mạch đọc xuyên cung</h4>
-              {sortThemes(report.themes, concern).map((theme) => (
+              {sortThemes(report.themes, concern).map((theme, index) => (
                 <article className="reading-theme" key={theme.id} data-concern={theme.concern}>
+                  <div className="theme-caption">
+                    <span>
+                      {theme.concern === 'career' ? (
+                        <Compass size={18} aria-hidden="true" />
+                      ) : theme.concern === 'finance' ? (
+                        <Wallet size={18} aria-hidden="true" />
+                      ) : (
+                        <Heart size={18} aria-hidden="true" />
+                      )}
+                      {theme.concern === 'career'
+                        ? 'Sự nghiệp'
+                        : theme.concern === 'finance'
+                          ? 'Tài lộc'
+                          : 'Tình duyên'}
+                    </span>
+                    <span aria-hidden="true">0{index + 1}</span>
+                  </div>
                   <details className="theme-deep" open={theme.concern === concern}>
                     <summary>{theme.title}</summary>
                     {theme.paragraphs.slice(0, 2).map((paragraph) => (
@@ -337,7 +372,7 @@ export function InterpretationPanel({
                 </article>
               ))}
             </section>
-            <details className="reading-more">
+            <details className="reading-more reading-palace-directory">
               <summary>Tra cứu dữ kiện và chi tiết 12 cung</summary>
               <section className="interpretation-section" aria-label="Tổng quan lá số">
                 <h4>Tổng quan của {isExample ? 'lá số minh họa' : 'lá số vừa lập'}</h4>

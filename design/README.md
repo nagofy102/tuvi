@@ -21,6 +21,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `competitor-mobile-review.md`: khảo sát AItuvi/HOROS/Mèo Béo (tuvi.dev trả 403),
+  quyết định UI mobile đã triển khai, key SEO và khoảng trống luận giải chưa code.
+
 - `../dev/pm-priorities.md`: bản đọc ngắn trước lá số, mở đầu theo dữ kiện riêng, giờ chưa biết và hồ sơ cục bộ có đồng ý; xem nghiệm thu tại `../test/pm-priorities.md`.
 
 - `reading-style-policy.md`: ba mạch đọc xuyên cung, chuẩn hành vi tự kiểm chứng và prompt biên tập cục bộ; lá số nay dùng navy/vàng theo yêu cầu mới.
