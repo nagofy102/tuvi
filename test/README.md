@@ -120,6 +120,13 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Tổng hợp biên tập có điều kiện — v5
+
+Xem `reading-synthesis.md` cho tiêu chí và kết quả chạy gói nâng cấp trên nền
+`3c9cc79`. Kế hoạch PM tại `../design/reading-synthesis-plan.md`; triển khai tại
+`../dev/reading-synthesis.md`. Giữ nguyên corpus từng phần, chưa thêm đáp án an sao
+hoàn chỉnh hoặc quy tắc tín hiệu đối nghịch được thẩm định.
+
 ### Mobile-first redesign theo khảo sát đối thủ
 
 Xem `mobile-redesign.md` cho kết quả kiểm tra giao diện và regression của bản này;

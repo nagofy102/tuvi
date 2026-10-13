@@ -21,6 +21,10 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `reading-synthesis-plan.md`: kế hoạch PM được giao quyền triển khai, hợp đồng
+  quy tắc/nhận định, rubric và cổng phát hành; gói tổng hợp biên tập v5 xem
+  `../dev/reading-synthesis.md`. Chưa mở thêm sao hoặc dự báo.
+
 - `competitor-mobile-review.md`: khảo sát AItuvi/HOROS/Mèo Béo (tuvi.dev trả 403),
   quyết định UI mobile đã triển khai, key SEO và khoảng trống luận giải chưa code.
 

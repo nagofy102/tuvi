@@ -2,6 +2,11 @@
 
 ## Phạm vi đã triển khai
 
+Bản v5 giữ bằng chứng theo cung xuất phát, kết hợp bài tập khi cả hai nhóm đã mở
+cùng khớp và bổ sung phần điều kiện thu gọn. Trạng thái chỉ nói khả năng áp dụng
+quy tắc biên tập; chưa có quy tắc đối nghịch được duyệt nên không phát trạng thái
+trái chiều. Xem `../dev/reading-synthesis.md` và `reading-synthesis-plan.md`.
+
 Bản v4 bổ sung mở đầu từ dữ kiện thật của từng nhóm cung và bản đọc ngắn trước biểu đồ;
 chi tiết xem `../dev/pm-priorities.md`. Giờ chưa biết không tạo bản đọc cá nhân theo sao.
 
@@ -48,6 +53,11 @@ tính cách đã được xác nhận.
 `paragraphs`, `selfCheck`, `adjustment`, `palaceNames`, `insights`. Các insight giữ
 nguyên `ruleId`, `passageIds`, `why`, và bằng chứng sao/cung/địa chi. `sortThemes`
 là hàm thuần, không sửa mảng đầu vào.
+
+V5 thêm `claims`: trạng thái áp dụng, điều kiện đã khớp/chưa khớp theo từng cung
+gốc, dữ kiện, nguồn và giới hạn. Thiếu một thành viên được thể hiện trong điều kiện,
+nhưng không thay bài tập thành lời luận bất lợi. Phần này mặc định thu gọn để không
+kéo dài lần đọc đầu trên mobile.
 
 Phần hiện tại chỉ được nêu dữ kiện tuổi mụ, khoảng đại hạn theo engine và năm đang
 xem; không suy ra dự báo năm hay đại hạn khi chưa có quy tắc đối chiếu. Phi Hóa

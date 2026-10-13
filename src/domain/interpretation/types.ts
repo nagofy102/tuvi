@@ -12,6 +12,8 @@ export interface StarReading extends StarMeaning {
 }
 
 export interface ReadingEvidence {
+  /** Palace from which the direct/trine/opposition relation was evaluated. */
+  scopePalace?: string;
   palace: string;
   branch: string;
   relation: 'direct' | 'trine' | 'opposition' | 'body';
@@ -49,6 +51,30 @@ export interface PalaceReading {
 
 export type ReadingConcern = 'career' | 'finance' | 'relationship';
 
+export interface ReadingCondition {
+  id: string;
+  label: string;
+  met: boolean;
+  scopePalace: string;
+}
+
+/** Editorial applicability, never confidence in a prediction or a luck score. */
+export interface ReadingClaim {
+  id: string;
+  ruleId: string;
+  title: string;
+  state: 'supported' | 'mixed' | 'insufficient';
+  text: string;
+  why: string;
+  passageIds: string[];
+  evidence: ReadingEvidence[];
+  conditions: ReadingCondition[];
+  missingPrerequisites: string[];
+  limitations: string[];
+  selfCheck: string;
+  adjustment: string;
+}
+
 export interface ThematicReading {
   id: string;
   concern: ReadingConcern;
@@ -58,6 +84,7 @@ export interface ThematicReading {
   adjustment: string;
   palaceNames: string[];
   insights: ContextualInsight[];
+  claims: ReadingClaim[];
 }
 
 export interface InterpretationReport {

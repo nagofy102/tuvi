@@ -61,15 +61,16 @@ function relationship(index: number): ReadingEvidence['relation'] {
 }
 
 function scopedEvidence(scope: ChartPalace[], required: readonly string[]): ReadingEvidence[] {
-  return scope.map((palace, index) =>
-    evidence(
+  return scope.map((palace, index) => ({
+    ...evidence(
       palace,
       relationship(index),
       palace.stars.filter(
         (star) => star.group === 'major' || required.includes(canonicalStarName(star.name)),
       ),
     ),
-  );
+    scopePalace: scope[0].name,
+  }));
 }
 
 function hasOneOfEach(scope: ChartPalace[], names: readonly string[]): boolean {
@@ -132,6 +133,8 @@ export function readContextualGroups(
     });
   }
   if (
+    resolveRule('ziwei-support-context').status === 'editorial' &&
+    resolveRule('pair-support').status === 'editorial' &&
     origin.stars.some((star) => star.name === 'Tử Vi' && star.group === 'major') &&
     hasOneOfEach(scope, ['Tả Phụ', 'Hữu Bật'])
   ) {

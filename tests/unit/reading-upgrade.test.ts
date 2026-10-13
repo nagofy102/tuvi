@@ -75,7 +75,12 @@ describe('thematic behavioral reading (not personality or prediction validation)
     const menh = input.palaces.find((palace) => palace.name === 'Mệnh')!;
     const scope = fourPalaces(menh, input.palaces);
     scope[0].stars.push(minor('Tả Phù'));
-    expect(readThemes(input.palaces)[0]).toEqual(baseline);
+    const loneMember = readThemes(input.palaces)[0];
+    const { claims: baselineClaims, ...baselineNarrative } = baseline;
+    const { claims: loneClaims, ...loneNarrative } = loneMember;
+    expect(loneNarrative).toEqual(baselineNarrative);
+    expect(loneClaims).not.toEqual(baselineClaims);
+    expect(loneClaims.find((claim) => claim.ruleId === 'pair-support')?.state).toBe('insufficient');
     scope[1].stars.push(minor('Hữu Bật'));
     const matched = readThemes(input.palaces)[0];
     expect(matched.insights.some((insight) => insight.ruleId === 'pair-support')).toBe(true);
@@ -84,7 +89,7 @@ describe('thematic behavioral reading (not personality or prediction validation)
     expect(matched.adjustment).not.toBe(baseline.adjustment);
     expect(matched.adjustment).toContain('người phụ trách');
     scope[1].stars = scope[1].stars.filter((star) => star.name !== 'Hữu Bật');
-    expect(readThemes(input.palaces)[0]).toEqual(baseline);
+    expect(readThemes(input.palaces)[0]).toEqual(loneMember);
   });
 
   it('uses distinct literacy exercises when only that complete group is present', () => {

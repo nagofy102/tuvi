@@ -58,6 +58,7 @@
 .theme-deep > summary,
 .reading-more > summary,
 .reading-exercise > summary,
+.reading-claims > summary,
 .full-chart > summary {
   min-height: 48px;
   padding-block: 0.7rem;
@@ -351,6 +352,26 @@
   margin-top: 12px;
   border-top: 1px solid #c5bba7;
 }
+.reading-claims {
+  margin-top: 12px;
+  border-top: 1px solid #c5bba7;
+}
+.reading-claim {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #c5bba7;
+  border-radius: 12px;
+  background: #fdfbf7;
+  min-width: 0;
+}
+.claim-status {
+  color: #17322e;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.reading-claim[data-claim-state='insufficient'] .claim-status {
+  color: #644721;
+}
 .reading-more > summary {
   padding: 16px;
   border: 1px solid #c5bba7;
@@ -420,6 +441,12 @@
   .interpretation-palace-body {
     padding: 14px;
   }
+  .reading-claim {
+    padding: 12px;
+  }
+  .reading-claim .interpretation-evidence {
+    padding: 8px;
+  }
 }
 @media print {
   .local-profiles {
@@ -429,6 +456,10 @@
   .theme-deep::details-content,
   .reading-more::details-content,
   .reading-exercise::details-content {
+    display: block;
+    content-visibility: visible;
+  }
+  .reading-claims::details-content {
     display: block;
     content-visibility: visible;
   }

@@ -1,7 +1,8 @@
 # Source-bounded knowledge and contextual readings
 
-This records the v2 milestone. The running content is now v4 with the same source
-profile and placement gates; see `pm-priorities.md` for the current opening/short flow
+This records the v2 milestone. The running content is now v5 with the same source
+profile and placement gates; see `reading-synthesis.md` for conditional applicability
+and evidence merging, and `pm-priorities.md` for the opening/short flow
 and `ui-content-upgrade.md` for the preceding v3 UI.
 
 ## Implemented artifacts

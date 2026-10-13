@@ -1,6 +1,7 @@
 import type { ChartPalace } from '../astrology/types';
 import { readContextualGroups, readMenhThan } from './context';
 import { resolveRule } from './knowledge';
+import { buildReadingClaims, mergeContextualInsights } from './claims';
 import type { ContextualInsight, ReadingConcern, ThematicReading } from './types';
 
 const TOPICS = [
@@ -66,27 +67,37 @@ export function readThemes(palaces: ChartPalace[]): ThematicReading[] {
           insight.ruleId.startsWith('pair-') || insight.ruleId === 'ziwei-support-context',
       ),
     );
-    const distinctGroups = relevantGroups.filter(
-      (insight, index) =>
-        relevantGroups.findIndex((item) => item.ruleId === insight.ruleId) === index,
-    );
+    const distinctGroups = mergeContextualInsights(relevantGroups);
     const groupActions = distinctGroups.map((insight) => insight.text);
     const support = distinctGroups.some((insight) => insight.ruleId === 'pair-support');
     const literacy = distinctGroups.some((insight) => insight.ruleId === 'pair-literacy');
-    const selfCheck = support
-      ? `Trong chủ đề ${topic.concern === 'career' ? 'công việc' : topic.concern === 'finance' ? 'tiền bạc' : 'đồng hành'}, chọn một việc bạn vừa tự làm thay phần đã giao cho người khác: thỏa thuận ban đầu có ghi rõ kết quả cần đạt và thời điểm hoàn thành không?`
-      : literacy
-        ? 'Chọn một lần bạn quyết định dựa trên lời nói hoặc tin nhắn: dữ kiện nào đã được ghi lại và kiểm tra từ nguồn đầu tiên? Ghi một điểm hai người đã hiểu khác nhau.'
-        : topic.selfCheck;
-    const adjustment = support
-      ? 'Nếu bạn nhận làm thay vì yêu cầu chưa rõ, viết lại kết quả cần đạt, người phụ trách và mốc báo vướng mắc; để người nhận việc xác nhận trước khi bắt đầu.'
-      : literacy
-        ? 'Nếu trao đổi thiếu ghi chép dẫn đến làm lại, chốt ba dòng: việc cần làm, dữ kiện đã xác nhận và điều còn phải hỏi; gửi người liên quan xác nhận trước khi quyết định.'
-        : topic.adjustment;
+    const selfCheck =
+      support && literacy
+        ? 'Chọn một việc chung vừa quyết định: ai nhận từng phần và hạn hoàn thành đã được xác nhận chưa? Sau đó ghi ba dữ kiện dùng để quyết định, nguồn kiểm tra và một điểm người liên quan đã hiểu khác nhau.'
+        : support
+          ? `Trong chủ đề ${topic.concern === 'career' ? 'công việc' : topic.concern === 'finance' ? 'tiền bạc' : 'đồng hành'}, chọn một việc bạn vừa tự làm thay phần đã giao cho người khác: thỏa thuận ban đầu có ghi rõ kết quả cần đạt và thời điểm hoàn thành không?`
+          : literacy
+            ? 'Chọn một lần bạn quyết định dựa trên lời nói hoặc tin nhắn: dữ kiện nào đã được ghi lại và kiểm tra từ nguồn đầu tiên? Ghi một điểm hai người đã hiểu khác nhau.'
+            : topic.selfCheck;
+    const adjustment =
+      support && literacy
+        ? 'Nếu trách nhiệm hoặc thông tin chưa rõ, lập một ghi chép chung: kết quả cần đạt, người phụ trách, hạn hoàn thành, dữ kiện đã kiểm tra và điều còn phải hỏi; yêu cầu người liên quan xác nhận trước khi bắt đầu, rồi đặt mốc báo vướng mắc.'
+        : support
+          ? 'Nếu bạn nhận làm thay vì yêu cầu chưa rõ, viết lại kết quả cần đạt, người phụ trách và mốc báo vướng mắc; để người nhận việc xác nhận trước khi bắt đầu.'
+          : literacy
+            ? 'Nếu trao đổi thiếu ghi chép dẫn đến làm lại, chốt ba dòng: việc cần làm, dữ kiện đã xác nhận và điều còn phải hỏi; gửi người liên quan xác nhận trước khi quyết định.'
+            : topic.adjustment;
     return {
       id: `theme-${topic.concern}`,
       concern: topic.concern,
-      title: topic.title,
+      title:
+        support && literacy
+          ? 'Phối hợp rõ việc, thống nhất thông tin'
+          : support
+            ? 'Chia rõ trách nhiệm trong việc chung'
+            : literacy
+              ? 'Kiểm tra dữ kiện trước khi quyết định'
+              : topic.title,
       paragraphs: [
         `Trong mạch ${topic.concern === 'career' ? 'công việc' : topic.concern === 'finance' ? 'nguồn lực' : 'đồng hành'}, lá số của bạn có ${topic.names
           .map((name) => {
@@ -105,6 +116,7 @@ export function readThemes(palaces: ChartPalace[]): ThematicReading[] {
       selfCheck,
       adjustment,
       palaceNames: [...topic.names],
+      claims: buildReadingClaims(palaces, topic.names),
       insights: [
         themeContext(palaces, topic.names),
         ...(topic.concern === 'career' || topic.names.some((name) => name === than.name)

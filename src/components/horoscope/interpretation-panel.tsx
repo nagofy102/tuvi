@@ -5,7 +5,12 @@ import { BookOpen, Compass, Heart, Wallet } from 'lucide-react';
 import type { ChartResult } from '@/domain/astrology/types';
 import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
-import type { ContextualInsight, PalaceReading, StarReading } from '@/domain/interpretation/types';
+import type {
+  ContextualInsight,
+  PalaceReading,
+  ReadingClaim,
+  StarReading,
+} from '@/domain/interpretation/types';
 import type { ReadingConcern } from '@/domain/interpretation/types';
 import { presentContext, vietnamToday } from '@/domain/interpretation/present';
 import { sortThemes } from '@/domain/interpretation/themes';
@@ -71,6 +76,7 @@ function InsightEntry({
         <ul>
           {insight.evidence.map((item, index) => (
             <li key={`${item.branch}-${index}`}>
+              {item.scopePalace && `Xét từ ${item.scopePalace}: `}
               {item.palace} tại {item.branch} ·{' '}
               {item.relation === 'direct'
                 ? 'tọa thủ (nằm ngay tại cung)'
@@ -101,6 +107,86 @@ function InsightEntry({
         </p>
         <PassageEvidence ids={insight.passageIds} />
       </Evidence>
+    </article>
+  );
+}
+
+function ClaimEntry({ claim }: { claim: ReadingClaim }) {
+  return (
+    <article className="reading-claim" data-claim-state={claim.state}>
+      <h4>{claim.title}</h4>
+      <p className="claim-status">
+        {claim.state === 'supported'
+          ? 'Đủ điều kiện biên tập'
+          : claim.state === 'mixed'
+            ? 'Cần đối chiếu tín hiệu trái chiều'
+            : 'Chưa đủ điều kiện'}
+      </p>
+      <p>{claim.text}</p>
+      {claim.state !== 'insufficient' && (
+        <>
+          <p>
+            <strong>Tự kiểm chứng: </strong>
+            {claim.selfCheck}
+          </p>
+          <p>
+            <strong>Điều chỉnh: </strong>
+            {claim.adjustment}
+          </p>
+        </>
+      )}
+      <details className="interpretation-evidence interpretation-reason">
+        <summary>Vì sao có đánh giá này?</summary>
+        <p>{claim.why}</p>
+        <h4>Điều kiện đã đối chiếu</h4>
+        <ul>
+          {claim.conditions.map((condition, index) => (
+            <li key={`${condition.id}-${condition.scopePalace}-${index}`}>
+              Xét từ {condition.scopePalace}: {condition.label} —{' '}
+              {condition.met ? 'đã khớp' : 'chưa khớp'}.
+            </li>
+          ))}
+        </ul>
+        {claim.missingPrerequisites.length > 0 && (
+          <>
+            <h4>Điều kiện chưa khớp trong phạm vi đang xét</h4>
+            <ul>
+              {claim.missingPrerequisites.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
+        {claim.evidence.length > 0 && (
+          <>
+            <h4>Dữ kiện làm căn cứ</h4>
+            <ul>
+              {claim.evidence.map((item, index) => (
+                <li key={`${item.scopePalace}-${item.branch}-${index}`}>
+                  {item.scopePalace && `Xét từ ${item.scopePalace}: `}
+                  {item.palace} tại {item.branch} ·{' '}
+                  {item.relation === 'direct'
+                    ? 'tọa thủ (ngay tại cung)'
+                    : item.relation === 'trine'
+                      ? 'tam hợp (cung cùng nhóm liên hệ)'
+                      : item.relation === 'body'
+                        ? 'cung an Thân'
+                        : 'đối cung (cung đối diện)'}
+                  {' — '}
+                  {item.stars.map((star) => star.name).join('; ')}.
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        <h4>Giới hạn của nhận định</h4>
+        <ul>
+          {claim.limitations.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <PassageEvidence ids={claim.passageIds} />
+      </details>
     </article>
   );
 }
@@ -366,6 +452,17 @@ export function InterpretationPanel({
                           insight={insight}
                           expanded
                         />
+                      ))}
+                    </details>
+                    <details className="reading-claims">
+                      <summary>Điều kiện của mạch luận</summary>
+                      <p>
+                        Đối chiếu từng nhóm với dữ kiện thực của các cung liên hệ. Nhiều nhóm cùng
+                        xuất hiện không tự tạo thành tín hiệu trái chiều; nhóm chưa đủ điều kiện
+                        không có nghĩa là bất lợi.
+                      </p>
+                      {theme.claims.map((claim) => (
+                        <ClaimEntry key={claim.id} claim={claim} />
                       ))}
                     </details>
                   </details>

@@ -19,6 +19,9 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `reading-synthesis.md`: v5 đánh giá điều kiện, giữ bằng chứng theo cung gốc và
+  kết hợp hai nhóm đã mở; không giả lập tín hiệu đối nghịch hoặc mở luận vận.
+
 - `mobile-redesign.md`: mobile result navigation, editorial reading surface and palace chooser;
   source/calculation rules are unchanged. Research: `../design/competitor-mobile-review.md`.
 
