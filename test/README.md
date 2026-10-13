@@ -119,6 +119,35 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Luận giải tham khảo — 2026-10-13
+
+- Typecheck và build qua; unit tests 102/102, gồm 31 ca kiểm tra nội dung/cấu trúc luận giải.
+- Chromium E2E 10/10: bản minh họa, đọc theo lá số mới, 12 cung, nguồn, bàn phím và không gửi POST dữ liệu.
+- Đã kiểm tra không giữ luận giải cũ sau nhập lỗi hoặc ngày nhuận engine chưa hỗ trợ.
+- Mobile 320px/cỡ chữ lớn, axe A/AA và tương phản chữ AAA qua; test AAA mở toàn bộ chi tiết luận giải.
+- Có nghiên cứu nguồn cổ và review AI, không có chuyên gia con người hoặc bộ Ground Truth đã thẩm định.
+- Các lần Lighthouse trước tối ưu chưa ổn định (Performance 43/93/72); đã tách tải module
+  luận giải và chỉ mở bản đọc minh họa theo yêu cầu. Kết quả bản cuối được ghi riêng bên dưới.
+- Bản cuối tách tải: Performance 57 rồi 88; Accessibility/SEO 100. Mục tiêu Performance >90
+  chưa được nghiệm thu ổn định; không dùng lần đo 93 trước đó để kết luận bản cuối đạt.
+
+Xem `../dev/interpretation-implementation.md` để biết đầy đủ lệnh, phạm vi, lỗi tương phản
+đã sửa và giới hạn. Luận giải không xác nhận độ chính xác dự báo; lỗi lịch của audit vẫn còn.
+
+### RUN_TECH_AUDIT — 2026-10-13
+
+- Đã chạy quét lịch hàng ngày 1950–2026: 28.124 round-trip qua; 447 ngày 30 không tồn tại bị từ chối đúng.
+- Lịch bên trong engine không biểu diễn/bảo toàn được 85 đầu vào: 60 mất cờ nhuận,
+  22 ngày 30 không có trong tháng tương ứng và 3 lỗi dựng tháng thường trước tháng nhuận.
+- Ma trận lá số có chọn lọc: 11.046 lượt, 9.369 thành công và 1.677 bị từ chối do lịch upstream.
+- Đối chiếu giờ Tý: 4.624 qua, 0 sai khác; 796 không kiểm tra được vì thiếu lá số.
+- `npm test`: 71/71 qua; typecheck, format và diff whitespace qua. Chưa có xác nhận chuyên gia.
+
+Xem `tech-audit.md` để biết phạm vi, phiên bản, phân tích nguyên nhân và cách chạy lại.
+Script không kiểm tra mọi tổ hợp ngày × giờ × giới tính; tỷ lệ thành công kỹ thuật không phải
+độ chính xác chuyên môn. Báo cáo đầy đủ và mã nguồn Markdown được sinh trong
+`test-results/tech-audit/` (ignored); tóm tắt bằng chứng được lưu ở tài liệu này và `tech-audit.md`.
+
 Kế hoạch thẩm định chuyên môn đề xuất được lưu tại `../design/chart-validation-plan.md`.
 Bộ lá số chuẩn 200–300 ca, việc thuê chuyên gia và các mốc nghiệm thu trong kế hoạch chưa
 được triển khai; không coi chúng là bằng chứng pass hiện tại.

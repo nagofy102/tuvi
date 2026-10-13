@@ -11,6 +11,8 @@ Steps 2–4 are implemented as a runnable Next.js application with pinned depend
 `package-lock.json`. The client handles birth input and calculations; server-rendered annual
 pages and server-generated OpenGraph PNGs handle public SEO. PostgreSQL remains a design proposal.
 There is no account storage, AI integration, PWA service worker or database migration yet.
+General/detailed reference interpretation is now implemented locally using sourced fixed rules;
+this is not live AI inference or independent expert sign-off.
 
 ## References
 
@@ -21,9 +23,13 @@ There is no account storage, AI integration, PWA service worker or database migr
 - `font-assets.md`: local font derivatives, licenses and reproducibility.
 - `ai-interpretation-research.md`: researched AI/open-weight options, quality gates and proposed
   interpretation architecture; not an approved implementation or spending decision.
+- `interpretation-implementation.md`: actual local general/detailed reading implementation and checks.
+- `interpretation-sources.md`: researched classical passages, rights, safe scope and source conflicts.
 - `../design/chart-validation-plan.md`: proposed calendar remediation options, expert review
   milestones, responsibilities and release gates; not implemented or signed off.
 - `../test/README.md`: verification status and acceptance gates.
+- `../test/tech-audit.md`: authorized RUN_TECH_AUDIT scope, reproduction and diagnostic findings;
+  no production calculation patch or expert sign-off.
 
 ## Decisions
 
@@ -43,6 +49,13 @@ are separate implementation phases; do not advertise them as available.
 The user requested documenting the retention roadmap and researching high-quality interpretation
 before deciding on further coding. Do not start AI integration or paid experiments from these proposals.
 See `../design/retention-roadmap.md` and `ai-interpretation-research.md` for the pending decisions.
+
+The later RUN_TECH_AUDIT request authorizes the audit scripts and regression checks for
+1950–2026. It does not yet authorize a production engine replacement or fabricated golden charts.
+
+The latest user authorization enables AI-assisted research and a bounded reference-reading feature.
+That feature is implemented; it does not constitute human expert certification, authorization
+to fabricate golden data or selection of a paid external AI provider.
 
 ## Remaining domain decisions
 

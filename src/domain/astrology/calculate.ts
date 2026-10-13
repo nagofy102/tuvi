@@ -4,7 +4,8 @@ import { normalizeDate, dateString, solarToLunar } from '../calendar/convert';
 import { BRANCHES, mod, napAm, timeIndex, yearName } from './sexagenary';
 import type { BirthInput, ChartResult, ChartStar } from './types';
 
-export const RULE_PROFILE = 'iztro-default-vietnamese-lunar-v1';
+import { RULE_PROFILE } from './profile';
+export { RULE_PROFILE } from './profile';
 
 export function calculateChart(input: BirthInput): ChartResult {
   const birth = normalizeDate(input);

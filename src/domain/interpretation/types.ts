@@ -1,0 +1,53 @@
+export interface StarMeaning {
+  theme: string;
+  reflection: string;
+  sourceIds: string[];
+}
+
+export interface StarReading extends StarMeaning {
+  name: string;
+  brightness: string;
+  transformation: string;
+}
+
+export interface RelatedPalaceReading {
+  relation: 'trine' | 'opposition';
+  name: string;
+  branch: string;
+  stars: StarReading[];
+}
+
+export interface PalaceReading {
+  name: string;
+  branch: string;
+  title: string;
+  overview: string;
+  reflection: string;
+  directStars: StarReading[];
+  uninterpretedStars: string[];
+  relatedPalaces: RelatedPalaceReading[];
+  sourceIds: string[];
+}
+
+export interface InterpretationReport {
+  status: 'ready';
+  version: string;
+  profile: string;
+  reviewStatus: 'reference-unvalidated';
+  summary: {
+    paragraphs: string[];
+    facts: { label: string; value: string }[];
+    focusPalace: string;
+  };
+  palaces: PalaceReading[];
+  sourceIds: string[];
+  warnings: string[];
+}
+
+export interface UnavailableInterpretation {
+  status: 'unavailable';
+  reason: 'unsupported-profile' | 'invalid-chart' | 'incomplete-catalog';
+  message: string;
+}
+
+export type InterpretationResult = InterpretationReport | UnavailableInterpretation;

@@ -19,6 +19,7 @@ import {
   Wallet,
 } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { normalizeDate, formatDate } from '@/domain/calendar/convert';
 import { MAX_YEAR, MIN_YEAR, type CalendarInput } from '@/domain/calendar/types';
 import type { BirthInput, ChartResult } from '@/domain/astrology/types';
@@ -26,6 +27,13 @@ import { ChartWidget } from './horoscope/chart-widget';
 import { CelestialWheel } from './ui/celestial-wheel';
 
 const loadMotionFeatures = () => import('./ui/motion-features').then((module) => module.default);
+const InterpretationPanel = dynamic(
+  () => import('./horoscope/interpretation-panel').then((module) => module.InterpretationPanel),
+  {
+    ssr: false,
+    loading: () => <p aria-live="polite">Đang chuẩn bị bản đọc tham khảo trên thiết bị…</p>,
+  },
+);
 
 export function LandingExperience({ example }: { example: ChartResult }) {
   const [name, setName] = useState('');
@@ -44,6 +52,8 @@ export function LandingExperience({ example }: { example: ChartResult }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
+  const [readingAvailable, setReadingAvailable] = useState(true);
+  const [showExampleReading, setShowExampleReading] = useState(false);
   const resultHeading = useRef<HTMLHeadingElement>(null);
   const reducedMotion = useReducedMotion();
   const input = useMemo<CalendarInput>(
@@ -79,6 +89,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
     event.preventDefault();
     setError('');
     setNotice('');
+    setReadingAvailable(false);
     if (converted.error) {
       setError(converted.error);
       return;
@@ -95,6 +106,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
       setChart(result);
       setChartName(name.trim());
       setIsExample(false);
+      setReadingAvailable(true);
       setNotice('Đã lập lá số. Thông tin sinh chỉ được xử lý trên thiết bị của bạn.');
       requestAnimationFrame(() => {
         resultHeading.current?.focus({ preventScroll: true });
@@ -415,6 +427,26 @@ export function LandingExperience({ example }: { example: ChartResult }) {
           </div>
         )}
         <ChartWidget chart={chart} displayName={chartName} isExample={isExample} />
+        {readingAvailable && isExample && !showExampleReading ? (
+          <div className="source-note">
+            <h3>Luận giải tổng quát &amp; chi tiết</h3>
+            <p>Lập lá số để nhận bản đọc tham khảo, hoặc mở bản minh họa để khám phá cách đọc.</p>
+            <button
+              type="button"
+              className="primary-button"
+              onClick={() => setShowExampleReading(true)}
+            >
+              Đọc luận giải lá số minh họa
+            </button>
+          </div>
+        ) : readingAvailable ? (
+          <InterpretationPanel chart={chart} isExample={isExample} />
+        ) : (
+          <p className="source-note">
+            Chưa tạo luận giải cho lần nhập hiện tại. Lá số phía trên là kết quả trước đó hoặc lá số
+            minh họa, không phải kết quả của lần nhập chưa thành công.
+          </p>
+        )}
         <details className="source-note">
           <summary>
             <ShieldCheck size={15} />

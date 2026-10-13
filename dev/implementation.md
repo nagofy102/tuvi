@@ -80,3 +80,11 @@ Restart a manually started server after rebuilding; an old server can reference 
 Not implemented: expert school validation, arbitrary historical timezone/solar-time correction,
 verified annual scoring, AI, auth/saved charts, HD image exports, database persistence, installable PWA
 or deployment. The SQL model is still a proposal. None of these is simulated as a working feature.
+
+## Subsequent reference interpretation feature
+
+General and twelve-palace detailed readings are now generated locally from successfully calculated
+charts, with sourced major-star symbolic themes, factual placement evidence and explicit unvalidated
+status. They are deterministic editorial content, not external AI inference or annual forecasting.
+See `interpretation-implementation.md` and `interpretation-sources.md` for current scope and checks.
+Existing calendar limitations are unchanged; no expert-certified production claim is made.

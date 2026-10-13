@@ -37,6 +37,61 @@ test('rejects impossible input rather than retaining a new successful result', a
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   await expect(page.locator('#form-error')).toContainText('không tồn tại');
   await expect(page.locator('.chart-toolbar')).toContainText('MINH HỌA');
+  await expect(page.locator('.interpretation-panel')).toHaveCount(0);
+});
+
+test('generates sourced reference interpretations and refreshes them for a new chart', async ({
+  page,
+}) => {
+  const transfers: string[] = [];
+  page.on('request', (request) => {
+    if (request.method() === 'POST') transfers.push(request.url());
+  });
+  await page.goto('/');
+  const panel = page.locator('.interpretation-panel');
+  await page.getByRole('button', { name: 'Đọc luận giải lá số minh họa' }).click();
+  await expect(panel).toContainText('Bản đọc lá số minh họa');
+  await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
+  await expect(page.getByRole('status')).toContainText('Đã lập lá số');
+  await expect(panel).not.toContainText('Bản đọc lá số minh họa');
+  await expect(panel.locator('.interpretation-palace')).toHaveCount(12);
+  const before = await panel.locator('.interpretation-facts').innerText();
+  const menh = panel
+    .locator('.interpretation-palace')
+    .filter({ has: page.locator('summary', { hasText: /^Mệnh ·/ }) });
+  await menh.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(menh).toHaveAttribute('open', '');
+  await expect(menh).toContainText('Vũ Khúc');
+  await expect(menh).toContainText('Vì sao có các cung liên hệ?');
+  await expect(menh.locator('a[href*="oldid=7913704"]').first()).toBeVisible();
+  await panel.locator('.interpretation-header').scrollIntoViewIfNeeded();
+  await page.screenshot({ path: 'test-results/interpretation-desktop.png' });
+  await page.getByLabel('Giờ sinh', { exact: true }).fill('00:00');
+  await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
+  await expect(panel.locator('.interpretation-facts')).not.toHaveText(before);
+  await panel.getByText('Phạm vi và khác biệt quy tắc', { exact: true }).click();
+  await expect(panel).toContainText('không phải phản hồi từ AI trực tuyến');
+  expect(transfers).toEqual([]);
+});
+
+test('does not show a stale interpretation after an unsupported leap-month birth', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
+  await expect(page.locator('.interpretation-panel')).toBeVisible();
+  await page.getByRole('button', { name: 'Âm lịch', exact: true }).click();
+  await page.getByLabel('Năm sinh', { exact: true }).fill('1985');
+  await page.getByLabel('Tháng sinh', { exact: true }).selectOption('2');
+  await page.getByLabel('Ngày sinh', { exact: true }).fill('1');
+  await page.getByRole('checkbox', { name: /tháng nhuận/i }).check();
+  await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
+  await expect(page.locator('#form-error')).toContainText('chưa hỗ trợ');
+  await expect(page.locator('.interpretation-panel')).toHaveCount(0);
+  await expect(page.locator('#la-so')).toContainText(
+    'không phải kết quả của lần nhập chưa thành công',
+  );
 });
 
 test('mobile layout, large text and list view stay inside the viewport', async ({ page }) => {
@@ -46,6 +101,12 @@ test('mobile layout, large text and list view stay inside the viewport', async (
   await expect(page.locator('html')).toHaveAttribute('data-text-size', 'large');
   await page.getByRole('button', { name: 'Dạng danh sách dễ đọc' }).click();
   await expect(page.locator('.palace-list .palace-cell')).toHaveCount(12);
+  await page.getByRole('button', { name: 'Đọc luận giải lá số minh họa' }).click();
+  await page
+    .locator('.interpretation-palace')
+    .filter({ has: page.locator('summary', { hasText: /^Mệnh ·/ }) })
+    .locator('summary')
+    .click();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
   expect(overflow).toBe(false);
   await page.screenshot({ path: 'test-results/mobile-home.png', fullPage: true });
@@ -61,6 +122,11 @@ test('landing page has no WCAG A/AA axe violations', async ({ page }) => {
 
 test('landing text meets enhanced AAA contrast thresholds', async ({ page }) => {
   await page.goto('/');
+  await page.getByRole('button', { name: 'Đọc luận giải lá số minh họa' }).click();
+  await expect(page.locator('.interpretation-palace')).toHaveCount(12);
+  await page.locator('.interpretation-panel details').evaluateAll((nodes) => {
+    for (const node of nodes) if (node instanceof HTMLDetailsElement) node.open = true;
+  });
   const report = await new AxeBuilder({ page }).withRules(['color-contrast-enhanced']).analyze();
   expect(report.violations).toEqual([]);
 });

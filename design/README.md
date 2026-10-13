@@ -13,8 +13,11 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
   đổi cỡ chữ, reduced motion, CTA mobile và in qua trình duyệt.
 - Thiết kế giấy lụa, xanh đậm, vàng trầm; bộ font Việt hóa phục vụ từ cùng website.
 - Kiểm tra tương phản và Lighthouse được ghi ở `../test/README.md`.
-- Lộ trình giữ chân đã lưu; chưa được phê duyệt triển khai. Người dùng sẽ quyết định code sau
-  và muốn ưu tiên nghiên cứu luận giải chất lượng cao.
+- Lộ trình giữ chân đã lưu; phần lớn vẫn là đề xuất. Người dùng đã cho phép nghiên cứu AI
+  và triển khai bản luận giải tham khảo tổng quát/chi tiết, chưa thẩm định độc lập.
+- Sau khi lập lá số thành công có bản đọc theo dữ kiện thật, 12 cung mở rộng và nguồn.
+  Lần nhập thất bại ẩn luận giải cũ; bản đọc minh họa có nhãn rõ và mở theo yêu cầu,
+  module luận giải được tải riêng để giảm chi phí lần vào trang đầu.
 
 ## Tài liệu
 
@@ -22,6 +25,8 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 - `retention-roadmap.md`: ưu tiên chức năng, yêu cầu BA, chỉ số và lộ trình đề xuất; chưa triển khai.
 - `chart-validation-plan.md`: phương án xử lý giới hạn lịch, 5 mốc thẩm định an sao và điều kiện nghiệm thu; chưa triển khai.
 - `../dev/ai-interpretation-research.md`: lựa chọn AI/mã nguồn mở và điều kiện chất lượng cho luận giải.
+- `../dev/interpretation-implementation.md`: phạm vi luận giải đã triển khai và kiểm chứng thực tế.
+- `../dev/interpretation-sources.md`: tài liệu cổ đã đọc, chủ đề sao và khác biệt quy tắc.
 - `../dev/architecture.md`: cấu trúc ứng dụng và trách nhiệm từng module.
 
 ## Bước tiếp theo

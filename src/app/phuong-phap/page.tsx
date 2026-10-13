@@ -58,6 +58,38 @@ export default function MethodsPage() {
         vận hạn. Các giải thích về cung là nội dung văn hóa tham khảo; quyết định sức khỏe, tài
         chính và đời sống cần dựa trên thực tế và chuyên môn phù hợp.
       </p>
+      <h2 id="luan-giai">Luận giải tổng quát và chi tiết</h2>
+      <p>
+        Bản đọc tham khảo được tạo trên thiết bị sau khi lập lá số thành công. Tổng quan dùng vị trí
+        Mệnh, Thân, Cục và nạp âm; chi tiết 12 cung giữ nguyên chính tinh, trạng thái sao và Tứ Hóa
+        từ engine. Các sao ở cung tam hợp hoặc đối cung không được chuyển thành sao tọa thủ. Chưa
+        luận phụ tinh, cách cục, đại hạn hoặc lưu niên.
+      </p>
+      <p>
+        Chủ đề biểu tượng của 14 chính tinh được nghiên cứu từ{' '}
+        <a href="https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704#諸星問答論">
+          Tử Vi Đẩu Số Toàn Thư, Quyển I — Chư tinh vấn đáp luận
+        </a>
+        . Tên và thứ tự 12 cung được đối chiếu{' '}
+        <a href="https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110">
+          Quyển II — An thập nhị cung
+        </a>
+        . Đây là bản chép văn bản cổ trên Wikisource, chưa đối chiếu bản chụp sách; không phải giáo
+        trình được kiểm định hiện đại. Văn bản cổ được website ghi thuộc phạm vi công cộng; phần
+        biên tập website có điều khoản riêng.
+      </p>
+      <p>
+        Diễn giải tiếng Việt là nội dung hiện đại do dự án biên soạn với hỗ trợ AI, không phải dịch
+        nguyên văn hoặc phản hồi từ dịch vụ AI trực tuyến. Câu hỏi suy ngẫm là gợi ý biên tập, không
+        phải lời phán có trong sách. Không sử dụng các nhận định định kiến, bệnh tật, tử vong, sinh
+        sản hoặc kết luận chắc chắn về tài sản và quan hệ trong văn bản cổ.
+      </p>
+      <p>
+        Nguồn cổ dùng tháng nhuận theo tháng kế tiếp trong mục An Thân Mệnh, khác chính sách chia
+        ngày 15 hoặc giữ nguyên tháng của engine hiện tại. Nguồn này không xác nhận toàn bộ cấu hình
+        an sao; khác biệt được công bố, không âm thầm đổi ngày sinh. Bản đọc đang ở mức tham khảo
+        nghiên cứu, chưa được thẩm định độc lập và không xác nhận khả năng dự đoán.
+      </p>
     </article>
   );
 }
