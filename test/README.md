@@ -120,6 +120,14 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Nâng cấp UI và văn phong theo chủ đề
+
+Xem `ui-content-upgrade.md` cho bằng chứng popup căn giữa, theme navy/vàng,
+ẩn nhãn kỹ thuật, ba mạch đọc và lựa chọn mối quan tâm. Giữ giới hạn luận hạn/Phi Hóa
+và thẩm định độc lập; không thay engine hoặc dùng output engine làm oracle.
+Kết quả cuối: unit 152/152, E2E production 14/14, build/typecheck/format qua;
+auto-diff 24/24 ca từng phần, 146 trường. Chưa đo lại Lighthouse.
+
 ### Mốc 2–3 — kiến thức và luận giải nhóm có căn cứ
 
 Xem `knowledge-validation.md`: 24 ca JSON từng phần với 146 trường có nguồn độc lập

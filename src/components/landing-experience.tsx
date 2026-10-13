@@ -343,9 +343,8 @@ export function LandingExperience({ example }: { example: ChartResult }) {
                   </select>
                 </label>
                 <p>
-                  Đây là cấu hình tham khảo Zi Wei của iztro, chưa được chuyên gia thẩm định riêng
-                  theo trường phái Việt Nam. Không hỗ trợ điều chỉnh múi giờ lịch sử hoặc giờ mặt
-                  trời thực.
+                  Đây là cấu hình Tử Vi tham khảo, chưa được chuyên gia thẩm định riêng theo trường
+                  phái Việt Nam. Không hỗ trợ điều chỉnh múi giờ lịch sử hoặc giờ mặt trời thực.
                 </p>
               </details>
               {error && (
@@ -453,8 +452,7 @@ export function LandingExperience({ example }: { example: ChartResult }) {
             Nguồn và quy tắc của lá số <ChevronDown size={15} />
           </summary>
           <p>
-            {chart.warnings[0]} Phiên bản: {chart.provenance.engine}, {chart.provenance.calendar}.
-            Tháng nhuận:{' '}
+            Lịch Việt Nam; cấu hình an sao tham khảo. Tháng nhuận:{' '}
             {chart.provenance.leapPolicy === 'split_at_15'
               ? 'chia theo ngày 15'
               : 'giữ nguyên tháng'}

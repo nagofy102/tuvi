@@ -1,5 +1,8 @@
 # Mốc 2–3 — kiến thức và luận giải có căn cứ
 
+Tài liệu ghi mốc v2 đã hoàn thành trước đợt UI/nội dung v3. Chuẩn hiện tại xem
+`reading-style-policy.md` và `../dev/ui-content-upgrade.md`; hồ sơ nguồn/an sao không đổi.
+
 ## Phạm vi được phép
 
 Triển khai tiếp sau bản sửa lịch `45a3884`. Người dùng ủy quyền nghiên cứu AI,

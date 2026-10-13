@@ -1,5 +1,8 @@
 # Source-bounded knowledge and contextual readings
 
+This records the v2 milestone. The running content is now v3 with the same source
+profile and placement gates; see `ui-content-upgrade.md` for thematic copy and UI.
+
 ## Implemented artifacts
 
 - `src/domain/interpretation/knowledge.ts`: knowledge profile, exact excerpts, per-rule

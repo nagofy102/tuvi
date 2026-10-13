@@ -20,9 +20,11 @@ export default function MethodsPage() {
       </h1>
       <h2>Chuyển đổi lịch Việt Nam</h2>
       <p>
-        Hệ thống dùng bảng lịch trong{' '}
-        <a href="https://github.com/cuongdqpayment/dqcai-vn-lunar">@dqcai/vn-lunar 1.0.1</a> (MIT).
-        Chúng tôi đối chiếu các ngày Tết và các mốc khác biệt Việt–Trung, đồng thời kiểm tra lại
+        Hệ thống dùng{' '}
+        <a href="https://github.com/cuongdqpayment/dqcai-vn-lunar">
+          bảng lịch Việt Nam mã nguồn mở
+        </a>
+        . Chúng tôi đối chiếu các ngày Tết và các mốc khác biệt Việt–Trung, đồng thời kiểm tra lại
         ngày khi chuyển ngược để không âm thầm sửa ngày sai hoặc cờ tháng nhuận.
       </p>
       <p>
@@ -31,9 +33,9 @@ export default function MethodsPage() {
       </p>
       <h2>An sao và bố cục 12 cung</h2>
       <p>
-        Bộ tính dùng <a href="https://github.com/SylarLong/iztro">iztro 2.6.2</a> (MIT), cấu hình Zi
-        Wei phổ thông, nhãn tiếng Việt và năm tính từ đầu năm âm lịch. Bản tích hợp riêng của dự án
-        dùng adapter lịch Việt Nam cho ngày, tháng nhuận, độ dài tháng và can chi năm âm lịch. Không
+        Bộ tính dùng <a href="https://github.com/SylarLong/iztro">bộ an sao mã nguồn mở</a>, cấu
+        hình Tử Vi phổ thông, nhãn tiếng Việt và năm tính từ đầu năm âm lịch. Bản tích hợp riêng của
+        dự án dùng lịch Việt Nam cho ngày, tháng nhuận, độ dài tháng và can chi năm âm lịch. Không
         chuyển ngày sinh sang một ngày dương khác chỉ để khớp lịch Trung Quốc. Kết quả không bảo
         toàn dữ kiện ngày sinh vẫn bị từ chối.
       </p>
@@ -69,7 +71,7 @@ export default function MethodsPage() {
       <p>
         Bản đọc tham khảo được tạo trên thiết bị sau khi lập lá số thành công. Tổng quan dùng vị trí
         Mệnh, Thân, Cục và nạp âm; chi tiết 12 cung giữ nguyên chính tinh, trạng thái sao và Tứ Hóa
-        từ engine. Các sao ở cung tam hợp hoặc đối cung không được chuyển thành sao tọa thủ. Chưa
+        từ lá số. Các sao ở cung tam hợp hoặc đối cung không được chuyển thành sao tọa thủ. Chưa
         nhận diện cách cục, đại hạn hoặc lưu niên. Chỉ mở rộng các nhóm Tả Phụ–Hữu Bật và Văn
         Xương–Văn Khúc khi đủ cả cặp cùng ngữ cảnh chính tinh; Khôi–Việt chưa kích hoạt vì cách an
         sao chưa được đối chiếu đầy đủ.
@@ -95,19 +97,18 @@ export default function MethodsPage() {
       </p>
       <p>
         Nguồn cổ dùng tháng nhuận theo tháng kế tiếp trong mục An Thân Mệnh, khác chính sách chia
-        ngày 15 hoặc giữ nguyên tháng của engine hiện tại. Nguồn này không xác nhận toàn bộ cấu hình
-        an sao; khác biệt được công bố, không âm thầm đổi ngày sinh. Bản đọc đang ở mức tham khảo
-        nghiên cứu, chưa được thẩm định độc lập và không xác nhận khả năng dự đoán.
+        ngày 15 hoặc giữ nguyên tháng của công cụ hiện tại. Nguồn này không xác nhận toàn bộ cấu
+        hình an sao; khác biệt được công bố, không âm thầm đổi ngày sinh. Bản đọc đang ở mức tham
+        khảo nghiên cứu, chưa được thẩm định độc lập và không xác nhận khả năng dự đoán.
       </p>
       <h2 id="ho-so-quy-tac">Hồ sơ quy tắc và truy nguồn</h2>
       <p>
-        Hồ sơ {KNOWLEDGE_PROFILE.id}, tách riêng khỏi cấu hình an sao{' '}
-        {KNOWLEDGE_PROFILE.chartProfile}. {KNOWLEDGE_PROFILE.school}. Quy ước mặc định không thay
-        thế lựa chọn giờ Tý/tháng nhuận đã nhập.
+        Nội dung luận giải tách riêng khỏi cấu hình an sao; chưa gán nhãn trường phái Nam Phái hay
+        Bắc Phái. Quy ước mặc định không thay thế lựa chọn giờ Tý/tháng nhuận đã nhập.
       </p>
       <p>
         Đối chiếu hiện có 24 ca từng phần được đếm từ đoạn sách ghim phiên bản, 146 trường
-        Mệnh/Thân, Tả–Hữu, Xương–Khúc và một ví dụ Cục/Tử Vi. Không lấy kết quả engine làm đáp án.
+        Mệnh/Thân, Tả–Hữu, Xương–Khúc và một ví dụ Cục/Tử Vi. Không lấy kết quả bộ tính làm đáp án.
         Những trường chưa có nguồn không được tính là đã kiểm chứng; đây không phải 24 lá số chuẩn
         hoàn chỉnh.
       </p>
@@ -119,13 +120,13 @@ export default function MethodsPage() {
       {KNOWLEDGE_PROFILE.differences.map((difference) => (
         <p key={difference.id}>
           {difference.status === 'disputed' ? 'Chưa thống nhất' : 'Chưa chốt chuyên môn'}:{' '}
-          {difference.detail}
+          {difference.detail.replace('iztro', 'bộ an sao')}
         </p>
       ))}
       {KNOWLEDGE_RULES.map((rule) => (
         <details key={rule.id} className="knowledge-rule">
           <summary>
-            {rule.id} ·{' '}
+            {rule.interpretation} ·{' '}
             {rule.status === 'disputed'
               ? 'chưa thống nhất'
               : rule.status === 'deferred'
@@ -142,9 +143,7 @@ export default function MethodsPage() {
               const source = INTERPRETATION_SOURCES.find((item) => item.id === passage.sourceId)!;
               return (
                 <li key={id}>
-                  <p>
-                    {passage.heading} · {id}
-                  </p>
+                  <p>{passage.heading}</p>
                   <blockquote lang="zh">{passage.excerpt}</blockquote>
                   <p>{passage.reading}</p>
                   <a href={source.url} target="_blank" rel="noopener noreferrer">

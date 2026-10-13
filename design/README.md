@@ -21,6 +21,8 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `reading-style-policy.md`: ba mạch đọc xuyên cung, chuẩn hành vi tự kiểm chứng và prompt biên tập cục bộ; lá số nay dùng navy/vàng theo yêu cầu mới.
+
 - `interpretation-milestones.md`: mốc 2–3 có giới hạn, hồ sơ nguồn và nhóm chờ kích hoạt.
 
 - `product-spec.md`: trải nghiệm, màu sắc, khả năng tiếp cận và tiêu chí sản phẩm.

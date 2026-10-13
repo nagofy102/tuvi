@@ -1,11 +1,14 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { BookOpen } from 'lucide-react';
 import type { ChartResult } from '@/domain/astrology/types';
 import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
 import type { ContextualInsight, PalaceReading, StarReading } from '@/domain/interpretation/types';
+import type { ReadingConcern } from '@/domain/interpretation/types';
+import { presentContext, vietnamToday } from '@/domain/interpretation/present';
+import { sortThemes } from '@/domain/interpretation/themes';
 import { KNOWLEDGE_PROFILE, resolvePassage, resolveRule } from '@/domain/interpretation/knowledge';
 import './interpretation-panel.css';
 
@@ -38,9 +41,7 @@ function PassageEvidence({ ids }: { ids: string[] }) {
         const passage = resolvePassage(id);
         return (
           <li key={id}>
-            <p>
-              {passage.heading} · đoạn {id}
-            </p>
+            <p>{passage.heading}</p>
             <blockquote lang="zh">{passage.excerpt}</blockquote>
             <p>{passage.reading}</p>
             <SourceLinks sourceIds={[passage.sourceId]} />
@@ -65,12 +66,12 @@ function InsightEntry({ insight }: { insight: ContextualInsight }) {
             <li key={`${item.branch}-${index}`}>
               {item.palace} tại {item.branch} ·{' '}
               {item.relation === 'direct'
-                ? 'tọa thủ'
+                ? 'tọa thủ (nằm ngay tại cung)'
                 : item.relation === 'body'
                   ? 'cung an Thân'
                   : item.relation === 'trine'
-                    ? 'tam hợp'
-                    : 'đối cung'}
+                    ? 'tam hợp (hai cung cùng nhóm liên hệ)'
+                    : 'đối cung (cung đối diện)'}
               :{' '}
               {item.stars.length
                 ? item.stars
@@ -85,13 +86,12 @@ function InsightEntry({ insight }: { insight: ContextualInsight }) {
           ))}
         </ul>
         <p>
-          Quy tắc {rule.id} ·{' '}
+          Căn cứ:{' '}
           {rule.status === 'editorial'
             ? 'kết nối biên tập có nguồn tham chiếu, chưa kiểm chứng dự báo'
             : 'tham khảo văn bản'}
           .
         </p>
-        <p>Giới hạn: {rule.limits}</p>
         <PassageEvidence ids={insight.passageIds} />
       </details>
     </article>
@@ -101,9 +101,9 @@ function InsightEntry({ insight }: { insight: ContextualInsight }) {
 function StarEntry({ star }: { star: StarReading }) {
   return (
     <article className="interpretation-entry">
-      <h4>{star.name} · từ điển biểu tượng, không phải kết luận cá nhân</h4>
+      <h4>{star.name} · từ điển biểu tượng</h4>
       <p>
-        <span className="interpretation-label">Dữ kiện engine: </span>
+        <span className="interpretation-label">Dữ kiện lá số: </span>
         {star.brightness ? `Trạng thái ${star.brightness}` : 'Chưa ghi trạng thái'}
         {star.transformation ? ` · ${star.transformation}` : ''}.
       </p>
@@ -188,6 +188,8 @@ export function InterpretationPanel({
   isExample: boolean;
 }) {
   const report = useMemo(() => calculateInterpretation(chart), [chart]);
+  const [concern, setConcern] = useState<ReadingConcern>('career');
+  const present = presentContext(chart, vietnamToday());
   return (
     <section className="interpretation-panel" aria-labelledby="interpretation-heading">
       <header className="interpretation-header">
@@ -197,7 +199,9 @@ export function InterpretationPanel({
         </p>
         <h3 id="interpretation-heading">Luận giải tổng quát &amp; chi tiết</h3>
         {isExample && <p className="interpretation-example">Bản đọc lá số minh họa</p>}
-        <p>Luận giải tham khảo · nghiên cứu AI, chưa thẩm định độc lập</p>
+        <p className="reading-disclaimer">
+          Bản đọc văn hóa tham khảo, chưa thẩm định độc lập; không thay thế tư vấn chuyên môn.
+        </p>
         <p>
           {isExample
             ? 'Nội dung dưới đây thuộc lá số minh họa. Lập lá số của bạn để xem bản đọc theo dữ kiện đã nhập.'
@@ -214,17 +218,14 @@ export function InterpretationPanel({
         ) : (
           <>
             <div className="interpretation-notice">
-              <p>
-                Bản đọc tham khảo theo biểu tượng của 14 chính tinh và hai nhóm phụ tinh có nguồn,
-                chưa thẩm định độc lập. Không dự báo vận hạn hoặc thay thế tư vấn chuyên môn.
-              </p>
               <details>
                 <summary>Phạm vi và khác biệt quy tắc</summary>
-                {report.warnings.map((warning) => (
-                  <p key={warning}>{warning}</p>
-                ))}
                 <p>
-                  Hồ sơ kiến thức: {report.knowledgeProfile}. Quy ước đang dùng: giờ Tý{' '}
+                  Nội dung được biên soạn tại dự án, không phải phản hồi từ AI trực tuyến. Chỉ diễn
+                  giải các nhóm có nguồn; chưa mở cách cục, Phi Hóa hoặc dự báo theo năm.
+                </p>
+                <p>
+                  Quy ước đang dùng: giờ Tý{' '}
                   {chart.provenance.ziPolicy === 'civil_midnight'
                     ? 'đổi ngày lúc 00:00'
                     : 'đổi ngày lúc 23:00'}
@@ -234,15 +235,89 @@ export function InterpretationPanel({
                     : 'giữ nguyên tháng'}
                   .
                 </p>
-                <p>{KNOWLEDGE_PROFILE.school}.</p>
                 {KNOWLEDGE_PROFILE.differences.map((item) => (
                   <p key={item.id}>
                     {item.status === 'disputed' ? 'Chưa thống nhất' : 'Chưa chốt chuyên môn'}:{' '}
-                    {item.detail}
+                    {item.detail.replace('iztro', 'bộ an sao')}
                   </p>
                 ))}
               </details>
             </div>
+            <section
+              className="interpretation-section reading-present"
+              aria-label="Bối cảnh hiện tại"
+            >
+              <h4>Điểm bắt đầu của bạn</h4>
+              <dl className="present-facts">
+                <div>
+                  <dt>Tuổi mụ (đếm theo năm âm lịch)</dt>
+                  <dd>
+                    {present.age === null
+                      ? 'Ngày sinh ở tương lai'
+                      : `${present.age} tuổi · năm âm lịch ${present.lunarYear}`}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Đại hạn (khoảng tuổi mười năm trong lá số)</dt>
+                  <dd>
+                    {present.decade
+                      ? `${present.decade.range.join('–')} tuổi · cung ${present.decade.palace} tại ${present.decade.branch}`
+                      : 'Chưa có khoảng tuổi tương ứng'}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Lưu niên (năm dùng để đối chiếu)</dt>
+                  <dd>2026 · Bính Ngọ</dd>
+                </div>
+              </dl>
+              <p>
+                Khoảng Đại hạn chỉ xác định vị trí theo tuổi, chưa luận tốt/xấu; năm 2026 là mốc đối
+                chiếu, chưa an sao Lưu niên.
+              </p>
+              <label className="reading-concern">
+                Bạn muốn bắt đầu từ điều gì?
+                <select
+                  value={concern}
+                  onChange={(event) => setConcern(event.target.value as ReadingConcern)}
+                >
+                  <option value="career">Sự nghiệp</option>
+                  <option value="finance">Tài lộc</option>
+                  <option value="relationship">Tình duyên</option>
+                </select>
+              </label>
+            </section>
+            <section
+              className="interpretation-section reading-themes"
+              aria-label="Chủ đề xuyên cung"
+            >
+              <h4>Ba mạch đọc xuyên cung</h4>
+              {sortThemes(report.themes, concern).map((theme) => (
+                <article className="reading-theme" key={theme.id} data-concern={theme.concern}>
+                  <h4>{theme.title}</h4>
+                  {theme.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                  <p>
+                    <strong>Tự kiểm chứng: </strong>
+                    {theme.selfCheck}
+                  </p>
+                  <p>
+                    <strong>Điều chỉnh: </strong>
+                    {theme.adjustment}
+                  </p>
+                  <details className="interpretation-reason">
+                    <summary>Vì sao luận như vậy?</summary>
+                    <p>
+                      Các cung đối chiếu: {theme.palaceNames.join(' – ')}. Chỉ những nhóm đủ điều
+                      kiện trong lá số này mới xuất hiện dưới đây.
+                    </p>
+                    {theme.insights.map((insight, index) => (
+                      <InsightEntry key={`${insight.ruleId}-${index}`} insight={insight} />
+                    ))}
+                  </details>
+                </article>
+              ))}
+            </section>
             <section className="interpretation-section" aria-label="Tổng quan lá số">
               <h4>Tổng quan của {isExample ? 'lá số minh họa' : 'lá số vừa lập'}</h4>
               <dl className="interpretation-facts">
@@ -253,9 +328,6 @@ export function InterpretationPanel({
                   </div>
                 ))}
               </dl>
-              {report.summary.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
               {report.summary.insights.map((insight) => (
                 <InsightEntry key={insight.ruleId} insight={insight} />
               ))}
@@ -263,8 +335,15 @@ export function InterpretationPanel({
             <section className="interpretation-section" aria-label="Chi tiết 12 cung">
               <h4>Khám phá 12 cung</h4>
               <p>
-                Chọn một cung để đọc dữ kiện, ý nghĩa biểu tượng và căn cứ. Có thể bắt đầu với cung
-                Mệnh và cung {report.summary.focusPalace}, nơi an Thân.
+                Chính tinh (nhóm sao chính), phụ tinh (nhóm sao bổ trợ) và trạng thái
+                Miếu/Vượng/Đắc/Bình/Hãm (mức phân loại biểu tượng trong bảng an sao) được giữ làm dữ
+                kiện. Tứ Hóa (bốn biến hóa biểu tượng) gồm Hóa Lộc (nguồn lực), Hóa Quyền (quyền chủ
+                động), Hóa Khoa (học hỏi, danh tiếng) và Hóa Kỵ (điểm cần rà soát); chưa dùng chúng
+                để phán kết quả.
+              </p>
+              <p>
+                Chọn một cung để xem thêm bằng chứng. Bắt đầu với cung Mệnh và cung{' '}
+                {report.summary.focusPalace}, nơi an Thân.
               </p>
               {report.palaces.map((palace) => (
                 <PalaceDetail key={palace.name} palace={palace} />
@@ -273,10 +352,10 @@ export function InterpretationPanel({
             <section className="interpretation-sources" aria-label="Nguồn và phương pháp">
               <h4>Nguồn &amp; phương pháp</h4>
               <p>
-                Dữ kiện lấy từ engine an sao; lời diễn giải là nội dung biên soạn cố định theo từng
-                chính tinh, nhóm phụ tinh và ngữ cảnh cung. Mỗi kết nối công bố dữ kiện, đoạn nguồn
-                và phần biên tập. Nguồn cổ điển dùng để tham khảo biểu tượng, không chứng nhận toàn
-                bộ thuật toán hay mọi quy tắc giờ Tý và tháng nhuận.
+                Dữ kiện lấy từ lá số; lời diễn giải là nội dung biên soạn theo từng chính tinh, nhóm
+                phụ tinh và ngữ cảnh cung. Mỗi kết nối công bố dữ kiện, đoạn nguồn và phần biên tập.
+                Nguồn cổ điển dùng để tham khảo biểu tượng, không chứng nhận toàn bộ thuật toán hay
+                mọi quy tắc giờ Tý và tháng nhuận.
               </p>
               <SourceLinks sourceIds={report.sourceIds} />
               <ul>
@@ -287,9 +366,7 @@ export function InterpretationPanel({
                 ))}
               </ul>
               <p className="interpretation-method">
-                Phiên bản nội dung: {report.version}. Hồ sơ kiến thức: {report.knowledgeProfile}.
-                Cấu hình an sao: {report.profile}. Bản đọc tạo trên thiết bị, không gửi ngày sinh
-                đến dịch vụ AI.
+                Bản đọc tạo trên thiết bị; ngày sinh không được gửi đến dịch vụ AI.
               </p>
             </section>
           </>

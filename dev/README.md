@@ -19,6 +19,8 @@ attempts; see `../test/calendar-remediation.md`. These are not expert accuracy m
 
 ## References
 
+- `ui-content-upgrade.md`: popup/navy-gold, UI sạch nhãn kỹ thuật, chủ đề xuyên cung và dữ kiện hiện tại; không mở dự báo hay Phi Hóa.
+
 - `knowledge-implementation.md`: current v2 reading, source registry, contextual gates and partial-fixture diff.
 - `knowledge-source-review.md`: pinned passages and manual derivations for milestones 2–3.
 

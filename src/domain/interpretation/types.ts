@@ -47,6 +47,19 @@ export interface PalaceReading {
   insights: ContextualInsight[];
 }
 
+export type ReadingConcern = 'career' | 'finance' | 'relationship';
+
+export interface ThematicReading {
+  id: string;
+  concern: ReadingConcern;
+  title: string;
+  paragraphs: string[];
+  selfCheck: string;
+  adjustment: string;
+  palaceNames: string[];
+  insights: ContextualInsight[];
+}
+
 export interface InterpretationReport {
   status: 'ready';
   version: string;
@@ -60,6 +73,7 @@ export interface InterpretationReport {
     insights: ContextualInsight[];
   };
   palaces: PalaceReading[];
+  themes: ThematicReading[];
   sourceIds: string[];
   warnings: string[];
 }

@@ -15,7 +15,7 @@ export const INTERPRETATION_SOURCES: InterpretationSource[] = [
     url: 'https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704#諸星問答論',
     section: 'Quyển I · Chư tinh vấn đáp luận',
     description:
-      'Bản chép Wikisource, revision 7913704. Chủ đề tiếng Việt là diễn đạt biểu tượng hiện đại từ các mục về chính tinh và phụ tinh, không phải bản dịch nguyên văn hay dự báo. Văn bản cổ được Wikisource ghi thuộc phạm vi công cộng; phần biên tập website có điều khoản riêng. Chưa đối chiếu bản chụp sách.',
+      'Bản chép Wikisource. Chủ đề tiếng Việt được dự án biên soạn từ các mục về chính tinh và phụ tinh. Văn bản cổ thuộc phạm vi công cộng; phần biên tập website có điều khoản riêng. Chưa đối chiếu bản chụp sách.',
   },
   {
     id: 'classical-context-vol1',
@@ -31,7 +31,7 @@ export const INTERPRETATION_SOURCES: InterpretationSource[] = [
     url: 'https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110',
     section: 'Quyển II · An Thân Mệnh / An thập nhị cung',
     description:
-      'Bản chép revision 1963110; công thức và ví dụ dùng cho đối chiếu từng trường có nguồn, không chứng nhận mọi quy tắc của engine.',
+      'Bản chép Wikisource; công thức và ví dụ dùng cho đối chiếu từng dữ kiện có nguồn. Các quy tắc an sao khác vẫn cần đối chiếu riêng.',
   },
   {
     id: 'editorial-palace-context',
@@ -47,7 +47,7 @@ export const INTERPRETATION_SOURCES: InterpretationSource[] = [
     url: '/phuong-phap#luan-giai',
     section: 'Tọa thủ, tam hợp và đối cung',
     description:
-      'Vị trí cung/sao lấy nguyên từ engine. Các địa chi cách 4/8 vị trí là hai cung tam hợp, cách 6 là đối cung. Đây là phép xác định quan hệ vị trí, không phải quy tắc kết luận tốt/xấu hoặc xác nhận an sao.',
+      'Vị trí cung và sao lấy nguyên từ kết quả an sao. Các địa chi cách 4 hoặc 8 vị trí là hai cung tam hợp (cung liên hệ theo nhóm địa chi), cách 6 là đối cung (cung đối diện). Đây là cách xác định quan hệ vị trí, không quy đổi thành tốt hoặc xấu.',
   },
 ];
 
@@ -58,90 +58,88 @@ export const PALACE_SOURCE_IDS = ['editorial-palace-context'];
 export const STAR_CATALOG: Record<string, StarMeaning> = {
   'Tử Vi': {
     theme:
-      'Trong hệ biểu tượng truyền thống, Tử Vi gợi vai trò điều phối, trách nhiệm và giá trị của sự hỗ trợ; không đồng nghĩa bạn chắc chắn có địa vị.',
+      'Tử Vi gợi vai trò điều phối, trách nhiệm và giá trị của sự hỗ trợ trong hệ biểu tượng truyền thống.',
     reflection:
-      'Bạn đang nhận trách nhiệm nào, và có thể tìm sự hỗ trợ từ ai thay vì tự gánh mọi việc?',
+      'Liệt kê một việc bạn đang tự làm hết, chọn phần cần giao lại và thống nhất tiêu chí hoàn tất với người nhận.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thiên Cơ': {
     theme: 'Thiên Cơ gợi cách suy xét, tìm phương án và thích nghi khi hoàn cảnh thay đổi.',
-    reflection: 'Bạn có thể thử một phương án nhỏ nào trước khi đổi toàn bộ kế hoạch?',
+    reflection:
+      'Chọn một thay đổi nhỏ trong kế hoạch, thử trong một tuần rồi ghi điều gì tốt hơn và điều gì phải sửa.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thái Dương': {
-    theme:
-      'Thái Dương gợi sự hiện diện, đóng góp và trách nhiệm công khai; không dùng sao này để gán vai trò theo giới tính.',
+    theme: 'Thái Dương gợi sự hiện diện, đóng góp và trách nhiệm công khai.',
     reflection:
-      'Bạn muốn đóng góp điều gì, và cần ranh giới nào để không nhận quá nhiều trách nhiệm?',
+      'Trước khi nhận một trách nhiệm chung, nói rõ phần bạn phụ trách và giới hạn thời gian bạn dành được.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Vũ Khúc': {
-    theme:
-      'Vũ Khúc gợi quản lý nguồn lực, sự quyết đoán và chú trọng thực hành; không dự đoán thu nhập hay lợi nhuận.',
+    theme: 'Vũ Khúc gợi quản lý nguồn lực, sự quyết đoán và chú trọng thực hành.',
     reflection:
-      'Quyết định nào cần số liệu, kế hoạch dự phòng và thời gian cân nhắc trước khi thực hiện?',
+      'Trước một khoản chi lớn, ghi tổng chi phí, phần tiền còn lại và một phương án giảm quy mô nếu vượt ngân sách.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thiên Đồng': {
-    theme:
-      'Thiên Đồng gợi sự hài hòa, an ổn và nhu cầu nghỉ ngơi; đây không phải kết luận về tính cách cố định.',
-    reflection: 'Bạn có thể cân bằng sự dễ chịu trước mắt với trách nhiệm dài hạn như thế nào?',
+    theme: 'Thiên Đồng gợi sự hài hòa, an ổn và nhu cầu nghỉ ngơi.',
+    reflection:
+      'Xếp một khoảng nghỉ vào lịch tuần, đồng thời chốt một đầu việc cần hoàn thành trước khoảng nghỉ đó.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Liêm Trinh': {
-    theme:
-      'Liêm Trinh được đọc ở đây như biểu tượng của quy tắc, trách nhiệm và ranh giới; không dùng để phán phẩm chất đạo đức.',
-    reflection: 'Ranh giới hoặc thỏa thuận nào cần được nói rõ và áp dụng công bằng?',
+    theme: 'Liêm Trinh gợi quy tắc, trách nhiệm và ranh giới.',
+    reflection:
+      'Chọn một thỏa thuận đang hiểu khác nhau, ghi lại trách nhiệm mỗi bên rồi cùng xác nhận trước khi tiếp tục.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thiên Phủ': {
-    theme:
-      'Thiên Phủ gợi gìn giữ, tổ chức và phân bổ nguồn lực; không cam kết sở hữu tài sản hoặc sự sung túc.',
-    reflection: 'Nguồn lực nào cần bảo toàn, và phần nào nên dành cho nhu cầu thực tế trước mắt?',
+    theme: 'Thiên Phủ gợi gìn giữ, tổ chức và phân bổ nguồn lực.',
+    reflection:
+      'Tách khoản dành cho nhu cầu thiết yếu trước khi phân bổ phần còn lại cho một kế hoạch mới.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thái Âm': {
-    theme:
-      'Thái Âm gợi sự chăm chút, đời sống riêng và nền tảng ổn định; không suy luận về người thân hoặc giới tính.',
-    reflection: 'Điều gì giúp không gian sống và đời sống riêng của bạn trở nên ổn định hơn?',
+    theme: 'Thái Âm gợi sự chăm chút, đời sống riêng và nền tảng ổn định.',
+    reflection:
+      'Chọn một chỗ trong nhà đang gây bất tiện và một việc nhỏ bạn sắp xếp lại được trong tuần này.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Tham Lang': {
-    theme:
-      'Tham Lang gợi giao tiếp và mong muốn trải nghiệm, đi cùng câu hỏi về giới hạn; không kết luận về chung thủy hay hành vi của một người.',
-    reflection: 'Trải nghiệm nào phù hợp với giá trị của bạn, và đâu là giới hạn bạn muốn giữ?',
+    theme: 'Tham Lang gợi giao tiếp, mong muốn trải nghiệm và chủ đề giới hạn.',
+    reflection:
+      'Trước một cuộc hẹn hoặc trải nghiệm mới, chốt thời gian, ngân sách và một giới hạn bạn muốn giữ.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Cự Môn': {
-    theme:
-      'Cự Môn gợi lời nói, phân tích vấn đề và việc làm rõ hiểu lầm; không dự đoán tranh chấp hay gán người khác là xấu.',
+    theme: 'Cự Môn gợi lời nói, phân tích vấn đề và việc làm rõ hiểu lầm.',
     reflection:
-      'Bạn có thể kiểm tra thông tin và diễn đạt nhu cầu rõ hơn trước khi phản hồi không?',
+      'Trước khi phản hồi một tin nhắn gây khó chịu, hỏi lại dữ kiện chưa rõ và viết một nhu cầu cụ thể thay vì đoán động cơ.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thiên Tướng': {
     theme: 'Thiên Tướng gợi sự hỗ trợ, công bằng và phối hợp trong quan hệ với người khác.',
-    reflection: 'Trong việc chung, trách nhiệm và kỳ vọng đã được phân chia rõ ràng chưa?',
+    reflection:
+      'Trong việc chung, ghi rõ ai nhận từng phần, kết quả cần đạt và lúc cùng kiểm tra tiến độ.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thiên Lương': {
-    theme:
-      'Thiên Lương gợi sự bảo trợ, nguyên tắc và kinh nghiệm; không dùng để hứa hẹn tránh bệnh hoặc tai họa.',
-    reflection: 'Bạn có thể học từ kinh nghiệm nào, và cần tìm hỗ trợ chuyên môn ở đâu?',
+    theme: 'Thiên Lương gợi sự bảo trợ, nguyên tắc và kinh nghiệm.',
+    reflection:
+      'Chọn một việc bạn chưa nắm rõ, hỏi người có kinh nghiệm và kiểm tra lời khuyên bằng nguồn phù hợp trước khi làm.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Thất Sát': {
-    theme:
-      'Thất Sát gợi tính quyết liệt và tự chủ trong hệ biểu tượng; không phải dấu hiệu bạo lực hoặc bất hạnh.',
+    theme: 'Thất Sát gợi tính quyết liệt và tự chủ trong hệ biểu tượng.',
     reflection:
-      'Trước quyết định lớn, bạn đã cân nhắc lựa chọn thay thế và khả năng đảo ngược chưa?',
+      'Trước quyết định lớn, ghi một lựa chọn thay thế, chi phí đổi ý và bước thử đảo ngược được.',
     sourceIds: ['classical-stars-vol1'],
   },
   'Phá Quân': {
     theme:
-      'Phá Quân gợi thay đổi và hao phí nguồn lực. “Tái cấu trúc” là cách diễn đạt hiện đại của dự án, không phải lời dự báo đổ vỡ.',
+      'Phá Quân gợi thay đổi và hao phí nguồn lực; “tái cấu trúc” (sắp xếp lại cách làm) là cách diễn đạt hiện đại của dự án.',
     reflection:
-      'Điều gì thực sự cần thay đổi, và chi phí của thay đổi đó có nằm trong khả năng của bạn?',
+      'Chọn một cách làm cần thay đổi, tính thời gian và chi phí thử trước khi bỏ toàn bộ cách đang dùng.',
     sourceIds: ['classical-stars-vol1'],
   },
 };

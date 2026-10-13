@@ -7,6 +7,8 @@ import { MAX_YEAR, MIN_YEAR, type LunarDate } from '../calendar/types';
 import { INTERPRETATION_SOURCES, PALACE_SOURCE_IDS, STAR_CATALOG } from './catalog';
 import { canonicalStarName, readContextualGroups, readMenhThan, AUXILIARY_GROUPS } from './context';
 import { KNOWLEDGE_PROFILE, resolvePassage, STAR_PASSAGE_IDS } from './knowledge';
+import { readThemes } from './themes';
+import { PALACE_ACTIONS } from './palace-actions';
 import type {
   InterpretationResult,
   PalaceReading,
@@ -15,7 +17,7 @@ import type {
   StarReading,
 } from './types';
 
-export const INTERPRETATION_VERSION = 'reference-reading-v2';
+export const INTERPRETATION_VERSION = 'reference-reading-v3';
 
 const MAJOR_STAR_NAMES = [
   'Tử Vi',
@@ -183,7 +185,7 @@ function readPalace(
   });
   const placement = directStars.length
     ? `Chính tinh tọa thủ tại ${palace.branch}: ${starDescription(directStars)}.`
-    : `Cung tại ${palace.branch} không có chính tinh tọa thủ (vô chính diệu). Các sao ở cung liên hệ vẫn ở cung gốc, không được chuyển thành sao tọa thủ.`;
+    : `Cung tại ${palace.branch} không có chính tinh tọa thủ (vô chính diệu: cung không có chính tinh riêng), các sao ở cung liên hệ vẫn ở cung gốc, không được chuyển thành sao tọa thủ.`;
   const insights = readContextualGroups(palace, palaces);
   const consideredNames = new Set(
     insights
@@ -196,8 +198,8 @@ function readPalace(
     name: palace.name,
     branch: palace.branch,
     title: content.title,
-    overview: `${content.text} ${placement}`,
-    reflection: content.question,
+    overview: `${placement} ${PALACE_ACTIONS[palace.name].overview}`,
+    reflection: PALACE_ACTIONS[palace.name].reflection,
     directStars,
     uninterpretedStars: palace.stars
       .filter((star) => star.group !== 'major' && !consideredNames.has(star.name))
@@ -256,6 +258,7 @@ export function calculateInterpretation(
   const menhStars = readStars(menh, catalog);
   const thanStars = readStars(than, catalog);
   const palaces = chart.palaces.map((palace) => readPalace(palace, chart.palaces, catalog));
+  const thematicReadings = readThemes(chart.palaces);
   const themes = unique(menhStars.map((star) => star.theme));
   const paragraphs = [
     `Cung Mệnh an tại ${menh.branch}, ${menhStars.length ? 'có chính tinh tọa thủ' : ''} ${starDescription(menhStars)}. ${themes.length ? `Các chủ đề biểu tượng để đối chiếu với trải nghiệm của bạn: ${themes.join('; ')}.` : 'Đọc thêm các cung tam hợp và đối cung bên dưới; không có chính tinh tọa thủ không đồng nghĩa tốt hoặc xấu.'}`,
@@ -283,9 +286,15 @@ export function calculateInterpretation(
       insights: [readMenhThan(menh, than)],
     },
     palaces,
+    themes: thematicReadings,
     sourceIds: unique([
       ...palaces.flatMap((palace) => palace.sourceIds),
       ...readMenhThan(menh, than).passageIds.map((id) => resolvePassage(id).sourceId),
+      ...thematicReadings.flatMap((theme) =>
+        theme.insights.flatMap((insight) =>
+          insight.passageIds.map((id) => resolvePassage(id).sourceId),
+        ),
+      ),
     ]),
     warnings: unique([
       ...chart.warnings,

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { ChevronRight, Grid2X2, List, Sparkles } from 'lucide-react';
+import { ChevronRight, Grid2X2, List, Sparkles, X } from 'lucide-react';
 import { PALACE_GRID } from '@/domain/astrology/sexagenary';
 import { formatDate } from '@/domain/calendar/convert';
 import { PALACE_CONTENT } from '@/data/palace-content';
@@ -255,7 +255,14 @@ function StarDialog({
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
-    dialog.current?.showModal();
+    const element = dialog.current;
+    const previousOverflow = document.body.style.overflow;
+    element?.showModal();
+    document.body.style.overflow = 'hidden';
+    return () => {
+      element?.close();
+      document.body.style.overflow = previousOverflow;
+    };
   }, []);
   return (
     <dialog
@@ -266,23 +273,48 @@ function StarDialog({
         onClose();
       }}
       aria-labelledby="star-dialog-title"
+      aria-describedby="star-dialog-description"
+      onClick={(event) => {
+        if (event.target !== event.currentTarget) return;
+        const bounds = event.currentTarget.getBoundingClientRect();
+        if (
+          event.clientX < bounds.left ||
+          event.clientX > bounds.right ||
+          event.clientY < bounds.top ||
+          event.clientY > bounds.bottom
+        )
+          onClose();
+      }}
     >
+      <button
+        className="star-dialog-close"
+        type="button"
+        aria-label="Đóng cửa sổ giải thích"
+        onClick={onClose}
+      >
+        <X size={22} aria-hidden="true" />
+      </button>
       <span className="eyebrow">
         {star.group === 'major' ? 'CHÍNH TINH' : 'PHỤ TINH'} · CUNG{' '}
         {palaceName.toLocaleUpperCase('vi')}
       </span>
       <h2 id="star-dialog-title">{star.name}</h2>
-      <p>
+      <p id="star-dialog-description">
         Trạng thái trong lá số: <strong>{star.brightness || 'Không có phân loại'}</strong>
-        {star.transformation ? ` · ${star.transformation}` : ''}.
+        {star.transformation
+          ? ` · ${star.transformation} (${({ 'Hóa Lộc': 'biểu tượng nguồn lực', 'Hóa Quyền': 'biểu tượng quyền chủ động', 'Hóa Khoa': 'biểu tượng học hỏi, danh tiếng', 'Hóa Kỵ': 'biểu tượng điểm cần rà soát' } as Record<string, string>)[star.transformation] ?? 'biến hóa biểu tượng'})`
+          : ''}
+        .
       </p>
       <p>
         Miếu, Vượng, Đắc, Bình, Hãm là các mức phân loại sao theo bộ quy tắc, không phải điểm số
-        cuộc đời. Hóa Lộc, Hóa Quyền, Hóa Khoa và Hóa Kỵ là các biến hóa cần xét trong toàn lá số.
+        cuộc đời. Tứ Hóa (bốn dạng biến đổi của sao) gồm Hóa Lộc (nguồn lực), Hóa Quyền (quyền chủ
+        động), Hóa Khoa (học hỏi, danh tiếng) và Hóa Kỵ (điểm cần rà soát); cần đọc cùng các cung
+        liên hệ, không kết luận từ một sao.
       </p>
       <p className="muted">
-        Nguồn phân loại: iztro 2.6.2, cấu hình phổ thông. Chưa có luận giải chuyên gia riêng cho sao
-        này.
+        Đây là giải thích ký hiệu trên lá số. Bạn xem phần “Vì sao luận như vậy?” trong bản đọc để
+        đối chiếu dữ kiện và nguồn tham khảo.
       </p>
       <button className="primary-button" type="button" onClick={onClose}>
         Đóng giải thích

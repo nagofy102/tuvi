@@ -1,8 +1,9 @@
 # Reference interpretation implementation
 
 Current status: this file records the original v1 reading release below. The running
-feature is now `reference-reading-v2` on chart profile v2, with source knowledge,
-two active auxiliary pairs and contextual why/evidence; see
+feature is now `reference-reading-v3` on chart profile v2, with thematic behavioral
+reading and refreshed UI; see `ui-content-upgrade.md`. The preceding v2 knowledge,
+two active auxiliary pairs and contextual why/evidence are recorded in
 `knowledge-implementation.md` and `../test/knowledge-validation.md`. Old limitations
 and measurements below are historical, not a claim that the newer groups are absent.
 

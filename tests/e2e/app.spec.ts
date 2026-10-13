@@ -124,11 +124,13 @@ test('shows source-bounded group reasoning and publicly marks deferred rules', a
   await expect(panel.locator('[data-rule-id="pair-assistance"]')).toHaveCount(0);
   await expect(panel.locator('[data-rule-id="formations-gate"]')).toHaveCount(0);
   await page.goto('/phuong-phap#ho-so-quy-tac');
-  await expect(page.getByText('pair-assistance · chưa kích hoạt', { exact: true })).toBeVisible();
   await expect(
-    page.getByText('leap-policy-conflict · chưa thống nhất', { exact: true }),
+    page.locator('.knowledge-rule > summary').filter({ hasText: /Khôi.*chưa kích hoạt/u }),
   ).toBeVisible();
-  await expect(page.getByText(/Không lấy kết quả engine làm đáp án/u)).toBeVisible();
+  await expect(
+    page.locator('.knowledge-rule > summary').filter({ hasText: /Giữ lựa chọn.*chưa thống nhất/u }),
+  ).toBeVisible();
+  await expect(page.getByText(/Không lấy kết quả bộ tính làm đáp án/u)).toBeVisible();
   await page.setViewportSize({ width: 320, height: 800 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
 });
