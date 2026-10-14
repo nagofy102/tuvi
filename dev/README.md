@@ -21,6 +21,9 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 ## References
 
+- `reading-vnext-architecture.md`: audit HV-R01, contract Reading Brief, Rule
+  Matrix và thứ tự triển khai. Kế hoạch chờ phê duyệt, không phải API/AI đang chạy.
+
 - `career-reading-contract.md`, `career-reading-implementation.md`: nâng cấp
   Công việc bằng kết nối biểu tượng có nguồn; không mở quy tắc tổ hợp cổ hoặc
   dự báo. Kết quả kiểm tra được ghi riêng tại `../test/career-reading.md`.

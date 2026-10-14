@@ -5,6 +5,9 @@
 Lưu tiêu chí nghiệm thu, dữ liệu tham chiếu, kết quả kiểm tra và lỗi còn mở.
 Không đánh dấu “pass” cho kiểm tra chưa chạy. Mã kiểm thử sẽ nằm trong `tests/`.
 
+Kế hoạch kiểm thử cho Reading UX vNext (chưa chạy/triển khai) nằm tại
+`reading-vnext-test-plan.md`.
+
 ## Trạng thái hiện tại
 
 Bước 2–4 đã có ứng dụng, bộ chuyển lịch, adapter an sao, trang SEO và ảnh OpenGraph thật.

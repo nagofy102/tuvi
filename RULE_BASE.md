@@ -44,14 +44,64 @@ Adopt the requested role tag (`[PM]`, `[BA]`, `[DEV]`, `[QA]`) at the start of e
 
 - **Git as Single Source of Truth**: Use `git status`, `git diff`, and `git log` to inspect changes. Never rescan unmodified files.
 - **Atomic Commits**: Create scoped commits using Conventional Commits (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`).
-- **Automatic Commit and Push**: After completing each authorized change and running appropriate checks, proactively commit and push it without waiting for another user request. This applies to code, tests, rules and documentation; no empty commits for read-only tasks.
-  - Inspect the diff and stage only task-owned changes; preserve unrelated user work. Do not commit secrets, personal birth data or generated/ignored reports.
-  - Use the agreed Git destination (currently `origin/main`); inspect the remote before pushing. Never force-push, rewrite history or silently switch destinations.
-  - Verify the remote branch contains the pushed commit and report the commit ID, destination and remaining limitations. Do not describe failed checks or incomplete features as completed.
-  - If checks, authentication, branch protection or remote divergence block completion, report the exact blocker and retained local state. Do not claim a successful push or bypass safeguards.
+
+### Parallel Git Workflow
+
+#### Task branches
+- Every parallel editing session must use an isolated
+  Git worktree and dedicated task branch.
+- Branch names should include task scope or task ID.
+- Do not edit main from implementation worktrees.
+- Do not modify another session's worktree.
+
+#### Commits
+- After an authorized change and appropriate checks,
+  commit task-owned changes to the assigned branch.
+- Use Conventional Commits.
+- Inspect status and diff before staging.
+- Stage only task-owned files.
+- Never commit secrets, private birth data,
+  or generated/ignored reports.
+- Do not create empty commits for read-only tasks.
+
+#### Push permissions
+- Implementation sessions must not push origin/main.
+- Task branches may be pushed only when PM authorizes.
+- PM is the sole integration and main-branch push owner.
+- Never force-push or rewrite shared history.
+- Never silently change remote destinations.
+
+#### Integration
+- PM inspects task commits and relevant diffs.
+- Verify dependencies and shared contract compatibility.
+- Integrate approved changes in dependency order.
+- Resolve conflicts without discarding either task's
+  work unless the relevant owner approves.
+- Run required integration and regression checks.
+- Obtain QA acceptance before pushing origin/main.
+- Verify that the remote contains the integrated commit.
+
+#### Failure handling
+- If tests, conflicts, authentication, branch protection,
+  or remote divergence block integration, stop.
+- Preserve local commits and working changes.
+- Report the exact blocker and current Git state.
+- Never bypass checks or protections to complete a push.
+
+#### Worktree lifecycle
+- PM controls worktree creation and cleanup.
+- Never delete a worktree with uncommitted changes.
+- Never delete an unmerged branch without approval.
+- Clean up only after successful integration
+  and confirmation that work is preserved.
+
 - **Token Saver**:
-  - Do not reproduce unchanged full files.
-  - Output targeted code diffs or localized block updates.
+- Prefer task-specific file inspection over full scans.
+- Do not repeat approved architecture decisions.
+- Use shared contracts and concise handoff documents.
+- Run targeted checks before broader regression suites.
+- Do not use an LLM where deterministic validation suffices.
+- Report token usage only when actual metrics are available.
 - **Session Compaction**: Prompt user to reset/compact context (`/clear` or `/compact`) after committing major tasks.
 
 ## 4. UI/UX & KEY RETENTION RULES (30S RETENTION)

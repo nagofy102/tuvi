@@ -19,7 +19,11 @@ Use a role prefix such as `[DEV]`, `[PM]`, `[BA]`, or `[QA]` in user-facing resp
 - Keep architecture and code in English; product copy and domain requirements in Vietnamese.
 - The user's latest product specification takes precedence over older palette choices in `RULE_BASE.md`.
 - Application source belongs in `src/`; the three management folders hold specifications and evidence.
-- Use the current checkout. Do not create a Git worktree unless explicitly requested.
+- Use the current checkout for single-session work.
+- For approved parallel implementation, use one isolated Git
+  worktree and task branch per editing session.
+- Do not create, delete, or reassign worktrees without
+  an approved task assignment.
 
 ## Truthful implementation
 
@@ -29,3 +33,65 @@ Use a role prefix such as `[DEV]`, `[PM]`, `[BA]`, or `[QA]` in user-facing resp
 - Isolate sample chart data and label it visibly as demonstration data before the real engine exists.
 - Do not index personal charts or include names/birth dates in analytics, logs, public URLs, or OpenGraph images by default.
 - Record unresolved domain choices and defects in the relevant management folder.
+
+## Parallel Codex session governance
+
+### Coordinator
+- The main thread is PM and integration owner.
+- PM approves task scope, dependencies, ownership,
+  shared contracts, and integration order.
+- BA and Tu Vi specialist remain domain responsibilities;
+  they do not automatically require separate chat sessions.
+
+### Session isolation
+- Each editing session uses its assigned worktree
+  and task branch.
+- Never edit another session's worktree.
+- Never share a writable working directory across
+  concurrent editing sessions.
+- Read the complete RULE_BASE.md at session start.
+- Follow all required orientation and handoff reads.
+
+### Task assignment
+Each parallel task must define:
+- Task ID and objective
+- Assigned role and branch
+- Worktree location
+- Allowed files or modules
+- Dependencies and approved contracts
+- Acceptance criteria and required checks
+- Integration owner
+
+### Ownership
+- One active owner per writable file or shared artifact.
+- Shared schemas, calculation rules, and public API
+  contracts require PM approval before modification.
+- If a task requires an unowned or conflicting file,
+  stop and request reassignment.
+- Do not silently expand scope.
+
+### Integration
+- Implementation sessions commit only to task branches.
+- Only PM may integrate changes into main.
+- Only PM may push origin/main.
+- Task branches may be pushed only when authorized.
+- QA verifies the integrated result before final push.
+- Preserve unrelated and uncommitted work.
+
+### Handoff
+At task completion, report:
+- Task ID, branch, commit SHA
+- Files changed
+- Tests executed and actual results
+- Contract changes, if any
+- Known risks and blockers
+- Integration readiness
+
+### Context efficiency
+- Do not repeatedly scan unchanged files.
+- Required session-start reads remain mandatory.
+- Read task-relevant code and specifications only.
+- Use approved contracts instead of re-deriving them.
+- Avoid repeating large files or prior decisions.
+- Record durable outcomes in design/, dev/, or test/.
+- Keep completion reports concise.

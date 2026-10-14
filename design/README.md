@@ -23,6 +23,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `reading-ux-vnext.md`: audit và kế hoạch chờ duyệt cho hành trình kết luận trước
+  lá số; không phải tính năng AI/API đã triển khai.
+
 - `career-reading-upgrade.md`: nâng cấp Công việc theo năm tiêu chí người dùng
   chốt; luận biểu tượng trước, căn cứ và gợi ý thực hành tách riêng. Phạm vi BA
   và kiểm tra triển khai được liên kết trong tài liệu này.
