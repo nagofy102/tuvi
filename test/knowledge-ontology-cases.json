@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "knowledge-ontology-test-cases-v0.1",
+  "ontologySchema": "../dev/knowledge-ontology.schema.json",
+  "baseFixture": "../dev/knowledge-ontology-examples.json",
+  "limitations": [
+    "These cases validate structure and fail-closed semantics, not Tử Vi correctness.",
+    "All referenced fixture data is structural mock and prohibited from production use.",
+    "JSON Schema cannot enforce cross-array reference integrity; semantic cases define required validator behavior."
+  ],
+  "cases": [
+    {
+      "caseId": "schema-valid-structural-mock",
+      "operation": { "kind": "none" },
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": true,
+        "productionEligible": false,
+        "issueCodes": []
+      }
+    },
+    {
+      "caseId": "schema-reject-unknown-field",
+      "operation": { "kind": "add", "path": "/domainRules/0/unreviewedWeight", "value": 0.8 },
+      "expected": {
+        "schemaValid": false,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["SCHEMA_ADDITIONAL_PROPERTY"]
+      }
+    },
+    {
+      "caseId": "schema-reject-edge-kind",
+      "operation": { "kind": "replace", "path": "/knowledgeEdges/0/from/kind", "value": "entity" },
+      "expected": {
+        "schemaValid": false,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["EDGE_ENDPOINT_KIND_MISMATCH"]
+      }
+    },
+    {
+      "caseId": "semantic-reject-dangling-fact-subject",
+      "operation": {
+        "kind": "replace",
+        "path": "/chartFacts/0/subject/entityId",
+        "value": "mock:missing-star"
+      },
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["DANGLING_REFERENCE"]
+      }
+    },
+    {
+      "caseId": "semantic-reject-dangling-passage",
+      "operation": {
+        "kind": "replace",
+        "path": "/domainRules/0/evidenceRefs/0/passageId",
+        "value": "mock:missing-passage"
+      },
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["DANGLING_REFERENCE", "MISSING_REQUIRED_EVIDENCE"]
+      }
+    },
+    {
+      "caseId": "semantic-reject-unresolved-revision",
+      "operation": { "kind": "none" },
+      "validatorContext": { "resolveRegistryRevisions": true },
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["REVISION_NOT_RESOLVED", "STRUCTURAL_MOCK_PRODUCTION_USE"]
+      }
+    },
+    {
+      "caseId": "schema-reject-mock-production-flag",
+      "operation": { "kind": "replace", "path": "/productionEligible", "value": true },
+      "expected": {
+        "schemaValid": false,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["STRUCTURAL_MOCK_PRODUCTION_USE"]
+      }
+    },
+    {
+      "caseId": "schema-reject-claim-on-insufficient",
+      "operation": {
+        "kind": "add",
+        "path": "/inferenceTraces/0/allowedClaimIds/-",
+        "value": "mock:claim-001"
+      },
+      "expected": {
+        "schemaValid": false,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["INVALID_FAIL_CLOSED_OUTCOME"]
+      }
+    },
+    {
+      "caseId": "semantic-reject-profile-mismatch",
+      "operation": {
+        "kind": "replace",
+        "path": "/inferenceTraces/0/calculationProfileRef",
+        "value": "mock:other-calculation-profile"
+      },
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["DANGLING_REFERENCE", "PROFILE_MISMATCH"]
+      }
+    },
+    {
+      "caseId": "semantic-fail-closed-unresolved-conflict",
+      "operation": {
+        "kind": "replace",
+        "path": "/inferenceTraces/1/outcome",
+        "value": "claim-allowed"
+      },
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": [
+          "UNRESOLVED_CONFLICT",
+          "UNADMITTED_RULE",
+          "REVISION_NOT_RESOLVED",
+          "STRUCTURAL_MOCK_PRODUCTION_USE"
+        ]
+      }
+    },
+    {
+      "caseId": "semantic-reject-unapproved-rule-claim",
+      "operation": {
+        "kind": "add",
+        "path": "/inferenceTraces/0/allowedClaimIds/-",
+        "value": "mock:claim-001"
+      },
+      "additionalOperations": [
+        { "kind": "replace", "path": "/inferenceTraces/0/outcome", "value": "claim-allowed" }
+      ],
+      "expected": {
+        "schemaValid": true,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["UNADMITTED_RULE", "REVISION_NOT_RESOLVED", "STRUCTURAL_MOCK_PRODUCTION_USE"]
+      }
+    }
+  ]
+}

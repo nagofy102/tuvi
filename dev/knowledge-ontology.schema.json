@@ -1,0 +1,512 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://huyenvi.local/schemas/knowledge-ontology-v0.1.json",
+  "title": "Huyen Vi file-based knowledge ontology",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "ontologyVersion",
+    "dataOrigin",
+    "productionEligible",
+    "registrySnapshot",
+    "entities",
+    "chartFacts",
+    "domainRules",
+    "knowledgeEdges",
+    "inferenceTraces",
+    "exampleGraphs"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "knowledge-ontology-v0.1" },
+    "ontologyVersion": { "$ref": "#/$defs/version" },
+    "dataOrigin": { "enum": ["structural-mock", "research-candidate", "reviewed-artifact"] },
+    "productionEligible": { "type": "boolean" },
+    "registrySnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["registryVersion", "contentDigest"],
+      "properties": {
+        "registryVersion": { "type": "string", "minLength": 1 },
+        "contentDigest": {
+          "type": ["string", "null"],
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "entities": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+    "chartFacts": { "type": "array", "items": { "$ref": "#/$defs/chartFact" } },
+    "domainRules": { "type": "array", "items": { "$ref": "#/$defs/domainRule" } },
+    "knowledgeEdges": { "type": "array", "items": { "$ref": "#/$defs/knowledgeEdge" } },
+    "inferenceTraces": { "type": "array", "items": { "$ref": "#/$defs/inferenceTrace" } },
+    "exampleGraphs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["exampleId", "purpose", "memberRefs"],
+        "properties": {
+          "exampleId": { "$ref": "#/$defs/id" },
+          "purpose": {
+            "enum": ["chart-fact-shape", "domain-knowledge-shape", "fail-closed-trace-shape"]
+          },
+          "memberRefs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "$ref": "#/$defs/id" }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "dataOrigin": { "const": "structural-mock" } },
+        "required": ["dataOrigin"]
+      },
+      "then": { "properties": { "productionEligible": { "const": false } } }
+    }
+  ],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]+$" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][a-z0-9.-]+)?$" },
+    "lifecycleStatus": {
+      "enum": [
+        "candidate",
+        "source-backed",
+        "cross-implementation-agreement",
+        "disputed",
+        "approved-for-implementation",
+        "blocked"
+      ]
+    },
+    "entityRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entityId", "entityType"],
+      "properties": {
+        "entityId": { "$ref": "#/$defs/id" },
+        "entityType": {
+          "enum": [
+            "Palace",
+            "Star",
+            "StarState",
+            "Stem",
+            "Branch",
+            "Transformation",
+            "Configuration",
+            "Topic",
+            "CalculationProfile",
+            "RuleProfile",
+            "Source",
+            "Passage",
+            "ClaimKind"
+          ]
+        }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entityId", "entityType", "label", "status"],
+      "properties": {
+        "entityId": { "$ref": "#/$defs/id" },
+        "entityType": { "$ref": "#/$defs/entityRef/properties/entityType" },
+        "label": { "type": "string", "minLength": 1 },
+        "status": { "$ref": "#/$defs/lifecycleStatus" },
+        "externalRef": { "type": "string", "minLength": 1 }
+      }
+    },
+    "calculationProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "calculationProfileRef",
+        "calendarRuleVersion",
+        "engineVersion",
+        "verificationStatus"
+      ],
+      "properties": {
+        "calculationProfileRef": { "$ref": "#/$defs/id" },
+        "calendarRuleVersion": { "type": "string", "minLength": 1 },
+        "engineVersion": { "type": "string", "minLength": 1 },
+        "verificationStatus": {
+          "enum": [
+            "unverified",
+            "structurally-valid",
+            "cross-implementation-agreement",
+            "independently-verified",
+            "disputed"
+          ]
+        }
+      }
+    },
+    "chartFact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["factId", "chartId", "factType", "relation", "subject", "object", "provenance"],
+      "properties": {
+        "factId": { "$ref": "#/$defs/id" },
+        "chartId": { "$ref": "#/$defs/id" },
+        "factType": {
+          "enum": [
+            "star-location",
+            "body-location",
+            "transformation-location",
+            "palace-relation",
+            "attribute"
+          ]
+        },
+        "relation": {
+          "enum": [
+            "LOCATED_IN",
+            "BODY_ATTACHED_TO",
+            "TRANSFORMS_TO",
+            "OPPOSES",
+            "TRINES_WITH",
+            "SAME_AXIS_AS",
+            "HAS_ATTRIBUTE"
+          ]
+        },
+        "subject": { "$ref": "#/$defs/entityRef" },
+        "object": { "$ref": "#/$defs/entityRef" },
+        "provenance": { "$ref": "#/$defs/calculationProvenance" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "relation": { "const": "LOCATED_IN" } } },
+          "then": {
+            "properties": {
+              "subject": { "properties": { "entityType": { "enum": ["Star", "Transformation"] } } },
+              "object": { "properties": { "entityType": { "const": "Palace" } } }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "relation": { "const": "BODY_ATTACHED_TO" } } },
+          "then": {
+            "properties": {
+              "subject": { "properties": { "entityType": { "const": "Configuration" } } },
+              "object": { "properties": { "entityType": { "const": "Palace" } } }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "relation": { "enum": ["OPPOSES", "TRINES_WITH", "SAME_AXIS_AS"] } }
+          },
+          "then": {
+            "properties": {
+              "subject": { "properties": { "entityType": { "const": "Palace" } } },
+              "object": { "properties": { "entityType": { "const": "Palace" } } }
+            }
+          }
+        }
+      ]
+    },
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceId", "passageId", "sourceRevision"],
+      "properties": {
+        "sourceId": { "$ref": "#/$defs/id" },
+        "passageId": { "$ref": "#/$defs/id" },
+        "sourceRevision": { "type": "string", "minLength": 1 }
+      }
+    },
+    "predicate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["predicateId", "operator", "factPattern"],
+      "properties": {
+        "predicateId": { "$ref": "#/$defs/id" },
+        "operator": { "enum": ["exists", "not-exists", "equals"] },
+        "factPattern": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["factType", "relation"],
+          "properties": {
+            "factType": {
+              "enum": [
+                "star-location",
+                "body-location",
+                "transformation-location",
+                "palace-relation",
+                "attribute"
+              ]
+            },
+            "relation": {
+              "enum": [
+                "LOCATED_IN",
+                "BODY_ATTACHED_TO",
+                "TRANSFORMS_TO",
+                "OPPOSES",
+                "TRINES_WITH",
+                "SAME_AXIS_AS",
+                "HAS_ATTRIBUTE"
+              ]
+            },
+            "subjectRef": { "$ref": "#/$defs/id" },
+            "objectRef": { "$ref": "#/$defs/id" }
+          }
+        }
+      }
+    },
+    "domainRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ruleId",
+        "version",
+        "status",
+        "topicRef",
+        "ruleProfileRefs",
+        "conditions",
+        "exclusions",
+        "exceptions",
+        "counterEvidence",
+        "allowedClaimKinds",
+        "evidenceRefs",
+        "productionEligible"
+      ],
+      "properties": {
+        "ruleId": { "$ref": "#/$defs/id" },
+        "version": { "$ref": "#/$defs/version" },
+        "status": { "$ref": "#/$defs/lifecycleStatus" },
+        "topicRef": { "$ref": "#/$defs/id" },
+        "ruleProfileRefs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "conditions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/predicate" } },
+        "exclusions": { "type": "array", "items": { "$ref": "#/$defs/predicate" } },
+        "exceptions": { "type": "array", "items": { "$ref": "#/$defs/predicate" } },
+        "counterEvidence": { "type": "array", "items": { "$ref": "#/$defs/predicate" } },
+        "allowedClaimKinds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/evidenceRef" }
+        },
+        "productionEligible": { "type": "boolean" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "not": {
+              "properties": { "status": { "const": "approved-for-implementation" } },
+              "required": ["status"]
+            }
+          },
+          "then": { "properties": { "productionEligible": { "const": false } } }
+        }
+      ]
+    },
+    "knowledgeEdge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edgeId", "relation", "from", "to", "status", "evidenceRefs"],
+      "properties": {
+        "edgeId": { "$ref": "#/$defs/id" },
+        "relation": {
+          "enum": [
+            "REQUIRES",
+            "EXCLUDES",
+            "MODIFIES",
+            "CONFLICTS_WITH",
+            "SUPPORTS_CLAIM_KIND",
+            "SOURCED_BY",
+            "APPLIES_UNDER_PROFILE"
+          ]
+        },
+        "from": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "kind"],
+          "properties": { "id": { "$ref": "#/$defs/id" }, "kind": { "enum": ["rule", "entity"] } }
+        },
+        "to": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "kind"],
+          "properties": {
+            "id": { "$ref": "#/$defs/id" },
+            "kind": { "enum": ["rule", "entity", "passage"] }
+          }
+        },
+        "status": { "$ref": "#/$defs/lifecycleStatus" },
+        "evidenceRefs": { "type": "array", "items": { "$ref": "#/$defs/evidenceRef" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "relation": { "const": "CONFLICTS_WITH" } } },
+          "then": {
+            "properties": {
+              "from": { "properties": { "kind": { "const": "rule" } } },
+              "to": { "properties": { "kind": { "const": "rule" } } }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "relation": { "const": "SOURCED_BY" } } },
+          "then": {
+            "properties": {
+              "from": { "properties": { "kind": { "const": "rule" } } },
+              "to": { "properties": { "kind": { "const": "passage" } } }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "relation": { "const": "APPLIES_UNDER_PROFILE" } } },
+          "then": {
+            "properties": {
+              "from": { "properties": { "kind": { "const": "rule" } } },
+              "to": { "properties": { "kind": { "const": "entity" } } }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "relation": { "const": "SUPPORTS_CLAIM_KIND" } } },
+          "then": {
+            "properties": {
+              "from": { "properties": { "kind": { "const": "rule" } } },
+              "to": { "properties": { "kind": { "const": "entity" } } }
+            }
+          }
+        }
+      ]
+    },
+    "predicateResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ruleId", "predicateId", "result", "matchedFactIds"],
+      "properties": {
+        "ruleId": { "$ref": "#/$defs/id" },
+        "predicateId": { "$ref": "#/$defs/id" },
+        "result": { "enum": ["matched", "not-matched", "missing", "not-evaluated"] },
+        "matchedFactIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/id" }
+        }
+      }
+    },
+    "inferenceTrace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "traceId",
+        "chartId",
+        "calculationProfileRef",
+        "candidateRuleRefs",
+        "inputFactIds",
+        "predicateResults",
+        "conflicts",
+        "rejections",
+        "outcome",
+        "allowedClaimIds",
+        "validationIssues"
+      ],
+      "properties": {
+        "traceId": { "$ref": "#/$defs/id" },
+        "chartId": { "$ref": "#/$defs/id" },
+        "calculationProfileRef": { "$ref": "#/$defs/id" },
+        "candidateRuleRefs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ruleId", "version"],
+            "properties": {
+              "ruleId": { "$ref": "#/$defs/id" },
+              "version": { "$ref": "#/$defs/version" }
+            }
+          }
+        },
+        "inputFactIds": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+        "predicateResults": { "type": "array", "items": { "$ref": "#/$defs/predicateResult" } },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ruleIds", "status"],
+            "properties": {
+              "ruleIds": {
+                "type": "array",
+                "minItems": 2,
+                "uniqueItems": true,
+                "items": { "$ref": "#/$defs/id" }
+              },
+              "status": { "enum": ["unresolved", "resolved-by-sourced-rule"] },
+              "resolverRuleId": { "$ref": "#/$defs/id" }
+            }
+          }
+        },
+        "rejections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ruleId", "reason"],
+            "properties": {
+              "ruleId": { "$ref": "#/$defs/id" },
+              "reason": {
+                "enum": [
+                  "predicate-not-matched",
+                  "missing-evidence",
+                  "profile-mismatch",
+                  "unapproved-rule",
+                  "unresolved-conflict",
+                  "rights-blocked",
+                  "revision-unresolved"
+                ]
+              }
+            }
+          }
+        },
+        "outcome": {
+          "enum": [
+            "claim-allowed",
+            "insufficient-evidence",
+            "unresolved-conflict",
+            "unsupported-profile",
+            "blocked"
+          ]
+        },
+        "allowedClaimIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "validationIssues": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "enum": [
+                  "insufficient-evidence",
+                  "unresolved-conflict",
+                  "unsupported-profile",
+                  "blocked"
+                ]
+              }
+            }
+          },
+          "then": { "properties": { "allowedClaimIds": { "maxItems": 0 } } }
+        }
+      ]
+    }
+  }
+}

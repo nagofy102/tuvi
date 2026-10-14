@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "knowledge-ontology-v0.1",
+  "ontologyVersion": "0.1.0",
+  "dataOrigin": "structural-mock",
+  "productionEligible": false,
+  "registrySnapshot": {
+    "registryVersion": "mock-registry-not-resolvable",
+    "contentDigest": null
+  },
+  "entities": [
+    {
+      "entityId": "mock:palace-career",
+      "entityType": "Palace",
+      "label": "Mock palace",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:star-a",
+      "entityType": "Star",
+      "label": "Mock star A",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:topic-career",
+      "entityType": "Topic",
+      "label": "Công việc (mock)",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:calculation-profile",
+      "entityType": "CalculationProfile",
+      "label": "Mock calculation profile",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:rule-profile-a",
+      "entityType": "RuleProfile",
+      "label": "Mock rule profile A",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:claim-kind-symbolic",
+      "entityType": "ClaimKind",
+      "label": "Mock symbolic claim",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:source-a",
+      "entityType": "Source",
+      "label": "Mock source",
+      "status": "blocked"
+    },
+    {
+      "entityId": "mock:passage-a",
+      "entityType": "Passage",
+      "label": "Mock passage",
+      "status": "blocked"
+    }
+  ],
+  "chartFacts": [
+    {
+      "factId": "mock:fact-star-a-location",
+      "chartId": "mock:chart-001",
+      "factType": "star-location",
+      "relation": "LOCATED_IN",
+      "subject": { "entityId": "mock:star-a", "entityType": "Star" },
+      "object": { "entityId": "mock:palace-career", "entityType": "Palace" },
+      "provenance": {
+        "calculationProfileRef": "mock:calculation-profile",
+        "calendarRuleVersion": "mock-only",
+        "engineVersion": "mock-only",
+        "verificationStatus": "unverified"
+      }
+    }
+  ],
+  "domainRules": [
+    {
+      "ruleId": "mock:rule-a",
+      "version": "0.0.1-mock",
+      "status": "blocked",
+      "topicRef": "mock:topic-career",
+      "ruleProfileRefs": ["mock:rule-profile-a"],
+      "conditions": [
+        {
+          "predicateId": "mock:predicate-a",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "star-location",
+            "relation": "LOCATED_IN",
+            "subjectRef": "mock:star-a",
+            "objectRef": "mock:palace-career"
+          }
+        }
+      ],
+      "exclusions": [],
+      "exceptions": [],
+      "counterEvidence": [],
+      "allowedClaimKinds": ["mock:claim-kind-symbolic"],
+      "evidenceRefs": [
+        {
+          "sourceId": "mock:source-a",
+          "passageId": "mock:passage-a",
+          "sourceRevision": "mock-unresolved"
+        }
+      ],
+      "productionEligible": false
+    },
+    {
+      "ruleId": "mock:rule-b",
+      "version": "0.0.1-mock",
+      "status": "disputed",
+      "topicRef": "mock:topic-career",
+      "ruleProfileRefs": ["mock:rule-profile-a"],
+      "conditions": [
+        {
+          "predicateId": "mock:predicate-b",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "star-location",
+            "relation": "LOCATED_IN",
+            "subjectRef": "mock:star-a"
+          }
+        }
+      ],
+      "exclusions": [],
+      "exceptions": [],
+      "counterEvidence": [],
+      "allowedClaimKinds": ["mock:claim-kind-symbolic"],
+      "evidenceRefs": [
+        {
+          "sourceId": "mock:source-a",
+          "passageId": "mock:passage-a",
+          "sourceRevision": "mock-unresolved"
+        }
+      ],
+      "productionEligible": false
+    }
+  ],
+  "knowledgeEdges": [
+    {
+      "edgeId": "mock:edge-rule-a-source",
+      "relation": "SOURCED_BY",
+      "from": { "id": "mock:rule-a", "kind": "rule" },
+      "to": { "id": "mock:passage-a", "kind": "passage" },
+      "status": "blocked",
+      "evidenceRefs": [
+        {
+          "sourceId": "mock:source-a",
+          "passageId": "mock:passage-a",
+          "sourceRevision": "mock-unresolved"
+        }
+      ]
+    },
+    {
+      "edgeId": "mock:edge-rule-conflict",
+      "relation": "CONFLICTS_WITH",
+      "from": { "id": "mock:rule-a", "kind": "rule" },
+      "to": { "id": "mock:rule-b", "kind": "rule" },
+      "status": "disputed",
+      "evidenceRefs": [
+        {
+          "sourceId": "mock:source-a",
+          "passageId": "mock:passage-a",
+          "sourceRevision": "mock-unresolved"
+        }
+      ]
+    },
+    {
+      "edgeId": "mock:edge-rule-a-profile",
+      "relation": "APPLIES_UNDER_PROFILE",
+      "from": { "id": "mock:rule-a", "kind": "rule" },
+      "to": { "id": "mock:rule-profile-a", "kind": "entity" },
+      "status": "blocked",
+      "evidenceRefs": []
+    }
+  ],
+  "inferenceTraces": [
+    {
+      "traceId": "mock:trace-missing-evidence",
+      "chartId": "mock:chart-001",
+      "calculationProfileRef": "mock:calculation-profile",
+      "candidateRuleRefs": [{ "ruleId": "mock:rule-a", "version": "0.0.1-mock" }],
+      "inputFactIds": ["mock:fact-star-a-location"],
+      "predicateResults": [
+        {
+          "ruleId": "mock:rule-a",
+          "predicateId": "mock:predicate-a",
+          "result": "matched",
+          "matchedFactIds": ["mock:fact-star-a-location"]
+        }
+      ],
+      "conflicts": [],
+      "rejections": [{ "ruleId": "mock:rule-a", "reason": "revision-unresolved" }],
+      "outcome": "insufficient-evidence",
+      "allowedClaimIds": [],
+      "validationIssues": ["REVISION_NOT_RESOLVED", "STRUCTURAL_MOCK_PRODUCTION_USE"]
+    },
+    {
+      "traceId": "mock:trace-unresolved-conflict",
+      "chartId": "mock:chart-001",
+      "calculationProfileRef": "mock:calculation-profile",
+      "candidateRuleRefs": [
+        { "ruleId": "mock:rule-a", "version": "0.0.1-mock" },
+        { "ruleId": "mock:rule-b", "version": "0.0.1-mock" }
+      ],
+      "inputFactIds": ["mock:fact-star-a-location"],
+      "predicateResults": [
+        {
+          "ruleId": "mock:rule-a",
+          "predicateId": "mock:predicate-a",
+          "result": "matched",
+          "matchedFactIds": ["mock:fact-star-a-location"]
+        },
+        {
+          "ruleId": "mock:rule-b",
+          "predicateId": "mock:predicate-b",
+          "result": "matched",
+          "matchedFactIds": ["mock:fact-star-a-location"]
+        }
+      ],
+      "conflicts": [{ "ruleIds": ["mock:rule-a", "mock:rule-b"], "status": "unresolved" }],
+      "rejections": [
+        { "ruleId": "mock:rule-a", "reason": "unresolved-conflict" },
+        { "ruleId": "mock:rule-b", "reason": "unresolved-conflict" }
+      ],
+      "outcome": "unresolved-conflict",
+      "allowedClaimIds": [],
+      "validationIssues": ["UNRESOLVED_CONFLICT", "STRUCTURAL_MOCK_PRODUCTION_USE"]
+    }
+  ],
+  "exampleGraphs": [
+    {
+      "exampleId": "mock:example-chart-fact",
+      "purpose": "chart-fact-shape",
+      "memberRefs": ["mock:star-a", "mock:palace-career", "mock:fact-star-a-location"]
+    },
+    {
+      "exampleId": "mock:example-domain-knowledge",
+      "purpose": "domain-knowledge-shape",
+      "memberRefs": [
+        "mock:rule-a",
+        "mock:passage-a",
+        "mock:edge-rule-a-source",
+        "mock:edge-rule-a-profile"
+      ]
+    },
+    {
+      "exampleId": "mock:example-fail-closed-trace",
+      "purpose": "fail-closed-trace-shape",
+      "memberRefs": [
+        "mock:rule-a",
+        "mock:rule-b",
+        "mock:edge-rule-conflict",
+        "mock:trace-unresolved-conflict"
+      ]
+    }
+  ]
+}
