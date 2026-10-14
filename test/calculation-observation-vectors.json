@@ -85,7 +85,7 @@
       },
       "comparability": "self-engine-regression-only",
       "limitations": [
-        "Display does not expose the leap marker although the calendar dependency reports leap month 2.",
+        "The iztro display and its observed 6tail calendar dependency both indicate regular month 2 for this date.",
         "Early-Ty output does not establish the late-Ty rollover rule.",
         "Not an independent expected result."
       ]

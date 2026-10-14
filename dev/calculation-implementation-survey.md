@@ -14,7 +14,8 @@ loạt và không lưu nội dung luận giải.
 Input chạy thử đều là dữ liệu tổng hợp không gắn với cá nhân:
 
 - `2000-08-29`, giờ Tỵ/index 5, nam;
-- `1985-03-21`, đầu giờ Tý/index 0, nam — quan sát tháng nhuận 2;
+- `1985-03-21`, đầu giờ Tý/index 0, nam — probe bất đồng tháng 2
+  thường/nhuận;
 - `2023-03-22`, giờ Tỵ/index 5, nam — quan sát tháng nhuận 2.
 
 Output thực đã chạy được ghi nguyên trạng có chọn lọc trong
