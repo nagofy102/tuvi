@@ -1,0 +1,240 @@
+{
+  "schemaVersion": "calculation-observation-vectors-v0.1",
+  "observedAt": "2026-10-14",
+  "status": "observed-not-golden",
+  "notice": "Synthetic reproducibility observations only. These outputs are not independently verified astrology oracles and must not be used as golden expected values for the same engine.",
+  "vectors": [
+    {
+      "observationId": "obs.iztro.2_6_2.solar-2000-08-29-t5-male",
+      "sourceId": "oss.iztro",
+      "sourceVersion": "npm:iztro@2.6.2",
+      "sourceRevision": "git:7b0a0e1d85edff436b3b8bd03e88b5bd31c9f0d7",
+      "implementationFamilyId": "impl.iztro-6tail",
+      "execution": "Local Node.js call astro.bySolar using the repository's pinned installed package",
+      "input": {
+        "calendar": "solar",
+        "date": "2000-08-29",
+        "timeIndex": 5,
+        "gender": "male"
+      },
+      "options": {
+        "fixLeap": true,
+        "language": "zh-CN",
+        "timezone": null
+      },
+      "observedOutput": {
+        "lunarDateDisplay": "二〇〇〇年八月初一",
+        "timeDisplay": "巳时",
+        "timeRange": "09:00~11:00",
+        "fiveElementsClass": "金四局",
+        "soulPalaceBranch": "辰",
+        "bodyPalaceBranch": "寅",
+        "palaces": [
+          { "name": "夫妻", "branch": "寅", "majorStars": [] },
+          { "name": "兄弟", "branch": "卯", "majorStars": ["廉贞", "破军"] },
+          { "name": "命宫", "branch": "辰", "majorStars": [] },
+          { "name": "父母", "branch": "巳", "majorStars": ["天府"] },
+          { "name": "福德", "branch": "午", "majorStars": ["天同", "太阴"] },
+          { "name": "田宅", "branch": "未", "majorStars": ["武曲", "贪狼"] },
+          { "name": "官禄", "branch": "申", "majorStars": ["太阳", "巨门"] },
+          { "name": "仆役", "branch": "酉", "majorStars": ["天相"] },
+          { "name": "迁移", "branch": "戌", "majorStars": ["天机", "天梁"] },
+          { "name": "疾厄", "branch": "亥", "majorStars": ["紫微", "七杀"] },
+          { "name": "财帛", "branch": "子", "majorStars": [] },
+          { "name": "子女", "branch": "丑", "majorStars": [] }
+        ]
+      },
+      "comparability": "self-engine-regression-only",
+      "limitations": [
+        "No timezone argument was supplied by this API.",
+        "This is the current engine family and cannot validate itself.",
+        "No Nam Phai compatibility is inferred."
+      ]
+    },
+    {
+      "observationId": "obs.iztro.2_6_2.solar-1985-03-21-t0-male",
+      "sourceId": "oss.iztro",
+      "sourceVersion": "npm:iztro@2.6.2",
+      "sourceRevision": "git:7b0a0e1d85edff436b3b8bd03e88b5bd31c9f0d7",
+      "implementationFamilyId": "impl.iztro-6tail",
+      "execution": "Local Node.js call astro.bySolar using the repository's pinned installed package",
+      "input": {
+        "calendar": "solar",
+        "date": "1985-03-21",
+        "timeIndex": 0,
+        "gender": "male"
+      },
+      "options": {
+        "fixLeap": true,
+        "language": "zh-CN",
+        "timezone": null
+      },
+      "observedOutput": {
+        "lunarDateDisplay": "一九八五年二月初一",
+        "timeDisplay": "早子时",
+        "timeRange": "00:00~01:00",
+        "fiveElementsClass": "土五局",
+        "soulPalaceBranch": "卯",
+        "bodyPalaceBranch": "卯",
+        "majorStarPositions": {
+          "命宫-卯": ["太阳", "天梁"],
+          "官禄-未": [],
+          "田宅-午": ["紫微"],
+          "疾厄-戌": ["廉贞", "天府"]
+        }
+      },
+      "comparability": "self-engine-regression-only",
+      "limitations": [
+        "Display does not expose the leap marker although the calendar dependency reports leap month 2.",
+        "Early-Ty output does not establish the late-Ty rollover rule.",
+        "Not an independent expected result."
+      ]
+    },
+    {
+      "observationId": "obs.iztro.2_6_2.solar-2023-03-22-t5-male",
+      "sourceId": "oss.iztro",
+      "sourceVersion": "npm:iztro@2.6.2",
+      "sourceRevision": "git:7b0a0e1d85edff436b3b8bd03e88b5bd31c9f0d7",
+      "implementationFamilyId": "impl.iztro-6tail",
+      "execution": "Local Node.js call astro.bySolar using the repository's pinned installed package",
+      "input": {
+        "calendar": "solar",
+        "date": "2023-03-22",
+        "timeIndex": 5,
+        "gender": "male"
+      },
+      "options": {
+        "fixLeap": true,
+        "language": "zh-CN",
+        "timezone": null
+      },
+      "observedOutput": {
+        "lunarDateDisplay": "二〇二三年闰二月初一",
+        "timeDisplay": "巳时",
+        "timeRange": "09:00~11:00",
+        "fiveElementsClass": "水二局",
+        "soulPalaceBranch": "戌",
+        "bodyPalaceBranch": "申",
+        "majorStarPositions": {
+          "命宫-戌": ["太阳"],
+          "官禄-寅": [],
+          "仆役-卯": ["天府"],
+          "田宅-丑": ["紫微", "破军"]
+        }
+      },
+      "comparability": "self-engine-regression-only",
+      "limitations": [
+        "Leap handling is observed only under fixLeap=true.",
+        "Not independently verified."
+      ]
+    },
+    {
+      "observationId": "obs.calendar-family.leap-boundaries-three-dates",
+      "sourceId": "oss.lunar-lite-and-lunar-typescript",
+      "sourceVersion": "npm:lunar-lite@0.2.8+npm:lunar-typescript@1.8.6",
+      "sourceRevision": "git:lunar-typescript@0f3e95d15e31f1a7c7b93d624542649347328a20",
+      "implementationFamilyId": "impl.6tail-lunar",
+      "execution": "Local Node.js calls lunar-lite.solar2lunar and lunar-typescript Solar.fromYmd(...).getLunar()",
+      "input": ["2000-08-29", "1985-03-21", "2023-03-22"],
+      "options": { "timezone": null },
+      "observedOutput": [
+        {
+          "solar": "2000-08-29",
+          "lunarYear": 2000,
+          "lunarMonth": 8,
+          "lunarDay": 1,
+          "isLeap": false
+        },
+        {
+          "solar": "1985-03-21",
+          "lunarYear": 1985,
+          "lunarMonth": 2,
+          "lunarDay": 1,
+          "isLeap": false
+        },
+        { "solar": "2023-03-22", "lunarYear": 2023, "lunarMonth": 2, "lunarDay": 1, "isLeap": true }
+      ],
+      "comparability": "related-implementation-observation",
+      "limitations": [
+        "lunar-lite depends on lunar-typescript; matching results are not independent agreement.",
+        "No timezone option is exposed by the calls used.",
+        "This family does not mark 1985-03-21 as leap month, unlike the two Vietnamese-calendar observations."
+      ]
+    },
+    {
+      "observationId": "obs.lasotuvi.0_1_2.hnd-calendar-three-dates",
+      "sourceId": "oss.lasotuvi",
+      "sourceVersion": "python-package:lasotuvi@0.1.2",
+      "sourceRevision": "git:ace8379a3ea033674e8a9096f5b98a9e2041eace",
+      "implementationFamilyId": "impl.doanguyen-lasotuvi-hnd",
+      "execution": "Fresh shallow clone; direct Python call lasotuvi.Lich_HND.S2L without installing dependencies",
+      "input": ["2000-08-29", "1985-03-21", "2023-03-22"],
+      "options": { "timezone": 7.0 },
+      "observedOutput": [
+        {
+          "solar": "2000-08-29",
+          "lunarYear": 2000,
+          "lunarMonth": 8,
+          "lunarDay": 1,
+          "isLeap": false
+        },
+        {
+          "solar": "1985-03-21",
+          "lunarYear": 1985,
+          "lunarMonth": 2,
+          "lunarDay": 1,
+          "isLeap": true
+        },
+        { "solar": "2023-03-22", "lunarYear": 2023, "lunarMonth": 2, "lunarDay": 1, "isLeap": true }
+      ],
+      "comparability": "candidate-cross-implementation-observation",
+      "limitations": [
+        "The calendar module declares Ho Ngoc Duc/Meeus lineage.",
+        "The repository calendar test has its substantive assertion commented out.",
+        "The full chart engine was not executed because its pinned dependencies are obsolete."
+      ]
+    },
+    {
+      "observationId": "obs.dqcai-vn-lunar.1_0_1.three-dates",
+      "sourceId": "oss.dqcai-vn-lunar",
+      "sourceVersion": "npm:@dqcai/vn-lunar@1.0.1",
+      "sourceRevision": null,
+      "implementationFamilyId": "impl.dqcai-vn-lunar-unknown-lineage",
+      "execution": "Local Node.js ESM call getLunarDate using the repository's pinned installed package",
+      "input": ["2000-08-29", "1985-03-21", "2023-03-22"],
+      "options": { "timezone": null },
+      "observedOutput": [
+        {
+          "solar": "2000-08-29",
+          "lunarYear": 2000,
+          "lunarMonth": 8,
+          "lunarDay": 1,
+          "isLeap": false,
+          "julianDay": 2451786
+        },
+        {
+          "solar": "1985-03-21",
+          "lunarYear": 1985,
+          "lunarMonth": 2,
+          "lunarDay": 1,
+          "isLeap": true,
+          "julianDay": 2446146
+        },
+        {
+          "solar": "2023-03-22",
+          "lunarYear": 2023,
+          "lunarMonth": 2,
+          "lunarDay": 1,
+          "isLeap": true,
+          "julianDay": 2460026
+        }
+      ],
+      "comparability": "unknown-independence-observation",
+      "limitations": [
+        "Package-to-repository release revision is not established.",
+        "npm metadata says MIT but the linked repository exposes no detected LICENSE file.",
+        "Implementation lineage and timezone assumptions are not documented sufficiently."
+      ]
+    }
+  ]
+}
