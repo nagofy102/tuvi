@@ -33,6 +33,10 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 - `knowledge-k02-k03-report.md`: kết quả K02A/K03A/K03B; 5 calculation observation
   nhưng 0 golden, 3 career rule candidate chưa approve và ontology chỉ structural mock.
 
+- `knowledge-k02b-k04a-report.md`: K02B tái lập cơ chế timezone của bất đồng
+  21/03/1985 nhưng chưa chọn profile; K03A2/K04A chỉ đạt method candidate và
+  fail-closed prototype, không có claim/rule production mới.
+
 - `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight đã được Product
   Owner duyệt làm baseline. Runtime/UI deterministic cho đúng cấu trúc A1 đã triển
   khai; phương án hai insight vẫn bị loại do trùng luận điểm. Không có AI/API.

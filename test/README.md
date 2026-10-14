@@ -17,6 +17,11 @@ nghiệm thu tài liệu.
 
 ## Trạng thái hiện tại
 
+K02B/K03A2/K04A đã bổ sung dữ liệu tái lập bất đồng lịch, 8 case rule phương pháp
+và 6 case evaluator fail-closed. Đây là research/structural test, không phải golden
+chart hay oracle Tử Vi. K02B có 0 full-chart candidate đạt gate độc lập + exact
+profile; K04A có 0 đường sinh claim.
+
 K02A/K03A/K03B đã thêm reference-plan/schema, 5 calculation observation không phải
 golden, 6 career rule gate case và 11 ontology mutation case. Kết quả tích hợp tại
 `../design/knowledge-k02-k03-report.md`; không có thay đổi production hoặc xác nhận

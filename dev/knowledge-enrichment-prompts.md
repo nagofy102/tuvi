@@ -190,6 +190,38 @@ duyệt một vertical slice có: chart fields đạt K02 gate, rule units đư�
 policy, inference trace, fixtures độc lập và publication boundary. AI Writer/fine-tune,
 API, persistence, graph database và UI expansion vẫn ngoài scope.
 
+## Task brief thực thi — HV-K02B Calendar disagreement and full-chart independence
+
+**Role:** `[QA][BA][DEV_RESEARCH]`. Pin astronomical/calendar sources, algorithm
+revisions, timezone and civil-date policy to reproduce `1985-03-21`; screen a
+full-chart family for license, lineage and exact-profile compatibility. Separate
+event observations from calendar conventions and profile choices.
+
+Do not choose by website count, run blocked `@dqcai/vn-lunar`, change production,
+or admit golden values. Artifacts and ownership are defined in
+`knowledge-k02b-k04a-execution.md`. Stop when the mechanism is reproducible and
+independence search is documented, even if the result remains blocked.
+
+## Task brief thực thi — HV-K03A2 Deep career methodology extraction
+
+**Role:** `[BA][AI_RESEARCH][TU_VI_SPECIALIST]`. Research lawful, pinned passages
+for Mệnh–Thân, Di–Tài–Quan and cross-palace conditions/exceptions/conflicts. Every
+candidate rule must retain source family, profile, predicates, refusal behavior and
+proposed structural tests.
+
+Do not infer behavior/outcome, treat same-lineage volumes as independent, or approve
+a rule. Stop with explicit gaps when vocabulary/profile or a second family is absent.
+
+## Task brief thực thi — HV-K04A Methodology evaluator prototype
+
+**Role:** `[ARCHITECT][DEV][QA]`. Prototype conditions, exclusions, missing evidence,
+conflict and inference trace for only the two named K03A method candidates. Verify
+K03B ontology fit and deterministic fail-closed outcomes.
+
+Do not add a reader-facing claim, weight, runtime, `src/` change or lifecycle approval.
+If methodology rules cannot be represented without a claim, record the contract gap
+instead of changing shared ontology. Stop: **PO ONTOLOGY DECISION REQUIRED**.
+
 ## Task brief thực thi — HV-K02A Calculation Verification
 
 **Role:** `[QA][BA][DEV_RESEARCH]`. Dùng K01 registry, inventory và implementation

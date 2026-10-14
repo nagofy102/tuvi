@@ -25,6 +25,19 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
   acceptance và integration gates cho K02A, K03A, K03B đã được PO cho phép nghiên cứu;
   không cho phép đổi production profile hoặc tự duyệt rule/golden fixture.
 
+- `knowledge-k02b-k04a-execution.md`: phân công và gate cho K02B/K03A2/K04A.
+  Kết quả tích hợp gồm disagreement analysis, 5 passage/2 method candidate và
+  evaluator structural không sinh claim; xem `../design/knowledge-k02b-k04a-report.md`.
+
+- `calculation-k02b-disagreement-report.md`: mốc thiên văn giải thích khác biệt
+  UTC+7/UTC+8 cho 21/03/1985; chưa có admitted profile clause hoặc golden fixture.
+
+- `knowledge-k03a2-report.md`: nghiên cứu sâu Mệnh–Thân và Di–Tài–Quan; vẫn thiếu
+  family độc lập, vocabulary/profile và căn cứ Mệnh–Quan–Nô.
+
+- `knowledge-k04a-rule-prototype.md`: evaluator nghiên cứu cho hai method candidate;
+  6 case fail closed, 0 claim path, chưa sửa ontology/runtime.
+
 - `calculation-k02-sandbox-report.md`: rà HKO và `lasotuvi` trong sandbox; bất đồng
   21/03/1985 vẫn unresolved, không có oracle/golden hoặc production dependency mới.
 

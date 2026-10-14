@@ -4,6 +4,9 @@ Ngày: 14/10/2026. Baseline: `origin/main@9a16b73`. Product Owner nghiệm thu K
 ở mức nghiên cứu/prototype và cho phép ba luồng giới hạn dưới đây. Không kết quả nào
 tự thay đổi calculation profile, mở rule production hoặc tạo claim luận giải mới.
 
+Trạng thái tích hợp: ba task đã hoàn tất trong phạm vi nghiên cứu. Báo cáo tổng hợp
+tại `../design/knowledge-k02b-k04a-report.md`; dừng chờ Product Owner review.
+
 ## Dependency và ưu tiên
 
 `K02B || K03A2 → PM review → K04A dependency review → PO review`.
