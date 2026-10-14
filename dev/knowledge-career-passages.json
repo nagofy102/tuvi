@@ -1,0 +1,130 @@
+{
+  "artifactVersion": "hv-k03a-career-passages-v0.1",
+  "generatedAt": "2026-10-14",
+  "researchScope": "Quan Lộc/Công việc; ưu tiên điều kiện và quan hệ liên cung",
+  "admissionBoundary": "research-only; no passage is approved for production",
+  "sources": [
+    {
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "title": "紫微斗數全書/卷一",
+      "revision": "7913704",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+      "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rights": {
+        "status": "open-license-with-underlying-text-caveat",
+        "license": "CC BY-SA 4.0 for Wikisource content; underlying-text status remains a registry caveat",
+        "rightsInfoLocator": "https://zh.wikisource.org/w/api.php?action=query&meta=siteinfo&siprop=rightsinfo&format=json&formatversion=2"
+      },
+      "accessedAt": "2026-10-14",
+      "accessResult": "HTTP 200 through MediaWiki API and pinned revision"
+    },
+    {
+      "sourceId": "k03a-zwds-quanshu-vol3-wikisource-r2268626",
+      "title": "紫微斗數全書/卷三",
+      "revision": "2268626",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷三&oldid=2268626",
+      "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rights": {
+        "status": "open-license-with-underlying-text-caveat",
+        "license": "CC BY-SA 4.0 for Wikisource content; underlying-text status remains unresolved",
+        "rightsInfoLocator": "https://zh.wikisource.org/w/api.php?action=query&meta=siteinfo&siprop=rightsinfo&format=json&formatversion=2"
+      },
+      "accessedAt": "2026-10-14",
+      "accessResult": "HTTP 200 through MediaWiki API; revision returned by API"
+    }
+  ],
+  "passages": [
+    {
+      "passageId": "k03a-v1-ziwei-context",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問紫微所主若何？; wikitext lines 219–225 at revision 7913704",
+      "language": "zh-Hant",
+      "quote": "須看三臺，蓋紫微守命是中臺……俱看在廟旺之鄉否，有何吉凶之守照。……若居官祿身命，三宮最要左右守衛。",
+      "translationOrParaphraseVi": "Đoạn này yêu cầu xét trạng thái miếu/vượng và sao cát–hung hội chiếu; khi bàn Tử Vi tại các vị trí liên quan Quan Lộc/Thân/Mệnh còn đặt điều kiện có Tả–Hữu bảo vệ.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": [
+        "ziwei-reading-requires-context",
+        "ziwei-career-body-life-positions-require-support-condition"
+      ],
+      "doesNotSupport": [
+        "modern job prediction",
+        "personal ability or behavior",
+        "a complete Menh-Quan-No synthesis"
+      ],
+      "status": "source-backed-candidate"
+    },
+    {
+      "passageId": "k03a-v1-tianxiang-career",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問天相星所主若何？; wikitext lines 319–322 at revision 7913704",
+      "language": "zh-Hant",
+      "quote": "天相屬水……化氣曰印，是為官祿文星……官祿得之則顯榮，帝座合之則爭權。……若得左右，則職掌威權。",
+      "translationOrParaphraseVi": "Thiên Tướng được mô tả bằng biểu tượng ấn và Quan Lộc; đoạn văn đồng thời nêu các điều kiện phối hợp với Tử Vi, Tả và Hữu, không cho phép đọc riêng một sao mà bỏ bối cảnh.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": ["tianxiang-career-symbolism", "tianxiang-supporting-star-conditions"],
+      "doesNotSupport": [
+        "claim that the reader has management skill",
+        "claim about actual rank, occupation or success",
+        "unconditional positive reading"
+      ],
+      "status": "source-backed-candidate"
+    },
+    {
+      "passageId": "k03a-v3-reading-order",
+      "sourceId": "k03a-zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "談星要論; wikitext lines 7–12 at revision 2268626",
+      "language": "zh-Hans",
+      "quote": "第一看命宫吉凶庙旺化吉化忌生克。次看身主吉凶生克。三看迁移财帛官禄三方星辰刑冲克破。",
+      "translationOrParaphraseVi": "Thứ tự luận được nêu là xét Mệnh, tiếp đến Thân, rồi xét bộ ba Thiên Di–Tài Bạch–Quan Lộc cùng các quan hệ hình, xung, khắc, phá.",
+      "translationStatus": "research-translation-needs-philological-review",
+      "supports": [
+        "career-reading-must-use-cross-palace-context",
+        "reading-order-menh-than-then-di-tai-quan"
+      ],
+      "doesNotSupport": [
+        "using No Boc as a mandatory career input",
+        "a deterministic modern conclusion without definitions of states and aspects",
+        "a numeric weight between palaces"
+      ],
+      "status": "source-backed-candidate"
+    },
+    {
+      "passageId": "k03a-v3-empty-menh",
+      "sourceId": "k03a-zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "談星要論; wikitext lines 15–20 at revision 2268626",
+      "language": "zh-Hans",
+      "quote": "若命宫无正曜者，财官二宫有吉星拱照……如命宫有正曜吉星，庙旺化吉，三方又有吉星会合……",
+      "translationOrParaphraseVi": "Khi Mệnh không có chính diệu, đoạn văn chuyển sang xét Tài và Quan cùng sao hội chiếu; khi Mệnh có chính diệu vẫn phải xét miếu/vượng, biến hóa và tam phương.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": [
+        "empty-menh-requires-tai-quan-context",
+        "menh-principal-star-does-not-remove-cross-palace-check"
+      ],
+      "doesNotSupport": [
+        "borrowing a specific opposite-palace star",
+        "modern career behavior or outcome",
+        "automatic favorable or unfavorable output without a defined profile"
+      ],
+      "status": "source-backed-candidate"
+    },
+    {
+      "passageId": "k03a-v1-no-boc-negative-fragment",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問紫微所主若何？; wikitext line 224 at revision 7913704",
+      "language": "zh-Hant",
+      "quote": "如落疾厄、兄弟、奴僕、相貌、四陷宮……更宜詳細宮度，應究星纏之論。",
+      "translationOrParaphraseVi": "Đoạn văn liệt kê Nô Bộc trong một nhóm vị trí bị đánh giá bất lợi và ngay sau đó yêu cầu xét kỹ cung độ cùng tổ hợp sao.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": ["no-boc-fragment-requires-context"],
+      "doesNotSupport": [
+        "a general No Boc career rule",
+        "a Menh-Quan-No synthesis",
+        "reader-facing negative outcome"
+      ],
+      "status": "excluded-from-rule-extraction",
+      "exclusionReason": "Fragment is star-specific, historically normative and does not define a cross-palace career relation."
+    }
+  ]
+}

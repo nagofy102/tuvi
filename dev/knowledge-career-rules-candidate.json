@@ -1,0 +1,129 @@
+{
+  "artifactVersion": "hv-k03a-career-rules-candidate-v0.1",
+  "generatedAt": "2026-10-14",
+  "scope": "research candidates only",
+  "rules": [
+    {
+      "ruleId": "k03a-career-context-order-001",
+      "ruleVersion": "candidate-1",
+      "profile": "profile-unresolved",
+      "topic": "career",
+      "premises": [
+        "Mệnh and Thân facts are available",
+        "Thiên Di, Tài Bạch and Quan Lộc star/state/aspect facts are available"
+      ],
+      "conditions": [
+        "Evaluate Mệnh state and transformations",
+        "Evaluate Thân",
+        "Evaluate the Di–Tài–Quan three-palace relation including recorded conflict relations"
+      ],
+      "exclusions": [
+        "Do not substitute Nô Bộc for the sourced Di–Tài–Quan relation",
+        "Do not emit behavior, occupation or outcome claims from this ordering rule"
+      ],
+      "exceptions": [
+        "Terms such as miếu/vượng, hóa cát/kỵ, hình/xung/khắc/phá require a separately versioned profile"
+      ],
+      "counterEvidence": [
+        "Any profile whose palace relation differs is non-comparable until mapped"
+      ],
+      "crossPalaceRelation": {
+        "type": "reading-context",
+        "palaces": ["Mệnh", "Thân", "Thiên Di", "Tài Bạch", "Quan Lộc"],
+        "explicitlyNotIncluded": ["Nô Bộc"]
+      },
+      "sourcePassageIds": ["k03a-v3-reading-order"],
+      "status": "candidate-source-backed-not-independent",
+      "blockers": [
+        "School/profile identity is unresolved",
+        "No independent source family has confirmed this ordering",
+        "Required state/aspect vocabulary is not normalized"
+      ],
+      "proposedTestCaseIds": ["k03a-case-context-complete", "k03a-case-context-missing"]
+    },
+    {
+      "ruleId": "k03a-empty-menh-tai-quan-001",
+      "ruleVersion": "candidate-1",
+      "profile": "profile-unresolved",
+      "topic": "career",
+      "premises": [
+        "Mệnh has no direct principal star",
+        "Tài Bạch and Quan Lộc facts and aspect relations are available"
+      ],
+      "conditions": [
+        "Use Tài Bạch and Quan Lộc context before any conclusion",
+        "Record whether qualifying auspicious/adverse states are actually defined by the selected profile"
+      ],
+      "exclusions": [
+        "Do not borrow a particular opposite-palace star from this passage",
+        "Do not infer personal capacity, profession, wealth or success"
+      ],
+      "exceptions": [
+        "If auspicious/adverse classifications or aspect geometry are missing, fail closed"
+      ],
+      "counterEvidence": [
+        "Adverse three-way aspects are mentioned by the same section but not yet normalized into an admitted conflict rule"
+      ],
+      "crossPalaceRelation": {
+        "type": "conditional-context",
+        "palaces": ["Mệnh", "Tài Bạch", "Quan Lộc"]
+      },
+      "sourcePassageIds": ["k03a-v3-empty-menh"],
+      "status": "candidate-source-backed-not-independent",
+      "blockers": [
+        "Profile vocabulary and aspect geometry unresolved",
+        "No independent source family confirmation",
+        "Traditional outcome wording is outside the approved modern inference boundary"
+      ],
+      "proposedTestCaseIds": [
+        "k03a-case-empty-menh-supported-context",
+        "k03a-case-empty-menh-undefined-state"
+      ]
+    },
+    {
+      "ruleId": "k03a-tianxiang-quan-001",
+      "ruleVersion": "candidate-1",
+      "profile": "profile-unresolved",
+      "topic": "career",
+      "premises": [
+        "Thiên Tướng is directly placed in Quan Lộc",
+        "Tử Vi, Tả Phụ, Hữu Bật and palace-state facts are available"
+      ],
+      "conditions": [
+        "Retain only the source-level seal/Quan Lộc symbolism",
+        "Evaluate the explicitly named supporting and competing conditions"
+      ],
+      "exclusions": [
+        "Do not state that the reader manages, coordinates or leads well",
+        "Do not predict rank, authority, promotion or success"
+      ],
+      "exceptions": ["Missing support/state facts make personalized output unavailable"],
+      "counterEvidence": [
+        "The passage itself changes the traditional reading when Tử Vi or supporting stars are present"
+      ],
+      "crossPalaceRelation": {
+        "type": "star-context-only",
+        "palaces": ["Quan Lộc"],
+        "note": "No sourced Menh–Quan–No relationship was found."
+      },
+      "sourcePassageIds": ["k03a-v1-tianxiang-career"],
+      "status": "blocked-for-reader-facing-use",
+      "blockers": [
+        "Only one unresolved textual lineage",
+        "Historical status/outcome language cannot be converted into approved modern behavioral claims",
+        "No sourced Menh–Quan–No synthesis"
+      ],
+      "proposedTestCaseIds": ["k03a-case-tianxiang-exact", "k03a-case-tianxiang-missing-support"]
+    }
+  ],
+  "explicitGap": {
+    "relation": "Mệnh–Quan Lộc–Nô Bộc",
+    "status": "blocked",
+    "reason": "The reviewed passages do not define this three-palace relation. Nô Bộc occurs only in star-specific fragments and cannot be promoted to a career synthesis.",
+    "requiredEvidence": [
+      "A lawful page-level passage explicitly connecting the three palaces",
+      "Definitions of qualifying states, aspects, exclusions and exceptions",
+      "A second independent textual or implementation family when feasible"
+    ]
+  }
+}

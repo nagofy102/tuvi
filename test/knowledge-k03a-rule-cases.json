@@ -1,0 +1,78 @@
+{
+  "artifactVersion": "hv-k03a-rule-cases-v0.1",
+  "notice": "Structural proposed tests only; inputs are synthetic and are not astrology oracles.",
+  "cases": [
+    {
+      "caseId": "k03a-case-context-complete",
+      "ruleId": "k03a-career-context-order-001",
+      "inputShape": {
+        "hasMenhFacts": true,
+        "hasThanFacts": true,
+        "hasDiTaiQuanFacts": true,
+        "hasVersionedStateAndAspectProfile": true
+      },
+      "expectedResearchDisposition": "eligible-for-rule-review",
+      "forbiddenOutput": ["behavior claim", "occupation claim", "outcome prediction"]
+    },
+    {
+      "caseId": "k03a-case-context-missing",
+      "ruleId": "k03a-career-context-order-001",
+      "inputShape": {
+        "hasMenhFacts": true,
+        "hasThanFacts": false,
+        "hasDiTaiQuanFacts": false,
+        "hasVersionedStateAndAspectProfile": false
+      },
+      "expectedResearchDisposition": "fail-closed-missing-evidence"
+    },
+    {
+      "caseId": "k03a-case-empty-menh-supported-context",
+      "ruleId": "k03a-empty-menh-tai-quan-001",
+      "inputShape": {
+        "menhDirectPrincipalCount": 0,
+        "hasTaiFacts": true,
+        "hasQuanFacts": true,
+        "hasVersionedAspectProfile": true
+      },
+      "expectedResearchDisposition": "eligible-for-rule-review",
+      "forbiddenOutput": [
+        "borrow unspecified opposite star",
+        "wealth prediction",
+        "career success prediction"
+      ]
+    },
+    {
+      "caseId": "k03a-case-empty-menh-undefined-state",
+      "ruleId": "k03a-empty-menh-tai-quan-001",
+      "inputShape": {
+        "menhDirectPrincipalCount": 0,
+        "hasTaiFacts": true,
+        "hasQuanFacts": true,
+        "hasVersionedAspectProfile": false
+      },
+      "expectedResearchDisposition": "fail-closed-profile-undefined"
+    },
+    {
+      "caseId": "k03a-case-tianxiang-exact",
+      "ruleId": "k03a-tianxiang-quan-001",
+      "inputShape": {
+        "directQuanPrincipalStars": ["Thiên Tướng"],
+        "hasZiweiContext": true,
+        "hasLeftRightContext": true,
+        "hasPalaceState": true
+      },
+      "expectedResearchDisposition": "blocked-pending-independent-evidence-and-editorial-boundary"
+    },
+    {
+      "caseId": "k03a-case-tianxiang-missing-support",
+      "ruleId": "k03a-tianxiang-quan-001",
+      "inputShape": {
+        "directQuanPrincipalStars": ["Thiên Tướng"],
+        "hasZiweiContext": false,
+        "hasLeftRightContext": false,
+        "hasPalaceState": false
+      },
+      "expectedResearchDisposition": "fail-closed-missing-evidence"
+    }
+  ]
+}
