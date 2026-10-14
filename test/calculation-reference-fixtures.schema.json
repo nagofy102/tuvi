@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://huyenvi.local/schemas/calculation-reference-fixtures-v0.1.json",
+  "title": "Huyen Vi calculation reference fixture research contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "datasetStatus", "notice", "observations"],
+  "properties": {
+    "schemaVersion": { "const": "calculation-reference-fixtures-v0.1" },
+    "datasetStatus": {
+      "enum": ["research-observations-only", "candidate-reference", "admitted-reference"]
+    },
+    "notice": { "type": "string", "minLength": 1 },
+    "observations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/observation" }
+    }
+  },
+  "$defs": {
+    "nullableString": { "type": ["string", "null"] },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profileId",
+        "calendarConvention",
+        "timezone",
+        "lateTyRule",
+        "leapMonthRule",
+        "school",
+        "compatibility"
+      ],
+      "properties": {
+        "profileId": { "$ref": "#/$defs/nullableString" },
+        "calendarConvention": { "$ref": "#/$defs/nullableString" },
+        "timezone": { "type": ["number", "string", "null"] },
+        "lateTyRule": { "$ref": "#/$defs/nullableString" },
+        "leapMonthRule": { "$ref": "#/$defs/nullableString" },
+        "school": { "$ref": "#/$defs/nullableString" },
+        "compatibility": {
+          "enum": ["compatible", "partial", "unknown", "incompatible"]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "sourceUrl",
+        "sourceRevision",
+        "sourceFamilyId",
+        "implementationFamilyId",
+        "retrievedAt",
+        "retrievalMethod",
+        "artifactDigest"
+      ],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "sourceRevision": { "$ref": "#/$defs/nullableString" },
+        "sourceFamilyId": { "type": "string", "minLength": 1 },
+        "implementationFamilyId": { "$ref": "#/$defs/nullableString" },
+        "retrievedAt": { "type": "string", "format": "date" },
+        "retrievalMethod": { "type": "string", "minLength": 1 },
+        "artifactDigest": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observationId",
+        "status",
+        "fieldFamilies",
+        "input",
+        "profile",
+        "provenance",
+        "observedOutput",
+        "comparability",
+        "limitations"
+      ],
+      "properties": {
+        "observationId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+        "status": {
+          "enum": [
+            "observed-not-golden",
+            "candidate-expected",
+            "admitted-expected",
+            "blocked",
+            "unresolved"
+          ]
+        },
+        "fieldFamilies": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "calendar-conversion",
+              "leap-month",
+              "lunar-month-length",
+              "timezone-boundary",
+              "late-ty-boundary",
+              "palace-placement",
+              "body-palace",
+              "major-stars",
+              "minor-stars",
+              "four-transformations",
+              "metadata"
+            ]
+          }
+        },
+        "input": { "type": "object" },
+        "profile": { "$ref": "#/$defs/profile" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "command": { "$ref": "#/$defs/nullableString" },
+        "observedOutput": {},
+        "comparability": {
+          "enum": [
+            "comparable-candidate",
+            "compatible-partial",
+            "different-profile",
+            "self-engine-regression-only",
+            "non-comparable",
+            "blocked"
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "disagreementId": { "$ref": "#/$defs/nullableString" }
+      }
+    }
+  }
+}

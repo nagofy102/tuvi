@@ -1,0 +1,212 @@
+{
+  "schemaVersion": "calculation-reference-fixtures-v0.1",
+  "datasetStatus": "research-observations-only",
+  "notice": "Synthetic and public-source observations only. No record in this file is a golden fixture or an independently verified Tu Vi chart.",
+  "observations": [
+    {
+      "observationId": "k02.hko.1985-03-21",
+      "status": "unresolved",
+      "fieldFamilies": ["calendar-conversion", "leap-month", "timezone-boundary"],
+      "input": { "calendar": "gregorian", "date": "1985-03-21" },
+      "profile": {
+        "profileId": null,
+        "calendarConvention": "HKO Gregorian-Lunar annual conversion table",
+        "timezone": null,
+        "lateTyRule": null,
+        "leapMonthRule": "not documented at rule level in the inspected table/API documentation",
+        "school": null,
+        "compatibility": "unknown"
+      },
+      "provenance": {
+        "sourceId": "k01a-hko-gregorian-lunar-tables",
+        "sourceUrl": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/1985e.pdf",
+        "sourceRevision": "retrieved-2026-10-14",
+        "sourceFamilyId": "hko-official-calendar-tables",
+        "implementationFamilyId": null,
+        "retrievedAt": "2026-10-14",
+        "retrievalMethod": "HTTP GET of official annual PDF; manual row/column reading after pdftotext -layout",
+        "artifactDigest": "sha256:fd8c0c6a978ac9429533908f6a3b6ed32cb72fb5bdef9f5fbaa4617e02f41eb6"
+      },
+      "command": "curl -L --fail -o 1985e.pdf https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/1985e.pdf && pdftotext -layout 1985e.pdf 1985e.txt",
+      "observedOutput": {
+        "lunarYear": "Yi-chou",
+        "lunarMonth": 2,
+        "lunarDay": 1,
+        "isLeapMonth": false
+      },
+      "comparability": "compatible-partial",
+      "limitations": [
+        "The inspected HKO table does not state its timezone or complete calculation rules.",
+        "This calendar observation does not validate any Tu Vi palace or star placement.",
+        "The target calculation profile has not been proven equivalent to the HKO convention."
+      ],
+      "disagreementId": "calc-disagreement-1985-03-21"
+    },
+    {
+      "observationId": "k02.hko.2023-leap-month-boundaries",
+      "status": "observed-not-golden",
+      "fieldFamilies": ["calendar-conversion", "leap-month", "lunar-month-length"],
+      "input": {
+        "calendar": "gregorian",
+        "dates": ["2023-03-21", "2023-03-22", "2023-04-19", "2023-04-20"]
+      },
+      "profile": {
+        "profileId": null,
+        "calendarConvention": "HKO Gregorian-Lunar Open Data API",
+        "timezone": null,
+        "lateTyRule": null,
+        "leapMonthRule": "output labels only; algorithm not specified",
+        "school": null,
+        "compatibility": "unknown"
+      },
+      "provenance": {
+        "sourceId": "k01a-hko-gregorian-lunar-tables",
+        "sourceUrl": "https://data.weather.gov.hk/weatherAPI/opendata/lunardate.php?date=2023-03-22",
+        "sourceRevision": "HKO-Open-Data-API-documentation-v1.15-Sep-2025",
+        "sourceFamilyId": "hko-official-calendar-tables",
+        "implementationFamilyId": "hko-open-data-api",
+        "retrievedAt": "2026-10-14",
+        "retrievalMethod": "Four bounded HTTP GET requests to the documented public API",
+        "artifactDigest": null
+      },
+      "command": "for d in 2023-03-21 2023-03-22 2023-04-19 2023-04-20; do curl -L --fail --silent https://data.weather.gov.hk/weatherAPI/opendata/lunardate.php?date=$d; done",
+      "observedOutput": [
+        { "date": "2023-03-21", "lunarDate": "二月三十" },
+        { "date": "2023-03-22", "lunarDate": "閏二月初一" },
+        { "date": "2023-04-19", "lunarDate": "閏二月廿九" },
+        { "date": "2023-04-20", "lunarDate": "三月初一" }
+      ],
+      "comparability": "compatible-partial",
+      "limitations": [
+        "The API supports only current-year through current-year-plus-two at the inspected revision; 1985 returned Not Available.",
+        "Labels establish observed boundaries, not the underlying astronomical/profile rules.",
+        "Timezone is not specified in the inspected API request/response contract."
+      ],
+      "disagreementId": null
+    },
+    {
+      "observationId": "k02.lasotuvi.0_1_2.full-chart-2000-08-29-hour-6-male-tz7",
+      "status": "observed-not-golden",
+      "fieldFamilies": ["calendar-conversion", "palace-placement", "body-palace", "major-stars"],
+      "input": {
+        "calendar": "gregorian",
+        "date": "2000-08-29",
+        "gioSinh": 6,
+        "gender": 1,
+        "timezone": 7
+      },
+      "profile": {
+        "profileId": null,
+        "calendarConvention": "lasotuvi Lich_HND conversion",
+        "timezone": 7,
+        "lateTyRule": null,
+        "leapMonthRule": "conversion returns a leap flag, but lapDiaBan does not consume it",
+        "school": null,
+        "compatibility": "unknown"
+      },
+      "provenance": {
+        "sourceId": "oss.lasotuvi",
+        "sourceUrl": "https://github.com/doanguyen/lasotuvi",
+        "sourceRevision": "git:ace8379a3ea033674e8a9096f5b98a9e2041eace",
+        "sourceFamilyId": "doanguyen-lasotuvi",
+        "implementationFamilyId": "impl.doanguyen-lasotuvi-hnd",
+        "retrievedAt": "2026-10-14",
+        "retrievalMethod": "Isolated temporary clone; direct PYTHONPATH import without package installation",
+        "artifactDigest": null
+      },
+      "command": "PYTHONPATH=<sandbox>/lasotuvi python3 -c 'from lasotuvi.App import lapDiaBan; from lasotuvi.DiaBan import diaBan; lapDiaBan(diaBan,29,8,2000,6,1,True,7)'",
+      "observedOutput": {
+        "lunarDate": { "year": 2000, "month": 8, "day": 1, "isLeapMonth": false },
+        "soulPalaceBranch": "Thìn",
+        "bodyPalaceBranch": "Dần",
+        "majorStarsByBranch": {
+          "Mão": ["Liêm trinh", "Phá quân"],
+          "Tỵ": ["Thiên phủ"],
+          "Ngọ": ["Thiên đồng", "Thái âm"],
+          "Mùi": ["Vũ khúc", "Tham lang"],
+          "Thân": ["Thái Dương", "Cự môn"],
+          "Dậu": ["Thiên tướng"],
+          "Tuất": ["Thiên cơ", "Thiên lương"],
+          "Hợi": ["Tử vi", "Thất sát"]
+        }
+      },
+      "comparability": "non-comparable",
+      "limitations": [
+        "No school/calculation profile is declared by the repository.",
+        "The integer gioSinh API is not a civil timestamp and cannot verify the 23:00 day-rollover rule.",
+        "This is an implementation observation, not an expected chart."
+      ],
+      "disagreementId": null
+    },
+    {
+      "observationId": "k02.lasotuvi.0_1_2.1985-timezone-probe",
+      "status": "unresolved",
+      "fieldFamilies": ["calendar-conversion", "leap-month", "timezone-boundary"],
+      "input": { "calendar": "gregorian", "date": "1985-03-21", "timezones": [7, 8] },
+      "profile": {
+        "profileId": null,
+        "calendarConvention": "lasotuvi Lich_HND conversion",
+        "timezone": "varied: UTC+7 and UTC+8",
+        "lateTyRule": null,
+        "leapMonthRule": "HND output leap flag; downstream chart calculation discards it",
+        "school": null,
+        "compatibility": "unknown"
+      },
+      "provenance": {
+        "sourceId": "oss.lasotuvi",
+        "sourceUrl": "https://github.com/doanguyen/lasotuvi/blob/ace8379a3ea033674e8a9096f5b98a9e2041eace/lasotuvi/Lich_HND.py",
+        "sourceRevision": "git:ace8379a3ea033674e8a9096f5b98a9e2041eace",
+        "sourceFamilyId": "doanguyen-lasotuvi",
+        "implementationFamilyId": "impl.doanguyen-lasotuvi-hnd",
+        "retrievedAt": "2026-10-14",
+        "retrievalMethod": "Direct local call to S2L in isolated clone",
+        "artifactDigest": null
+      },
+      "command": "PYTHONPATH=<sandbox>/lasotuvi python3 -c 'from lasotuvi.Lich_HND import S2L; print(S2L(21,3,1985,7), S2L(21,3,1985,8))'",
+      "observedOutput": {
+        "UTC+7": { "year": 1985, "month": 2, "day": 1, "isLeapMonth": true },
+        "UTC+8": { "year": 1985, "month": 2, "day": 1, "isLeapMonth": false }
+      },
+      "comparability": "different-profile",
+      "limitations": [
+        "This demonstrates timezone sensitivity in one implementation, not which profile is correct.",
+        "HKO does not state timezone in the inspected conversion contract, so equality with UTC+8 is not proof of identical rules.",
+        "The case remains unresolved and is not admitted as expected data."
+      ],
+      "disagreementId": "calc-disagreement-1985-03-21"
+    },
+    {
+      "observationId": "k02.dqcai.1_0_1.blocked",
+      "status": "blocked",
+      "fieldFamilies": ["calendar-conversion"],
+      "input": {},
+      "profile": {
+        "profileId": null,
+        "calendarConvention": null,
+        "timezone": null,
+        "lateTyRule": null,
+        "leapMonthRule": null,
+        "school": null,
+        "compatibility": "unknown"
+      },
+      "provenance": {
+        "sourceId": "oss.dqcai-vn-lunar",
+        "sourceUrl": "https://github.com/cuongdqpayment/dqcai-vn-lunar",
+        "sourceRevision": null,
+        "sourceFamilyId": "dqcai-vn-lunar-unknown-lineage",
+        "implementationFamilyId": "impl.dqcai-vn-lunar-unknown-lineage",
+        "retrievedAt": "2026-10-14",
+        "retrievalMethod": "Carried forward from K01B; no K02 execution",
+        "artifactDigest": null
+      },
+      "command": null,
+      "observedOutput": null,
+      "comparability": "blocked",
+      "limitations": [
+        "License discrepancy and algorithm lineage remain unresolved.",
+        "Product Owner explicitly requires this implementation to remain blocked."
+      ],
+      "disagreementId": null
+    }
+  ]
+}
