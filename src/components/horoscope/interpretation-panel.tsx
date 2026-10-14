@@ -13,10 +13,189 @@ import type {
   StarReading,
 } from '@/domain/interpretation/types';
 import type { ReadingConcern } from '@/domain/interpretation/types';
+import type {
+  BriefClaim,
+  BriefEvidence,
+  ReadingBriefV1,
+} from '@/domain/interpretation/reading-brief-schema';
 import { presentContext, vietnamToday } from '@/domain/interpretation/present';
 import { sortThemes } from '@/domain/interpretation/themes';
 import { KNOWLEDGE_PROFILE, resolvePassage, resolveRule } from '@/domain/interpretation/knowledge';
 import './interpretation-panel.css';
+
+const BRIEF_TOPIC_LABELS: Record<ReadingBriefV1['topic'], string> = {
+  overview: 'Tổng quan',
+  career: 'Công việc',
+  finance: 'Tài lộc',
+  relationship: 'Tình duyên',
+};
+
+function ReadingBriefOriginLabel({ brief }: { brief: ReadingBriefV1 }) {
+  if (brief.dataOrigin === 'demonstration') {
+    return (
+      <p className="reading-brief-origin" role="note">
+        Bản minh họa — không phải luận giải cá nhân đã xác minh.
+      </p>
+    );
+  }
+  if (brief.dataOrigin === 'structural-mock') {
+    return (
+      <p className="reading-brief-origin" role="note">
+        Mẫu cấu trúc để duyệt cách viết — không phải luận giải cá nhân.
+      </p>
+    );
+  }
+  return <p className="reading-brief-reference">Bản đọc tham khảo theo dữ kiện lá số</p>;
+}
+
+function BriefEvidenceList({
+  claim,
+  evidence,
+  brief,
+}: {
+  claim: BriefClaim;
+  evidence: Map<string, BriefEvidence>;
+  brief: ReadingBriefV1;
+}) {
+  const items = claim.evidenceIds.flatMap((id) => {
+    const item = evidence.get(id);
+    return item ? [item] : [];
+  });
+
+  return (
+    <ul className="reading-brief-evidence-list">
+      {items.map((item) => (
+        <li key={item.id}>
+          <p>{item.explanation}</p>
+          {item.limitations.length > 0 && (
+            <ul>
+              {item.limitations.map((limit) => (
+                <li key={limit}>{limit}</li>
+              ))}
+            </ul>
+          )}
+          <p className="reading-brief-evidence-meta">
+            Quy tắc {item.rule.id} · phiên bản {item.rule.version}
+          </p>
+          <ul className="reading-brief-source-links">
+            {item.sourceIds.flatMap((sourceId) => {
+              const source = brief.sourceRevision.sources.find(
+                (candidate) => candidate.sourceId === sourceId,
+              );
+              return source
+                ? [
+                    <li key={source.sourceId}>
+                      <a href={source.url} target="_blank" rel="noopener noreferrer">
+                        Mở đoạn nguồn {source.sourceId} (tab mới)
+                      </a>
+                    </li>,
+                  ]
+                : [];
+            })}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * Pure Reading Brief v1 presentation boundary. The deterministic adapter owns
+ * validation and grounding; this component never infers or repairs content.
+ */
+export function ReadingBriefView({ brief }: { brief: ReadingBriefV1 }) {
+  const headingId = `reading-brief-${brief.readingId}`;
+  const evidenceById = new Map(brief.evidence.map((item) => [item.id, item]));
+
+  if (brief.status !== 'ready') {
+    const unavailable = brief.status === 'unavailable';
+    return (
+      <section
+        className="reading-brief reading-brief-state"
+        data-reading-origin={brief.dataOrigin}
+        data-reading-status={brief.status}
+        aria-labelledby={headingId}
+      >
+        <ReadingBriefOriginLabel brief={brief} />
+        <h3 id={headingId}>
+          {unavailable ? 'Chưa thể tạo bản đọc' : 'Chưa có kết luận riêng cho phần này'}
+        </h3>
+        <p role="status">
+          {brief.validation.message ??
+            (unavailable
+              ? 'Dữ kiện hiện tại chưa thể dùng để tạo bản đọc.'
+              : 'Chưa đủ căn cứ đã duyệt để tạo phần luận giải này.')}
+        </p>
+        <p>Hệ thống không tạo nhận định hoặc lời khuyên thay thế khi thiếu căn cứ.</p>
+      </section>
+    );
+  }
+
+  const conclusion = brief.conclusion;
+  if (!conclusion) return null;
+
+  const primaryClaimIds = new Set([
+    conclusion.claimId,
+    ...brief.insights.map((insight) => insight.claimId),
+  ]);
+  const additionalParagraphs =
+    brief.topicReading?.paragraphs.filter((paragraph) => !primaryClaimIds.has(paragraph.claimId)) ??
+    [];
+
+  return (
+    <section
+      className="reading-brief"
+      data-reading-origin={brief.dataOrigin}
+      data-reading-status={brief.status}
+      aria-labelledby={headingId}
+    >
+      <header className="reading-brief-header">
+        <ReadingBriefOriginLabel brief={brief} />
+        <p className="reading-brief-topic">{BRIEF_TOPIC_LABELS[brief.topic]}</p>
+        <h3 id={headingId}>{conclusion.plainText}</h3>
+      </header>
+
+      <details className="reading-brief-evidence reading-brief-conclusion-evidence">
+        <summary>Căn cứ cho kết luận</summary>
+        <BriefEvidenceList claim={conclusion} evidence={evidenceById} brief={brief} />
+      </details>
+
+      <div className="reading-brief-insights" aria-label="Những điểm nổi bật">
+        {brief.insights.map((insight) => (
+          <article className="reading-brief-insight" key={insight.id}>
+            <h4>{insight.title}</h4>
+            <p>{insight.plainText}</p>
+            {insight.nextStep && (
+              <div className="reading-brief-next-step">
+                <h5>Gợi ý thực hành</h5>
+                <p>{insight.nextStep}</p>
+              </div>
+            )}
+            <details className="reading-brief-evidence">
+              <summary>Căn cứ của nhận định</summary>
+              <BriefEvidenceList claim={insight} evidence={evidenceById} brief={brief} />
+            </details>
+          </article>
+        ))}
+      </div>
+
+      {additionalParagraphs.length > 0 && (
+        <div className="reading-brief-topic-reading" aria-label="Đọc theo chủ đề">
+          {additionalParagraphs.map((paragraph) => (
+            <p key={paragraph.claimId}>{paragraph.plainText}</p>
+          ))}
+        </div>
+      )}
+
+      {brief.topicReading?.nextStep && (
+        <aside className="reading-brief-next-step" aria-label="Gợi ý thực hành tùy chọn">
+          <h4>Gợi ý thực hành</h4>
+          <p>{brief.topicReading.nextStep}</p>
+        </aside>
+      )}
+    </section>
+  );
+}
 
 function SourceLinks({ sourceIds }: { sourceIds: string[] }) {
   const sources = INTERPRETATION_SOURCES.filter((source) => sourceIds.includes(source.id));
