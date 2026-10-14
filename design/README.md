@@ -32,6 +32,10 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
   Quan Lộc vô chính diệu BLOCKED vì chưa có quy tắc liên cung đủ nguồn. Chưa tạo
   template approved hoặc sửa runtime.
 
+- `reading-r07b-copy-approval.md`: văn mẫu C1/C2 đã biên tập và truy vết từng câu,
+  đang chờ Product Owner duyệt nguyên văn. Chưa đổi template sang approved, chưa
+  sửa runtime hoặc chạy coverage sau mở rộng.
+
 - `reading-ux-vnext.md`: nền thiết kế cho hành trình kết luận trước. HV-R03 hiện
   hiển thị kết luận, một insight, căn cứ mở rộng, nhãn demo và trạng thái thiếu
   căn cứ trên mobile/desktop; không phải tính năng AI/API.
