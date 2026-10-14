@@ -26,7 +26,13 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
   Chúng không thay registry runtime cũ và chưa mở admission/rule mới.
 
 - `knowledge-k01-execution.md`: phân công worktree/file ownership, acceptance,
-  integration gates và stop conditions cho K01A/K01B đang chạy song song.
+  integration gates và stop conditions cho K01A/K01B đã hoàn tất nghiên cứu.
+
+- `knowledge-source-inventory.{md,json}`: K01A, 12 nguồn đã kiểm tra locator thực tế;
+  vẫn là candidate/blocked, không phải passage/rule được admit.
+
+- `calculation-implementation-survey.md`: K01B, lineage/license/profile của website
+  và OSS engine đã khảo sát; observation chưa phải golden oracle.
 
 - `knowledge-enrichment-prompts.md`: HV-K00, các task brief K01–K07 giới hạn theo
   session, dependency, artifact, chống hallucination và stop gate. Đây là prompt

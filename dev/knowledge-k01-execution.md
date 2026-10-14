@@ -2,6 +2,8 @@
 
 Ngày 14/10/2026. Coordinator/integration owner: PM main thread.
 Baseline chung: `e7c4f0fa902d173992948af8acaae5f53fb75c8a`.
+Hai task đã hoàn tất và được PM tích hợp sau ownership/evidence review; các worktree
+được giữ nguyên cho tới khi Product Owner review K01.
 
 ## Worktree assignments
 
@@ -14,6 +16,9 @@ Baseline chung: `e7c4f0fa902d173992948af8acaae5f53fb75c8a`.
 Không task nào được sửa `src/`, registry/schema chung, R07B, UI hoặc AI Writer.
 Task branch không push; PM review, cherry-pick theo thứ tự và là người duy nhất push
 `origin/main`.
+
+Task commits nhận từ worktree: K01A `8c982b48...`; K01B `bd514d95...` và correction
+`1143037d...`. Integration commits có SHA khác do cherry-pick và được ghi trong Git.
 
 ## Shared contract
 

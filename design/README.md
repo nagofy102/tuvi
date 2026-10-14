@@ -24,8 +24,11 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 ## Tài liệu
 
 - `knowledge-first-strategy.md`: HV-K00, chiến lược chuyển sang Knowledge-First,
-  kiến trúc ba lớp, roadmap K01–K07, vai trò/rủi ro và các quyết định đang chờ
-  Product Owner. R07B/UI/AI Writer tạm dừng; chưa triển khai knowledge graph.
+  kiến trúc ba lớp, roadmap K01–K07 và các quyết định Product Owner đã duyệt.
+  R07B/UI/AI Writer tạm dừng; chưa triển khai knowledge graph.
+
+- `knowledge-k01-report.md`: kết quả tích hợp K01C-Lite/K01A/K01B, registry ban đầu,
+  nguồn/engine đã kiểm tra thực tế, khoảng trống và các lựa chọn chờ PO review.
 
 - `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight đã được Product
   Owner duyệt làm baseline. Runtime/UI deterministic cho đúng cấu trúc A1 đã triển
