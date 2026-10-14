@@ -1,10 +1,11 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { BookOpen, Compass, Heart, Wallet } from 'lucide-react';
 import type { ChartResult } from '@/domain/astrology/types';
 import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
+import { buildCareerReadingBrief } from '@/domain/interpretation/reading-brief';
 import type {
   ContextualInsight,
   CareerNarrative,
@@ -29,6 +30,22 @@ const BRIEF_TOPIC_LABELS: Record<ReadingBriefV1['topic'], string> = {
   finance: 'Tài lộc',
   relationship: 'Tình duyên',
 };
+
+function markBriefAsDemonstration(brief: ReadingBriefV1): ReadingBriefV1 {
+  return {
+    ...brief,
+    dataOrigin: 'demonstration',
+    verificationStatus: 'unverified',
+    validation: {
+      ...brief.validation,
+      reasons: [...new Set([...brief.validation.reasons, 'mock-only' as const])],
+      message: 'Bản minh họa — không phải luận giải từ lá số đã được kiểm chứng độc lập.',
+      schema: 'not-run',
+      grounding: 'demonstration-only',
+      independentVerificationRef: null,
+    },
+  };
+}
 
 function ReadingBriefOriginLabel({ brief }: { brief: ReadingBriefV1 }) {
   if (brief.dataOrigin === 'demonstration') {
@@ -120,7 +137,7 @@ export function ReadingBriefView({ brief }: { brief: ReadingBriefV1 }) {
         <h3 id={headingId}>
           {unavailable ? 'Chưa thể tạo bản đọc' : 'Chưa có kết luận riêng cho phần này'}
         </h3>
-        <p role="status">
+        <p>
           {brief.validation.message ??
             (unavailable
               ? 'Dữ kiện hiện tại chưa thể dùng để tạo bản đọc.'
@@ -499,6 +516,23 @@ export function InterpretationPanel({
 }) {
   const report = useMemo(() => calculateInterpretation(chart), [chart]);
   const [concern, setConcern] = useState<ReadingConcern>('career');
+  const [readingIdentity, setReadingIdentity] = useState<{
+    chart: ChartResult;
+    id: string;
+  } | null>(null);
+  useEffect(() => {
+    setReadingIdentity({ chart, id: crypto.randomUUID() });
+  }, [chart]);
+  const readingBrief = useMemo(() => {
+    if (readingIdentity?.chart !== chart) return null;
+    const brief = buildCareerReadingBrief({
+      chart,
+      interpretation: report,
+      readingId: readingIdentity.id,
+      topic: concern,
+    });
+    return isExample ? markBriefAsDemonstration(brief) : brief;
+  }, [chart, concern, isExample, readingIdentity, report]);
   const present = presentContext(chart, vietnamToday());
   return (
     <section id="ban-doc" className="interpretation-panel" aria-labelledby="interpretation-heading">
@@ -526,6 +560,7 @@ export function InterpretationPanel({
         )}
       </header>
       <div className="interpretation-content">
+        {report.status === 'ready' && readingBrief && <ReadingBriefView brief={readingBrief} />}
         {report.status === 'unavailable' ? (
           <div className="interpretation-notice">
             <h4>Chưa thể tạo bản đọc</h4>

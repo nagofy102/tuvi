@@ -250,3 +250,20 @@ Bộ lá số chuẩn 200–300 ca, việc thuê chuyên gia và các mốc nghi
 Sau mỗi lần chạy, ghi ngày, revision Git, lệnh, môi trường, số ca và lỗi còn tồn tại.
 Fixture Tử Vi phải ghi nguồn, trường phái và phiên bản quy tắc; không tự lấy output của
 thuật toán làm expected output rồi coi là kiểm chứng.
+
+### HV-R03/R04/R05 — Reading Brief v1 — 2026-10-14
+
+- Shared schema rejects unknown fields, invalid status/origin/verification
+  combinations, unresolved claim/evidence references, unapproved templates and
+  duplicate semantic insights.
+- Exact synthetic A1 SignalSet selects one approved insight; a distinct synthetic
+  1990 SignalSet returns `insufficient-evidence`. These are regression inputs, not
+  independently verified astrology oracles.
+- `npm run typecheck`, production `npm run build`, 321/321 unit tests and 31/31
+  Chromium E2E tests passed after integration.
+- E2E covers 320px layout, expandable evidence, persistent demo label, honest
+  insufficient state, no POST transfer, WCAG A/AA and existing enhanced AAA
+  contrast gate.
+- Scope remains one exact Công việc A1 structure. No claim is made for other star
+  combinations, conflicting signals, formations, fortune periods or predictive
+  validity.

@@ -132,4 +132,16 @@ Current Style A rubric, two observed synthetic SignalSets, proposed expected
 template selection and current four-payload review are at
 [reading-style-a-review.md](reading-style-a-review.md). The historical HV-R02
 counts above must not be reused as current results. Current examples have insight
-counts 1/1/0/1; schema/grounding runtime checks remain unimplemented.
+counts 1/1/0/1; schema/grounding runtime checks were unimplemented at that handoff.
+
+## Implementation handoff — HV-R05 (2026-10-14)
+
+HV-R04A contract, HV-R04B deterministic A1 adapter and HV-R03 presentation seam
+are implemented. Integration checks passed: typecheck, production build, 321 unit
+tests and 31 Chromium E2E tests. The E2E suite includes an admitted A1 case and a
+distinct SignalSet that must remain `insufficient-evidence`, plus demo isolation,
+mobile evidence disclosure, accessibility and absence of POST data transfer.
+
+Passing these checks establishes contract and UI behavior only. The two synthetic
+SignalSets are not independent astrology ground truth, and A1 remains an
+editorial-symbolic reading bounded by the reviewed sources.

@@ -23,12 +23,13 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
-- `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight; phương án hai
-  insight bị loại do trùng luận điểm. Bốn payload minh họa cần người dùng duyệt;
-  chưa mở UI/AI.
+- `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight đã được Product
+  Owner duyệt làm baseline. Runtime/UI deterministic cho đúng cấu trúc A1 đã triển
+  khai; phương án hai insight vẫn bị loại do trùng luận điểm. Không có AI/API.
 
-- `reading-ux-vnext.md`: audit và kế hoạch chờ duyệt cho hành trình kết luận trước
-  lá số; không phải tính năng AI/API đã triển khai.
+- `reading-ux-vnext.md`: nền thiết kế cho hành trình kết luận trước. HV-R03 hiện
+  hiển thị kết luận, một insight, căn cứ mở rộng, nhãn demo và trạng thái thiếu
+  căn cứ trên mobile/desktop; không phải tính năng AI/API.
 
 - `career-reading-upgrade.md`: nâng cấp Công việc theo năm tiêu chí người dùng
   chốt; luận biểu tượng trước, căn cứ và gợi ý thực hành tách riêng. Phạm vi BA

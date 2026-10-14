@@ -133,7 +133,7 @@
   background: #f7f3e9;
 }
 .reading-brief-state > p:last-child {
-  color: #536159;
+  color: #35433c;
 }
 @media (min-width: 760px) {
   .reading-brief-insights:has(> :nth-child(2)) {
