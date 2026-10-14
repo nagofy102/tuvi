@@ -1,0 +1,215 @@
+{
+  "artifactVersion": "hv-k04a-rule-prototype-v0.1",
+  "ontologyContractVersion": "0.1.0",
+  "dataOrigin": "source-backed-research-prototype",
+  "productionEligible": false,
+  "purpose": "Evaluate two existing K03A methodology candidates without creating reader-facing claims.",
+  "vocabularyReview": {
+    "status": "insufficient-for-admission",
+    "resolvedTerms": [
+      {
+        "termId": "palace:menh",
+        "kind": "Palace",
+        "label": "Mệnh"
+      },
+      {
+        "termId": "palace:than",
+        "kind": "Palace",
+        "label": "Thân"
+      },
+      {
+        "termId": "palace:thien-di",
+        "kind": "Palace",
+        "label": "Thiên Di"
+      },
+      {
+        "termId": "palace:tai-bach",
+        "kind": "Palace",
+        "label": "Tài Bạch"
+      },
+      {
+        "termId": "palace:quan-loc",
+        "kind": "Palace",
+        "label": "Quan Lộc"
+      }
+    ],
+    "unresolvedTerms": [
+      {
+        "termId": "vocabulary:principal-star",
+        "reason": "The admitted principal-star catalogue and direct-placement semantics are not versioned in the knowledge registry."
+      },
+      {
+        "termId": "vocabulary:palace-state",
+        "reason": "Miếu/vượng and favorable/adverse classifications are not normalized under a reviewed rule profile."
+      },
+      {
+        "termId": "vocabulary:aspect-geometry",
+        "reason": "Tam phương and hình/xung/khắc/phá relations lack a reviewed, versioned geometry vocabulary."
+      },
+      {
+        "termId": "profile:k03a-career-unresolved",
+        "reason": "The source school/profile identity and compatibility with the current calculation profile remain unresolved."
+      }
+    ]
+  },
+  "evaluationPolicy": {
+    "orderedGates": [
+      "candidate-selected",
+      "required-facts-resolved",
+      "predicates-evaluated",
+      "exclusions-evaluated",
+      "evidence-revision-resolved",
+      "rule-profile-compatible",
+      "lifecycle-admitted",
+      "conflicts-resolved"
+    ],
+    "unknownPredicateBehavior": "missing",
+    "partialEvaluationBehavior": "fail-closed",
+    "structuralMatchTerm": "fired-for-research-review",
+    "structuralMatchMeaning": "All modeled fact predicates matched; this is not rule admission and cannot emit a claim.",
+    "allowedOutput": "inference-trace-only",
+    "forbiddenOutputs": [
+      "reader-facing claim",
+      "behavior inference",
+      "occupation inference",
+      "outcome prediction",
+      "numeric weight"
+    ]
+  },
+  "rules": [
+    {
+      "ruleId": "k03a-career-context-order-001",
+      "version": "candidate-1",
+      "status": "candidate-source-backed-not-independent",
+      "topicRef": "topic:career",
+      "ruleProfileRefs": ["profile:k03a-career-unresolved"],
+      "conditions": [
+        {
+          "predicateId": "k04a:context:menh-facts-exist",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "attribute",
+            "relation": "HAS_ATTRIBUTE",
+            "subjectRef": "palace:menh",
+            "objectRef": "fact-bundle:menh-state-transformations"
+          }
+        },
+        {
+          "predicateId": "k04a:context:than-facts-exist",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "attribute",
+            "relation": "HAS_ATTRIBUTE",
+            "subjectRef": "palace:than",
+            "objectRef": "fact-bundle:than-context"
+          }
+        },
+        {
+          "predicateId": "k04a:context:di-tai-quan-facts-exist",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "palace-relation",
+            "relation": "TRINES_WITH",
+            "subjectRef": "relation-set:thien-di-tai-bach-quan-loc",
+            "objectRef": "vocabulary:aspect-geometry"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "predicateId": "k04a:context:no-boc-not-substituted",
+          "operator": "not-exists",
+          "factPattern": {
+            "factType": "palace-relation",
+            "relation": "TRINES_WITH",
+            "subjectRef": "palace:no-boc",
+            "objectRef": "relation-set:thien-di-tai-bach-quan-loc"
+          }
+        }
+      ],
+      "evidenceRefs": [
+        {
+          "sourceId": "k03a-zwds-quanshu-vol3-wikisource-r2268626",
+          "passageId": "k03a-v3-reading-order",
+          "sourceRevision": "2268626"
+        }
+      ],
+      "productionEligible": false,
+      "allowedClaimKinds": [],
+      "mandatoryRejections": ["profile-mismatch", "unapproved-rule"],
+      "notes": "Models an order/context method only; it does not create an interpretation."
+    },
+    {
+      "ruleId": "k03a-empty-menh-tai-quan-001",
+      "version": "candidate-1",
+      "status": "candidate-source-backed-not-independent",
+      "topicRef": "topic:career",
+      "ruleProfileRefs": ["profile:k03a-career-unresolved"],
+      "conditions": [
+        {
+          "predicateId": "k04a:empty-menh:no-direct-principal-star",
+          "operator": "not-exists",
+          "factPattern": {
+            "factType": "star-location",
+            "relation": "LOCATED_IN",
+            "subjectRef": "vocabulary:principal-star",
+            "objectRef": "palace:menh"
+          }
+        },
+        {
+          "predicateId": "k04a:empty-menh:tai-facts-exist",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "attribute",
+            "relation": "HAS_ATTRIBUTE",
+            "subjectRef": "palace:tai-bach",
+            "objectRef": "fact-bundle:palace-star-state-aspect"
+          }
+        },
+        {
+          "predicateId": "k04a:empty-menh:quan-facts-exist",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "attribute",
+            "relation": "HAS_ATTRIBUTE",
+            "subjectRef": "palace:quan-loc",
+            "objectRef": "fact-bundle:palace-star-state-aspect"
+          }
+        },
+        {
+          "predicateId": "k04a:empty-menh:aspect-profile-resolved",
+          "operator": "exists",
+          "factPattern": {
+            "factType": "attribute",
+            "relation": "HAS_ATTRIBUTE",
+            "subjectRef": "profile:k03a-career-unresolved",
+            "objectRef": "vocabulary:aspect-geometry"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "predicateId": "k04a:empty-menh:no-opposite-star-borrowing",
+          "operator": "not-exists",
+          "factPattern": {
+            "factType": "attribute",
+            "relation": "HAS_ATTRIBUTE",
+            "subjectRef": "palace:menh",
+            "objectRef": "inference:borrow-unspecified-opposite-star"
+          }
+        }
+      ],
+      "evidenceRefs": [
+        {
+          "sourceId": "k03a-zwds-quanshu-vol3-wikisource-r2268626",
+          "passageId": "k03a-v3-empty-menh",
+          "sourceRevision": "2268626"
+        }
+      ],
+      "productionEligible": false,
+      "allowedClaimKinds": [],
+      "mandatoryRejections": ["profile-mismatch", "unapproved-rule"],
+      "notes": "Models whether the Tài–Quan context is available; it does not classify that context or permit a conclusion."
+    }
+  ]
+}

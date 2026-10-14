@@ -1,0 +1,144 @@
+{
+  "artifactVersion": "hv-k04a-rule-cases-v0.1",
+  "prototypeRef": "../dev/knowledge-k04a-rule-prototype.json",
+  "notice": "Synthetic evaluator inputs; not astrology oracles and not production fixtures.",
+  "cases": [
+    {
+      "caseId": "k04a-context-all-structural-predicates-match",
+      "ruleId": "k03a-career-context-order-001",
+      "input": {
+        "factIds": ["fact:menh-bundle", "fact:than-bundle", "fact:di-tai-quan-relation"],
+        "resolvedVocabularyIds": [
+          "palace:menh",
+          "palace:than",
+          "palace:thien-di",
+          "palace:tai-bach",
+          "palace:quan-loc"
+        ],
+        "unresolvedVocabularyIds": ["vocabulary:palace-state", "vocabulary:aspect-geometry"],
+        "calculationProfileRef": "profile:nam-phai-chinese-lunar-v1",
+        "ruleProfileRef": "profile:k03a-career-unresolved"
+      },
+      "expectedTrace": {
+        "candidateState": "candidate-selected",
+        "predicateState": "fired-for-research-review",
+        "predicateResults": ["matched", "matched", "matched", "matched"],
+        "rejections": ["profile-mismatch", "unapproved-rule"],
+        "outcome": "unsupported-profile",
+        "allowedClaimIds": []
+      }
+    },
+    {
+      "caseId": "k04a-context-missing-than-and-relation",
+      "ruleId": "k03a-career-context-order-001",
+      "input": {
+        "factIds": ["fact:menh-bundle"],
+        "resolvedVocabularyIds": ["palace:menh"],
+        "unresolvedVocabularyIds": ["vocabulary:palace-state", "vocabulary:aspect-geometry"],
+        "calculationProfileRef": "profile:nam-phai-chinese-lunar-v1",
+        "ruleProfileRef": "profile:k03a-career-unresolved"
+      },
+      "expectedTrace": {
+        "candidateState": "candidate-selected",
+        "predicateState": "rejected-before-fire",
+        "predicateResults": ["matched", "missing", "missing", "matched"],
+        "rejections": ["missing-evidence", "profile-mismatch", "unapproved-rule"],
+        "outcome": "insufficient-evidence",
+        "allowedClaimIds": []
+      }
+    },
+    {
+      "caseId": "k04a-context-forbidden-no-boc-substitution",
+      "ruleId": "k03a-career-context-order-001",
+      "input": {
+        "factIds": [
+          "fact:menh-bundle",
+          "fact:than-bundle",
+          "fact:di-tai-quan-relation",
+          "fact:no-boc-substitution"
+        ],
+        "resolvedVocabularyIds": ["palace:menh", "palace:than", "palace:no-boc"],
+        "unresolvedVocabularyIds": ["vocabulary:palace-state", "vocabulary:aspect-geometry"],
+        "calculationProfileRef": "profile:nam-phai-chinese-lunar-v1",
+        "ruleProfileRef": "profile:k03a-career-unresolved"
+      },
+      "expectedTrace": {
+        "candidateState": "candidate-selected",
+        "predicateState": "rejected-before-fire",
+        "predicateResults": ["matched", "matched", "matched", "not-matched"],
+        "rejections": ["predicate-not-matched", "profile-mismatch", "unapproved-rule"],
+        "outcome": "blocked",
+        "allowedClaimIds": []
+      }
+    },
+    {
+      "caseId": "k04a-empty-menh-structural-shape-but-profile-unresolved",
+      "ruleId": "k03a-empty-menh-tai-quan-001",
+      "input": {
+        "factIds": ["fact:menh-no-direct-principal", "fact:tai-bundle", "fact:quan-bundle"],
+        "resolvedVocabularyIds": ["palace:menh", "palace:tai-bach", "palace:quan-loc"],
+        "unresolvedVocabularyIds": ["vocabulary:principal-star", "vocabulary:aspect-geometry"],
+        "calculationProfileRef": "profile:nam-phai-chinese-lunar-v1",
+        "ruleProfileRef": "profile:k03a-career-unresolved"
+      },
+      "expectedTrace": {
+        "candidateState": "candidate-selected",
+        "predicateState": "rejected-before-fire",
+        "predicateResults": ["missing", "matched", "matched", "missing", "matched"],
+        "rejections": ["missing-evidence", "profile-mismatch", "unapproved-rule"],
+        "outcome": "insufficient-evidence",
+        "allowedClaimIds": []
+      }
+    },
+    {
+      "caseId": "k04a-empty-menh-opposite-star-borrowing-rejected",
+      "ruleId": "k03a-empty-menh-tai-quan-001",
+      "input": {
+        "factIds": [
+          "fact:menh-no-direct-principal",
+          "fact:tai-bundle",
+          "fact:quan-bundle",
+          "fact:aspect-profile",
+          "fact:borrow-opposite-star"
+        ],
+        "resolvedVocabularyIds": [
+          "palace:menh",
+          "palace:tai-bach",
+          "palace:quan-loc",
+          "vocabulary:principal-star",
+          "vocabulary:aspect-geometry"
+        ],
+        "unresolvedVocabularyIds": [],
+        "calculationProfileRef": "profile:nam-phai-chinese-lunar-v1",
+        "ruleProfileRef": "profile:k03a-career-unresolved"
+      },
+      "expectedTrace": {
+        "candidateState": "candidate-selected",
+        "predicateState": "rejected-before-fire",
+        "predicateResults": ["matched", "matched", "matched", "matched", "not-matched"],
+        "rejections": ["predicate-not-matched", "profile-mismatch", "unapproved-rule"],
+        "outcome": "blocked",
+        "allowedClaimIds": []
+      }
+    },
+    {
+      "caseId": "k04a-no-path-can-emit-claim",
+      "ruleId": "all-k04a-rules",
+      "input": {
+        "factIds": [],
+        "resolvedVocabularyIds": [],
+        "unresolvedVocabularyIds": [],
+        "calculationProfileRef": "profile:any",
+        "ruleProfileRef": "profile:any"
+      },
+      "expectedTrace": {
+        "candidateState": "candidate-selected",
+        "predicateState": "not-evaluated",
+        "predicateResults": [],
+        "rejections": ["unapproved-rule"],
+        "outcome": "blocked",
+        "allowedClaimIds": []
+      }
+    }
+  ]
+}
