@@ -23,6 +23,8 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 - `reading-brief-contract.md`: HV-R02 canonical v1 specification, career matrix,
   provenance/privacy and exclusive future ownership; no runtime implementation.
+- `reading-claim-registry.md`: HV-R02C controlled candidate templates, exact
+  approval/rejection rules and Style A scope; no runtime registry exists.
 
 - `reading-vnext-architecture.md`: audit HV-R01, contract Reading Brief, Rule
   Matrix và thứ tự triển khai. Kế hoạch chờ phê duyệt, không phải API/AI đang chạy.

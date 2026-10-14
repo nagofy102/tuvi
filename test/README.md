@@ -10,6 +10,10 @@ Kế hoạch kiểm thử cho Reading UX vNext (chưa chạy/triển khai) nằm
 
 HV-R02 bổ sung review tài liệu/fixture và các gate chưa đạt trong cùng tài liệu;
 không dùng review để khẳng định schema runtime hoặc chất lượng người dùng.
+HV-R02C bổ sung rubric Style A và Swap Test dự kiến trên hai SignalSet do engine
+sinh từ input tổng hợp; không coi chúng là đáp án an sao độc lập.
+Xem `reading-style-a-review.md` cho tiêu chí, các tín hiệu quan sát và trạng thái
+nghiệm thu tài liệu.
 
 ## Trạng thái hiện tại
 

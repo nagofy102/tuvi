@@ -23,8 +23,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
-- `reading-brief-samples.md`: HV-R02, bốn mẫu biên tập cần người dùng duyệt;
-  structural mock/minh họa, không phải chart thẩm định độc lập; chưa mở UI/AI.
+- `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight; phương án hai
+  insight bị loại do trùng luận điểm. Bốn payload minh họa cần người dùng duyệt;
+  chưa mở UI/AI.
 
 - `reading-ux-vnext.md`: audit và kế hoạch chờ duyệt cho hành trình kết luận trước
   lá số; không phải tính năng AI/API đã triển khai.

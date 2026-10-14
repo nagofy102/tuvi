@@ -98,11 +98,12 @@ BA advisory confirmed actual rule IDs/statuses and source revisions. No new
 astrology rule admitted. Samples are structural mocks / partial-excerpt demo,
 not chart verification cases. All four need user quality approval.
 No independent Nam full-chart corpus or approved opposing resolver exists.
-Documentation checks on baseline `17ac243` plus this eight-document diff:
+Historical HV-R02 documentation checks on baseline `17ac243` plus its
+eight-document diff (before HV-R02C rewrote the samples):
 
 - Node read-only check: eight documents, twelve relative links resolve; balanced
   code fences and final newline; six JSON blocks parse; four expanded documentation
-  examples with insight counts 2/1/0/1. Checked claim ID consistency, evidence
+  examples with then-current insight counts 2/1/0/1. Checked claim ID consistency, evidence
   references, dedup keys, status combinations and mock labels. Pass.
 - Scoped `prettier --check`: all eight documents pass after formatting.
 - `git diff --check`: pass. No source, test code, dependency or rules-file edits.
@@ -124,3 +125,11 @@ and re-ran `git diff --check` successfully. No application/dependency/rules edit
 User sample-quality approval and multiple-chart Swap Test remain OPEN. This accepts
 the documentation handoff only, not implementation, predictive claims or production
 readiness. PM is the sole integration/main push owner for this single-session task.
+
+## HV-R02C handoff
+
+Current Style A rubric, two observed synthetic SignalSets, proposed expected
+template selection and current four-payload review are at
+[reading-style-a-review.md](reading-style-a-review.md). The historical HV-R02
+counts above must not be reused as current results. Current examples have insight
+counts 1/1/0/1; schema/grounding runtime checks remain unimplemented.

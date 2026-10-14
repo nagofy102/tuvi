@@ -1,4 +1,4 @@
-# HV-R02 — Mẫu bản đọc và payload để người dùng duyệt
+# HV-R02C — Mẫu bản đọc Style A và payload để người dùng duyệt
 
 Ngày 14/10/2026. **Chưa được người dùng duyệt; chưa triển khai.**
 BA/chuyên môn AI kiểm tra phạm vi nguồn; không phải thẩm định độc lập.
@@ -16,53 +16,64 @@ Không suy rằng tất cả điều kiện full-chart đã qua kiểm tra. Mẫ
 huống thiếu căn cứ, không phải một người thật. Bốn mẫu KHÔNG đại diện bốn lá số
 khác nhau và không chứng minh khả năng phân biệt lá số.
 
-## Mẫu 1 — Hai ý có nguồn, không ép ba ý
+## Mẫu 1 — A1: một luận điểm tích hợp (đề xuất duyệt văn)
 
 Nhãn luôn hiện: **Mẫu cấu trúc để duyệt cách viết — không phải luận giải cá nhân.**
 
-**Kết luận:** Công việc được đọc qua mối liên hệ giữa trách nhiệm, cách làm rõ
-thông tin và sự phối hợp.
+**Kết luận:** Trong lá số của bạn, công việc nổi bật ở mối liên hệ giữa trách
+nhiệm công khai, cách làm rõ thông tin và sự phối hợp giữa các bên.
 
-**Ý 1 — Trách nhiệm đi cùng sự rõ ràng**
+**Một ý — Trách nhiệm và lời nói rõ nghĩa**
 
-Điểm đáng chú ý là trách nhiệm được đặt cạnh việc diễn đạt và làm rõ thông tin.
-Phần luận không chỉ xét điều cần hoàn thành, mà còn xét cách phần việc ấy được hiểu.
-
-**Ý 2 — Phần việc riêng trong trách nhiệm chung**
-
-Khi đọc thêm quan hệ cộng tác, sự phối hợp bổ sung cho trọng tâm công việc:
-phần việc của mỗi bên được đặt trong trách nhiệm chung, thay vì chỉ được xem riêng lẻ.
+Với bạn, nét riêng của chủ đề công việc nằm ở chỗ trách nhiệm gắn với cách diễn
+đạt cho rõ; sự phối hợp là lớp nghĩa đi cùng, không thay thế trọng tâm ấy.
 
 Không có gợi ý thực hành. Người đọc không cần một bài tập để nhận được nội dung.
 
 **Căn cứ lá số** (đề xuất mở theo yêu cầu):
 
-- C1/P1: symbol-3 → principal-3 (trách nhiệm công khai), symbol-10 → principal-10
-  (lời nói/làm rõ thông tin); career-cross-palace và palace-context → layout-palaces,
-  context-not-uniform. Kết nối câu văn là biên tập, không tổ hợp cổ được xác nhận.
-- C2/P2: thêm symbol-11 → principal-11 (phối hợp/trách nhiệm), giữ tiền đề C1.
-  Nô Bộc là góc nhìn theo chủ đề, không tự gọi tam hợp Quan Lộc.
-- Kết luận C0 tổng hợp C1/C2, không tạo nhận định mới. Mệnh không chính tinh không
-  được diễn giải là yếu kém. Chưa xét miếu/vượng, Tứ Hóa, đối nghịch, cách cục hay vận.
+- C0: `symbol-3` → `principal-3` (trách nhiệm công khai), `symbol-10` →
+  `principal-10` (làm rõ thông tin), `symbol-11` → `principal-11`
+  (phối hợp/trách nhiệm); `career-cross-palace` và `palace-context` →
+  `layout-palaces`, `context-not-uniform`. Phép nối là biên tập hiện đại.
+- C1: cùng bằng chứng và kết nối của C0, không phải một lời đoán hành vi mới.
+  Quan và Nô giữ đúng cung gốc; Nô là góc nhìn chủ đề, không mặc nhiên tam hợp.
+- Mệnh không chính tinh không được diễn giải là yếu kém. Chưa xét miếu/vượng,
+  Tứ Hóa, đối nghịch, cách cục hay vận.
 
-Ý 1 ưu tiên vì đến từ trọng tâm Quan; ý 2 đứng sau vì bổ sung vai trò quan hệ cộng
-tác. Hai ý là hai phạm vi đọc trong cùng tổng hợp, không phải hai bằng chứng độc
-lập về hành vi. Nếu người dùng thấy hai ý còn trùng, chọn mẫu 2; không cố giữ hai.
+**Ma trận từng câu:**
 
-## Mẫu 2 — Chỉ một ý được duyệt
+| Câu      | Claim ID                    | Quy tắc đúng phạm vi                                                          | Passage                                                                                | Diễn giải được phép                                              | Chủ ý không kết luận                                                |
+| -------- | --------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Kết luận | `career-style-a-summary`    | `symbol-3`, `symbol-10`, `symbol-11`, `career-cross-palace`, `palace-context` | `principal-3`, `principal-10`, `principal-11`, `layout-palaces`, `context-not-uniform` | Ba chủ đề biểu tượng nối theo vai trò cung thực trong excerpt    | Bạn có năng lực giao tiếp/lãnh đạo, một nghề hay kết quả công việc  |
+| Một ý    | `career-style-a-integrated` | như C0                                                                        | như C0                                                                                 | Cách đọc trọng tâm Quan và góc bổ sung Nô, không tạo luật cổ mới | Bạn đang mâu thuẫn, cần giao việc, hoặc có thói quen làm rõ yêu cầu |
 
-Nhãn như mẫu 1. Cùng excerpt, không bịa một lá số mới để minh họa cardinality.
+Style A ở đây chỉ cá nhân hóa **cấu trúc biểu tượng**. Chưa có căn cứ để viết
+“bạn giỏi giải thích”, “bạn hay gánh trách nhiệm” hoặc “bạn dễ bất đồng”. Muốn
+nâng tới xu hướng hành vi cần quy tắc tổ hợp đã duyệt gồm vị trí sao/cung chính
+xác, điều kiện loại trừ và đối nghịch, passage truy được, cùng ca đối chiếu độc
+lập đúng hồ sơ. Không lấy câu văn mượt làm thay cho quy tắc đó.
 
-**Kết luận:** Trách nhiệm và cách hiểu phần việc là trọng tâm của phần đọc Công việc.
+## Mẫu 2 — A2: hai insight bị loại; một cách viết A1 thay thế
 
-**Một ý — Trách nhiệm, thông tin và cộng tác**
+Nhãn như mẫu 1. Cùng excerpt, không bịa lá số mới để minh họa số lượng insight.
+Đề xuất A2 từng tách “trách nhiệm + thông tin” và “trách nhiệm + phối hợp”.
+**A2 không đạt:** hai câu cùng triển khai một trách nhiệm công việc; Nô bổ sung
+ngữ cảnh nhưng không có quy tắc độc lập cho một xu hướng cá nhân khác. Vì vậy
+payload S2 vẫn chỉ có một insight, là phương án văn A1 thay thế để so sánh.
 
-Phần đọc đặt việc đảm nhận trách nhiệm cạnh cách thông tin được trình bày và hiểu
-rõ. Sự phối hợp bổ sung vào đó cách mỗi bên tham gia phần việc chung.
+**Kết luận:** Trong lá số của bạn, trách nhiệm ở công việc gắn với cách nói cho rõ;
+nét phối hợp xuất hiện như phần bổ sung.
 
-Căn cứ mở rộng: cùng C1/C2 của mẫu 1. Không kết luận bạn đang có bất đồng,
-giữ chức vụ hoặc làm một nghề nhất định. Không có nextStep. Một ý tổng hợp được
-giữ lại; không biến mỗi tên sao thành một insight.
+**Một ý — Trách nhiệm và trao đổi**
+
+Với bạn, chủ đề công việc nhấn vào mối liên hệ giữa phần trách nhiệm và việc làm
+rõ thông tin; góc cộng tác thêm nét phối hợp.
+
+Căn cứ mở rộng: cùng C0/C1 của mẫu 1. Claim IDs:
+`career-style-a-alt-summary` và `career-style-a-alt-integrated`; cả hai phụ thuộc
+đúng năm rule và năm passage của bảng trên. Giới hạn thuộc mục căn cứ: không suy
+bạn đang gặp bất đồng, giữ chức vụ hoặc làm một nghề nhất định. Không có `nextStep`.
 
 ## Mẫu 3 — Chưa đủ căn cứ
 
@@ -222,40 +233,32 @@ Evidence pool B (real source anchors, no claimed calculated signal):
 ]
 ```
 
-S1 (attach all B as evidence):
+S1 (A1; attach all B as evidence; candidate copy only):
 
 ```json
 {
   "readingId": "r02-sample-1",
   "conclusion": {
-    "claimId": "career-summary-responsibility-information-cooperation",
-    "plainText": "Công việc được đọc qua mối liên hệ giữa trách nhiệm, cách làm rõ thông tin và sự phối hợp.",
+    "claimId": "career-style-a-summary",
+    "templateId": "career-a1-conclusion",
+    "templateVersion": "draft-1",
+    "plainText": "Trong lá số của bạn, công việc nổi bật ở mối liên hệ giữa trách nhiệm công khai, cách làm rõ thông tin và sự phối hợp giữa các bên.",
     "evidenceIds": ["e3", "e10", "e11", "ec", "ep"],
     "scope": "editorial-symbolic"
   },
   "insights": [
     {
       "id": "i1",
-      "claimId": "career-responsibility-information",
-      "title": "Trách nhiệm đi cùng sự rõ ràng",
-      "plainText": "Điểm đáng chú ý là trách nhiệm được đặt cạnh việc diễn đạt và làm rõ thông tin. Phần luận không chỉ xét điều cần hoàn thành, mà còn xét cách phần việc ấy được hiểu.",
-      "evidenceIds": ["e3", "e10", "ec", "ep"],
-      "scope": "editorial-symbolic",
-      "deduplicationKey": "career:responsibility-information:Quan:Thái Dương+Cự Môn:Nô:Thiên Tướng",
-      "priority": "primary",
-      "rankingReasons": ["topic-match", "approved-primary-rule"],
-      "exclusionIds": []
-    },
-    {
-      "id": "i2",
-      "claimId": "career-cooperation-shared-responsibility",
-      "title": "Phần việc riêng trong trách nhiệm chung",
-      "plainText": "Khi đọc thêm quan hệ cộng tác, sự phối hợp bổ sung cho trọng tâm công việc: phần việc của mỗi bên được đặt trong trách nhiệm chung, thay vì chỉ được xem riêng lẻ.",
+      "claimId": "career-style-a-integrated",
+      "templateId": "career-a1-insight",
+      "templateVersion": "draft-1",
+      "title": "Trách nhiệm và lời nói rõ nghĩa",
+      "plainText": "Với bạn, nét riêng của chủ đề công việc nằm ở chỗ trách nhiệm gắn với cách diễn đạt cho rõ; sự phối hợp là lớp nghĩa đi cùng, không thay thế trọng tâm ấy.",
       "evidenceIds": ["e3", "e10", "e11", "ec", "ep"],
       "scope": "editorial-symbolic",
-      "deduplicationKey": "career:cooperation-shared-responsibility:Quan:Thái Dương+Cự Môn:Nô:Thiên Tướng",
-      "priority": "secondary",
-      "rankingReasons": ["topic-match", "distinct-evidence"],
+      "deduplicationKey": "career:responsibility-clarity-cooperation:quan3-10:no11:menh-empty",
+      "priority": "primary",
+      "rankingReasons": ["topic-match", "approved-primary-rule"],
       "exclusionIds": []
     }
   ],
@@ -264,14 +267,10 @@ S1 (attach all B as evidence):
     "state": "supported",
     "paragraphs": [
       {
-        "claimId": "career-responsibility-information",
-        "plainText": "Điểm đáng chú ý là trách nhiệm được đặt cạnh việc diễn đạt và làm rõ thông tin. Phần luận không chỉ xét điều cần hoàn thành, mà còn xét cách phần việc ấy được hiểu.",
-        "evidenceIds": ["e3", "e10", "ec", "ep"],
-        "scope": "editorial-symbolic"
-      },
-      {
-        "claimId": "career-cooperation-shared-responsibility",
-        "plainText": "Khi đọc thêm quan hệ cộng tác, sự phối hợp bổ sung cho trọng tâm công việc: phần việc của mỗi bên được đặt trong trách nhiệm chung, thay vì chỉ được xem riêng lẻ.",
+        "claimId": "career-style-a-integrated",
+        "templateId": "career-a1-insight",
+        "templateVersion": "draft-1",
+        "plainText": "Với bạn, nét riêng của chủ đề công việc nằm ở chỗ trách nhiệm gắn với cách diễn đạt cho rõ; sự phối hợp là lớp nghĩa đi cùng, không thay thế trọng tâm ấy.",
         "evidenceIds": ["e3", "e10", "e11", "ec", "ep"],
         "scope": "editorial-symbolic"
       }
@@ -280,26 +279,30 @@ S1 (attach all B as evidence):
 }
 ```
 
-S2 (attach all B; one approved editorial selection, not a new chart):
+S2 (rejected A2; alternate one-insight A1 wording; attach all B):
 
 ```json
 {
   "readingId": "r02-sample-2",
   "conclusion": {
-    "claimId": "career-summary-one",
-    "plainText": "Trách nhiệm và cách hiểu phần việc là trọng tâm của phần đọc Công việc.",
+    "claimId": "career-style-a-alt-summary",
+    "templateId": "career-a1-alt-conclusion",
+    "templateVersion": "draft-1",
+    "plainText": "Trong lá số của bạn, trách nhiệm ở công việc gắn với cách nói cho rõ; nét phối hợp xuất hiện như phần bổ sung.",
     "evidenceIds": ["e3", "e10", "e11", "ec", "ep"],
     "scope": "editorial-symbolic"
   },
   "insights": [
     {
       "id": "i1",
-      "claimId": "career-combined-one",
-      "title": "Trách nhiệm, thông tin và cộng tác",
-      "plainText": "Phần đọc đặt việc đảm nhận trách nhiệm cạnh cách thông tin được trình bày và hiểu rõ. Sự phối hợp bổ sung vào đó cách mỗi bên tham gia phần việc chung.",
+      "claimId": "career-style-a-alt-integrated",
+      "templateId": "career-a1-alt-insight",
+      "templateVersion": "draft-1",
+      "title": "Trách nhiệm và trao đổi",
+      "plainText": "Với bạn, chủ đề công việc nhấn vào mối liên hệ giữa phần trách nhiệm và việc làm rõ thông tin; góc cộng tác thêm nét phối hợp.",
       "evidenceIds": ["e3", "e10", "e11", "ec", "ep"],
       "scope": "editorial-symbolic",
-      "deduplicationKey": "career:combined:Quan:Thái Dương+Cự Môn:Nô:Thiên Tướng",
+      "deduplicationKey": "career:responsibility-clarity-cooperation:quan3-10:no11:menh-empty",
       "priority": "primary",
       "rankingReasons": ["topic-match", "approved-primary-rule"],
       "exclusionIds": []
@@ -310,8 +313,10 @@ S2 (attach all B; one approved editorial selection, not a new chart):
     "state": "supported",
     "paragraphs": [
       {
-        "claimId": "career-combined-one",
-        "plainText": "Phần đọc đặt việc đảm nhận trách nhiệm cạnh cách thông tin được trình bày và hiểu rõ. Sự phối hợp bổ sung vào đó cách mỗi bên tham gia phần việc chung.",
+        "claimId": "career-style-a-alt-integrated",
+        "templateId": "career-a1-alt-insight",
+        "templateVersion": "draft-1",
+        "plainText": "Với bạn, chủ đề công việc nhấn vào mối liên hệ giữa phần trách nhiệm và việc làm rõ thông tin; góc cộng tác thêm nét phối hợp.",
         "evidenceIds": ["e3", "e10", "e11", "ec", "ep"],
         "scope": "editorial-symbolic"
       }
@@ -363,11 +368,12 @@ still keep its visible demo label. No sample is an executable production ready f
 
 ## Cần người dùng duyệt
 
-1. Cách viết mẫu 1 có đủ rõ và khác robot không, hay vẫn chỉ là diễn đạt biểu tượng?
-2. Giữ hai insight hay một insight như mẫu 2 để tránh lặp?
-3. Có chấp nhận sự ngắn gọn và trạng thái thiếu căn cứ như mẫu 3?
-4. Nhãn minh họa và mục căn cứ có làm rõ giới hạn không?
+1. A1 mẫu 1 có đủ trực tiếp và dễ hiểu trong phạm vi diễn giải biểu tượng không?
+2. Nếu muốn một cách diễn đạt khác, mẫu 2 có tốt hơn mẫu 1 không? A2 hai insight
+   đã bị BA loại vì cùng một luận điểm.
+3. Trạng thái thiếu căn cứ mẫu 3 và nhãn demo mẫu 4 đã đủ rõ chưa?
 
-Chưa tuyên bố chất lượng cải thiện. Thiếu mẫu đối chiếu từ các chart khác nhau để
-nghiệm thu Swap Test/phân biệt lá số; cần bổ sung dữ liệu có provenance đúng profile
-hoặc các output engine minh họa được gắn nhãn riêng, không làm oracle cho engine.
+Chưa tuyên bố chất lượng cải thiện. Hai SignalSet do engine hiện tại sinh đã được
+ghi cho Swap Test dự kiến ở [reading-style-a-review.md](../test/reading-style-a-review.md);
+chúng kiểm tra chọn template, không là oracle an sao. Chưa có template thứ hai
+được duyệt để so sánh hai kết luận cá nhân khác nhau, cũng chưa có đánh giá người dùng.

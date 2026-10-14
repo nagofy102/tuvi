@@ -4,14 +4,15 @@ Ngày: 14/10/2026. Trạng thái: **hướng HV-R02 đã duyệt; mẫu và tri�
 triển khai. Phạm vi của tài liệu là hành trình đọc sau khi đã lập lá số hợp lệ; không
 thay đổi lịch, an sao, hồ sơ Nam phái hoặc kho quy tắc đang phát hành.
 
-## Quyết định sản phẩm đề xuất
+## Quyết định sản phẩm — Style A đã chọn, chất lượng mẫu đang chờ duyệt
 
 Người đọc không cần học thuật ngữ cung/sao để nhận được giá trị đầu tiên. Màn hình
 đầu tiên phải trả lời bằng tiếng Việt thường ngày: _điều gì đáng chú ý nhất_, _tối đa ba
 điều có căn cứ_ và _chủ đề đang quan tâm_. Thực hành là tùy chọn. Cung, sao, quy tắc
 và đoạn nguồn chỉ xuất hiện khi người đọc chủ động mở **Căn cứ lá số**.
 
-Giọng văn rõ ở cấp biên tập, không dùng “Điều cần ưu tiên lúc này là…” để giả định hoàn cảnh,
+Style A: mở bằng câu hướng tới “bạn” và kết luận biểu tượng đặc thù lá số; tránh
+“phần đọc cho thấy”, “công việc được đọc qua”, “khi xét thêm”. Giọng văn rõ ở cấp biên tập, không dùng “Điều cần ưu tiên lúc này là…” để giả định hoàn cảnh,
 nhưng không được biến biểu tượng chưa được thẩm định thành sự thật về con người,
 lời tiên đoán, tỷ lệ, hay ý kiến chuyên gia. Khi không đủ căn cứ, giao diện nói rõ
 “Chưa có kết luận riêng cho phần này”, không lấp chỗ trống bằng câu chung chung.
@@ -64,8 +65,10 @@ may mắn; cache chung; expert-review claim; hoặc chuyển dữ liệu sinh ra
 3. BA/chuyên môn chuẩn bị, PM review truy nguồn, người dùng duyệt mẫu trước UI.
 4. AI Writer, embeddings và truyền dữ liệu AI bên thứ ba ngoài MVP; muốn mở phải duyệt riêng.
 
-Mẫu cần duyệt tại [reading-brief-samples.md](reading-brief-samples.md).
+Mẫu A1 cần duyệt và A2 bị loại có lý do tại
+[reading-brief-samples.md](reading-brief-samples.md).
 Contract chuẩn tại [reading-brief-contract.md](../dev/reading-brief-contract.md).
+Ranh giới câu được phép xem [reading-claim-registry.md](../dev/reading-claim-registry.md).
 Không gọi structural mock là lá số đã xác minh; R03/R04 chưa được phép bắt đầu.
 
 ## Handoff

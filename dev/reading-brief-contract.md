@@ -3,8 +3,10 @@
 ## Authority and scope
 
 2026-10-14; baseline `17ac24329b7b8657353450e97a8c51134ed9aaa3`.
-Specification only, prepared with BA/Tử Vi specialist AI review. No independent
-practitioner certification. Product direction is approved; sample quality and
+Specification only, prepared with BA/Tử Vi specialist AI review. HV-R02C selects
+Style A for prose and adds the controlled template specification in
+[reading-claim-registry.md](reading-claim-registry.md). No independent practitioner
+certification. Product direction is approved; sample quality and
 implementation remain unapproved. This document supersedes the R01 proposed Brief
 and matrix definitions, not the existing `InterpretationReport` runtime contract.
 Do not rename or mutate that runtime contract during adaptation.
@@ -39,6 +41,8 @@ type Reason =
   | 'mock-only';
 type Claim = {
   claimId: string;
+  templateId: string;
+  templateVersion: string;
   plainText: string;
   evidenceIds: string[];
   scope: 'editorial-symbolic';
@@ -122,8 +126,14 @@ make a reading anonymous: linking an ID to a chart makes it personal data.
    topic/role/symbol set. IDs do not contain birth input. Each paragraph is one
    coherent claim; split independent assertions into separate paragraph claims.
    Reusing a claim across conclusion/insight/paragraph requires identical text,
-   scope and evidence. A different formulation receives a different ID with the
+   template ID/version, scope and evidence. A different formulation receives a
+   different ID with the
    same semantic deduplication identity. A title cannot add an ungrounded claim.
+   The template tuple must resolve to an immutable registry entry. Production
+   user-chart claims require `user-approved` status; drafts appear only in labelled
+   mock/demo materials. Text must equal the approved template with only enumerated
+   literal choices. Unknown templates, mismatched predicates, unsupported
+   interpolation or stronger wording fail closed before rendering.
 2. Each Claim requires at least one resolvable evidence ID. Evidence carries
    required dictionary premises AND the editorial connecting rule; a symbol-only
    citation does not license a personal interpretation. Every rule and all its
@@ -176,6 +186,10 @@ make a reading anonymous: linking an ID to a chart makes it personal data.
 9. Only an actually run validator can set schema/grounding passed. Invalid payloads
    do not render partial prose: produce a separate unavailable error view, with
    no original text or personal values in logs. No silent repair/padding.
+10. Style A makes the opening sentence address the reader naturally and state
+    the strongest supported symbolic distinction. It does not turn a dictionary
+    meaning into an observed habit, ability, job, conflict or outcome. Insufficient
+    evidence yields a plain non-personalized state.
 
 ## Revision resolution
 
