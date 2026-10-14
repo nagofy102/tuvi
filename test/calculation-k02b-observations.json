@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "calculation-k02b-observations-v0.1",
+  "datasetStatus": "research-observations-only",
+  "notice": "Public-source and synthetic-input research only. No observation is an admitted expected value, golden fixture, verified Tu Vi rule, or approval to change the production calculation profile.",
+  "disagreements": [
+    {
+      "disagreementId": "calc-disagreement-1985-03-21",
+      "status": "explained-profile-divergence-not-resolved-for-production",
+      "canonicalInput": {
+        "calendar": "gregorian",
+        "date": "1985-03-21",
+        "civilTime": null,
+        "timezoneProfiles": ["fixed UTC+07:00", "fixed UTC+08:00"]
+      },
+      "observations": [
+        {
+          "observationId": "k02b.jpl.de441.march-equinox",
+          "sourceId": "jpl-horizons-de441",
+          "sourceFamilyId": "nasa-jpl-horizons",
+          "sourceRevision": "Horizons API 1.2 response; DE441; retrieved 2026-10-14",
+          "locator": "https://ssd.jpl.nasa.gov/api/horizons.api",
+          "method": "Geocentric apparent ecliptic longitude of the Sun, QUANTITIES=31, ten-minute UTC grid; linear interpolation inside the bracketing interval where longitude crosses 0 degrees.",
+          "bracketUtc": {
+            "start": "1985-03-20T16:10:00Z",
+            "startLongitudeDegrees": 359.9974123,
+            "end": "1985-03-20T16:20:00Z",
+            "endLongitudeDegrees": 0.0043123
+          },
+          "interpolatedUtc": "1985-03-20T16:13:45.017Z",
+          "civilDateUtcPlus7": "1985-03-20",
+          "civilDateUtcPlus8": "1985-03-21",
+          "artifactDigest": "sha256:b243c58ea4031ac6c58b8ecf6e22c234084da396f4678553a8457886424ee7df",
+          "status": "observed-derived-not-golden",
+          "limitations": [
+            "The interpolated instant is a bounded research derivation from a ten-minute grid, not an event-time oracle.",
+            "The API response does not specify a Chinese or Vietnamese calendar assignment rule.",
+            "The API documentation page does not state a reusable-data license; only derived metadata and citation are retained pending rights review."
+          ]
+        },
+        {
+          "observationId": "k02b.jpl.de441.march-new-moon",
+          "sourceId": "jpl-horizons-de441",
+          "sourceFamilyId": "nasa-jpl-horizons",
+          "sourceRevision": "Horizons API 1.2 response; DE441; retrieved 2026-10-14",
+          "locator": "https://ssd.jpl.nasa.gov/api/horizons.api",
+          "method": "Sun and Moon geocentric apparent ecliptic longitudes, QUANTITIES=31, ten-minute UTC grid; wrapped Moon-minus-Sun difference linearly interpolated through zero.",
+          "bracketUtc": {
+            "start": "1985-03-21T11:50:00Z",
+            "startDifferenceDegrees": -0.0661256,
+            "end": "1985-03-21T12:00:00Z",
+            "endDifferenceDegrees": 0.0099102
+          },
+          "interpolatedUtc": "1985-03-21T11:58:41.798Z",
+          "civilDateUtcPlus7": "1985-03-21",
+          "civilDateUtcPlus8": "1985-03-21",
+          "artifactDigests": {
+            "sun": "sha256:b243c58ea4031ac6c58b8ecf6e22c234084da396f4678553a8457886424ee7df",
+            "moon": "sha256:499b51ca71fb5f40f306482788335738576a8cf6c9964c6682150aa2a44b3e5c"
+          },
+          "status": "observed-derived-not-golden",
+          "limitations": [
+            "The interpolation is bounded by ten-minute samples and is not a substitute for a formally admitted ephemeris calculation.",
+            "Coincidence with another table does not establish calendar-profile equivalence."
+          ]
+        },
+        {
+          "observationId": "k02b.jpl.de441.april-principal-term-and-new-moon",
+          "sourceId": "jpl-horizons-de441",
+          "sourceFamilyId": "nasa-jpl-horizons",
+          "sourceRevision": "Horizons API 1.2 response; DE441; retrieved 2026-10-14",
+          "locator": "https://ssd.jpl.nasa.gov/api/horizons.api",
+          "method": "Same ten-minute geocentric-longitude procedure for the Sun crossing 30 degrees and the following Sun-Moon conjunction.",
+          "observedOutput": {
+            "sun30DegreesBracketUtc": ["1985-04-20T03:20:00Z", "1985-04-20T03:30:00Z"],
+            "sun30DegreesInterpolatedUtc": "1985-04-20T03:25:47.838Z",
+            "conjunctionBracketUtc": ["1985-04-20T05:20:00Z", "1985-04-20T05:30:00Z"],
+            "conjunctionInterpolatedUtc": "1985-04-20T05:21:57.678Z",
+            "bothCivilDateUtcPlus7": "1985-04-20",
+            "bothCivilDateUtcPlus8": "1985-04-20"
+          },
+          "artifactDigests": {
+            "sun": "sha256:a21d3f35b352dcbc9b136dac8b92959f67ecc012fd9b65557d8efb3707e69574",
+            "moon": "sha256:e7baa3272bef32d458be8bdfd26529315b6d12de78113a12085e0ea30b5749da"
+          },
+          "status": "observed-derived-not-golden",
+          "limitations": [
+            "The ordering is an astronomical observation; assignment of a principal term to a lunar month still requires a cited calendar rule.",
+            "No Tử Vi palace or star placement is supported by this observation."
+          ]
+        },
+        {
+          "observationId": "k02b.hko.1985-table-and-method-note",
+          "sourceId": "k01a-hko-gregorian-lunar-tables",
+          "sourceFamilyId": "hko-official-calendar-tables",
+          "sourceRevision": "1985 annual PDF plus HKO calendar information pages retrieved 2026-10-14",
+          "locators": [
+            "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/1985e.pdf",
+            "https://www.hko.gov.hk/en/gts/time/calendarinfo.htm",
+            "https://www.hko.gov.hk/en/gts/time/conversion.htm"
+          ],
+          "observedOutput": {
+            "1985-03-21": "first day of second lunar month, not marked leap",
+            "vernalEquinoxCivilDate": "1985-03-21",
+            "1985-04-20": "first day of third lunar month",
+            "cornRainCivilDate": "1985-04-20"
+          },
+          "artifactDigests": {
+            "annualPdf": "sha256:fd8c0c6a978ac9429533908f6a3b6ed32cb72fb5bdef9f5fbaa4617e02f41eb6",
+            "calendarInformationHtml": "sha256:9e5e3fd0e2a9c579c925390ec9fd15f552f476103673be2bf8ae1382db9476cb",
+            "conversionPageHtml": "sha256:a3b1a96465876ff4bbeb5218d21009ec61cbe1da57e063fbad972a501a0f2a71"
+          },
+          "status": "observed-not-golden",
+          "limitations": [
+            "HKO explains new-moon starts and astronomical uncertainty but the inspected pages do not state the governing timezone or a complete leap-month assignment algorithm.",
+            "The table is a Chinese calendar reference, not a Tử Vi calculation profile."
+          ]
+        },
+        {
+          "observationId": "k02b.astropixels.1985-new-moons",
+          "sourceId": "astropixels-moon-phases",
+          "sourceFamilyId": "fred-espenak-astropixels",
+          "sourceRevision": "Moon phases 1901-2000 page retrieved 2026-10-14",
+          "locator": "https://astropixels.com/ephemeris/phasescat/phases1901.html",
+          "observedOutput": {
+            "1985-03-newMoonUtcMinute": "1985-03-21T11:59Z",
+            "1985-04-newMoonUtcMinute": "1985-04-20T05:22Z"
+          },
+          "status": "independent-timing-corroboration-only",
+          "limitations": [
+            "The page is copyrighted and is cited only; no bulk content is copied.",
+            "The phase table corroborates conjunction timing to the displayed minute but does not define lunar-month numbering or Tử Vi rules."
+          ]
+        },
+        {
+          "observationId": "k02b.lasotuvi.hnd-timezone-result",
+          "sourceId": "oss.lasotuvi",
+          "sourceFamilyId": "doanguyen-lasotuvi",
+          "implementationFamilyId": "impl.doanguyen-lasotuvi-hnd",
+          "sourceRevision": "git:ace8379a3ea033674e8a9096f5b98a9e2041eace",
+          "locator": "https://github.com/doanguyen/lasotuvi/blob/ace8379a3ea033674e8a9096f5b98a9e2041eace/lasotuvi/Lich_HND.py",
+          "observedOutput": {
+            "fixedUtcPlus7": {
+              "lunarYear": 1985,
+              "lunarMonth": 2,
+              "lunarDay": 1,
+              "isLeapMonth": true
+            },
+            "fixedUtcPlus8": {
+              "lunarYear": 1985,
+              "lunarMonth": 2,
+              "lunarDay": 1,
+              "isLeapMonth": false
+            }
+          },
+          "status": "limited-reference-unresolved",
+          "limitations": [
+            "The implementation samples solar longitude at local civil-day boundaries and declares Ho Ngoc Duc/Meeus lineage.",
+            "It is not an independent astronomical source or a declared Nam Phái profile.",
+            "Its downstream chart builder discards the leap flag."
+          ]
+        }
+      ],
+      "mismatchTaxonomy": {
+        "category": "profile-mismatch",
+        "subcategories": ["timezone-civil-date-boundary", "calendar-rule-not-fully-pinned"],
+        "notClassifiedAs": ["implementation-defect", "golden-expected-mismatch"]
+      },
+      "currentConclusion": "The March equinox falls on different civil dates under UTC+7 and UTC+8 while the following new moon remains on 21 March in both profiles. This explains why a civil-day-based lunisolar algorithm can assign different leap status. It does not authorize selecting either profile for production; the exact Chinese calendar assignment rule and the Huyen Vi target profile still require formal source admission."
+    }
+  ],
+  "fullChartReferenceSearch": {
+    "status": "no-independent-compatible-family-found",
+    "syntheticProbeTarget": {
+      "date": "2000-08-29",
+      "hourBranch": "Tỵ",
+      "gender": "male",
+      "requiredProfile": "nam-phai-chinese-lunar-v1 exact field-level compatibility"
+    },
+    "candidates": [
+      {
+        "sourceId": "oss.tuvimcp",
+        "repository": "https://github.com/nmhaaa3218/TuViMCP",
+        "sourceRevision": "git:039b2270457536976c7dfd374e8d40fd19d8c246",
+        "license": "Apache-2.0 at inspected revision",
+        "result": "rejected-as-independent-family",
+        "reason": "The bundled _engine is a modified ansaotuvi/lasotuvi lineage. Sequence similarity at pinned revisions was 0.9214 for Lich_HND.py, 0.9631 for App.py, 0.9523 for AmDuong.py and 0.6285 for DiaBan.py. The project also states Vietnamese calendar defaults and no selectable school profile."
+      },
+      {
+        "sourceId": "oss.renhuai-ziwei-doushu",
+        "repository": "https://github.com/Renhuai123/ziwei-doushu",
+        "sourceRevision": "git:f106f6bbf218fd4c6923526a7e2bcfe731f3bae1",
+        "license": "MIT for code; separate dataset/content licenses",
+        "result": "rejected-as-independent-family",
+        "reason": "algorithm.ts explicitly states that chart calculation is based on iztro and package.json depends on iztro and lunar-javascript. It is not independent of Huyen Vi's iztro/6tail lineage and declares a Ni Haixia/Tian Ji system rather than demonstrated compatibility with the target profile."
+      },
+      {
+        "sourceId": "oss.thaylinh-tuvi-api",
+        "repository": "https://github.com/thaylinh/tuvi-api",
+        "sourceRevision": "git:f736ac47c72cdf4e47759d70b750c94ee17e35a6",
+        "license": "no license file identified in bounded inspection",
+        "result": "blocked",
+        "reason": "README/engine references iztro and doanguyen/lasotuvi; rights and independent lineage are not established. It also exposes multiple Tứ Hóa schools without proving the target profile."
+      }
+    ],
+    "blockedSource": {
+      "sourceId": "oss.dqcai-vn-lunar",
+      "status": "blocked",
+      "reason": "Product Owner decision: license and algorithm lineage remain unresolved; it was not executed or counted."
+    }
+  }
+}
