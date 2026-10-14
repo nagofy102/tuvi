@@ -1,8 +1,15 @@
 # HV-R01 — Reading UX vNext architecture and execution plan
 
 Ngày: 14/10/2026. Trạng thái: **planned / approval required**. Đây là đặc tả
-implementation-ready, không xác nhận rằng API, AI, cache, embeddings hay Reading
+architecture draft, không xác nhận rằng API, AI, cache, embeddings hay Reading
 Brief đang tồn tại.
+
+HV-R02: canonical fields, invariants, career matrix and exclusive ownership are
+in [reading-brief-contract.md](reading-brief-contract.md). R01 type sketches and
+ownership below are historical, superseded proposals. Samples require user
+approval; no implementation/worktree assignment is authorized. R04 is a local
+deterministic adapter first, not an approved API. No independently verified full
+Nam chart exists in the current corpus.
 
 ## Target topology
 
@@ -12,12 +19,13 @@ Calculated Chart (existing, validated profile only)
   -> Versioned Rule Matrix (approved rules only)
   -> Prioritization + deduplication (deterministic)
   -> Reading Brief v1 (JSON contract)
+  -> MVP deterministic schema + evidence/claim validation
   -> [future, opt-in] LLM editorial writer
-  -> [future] grounding / claim validator
+  -> [future] additional AI prose grounding / claim validator
   -> conclusion-first UI
 ```
 
-The first four stages are deterministic and own astrological truth. The UI must
+The first four stages preserve calculated facts and sourced symbolic readings, not predictive truth. The UI must
 render a valid Brief without an LLM. An LLM may only transform locked, approved
 brief fields into Vietnamese prose; it may not calculate, retrieve unrestricted
 sources, infer a star relationship, select a rule, or upgrade an evidence status.
@@ -38,7 +46,7 @@ sources, infer a star relationship, select a rule, or upgrade an evidence status
   It should consume a Brief view model, not call an LLM or expose rule internals in
   the primary view.
 
-## Rule Matrix specification (proposed)
+## Rule Matrix specification (R01 sketch, superseded)
 
 One record is a versioned, source-bounded rule application specification. It is not
 a numerical fate model. `editorialPriority` is only a deterministic ordering aid;
@@ -71,7 +79,7 @@ entry; it does not manufacture an adverse conclusion. A conflict may be emitted
 only when both reviewed sides and the resolution rule are present; otherwise emit
 an insufficient-evidence state.
 
-## Reading Brief v1 contract (proposed)
+## Reading Brief v1 contract (R01 sketch, superseded)
 
 This transport contract is frontend/backend independent, PII-minimized, and
 serializable. It deliberately contains stable IDs, not birth name/date/time.
@@ -80,9 +88,9 @@ serializable. It deliberately contains stable IDs, not birth name/date/time.
 type ReadingBriefV1 = {
   schemaVersion: 'reading-brief-v1';
   reading: {
-    id: string;                 // random request/report ID; no encoded PII
+    id: string; // random request/report ID; no encoded PII
     topic: 'overview' | 'career' | 'finance' | 'relationship';
-    generatedAt: string;        // ISO timestamp
+    generatedAt: string; // ISO timestamp
     mode: 'deterministic' | 'editorial-pending';
   };
   provenance: {
@@ -98,7 +106,7 @@ type ReadingBriefV1 = {
     checkedAt: string;
   };
   conclusion: BriefConclusion | null;
-  insights: BriefInsight[];     // 0..3, unique deduplicationKey
+  insights: BriefInsight[]; // 0..3, unique deduplicationKey
   topicReading: BriefTopicReading | null;
   evidence: BriefEvidence[];
   exclusions: BriefExclusion[];
@@ -167,14 +175,14 @@ authority. Do not let cosine similarity select rules, resolve conflicts, or repl
 the grounding validator. A vector database is explicitly out of scope until a
 licensed corpus, retrieval evaluation set and privacy decision exist.
 
-## Parallel implementation plan
+## Parallel implementation plan (R01 sketch, superseded ownership)
 
-| Task | Owner / suggested model effort | Allowed ownership | Dependencies | Acceptance / checks |
-| --- | --- | --- | --- | --- |
-| HV-R02 BA / Domain & Data | BA, `gpt-6.1-sol`, high | `design/reading-ux-vnext.md`, new `dev/reading-brief-contract.md`, new matrix spec/fixtures metadata | User approval of scope; no code dependency | Contract invariants, source/rule/exclusion vocabulary, acceptance examples for supported/insufficient/mixed; no invented rule. |
-| HV-R03 DEV / UI | DEV, `gpt-6.1-sol`, high | `src/components/horoscope/interpretation-panel.*`, targeted UI tests/CSS | Brief v1 frozen; can begin with explicitly labelled mock adapter | Conclusion-first screen, max 3 insights, topic control, evidence disclosure, 320px/large text/keyboard/reduced motion; `typecheck`, UI unit/E2E, axe. |
-| HV-R04 DEV / Backend & AI | DEV, `gpt-6.1-sol`, xhigh | New server/domain modules and route only; no ownership of UI or chart engine | R02 contract; separate user approval before LLM/provider, persistence/cache | Deterministic signal→matrix→brief tests first. AI phase additionally needs consent, schema, grounding failure fallback, no-PII/network/cache proof. |
-| HV-R05 QA | QA, `gpt-6.1-sol`, high | `test/reading-vnext-test-plan.md`, test files only | R02 for contract tests; R03/R04 features for integration | Schema/provenance/mutation/grounding/privacy/accessibility/regression evidence; no claim of domain validation. |
+| Task                      | Owner / suggested model effort | Allowed ownership                                                                                    | Dependencies                                                                | Acceptance / checks                                                                                                                                   |
+| ------------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HV-R02 BA / Domain & Data | BA, `gpt-6.1-sol`, high        | `design/reading-ux-vnext.md`, new `dev/reading-brief-contract.md`, new matrix spec/fixtures metadata | User approval of scope; no code dependency                                  | Contract invariants, source/rule/exclusion vocabulary, acceptance examples for supported/insufficient/mixed; no invented rule.                        |
+| HV-R03 DEV / UI           | DEV, `gpt-6.1-sol`, high       | `src/components/horoscope/interpretation-panel.*`, targeted UI tests/CSS                             | Brief v1 frozen; can begin with explicitly labelled mock adapter            | Conclusion-first screen, max 3 insights, topic control, evidence disclosure, 320px/large text/keyboard/reduced motion; `typecheck`, UI unit/E2E, axe. |
+| HV-R04 DEV / Backend & AI | DEV, `gpt-6.1-sol`, xhigh      | New server/domain modules and route only; no ownership of UI or chart engine                         | R02 contract; separate user approval before LLM/provider, persistence/cache | Deterministic signal→matrix→brief tests first. AI phase additionally needs consent, schema, grounding failure fallback, no-PII/network/cache proof.   |
+| HV-R05 QA                 | QA, `gpt-6.1-sol`, high        | `test/reading-vnext-test-plan.md`, test files only                                                   | R02 for contract tests; R03/R04 features for integration                    | Schema/provenance/mutation/grounding/privacy/accessibility/regression evidence; no claim of domain validation.                                        |
 
 R02 must finish first because it owns the shared contract and acceptance semantics.
 After it is frozen, R03 and the deterministic slice of R04 may run in parallel in
@@ -198,6 +206,6 @@ dependency of the conclusion-first deterministic MVP.
 
 ## Next action
 
-Obtain the four product decisions in `../design/reading-ux-vnext.md`, then assign
-HV-R02. Do not start R03/R04 implementation or create worktrees before the shared
-contract has PM approval.
+HV-R02 direction is approved. Review the canonical contract and samples, obtain
+user sample approval and explicit implementation authorization, then PM assigns
+branches/worktrees and schema-first integration. R03/R04 remain blocked.

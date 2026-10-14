@@ -21,6 +21,9 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 ## References
 
+- `reading-brief-contract.md`: HV-R02 canonical v1 specification, career matrix,
+  provenance/privacy and exclusive future ownership; no runtime implementation.
+
 - `reading-vnext-architecture.md`: audit HV-R01, contract Reading Brief, Rule
   Matrix và thứ tự triển khai. Kế hoạch chờ phê duyệt, không phải API/AI đang chạy.
 

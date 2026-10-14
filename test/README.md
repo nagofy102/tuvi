@@ -8,6 +8,9 @@ Không đánh dấu “pass” cho kiểm tra chưa chạy. Mã kiểm thử s�
 Kế hoạch kiểm thử cho Reading UX vNext (chưa chạy/triển khai) nằm tại
 `reading-vnext-test-plan.md`.
 
+HV-R02 bổ sung review tài liệu/fixture và các gate chưa đạt trong cùng tài liệu;
+không dùng review để khẳng định schema runtime hoặc chất lượng người dùng.
+
 ## Trạng thái hiện tại
 
 Bước 2–4 đã có ứng dụng, bộ chuyển lịch, adapter an sao, trang SEO và ảnh OpenGraph thật.
