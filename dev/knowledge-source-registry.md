@@ -1,16 +1,23 @@
 # HV-K01C-Lite — Minimal Source Registry contract
 
-Ngày 14/10/2026. Trạng thái: **SOURCE REGISTRY BASELINE — REVIEW REQUIRED**.
+Ngày 14/10/2026. Trạng thái: **VERSIONED RESEARCH REGISTRY**.
+
+Sau review K02/K03, Product Owner cho phép đăng ký revision quyển ba ở đúng mức
+bằng chứng hiện có. Record `zwds-quanshu-vol3-wikisource-r2268626` vì vậy có trạng
+thái `source-backed` cho revision/locator đã kiểm tra, nhưng không làm passage hay
+rule nào thành `approved-for-implementation`. Quyển một, hai và ba vẫn thuộc cùng
+textual lineage chưa giải quyết và không được đếm như các kiểm chứng độc lập.
 
 ## Phạm vi và quan hệ với registry cũ
 
 `knowledge-source-registry.schema.json` là contract nghiên cứu tối thiểu cho K01.
 Nó không thay thế `source-registry.json`, không thay admission runtime, không mở rule
-hoặc expected field mới. Registry ban đầu nhập ba tài nguyên thực đang tồn tại:
+hoặc expected field mới. Registry hiện nhập bốn tài nguyên thực đang tồn tại:
 
 1. Wikisource `卷二`, revision `1963110`;
 2. Wikisource `卷一`, revision `7913704`;
-3. một Archive facsimile item chứa các leaf đã đối chiếu.
+3. Wikisource `卷三`, revision `2268626`;
+4. một Archive facsimile item chứa các leaf đã đối chiếu.
 
 Hai leaf n72/n74 thuộc cùng Archive item nên chỉ là một source record. Các volume và
 facsimile cùng được đặt trong textual lineage chưa xác định; không được tính thành
@@ -38,7 +45,7 @@ năng truy cập, không xác thực nội dung, bản quyền, ấn bản hoặ
 
 ## Initial registry limitations
 
-- Mới nhập 3/4 legacy entries vì hai leaf Archive được chuẩn hóa thành một source.
+- Bốn source record đã được đăng ký; hai leaf Archive được chuẩn hóa thành một source.
 - Chỉ nhập ba passage đại diện; legacy registry vẫn là authority cho sáu passage
   hiện dùng. Không passage nào mới được admit.
 - Tác giả, ấn bản, NXB/năm của underlying classical work chưa xác minh.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k01c-lite-2026-10-14",
+  "registryVersion": "hv-k02-k03-po-review-2026-10-14",
   "updatedAt": "2026-10-14",
   "sources": [
     {
@@ -103,6 +103,56 @@
       "supersedes": []
     },
     {
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "sourceKind": "transcription",
+      "title": "紫微斗數全書/卷三",
+      "creator": null,
+      "edition": null,
+      "publisher": "Chinese Wikisource",
+      "publicationYear": null,
+      "language": "zh-Hans",
+      "knowledgeScopes": ["cross-palace-interpretation"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "The pinned transcription and repository research do not independently establish a Nam Phái profile."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷三&oldid=2268626",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200 through MediaWiki API and pinned revision",
+        "robotsOrTermsNote": "Only bounded manual passage research is admitted; bulk reuse was not assessed."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "CC BY-SA 4.0 applies to Wikisource contributions; underlying-text status remains unresolved.",
+        "reusePolicy": "Store the pinned locator and minimal reviewed quotations with attribution; do not bulk-copy the work."
+      },
+      "provenance": {
+        "locator": "Pinned Wikisource revision 2268626, 卷三; bounded passages in 談星要論 were reviewed during HV-K03A",
+        "revision": "2268626",
+        "contentDigest": null,
+        "retrievalMethod": "Manual bounded review through the MediaWiki API and pinned web transcription",
+        "bibliographicIdentity": "Underlying printed edition, authorship and relationship to other transcriptions remain unresolved."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "A third volume of the same named work is not an independent source-family vote."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "Registration confirms the pinned revision and bounded research locators only.",
+        "No passage or rule is approved for implementation by this source record.",
+        "Vocabulary, calculation profile and philological review remain unresolved."
+      ],
+      "supersedes": []
+    },
+    {
       "sourceId": "archive-item-20260506-zwds-facsimile",
       "sourceKind": "facsimile",
       "title": "紫微斗數全書 facsimile artifact (Archive item 20260506_20260506_1217)",
@@ -192,6 +242,14 @@
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k02-k03-po-vol3-registration",
+      "date": "2026-10-14",
+      "reviewerRole": "PO/PM/BA",
+      "action": "registered",
+      "targetIds": ["zwds-quanshu-vol3-wikisource-r2268626"],
+      "basis": "Product Owner authorized registering the pinned volume-three revision at the evidence-supported source level after HV-K03A; no passage or rule status was upgraded."
+    },
     {
       "reviewId": "hv-k01c-lite-initial-import",
       "date": "2026-10-14",
