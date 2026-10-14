@@ -173,13 +173,13 @@ describe('source-bounded conditional synthesis', () => {
 
   it('combines both active group actions and never labels complementary groups mixed', () => {
     const input = palaces();
-    const menh = input.find((palace) => palace.name === 'Mệnh')!;
-    menh.stars.push(minor('Tả Phù'), minor('Hữu Bật'), minor('Văn Xương'), minor('Văn Khúc'));
-    const theme = readThemes(input)[0];
-    expect(theme.selfCheck).toContain('người nhận');
-    expect(theme.selfCheck).toContain('yêu cầu nào đã đổi');
-    expect(theme.adjustment).toContain('người phụ trách');
-    expect(theme.adjustment).toContain('thay đổi đã xác nhận');
+    const origin = input.find((palace) => palace.name === 'Tài Bạch')!;
+    origin.stars.push(minor('Tả Phù'), minor('Hữu Bật'), minor('Văn Xương'), minor('Văn Khúc'));
+    const theme = readThemes(input)[1];
+    expect(theme.selfCheck).toContain('tiền');
+    expect(theme.selfCheck).toContain('phí');
+    expect(theme.adjustment).toContain('tiền');
+    expect(theme.adjustment).toContain('phí');
     expect(theme.claims.some((claim) => claim.state === 'mixed')).toBe(false);
     expect(theme.claims.map((claim) => claim.ruleId)).not.toContain('pair-assistance');
   });

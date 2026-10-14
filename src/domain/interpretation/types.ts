@@ -85,6 +85,17 @@ export interface ThematicReading {
   palaceNames: string[];
   insights: ContextualInsight[];
   claims: ReadingClaim[];
+  /** Career-only source-bounded synthesis; other themes retain their prior contract. */
+  careerNarrative?: CareerNarrative;
+}
+
+export interface CareerNarrative {
+  state: 'direct-career' | 'no-direct-career' | 'insufficient-context';
+  why: string;
+  evidence: ReadingEvidence[];
+  passageIds: string[];
+  limitations: string[];
+  practice: { prompt: string; action: string };
 }
 
 export interface InterpretationReport {

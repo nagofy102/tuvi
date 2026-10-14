@@ -7,6 +7,7 @@ import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
 import type {
   ContextualInsight,
+  CareerNarrative,
   PalaceReading,
   ReadingClaim,
   StarReading,
@@ -273,6 +274,43 @@ function PalaceDetail({ palace }: { palace: PalaceReading }) {
   );
 }
 
+function CareerReason({ narrative }: { narrative: CareerNarrative }) {
+  return (
+    <details className="interpretation-reason career-reason">
+      <summary>Vì sao luận như vậy?</summary>
+      <p>{narrative.why}</p>
+      <h4>Dữ kiện được dùng</h4>
+      <ul className="interpretation-evidence">
+        {narrative.evidence.map((item, index) => (
+          <li key={`${item.scopePalace}-${item.palace}-${index}`}>
+            {item.scopePalace && `Xét từ ${item.scopePalace}: `}
+            {item.palace} tại {item.branch} ·{' '}
+            {item.relation === 'direct'
+              ? 'tọa thủ (ngay tại cung)'
+              : item.relation === 'body'
+                ? 'cung an Thân'
+                : item.relation === 'trine'
+                  ? 'tam hợp (cùng nhóm địa chi)'
+                  : 'đối cung (cung đối diện)'}
+            {' — '}
+            {item.stars.length
+              ? item.stars.map((star) => star.name).join('; ')
+              : 'không có chính tinh được dùng trực tiếp'}
+            .
+          </li>
+        ))}
+      </ul>
+      <h4>Phạm vi của cách đọc</h4>
+      <ul>
+        {narrative.limitations.map((limit) => (
+          <li key={limit}>{limit}</li>
+        ))}
+      </ul>
+      <PassageEvidence ids={narrative.passageIds} />
+    </details>
+  );
+}
+
 export function InterpretationPanel({
   chart,
   isExample,
@@ -403,7 +441,12 @@ export function InterpretationPanel({
             >
               <h4>Ba mạch đọc xuyên cung</h4>
               {sortThemes(report.themes, concern).map((theme, index) => (
-                <article className="reading-theme" key={theme.id} data-concern={theme.concern}>
+                <article
+                  className="reading-theme"
+                  key={theme.id}
+                  data-concern={theme.concern}
+                  data-career-reading-state={theme.careerNarrative?.state}
+                >
                   <div className="theme-caption">
                     <span>
                       {theme.concern === 'career' ? (
@@ -423,41 +466,59 @@ export function InterpretationPanel({
                   </div>
                   <details className="theme-deep" open={theme.concern === concern}>
                     <summary>{theme.title}</summary>
-                    {theme.paragraphs.slice(0, 2).map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                    <details className="reading-exercise">
-                      <summary>Đọc sâu: tự kiểm chứng và điều chỉnh</summary>
-                      <p>
-                        <strong>Tự kiểm chứng: </strong>
-                        {theme.selfCheck}
-                      </p>
-                    </details>
-                    <details className="interpretation-reason">
-                      <summary>Vì sao luận như vậy?</summary>
-                      <p>
-                        Các cung đối chiếu: {theme.palaceNames.join(' – ')}. Chỉ những nhóm đủ điều
-                        kiện trong lá số này mới xuất hiện dưới đây.
-                      </p>
-                      {theme.insights.map((insight, index) => (
-                        <InsightEntry
-                          key={`${insight.ruleId}-${index}`}
-                          insight={insight}
-                          expanded
-                        />
-                      ))}
-                    </details>
-                    <details className="reading-claims">
-                      <summary>Điều kiện của mạch luận</summary>
-                      <p>
-                        Đối chiếu từng nhóm với dữ kiện thực của các cung liên hệ. Nhiều nhóm cùng
-                        xuất hiện không tự tạo thành tín hiệu trái chiều; nhóm chưa đủ điều kiện
-                        không có nghĩa là bất lợi.
-                      </p>
-                      {theme.claims.map((claim) => (
-                        <ClaimEntry key={claim.id} claim={claim} />
-                      ))}
-                    </details>
+                    {theme.careerNarrative ? (
+                      <>
+                        <div className="career-narrative">
+                          {theme.paragraphs.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
+                        <CareerReason narrative={theme.careerNarrative} />
+                        <details className="reading-exercise career-practice">
+                          <summary>Gợi ý thực hành (tùy chọn)</summary>
+                          <p>{theme.careerNarrative.practice.prompt}</p>
+                          <p>{theme.careerNarrative.practice.action}</p>
+                        </details>
+                      </>
+                    ) : (
+                      <>
+                        {theme.paragraphs.slice(0, 2).map((paragraph) => (
+                          <p key={paragraph}>{paragraph}</p>
+                        ))}
+                        <details className="reading-exercise">
+                          <summary>Đọc sâu: tự kiểm chứng và điều chỉnh</summary>
+                          <p>
+                            <strong>Tự kiểm chứng: </strong>
+                            {theme.selfCheck}
+                          </p>
+                        </details>
+                        <details className="interpretation-reason">
+                          <summary>Vì sao luận như vậy?</summary>
+                          <p>
+                            Các cung đối chiếu: {theme.palaceNames.join(' – ')}. Chỉ những nhóm đủ
+                            điều kiện trong lá số này mới xuất hiện dưới đây.
+                          </p>
+                          {theme.insights.map((insight, index) => (
+                            <InsightEntry
+                              key={`${insight.ruleId}-${index}`}
+                              insight={insight}
+                              expanded
+                            />
+                          ))}
+                        </details>
+                        <details className="reading-claims">
+                          <summary>Điều kiện của mạch luận</summary>
+                          <p>
+                            Đối chiếu từng nhóm với dữ kiện thực của các cung liên hệ. Nhiều nhóm
+                            cùng xuất hiện không tự tạo thành tín hiệu trái chiều; nhóm chưa đủ điều
+                            kiện không có nghĩa là bất lợi.
+                          </p>
+                          {theme.claims.map((claim) => (
+                            <ClaimEntry key={claim.id} claim={claim} />
+                          ))}
+                        </details>
+                      </>
+                    )}
                   </details>
                 </article>
               ))}

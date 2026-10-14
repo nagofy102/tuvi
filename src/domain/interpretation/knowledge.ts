@@ -176,6 +176,15 @@ export const KNOWLEDGE_RULES: readonly KnowledgeRule[] = [
     limits: 'Không nhận diện cách cục, không dự đoán chức vị; không dùng một sao để kết luận.',
   },
   {
+    id: 'career-cross-palace',
+    status: 'editorial',
+    passageIds: ['layout-palaces', 'context-not-uniform'],
+    interpretation:
+      'Đặt biểu tượng chính tinh trực tiếp ở Quan Lộc, Mệnh và Nô Bộc cạnh nhau; cần ít nhất hai cung khác nhau có chính tinh với đoạn nguồn đã đọc. Phụ tinh chỉ bổ sung sau trọng tâm chính.',
+    limits:
+      'Kết nối biên tập hiện đại, không phải tổ hợp cổ được xác nhận; không suy ra tính cách, nghề nghiệp, mâu thuẫn hoặc vận hạn. Không mượn sao cung khác thành tọa thủ.',
+  },
+  {
     id: 'palace-context',
     status: 'editorial',
     passageIds: ['layout-palaces', 'context-not-uniform'],
@@ -217,7 +226,7 @@ export const KNOWLEDGE_RULES: readonly KnowledgeRule[] = [
 ];
 
 export const KNOWLEDGE_PROFILE = {
-  id: 'huyenvi-nam-phai-source-bounded-v2',
+  id: 'huyenvi-nam-phai-source-bounded-v3',
   chartProfile: RULE_PROFILE,
   school: 'Hồ sơ Nam phái của dự án · âm lịch Trung Quốc',
   review: 'AI-assisted textual review; not independent practitioner validation',

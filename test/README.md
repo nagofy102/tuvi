@@ -120,6 +120,12 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### Bản đọc Công việc — luận trước, khuyên sau
+
+Xem `career-reading.md` cho kiểm tra nội dung, nguồn/điều kiện và hai mục thu
+gọn căn cứ/thực hành trên mobile. Chỉ nghiệm thu gói Công việc, không coi kiểm
+tra nhánh văn bản là xác nhận nghề nghiệp/tính cách hoặc đóng corpus Nam phái.
+
 ### A1 nghiệm thu riêng; A2/A3 đổi hướng
 
 Xem `../design/nam-phai-transition.md`: A1 đóng trong phạm vi hồ sơ/truy nguồn.

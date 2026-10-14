@@ -3,6 +3,7 @@ import { readContextualGroups, readMenhThan } from './context';
 import { resolveRule } from './knowledge';
 import { buildReadingClaims, mergeContextualInsights } from './claims';
 import { selectThemeExercise } from './theme-exercises';
+import { readCareerNarrative } from './career-reading';
 import type { ContextualInsight, ReadingConcern, ThematicReading } from './types';
 
 const TOPICS = [
@@ -74,11 +75,13 @@ export function readThemes(palaces: ChartPalace[]): ThematicReading[] {
     const exercise = selectThemeExercise(topic.concern, support, literacy);
     const selfCheck = exercise?.selfCheck ?? topic.selfCheck;
     const adjustment = exercise?.adjustment ?? topic.adjustment;
+    const careerReading =
+      topic.concern === 'career' ? readCareerNarrative(palaces, distinctGroups) : undefined;
     return {
       id: `theme-${topic.concern}`,
       concern: topic.concern,
-      title: exercise?.title ?? `Bài tập chung: ${topic.title}`,
-      paragraphs: [
+      title: careerReading?.title ?? exercise?.title ?? `Bài tập chung: ${topic.title}`,
+      paragraphs: careerReading?.paragraphs ?? [
         `${exercise ? '' : 'Chưa có nhóm đủ điều kiện; đây là bài tập chung theo chủ đề. '}Trong mạch ${topic.concern === 'career' ? 'công việc' : topic.concern === 'finance' ? 'nguồn lực' : 'đồng hành'}, lá số của bạn có ${topic.names
           .map((name) => {
             const palace = palaces.find((item) => item.name === name)!;
@@ -90,8 +93,9 @@ export function readThemes(palaces: ChartPalace[]): ThematicReading[] {
           .join('; ')}.`,
         adjustment,
       ],
-      selfCheck,
-      adjustment,
+      selfCheck: careerReading?.narrative.practice.prompt ?? selfCheck,
+      adjustment: careerReading?.narrative.practice.action ?? adjustment,
+      ...(careerReading ? { careerNarrative: careerReading.narrative } : {}),
       palaceNames: [...topic.names],
       claims: buildReadingClaims(palaces, topic.names),
       insights: [

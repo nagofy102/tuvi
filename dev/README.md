@@ -21,6 +21,10 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 ## References
 
+- `career-reading-contract.md`, `career-reading-implementation.md`: nâng cấp
+  Công việc bằng kết nối biểu tượng có nguồn; không mở quy tắc tổ hợp cổ hoặc
+  dự báo. Kết quả kiểm tra được ghi riêng tại `../test/career-reading.md`.
+
 - `../design/nam-phai-transition.md`: latest product direction is one Nam Phai
   profile with Chinese leap handling. BA/specialist define exact rules before DEV migration.
 - `nam-phai-source-decision.md`, `nam-phai-migration-spec.md`,

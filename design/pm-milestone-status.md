@@ -1,18 +1,18 @@
 # Trạng thái mốc A–D
 
-Baseline đợt chuyển hồ sơ mới: `49512a2`, ngày 13/10/2026. Đây là bảng bàn giao hiện tại, không phải
+Baseline nâng cấp Công việc: `61b1dc6`, ngày 14/10/2026. Đây là bảng bàn giao hiện tại, không phải
 chứng nhận chuyên môn. Kế hoạch gốc: [reading-synthesis-plan.md](reading-synthesis-plan.md).
 
-| Mốc                       | Trạng thái thực tế                           | Điều kiện còn mở                                                                                                 |
-| ------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| A1 — Hồ sơ và truy nguồn  | PM nghiệm thu phạm vi quản trị/truy nguồn    | Không bao gồm xác thực ấn bản hoặc chứng nhận Nam phái; xem `nam-phai-transition.md`                             |
-| A2 — Chốt hồ sơ Nam phái  | Đã chốt và triển khai hồ sơ cố định          | Lịch Trung Quốc, Tứ Hóa Nam phái, chia nhuận ngày 15, tăng ngày từ 23:00; QA tại `../test/nam-phai-migration.md` |
-| A3 — Corpus bên ngoài     | Đã thu 4 lá số/2 website, so 140 trường      | 139 khớp, 1 khác lịch; Mèo Béo công bố Bắc phái, AItuvi chưa rõ; chưa có golden Nam phái                         |
-| B — Tổng hợp có điều kiện | Đã có bản chạy giới hạn với hai cặp hiện hữu | Chưa có bộ quy tắc đối nghịch được duyệt; chưa chấm toàn bộ rubric chống Barnum                                  |
-| C — Mở nhóm kiến thức     | Chưa kích hoạt nhóm mới                      | Khôi–Việt còn dị bản và thiếu phép gán sao được đối chiếu; các nhóm khác cần nguồn và ca kiểm chứng riêng        |
-| D1 — Cách cục             | Chưa triển khai                              | Cần điều kiện nhận diện, phá cách và ca gần đúng bị loại                                                         |
-| D2 — Luận vận             | Chưa triển khai                              | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                        |
-| D3 — Hỏi tiếp AI          | Chưa triển khai                              | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                        |
+| Mốc                       | Trạng thái thực tế                                                    | Điều kiện còn mở                                                                                                 |
+| ------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| A1 — Hồ sơ và truy nguồn  | PM nghiệm thu phạm vi quản trị/truy nguồn                             | Không bao gồm xác thực ấn bản hoặc chứng nhận Nam phái; xem `nam-phai-transition.md`                             |
+| A2 — Chốt hồ sơ Nam phái  | Đã chốt và triển khai hồ sơ cố định                                   | Lịch Trung Quốc, Tứ Hóa Nam phái, chia nhuận ngày 15, tăng ngày từ 23:00; QA tại `../test/nam-phai-migration.md` |
+| A3 — Corpus bên ngoài     | Đã thu 4 lá số/2 website, so 140 trường                               | 139 khớp, 1 khác lịch; Mèo Béo công bố Bắc phái, AItuvi chưa rõ; chưa có golden Nam phái                         |
+| B — Tổng hợp có điều kiện | Công việc v7 có diễn giải chính tinh theo cung, tách căn cứ/thực hành | Hai chủ đề còn lại giữ bản cũ; chưa có quy tắc đối nghịch hoặc nghiệm thu rubric toàn bản đọc                    |
+| C — Mở nhóm kiến thức     | Chưa kích hoạt nhóm mới                                               | Khôi–Việt còn dị bản và thiếu phép gán sao được đối chiếu; các nhóm khác cần nguồn và ca kiểm chứng riêng        |
+| D1 — Cách cục             | Chưa triển khai                                                       | Cần điều kiện nhận diện, phá cách và ca gần đúng bị loại                                                         |
+| D2 — Luận vận             | Chưa triển khai                                                       | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                        |
+| D3 — Hỏi tiếp AI          | Chưa triển khai                                                       | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                        |
 
 ## Đợt hiện tại — tiếp tục A
 
@@ -35,6 +35,13 @@ ghi; A2 giao BA/chuyên môn chốt Nam phái; A3 chuyển ưu tiên sang đối
 
 ## Bước tiếp theo và ranh giới nghiệm thu
 
+Gói B hiện tại thay phần Công việc ghép dữ kiện với bài tập bằng kết nối biểu
+tượng chính tinh theo vai trò cung, phụ tinh chỉ bổ sung. Bản đọc, căn cứ và gợi
+ý thực hành được tách riêng. Phạm vi và kết quả tại
+[career-reading-upgrade.md](career-reading-upgrade.md). Đây không phải quy tắc tổ
+hợp cổ được kiểm chứng hoặc luận nghề nghiệp chắc chắn; hai chủ đề còn lại chưa
+được nâng cấp tương đương. Không đóng A3, C hoặc D bằng thay đổi biên tập này.
+
 Đợt kế tiếp trên baseline `0958a68` củng cố B bằng nội dung v6: bài tập riêng theo
 ba chủ đề và trạng thái hai cặp hiện hữu, hành động ở đoạn đọc đầu trên mobile.
 Không mở C/D; chưa đóng gate rubric toàn bản đọc. Xem
@@ -44,6 +51,7 @@ Không mở C/D; chưa đóng gate rubric toàn bản đọc. Xem
 tri thức đã duyệt. Không chuyển sang D chỉ vì test kỹ thuật qua. Hồ sơ ứng viên lá
 số công bố phải đi qua [hợp đồng tiếp nhận](../dev/published-chart-intake.md).
 
-Mobile >90 ổn định vẫn là đầu việc chất lượng song song, chưa đạt. Không đo lại
-để thay số lịch sử khi đợt này không sửa UI/bundle. Bằng chứng đợt A được lưu trong
+Mobile >90 ổn định vẫn là đầu việc chất lượng song song, chưa đạt. Gói Công việc
+có sửa giao diện/bundle nhưng chưa đo Lighthouse; không dùng số lịch sử để xác
+nhận bản mới. Bằng chứng đợt A được lưu trong
 `../test/source-registry.md`; mọi thay đổi hoàn tất phải commit/push theo RULE_BASE.

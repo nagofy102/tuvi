@@ -23,6 +23,10 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `career-reading-upgrade.md`: nâng cấp Công việc theo năm tiêu chí người dùng
+  chốt; luận biểu tượng trước, căn cứ và gợi ý thực hành tách riêng. Phạm vi BA
+  và kiểm tra triển khai được liên kết trong tài liệu này.
+
 - `nam-phai-transition.md`: quyết định mới Nam phái, PM điều phối BA/chuyên môn;
   A1 nghiệm thu riêng, A2 chốt hồ sơ, A3 ưu tiên lá số đối thủ.
 

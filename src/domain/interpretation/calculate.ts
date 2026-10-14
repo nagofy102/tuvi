@@ -17,7 +17,7 @@ import type {
   StarReading,
 } from './types';
 
-export const INTERPRETATION_VERSION = 'reference-reading-v6';
+export const INTERPRETATION_VERSION = 'reference-reading-v7';
 
 const MAJOR_STAR_NAMES = [
   'Tử Vi',
@@ -291,9 +291,10 @@ export function calculateInterpretation(
       ...palaces.flatMap((palace) => palace.sourceIds),
       ...readMenhThan(menh, than).passageIds.map((id) => resolvePassage(id).sourceId),
       ...thematicReadings.flatMap((theme) =>
-        theme.insights.flatMap((insight) =>
-          insight.passageIds.map((id) => resolvePassage(id).sourceId),
-        ),
+        [
+          ...theme.insights.flatMap((insight) => insight.passageIds),
+          ...(theme.careerNarrative?.passageIds ?? []),
+        ].map((id) => resolvePassage(id).sourceId),
       ),
     ]),
     warnings: unique([

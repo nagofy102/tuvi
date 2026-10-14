@@ -2,6 +2,13 @@
 
 ## Phạm vi đã triển khai
 
+Yêu cầu mới ngày 14/10/2026 thay quy tắc ghép bài tập vào thân bài đối với Công
+việc: diễn giải biểu tượng có nguồn trước, giải thích ở “Vì sao luận như vậy?”,
+bài tập ở “Gợi ý thực hành” thu gọn riêng. Không dùng câu “Nếu... bỏ qua bài tập”
+làm mạch luận chính. Hợp đồng tại `../dev/career-reading-contract.md`; phạm vi
+triển khai/kiểm tra tại `career-reading-upgrade.md`. Hai chủ đề còn lại chưa được
+nâng cấp tương đương. Các mô tả v4–v6 dưới đây là phạm vi lịch sử.
+
 Bản v5 giữ bằng chứng theo cung xuất phát, kết hợp bài tập khi cả hai nhóm đã mở
 cùng khớp và bổ sung phần điều kiện thu gọn. Trạng thái chỉ nói khả năng áp dụng
 quy tắc biên tập; chưa có quy tắc đối nghịch được duyệt nên không phát trạng thái

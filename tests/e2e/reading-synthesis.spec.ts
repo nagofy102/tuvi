@@ -25,6 +25,17 @@ test('conditional readings disclose applicability, sources and limits without se
     await page.getByLabel('Bạn muốn bắt đầu từ điều gì?').selectOption(concern);
     const theme = panel.locator('.reading-theme').first();
     await expect(theme).toHaveAttribute('data-concern', concern);
+    if (concern === 'career') {
+      await expect(theme.locator('.career-narrative')).toBeVisible();
+      await expect(theme.locator('.career-practice')).not.toHaveAttribute('open');
+      await expect(theme.locator('.reading-claims')).toHaveCount(0);
+      const reasons = theme.locator('.career-reason');
+      await expect(reasons).not.toHaveAttribute('open');
+      await reasons.locator(':scope > summary').click();
+      await expect(reasons.locator('a[href*="oldid="]').first()).toBeVisible();
+      expect(await page.locator('.chart-center').innerText()).toBe(chartBefore);
+      continue;
+    }
     const action = theme.locator('.theme-deep > p').nth(1);
     await expect(action).toBeVisible();
     await expect(action).toHaveText(/^Nếu /u);
@@ -74,15 +85,19 @@ test('conditional details are keyboard accessible at mobile extra-large text wit
   await page.getByRole('button', { name: /^Cỡ chữ:/ }).click();
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
   const panel = page.locator('.interpretation-panel');
-  await expect(panel.locator('.reading-claims')).toHaveCount(3);
+  await expect(panel.locator('.reading-claims')).toHaveCount(2);
   await expect(
-    panel.locator('.reading-theme').first().locator('.theme-deep > p').nth(1),
+    panel.locator('.reading-theme[data-concern="career"]').locator('.career-narrative'),
   ).toBeVisible();
   await expect(
-    panel.locator('.reading-theme').first().locator('.reading-exercise'),
+    panel.locator('.reading-theme[data-concern="career"]').locator('.career-practice'),
   ).not.toHaveAttribute('open');
   expect(await panel.evaluate((node) => node.getBoundingClientRect().height)).toBeLessThan(6000);
-  const conditions = panel.locator('.reading-theme').first().locator('.reading-claims');
+  await page.getByLabel('Bạn muốn bắt đầu từ điều gì?').selectOption('finance');
+  const conditions = panel
+    .locator('.reading-theme[data-concern="finance"]')
+    .locator('.reading-claims');
+  await expect(conditions.locator(':scope > summary')).toBeVisible();
   await conditions.locator(':scope > summary').focus();
   await page.keyboard.press('Enter');
   await expect(conditions).toHaveAttribute('open', '');
@@ -105,13 +120,15 @@ test('unknown birth time and invalid dates never retain conditional star reading
 }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();
-  await expect(page.locator('.reading-claims')).toHaveCount(3);
+  await expect(page.locator('.reading-claims')).toHaveCount(2);
+  await expect(page.locator('.career-narrative')).toBeVisible();
   await page.getByLabel('Chưa biết giờ sinh', { exact: true }).check();
   await page.getByRole('button', { name: 'Xem thông tin không cần giờ sinh' }).click();
   await expect(page.locator('.unknown-time-reading')).toBeVisible();
   await expect(page.locator('.reading-claim')).toHaveCount(0);
   await expect(page.locator('#ban-doc')).toHaveCount(0);
   await expect(page.locator('.reading-theme')).toHaveCount(0);
+  await expect(page.locator('.career-narrative')).toHaveCount(0);
   await page.getByLabel('Chưa biết giờ sinh', { exact: true }).uncheck();
   await page.getByLabel('Năm sinh', { exact: true }).fill('2050');
   await page.getByRole('button', { name: 'Khám phá lá số của tôi' }).click();

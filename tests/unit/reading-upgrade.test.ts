@@ -37,8 +37,8 @@ describe('thematic behavioral reading (not personality or prediction validation)
     { support: false, literacy: true },
     { support: true, literacy: true },
   ])('keeps concern-specific situations for group state %j', ({ support, literacy }) => {
-    const markers = ['việc', 'tiền|chi|phí', 'người bạn đời'];
-    const names = ['Mệnh', 'Tài Bạch', 'Phu Thê'];
+    const markers = ['tiền|chi|phí', 'người bạn đời'];
+    const names = ['Tài Bạch', 'Phu Thê'];
     const checks: string[] = [];
     for (let index = 0; index < names.length; index++) {
       const input = chart();
@@ -47,7 +47,7 @@ describe('thematic behavioral reading (not personality or prediction validation)
       const origin = input.palaces.find((palace) => palace.name === names[index])!;
       if (support) origin.stars.push(minor('Tả Phù'), minor('Hữu Bật'));
       if (literacy) origin.stars.push(minor('Văn Xương'), minor('Văn Khúc'));
-      const theme = readThemes(input.palaces)[index];
+      const theme = readThemes(input.palaces)[index + 1];
       expect(theme.selfCheck).toMatch(new RegExp(markers[index], 'u'));
       expect(theme.paragraphs[1]).toBe(theme.adjustment);
       expect(theme.adjustment).toMatch(/^Nếu /u);
@@ -62,7 +62,7 @@ describe('thematic behavioral reading (not personality or prediction validation)
       expect(theme.insights.some((item) => item.ruleId === 'pair-literacy')).toBe(literacy);
       checks.push(theme.selfCheck);
     }
-    expect(new Set(checks).size).toBe(3);
+    expect(new Set(checks).size).toBe(2);
   });
 
   it('starts from three cross-palace themes with actual provenance', () => {
@@ -74,7 +74,10 @@ describe('thematic behavioral reading (not personality or prediction validation)
       expect(theme.palaceNames.length).toBeGreaterThanOrEqual(2);
       expect(theme.paragraphs.length).toBeGreaterThanOrEqual(2);
       expect(theme.selfCheck.length).toBeGreaterThan(30);
-      expect(theme.adjustment).toMatch(/^Nếu /u);
+      if (theme.concern === 'career') {
+        expect(theme.careerNarrative).toBeDefined();
+        expect(theme.paragraphs).not.toContain(theme.adjustment);
+      } else expect(theme.adjustment).toMatch(/^Nếu /u);
       for (const insight of theme.insights) {
         expect(resolveRule(insight.ruleId).status).toBe('editorial');
         expect(insight.passageIds.every((id) => Boolean(resolvePassage(id)))).toBe(true);
@@ -105,37 +108,37 @@ describe('thematic behavioral reading (not personality or prediction validation)
     const input = chart();
     for (const palace of input.palaces)
       palace.stars = palace.stars.filter((star) => star.group === 'major');
-    const baseline = readThemes(input.palaces)[0];
-    const menh = input.palaces.find((palace) => palace.name === 'Mệnh')!;
-    const scope = fourPalaces(menh, input.palaces);
+    const baseline = readThemes(input.palaces)[1];
+    const origin = input.palaces.find((palace) => palace.name === 'Tài Bạch')!;
+    const scope = fourPalaces(origin, input.palaces);
     scope[0].stars.push(minor('Tả Phù'));
-    const loneMember = readThemes(input.palaces)[0];
+    const loneMember = readThemes(input.palaces)[1];
     const { claims: baselineClaims, ...baselineNarrative } = baseline;
     const { claims: loneClaims, ...loneNarrative } = loneMember;
     expect(loneNarrative).toEqual(baselineNarrative);
     expect(loneClaims).not.toEqual(baselineClaims);
     expect(loneClaims.find((claim) => claim.ruleId === 'pair-support')?.state).toBe('insufficient');
     scope[1].stars.push(minor('Hữu Bật'));
-    const matched = readThemes(input.palaces)[0];
+    const matched = readThemes(input.palaces)[1];
     expect(matched.insights.some((insight) => insight.ruleId === 'pair-support')).toBe(true);
     expect(matched.paragraphs).not.toEqual(baseline.paragraphs);
     expect(matched.selfCheck).not.toBe(baseline.selfCheck);
     expect(matched.adjustment).not.toBe(baseline.adjustment);
-    expect(matched.adjustment).toContain('người phụ trách');
+    expect(matched.adjustment).toContain('tiền');
     scope[1].stars = scope[1].stars.filter((star) => star.name !== 'Hữu Bật');
-    expect(readThemes(input.palaces)[0]).toEqual(loneMember);
+    expect(readThemes(input.palaces)[1]).toEqual(loneMember);
   });
 
   it('uses distinct literacy exercises when only that complete group is present', () => {
     const input = chart();
     for (const palace of input.palaces)
       palace.stars = palace.stars.filter((star) => star.group === 'major');
-    const menh = input.palaces.find((palace) => palace.name === 'Mệnh')!;
-    menh.stars.push(minor('Văn Xương'), minor('Văn Khúc'));
-    const theme = readThemes(input.palaces)[0];
+    const origin = input.palaces.find((palace) => palace.name === 'Tài Bạch')!;
+    origin.stars.push(minor('Văn Xương'), minor('Văn Khúc'));
+    const theme = readThemes(input.palaces)[1];
     expect(theme.insights.some((insight) => insight.ruleId === 'pair-literacy')).toBe(true);
-    expect(theme.selfCheck).toContain('nguồn đầu tiên');
-    expect(theme.adjustment).toContain('chốt ba dòng');
+    expect(theme.selfCheck).toContain('phí');
+    expect(theme.adjustment).toContain('thanh toán');
   });
 
   it('changes source-scoped narratives for actual different birth-hour charts', () => {
