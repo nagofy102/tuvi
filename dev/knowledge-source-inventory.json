@@ -1,0 +1,690 @@
+{
+  "schemaVersion": "knowledge-source-registry-v0.1",
+  "registryVersion": "hv-k01a-inventory-2026-10-14",
+  "updatedAt": "2026-10-14",
+  "sources": [
+    {
+      "sourceId": "k01a-zwds-quanshu-vol1-wikisource-r7913704",
+      "sourceKind": "transcription",
+      "title": "紫微斗數全書/卷一",
+      "creator": null,
+      "edition": null,
+      "publisher": "Chinese Wikisource",
+      "publicationYear": null,
+      "language": "zh-Hant",
+      "knowledgeScopes": [
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "formations",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "Tên tác phẩm và cách repository cũ sử dụng không đủ xác nhận hệ phái."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200; MediaWiki API xác nhận trang tồn tại",
+        "robotsOrTermsNote": "Chỉ truy cập thủ công có giới hạn; chưa đánh giá tái sử dụng hàng loạt."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "Wikisource CC BY-SA/GFDL cho đóng góp biên tập; tình trạng văn bản nền phải xét riêng",
+        "reusePolicy": "Chỉ lưu locator và trích dẫn tối thiểu sau review, kèm revision và attribution."
+      },
+      "provenance": {
+        "locator": "Pinned revision 7913704, 卷一",
+        "revision": "7913704",
+        "contentDigest": null,
+        "retrievalMethod": "Kiểm tra thủ công trang và MediaWiki API",
+        "bibliographicIdentity": "Tác giả, bản in nền, NXB và năm chưa xác minh."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "Cùng tên tác phẩm với 卷二 và facsimile; không tính là family độc lập."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Bản chép web, không phải complete chart oracle.",
+        "Mô tả biểu tượng không tự hỗ trợ kết luận hành vi hoặc kết quả.",
+        "Identity thư mục chưa được hai catalogue độc lập xác nhận."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-zwds-quanshu-vol2-wikisource-r1963110",
+      "sourceKind": "transcription",
+      "title": "紫微斗數全書/卷二",
+      "creator": null,
+      "edition": null,
+      "publisher": "Chinese Wikisource",
+      "publicationYear": null,
+      "language": "zh-Hant",
+      "knowledgeScopes": [
+        "palace-placement",
+        "major-star-placement",
+        "auxiliary-star-placement",
+        "transformations"
+      ],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "Chưa có catalogue hoặc nghiên cứu hệ phái độc lập được review."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200; MediaWiki API xác nhận trang tồn tại",
+        "robotsOrTermsNote": "Chỉ truy cập thủ công có giới hạn; không crawl toàn site."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "Wikisource CC BY-SA/GFDL cho đóng góp biên tập; tình trạng văn bản nền phải xét riêng",
+        "reusePolicy": "Chỉ lưu locator và trích dẫn tối thiểu sau review, kèm revision và attribution."
+      },
+      "provenance": {
+        "locator": "Pinned revision 1963110, 卷二",
+        "revision": "1963110",
+        "contentDigest": null,
+        "retrievalMethod": "Kiểm tra thủ công trang và MediaWiki API",
+        "bibliographicIdentity": "Tác giả, bản in nền, NXB và năm chưa xác minh."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "Cùng textual lineage với 卷一; quan hệ với facsimile chưa được chứng minh độc lập."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Chỉ phù hợp làm đầu mối trích xuất rule có locator sau review.",
+        "Không xác định đầy đủ giờ Tý, lịch nhuận hoặc profile mặc định.",
+        "Không chứng nhận Nam Phái độc lập."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-zwds-quanshu-facsimile-ia-ark-s23vzp6g9w0",
+      "sourceKind": "facsimile",
+      "title": "新鋟希夷陳先生紫微斗數全書（七卷）",
+      "creator": "陳摶撰；潘希尹補輯（metadata do uploader cung cấp, chưa xác thực)",
+      "edition": "Metadata ghi Minh đại Nam Dương Đường刊本",
+      "publisher": "南陽堂 (theo metadata uploader)",
+      "publicationYear": "1600 (theo metadata uploader)",
+      "language": "zh-Hant",
+      "knowledgeScopes": [
+        "palace-placement",
+        "major-star-placement",
+        "auxiliary-star-placement",
+        "star-symbolism",
+        "formations",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "Archive metadata không đưa ra bằng chứng phân loại hệ phái."
+        }
+      ],
+      "access": {
+        "url": "https://archive.org/details/20260506_20260506_1217",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Metadata API HTTP 200; item có facsimile, OCR và ARK ark:/13960/s23vzp6g9w0",
+        "robotsOrTermsNote": "Chỉ đọc metadata và leaf giới hạn; không tải PDF 853 MB hoặc sao chép toàn văn."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Không phân phối scan/OCR; chỉ lưu URL, ARK và metadata nghiên cứu cho đến khi quyền được review."
+      },
+      "provenance": {
+        "locator": "Internet Archive item 20260506_20260506_1217; ARK ark:/13960/s23vzp6g9w0",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Đọc metadata API và danh sách file; không tải toàn bộ",
+        "bibliographicIdentity": "Metadata uploader ghi 7 quyển, 1600; chưa có catalogue thứ hai xác nhận edition/date."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Facsimile có thể là nguồn vật lý nền của transcription; chưa đủ dữ liệu lineage."
+      },
+      "status": "blocked",
+      "limitations": [
+        "Quyền tái sử dụng không hiển thị trong metadata.",
+        "OCR tự động không dùng làm passage chuẩn.",
+        "Identity và niên đại chỉ do uploader cung cấp.",
+        "Không được tính là family độc lập với Wikisource."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-hko-gregorian-lunar-tables-1901-2100",
+      "sourceKind": "website",
+      "title": "Gregorian-Lunar Calendar Conversion Table",
+      "creator": "Hong Kong Observatory",
+      "edition": "Bộ bảng 1901–2100",
+      "publisher": "Hong Kong Observatory",
+      "publicationYear": null,
+      "language": "en",
+      "knowledgeScopes": ["calendar"],
+      "schoolClaims": [
+        {
+          "label": "not an astrology school source",
+          "claimStatus": "not-applicable",
+          "evidenceNote": "Nguồn lịch pháp chính thức, không định nghĩa an sao hoặc luận giải."
+        }
+      ],
+      "access": {
+        "url": "https://www.hko.gov.hk/en/gts/time/conversion.htm",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200; trang liệt kê bảng PDF 1901–2100; PDF 2026 HTTP 200",
+        "robotsOrTermsNote": "Truy cập thủ công; điều kiện tái sử dụng dữ liệu chưa được xác nhận."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Dùng làm đối chiếu thủ công bằng locator; chưa nhập hàng loạt bảng cho đến khi review quyền."
+      },
+      "provenance": {
+        "locator": "HKO conversion.htm; linked annual PDFs 1901–2100",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Đọc trang chỉ mục và mở mẫu PDF 2026",
+        "bibliographicIdentity": "Cơ quan phát hành thể hiện trực tiếp trên host HKO."
+      },
+      "independence": {
+        "sourceFamilyId": "hko-official-calendar-tables",
+        "implementationFamilyId": null,
+        "independenceStatus": "independent",
+        "basis": "Bảng lịch cơ quan khí tượng, tách khỏi các engine Tử Vi đang khảo sát; vẫn cần xác định profile/múi giờ trước so sánh."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Chỉ hỗ trợ lịch pháp, không hỗ trợ quy tắc Tử Vi.",
+        "Cần xác nhận convention và timezone trước khi dùng expected.",
+        "Chưa review license cho ingest tự động."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-usno-calendars-faq",
+      "sourceKind": "website",
+      "title": "Introduction to Calendars",
+      "creator": "United States Naval Observatory, Astronomical Applications Department",
+      "edition": null,
+      "publisher": "United States Naval Observatory",
+      "publicationYear": null,
+      "language": "en",
+      "knowledgeScopes": ["calendar", "research-method"],
+      "schoolClaims": [
+        {
+          "label": "not an astrology school source",
+          "claimStatus": "not-applicable",
+          "evidenceNote": "Nguồn khái quát lịch pháp, không phải quy tắc Tử Vi."
+        }
+      ],
+      "access": {
+        "url": "https://aa.usno.navy.mil/faq/calendars",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200; có mục Chinese Calendar ở mức tổng quan",
+        "robotsOrTermsNote": "Chỉ đọc thủ công trang FAQ; không automation."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Chỉ dẫn nguồn/locator; chưa sao chép nội dung trước khi xác nhận policy chính thức."
+      },
+      "provenance": {
+        "locator": "USNO FAQ /faq/calendars, section Chinese Calendar",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Đọc trực tiếp HTML",
+        "bibliographicIdentity": "Cơ quan và bộ phận hiển thị trên trang chính thức."
+      },
+      "independence": {
+        "sourceFamilyId": "usno-calendar-education",
+        "implementationFamilyId": null,
+        "independenceStatus": "independent",
+        "basis": "Nguồn phương pháp lịch độc lập với HKO và engine Tử Vi; độ chi tiết không đủ làm oracle chuyển đổi."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Tổng quan, không có bảng ngày Việt Nam/Trung Quốc dùng trực tiếp.",
+        "Không giải quyết khác biệt múi giờ hoặc sóc giữa profile.",
+        "Không hỗ trợ an sao hay luận giải."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol18177187m",
+      "sourceKind": "catalogue",
+      "title": "Tu vi dau so phu giai",
+      "creator": "Van Trinh Thái (dạng tên catalogue chưa chuẩn hóa)",
+      "edition": null,
+      "publisher": "Dainamco",
+      "publicationYear": "1974",
+      "language": "vi",
+      "knowledgeScopes": [
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "formations",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "unknown",
+          "claimStatus": "unverified",
+          "evidenceNote": "Catalogue không có trường hệ phái."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL18177187M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; metadata-only; source record từ Talis contribution",
+        "robotsOrTermsNote": "Chỉ truy vấn metadata có giới hạn; không có full text được quan sát."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Chỉ dùng metadata/locator để tìm bản hợp pháp; không dùng nội dung làm rule."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL18177187M; work OL12342452W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "Nguồn MARC được ghi là Talis; chưa kiểm tra được catalogue thứ hai trực tiếp."
+      },
+      "independence": {
+        "sourceFamilyId": "book-tu-vi-dau-so-phu-giai-identity-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Có record gần tên OL61948348M nhưng khác tác giả/NXB; chưa được phép gộp hoặc tách lineage."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Không có full text hợp pháp trong lần kiểm tra.",
+        "Tên tác giả bị đảo/không dấu; edition chưa rõ.",
+        "Không dùng làm passage hoặc rule trước khi tìm được bản và locator trang."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol61948348m",
+      "sourceKind": "catalogue",
+      "title": "Tʾư vi đʾâu số phú giʾai",
+      "creator": "Thái Vân Trình (dạng tên catalogue)",
+      "edition": null,
+      "publisher": "Đất Việt",
+      "publicationYear": "1974",
+      "language": "vi",
+      "knowledgeScopes": [
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "formations",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "unknown",
+          "claimStatus": "unverified",
+          "evidenceNote": "Catalogue không mô tả hệ phái."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL61948348M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; 274 trang; metadata-only; imported Harvard MARC",
+        "robotsOrTermsNote": "Truy vấn metadata giới hạn; không quan sát full text."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Metadata dùng cho discovery; nội dung cần quyền truy cập hợp pháp và review riêng."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL61948348M; work OL45468312W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "Open Library ghi source_records Harvard MARC; chưa truy cập trực tiếp Harvard catalogue để cross-check."
+      },
+      "independence": {
+        "sourceFamilyId": "book-tu-vi-dau-so-phu-giai-identity-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Tựa gần OL18177187M, nhưng creator/publisher khác; lineage chưa xác định."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Chỉ có metadata catalogue.",
+        "Chính tả/romanization trong record không ổn định.",
+        "Không đủ căn cứ cho rule Công việc hoặc calculation."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol61732989m",
+      "sourceKind": "catalogue",
+      "title": "Tử-vi dẩu số",
+      "creator": "Đằng Thái Thứ Lang Vân (dạng tên catalogue)",
+      "edition": null,
+      "publisher": "Đại Nam",
+      "publicationYear": "1981",
+      "language": "vi",
+      "knowledgeScopes": [
+        "palace-placement",
+        "major-star-placement",
+        "auxiliary-star-placement",
+        "star-symbolism",
+        "cross-palace-interpretation"
+      ],
+      "schoolClaims": [
+        {
+          "label": "unknown",
+          "claimStatus": "unverified",
+          "evidenceNote": "Không được suy hệ phái từ tiêu đề."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL61732989M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; 352 trang; metadata-only; imported Harvard MARC",
+        "robotsOrTermsNote": "Truy vấn metadata giới hạn; không quan sát full text."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Chỉ dùng metadata để định vị; không trích nội dung."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL61732989M; work OL45286052W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "Harvard MARC là nguồn import được record khai báo; catalogue Harvard chưa được mở trực tiếp."
+      },
+      "independence": {
+        "sourceFamilyId": "book-tu-vi-dau-so-van-thai-thu-lang-identity-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Chưa biết quan hệ với các bản Tử vi đẩu số khác."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Không có locator trang hoặc mục lục.",
+        "Tên creator cần authority control.",
+        "Không đủ điều kiện trích xuất rule."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol27107461m",
+      "sourceKind": "catalogue",
+      "title": "Tử vi đẩu số",
+      "creator": "Nguyễn Mạnh Bảo (dạng tên catalogue)",
+      "edition": null,
+      "publisher": "Đại Nam",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": [
+        "palace-placement",
+        "major-star-placement",
+        "auxiliary-star-placement",
+        "star-symbolism",
+        "cross-palace-interpretation"
+      ],
+      "schoolClaims": [
+        {
+          "label": "unknown",
+          "claimStatus": "unverified",
+          "evidenceNote": "Không có school metadata."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL27107461M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; 242 trang; metadata-only; imported SFPL MARC",
+        "robotsOrTermsNote": "Metadata lookup giới hạn; không có full text được quan sát."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Không trích nội dung; chỉ giữ định danh catalogue."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL27107461M; work OL19923202W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "Publication year thiếu; SFPL MARC chỉ là provenance import chưa được cross-check trực tiếp."
+      },
+      "independence": {
+        "sourceFamilyId": "book-tu-vi-dau-so-nguyen-manh-bao",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Chưa so sánh nội dung hoặc edition lineage."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Thiếu năm xuất bản và edition.",
+        "Không có full text/locator trang.",
+        "Không đủ điều kiện làm nguồn rule production."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol27216707m",
+      "sourceKind": "catalogue",
+      "title": "Tử vi đẩu số",
+      "creator": "Vũ Mê Linh (dạng tên catalogue)",
+      "edition": null,
+      "publisher": "Nhà xuất bản Hồng Đức",
+      "publicationYear": "2012",
+      "language": "vi",
+      "knowledgeScopes": [
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "formations",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "unknown",
+          "claimStatus": "unverified",
+          "evidenceNote": "Không có school metadata; không suy từ tác giả/tựa."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL27216707M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; 295 trang; metadata-only; imported SFPL MARC",
+        "robotsOrTermsNote": "Chỉ dùng metadata công khai; không quan sát full text."
+      },
+      "rights": {
+        "status": "restricted",
+        "license": null,
+        "reusePolicy": "Ấn bản hiện đại: không sao chép nội dung; cần mua/mượn hợp pháp và PO duyệt trước sử dụng."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL27216707M; work OL20036667W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "SFPL MARC được record khai báo; chưa tìm được ISBN hoặc catalogue thứ hai."
+      },
+      "independence": {
+        "sourceFamilyId": "book-tu-vi-dau-so-vu-me-linh",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Chưa đối chiếu nội dung với nguồn cổ hoặc các bản khác."
+      },
+      "status": "blocked",
+      "limitations": [
+        "Nguồn hiện đại, quyền nội dung bị hạn chế.",
+        "Không có bản đọc miễn phí hợp pháp được quan sát.",
+        "Cần PO duyệt chi phí nếu phải mua/mượn."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol62187182m",
+      "sourceKind": "catalogue",
+      "title": "Tʾư vi đʾâu số toàn thư",
+      "creator": "Trần Đoàn; Vũ Tài Lục (dạng tên catalogue)",
+      "edition": null,
+      "publisher": "Ngân hà thư xã",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": [
+        "palace-placement",
+        "major-star-placement",
+        "auxiliary-star-placement",
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "formations",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "Catalogue không phân loại; quan hệ với 紫微斗數全書 chưa được xác nhận."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL62187182M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; 341 trang; metadata-only; imported Harvard MARC",
+        "robotsOrTermsNote": "Truy vấn metadata giới hạn; không quan sát full text."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Không trích nội dung; trước hết xác minh edition/date và quyền."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL62187182M; work OL45672112W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "Record ghi [n.d.]; Harvard MARC là source import, chưa được cross-check trực tiếp."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-vietnamese-edition-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Có thể là dịch/biên soạn từ textual lineage cổ; không tính family độc lập trước collation."
+      },
+      "status": "candidate",
+      "limitations": [
+        "Thiếu năm/edition.",
+        "Không có full text hoặc mục lục được quan sát.",
+        "Không được dùng như kiểm chứng độc lập cho Wikisource/facsimile."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k01a-openlibrary-ol24558052m",
+      "sourceKind": "catalogue",
+      "title": "Tử-vi lý-số dẫn-giải",
+      "creator": "Nguyễn Thế Tạo (dạng tên catalogue)",
+      "edition": null,
+      "publisher": "Tử vi Nhân Quang",
+      "publicationYear": "2004",
+      "language": "vi",
+      "knowledgeScopes": [
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "formations",
+        "fortune-periods",
+        "worked-chart"
+      ],
+      "schoolClaims": [
+        {
+          "label": "unknown",
+          "claimStatus": "unverified",
+          "evidenceNote": "Không có school metadata."
+        }
+      ],
+      "access": {
+        "url": "https://openlibrary.org/books/OL24558052M",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Edition API HTTP 200; metadata-only; source_records từ Library of Congress MARC",
+        "robotsOrTermsNote": "Chỉ metadata; không quan sát full text."
+      },
+      "rights": {
+        "status": "restricted",
+        "license": null,
+        "reusePolicy": "Ấn bản hiện đại; cần quyền truy cập hợp pháp và PO duyệt trước khi dùng passage."
+      },
+      "provenance": {
+        "locator": "Open Library edition OL24558052M; work OL15607804W",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Open Library edition và author API",
+        "bibliographicIdentity": "Hai source_records LOC MARC trong Open Library củng cố provenance ingest nhưng chưa phải hai catalogue độc lập."
+      },
+      "independence": {
+        "sourceFamilyId": "book-tu-vi-ly-so-dan-giai-nguyen-the-tao",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Chưa có nội dung để đánh giá nguồn phái sinh hay độc lập."
+      },
+      "status": "blocked",
+      "limitations": [
+        "Không có full text hợp pháp được quan sát.",
+        "Không có locator trang/mục lục.",
+        "Nguồn trả phí/mượn phải xin duyệt riêng."
+      ],
+      "supersedes": []
+    }
+  ],
+  "passages": [],
+  "reviewEvents": [
+    {
+      "reviewId": "hv-k01a-inventory-research-2026-10-14",
+      "date": "2026-10-14",
+      "reviewerRole": "AI_RESEARCH/BA",
+      "action": "registered",
+      "targetIds": [
+        "k01a-zwds-quanshu-vol1-wikisource-r7913704",
+        "k01a-zwds-quanshu-vol2-wikisource-r1963110",
+        "k01a-zwds-quanshu-facsimile-ia-ark-s23vzp6g9w0",
+        "k01a-hko-gregorian-lunar-tables-1901-2100",
+        "k01a-usno-calendars-faq",
+        "k01a-openlibrary-ol18177187m",
+        "k01a-openlibrary-ol61948348m",
+        "k01a-openlibrary-ol61732989m",
+        "k01a-openlibrary-ol27107461m",
+        "k01a-openlibrary-ol27216707m",
+        "k01a-openlibrary-ol62187182m",
+        "k01a-openlibrary-ol24558052m"
+      ],
+      "basis": "Bounded manual access checks and catalogue/API metadata review; no rule or passage admitted."
+    }
+  ]
+}
