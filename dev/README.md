@@ -25,6 +25,15 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
   acceptance và integration gates cho K02A, K03A, K03B đã được PO cho phép nghiên cứu;
   không cho phép đổi production profile hoặc tự duyệt rule/golden fixture.
 
+- `calculation-k02-sandbox-report.md`: rà HKO và `lasotuvi` trong sandbox; bất đồng
+  21/03/1985 vẫn unresolved, không có oracle/golden hoặc production dependency mới.
+
+- `knowledge-k03a-career-report.md`: 5 passage/3 rule candidate; nguồn hiện hỗ trợ
+  Di–Tài–Quan nhưng không đủ căn cứ nối Mệnh–Quan–Nô hay sinh claim reader-facing.
+
+- `knowledge-ontology.md` và schema/examples: K03B file-based ontology prototype;
+  mọi example là structural mock, không phải knowledge được admit.
+
 - `knowledge-source-registry.schema.json`, `knowledge-source-registry.json` và
   `knowledge-source-registry.md`: K01C-Lite contract + registry nghiên cứu ban đầu.
   Chúng không thay registry runtime cũ và chưa mở admission/rule mới.

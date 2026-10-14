@@ -30,6 +30,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 - `knowledge-k01-report.md`: kết quả tích hợp K01C-Lite/K01A/K01B, registry ban đầu,
   nguồn/engine đã kiểm tra thực tế, khoảng trống và các lựa chọn chờ PO review.
 
+- `knowledge-k02-k03-report.md`: kết quả K02A/K03A/K03B; 5 calculation observation
+  nhưng 0 golden, 3 career rule candidate chưa approve và ontology chỉ structural mock.
+
 - `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight đã được Product
   Owner duyệt làm baseline. Runtime/UI deterministic cho đúng cấu trúc A1 đã triển
   khai; phương án hai insight vẫn bị loại do trùng luận điểm. Không có AI/API.

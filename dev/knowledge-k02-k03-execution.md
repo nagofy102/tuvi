@@ -4,6 +4,9 @@ Ngày lập kế hoạch: 14/10/2026 (Asia/Saigon). Baseline: `origin/main@cfdc9
 Product Owner đã nghiệm thu K01 ở mức khảo sát và cho phép bắt đầu nghiên cứu K02,
 K03A và K03B. Không nguồn, rule hay fixture nào được tự động nâng thành production.
 
+Trạng thái tích hợp: ba task đã hoàn thành nghiên cứu; kết quả và blocker được tổng
+hợp tại `../design/knowledge-k02-k03-report.md`, chờ Product Owner review.
+
 ## Dependency và thứ tự tích hợp
 
 `K01 → (K02A || K03A) → K03B review → K04 rule extraction/reasoning`.

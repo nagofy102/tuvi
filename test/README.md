@@ -17,6 +17,11 @@ nghiệm thu tài liệu.
 
 ## Trạng thái hiện tại
 
+K02A/K03A/K03B đã thêm reference-plan/schema, 5 calculation observation không phải
+golden, 6 career rule gate case và 11 ontology mutation case. Kết quả tích hợp tại
+`../design/knowledge-k02-k03-report.md`; không có thay đổi production hoặc xác nhận
+độ đúng Tử Vi.
+
 Khung kiểm chứng Knowledge-First mới nằm tại `knowledge-first-validation.md`:
 calculation yêu cầu 100% trên required fields cùng exact profile; interpretation
 đặt mục tiêu đồng thuận thử nghiệm ≥80% trên structured comparable claims. Đây là
