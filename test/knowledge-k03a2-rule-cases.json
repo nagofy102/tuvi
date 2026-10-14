@@ -1,0 +1,111 @@
+{
+  "artifactVersion": "hv-k03a2-rule-cases-v0.1",
+  "purpose": "structural evaluator cases; not astrology oracles",
+  "profile": "profile-unresolved",
+  "cases": [
+    {
+      "caseId": "k03a2-order-complete",
+      "ruleId": "k03a2-method-context-order-001",
+      "inputState": {
+        "factGroups": ["Mệnh", "Thân", "Thiên Di", "Tài Bạch", "Quan Lộc"],
+        "profileConsistent": true,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "admitted-for-trace-only",
+      "mustTrace": ["Mệnh", "Thân", "Di–Tài–Quan"],
+      "mustNotEmit": ["reader-facing-claim", "numeric-score"]
+    },
+    {
+      "caseId": "k03a2-order-missing-than",
+      "ruleId": "k03a2-method-context-order-001",
+      "inputState": {
+        "factGroups": ["Mệnh", "Thiên Di", "Tài Bạch", "Quan Lộc"],
+        "profileConsistent": true,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "rejected-insufficient-evidence",
+      "mustTrace": ["missing:Thân"],
+      "mustNotEmit": ["reader-facing-claim"]
+    },
+    {
+      "caseId": "k03a2-order-profile-mismatch",
+      "ruleId": "k03a2-method-context-order-001",
+      "inputState": {
+        "factGroups": ["Mệnh", "Thân", "Thiên Di", "Tài Bạch", "Quan Lộc"],
+        "profileConsistent": false,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "rejected-profile-mismatch",
+      "mustTrace": ["profile-mismatch"],
+      "mustNotEmit": ["reader-facing-claim"]
+    },
+    {
+      "caseId": "k03a2-order-no-no-boc-substitution",
+      "ruleId": "k03a2-method-context-order-001",
+      "inputState": {
+        "factGroups": ["Mệnh", "Thân", "Thiên Di", "Quan Lộc", "Nô Bộc"],
+        "profileConsistent": true,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "rejected-insufficient-evidence",
+      "mustTrace": ["missing:Tài Bạch"],
+      "mustNotEmit": ["Nô Bộc-as-Tài-Bạch-substitute", "reader-facing-claim"]
+    },
+    {
+      "caseId": "k03a2-conflict-supported-only",
+      "ruleId": "k03a2-method-context-conflict-001",
+      "inputState": {
+        "menhPrincipalStarPresence": "known",
+        "supportedSignals": ["signal-a"],
+        "opposingSignals": [],
+        "profileConsistent": true,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "admitted-for-trace-only",
+      "mustTrace": ["signal-a"],
+      "mustNotEmit": ["reader-facing-claim", "numeric-score"]
+    },
+    {
+      "caseId": "k03a2-conflict-opposed",
+      "ruleId": "k03a2-method-context-conflict-001",
+      "inputState": {
+        "menhPrincipalStarPresence": "known",
+        "supportedSignals": ["signal-a"],
+        "opposingSignals": ["signal-b"],
+        "profileConsistent": true,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "deferred-conflict",
+      "mustTrace": ["signal-a", "signal-b", "unresolved-conflict"],
+      "mustNotEmit": ["synthetic-midpoint", "reader-facing-claim"]
+    },
+    {
+      "caseId": "k03a2-conflict-missing-vocabulary",
+      "ruleId": "k03a2-method-context-conflict-001",
+      "inputState": {
+        "menhPrincipalStarPresence": "known",
+        "supportedSignals": ["unclassified-signal"],
+        "opposingSignals": [],
+        "profileConsistent": true,
+        "vocabularyResolved": false
+      },
+      "expectedMethodState": "rejected-insufficient-vocabulary",
+      "mustTrace": ["missing:state-or-relation-definition"],
+      "mustNotEmit": ["reader-facing-claim"]
+    },
+    {
+      "caseId": "k03a2-conflict-no-numeric-majority",
+      "ruleId": "k03a2-method-context-conflict-001",
+      "inputState": {
+        "menhPrincipalStarPresence": "known",
+        "supportedSignals": ["signal-a", "signal-c"],
+        "opposingSignals": ["signal-b"],
+        "profileConsistent": true,
+        "vocabularyResolved": true
+      },
+      "expectedMethodState": "deferred-conflict",
+      "mustTrace": ["signal-a", "signal-b", "signal-c", "no-majority-rule"],
+      "mustNotEmit": ["two-to-one-resolution", "numeric-score", "reader-facing-claim"]
+    }
+  ]
+}

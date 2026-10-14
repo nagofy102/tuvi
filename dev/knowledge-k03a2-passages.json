@@ -1,0 +1,169 @@
+{
+  "artifactVersion": "hv-k03a2-passages-v0.1",
+  "generatedAt": "2026-10-14",
+  "scope": "Mệnh–Thân, Di–Tài–Quan and cross-palace reading methodology",
+  "admissionBoundary": "research-only; no reader-facing claim or production rule is approved",
+  "retrieval": {
+    "method": "bounded MediaWiki API retrieval of pinned revisions",
+    "userAgent": "HuyenViResearch/0.1",
+    "rightsLocator": "https://zh.wikisource.org/w/api.php?action=query&meta=siteinfo&siprop=rightsinfo&format=json&formatversion=2",
+    "observedSiteLicense": "Creative Commons Attribution-ShareAlike 4.0",
+    "underlyingTextCaveat": "Site licensing does not resolve the bibliographic identity or jurisdictional status of the underlying historical text."
+  },
+  "sources": [
+    {
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "title": "紫微斗數全書/卷一",
+      "revision": "7913704",
+      "revisionTimestamp": "2026-08-07T05:47:26Z",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+      "wikitextSha256": "9beb8038a8b82154d15d81c8ff822423d4f0c7c006f536a86552adeaa594818a",
+      "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "access": "free-public; API HTTP 200 on 2026-10-14",
+      "rights": "Wikisource contribution under CC BY-SA 4.0; underlying-text and edition identity remain unresolved",
+      "independence": "related to volumes two and three; not an independent family"
+    },
+    {
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "title": "紫微斗數全書/卷三",
+      "revision": "2268626",
+      "revisionTimestamp": "2023-03-15T10:18:42Z",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷三&oldid=2268626",
+      "wikitextSha256": "ed327a68253a89a6e8b2962932a16f75546826ffcdd2e9e4ac419ad0f389b03b",
+      "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "access": "free-public; API HTTP 200 on 2026-10-14",
+      "rights": "Wikisource contribution under CC BY-SA 4.0; underlying-text and edition identity remain unresolved",
+      "independence": "related to volumes one and two; not an independent family"
+    }
+  ],
+  "passages": [
+    {
+      "passageId": "k03a2-v3-context-order",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "談星要論; pinned wikitext lines 7–12",
+      "language": "zh-Hans",
+      "quote": "第一看命宫吉凶庙旺化吉化忌生克。次看身主吉凶生克。三看迁移财帛官禄三方星辰刑冲克破。",
+      "researchTranslationVi": "Trình tự được nêu là xét Mệnh, tiếp đến Thân, rồi xét ba cung Thiên Di–Tài Bạch–Quan Lộc cùng các quan hệ hình, xung, khắc, phá.",
+      "translationStatus": "research-translation-needs-philological-review",
+      "supports": [
+        "method-order-menh-than-before-di-tai-quan",
+        "di-tai-quan-must-retain-recorded-relations"
+      ],
+      "conditions": [
+        "Selected profile defines Mệnh, Thân, Thiên Di, Tài Bạch and Quan Lộc consistently",
+        "State and relation vocabulary is available"
+      ],
+      "exceptionsOrConflicts": [
+        "The passage names relation classes but does not define their geometry or calculation",
+        "It does not make Nô Bộc a member of this three-palace relation"
+      ],
+      "doesNotSupport": [
+        "numeric weights",
+        "modern behavior, occupation or outcome claims",
+        "school-profile identification"
+      ],
+      "status": "source-backed-candidate-not-independent"
+    },
+    {
+      "passageId": "k03a2-v3-context-conflict",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "談星要論; pinned wikitext lines 15–23",
+      "language": "zh-Hans",
+      "quote": "若命宫无正曜者，财官二宫有吉星拱照……命宫星辰无吉无凶，或吉凶相伴者，如三方亦有中等星辰，为中格。及命宫星辰庙旺，三方有恶星守照破格。",
+      "researchTranslationVi": "Đoạn văn yêu cầu đưa Tài–Quan và tam phương vào xét khi Mệnh vô chính diệu hoặc tín hiệu pha trộn; tín hiệu bất lợi từ tam phương còn có thể làm thay đổi cách xếp loại một Mệnh đang ở trạng thái thuận lợi.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": [
+        "single-palace-signal-is-not-sufficient",
+        "supporting-and-opposing-context-must-be-recorded",
+        "conflicting-context-can-block-a-simple-favorable-admission"
+      ],
+      "conditions": [
+        "Principal-star presence is explicitly known",
+        "Aspect membership and favorable/adverse state are defined by the selected profile"
+      ],
+      "exceptionsOrConflicts": [
+        "Historical outcome rankings are outside the modern inference boundary",
+        "No deterministic tie-break order is supplied for mixed signals"
+      ],
+      "doesNotSupport": [
+        "automatic borrowing of an opposite-palace star",
+        "a personalized conclusion",
+        "invented resolution of mixed signals"
+      ],
+      "status": "source-backed-candidate-not-independent"
+    },
+    {
+      "passageId": "k03a2-v3-gendered-order-corroboration",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "論男女命同異; pinned wikitext line 78",
+      "language": "zh-Hans",
+      "quote": "男命先看身命，次看财帛宫禄迁移，俱要庙旺为吉，落陷聚凶为凶。",
+      "researchTranslationVi": "Trong phần dành riêng cho nam mệnh, văn bản lặp lại thứ tự xét Thân–Mệnh rồi Tài Bạch–Quan Lộc–Thiên Di, đồng thời yêu cầu xét trạng thái thuận/nghịch.",
+      "translationStatus": "research-translation-needs-philological-review",
+      "supports": ["internal-corroboration-of-context-order-within-same-textual-family"],
+      "conditions": ["Historical passage is explicitly gendered"],
+      "exceptionsOrConflicts": [
+        "Cannot be generalized to a gender-neutral production method without additional evidence",
+        "Same volume and lineage do not count as independent confirmation"
+      ],
+      "doesNotSupport": ["gender-neutral rule admission", "reader-facing gender stereotypes"],
+      "status": "context-only-excluded-from-rule-premise"
+    },
+    {
+      "passageId": "k03a2-v1-aspect-context",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "斗數發微論; pinned wikitext lines 127–132",
+      "language": "zh-Hant",
+      "quote": "四正吉星定為貴，三方殺拱少為奇。對照兮詳凶詳吉，合照兮觀賤觀榮。",
+      "researchTranslationVi": "Đoạn này yêu cầu xét cả bốn phương, tam phương, đối chiếu và hợp chiếu; tín hiệu hỗ trợ hoặc bất lợi ở các quan hệ đó làm thay đổi cách đọc.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": [
+        "cross-palace-aspect-context-is-required",
+        "supporting-and-adverse-relations-must-not-be-collapsed"
+      ],
+      "conditions": [
+        "The selected profile defines four-direction, three-direction, opposite and joined aspects"
+      ],
+      "exceptionsOrConflicts": [
+        "The passage does not define palace geometry or precedence between aspect classes"
+      ],
+      "doesNotSupport": ["numeric scoring", "an inferred aspect edge", "modern outcome claims"],
+      "status": "source-backed-candidate-not-independent"
+    },
+    {
+      "passageId": "k03a2-v1-contextual-polarity",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "重補斗數彀率; pinned wikitext lines 153–155",
+      "language": "zh-Hant",
+      "quote": "諸星吉多逢凶也吉，諸星惡多逢吉也凶。星更纏度，數分定局。重在看星得垣受制，方可論人禍福窮通。",
+      "researchTranslationVi": "Văn bản không cho đọc nhãn tốt/xấu của một sao tách rời, mà yêu cầu xét thế chủ đạo, vị trí và sự chế hóa trước khi luận.",
+      "translationStatus": "research-paraphrase-needs-philological-review",
+      "supports": [
+        "isolated-symbol-polarity-is-insufficient",
+        "state-and-counter-signal-check-precedes-admission"
+      ],
+      "conditions": ["State, constraint and context vocabulary is normalized"],
+      "exceptionsOrConflicts": ["No counting formula or numeric majority threshold is given"],
+      "doesNotSupport": ["majority voting by star count", "numeric weights", "personalized claims"],
+      "status": "source-backed-candidate-not-independent"
+    }
+  ],
+  "rejectedLeads": [
+    {
+      "title": "紫微斗數",
+      "revision": "8061095",
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數&oldid=8061095",
+      "reason": "The page mixes Bazi terminology and a different star system; lineage/profile compatibility with the selected Tử Vi scope is unresolved. It is not admitted as an independent family."
+    },
+    {
+      "title": "Open Library Vietnamese book records from K01A",
+      "reason": "Metadata-only records expose no lawfully accessible page-level passage, so no rule was extracted."
+    },
+    {
+      "title": "Internet Archive facsimile candidate",
+      "reason": "Rights and bibliographic identity remain unresolved; OCR is not treated as authoritative text or an independent family."
+    }
+  ]
+}

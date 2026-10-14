@@ -1,0 +1,108 @@
+{
+  "artifactVersion": "hv-k03a2-rules-candidate-v0.1",
+  "generatedAt": "2026-10-14",
+  "scope": "method rules only; no reader-facing claims",
+  "rules": [
+    {
+      "ruleId": "k03a2-method-context-order-001",
+      "ruleVersion": "candidate-2",
+      "profile": "profile-unresolved",
+      "topic": "career-method",
+      "ruleKind": "evaluation-order",
+      "premises": [
+        "Chart contains profile-versioned facts for Mệnh and Thân",
+        "Chart contains profile-versioned facts for Thiên Di, Tài Bạch and Quan Lộc",
+        "All referenced palace-state and relation terms resolve in an approved vocabulary"
+      ],
+      "conditions": [
+        "Evaluate Mệnh before Thân",
+        "Evaluate Di–Tài–Quan as a related context after Mệnh–Thân",
+        "Preserve every applicable supported/adverse relation instead of flattening it into a score"
+      ],
+      "exclusions": [
+        "Do not add Nô Bộc to this relation from current evidence",
+        "Do not emit a behavior, ability, occupation, event or outcome claim",
+        "Do not treat the historical gendered passage as universal evidence"
+      ],
+      "exceptions": [
+        "Missing palace facts, relation geometry or state vocabulary produces rejected-insufficient-evidence",
+        "Profile mismatch produces rejected-profile-mismatch"
+      ],
+      "conflictHandling": "Record all admitted relations and defer; this rule supplies no winner or numeric weight.",
+      "output": "inference trace containing evaluated/missing fact groups only",
+      "sourcePassageIds": ["k03a2-v3-context-order", "k03a2-v1-aspect-context"],
+      "sameFamilyWarning": true,
+      "status": "candidate-source-backed-not-independent",
+      "blockers": [
+        "No independent source family",
+        "Profile and cross-palace vocabulary are not approved",
+        "Tam phương/tứ chính geometry and relation predicates are not versioned"
+      ],
+      "proposedTestCaseIds": [
+        "k03a2-order-complete",
+        "k03a2-order-missing-than",
+        "k03a2-order-profile-mismatch",
+        "k03a2-order-no-no-boc-substitution"
+      ]
+    },
+    {
+      "ruleId": "k03a2-method-context-conflict-001",
+      "ruleVersion": "candidate-1",
+      "profile": "profile-unresolved",
+      "topic": "career-method",
+      "ruleKind": "admission-gate",
+      "premises": [
+        "Mệnh principal-star presence and state are explicit facts",
+        "Applicable cross-palace relations and their source-backed state classifications are explicit",
+        "Signal provenance and profile versions match"
+      ],
+      "conditions": [
+        "A direct favorable symbol does not bypass adverse cross-palace context",
+        "An empty or mixed Mệnh requires Tài–Quan and admitted aspect context",
+        "Preserve both supporting and opposing signals in the inference trace"
+      ],
+      "exclusions": [
+        "Do not infer an opposite-palace star that is absent from chart facts",
+        "Do not count stars or use an invented majority threshold",
+        "Do not resolve mixed signals into a reader-facing conclusion"
+      ],
+      "exceptions": [
+        "Undefined favorable/adverse state or relation predicate produces rejected-insufficient-vocabulary",
+        "Unresolved mixed signals produce deferred-conflict, not a synthetic midpoint"
+      ],
+      "conflictHandling": "Fail closed while emitting accepted, rejected and conflicting signal references in the trace.",
+      "output": "admission/defer/reject decision for downstream reasoning; never a reading claim",
+      "sourcePassageIds": ["k03a2-v3-context-conflict", "k03a2-v1-contextual-polarity"],
+      "sameFamilyWarning": true,
+      "status": "candidate-source-backed-not-independent",
+      "blockers": [
+        "No independent source family",
+        "No approved deterministic conflict precedence",
+        "State and constraint vocabulary is not approved"
+      ],
+      "proposedTestCaseIds": [
+        "k03a2-conflict-supported-only",
+        "k03a2-conflict-opposed",
+        "k03a2-conflict-missing-vocabulary",
+        "k03a2-conflict-no-numeric-majority"
+      ]
+    }
+  ],
+  "explicitGaps": [
+    {
+      "gapId": "k03a2-independent-family",
+      "status": "blocked",
+      "requiredEvidence": "A lawfully accessible, bibliographically identified source family with page-level passages for the same method."
+    },
+    {
+      "gapId": "k03a2-profile-vocabulary",
+      "status": "blocked",
+      "requiredEvidence": "Versioned definitions and calculation predicates for palace state, tam phương/tứ chính, đối/hợp chiếu and conflict relations."
+    },
+    {
+      "gapId": "k03a2-menh-quan-no",
+      "status": "blocked",
+      "requiredEvidence": "A passage explicitly defining a Mệnh–Quan Lộc–Nô Bộc career relationship with conditions and exceptions. No such passage was found."
+    }
+  ]
+}
