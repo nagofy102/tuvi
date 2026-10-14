@@ -21,6 +21,10 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 ## References
 
+- `knowledge-k02-k03-execution.md`: phạm vi, dependency, worktree/file ownership,
+  acceptance và integration gates cho K02A, K03A, K03B đã được PO cho phép nghiên cứu;
+  không cho phép đổi production profile hoặc tự duyệt rule/golden fixture.
+
 - `knowledge-source-registry.schema.json`, `knowledge-source-registry.json` và
   `knowledge-source-registry.md`: K01C-Lite contract + registry nghiên cứu ban đầu.
   Chúng không thay registry runtime cũ và chưa mở admission/rule mới.

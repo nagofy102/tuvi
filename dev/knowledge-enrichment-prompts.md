@@ -4,6 +4,14 @@ Các prompt dưới đây là task briefs độc lập, đủ nhỏ cho một Co
 phải đọc governance hiện hành, kiểm tra Git và dừng tại gate nêu rõ; không lặp lại
 Master Prompt. Không task nào tự nâng trạng thái rule thành approved.
 
+## Trạng thái sau HV-K01
+
+PO đã duyệt K01 ngày 14/10/2026 và cho phép mở ba task giới hạn: K02A calculation
+verification, K03A domain extraction cho Quan Lộc/Công việc và K03B ontology
+prototype. Phân công/ownership/cổng tích hợp nằm tại `knowledge-k02-k03-execution.md`.
+Các prompt dưới đây được giữ làm chuẩn gốc; task briefs thực thi đã điều chỉnh nằm
+ở cuối tài liệu này.
+
 ## Thứ tự và dependency
 
 `K01A || K01B → K01C → (K02A || K03A) → K04A → K04B/K05A → K06A → K07A`.
@@ -181,3 +189,36 @@ K06A không được chạy từ tài liệu này. PM chỉ soạn task implemen
 duyệt một vertical slice có: chart fields đạt K02 gate, rule units được duyệt, conflict
 policy, inference trace, fixtures độc lập và publication boundary. AI Writer/fine-tune,
 API, persistence, graph database và UI expansion vẫn ngoài scope.
+
+## Task brief thực thi — HV-K02A Calculation Verification
+
+**Role:** `[QA][BA][DEV_RESEARCH]`. Dùng K01 registry, inventory và implementation
+survey. Rà HKO về quyền/timezone/convention/profile; chạy khảo sát `lasotuvi` trong
+sandbox tạm sau license/dependency/safety check; giữ dqcai blocked và bất đồng
+`1985-03-21` unresolved. Thiết kế reference plan/schema và chỉ lưu observation thực.
+
+Không sửa `src/`, dependency/lockfile production, calculation profile hay gọi
+observation là golden. Artifact/ownership và acceptance theo
+`knowledge-k02-k03-execution.md`. Dừng: **CALCULATION REFERENCE REVIEW REQUIRED**.
+
+## Task brief thực thi — HV-K03A Career Domain Extraction
+
+**Role:** `[BA][AI_RESEARCH][TU_VI_SPECIALIST]`. Tìm nguồn Quan Lộc/Công việc hợp
+pháp có passage locator; ưu tiên điều kiện, ngoại lệ và Mệnh–Quan–Nô. Ghi nguyên văn
+giới hạn, translation/paraphrase, source lineage và candidate rule có proposed test.
+
+Không dùng snippet làm passage, không sao chép hàng loạt, không nâng symbolism thành
+hành vi/kết quả, không approve rule. Nếu thiếu căn cứ, lưu blocker thay vì sáng tác.
+Artifact/ownership và acceptance theo execution plan. Dừng:
+**DOMAIN PASSAGE/RULE REVIEW REQUIRED**.
+
+## Task brief thực thi — HV-K03B Ontology Prototype
+
+**Role:** `[ARCHITECT][BA]`. Dựa trên K01C schema và chỉ các record K03A có thật;
+thiết kế file-based graph schema tách chart facts/domain knowledge/inference trace,
+provenance/profile/dispute/exception và fail-closed. Ví dụ chưa có input K03A phải
+gắn `structural-mock` và không được coi là domain knowledge.
+
+Không chọn vendor, không tạo weight/edge Tử Vi phỏng đoán, không sửa runtime.
+Artifact/ownership và acceptance theo execution plan. Dừng:
+**ONTOLOGY REVIEW REQUIRED**.
