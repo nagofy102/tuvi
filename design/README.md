@@ -27,6 +27,11 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
   Owner duyệt làm baseline. Runtime/UI deterministic cho đúng cấu trúc A1 đã triển
   khai; phương án hai insight vẫn bị loại do trùng luận điểm. Không có AI/API.
 
+- `reading-r07a-career-rule-expansion.md`: thiết kế R07A chờ Product Owner duyệt.
+  Hai ứng viên một chính tinh chỉ ở phạm vi tổng hợp biểu tượng biên tập; nhánh
+  Quan Lộc vô chính diệu BLOCKED vì chưa có quy tắc liên cung đủ nguồn. Chưa tạo
+  template approved hoặc sửa runtime.
+
 - `reading-ux-vnext.md`: nền thiết kế cho hành trình kết luận trước. HV-R03 hiện
   hiển thị kết luận, một insight, căn cứ mở rộng, nhãn demo và trạng thái thiếu
   căn cứ trên mobile/desktop; không phải tính năng AI/API.
