@@ -25,6 +25,9 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
   `knowledge-source-registry.md`: K01C-Lite contract + registry nghiên cứu ban đầu.
   Chúng không thay registry runtime cũ và chưa mở admission/rule mới.
 
+- `knowledge-k01-execution.md`: phân công worktree/file ownership, acceptance,
+  integration gates và stop conditions cho K01A/K01B đang chạy song song.
+
 - `knowledge-enrichment-prompts.md`: HV-K00, các task brief K01–K07 giới hạn theo
   session, dependency, artifact, chống hallucination và stop gate. Đây là prompt
   triển khai chờ PO duyệt, không phải các task đã chạy.
