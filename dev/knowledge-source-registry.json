@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "knowledge-source-registry-v0.1",
+  "registryVersion": "hv-k01c-lite-2026-10-14",
+  "updatedAt": "2026-10-14",
+  "sources": [
+    {
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "sourceKind": "transcription",
+      "title": "紫微斗數全書/卷二",
+      "creator": null,
+      "edition": null,
+      "publisher": "Chinese Wikisource",
+      "publicationYear": null,
+      "language": "zh-Hant",
+      "knowledgeScopes": ["palace-placement", "major-star-placement", "auxiliary-star-placement"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "Repository usage does not independently establish school identity."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200",
+        "robotsOrTermsNote": "Manual bounded access only in K01C-Lite; bulk reuse not assessed."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "Wikisource site licensing applies to editorial contributions; underlying classical-text status must be assessed per jurisdiction.",
+        "reusePolicy": "Store locator and minimal reviewed quotations; preserve attribution and revision."
+      },
+      "provenance": {
+        "locator": "Pinned Wikisource revision 1963110, 卷二",
+        "revision": "1963110",
+        "contentDigest": null,
+        "retrievalMethod": "Manual review of pinned web transcription",
+        "bibliographicIdentity": "Underlying printed edition, historical authorship and publication date remain unresolved."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Relationship to available facsimile has not been established as an independent edition."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "Only six bounded passages are admitted in the legacy registry.",
+        "Not a complete chart oracle.",
+        "Not independent Nam Phái certification."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "sourceKind": "transcription",
+      "title": "紫微斗數全書/卷一",
+      "creator": null,
+      "edition": null,
+      "publisher": "Chinese Wikisource",
+      "publicationYear": null,
+      "language": "zh-Hant",
+      "knowledgeScopes": ["star-symbolism"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "No independently reviewed school classification in the current repository."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "HTTP 200",
+        "robotsOrTermsNote": "Manual bounded access only in K01C-Lite; bulk reuse not assessed."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "Wikisource site licensing applies to editorial contributions; underlying classical-text status must be assessed per jurisdiction.",
+        "reusePolicy": "Use locator and minimal quotation for research; no bulk copying."
+      },
+      "provenance": {
+        "locator": "Pinned Wikisource revision 7913704, 卷一",
+        "revision": "7913704",
+        "contentDigest": null,
+        "retrievalMethod": "Manual review of pinned web transcription",
+        "bibliographicIdentity": "Underlying printed edition and authorship remain unresolved."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "Another volume of the same named work; not an independent family vote."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "Admitted as reading reference only in the legacy registry.",
+        "Symbolic passages alone do not support behavioral or outcome claims."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "archive-item-20260506-zwds-facsimile",
+      "sourceKind": "facsimile",
+      "title": "紫微斗數全書 facsimile artifact (Archive item 20260506_20260506_1217)",
+      "creator": null,
+      "edition": null,
+      "publisher": null,
+      "publicationYear": null,
+      "language": "zh-Hant",
+      "knowledgeScopes": ["palace-placement", "auxiliary-star-placement"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "No authenticated catalogue record currently links this item to a reviewed school profile."
+        }
+      ],
+      "access": {
+        "url": "https://archive.org/details/20260506_20260506_1217",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-14",
+        "lastObservedStatus": "Leaf n72 image request resolved with HTTP 200",
+        "robotsOrTermsNote": "Only bounded manual leaf access is admitted; collection-scale download is out of scope."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Do not redistribute scan; retain URL, leaf locator and locally verified digest metadata only."
+      },
+      "provenance": {
+        "locator": "Archive item; reviewed leaves n0, n1, n72 and n74 in legacy registry",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Manual bounded visual collation and registered per-leaf SHA-256",
+        "bibliographicIdentity": "Edition/date/publisher and relationship to Wikisource transcription remain unresolved."
+      },
+      "independence": {
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "A facsimile artifact is not counted as an independent edition until bibliographic lineage is established."
+      },
+      "status": "blocked",
+      "limitations": [
+        "Crosscheck only; no expected chart fields admitted.",
+        "Rights and bibliographic identity unresolved.",
+        "Separate leaves are not separate independent sources."
+      ],
+      "supersedes": []
+    }
+  ],
+  "passages": [
+    {
+      "passageId": "v2-ming-body",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安身命例",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "大抵人命俱从寅上起正月，顺数至本生月止，又自人生月起子时逆至本生时安命，顺至本生时安身。",
+      "supports": ["ming-branch-placement", "body-branch-placement"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": ["Known-hour lunar inputs only in current partial corpus."]
+    },
+    {
+      "passageId": "v2-left-right",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安左辅右弼星诀",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "左辅从辰上起正月顺行，如正月生者就辰宫安之。二月在巳宫，右弼从戌宫逆转如正月便成戌宫安之，二月在酉宫余仿此。",
+      "supports": ["left-assistant-placement", "right-assistant-placement"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": ["Does not establish a full auxiliary-star profile."]
+    },
+    {
+      "passageId": "v2-wenchang-wenqu",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安文昌文曲星诀",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "子时戌上起文昌，逆到生时是贵乡，文曲数从辰上起，顺到生时是本乡。",
+      "supports": ["wenchang-placement", "wenqu-placement"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": ["Hour boundary convention is not resolved by this passage alone."]
+    }
+  ],
+  "reviewEvents": [
+    {
+      "reviewId": "hv-k01c-lite-initial-import",
+      "date": "2026-10-14",
+      "reviewerRole": "PM/BA/Architect",
+      "action": "registered",
+      "targetIds": [
+        "zwds-quanshu-vol2-wikisource-r1963110",
+        "zwds-quanshu-vol1-wikisource-r7913704",
+        "archive-item-20260506-zwds-facsimile",
+        "v2-ming-body",
+        "v2-left-right",
+        "v2-wenchang-wenqu"
+      ],
+      "basis": "Imported from the legacy reviewed registry without broadening admission; URLs manually checked on 2026-10-14."
+    }
+  ]
+}

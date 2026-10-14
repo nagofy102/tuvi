@@ -30,7 +30,8 @@ rights state, family và `candidate`; nguồn thiếu metadata được `blocked
 chéo tối thiểu hai catalogue cho identity khi có thể. Dừng khi đạt 15 nguồn đủ
 metadata hoặc đã ghi rõ vì sao không đạt; không bắt đầu trích xuất rule.
 
-Dependency: K00 approval. Stop: **WAITING FOR SOURCE INVENTORY REVIEW**.
+Dependency: K00 approved + K01C-Lite contract. Paid sources require a separate PO
+decision. Stop: **WAITING FOR SOURCE INVENTORY REVIEW**.
 
 ## Prompt B — HV-K01B Competitor & Open-source Calculation Survey
 
@@ -50,7 +51,8 @@ chỉ chứa dữ liệu tổng hợp/phi cá nhân và provenance. Acceptance: 
 được phân loại hoặc báo blocker; mỗi observation pin input/options/output/timestamp;
 khác profile được đánh dấu non-comparable. Dừng trước khi tạo expected golden.
 
-Dependency: K00 approval. Stop: **WAITING FOR INDEPENDENCE REVIEW**.
+Dependency: K00 approved + K01C-Lite contract. Capture actual observations; a site
+consensus is never an oracle. Stop: **WAITING FOR INDEPENDENCE REVIEW**.
 
 ## Prompt C — HV-K01C Source Registry & Provenance Contract
 

@@ -31,6 +31,9 @@ macro agreement = mean(agreement_i)
 research target >= 80%, kèm sample size và confidence interval
 ```
 
+Product Owner đã chọn macro theo claim family làm KPI chính; micro-average, sample
+size, confidence interval và disagreement breakdown là báo cáo bắt buộc.
+
 `compatible-partial` phải báo riêng, không mặc định tính full agree. `different-profile`,
 `non-comparable`, `missing` không nằm trong denominator nhưng luôn phải công bố số
 lượng. Contradiction nằm trong denominator. Cùng source family không tạo independent vote.

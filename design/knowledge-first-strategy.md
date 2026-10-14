@@ -1,7 +1,7 @@
 # HV-K00 — Knowledge-First Strategy Reset
 
-Ngày: 14/10/2026 (Asia/Bangkok). Trạng thái: **WAITING FOR PRODUCT OWNER REVIEW**.
-Đây là chiến lược và kế hoạch; không phải xác nhận chuyên môn, không triển khai K01–K07.
+Ngày: 14/10/2026 (Asia/Bangkok). Trạng thái: **HV-K00 APPROVED; K01 AUTHORIZED**.
+Đây là chiến lược đã được Product Owner duyệt; không phải xác nhận chuyên môn.
 
 ## Executive summary
 
@@ -146,22 +146,20 @@ rule, ngoại lệ, test và approval.
 - **Product Owner:** duyệt profile/phạm vi nguồn, chính sách publish disputed claim,
   ngân sách/quyền truy cập và từng vertical slice trước implementation.
 
-## Quyết định Product Owner cần duyệt
+## Quyết định Product Owner đã duyệt
 
-1. **Phạm vi K01 đầu tiên:** chỉ Công việc + calculation core (khuyến nghị), hay
-   inventory toàn bộ Tử Vi. Phương án đầu giảm breadth nhưng tạo slice kiểm thử sớm.
-2. **Chính sách nguồn:** cho phép nguồn web chỉ làm discovery/cross-check, còn
-   `approved-for-implementation` cần ít nhất một passage ổn định từ nguồn xuất bản
-   và một đối chiếu độc lập (khuyến nghị).
-3. **Quy tắc bất đồng:** giữ song song theo profile và fail-closed khi profile chưa
-   chọn (khuyến nghị), hay chọn một dị bản bằng quyết định sản phẩm.
-4. **Ngưỡng độc lập calculation:** yêu cầu ít nhất hai implementation/source family
-   độc lập cho trường trọng yếu (khuyến nghị); fork cùng thư viện không tính hai.
-5. **Hạ tầng:** bắt đầu file-based schema/evaluator (khuyến nghị), chưa mua graph DB.
-6. **Quyền truy cập/ngân sách:** sách có bản quyền, thư viện số và dịch vụ lịch pháp;
-   không tự động tải/sao chép khi điều khoản chưa rõ.
-7. **Protocol 80%:** macro theo claim family (khuyến nghị) hay micro toàn bộ claim;
-   phải duyệt trước khi đặt KPI.
+1. Inventory toàn bộ Tử Vi ở mức tổng quan; calculation core và Công việc là hai
+   nhánh nghiên cứu sâu đầu tiên.
+2. Sách, tài liệu, mã nguồn và website đều được dùng để nghiên cứu. Rule production
+   cần nguồn kiểm chứng được; đồng thuận đối thủ không tự chứng minh đúng.
+3. Dị bản lưu theo calculation/rule profile. Có một profile mặc định; bất đồng chưa
+   giải quyết phải fail-closed.
+4. Phép tính trọng yếu đối chiếu ít nhất hai source/implementation family độc lập
+   khi khả thi; thiếu family thứ hai phải ghi chưa xác minh.
+5. Dùng file-based schema có khả năng biểu diễn graph; chưa triển khai graph database.
+6. Ưu tiên nguồn miễn phí, hợp pháp; mọi nguồn trả phí phải xin duyệt riêng.
+7. KPI ≥80% dùng macro theo claim family; báo thêm micro, sample size và breakdown
+   bất đồng. KPI không tự cho phép xuất bản claim thiếu nguồn.
 
 ## Rủi ro và kiểm soát
 
@@ -178,6 +176,6 @@ rule, ngoại lệ, test và approval.
 
 ## Điều kiện dừng K00
 
-K00 chỉ hoàn tất tài liệu khi strategy, validation framework và execution prompts
-nhất quán. Không sửa `src/`, không chạy K01–K07, không approve rule. Sau commit/push,
-trạng thái vẫn là **WAITING FOR PRODUCT OWNER REVIEW**.
+K00 đã được PO duyệt. K01C-Lite được phép khóa contract nguồn, sau đó K01A/K01B có
+thể nghiên cứu song song. Không sửa `src/`, không mở K02/K03 hoặc approve rule trước
+khi Product Owner đánh giá kết quả K01.

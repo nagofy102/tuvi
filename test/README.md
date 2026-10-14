@@ -21,6 +21,8 @@ Khung kiểm chứng Knowledge-First mới nằm tại `knowledge-first-validati
 calculation yêu cầu 100% trên required fields cùng exact profile; interpretation
 đặt mục tiêu đồng thuận thử nghiệm ≥80% trên structured comparable claims. Đây là
 protocol đề xuất, chưa phải kết quả chạy hoặc bằng chứng dự báo.
+K01C-Lite có acceptance/mutation plan tại `knowledge-source-registry-test-plan.md`;
+chưa có validator runtime hoặc rule production mới.
 
 Bước 2–4 đã có ứng dụng, bộ chuyển lịch, adapter an sao, trang SEO và ảnh OpenGraph thật.
 `dev/schema.sql` chưa được thực thi trên PostgreSQL; kiểm tra SQL và migration ở giai đoạn tích hợp DB.

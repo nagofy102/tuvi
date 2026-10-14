@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://huyenvi.local/schemas/knowledge-source-registry-v0.1.json",
+  "title": "Huyen Vi Knowledge Source Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "registryVersion",
+    "updatedAt",
+    "sources",
+    "passages",
+    "reviewEvents"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "knowledge-source-registry-v0.1" },
+    "registryVersion": { "type": "string", "minLength": 1 },
+    "updatedAt": { "type": "string", "format": "date" },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "passages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/passage" }
+    },
+    "reviewEvents": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/reviewEvent" }
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "candidate",
+        "source-backed",
+        "cross-implementation-agreement",
+        "disputed",
+        "approved-for-implementation",
+        "blocked"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "sourceKind",
+        "title",
+        "language",
+        "knowledgeScopes",
+        "schoolClaims",
+        "access",
+        "rights",
+        "provenance",
+        "independence",
+        "status",
+        "limitations"
+      ],
+      "properties": {
+        "sourceId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+        "sourceKind": {
+          "enum": [
+            "book",
+            "transcription",
+            "facsimile",
+            "website",
+            "software",
+            "catalogue",
+            "paper",
+            "other"
+          ]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "creator": { "type": ["string", "null"] },
+        "edition": { "type": ["string", "null"] },
+        "publisher": { "type": ["string", "null"] },
+        "publicationYear": { "type": ["string", "null"] },
+        "language": { "type": "string", "minLength": 2 },
+        "knowledgeScopes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "calendar",
+              "palace-placement",
+              "major-star-placement",
+              "auxiliary-star-placement",
+              "transformations",
+              "star-symbolism",
+              "cross-palace-interpretation",
+              "formations",
+              "fortune-periods",
+              "worked-chart",
+              "research-method"
+            ]
+          }
+        },
+        "schoolClaims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "claimStatus"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "claimStatus": {
+                "enum": [
+                  "declared-by-source",
+                  "reported-by-third-party",
+                  "unverified",
+                  "not-applicable"
+                ]
+              },
+              "evidenceNote": { "type": "string" }
+            }
+          }
+        },
+        "access": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url", "accessType", "lastCheckedAt", "lastObservedStatus"],
+          "properties": {
+            "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+            "accessType": {
+              "enum": ["free-public", "free-account", "institutional", "paid", "unknown"]
+            },
+            "lastCheckedAt": { "type": "string", "format": "date" },
+            "lastObservedStatus": { "type": "string", "minLength": 1 },
+            "robotsOrTermsNote": { "type": "string" }
+          }
+        },
+        "rights": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "reusePolicy"],
+          "properties": {
+            "status": {
+              "enum": [
+                "public-domain",
+                "open-license",
+                "permission-granted",
+                "restricted",
+                "unknown"
+              ]
+            },
+            "license": { "type": ["string", "null"] },
+            "reusePolicy": { "type": "string", "minLength": 1 }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["locator", "revision", "contentDigest", "retrievalMethod"],
+          "properties": {
+            "locator": { "type": "string", "minLength": 1 },
+            "revision": { "type": ["string", "null"] },
+            "contentDigest": { "type": ["string", "null"], "pattern": "^(sha256:[a-f0-9]{64})$" },
+            "retrievalMethod": { "type": "string", "minLength": 1 },
+            "bibliographicIdentity": { "type": "string" }
+          }
+        },
+        "independence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["sourceFamilyId", "implementationFamilyId", "independenceStatus"],
+          "properties": {
+            "sourceFamilyId": { "type": "string", "minLength": 1 },
+            "implementationFamilyId": { "type": ["string", "null"] },
+            "independenceStatus": {
+              "enum": ["independent", "related", "unknown", "not-applicable"]
+            },
+            "basis": { "type": "string" }
+          }
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "supersedes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "passage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passageId",
+        "sourceId",
+        "locator",
+        "language",
+        "textPolicy",
+        "supports",
+        "status"
+      ],
+      "properties": {
+        "passageId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+        "sourceId": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "language": { "type": "string", "minLength": 2 },
+        "textPolicy": { "enum": ["metadata-only", "minimal-quotation-reviewed", "full-text-open"] },
+        "quote": { "type": "string" },
+        "supports": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "profileScope": { "type": "array", "items": { "type": "string" } },
+        "status": { "$ref": "#/$defs/status" },
+        "limitations": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "reviewEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewId", "date", "reviewerRole", "action", "targetIds", "basis"],
+      "properties": {
+        "reviewId": { "type": "string", "minLength": 1 },
+        "date": { "type": "string", "format": "date" },
+        "reviewerRole": { "type": "string", "minLength": 1 },
+        "action": {
+          "enum": ["registered", "status-changed", "metadata-corrected", "blocked", "superseded"]
+        },
+        "targetIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "basis": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
