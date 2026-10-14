@@ -23,6 +23,10 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
 
 ## Tài liệu
 
+- `knowledge-first-strategy.md`: HV-K00, chiến lược chuyển sang Knowledge-First,
+  kiến trúc ba lớp, roadmap K01–K07, vai trò/rủi ro và các quyết định đang chờ
+  Product Owner. R07B/UI/AI Writer tạm dừng; chưa triển khai knowledge graph.
+
 - `reading-brief-samples.md`: HV-R02C, mẫu Style A một insight đã được Product
   Owner duyệt làm baseline. Runtime/UI deterministic cho đúng cấu trúc A1 đã triển
   khai; phương án hai insight vẫn bị loại do trùng luận điểm. Không có AI/API.
@@ -32,9 +36,9 @@ AI tiếp tục công việc cần đọc file này trước, rồi đọc tài 
   Quan Lộc vô chính diệu BLOCKED vì chưa có quy tắc liên cung đủ nguồn. Chưa tạo
   template approved hoặc sửa runtime.
 
-- `reading-r07b-copy-approval.md`: văn mẫu C1/C2 đã biên tập và truy vết từng câu,
-  đang chờ Product Owner duyệt nguyên văn. Chưa đổi template sang approved, chưa
-  sửa runtime hoặc chạy coverage sau mở rộng.
+- `reading-r07b-copy-approval.md`: văn mẫu C1/C2 đã biên tập và truy vết từng câu;
+  hiện **tạm dừng bởi HV-K00**, chưa đổi template sang approved, chưa sửa runtime
+  hoặc chạy coverage sau mở rộng.
 
 - `reading-ux-vnext.md`: nền thiết kế cho hành trình kết luận trước. HV-R03 hiện
   hiển thị kết luận, một insight, căn cứ mở rộng, nhãn demo và trạng thái thiếu

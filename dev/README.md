@@ -21,6 +21,10 @@ the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
 ## References
 
+- `knowledge-enrichment-prompts.md`: HV-K00, các task brief K01–K07 giới hạn theo
+  session, dependency, artifact, chống hallucination và stop gate. Đây là prompt
+  triển khai chờ PO duyệt, không phải các task đã chạy.
+
 - `reading-brief-contract.md`: HV-R02 canonical v1 specification, career matrix
   and provenance/privacy boundary. Runtime schema is implemented in
   `../src/domain/interpretation/reading-brief-schema.ts` without changing

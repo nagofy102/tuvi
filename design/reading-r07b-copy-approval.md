@@ -1,7 +1,9 @@
 # HV-R07B — Khóa văn mẫu mở rộng luận Công việc
 
 Ngày: 14/10/2026 (UTC). Baseline: `4bd3c78045bac18348886a323f6c5dcbd7aa3d60`
-(`origin/main`). Trạng thái: **CHỜ PRODUCT OWNER DUYỆT NGUYÊN VĂN**.
+(`origin/main`). Trạng thái: **TẠM DỪNG BỞI HV-K00 KNOWLEDGE-FIRST RESET**.
+Văn mẫu chưa được Product Owner duyệt để triển khai; R07B không tiếp tục trong khi
+K00 chờ review.
 
 Tài liệu này là cổng nội dung của R07B. Hai mẫu chỉ tổng hợp lớp nghĩa biểu tượng
 đã có trong nguồn và rule biên tập hiện hành; chúng không chứng nhận quy tắc Nam
