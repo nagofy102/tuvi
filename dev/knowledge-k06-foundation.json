@@ -1,8 +1,8 @@
 {
-  "artifactVersion": "hv-k06-foundation-v0.1",
+  "artifactVersion": "hv-k07-foundation-v0.2",
   "generatedAt": "2026-10-15",
   "scope": "Foundational vocabulary and methodology, research-only; no calculation or reader-facing inference admission.",
-  "registryVersion": "hv-k06-foundation-sweep-2026-10-15",
+  "registryVersion": "hv-k07-foundation-enrichment-2026-10-15",
   "defaultProfile": "profile-unresolved",
   "profilePolicy": "Every catalog item inherits defaultProfile unless a future revision gives it an explicit profile.",
   "provenanceBoundary": {
@@ -259,6 +259,120 @@
       "scope": "source listing only; no polarity or inference semantics admitted"
     }
   ],
+  "auxiliaryStars": [
+    {
+      "id": "star:wen-chang",
+      "label": "Văn Xương",
+      "sourceLabel": "文昌",
+      "familyRef": "star-family:literary",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:wen-qu",
+      "label": "Văn Khúc",
+      "sourceLabel": "文曲",
+      "familyRef": "star-family:literary",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:ta-phu",
+      "label": "Tả Phụ",
+      "sourceLabel": "左輔",
+      "familyRef": "star-family:assistants",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    },
+    {
+      "id": "star:huu-bat",
+      "label": "Hữu Bật",
+      "sourceLabel": "右弼",
+      "familyRef": "star-family:assistants",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    },
+    {
+      "id": "star:thien-khoi",
+      "label": "Thiên Khôi",
+      "sourceLabel": "魁",
+      "familyRef": "star-family:noble",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    },
+    {
+      "id": "star:thien-viet",
+      "label": "Thiên Việt",
+      "sourceLabel": "鉞",
+      "familyRef": "star-family:noble",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    },
+    {
+      "id": "star:thien-ma",
+      "label": "Thiên Mã",
+      "sourceLabel": "天馬",
+      "familyRef": "star-family:movement-wealth",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    },
+    {
+      "id": "star:loc-ton",
+      "label": "Lộc Tồn",
+      "sourceLabel": "祿存",
+      "familyRef": "star-family:movement-wealth",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:kinh-duong",
+      "label": "Kình Dương",
+      "sourceLabel": "擎羊",
+      "familyRef": "star-family:adverse-pairs",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:da-la",
+      "label": "Đà La",
+      "sourceLabel": "陀羅",
+      "familyRef": "star-family:adverse-pairs",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:hoa-tinh",
+      "label": "Hỏa Tinh",
+      "sourceLabel": "火星",
+      "familyRef": "star-family:adverse-pairs",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:linh-tinh",
+      "label": "Linh Tinh",
+      "sourceLabel": "鈴星",
+      "familyRef": "star-family:adverse-pairs",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families", "k07-v3-auxiliary-state-variants"]
+    },
+    {
+      "id": "star:dia-khong",
+      "label": "Địa Không",
+      "sourceLabel": "天空",
+      "familyRef": "star-family:adverse-pairs",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    },
+    {
+      "id": "star:dia-kiep",
+      "label": "Địa Kiếp",
+      "sourceLabel": "地劫",
+      "familyRef": "star-family:adverse-pairs",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"]
+    }
+  ],
   "concepts": [
     {
       "id": "concept:tam-phuong",
@@ -331,6 +445,26 @@
       "graphReadiness": "attribute-ready"
     },
     {
+      "id": "state:dac-dia",
+      "label": "Đắc địa",
+      "kind": "star-state-term",
+      "status": "source-backed",
+      "sourceRefs": ["k07-v3-auxiliary-state-variants"],
+      "definition": "State term in the source's star-specific position tables; it is not a universal state value.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "attribute-ready"
+    },
+    {
+      "id": "state:loi",
+      "label": "Lợi",
+      "kind": "star-state-term",
+      "status": "source-backed",
+      "sourceRefs": ["k07-v3-auxiliary-state-variants"],
+      "definition": "State term in the source's star-specific position tables; scope and equivalence are unresolved.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "attribute-ready"
+    },
+    {
       "id": "concept:tu-hoa",
       "label": "Tứ Hóa",
       "kind": "transformation-vocabulary",
@@ -382,6 +516,24 @@
       "status": "candidate",
       "sourceRefs": ["k05-v1-xingsha-lianzhen-quanloc"],
       "evaluationStatus": "blocked-source-term-mapping"
+    },
+    {
+      "id": "relation:source-variant-state-at-branch",
+      "sourceTerm": "廟/旺/地/利/陷 with named branches",
+      "graphEdge": "HAS_SOURCE_VARIANT_STATE_AT_BRANCH",
+      "status": "source-backed",
+      "sourceRefs": ["k07-v3-auxiliary-state-variants"],
+      "evaluationStatus": "blocked-profile-and-branch-mapping",
+      "constraint": "A state assertion must retain star, source variant, branch and exact passage; it cannot populate active chart facts."
+    },
+    {
+      "id": "relation:source-described-brackets",
+      "sourceTerm": "夾",
+      "graphEdge": "BRACKETS_IN_SOURCE_EXAMPLE",
+      "status": "source-backed",
+      "sourceRefs": ["k07-v3-bracketed-configurations"],
+      "evaluationStatus": "blocked-profile-geometry",
+      "constraint": "The retained examples describe positions around Mệnh; they do not define a general adjacency algorithm."
     }
   ],
   "methodologyRules": [
@@ -428,7 +580,9 @@
   "substantiveCandidateRefs": [
     "k05-taiyang-wenchang-quanloc-001",
     "k05-xingsha-lianzhen-quanloc-001",
-    "k05-tianxiang-conditioned-quanloc-001"
+    "k05-tianxiang-conditioned-quanloc-001",
+    "k07-changqu-bracket-menh-001",
+    "k07-khoiviet-bracket-menh-001"
   ],
   "researchHypotheses": [
     "The current source's ordered twelve-palace list can be mapped to a graph vocabulary without asserting any interpretive function.",

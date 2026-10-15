@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k06-foundation-sweep-2026-10-15",
+  "registryVersion": "hv-k07-foundation-enrichment-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -395,9 +395,57 @@
       "limitations": [
         "It is methodology only: no modern claim, numerical score or conflict resolver is supplied."
       ]
+    },
+    {
+      "passageId": "k07-v3-auxiliary-state-variants",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "諸星分別富貴貧賤夭壽諸局; pinned revision 2268626, raw wikitext lines 409, 416, 537, 552, 556, 562 and 589",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "文昌 廟巳酉丑 地申子辰 陷寅午戌……文曲 廟巳酉丑 地申子辰 陷寅午戌。",
+      "supports": [
+        "auxiliary-star-individual-vocabulary",
+        "source-variant-star-state-by-branch",
+        "state-term-dac-dia",
+        "state-term-loi"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "Tables are retained as source-specific variants, not a universal star-state lookup.",
+        "No mapping to the active calculation profile, branch convention or conflict precedence is approved."
+      ]
+    },
+    {
+      "passageId": "k07-v3-bracketed-configurations",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "諸星分別富貴貧賤夭壽諸局 > 文昌文曲, 魁鉞 and 左輔右弼; pinned revision 2268626, raw wikitext lines 424–432 and 568–587",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "昌曲夾命最為奇……假若命在丑宮，文昌在寅，文曲在子是也。不貴即富，吉多方論此為貴。……魁鉞夾命為奇格，如命安在辰宮，魁在卯，鉞在巳宮是也。",
+      "supports": [
+        "source-described-bracket-configuration",
+        "changqu-bracket-menh-conditional-configuration",
+        "khoiviet-bracket-menh-conditional-configuration"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The passage gives examples rather than a general geometry algorithm for 夾.",
+        "Classical outcome language is preserved for research provenance only; it cannot generate a modern or personalised claim.",
+        "Favourable and adverse conditions have no stated mixed-case precedence."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k07-foundation-passage-registration",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": ["k07-v3-auxiliary-state-variants", "k07-v3-bracketed-configurations"],
+      "basis": "HV-K07 directly read bounded lines in the already-pinned public volume-three revision. It records individual auxiliary-star vocabulary, source-variant state tables and two conditional bracket configurations; branch geometry, school/profile, independence and claim admission remain unresolved."
+    },
     {
       "reviewId": "hv-k06-foundation-passage-registration",
       "date": "2026-10-15",

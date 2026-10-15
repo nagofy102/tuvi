@@ -47,6 +47,12 @@ phụ tinh giới hạn, thuật ngữ trạng thái/không gian/Tứ Hóa và b
 hay runtime graph/DSL. Các quan hệ hình học, state lookup và Tứ Hóa active vẫn
 blocked; không có rule production mới. Xem `../dev/knowledge-k06-coverage.md`.
 
+HV-K07 (15/10) mở rộng catalog thành 14 phụ tinh có ID, thêm hai thuật ngữ trạng
+thái và hai quan hệ graph-ready theo nguồn: dị bản trạng thái-vị trí và cấu trúc
+giáp có ví dụ. Hai candidate cấu trúc giáp được lưu `blocked`; source vẫn là một
+textual lineage chưa xác định hệ phái, hình học/profile và ưu tiên xung đột chưa
+được map. Không có rule production mới; xem `../dev/knowledge-k07-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

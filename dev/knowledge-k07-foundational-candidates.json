@@ -1,0 +1,157 @@
+{
+  "artifactVersion": "hv-k07-foundational-candidates-v0.1",
+  "generatedAt": "2026-10-15",
+  "scope": "Bounded auxiliary-star and positional-condition research; no runtime admission or personalised output.",
+  "registryVersion": "hv-k07-foundation-enrichment-2026-10-15",
+  "candidateRules": [
+    {
+      "ruleId": "k07-changqu-bracket-menh-001",
+      "ruleVersion": "candidate-1",
+      "type": "substantive-exception",
+      "researchStatus": "blocked",
+      "productionEligible": false,
+      "source": {
+        "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+        "passageId": "k07-v3-bracketed-configurations",
+        "locator": "諸星分別富貴貧賤夭壽諸局 > 文昌文曲; pinned revision 2268626, raw wikitext lines 424–432",
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved"
+      },
+      "schoolProfile": "profile-unresolved",
+      "structure": {
+        "focusPalace": "Mệnh",
+        "stars": ["Văn Xương", "Văn Khúc"],
+        "relation": "夾",
+        "sourceExample": "Mệnh at Sửu; Văn Xương at Dần; Văn Khúc at Tý"
+      },
+      "requiredInputFacts": [
+        "Mệnh branch",
+        "Văn Xương branch",
+        "Văn Khúc branch",
+        "reviewed meaning of 夾",
+        "source-compatible state and supporting-context facts"
+      ],
+      "eligibility": "Blocked until a reviewed profile maps the source branches and the 夾 relation; even then source conditions must be checked rather than inferred from adjacency.",
+      "sourceSupportedInference": "The source calls the named arrangement notable, gives one positional example, and separately limits elevated wording with 吉多 and other conditions.",
+      "allowedConclusion": "research trace containing the exact historical configuration label and its stated conditionality only",
+      "forbiddenConclusions": [
+        "education",
+        "talent",
+        "wealth",
+        "social rank",
+        "modern outcome",
+        "personalised claim"
+      ],
+      "limitationsAndExceptions": [
+        "The passage provides no general geometry definition for 夾.",
+        "The source itself restricts some favourable wording with 吉多/化吉 conditions.",
+        "No precedence is supplied for its adverse combinations.",
+        "School/profile and independent corroboration remain unresolved."
+      ],
+      "supportingSignals": [
+        "all three position facts match a future profile-mapped source example",
+        "explicitly sourced favourable context"
+      ],
+      "opposingSignals": [
+        "missing branch or bracket mapping",
+        "source-stated adverse context",
+        "mixed conditions without precedence"
+      ],
+      "evidenceClarity": "direct-configuration-with-example-and-conditions",
+      "sourceTextVsBA": {
+        "sourceText": "Names 昌曲夾命, gives a Tý–Sửu–Dần example, and elsewhere in the same bounded passage qualifies outcomes by 吉多 or 化吉.",
+        "baInterpretation": "Represent only the source's configuration and constraints; do not generalize it into a personality, career or wealth rule.",
+        "unsupportedHypotheses": [
+          "all adjacent positions count as 夾",
+          "a modern semantic equivalent of the historical wording",
+          "priority over adverse configurations"
+        ]
+      },
+      "examples": {
+        "mayApplyForResearchTrace": "A future reviewed profile proves the named source example and no unresolved source condition is present; retain the label without reader-facing output.",
+        "mustNotApply": "A chart merely has two stars near Mệnh, uses guessed branch geometry, or mixes source conditions without a resolver."
+      },
+      "proposedTestCaseIds": [
+        "k07-changqu-bracket-exact-source-example",
+        "k07-changqu-bracket-guessed-geometry",
+        "k07-changqu-bracket-mixed-condition"
+      ]
+    },
+    {
+      "ruleId": "k07-khoiviet-bracket-menh-001",
+      "ruleVersion": "candidate-1",
+      "type": "substantive-exception",
+      "researchStatus": "blocked",
+      "productionEligible": false,
+      "source": {
+        "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+        "passageId": "k07-v3-bracketed-configurations",
+        "locator": "諸星分別富貴貧賤夭壽諸局 > 魁鉞; pinned revision 2268626, raw wikitext lines 568–574",
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved"
+      },
+      "schoolProfile": "profile-unresolved",
+      "structure": {
+        "focusPalace": "Mệnh",
+        "stars": ["Thiên Khôi", "Thiên Việt"],
+        "relation": "夾",
+        "sourceExample": "Mệnh at Thìn; Khôi at Mão; Việt at Tỵ"
+      },
+      "requiredInputFacts": [
+        "Mệnh branch",
+        "Thiên Khôi branch",
+        "Thiên Việt branch",
+        "reviewed meaning of 夾",
+        "reviewed meaning of source terms 吉 and sát"
+      ],
+      "eligibility": "Blocked: the source offers an example but no approved branch/adjacency profile, and its positive wording is explicitly conditional on 吉.",
+      "sourceSupportedInference": "The source identifies the named bracket configuration, supplies a positional example, and states qualifiers involving 吉 and adverse-star gathering.",
+      "allowedConclusion": "research trace preserving the source configuration, its example and unresolved conditions",
+      "forbiddenConclusions": [
+        "exam success",
+        "rank",
+        "health",
+        "longevity",
+        "modern outcome",
+        "personalised claim"
+      ],
+      "limitationsAndExceptions": [
+        "No general mapping of 夾 or the named branches is approved.",
+        "吉 and the adverse-star vocabulary are not profile-mapped.",
+        "No conflict precedence is stated.",
+        "The source lineage is unresolved and not independent."
+      ],
+      "supportingSignals": [
+        "future exact mapping of the source example",
+        "reviewed favourable context"
+      ],
+      "opposingSignals": [
+        "source-mentioned adverse gathering",
+        "unknown vocabulary",
+        "unresolved mixed context"
+      ],
+      "evidenceClarity": "direct-configuration-with-example-and-conditions",
+      "sourceTextVsBA": {
+        "sourceText": "Names 魁鉞夾命, gives a Mão–Thìn–Tỵ example and qualifies statements by 吉/殺 context.",
+        "baInterpretation": "Keep a traceable positional candidate, not a general 'noble star' inference.",
+        "unsupportedHypotheses": [
+          "a fixed semantic classification for Khôi/Việt",
+          "an active fortune or status claim",
+          "how competing context resolves"
+        ]
+      },
+      "examples": {
+        "mayApplyForResearchTrace": "A future reviewed profile resolves all source terms and exact example; retain only the source classification with its caveats.",
+        "mustNotApply": "The geometry, terms or context are inferred from a generic star family or a mixed case is given an invented priority."
+      },
+      "proposedTestCaseIds": [
+        "k07-khoiviet-bracket-exact-source-example",
+        "k07-khoiviet-unmapped-vocabulary",
+        "k07-khoiviet-mixed-context"
+      ]
+    }
+  ],
+  "openGaps": [
+    "An independently identified, school-classified source for auxiliary-star taxonomy and positional state tables.",
+    "A reviewed calculation-profile mapping for branches, state tables and the source term 夾.",
+    "Source-defined conflict precedence for favourable and adverse contexts."
+  ]
+}

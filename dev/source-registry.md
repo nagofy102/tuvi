@@ -20,14 +20,17 @@ all from the same unresolved textual family: they are research records, not
 runtime or K04B authorization. Paid or permissioned material requires PO approval
 of price, licence and allowed use before acquisition.
 
-HV-K06 additionally normalizes bounded source-backed vocabulary for twelve
-palaces, fourteen major-star candidates, selected auxiliary families, state/aspect
-terms and methodology. `knowledge-k06-foundation.json` is a research catalog; its
-IDs may support future graph/DSL design, but unresolved profile geometry, state
-tables and transformation variants remain blocked from runtime use.
+HV-K06/K07 normalize bounded source-backed vocabulary for twelve palaces, fourteen
+major-star candidates, fourteen individually identified auxiliary stars, selected
+families, state/aspect terms and methodology. K07 adds source-variant state tables
+and two conditional bracket configurations, each with an explicit source example.
+`knowledge-k06-foundation.json` and `knowledge-k07-foundational-candidates.json`
+remain research artifacts: their IDs may support future graph/DSL design, but
+unresolved profile geometry, state tables and transformation variants remain
+blocked from runtime use.
 
 The consolidated historical provenance covers bibliographic catalogue checks,
-classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K06
+classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07
 research. Full detail remains recoverable from the HV-M01 predecessor paths in
 Git; this contract and the JSON artifacts are the active entry point.
 
