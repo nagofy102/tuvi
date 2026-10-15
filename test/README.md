@@ -149,6 +149,18 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
 
 ## Handoff
 
+### K02C/K03A3 research gate — 2026-10-15
+
+- AJV 2020 schema validation of the base ontology fixture passed after adding the
+  methodology/orchestration rule kind; a methodology rule must retain an empty claim
+  surface and `productionEligible=false`.
+- `npm run typecheck`, `npm run format:check` and `git diff --check` passed.
+- `test/calculation-k02c-source-status.json` records metadata-only access to GB/T
+  33661-2017; it admits no golden fixture and no profile decision.
+- `test/knowledge-k03a3-rule-cases.json` deliberately contains no substantive rule
+  cases because no lawful independent page-level passage was obtained. This is a
+  research stop, not a zero-test pass.
+
 ### Bản đọc Công việc — luận trước, khuyên sau
 
 Xem `career-reading.md` cho kiểm tra nội dung, nguồn/điều kiện và hai mục thu

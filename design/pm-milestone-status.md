@@ -14,6 +14,17 @@ chứng nhận chuyên môn. Kế hoạch gốc: [reading-synthesis-plan.md](rea
 | D2 — Luận vận             | Chưa triển khai                                                       | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                        |
 | D3 — Hỏi tiếp AI          | Chưa triển khai                                                       | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                        |
 
+## PO review K02B/K03A2/K04A — 15/10/2026
+
+PO nghiệm thu các mốc trước ở phạm vi nghiên cứu/prototype, không xác nhận độ đúng
+tính toán hoặc luận giải production. K02C được mở để kiểm chứng lịch theo nguồn hợp
+pháp; K03A3 được mở để thu tri thức luận đoán thực chất; K04B vẫn tạm hoãn. K02C mới
+xác minh metadata chính thức của GB/T 33661-2017: chưa lấy/đọc được toàn văn hợp pháp,
+nên không có clause, fixture hay thay đổi profile. K03A3 chưa có passage độc lập,
+page-level đủ điều kiện, nên Knowledge Yield là 0 rule substantive và 0 claim path.
+Xem `../dev/calculation-k02c-verification-report.md` và
+`../dev/knowledge-k03a3-yield-report.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

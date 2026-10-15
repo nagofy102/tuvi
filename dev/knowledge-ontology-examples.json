@@ -78,6 +78,7 @@
       "ruleId": "mock:rule-a",
       "version": "0.0.1-mock",
       "status": "blocked",
+      "ruleKind": "substantive-interpretation",
       "topicRef": "mock:topic-career",
       "ruleProfileRefs": ["mock:rule-profile-a"],
       "conditions": [
@@ -109,6 +110,7 @@
       "ruleId": "mock:rule-b",
       "version": "0.0.1-mock",
       "status": "disputed",
+      "ruleKind": "substantive-interpretation",
       "topicRef": "mock:topic-career",
       "ruleProfileRefs": ["mock:rule-profile-a"],
       "conditions": [

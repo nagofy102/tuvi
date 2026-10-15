@@ -81,6 +81,7 @@
       "ruleId": "k03a-career-context-order-001",
       "version": "candidate-1",
       "status": "candidate-source-backed-not-independent",
+      "ruleKind": "methodology-orchestration",
       "topicRef": "topic:career",
       "ruleProfileRefs": ["profile:k03a-career-unresolved"],
       "conditions": [
@@ -143,6 +144,7 @@
       "ruleId": "k03a-empty-menh-tai-quan-001",
       "version": "candidate-1",
       "status": "candidate-source-backed-not-independent",
+      "ruleKind": "methodology-orchestration",
       "topicRef": "topic:career",
       "ruleProfileRefs": ["profile:k03a-career-unresolved"],
       "conditions": [

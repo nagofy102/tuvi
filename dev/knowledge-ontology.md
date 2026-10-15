@@ -64,8 +64,13 @@ imply a reading.
 
 ### Domain knowledge
 
-Rules contain structured predicates rather than prose-only conclusions. Knowledge
-edges may express `REQUIRES`, `EXCLUDES`, `MODIFIES`, `CONFLICTS_WITH`,
+Rules contain structured predicates rather than prose-only conclusions. Every rule
+declares one of two kinds: `substantive-interpretation` describes a sourced
+interpretive conclusion and must declare at least one permitted claim kind;
+`methodology-orchestration` only orders, gates or defers evaluation and must declare
+an empty `allowedClaimKinds` array and `productionEligible=false`. A methodology rule
+cannot directly, or through a later status change, emit a personalized claim.
+Knowledge edges may express `REQUIRES`, `EXCLUDES`, `MODIFIES`, `CONFLICTS_WITH`,
 `SUPPORTS_CLAIM_KIND`, `SOURCED_BY` and `APPLIES_UNDER_PROFILE`. No numeric weight or
 probability field exists. A `CONFLICTS_WITH` edge records disagreement; it does not
 resolve it.
@@ -98,6 +103,7 @@ After JSON Schema validation, a validator must apply these checks in order:
 | `REVISION_NOT_RESOLVED`          | Rule/passages/source revisions resolve in the selected registry snapshot.                                   |
 | `PROFILE_MISMATCH`               | Chart calculation profile is allowed by every selected rule profile.                                        |
 | `UNADMITTED_RULE`                | A rule not `approved-for-implementation` cannot allow a claim.                                              |
+| `METHODOLOGY_RULE_CANNOT_ALLOW_CLAIM` | A methodology/orchestration rule has an empty claim surface and cannot be promoted to one.               |
 | `STRUCTURAL_MOCK_PRODUCTION_USE` | Structural mock data can never be production eligible or allow claims.                                      |
 | `MISSING_REQUIRED_EVIDENCE`      | Every selected rule has resolvable passage evidence.                                                        |
 | `UNRESOLVED_CONFLICT`            | Applicable conflicting rules without a sourced resolver fail closed.                                        |

@@ -261,6 +261,7 @@
         "ruleId",
         "version",
         "status",
+        "ruleKind",
         "topicRef",
         "ruleProfileRefs",
         "conditions",
@@ -275,6 +276,7 @@
         "ruleId": { "$ref": "#/$defs/id" },
         "version": { "$ref": "#/$defs/version" },
         "status": { "$ref": "#/$defs/lifecycleStatus" },
+        "ruleKind": { "enum": ["substantive-interpretation", "methodology-orchestration"] },
         "topicRef": { "$ref": "#/$defs/id" },
         "ruleProfileRefs": {
           "type": "array",
@@ -288,7 +290,6 @@
         "counterEvidence": { "type": "array", "items": { "$ref": "#/$defs/predicate" } },
         "allowedClaimKinds": {
           "type": "array",
-          "minItems": 1,
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/id" }
         },
@@ -300,6 +301,25 @@
         "productionEligible": { "type": "boolean" }
       },
       "allOf": [
+        {
+          "if": {
+            "properties": { "ruleKind": { "const": "substantive-interpretation" } },
+            "required": ["ruleKind"]
+          },
+          "then": { "properties": { "allowedClaimKinds": { "minItems": 1 } } }
+        },
+        {
+          "if": {
+            "properties": { "ruleKind": { "const": "methodology-orchestration" } },
+            "required": ["ruleKind"]
+          },
+          "then": {
+            "properties": {
+              "allowedClaimKinds": { "maxItems": 0 },
+              "productionEligible": { "const": false }
+            }
+          }
+        },
         {
           "if": {
             "not": {

@@ -1,0 +1,16 @@
+{
+  "artifactVersion": "hv-k03a3-rule-cases-v0.1",
+  "status": "no-substantive-rule-cases-created",
+  "reason": "No lawful, independent, page-level substantive passage was obtained; creating mock interpretation cases would misrepresent knowledge acquisition.",
+  "methodologyRuleConstraint": {
+    "ruleKind": "methodology-orchestration",
+    "allowedClaimKinds": [],
+    "productionEligible": false
+  },
+  "requiredBeforeSubstantiveCases": [
+    "source locator and bounded permitted text",
+    "profile and vocabulary version",
+    "conditions, exceptions and conclusion trace",
+    "positive, negative, missing and conflict expectations"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "artifactVersion": "hv-k02c-source-status-v0.1",
+  "checkedAt": "2026-10-15",
+  "sources": [
+    {
+      "sourceId": "gbt-33661-2017-samr-official-record",
+      "status": "metadata-verified-content-blocked",
+      "scope": "Chinese calendar standard identity and status only",
+      "fullTextAcquired": false,
+      "goldenFixtureAdmitted": false,
+      "profileDecisionAllowed": false
+    },
+    {
+      "sourceId": "k02b-1985-timezone-observation",
+      "status": "reproduced-not-profile-resolved",
+      "scope": "UTC+7/UTC+8 civil-date mechanism",
+      "goldenFixtureAdmitted": false,
+      "profileDecisionAllowed": false
+    }
+  ],
+  "prohibitions": [
+    "Do not treat the Chinese standard as a Vietnamese-calendar default.",
+    "Do not create expected values from the production engine.",
+    "Do not resolve 1985-03-21 without an explicit compatible profile."
+  ]
+}

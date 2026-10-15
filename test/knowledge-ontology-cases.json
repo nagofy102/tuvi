@@ -29,6 +29,27 @@
       }
     },
     {
+      "caseId": "schema-reject-methodology-claim-kind",
+      "operation": {
+        "kind": "replace",
+        "path": "/domainRules/0/ruleKind",
+        "value": "methodology-orchestration"
+      },
+      "additionalOperations": [
+        {
+          "kind": "replace",
+          "path": "/domainRules/0/allowedClaimKinds",
+          "value": ["mock:claim-kind-symbolic"]
+        }
+      ],
+      "expected": {
+        "schemaValid": false,
+        "semanticValid": false,
+        "productionEligible": false,
+        "issueCodes": ["METHODOLOGY_RULE_CANNOT_ALLOW_CLAIM"]
+      }
+    },
+    {
       "caseId": "schema-reject-edge-kind",
       "operation": { "kind": "replace", "path": "/knowledgeEdges/0/from/kind", "value": "entity" },
       "expected": {

@@ -19,6 +19,12 @@ The former Vietnamese v2 profile is archived for its original corpus/audit. Its
 1950–2026 results (28,124 bridge tuples and 10,900 selected charts) do not validate
 the new profile; see `../test/calendar-remediation.md` for historical evidence.
 
+K02C was authorized after PO review on 15/10/2026. It verified the official metadata
+record for GB/T 33661-2017, but not its full-text clauses; no fixture/profile decision
+is allowed from that result. K03A3 has no new substantive interpretation rule or
+claim path, and K04B remains postponed. See `calculation-k02c-verification-report.md`,
+`knowledge-k03a3-yield-report.md` and `knowledge-k02c-k03a3-execution.md`.
+
 ## References
 
 - `knowledge-k02-k03-execution.md`: phạm vi, dependency, worktree/file ownership,
