@@ -179,6 +179,13 @@ bão hòa của nhóm nội dung này, nên queue tự chuyển breadth-first sa
 Tân Biên sau khi xác minh ranh giới mục. VNI vẫn là `RECOVERABLE` qua visual QA;
 không có blocker và không thay runtime, calculation, UI hay trạng thái production.
 
+HV-K14-C batch 8 (16/10) hoàn tất Quan Lộc Tân Biên 161–167 (7 trang), lũy kế
+237/1.022 trang. Giữ 1 MERGE cho cấu trúc đa yếu tố ở cung Quan Lộc, 1 REVIEW
+cho Vô Chính diệu phụ thuộc hình học/ngoại lệ chưa tương thích profile và 1 REJECT
+cho catalog nghề nghiệp/chức vị trực tiếp. Do yield thấp và rủi ro profile, queue
+tự chuyển sang lát cắt cung không phải Quan Lộc trong 168–224. Không có blocker,
+không thay runtime, calculation, UI hay trạng thái production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

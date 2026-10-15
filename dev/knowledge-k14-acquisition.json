@@ -136,13 +136,22 @@
       "note": "Three pilot pages; not reprocessed in batch 1."
     },
     {
-      "rangeId": "ledger:tb-161-224",
+      "rangeId": "ledger:tb-161-167",
       "bookId": "book-k14-tan-bien",
-      "pdfPages": "161-224",
-      "section": "Remaining Quan Lộc and palace sections",
+      "pdfPages": "161-167",
+      "section": "Quan Lộc 8.9-8.45",
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-8",
+      "note": "Seven pages read and visually checked. The source uses placement, co-location, states and aspect/exception language, but it ties these to direct career, rank, wealth, health and lifespan outcomes; only methodology and a profile-unresolved void-main-star case are retained."
+    },
+    {
+      "rangeId": "ledger:tb-168-224",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "168-224",
+      "section": "Nô Bộc through remaining palace sections",
       "status": "PENDING",
       "checkpoint": null,
-      "note": "Pages 161-167 were mechanically extracted during the pilot but not substantively read and remain pending."
+      "note": "Remaining sections, split from the formerly broad range after bounded Quan Lộc extraction."
     },
     {
       "rangeId": "ledger:tb-225-247",
@@ -450,11 +459,30 @@
       "nextPriorityRationale": "Switch breadth-first to the pending Tân Biên Quan Lộc section, a coverage gap with higher product-research relevance, before resuming later Tổng Hợp chapters."
     }
   },
+  "batch8": {
+    "newPagesProcessed": 7,
+    "ranges": ["ledger:tb-161-167"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "161, 163, 165",
+        "result": "Visually checked. These pages contain star/placement combinations mapped to direct career rank, occupation, wealth, health or lifespan outcomes; none was admitted as a reusable claim, score or fixture."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The career section provides a direct source locator for a void-main-star Quan Lộc contextual case, but not an admissible career conclusion.",
+      "mergeValue": "The repeated entry structure adds career-section provenance for the existing multi-factor methodology record.",
+      "reviewCauses": "The void-main-star case depends on xung/hợp chiếu and Tuần/Triệt exceptions whose active geometry and assignment remain profile-unresolved.",
+      "noYieldReliability": "Three distributed pages were visually checked against direct career claims excluded by policy.",
+      "topicSaturation": "The source's large catalog of deterministic occupation/rank outcomes is not a productive research target without profile validation and a safe interpretation policy.",
+      "nextPriorityRationale": "Continue breadth-first with a separately bounded non-career palace slice rather than more adjacent deterministic career entries."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-7",
+    "checkpointId": "k14c-after-batch-8",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "9efd639",
+    "baseCommit": "da32829",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -468,6 +496,7 @@
       "ledger:tb-094-123",
       "ledger:tb-124-157",
       "ledger:tb-158-160",
+      "ledger:tb-161-167",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -480,11 +509,11 @@
       "ledger:th-108-128",
       "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:tb-161-224", "ledger:th-150-421"],
-    "batch7CandidateIds": [
-      "candidate:k14b7-th-whole-chart-context-merge",
-      "candidate:k14b7-th-yin-yang-context-merge",
-      "candidate:k14b7-th-sensitive-chart-and-body-claims-reject"
+    "nextPendingPriority": ["ledger:tb-168-224", "ledger:th-150-421"],
+    "batch8CandidateIds": [
+      "candidate:k14b8-tb-quan-loc-entry-structure-merge",
+      "candidate:k14b8-tb-quan-loc-void-main-star-review",
+      "candidate:k14b8-tb-career-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -493,7 +522,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Knowledge-yield review recorded. Continue autonomously with a separately bounded Tân Biên Quan Lộc slice, splitting the pending range at a section boundary before reading.",
+    "nextAction": "Knowledge-yield review recorded. Continue autonomously with a separately bounded non-career palace slice, splitting the pending range at a verified section boundary before reading.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1487,6 +1516,69 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for the range; retained multi-factor provenance is recorded separately."
+    },
+    {
+      "candidateId": "candidate:k14b8-tb-quan-loc-entry-structure-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.161-167, Quan Lộc 8.9-8.45",
+      "subjectIds": [
+        "palace:quan-loc",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "The source describes a Quan Lộc entry through stated placement, co-location, state or aspect and sometimes named exceptions."
+      ],
+      "neutralStatement": "The reviewed Quan Lộc entries retain the book's multi-factor structure: a career-related discussion is qualified by placement and concurrent or aspect context rather than a star name alone.",
+      "evidenceType": "repeated source entry structure",
+      "limitations": [
+        "The entries attach this structure to direct occupation, rank, wealth, health, lifespan and historical status claims that are excluded.",
+        "This adds career-section provenance only; it does not activate a career rule, geometry, priority, profile mapping or personalized claim."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with earlier contextual-methodology records; this is a narrower Quan Lộc locator, not a new rule."
+    },
+    {
+      "candidateId": "candidate:k14b8-tb-quan-loc-void-main-star-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.166-167, Quan Lộc 8.45 Vô Chính diệu",
+      "subjectIds": ["palace:quan-loc", "relation:opposes", "relation:joined-aspect"],
+      "conditions": [
+        "The source discusses a Quan Lộc case described as void of a major star and refers to opposing or joining-aspect context and named exceptions."
+      ],
+      "neutralStatement": "The source treats the stated void-main-star Quan Lộc case as dependent on aspect context and exceptions rather than the palace label alone.",
+      "evidenceType": "source-described contextual case",
+      "limitations": [
+        "Void-main-star identity, active geometry and the source's Tuần/Triệt exception handling remain unresolved under the target profile.",
+        "The direct career outcomes are excluded; this cannot activate a calculation, rule, score or personalized conclusion."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Related to earlier void-main-star reviews; preserves a separate career-palace context without resolving geometry."
+    },
+    {
+      "candidateId": "candidate:k14b8-tb-career-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.161-167, Quan Lộc 8.9-8.45",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps stars, positions, combinations or exceptions to direct occupation, career rank, wealth, health, lifespan or social-status outcomes."
+      ],
+      "neutralStatement": "The reviewed Quan Lộc entries contain direct historical occupation, success, rank, wealth, health, lifespan and status claims.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "No approved calculation profile or safe modern interpretation policy supports these conclusions.",
+        "They must not become a career reading, score, fixture, personalized claim or production rule."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the career range; its methodology and profile-unresolved contextual case are retained separately."
     }
   ],
   "unresolvedIssues": [

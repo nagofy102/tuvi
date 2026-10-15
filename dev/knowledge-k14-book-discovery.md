@@ -531,6 +531,35 @@ only. No candidate has become profile-compatible or production-eligible.
 - NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
   typecheck, build and E2E (research-only data has no production consumer).
 
+## HV-K14-C batch 8 — bounded Quan Lộc check
+
+Tân Biên PDF/printed pages 161–167 complete the remaining Quan Lộc section in a
+separately bounded seven-page batch. The source again conditions its entries on
+placement, co-location, state, aspect and exceptions; that structure is retained
+as a `MERGE` locator for `palace:quan-loc`. The void-main-star case is `REVIEW`:
+it explicitly depends on xung/hợp chiếu plus Tuần/Triệt exceptions, but active
+geometry, void-main-star identity and exception handling are profile-unresolved.
+
+The section's deterministic occupation, rank, wealth, health, lifespan and status
+claims are one bounded `REJECT` record. Visual QA covered pages 161, 163 and 165.
+Cumulative substantive reading is **237 / 1,022 PDF pages**: 137 Tân Biên, 97
+Tổng Hợp and three Tự Xem control pages.
+
+Knowledge-yield review identifies the unverified deterministic career catalog as
+saturated for the current safety/profile boundary. The next priority is a bounded
+non-career palace slice from Tân Biên 168–224, after confirming its section
+boundary; no `BLOCKING` issue was found.
+
+### Verification — HV-K14-C batch 8
+
+- PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
+  with no gap or overlap; Batch 8 reconciles to seven new pages.
+- PASS: hashes match Checkpoint 1; non-rejected subject IDs resolve; retained
+  locators and all three no-yield samples were visually checked.
+- PASS: targeted Prettier and `git diff --check`; no profile or production status changed.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
+  typecheck, build and E2E (research-only data has no production consumer).
+
 ## HV-K14-C batch 5 — autonomous continuation
 
 Tổng Hợp PDF/printed pages 108–128 were read as a 21-page batch. Because the VNI
