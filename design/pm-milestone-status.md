@@ -156,6 +156,13 @@ chưa có identity/phép an theo profile) và 1 REJECT cho nhóm lời luận tr
 QA ledger/hash/locator/ID/format qua; không thay runtime, calculation, UI hay
 trạng thái production. Vòng tiếp theo tiếp tục Tổng Hợp theo visual QA bắt buộc.
 
+HV-K14-C batch 5 (16/10) tiếp tục tự động trên Tổng Hợp 108–128 (21 trang),
+lũy kế 175/1.022 trang. Batch thêm 1 ACCEPT AS RESEARCH (giới hạn phương pháp
+do tác giả nêu), 1 MERGE, 1 REVIEW cho thứ bậc hạn chưa tương thích profile và
+1 REJECT cho các kết luận cá nhân trực tiếp. VNI vẫn được kiểm bằng ảnh PDF;
+đây là `RECOVERABLE`, đã cô lập trong ledger, không là blocker. Không thay
+runtime, calculation, UI hay trạng thái production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

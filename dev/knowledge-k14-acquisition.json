@@ -302,9 +302,9 @@
       "bookId": "book-k14-tong-hop",
       "pdfPages": "108-128",
       "section": "Remaining interpretation method",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Pages 108-110 were mechanically extracted during the pilot but not substantively read and remain pending."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-5",
+      "note": "Twenty-one pages read with rendered-page QA. The source supplies multi-factor and period-review methodology, but VNI remains non-authoritative, time/profile mechanics are unresolved and direct personal outcomes are excluded."
     },
     {
       "rangeId": "ledger:th-129-421",
@@ -400,11 +400,22 @@
       }
     ]
   },
+  "batch5": {
+    "newPagesProcessed": 21,
+    "ranges": ["ledger:th-108-128"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "109, 112, 119, 122, 127",
+        "result": "Visually checked against the rendered PDF. The pages contain tables, profile-dependent timing claims, outcome illustrations or data-quality cautions; no unverified VNI text or personal claim was admitted."
+      }
+    ]
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-4",
+    "checkpointId": "k14c-after-batch-5",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "09f8ff28b5f2eca5ca32f82ce38da2cff8be1366",
+    "baseCommit": "7dceea6c0ef4078e381c9fafc06a4ee77b7aa3c4",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -425,13 +436,15 @@
       "ledger:th-083-088",
       "ledger:th-089-092",
       "ledger:th-093-101",
-      "ledger:th-104-107"
+      "ledger:th-104-107",
+      "ledger:th-108-128"
     ],
-    "nextPendingPriority": ["ledger:th-108-128", "ledger:tb-124-157"],
-    "batch4CandidateIds": [
-      "candidate:k14b4-tb-contextual-entry-structure-merge",
-      "candidate:k14b4-tb-khoi-viet-review",
-      "candidate:k14b4-tb-sensitive-major-star-outcomes"
+    "nextPendingPriority": ["ledger:tb-124-157", "ledger:th-129-149"],
+    "batch5CandidateIds": [
+      "candidate:k14b5-th-multistar-context-merge",
+      "candidate:k14b5-th-period-hierarchy-review",
+      "candidate:k14b5-th-interpretation-limit-accept",
+      "candidate:k14b5-th-sensitive-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -440,7 +453,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Continue autonomously with a separately bounded Tổng Hợp slice; isolate VNI-affected pages through visual QA.",
+    "nextAction": "Continue autonomously with a separately bounded Tân Biên palace-section slice; retain visual QA for any Total Hợp return.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1239,6 +1252,86 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for this range; permitted methodology and the Khôi/Việt identity gap are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b5-th-multistar-context-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.108-115, continuation of interpretation method",
+      "subjectIds": ["concept:yin-yang", "concept:wu-xing", "relation:co-located"],
+      "conditions": ["The source considers a palace with multiple principal or auxiliary stars."],
+      "neutralStatement": "The source treats a multi-star context as conditional on the stars' stated properties and concurrent configuration, and warns that a simple enumerated table is not an adequate substitute for reviewing the whole configuration.",
+      "evidenceType": "author-described multi-factor methodology",
+      "limitations": [
+        "The source also attaches favorable/adverse and personal-outcome language that is excluded.",
+        "No weighting, five-phase resolver, geometry mapping or interpretation rule is derived."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with candidate:k14b2-th-five-phase-multistar-underdetermination; adds nearby source context without creating a separate rule."
+    },
+    {
+      "candidateId": "candidate:k14b5-th-period-hierarchy-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.116-121, period nesting and five-phase discussion",
+      "subjectIds": [
+        "period:dai-han",
+        "period:tieu-han",
+        "concept:wu-xing",
+        "relation:trines-with"
+      ],
+      "conditions": [
+        "The source reviews a smaller period within a larger period and Mệnh/Thân context."
+      ],
+      "neutralStatement": "The author proposes a nested period review in which a smaller period is considered within the broader period and chart context, while acknowledging competing five-phase and trine formulations.",
+      "evidenceType": "author-described methodology with source-acknowledged variants",
+      "limitations": [
+        "The current profile does not admit period placement, nesting, leap-month handling, five-phase precedence or active geometry for this use.",
+        "No period calculation, timing prediction, score or personalized outcome is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New bounded period-method candidate; related annual/period records remain unresolved and no hierarchy is selected."
+    },
+    {
+      "candidateId": "candidate:k14b5-th-interpretation-limit-accept",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.124, conclusion before IV. Những hoàn cảnh phải lưu ý",
+      "subjectIds": ["palace:menh"],
+      "conditions": [
+        "An interpretation approach is presented as a viewpoint within a broader review."
+      ],
+      "neutralStatement": "The author explicitly frames the preceding approach as one viewpoint rather than a complete account, and says an interpreter must choose a method while recognizing unresolved complexity.",
+      "evidenceType": "author-stated methodological limitation",
+      "limitations": [
+        "This is a research limitation record, not a license to add external personal context or improvise a resolver.",
+        "It cannot activate a personalized conclusion, calculation profile or production policy."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New direct source acknowledgement of methodological incompleteness; complements, rather than resolves, the existing conflict records."
+    },
+    {
+      "candidateId": "candidate:k14b5-th-sensitive-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.108-128, interpretation method and contextual cautions",
+      "subjectIds": [],
+      "conditions": [
+        "The source links configurations, sex, period, social context or record quality to direct personal outcomes."
+      ],
+      "neutralStatement": "The reviewed pages include favorable/adverse personal outcomes, sex-specific palace priorities, timing effects and social-status illustrations.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "No approved profile, safe modern interpretation policy or reproducible calculation basis is supplied.",
+        "The claims must not become an outcome, score, fixture or production rule."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for this VNI-reviewed range; permitted methodology and limitations are recorded separately."
     }
   ],
   "unresolvedIssues": [

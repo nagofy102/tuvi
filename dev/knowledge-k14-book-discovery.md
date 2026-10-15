@@ -531,6 +531,37 @@ only. No candidate has become profile-compatible or production-eligible.
 - NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
   typecheck, build and E2E (research-only data has no production consumer).
 
+## HV-K14-C batch 5 — autonomous continuation
+
+Tổng Hợp PDF/printed pages 108–128 were read as a 21-page batch. Because the VNI
+layer remains non-authoritative, every retained locator was checked directly in the
+rendered page image. The ledger holds the range in `REVIEW`, not because coverage
+is incomplete, but because period mechanics, leap-month handling, five-phase
+precedence and geometry are not compatible with an approved profile.
+
+The batch adds one `ACCEPT_AS_RESEARCH` limitation record (the author explicitly
+describes the method as one viewpoint), one `MERGE` record for multi-star contextual
+review, one `REVIEW` record for period nesting, and one `REJECT` record for direct
+personal outcomes. Random no-yield QA covered pages 109, 112, 119, 122 and 127.
+No VNI text was used as standalone evidence. Cumulative substantive reading is
+**175 / 1,022 PDF pages**: 96 Tân Biên, 76 Tổng Hợp and three Tự Xem control pages.
+
+This is `RECOVERABLE`, not blocking: visual QA controls the VNI risk and the
+unresolved mechanics are isolated. The next autonomous priority is Tân Biên
+124–157, a separate palace-section slice. No profile or production status changed.
+
+### Verification — HV-K14-C batch 5
+
+- PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
+  with no gap or overlap; Batch 5 reconciles to 21 new pages.
+- PASS: hashes match Checkpoint 1; non-rejected subject IDs resolve; the `REVIEW`
+  candidate includes its reason, locator, conditions, evidence type, limitations,
+  profile status and duplicate assessment.
+- PASS: all retained locators and five no-yield samples were checked against rendered PDF pages.
+- PASS: targeted Prettier and `git diff --check`; no profile or production status changed.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
+  typecheck, build and E2E (research-only data has no production consumer).
+
 ## Verification — HV-K14-C batch 3
 
 - PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
