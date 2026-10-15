@@ -1,7 +1,7 @@
 import type { ConfigMutagens } from 'iztro/lib/data/types';
 
 // Reviewed iztro 安星诀 §18 explicitly identifies this as 南派四化.
-// Order: Lộc, Quyền, Khoa, Kỵ. Source: dev/nam-phai-source-decision.md.
+// Order: Lộc, Quyền, Khoa, Kỵ. Source boundary: dev/calculation-spec.md.
 export const NAM_PHAI_TRANSFORMATIONS: ConfigMutagens = {
   甲: ['廉贞', '破军', '武曲', '太阳'],
   乙: ['天机', '天梁', '紫微', '太阴'],

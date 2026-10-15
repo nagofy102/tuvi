@@ -39,6 +39,27 @@ chọn biến thể chữ riêng để đạt AAA cho văn bản thường (7:1)
 
 ## Giới hạn nội dung và tính năng
 
+## Product direction and deferred work
+
+The product is a local, source-bounded chart and reference-reading experience.
+It does not claim calculation accuracy, predictive accuracy, independent Nam Phai
+certification, AI inference, account storage, cloud synchronization or a database.
+Any personal opening, career reading, unknown-time handling or consented local
+profile is bounded by the ReadingBrief contract and must fail closed when evidence
+is unavailable.
+
+Knowledge-First remains the product direction: source/provenance and substantive
+domain knowledge must precede a broader reasoning engine. K04B, AI Writer, UI
+feature expansion and new calculation profiles are deferred. Retention ideas
+(saved reading, recurring content, sharing, AI) are proposals only and need a
+separate privacy, product and specialist approval.
+
+Current UX has the implemented mobile-first result flow, chart/list views,
+accessibility controls, source disclosure and labelled demonstration states.
+The five career-reading quality criteria are: conclusion before advice, distinct
+symbolic basis, source disclosure, practical advice separated from claims, and
+clear insufficient-evidence output. No UI change is authorized by HV-M01.
+
 - Ba thẻ Tài lộc/Sự nghiệp/Tình duyên: chỉ hiện phần trăm khi có mô hình chấm điểm
   được công bố và phiên bản hóa. Đây là chỉ số diễn giải, không phải xác suất dự đoán.
   Trong lúc chưa có mô hình, hiện “Chưa có đánh giá”; không tạo số ngẫu nhiên.

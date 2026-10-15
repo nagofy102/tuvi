@@ -1,5 +1,28 @@
 # Reviewed source registry — milestone A
 
+## Consolidated source boundary
+
+There are two deliberately separate registry families. `source-registry.json`
+and its validator describe reviewed runtime admission. The
+`knowledge-source-registry.{json,schema}` family records research candidates.
+Candidate, blocked, source-backed and approved states retain their existing
+meaning and are never promoted by documentation consolidation. Source, artifact,
+passage and rule IDs, rights/access state, hashes, locators and retained lawful
+excerpts stay in the machine artifacts.
+
+No source inventory, catalogue hit, partial scan, competitor observation or
+methodology-only rule directly licenses a personalized claim. Independent lineage,
+school/profile compatibility, substantive passage, stated conditions/exceptions,
+and the relevant admission gate are required. K03A3 yielded no usable substantive
+rule; K03A4 provides one trace-only source classification candidate, not runtime
+or K04B authorization. Paid or permissioned material requires PO approval of
+price, licence and allowed use before acquisition.
+
+The consolidated historical provenance covers bibliographic catalogue checks,
+classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K03A4
+research. Full detail remains recoverable from the HV-M01 predecessor paths in
+Git; this contract and the JSON artifacts are the active entry point.
+
 Baseline `9831010`; registry version `source-admission-2026-10-13-v1`.
 This is source governance for partial chart comparisons, not new reading content.
 
@@ -59,7 +82,7 @@ edition or establish predictive validity.
 
 ## Bibliographic handoff
 
-New [catalogue research](catalogue-verification.md) reads the title leaf's
+The consolidated catalogue research reads the title leaf's
 南陽堂 imprint. It does not verify date 1600, historical authorship or institutional
 copy identity. Three modern NDL catalogue records are leads, not content already
 reviewed or admitted complete charts. The official Digital Archives service
@@ -67,7 +90,7 @@ returned 403; NIJL bounded searches did not establish the historic-copy match.
 
 Keep publisher observations, volume-number differences, Khôi/Việt mnemonics and
 leap-policy conflicts in the research record. Acquire lawful published chart
-evidence under [published-chart-intake.md](published-chart-intake.md) before new
+evidence under the published-chart intake contract in `calculation-spec.md` before new
 expected fields or star groups. Current status: A remains in progress; C and D
 remain blocked/planned as recorded in
 [PM status](../design/pm-milestone-status.md).

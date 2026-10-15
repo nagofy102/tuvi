@@ -1,5 +1,19 @@
 # HV-K03B — File-based knowledge ontology prototype
 
+## Current knowledge state
+
+The ontology remains a file-based prototype. Methodology/orchestration rules are
+not substantive interpretation rules and cannot directly create a personalized
+claim. Existing structural mocks, candidate rules and methodology candidates stay
+at their original status. No K04B reasoning expansion is authorized until lawful,
+profile-scoped, independently traceable substantive evidence supports it.
+
+Required trace for any future candidate is source locator and lawful retained
+text, school/profile, inputs and eligibility, relation, permitted conclusion,
+exceptions/conflicts, provenance and planned test cases. AI/BA interpretation is
+labelled separately from source-described content; absence of evidence is a
+knowledge gap, not a rule.
+
 Status: **structural prototype; ontology review required**. This document defines a
 technology-neutral contract. It does not admit a Tử Vi rule, choose a graph database,
 or authorize any example for production use.

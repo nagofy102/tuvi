@@ -1,4 +1,17 @@
-# Application architecture — Step 1
+# Application architecture
+
+## Authority and current boundary
+
+This document describes implemented module boundaries, not an authorization to
+add features. Calculation policies live in `calculation-spec.md`; provenance and
+knowledge-state rules live in `source-registry.md` and `knowledge-ontology.md`;
+reader-facing claim eligibility lives in `reading-brief-contract.md`.
+
+The application is a modular monolith. Browser-local birth input and calculation
+remain separate from server-rendered SEO resources. There is no account storage,
+database migration, API-based AI, server-side personal-chart processing or hidden
+network transmission of birth data. Proposed PostgreSQL schema remains dormant.
+
 
 ## Delivery scope
 

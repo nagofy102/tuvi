@@ -14,7 +14,10 @@ Use a role prefix such as `[DEV]`, `[PM]`, `[BA]`, or `[QA]` in user-facing resp
 ## Session continuity
 
 - Inspect `git status`, relevant diffs, and recent commits before editing. Preserve existing work.
-- Read `design/README.md`, `dev/README.md`, and `test/README.md` for current scope and handoffs; follow their links for the task at hand.
+- Read `README.md`, the current milestone status, and only the task-specific
+  authoritative specifications linked there. `test/README.md` is required when
+  changing or accepting verification scope. Historical evidence is in Git history
+  or `docs/archive/`, never a session-start prerequisite.
 - Update the affected folder's status, decisions, actual checks, and next action after material work.
 - Keep architecture and code in English; product copy and domain requirements in Vietnamese.
 - The user's latest product specification takes precedence over older palette choices in `RULE_BASE.md`.

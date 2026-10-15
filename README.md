@@ -48,9 +48,23 @@ Kết quả và giới hạn kiểm chứng được ghi trong `test/README.md`.
 
 ## Điểm bắt đầu cho AI và người phát triển
 
+### Tài liệu hiện hành
+
+- `AGENTS.md` và `RULE_BASE.md` là hai tài liệu bắt buộc đầu phiên.
+- `design/product-spec.md` là phạm vi sản phẩm; `design/pm-milestone-status.md`
+  là trạng thái accepted/blocked/planned duy nhất.
+- `dev/architecture.md`, `dev/calculation-spec.md`, `dev/knowledge-ontology.md`,
+  `dev/source-registry.md` và `dev/reading-brief-contract.md` là các contract
+  theo phạm vi công việc.
+- `test/README.md` là chiến lược kiểm thử và kết quả baseline hiện hành.
+
+Tài liệu lịch sử đã được chuyển vào `docs/archive/`; chúng là bằng chứng, không
+phải chỉ dẫn hiện hành. Machine registries, schema và fixtures không chuyển và
+giữ nguyên định danh/provenance.
+
 1. Mỗi phiên làm việc, đọc `AGENTS.md`, toàn bộ `RULE_BASE.md` hiện tại và trạng thái Git.
-2. Đọc `design/README.md` cho trải nghiệm và quyết định thiết kế.
-3. Đọc `dev/README.md` cho kiến trúc, dữ liệu và tiến độ triển khai.
+2. Đọc `design/product-spec.md` và `design/pm-milestone-status.md` cho trải nghiệm và trạng thái.
+3. Đọc contract trong `dev/` phù hợp với phạm vi thay đổi.
 4. Đọc `test/README.md` cho tiêu chí nghiệm thu và kết quả kiểm tra.
 
 Các thư mục này lưu ngữ cảnh dài hạn; mã ứng dụng sẽ nằm trong `src/`.

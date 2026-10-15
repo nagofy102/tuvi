@@ -7,10 +7,8 @@
   "independentEditionsVerified": false,
   "completeGoldenCharts": 0,
   "researchDocuments": [
-    "dev/knowledge-source-review.md",
-    "dev/source-crosscheck.md",
-    "dev/catalogue-verification.md",
-    "dev/source-corpus-intake.md"
+    "dev/source-registry.md",
+    "dev/calculation-spec.md"
   ],
   "limitations": [
     "Reviewed partial source scope does not certify a complete chart or predictive accuracy.",

@@ -1,7 +1,10 @@
-# Test context and acceptance plan
+# Testing strategy and current baseline
 
 ## Mục đích
-
+This is the single active testing strategy. Dated feature handoffs and reports are
+historical evidence, not current release instructions. Fixtures, observation
+vectors, source/passages/rule IDs and golden labels remain machine-readable and
+unchanged by HV-M01.
 Lưu tiêu chí nghiệm thu, dữ liệu tham chiếu, kết quả kiểm tra và lỗi còn mở.
 Không đánh dấu “pass” cho kiểm tra chưa chạy. Mã kiểm thử sẽ nằm trong `tests/`.
 
@@ -16,6 +19,19 @@ Xem `reading-style-a-review.md` cho tiêu chí, các tín hiệu quan sát và t
 nghiệm thu tài liệu.
 
 ## Trạng thái hiện tại
+
+Current accepted baseline: the local application, source-bounded ReadingBrief
+path and current Nam Phai profile run with their documented limits. This does not
+certify calculation accuracy, an independent Nam Phai profile, substantive
+knowledge coverage or predictive accuracy. `1985-03-21` remains unresolved; no
+observation vector is silently golden. K03A3 knowledge yield is zero for usable
+substantive rules; K03A4 has no claim/runtime authorization; K04B is postponed.
+
+Required checks for a behavior-preserving change are `npm run typecheck`,
+`npm test`, `npm run engine:check`, `npm run format:check`, a production build,
+and Chromium E2E where UI/runtime is touched. Source/reference/competitor/tech
+audits are fail-closed and must report BLOCKED when their Git provenance phase
+cannot execute. Do not claim PASS from their partial invariant output.
 
 K02B/K03A2/K04A đã bổ sung dữ liệu tái lập bất đồng lịch, 8 case rule phương pháp
 và 6 case evaluator fail-closed. Đây là research/structural test, không phải golden
@@ -205,7 +221,7 @@ Payload mobile giảm nhưng đo lặp vẫn chưa đạt >90 ổn định.
 
 Xem `reading-synthesis.md` cho tiêu chí và kết quả chạy gói nâng cấp trên nền
 `3c9cc79`. Kế hoạch PM tại `../design/reading-synthesis-plan.md`; triển khai tại
-`../dev/reading-synthesis.md`. Giữ nguyên corpus từng phần, chưa thêm đáp án an sao
+`../dev/reading-brief-contract.md`. Giữ nguyên corpus từng phần, chưa thêm đáp án an sao
 hoàn chỉnh hoặc quy tắc tín hiệu đối nghịch được thẩm định.
 
 ### Mobile-first redesign theo khảo sát đối thủ
@@ -264,7 +280,7 @@ lịch sử trước bản sửa. Không suy ra thẩm định chuyên môn từ
 - Bản cuối tách tải: Performance 57 rồi 88; Accessibility/SEO 100. Mục tiêu Performance >90
   chưa được nghiệm thu ổn định; không dùng lần đo 93 trước đó để kết luận bản cuối đạt.
 
-Xem `../dev/interpretation-implementation.md` để biết đầy đủ lệnh, phạm vi, lỗi tương phản
+Xem `../dev/architecture.md` và `../dev/reading-brief-contract.md` để biết phạm vi, lỗi tương phản
 đã sửa và giới hạn. Đây là kết quả trước bản sửa lịch; xem `calendar-remediation.md`
 cho trạng thái sau sửa. Luận giải không xác nhận độ chính xác dự báo.
 

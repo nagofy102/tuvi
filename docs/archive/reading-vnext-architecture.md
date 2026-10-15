@@ -5,14 +5,14 @@ architecture draft, không xác nhận rằng API, AI, cache, embeddings hay Rea
 Brief đang tồn tại.
 
 HV-R02: canonical fields, invariants, career matrix and exclusive ownership are
-in [reading-brief-contract.md](reading-brief-contract.md). R01 type sketches and
+in the active `dev/reading-brief-contract.md`. R01 type sketches and
 ownership below are historical, superseded proposals. Samples require user
 approval; no implementation/worktree assignment is authorized. R04 is a local
 deterministic adapter first, not an approved API. No independently verified full
 Nam chart exists in the current corpus.
 
 HV-R02C adds Style A and a proposed controlled template registry at
-[reading-claim-registry.md](reading-claim-registry.md). Sample A1 is a candidate,
+the former controlled-claim registry. Sample A1 is a candidate,
 not an approved personal claim. R04 owns the one future schema plus deterministic
 template selector; R03 consumes that contract only after sample approval.
 

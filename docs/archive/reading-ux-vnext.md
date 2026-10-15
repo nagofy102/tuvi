@@ -25,9 +25,8 @@ Luồng MVP:
 4. Một bài đọc ngắn, liền mạch theo chủ đề đã chọn.
 5. Mở tùy chọn **Căn cứ lá số** để xem facts → rule → passage → giới hạn.
 
-Tài liệu tham chiếu hiện hữu vẫn là [reading-style-policy.md](reading-style-policy.md),
-[career-reading-upgrade.md](career-reading-upgrade.md) và
-[reading-synthesis-plan.md](reading-synthesis-plan.md). vNext thay thứ tự tiết lộ và
+Tài liệu tham chiếu hiện hành là `dev/reading-brief-contract.md` và
+`design/product-spec.md`. vNext thay thứ tự tiết lộ và
 hợp đồng dữ liệu; không ngầm mở sao, cách cục, Phi Hóa hay luận vận.
 
 ## Audit hiện trạng
@@ -66,9 +65,9 @@ may mắn; cache chung; expert-review claim; hoặc chuyển dữ liệu sinh ra
 4. AI Writer, embeddings và truyền dữ liệu AI bên thứ ba ngoài MVP; muốn mở phải duyệt riêng.
 
 Mẫu A1 cần duyệt và A2 bị loại có lý do tại
-[reading-brief-samples.md](reading-brief-samples.md).
-Contract chuẩn tại [reading-brief-contract.md](../dev/reading-brief-contract.md).
-Ranh giới câu được phép xem [reading-claim-registry.md](../dev/reading-claim-registry.md).
+historical samples.
+Contract chuẩn tại `dev/reading-brief-contract.md`.
+Ranh giới câu được phép nằm trong contract chuẩn.
 Không gọi structural mock là lá số đã xác minh; R03/R04 chưa được phép bắt đầu.
 
 ## Handoff

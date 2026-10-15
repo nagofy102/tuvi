@@ -1,11 +1,23 @@
 # HV-R02 — Reading Brief v1 specification
 
+## Consolidated editorial boundary
+
+This contract also supersedes the former claim-registry, career-reading and
+style-policy narratives. The only runtime-admissible editorial tuple remains the
+existing exact Product Owner-approved A1 scope. Proposed R07A/R07B expansions,
+additional templates and methodology-only candidates remain historical/deferred;
+they do not change `user-approved`, candidate, blocked or source-backed status.
+Career content must state a source-bounded symbolic conclusion before any optional
+practical suggestion, never infer profession, outcome, personality fact or
+prediction. Anti-Barnum, deduplication, provenance, conflict and privacy gates
+below remain fail-closed.
+
 ## Authority and scope
 
 2026-10-14; baseline `17ac24329b7b8657353450e97a8c51134ed9aaa3`.
 Specification only, prepared with BA/Tử Vi specialist AI review. HV-R02C selects
 Style A for prose and adds the controlled template specification in
-[reading-claim-registry.md](reading-claim-registry.md). No independent practitioner
+the consolidated controlled-claim registry. No independent practitioner
 certification. Product direction is approved; sample quality and
 implementation remain unapproved. This document supersedes the R01 proposed Brief
 and matrix definitions, not the existing `InterpretationReport` runtime contract.
@@ -307,7 +319,7 @@ R03 imports it read-only; no independent local schema fork. Proposed allocation
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | R03 UI                    | src/components/horoscope/interpretation-panel.tsx and interpretation-panel.css; tests/unit/reading-brief-ui.test.tsx; tests/e2e/reading-brief-ui.spec.ts  | user sample approval; PM schema freeze; R04 schema artifact           |
 | R04 deterministic adapter | future src/domain/interpretation/reading-brief.ts and reading-brief-schema.ts; tests/unit/reading-brief-adapter.test.ts                                   | user sample approval, PM contract approval; no API/engine changes     |
-| R05 QA                    | test/reading-vnext-test-plan.md; tests/unit/reading-brief-contract.test.ts; tests/e2e/reading-brief-integration.spec.ts; tests/fixtures/reading-brief-v1/ | contract freeze for test authoring; integrated R03/R04 for acceptance |
+| R05 QA                    | `test/README.md`; tests/unit/reading-brief-contract.test.ts; tests/e2e/reading-brief-integration.spec.ts; tests/fixtures/reading-brief-v1/ | contract freeze for test authoring; integrated R03/R04 for acceptance |
 | PM                        | shared docs/README/status; review existing shared test changes                                                                                            | integration QA acceptance before main push                            |
 
 No ownership of generic 'test files' overlap. Any existing file outside these
@@ -320,6 +332,5 @@ cannot declare runtime pass before implementation.
 Gaps: no independently verified full Nam chart; no admitted contrary-resolution
 rule; limited symbolic corpus; no empirical validation; no v1 schema/adapter or
 runtime tests. Examples and editorial acceptance are in
-[reading-brief-samples.md](../design/reading-brief-samples.md); QA specification in
-[reading-vnext-test-plan.md](../test/reading-vnext-test-plan.md). R03/R04 BLOCKED
+the historical samples; QA requirements are consolidated in `test/README.md`. R03/R04 BLOCKED
 until the user approves samples and explicitly authorizes implementation.
