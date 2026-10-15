@@ -37,6 +37,16 @@ it is a second source-family candidate, not an independent confirmation. The two
 retained K09 variants remain source-only/disputed and cannot alias or replace the
 active palace vocabulary.
 
+HV-K10 reviews the five Product Owner-provided book URLs as **access/right
+records only**. The public pages expose title/author metadata, some tables of
+contents or an editorial overview, but no verified edition identity or permission
+to process the book text. The two _Tử Vi Hàm Số_ listings visibly share a title,
+author attribution and table of contents, so they are possible duplicate hosts,
+not independent evidence. Thiên Cơ's checked terms explicitly prohibit unapproved
+automated collection and creation of an AI training dataset. All five K10 records
+are `blocked`; no passage, catalog item, source variant, candidate rule or runtime
+admission is created from their public summaries.
+
 The consolidated historical provenance covers bibliographic catalogue checks,
 classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07
 research. Full detail remains recoverable from the HV-M01 predecessor paths in

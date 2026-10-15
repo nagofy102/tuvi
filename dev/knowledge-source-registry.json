@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k09-multisource-foundation-2026-10-15",
+  "registryVersion": "hv-k10-multibook-access-review-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -255,6 +255,261 @@
         "Crosscheck only; no expected chart fields admitted.",
         "Rights and bibliographic identity unresolved.",
         "Separate leaves are not separate independent sources."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k10-tu-vi-ham-so-metaisach-preview",
+      "sourceKind": "website",
+      "title": "Tử vi hàm số — Mê Tải Sách listing/preview",
+      "creator": "Nguyễn Phát Lộc (attributed by page)",
+      "edition": null,
+      "publisher": "Mê Tải Sách",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": ["research-method", "star-symbolism", "cross-palace-interpretation"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "The public listing does not identify a school/profile."
+        }
+      ],
+      "access": {
+        "url": "https://metaisach.com/tu-vi-ham-so",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200; public metadata, introduction and table of contents; reader endpoint returned HTML, not a confirmed lawful book preview",
+        "robotsOrTermsNote": "robots.txt permits crawling, but no licence or permission for book-text reuse was found in the checked listing. No reader or PDF content was fetched."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Metadata and short public table-of-contents references may be recorded; do not process or retain book text without rights confirmation."
+      },
+      "provenance": {
+        "locator": "Public listing; author field, 2025/05/08 update field and table of contents",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Bounded manual page and response-header review",
+        "bibliographicIdentity": "The listing attributes the title to Nguyễn Phát Lộc but supplies no verified edition, publisher or publication year."
+      },
+      "independence": {
+        "sourceFamilyId": "k10-tu-vi-ham-so-edition-unverified",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Only a host listing was checked; edition and relationship to the other Book A URL are not established."
+      },
+      "status": "blocked",
+      "limitations": [
+        "ACCESSIBLE_RIGHTS_UNVERIFIED.",
+        "The visible contents establish only topic coverage, not an extractable domain statement.",
+        "Not a Nam Phái certification or a runtime source."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k10-tu-vi-ham-so-thuvienpdf-catalogue",
+      "sourceKind": "website",
+      "title": "Tử Vi Hàm Số — Thư Viện PDF listing",
+      "creator": "Nguyễn Phát Lộc (attributed by page)",
+      "edition": null,
+      "publisher": "Thư Viện PDF",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": ["research-method", "star-symbolism", "cross-palace-interpretation"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "No school/profile statement was found in the public listing."
+        }
+      ],
+      "access": {
+        "url": "https://thuvienpdf.net/tu-vi-ham-so",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200; public author/category/introduction/table of contents and download/online labels; no file or reader content fetched",
+        "robotsOrTermsNote": "The checked path is not disallowed by robots.txt. The linked terms URL returned HTTP 404 during review; no reuse permission was established."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Do not download or process the labelled PDF/EPUB/MOBI/online-book routes until the rights holder or host grants a suitable licence."
+      },
+      "provenance": {
+        "locator": "Public listing; author/category/introduction/table of contents",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Bounded manual page and response-header review",
+        "bibliographicIdentity": "Metadata repeats Book A title/author and a matching table of contents, but neither edition nor copying relationship was verified."
+      },
+      "independence": {
+        "sourceFamilyId": "k10-tu-vi-ham-so-edition-unverified",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "Same title, author attribution and matching visible table of contents as the Mê Tải Sách listing; this is not an independent book edition."
+      },
+      "status": "blocked",
+      "limitations": [
+        "ACCESSIBLE_RIGHTS_UNVERIFIED.",
+        "The listing is a possible duplicate host, not independent textual evidence.",
+        "Not a Nam Phái certification or a runtime source."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k10-tu-vi-dau-so-tan-bien-thienco-overview",
+      "sourceKind": "website",
+      "title": "Tử Vi Đẩu Số Tân Biên — Thiên Cơ overview",
+      "creator": "Vân Đằng Thái Thứ Lang (attributed by page)",
+      "edition": null,
+      "publisher": "Thiên Cơ",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": ["research-method", "palace-placement", "fortune-periods"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "The overview calls it a Tử Vi Đẩu Số reference but does not identify a school/profile."
+        }
+      ],
+      "access": {
+        "url": "https://thienco.vn/tu-vi-dau-so-tan-bien-van-dang-thai-thu-lang.html",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200; public editorial overview and section summary, not the book text",
+        "robotsOrTermsNote": "robots.txt permits this article path, but the public terms explicitly prohibit automated collection without approval and creating an AI training dataset from content without approval."
+      },
+      "rights": {
+        "status": "restricted",
+        "license": null,
+        "reusePolicy": "Retain only access/right evidence and short bibliographic/section metadata; do not crawl, copy or normalize article/book content without Thiên Cơ permission."
+      },
+      "provenance": {
+        "locator": "Public overview headings: lập lá số, luận đoán 12 cung/các sao, vận hạn; terms sections 2.5, 9.2 and 9.3",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Bounded manual page, terms and response-header review",
+        "bibliographicIdentity": "The page is a 2026 Thiên Cơ editorial overview, not a verified edition or a rights grant for the named book."
+      },
+      "independence": {
+        "sourceFamilyId": "k10-tu-vi-dau-so-tan-bien-edition-unverified",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "No edition or textual relationship was established from the overview."
+      },
+      "status": "blocked",
+      "limitations": [
+        "PREVIEW_ONLY with explicit reuse restriction.",
+        "Section summaries are not converted into domain concepts or rules.",
+        "No book passage, school claim or production eligibility is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k10-tu-vi-dau-so-tan-bien-metaisach-preview",
+      "sourceKind": "website",
+      "title": "Tử vi đẩu số Tân Biên — Mê Tải Sách listing/preview",
+      "creator": "Vân Đằng Thái Thứ Lang (attributed by page)",
+      "edition": null,
+      "publisher": "Mê Tải Sách",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": ["research-method", "palace-placement", "fortune-periods"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "No school/profile identification appears in the checked listing."
+        }
+      ],
+      "access": {
+        "url": "https://metaisach.com/tu-vi-dau-so-tan-bien/",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200; public title/author/introduction and reader/download affordances; reader endpoint returned HTML, not a confirmed lawful book preview",
+        "robotsOrTermsNote": "robots.txt permits crawling, but no licence or permission for book-text reuse was found in the checked listing. No reader or PDF content was fetched."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Metadata only; do not process or retain book text without rights confirmation."
+      },
+      "provenance": {
+        "locator": "Public listing; author field and 2025/12/06 update field",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Bounded manual page and response-header review",
+        "bibliographicIdentity": "No verified edition, publisher, publication year or relationship to the Thiên Cơ overview was supplied."
+      },
+      "independence": {
+        "sourceFamilyId": "k10-tu-vi-dau-so-tan-bien-edition-unverified",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Same named work as the Thiên Cơ overview, but edition and text relationship were not established."
+      },
+      "status": "blocked",
+      "limitations": [
+        "ACCESSIBLE_RIGHTS_UNVERIFIED.",
+        "No substantive book passage was lawfully reviewed.",
+        "Not a Nam Phái certification or a runtime source."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k10-tu-vi-tong-hop-metaisach-preview",
+      "sourceKind": "website",
+      "title": "Tử vi tổng hợp — Mê Tải Sách listing/preview",
+      "creator": "Nguyễn Phát Lộc (attributed by page)",
+      "edition": null,
+      "publisher": "Mê Tải Sách",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": [
+        "research-method",
+        "star-symbolism",
+        "cross-palace-interpretation",
+        "fortune-periods"
+      ],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "The checked listing neither identifies nor evidences a school/profile."
+        }
+      ],
+      "access": {
+        "url": "https://metaisach.com/tu-vi-tong-hop/",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200; public title/author/short introduction and reader/download affordances; reader endpoint returned HTML, not a confirmed lawful book preview",
+        "robotsOrTermsNote": "robots.txt permits crawling, but no licence or permission for book-text reuse was found in the checked listing. No reader or PDF content was fetched."
+      },
+      "rights": {
+        "status": "unknown",
+        "license": null,
+        "reusePolicy": "Metadata only; do not process or retain book text without rights confirmation."
+      },
+      "provenance": {
+        "locator": "Public listing; author field, 2025/06/02 update field and short introduction",
+        "revision": null,
+        "contentDigest": null,
+        "retrievalMethod": "Bounded manual page and response-header review",
+        "bibliographicIdentity": "The host's title/author attribution is not a verified edition, publisher or publication date."
+      },
+      "independence": {
+        "sourceFamilyId": "k10-tu-vi-tong-hop-edition-unverified",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "Only one host listing was reviewed; its claimed compilation lineage was not verified."
+      },
+      "status": "blocked",
+      "limitations": [
+        "ACCESSIBLE_RIGHTS_UNVERIFIED.",
+        "The public introduction is not a substantive source passage.",
+        "Not a Nam Phái certification or a runtime source."
       ],
       "supersedes": []
     }
@@ -580,6 +835,20 @@
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k10-multibook-access-rights-review",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "blocked",
+      "targetIds": [
+        "k10-tu-vi-ham-so-metaisach-preview",
+        "k10-tu-vi-ham-so-thuvienpdf-catalogue",
+        "k10-tu-vi-dau-so-tan-bien-thienco-overview",
+        "k10-tu-vi-dau-so-tan-bien-metaisach-preview",
+        "k10-tu-vi-tong-hop-metaisach-preview"
+      ],
+      "basis": "HV-K10 directly checked the PO-provided public URLs, headers and publicly linked terms. They expose metadata, table-of-contents/overview material or reader/download affordances, but no verified lawful book-text reuse. Thiên Cơ explicitly prohibits unapproved automated collection and AI-dataset creation. No book file, reader content or substantive passage was processed; no domain item or rule was added."
+    },
     {
       "reviewId": "hv-k09-daozang-source-registration",
       "date": "2026-10-15",

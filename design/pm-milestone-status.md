@@ -65,6 +65,13 @@ chỉ thêm hai source variants (một `disputed`), không hòa trộn thuật n
 nâng chất lượng evidence. Số source family **được chứng minh độc lập** vẫn là 0;
 xem `../dev/knowledge-k09-coverage.md`.
 
+HV-K10 (15/10) kiểm tra năm URL do PO chỉ định cho ba sách tiếng Việt. Các trang
+chỉ cho metadata/mục lục/bài giới thiệu hoặc affordance đọc/tải; không xác minh
+được ấn bản hay quyền xử lý toàn văn. Điều khoản Thiên Cơ còn cấm thu thập tự động
+và tạo dataset AI khi chưa được chấp thuận. Vì vậy cả năm hồ sơ ở trạng thái
+`blocked`, Knowledge Yield = 0, không có entity/relation/rule mới hay thay đổi
+runtime; xem `../dev/knowledge-k10-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
