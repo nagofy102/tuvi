@@ -1,0 +1,52 @@
+{
+  "artifactVersion": "hv-k03a4-rule-cases-v0.1",
+  "rule": {
+    "ruleId": "k03a4-empty-menh-finance-career-support-001",
+    "status": "candidate-source-backed-not-independent",
+    "ruleKind": "substantive-interpretation",
+    "productionEligible": false,
+    "source": {
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "revision": "2268626",
+      "locator": "談星要論",
+      "quotePolicy": "minimal-quotation-reviewed"
+    },
+    "allowedConclusion": "historical-source-classification-trace-only",
+    "forbiddenConclusions": [
+      "personalized-reading",
+      "occupation",
+      "ability",
+      "personality",
+      "event",
+      "outcome"
+    ]
+  },
+  "cases": [
+    {
+      "caseId": "complete-source-shape-still-blocked",
+      "facts": ["menh-no-principal-star", "tai-favourable", "quan-favourable", "relation-resolved"],
+      "expected": {
+        "traceState": "candidate-matched",
+        "allowedClaimIds": [],
+        "productionEligible": false
+      }
+    },
+    {
+      "caseId": "unknown-favourable-vocabulary-blocks",
+      "facts": ["menh-no-principal-star", "tai-favourable", "quan-favourable"],
+      "missing": ["profile-defined-favourable-vocabulary", "relation-resolved"],
+      "expected": { "traceState": "insufficient-evidence", "allowedClaimIds": [] }
+    },
+    {
+      "caseId": "adverse-trine-conflict-is-not-resolved",
+      "facts": [
+        "menh-no-principal-star",
+        "tai-favourable",
+        "quan-favourable",
+        "relation-resolved",
+        "adverse-trine"
+      ],
+      "expected": { "traceState": "unresolved-conflict", "allowedClaimIds": [] }
+    }
+  ]
+}

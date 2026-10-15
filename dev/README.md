@@ -25,6 +25,11 @@ is allowed from that result. K03A3 has no new substantive interpretation rule or
 claim path, and K04B remains postponed. See `calculation-k02c-verification-report.md`,
 `knowledge-k03a3-yield-report.md` and `knowledge-k02c-k03a3-execution.md`.
 
+K03A4 has one source-backed-but-not-independent substantive source-classification
+candidate from the existing pinned volume-three passage. It enables no claim, runtime
+or K04B work; two new-source routes were access-blocked. See
+`knowledge-k03a4-source-pilot.md`.
+
 ## References
 
 - `knowledge-k02-k03-execution.md`: phạm vi, dependency, worktree/file ownership,

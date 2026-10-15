@@ -161,6 +161,14 @@ hai chiều cùng sai vẫn có thể round-trip thành công.
   cases because no lawful independent page-level passage was obtained. This is a
   research stop, not a zero-test pass.
 
+### K03A4 source acquisition pilot — 2026-10-15
+
+- `knowledge-k03a4-rule-cases.json` has one source-backed-but-not-independent
+  substantive candidate and three fail-closed structural cases. A matched source
+  shape permits no claim and is not production eligible.
+- The deep checks recorded one accessible pinned passage, one empty-content Wiki and
+  one quota-blocked book API. No paid source, price or licence was verified.
+
 ### Bản đọc Công việc — luận trước, khuyên sau
 
 Xem `career-reading.md` cho kiểm tra nội dung, nguồn/điều kiện và hai mục thu

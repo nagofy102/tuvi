@@ -25,6 +25,11 @@ page-level đủ điều kiện, nên Knowledge Yield là 0 rule substantive và
 Xem `../dev/calculation-k02c-verification-report.md` và
 `../dev/knowledge-k03a3-yield-report.md`.
 
+K03A4 (15/10) chuyển từ inventory sang kiểm tra nội dung thực tế: một candidate
+substantive có locator được trích xuất từ nguồn cùng lineage cũ, nhưng chỉ được tạo
+trace phân loại lịch sử, không được tạo claim. Hai đường nguồn mới access-blocked;
+K04B vẫn hoãn. Xem `../dev/knowledge-k03a4-source-pilot.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
