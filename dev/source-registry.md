@@ -47,6 +47,14 @@ automated collection and creation of an AI training dataset. All five K10 record
 are `blocked`; no passage, catalog item, source variant, candidate rule or runtime
 admission is created from their public summaries.
 
+HV-K10 Foundational Meaning Expansion separately rereads bounded, already
+registered passages in the pinned volume-one transcription. It adds 24 neutral
+source-attributed meaning statements (all 14 major stars plus ten auxiliary stars)
+to `knowledge-k10-foundational-meanings.json`. These statements are
+`source-backed` but `profile-unresolved`, preserve explicit limits on historical
+outcome language, and do not create a rule, score, runtime admission or
+personalised claim.
+
 The consolidated historical provenance covers bibliographic catalogue checks,
 classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07
 research. Full detail remains recoverable from the HV-M01 predecessor paths in

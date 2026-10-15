@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k10-multibook-access-review-2026-10-15",
+  "registryVersion": "hv-k10-foundational-meaning-expansion-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -689,6 +689,55 @@
       ]
     },
     {
+      "passageId": "k10-v1-major-star-attributions",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問紫微、天機、太陽、武曲、天同、廉貞、天府、太陰、貪狼、巨門、天相、天梁、七殺、破軍所主; pinned revision 7913704, raw wikitext lines 215–352",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "紫微屬土，乃中天之尊星為帝座。",
+      "supports": ["traditional-major-star-attributions", "context-dependent-star-descriptions"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The source uses historical social, gendered, health and outcome language; K10 stores only neutral, non-predictive paraphrases of its named symbolic associations.",
+        "Every detailed conclusion in the passage is conditional on source-specific palace, state, star-combination or period terms that are not fully profile-mapped.",
+        "This single textual lineage is not an independently verified school or Nam Phái authority."
+      ]
+    },
+    {
+      "passageId": "k10-v1-literary-star-attributions",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問文昌星所主若何 and 問文曲星所主若何; pinned revision 7913704, raw wikitext lines 354–367",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "文昌主科甲。……文曲属水，北斗第四星也，主科甲文车之宿。",
+      "supports": ["traditional-literary-star-attributions", "context-dependent-star-descriptions"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The traditional examination and status vocabulary is retained only as a source term, not a modern educational, ability or occupational conclusion.",
+        "The source's placement and combination conditions are not approved calculation facts."
+      ]
+    },
+    {
+      "passageId": "k10-v1-auxiliary-star-attributions",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問左輔、右弼、天魁天鉞、祿存、天馬、擎羊、陀羅、火星、鈴星所主; pinned revision 7913704, raw wikitext lines 379–470 and following bounded headings",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "左輔帝極主宰之星。……右弼帝極主宰之星。",
+      "supports": [
+        "traditional-auxiliary-star-attributions",
+        "context-dependent-star-descriptions"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "K10 records only source-attributed labels, never the source's personal, medical, legal, gendered or event conclusions.",
+        "The source does not provide a reviewed modern auxiliary-star taxonomy or active profile mapping."
+      ]
+    },
+    {
       "passageId": "k06-v3-reading-order",
       "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
       "locator": "談星要論; pinned revision 2268626, raw wikitext lines 8–11",
@@ -835,6 +884,18 @@
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k10-foundational-meaning-review",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "k10-v1-major-star-attributions",
+        "k10-v1-literary-star-attributions",
+        "k10-v1-auxiliary-star-attributions"
+      ],
+      "basis": "HV-K10 directly read bounded entries in the already pinned public volume-one transcription. It normalizes only neutral source-attributed labels for major and selected auxiliary stars, with the source's context dependence retained. Historical outcome, health, gendered and status assertions were not stored as system knowledge; school/profile and source-family independence remain unresolved."
+    },
     {
       "reviewId": "hv-k10-multibook-access-rights-review",
       "date": "2026-10-15",

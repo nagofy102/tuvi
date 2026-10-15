@@ -1,0 +1,283 @@
+{
+  "artifactVersion": "hv-k10-foundational-meanings-v0.1",
+  "generatedAt": "2026-10-15",
+  "scope": "Bounded traditional meanings for Knowledge Explorer research. These are not calculation inputs, rules, scores, personalised claims or production content.",
+  "registryVersion": "hv-k10-foundational-meaning-expansion-2026-10-15",
+  "defaultProfile": "profile-unresolved",
+  "provenanceBoundary": {
+    "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+    "independence": "One pinned textual lineage; no independent school or Nam Phái verification.",
+    "rights": "Minimal, bounded public transcription review; normalized paraphrases only and no retained source full text."
+  },
+  "knowledgeStatements": [
+    {
+      "id": "statement:k10-zi-wei-central-seat",
+      "subjectId": "star:zi-wei",
+      "status": "source-backed",
+      "content": "The source describes Tử Vi with a traditional central/imperial-seat image and a coordinating role among stars.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "Source wording is conditional on palace, state and accompanying stars.",
+        "Not a leadership, status or personal-character claim."
+      ],
+      "baNormalization": "Neutral paraphrase of a historical symbolic attribution."
+    },
+    {
+      "id": "statement:k10-tian-ji-adaptive-ordering",
+      "subjectId": "star:tian-ji",
+      "status": "source-backed",
+      "content": "The source labels Thiên Cơ as wood-associated and uses adaptive/ordering vocabulary for it.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a personality, occupational or event inference."],
+      "baNormalization": "Keeps a source association without treating it as a validated trait."
+    },
+    {
+      "id": "statement:k10-tai-yang-solar-official",
+      "subjectId": "star:tai-yang",
+      "status": "source-backed",
+      "content": "The source presents Thái Dương as a fire/sun image and associates it with traditional Quan Lộc vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "Brightness, palace and context are unresolved.",
+        "Not a career, parent, spouse or outcome statement."
+      ],
+      "baNormalization": "Historical association retained without application to a person."
+    },
+    {
+      "id": "statement:k10-wu-qu-finance",
+      "subjectId": "star:wu-qu",
+      "status": "source-backed",
+      "content": "The source associates Vũ Khúc with metal and traditional Tài Bạch vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "Favourable/adverse wording depends on state and combinations.",
+        "Not a financial prediction or ability score."
+      ],
+      "baNormalization": "Neutral reference to a source association."
+    },
+    {
+      "id": "statement:k10-tian-tong-fortune",
+      "subjectId": "star:tian-tong",
+      "status": "source-backed",
+      "content": "The source associates Thiên Đồng with water and traditional Phúc Đức vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a wellbeing, personality or future outcome inference."],
+      "baNormalization": "Neutral reference to a source association."
+    },
+    {
+      "id": "statement:k10-lian-zhen-rank-authority",
+      "subjectId": "star:lian-zhen",
+      "status": "source-backed",
+      "content": "The source associates Liêm Trinh with fire and traditional rank/authority vocabulary, while making detailed wording context-dependent.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a legal, moral, personal or event conclusion."],
+      "baNormalization": "Excludes punitive historical conclusions."
+    },
+    {
+      "id": "statement:k10-tian-fu-storehouse",
+      "subjectId": "star:tian-fu",
+      "status": "source-backed",
+      "content": "The source associates Thiên Phủ with earth and traditional storehouse, Tài Bạch and provision vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a wealth or social-result conclusion."],
+      "baNormalization": "Historical metaphor retained without a modern outcome claim."
+    },
+    {
+      "id": "statement:k10-tai-yin-property",
+      "subjectId": "star:tai-yin",
+      "status": "source-backed",
+      "content": "The source presents Thái Âm as a water/moon image and associates it with traditional Điền Trạch and wealth vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "Source state conditions are unresolved.",
+        "Not a property, family-role or financial conclusion."
+      ],
+      "baNormalization": "Does not carry forward gendered source language."
+    },
+    {
+      "id": "statement:k10-tan-lang-peach-blossom",
+      "subjectId": "star:tan-lang",
+      "status": "source-backed",
+      "content": "The source uses the traditional label 桃花 (peach-blossom) for Tham Lang and states that detail varies with context.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a romance, sexuality, morality or personality claim."],
+      "baNormalization": "Preserves the term without translating it into a modern personal conclusion."
+    },
+    {
+      "id": "statement:k10-ju-men-obscurity-dispute",
+      "subjectId": "star:ju-men",
+      "status": "source-backed",
+      "content": "The source associates Cự Môn with traditional darkness/obscurity and dispute vocabulary across palace contexts.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a communication, relationship, health or legal prediction."],
+      "baNormalization": "Neutralizes outcome language."
+    },
+    {
+      "id": "statement:k10-tian-xiang-seal-assistant",
+      "subjectId": "star:tian-xiang",
+      "status": "source-backed",
+      "content": "The source associates Thiên Tướng with water, a seal/office image and an assisting relationship to the imperial-seat image.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not an authority, career or status conclusion."],
+      "baNormalization": "Metaphorical association, not a personalised reading."
+    },
+    {
+      "id": "statement:k10-tian-liang-protection-longevity",
+      "subjectId": "star:tian-liang",
+      "status": "source-backed",
+      "content": "The source associates Thiên Lương with earth and traditional shelter/protection and longevity vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a health, lifespan, family-role or protective-effect conclusion."],
+      "baNormalization": "Does not convert historical imagery into a medical or predictive claim."
+    },
+    {
+      "id": "statement:k10-qi-sha-command",
+      "subjectId": "star:qi-sha",
+      "status": "source-backed",
+      "content": "The source uses a military-command image for Thất Sát and conditions its detail on state and surrounding context.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a violence, hardship, occupation or life-event claim."],
+      "baNormalization": "Excludes extreme outcome language."
+    },
+    {
+      "id": "statement:k10-po-jun-expenditure-change",
+      "subjectId": "star:po-jun",
+      "status": "source-backed",
+      "content": "The source associates Phá Quân with water and traditional expenditure/disruption vocabulary.",
+      "sourceRef": "k10-v1-major-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a loss, relationship, conduct or event conclusion."],
+      "baNormalization": "Retains only the named traditional association."
+    },
+    {
+      "id": "statement:k10-wen-chang-literary-examination",
+      "subjectId": "star:wen-chang",
+      "status": "source-backed",
+      "content": "The source associates Văn Xương with traditional examination and literary vocabulary.",
+      "sourceRef": "k10-v1-literary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not an education, intelligence, credential or career inference."],
+      "baNormalization": "Retains provenance while excluding status outcomes."
+    },
+    {
+      "id": "statement:k10-wen-qu-literary-writing",
+      "subjectId": "star:wen-qu",
+      "status": "source-backed",
+      "content": "The source associates Văn Khúc with water and traditional examination/writing vocabulary, alongside combination conditions.",
+      "sourceRef": "k10-v1-literary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not an education, ability, occupation or personal-character inference."],
+      "baNormalization": "Does not retain gendered or outcome language."
+    },
+    {
+      "id": "statement:k10-ta-phu-assistance",
+      "subjectId": "star:ta-phu",
+      "status": "source-backed",
+      "content": "The source uses an assisting/court-support image for Tả Phụ and conditions detail on co-occurring stars.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a support, rank or relationship prediction."],
+      "baNormalization": "No effect is inferred from placement."
+    },
+    {
+      "id": "statement:k10-huu-bat-assistance",
+      "subjectId": "star:huu-bat",
+      "status": "source-backed",
+      "content": "The source uses an assisting/court-support image for Hữu Bật and conditions detail on co-occurring stars.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a support, rank or relationship prediction."],
+      "baNormalization": "No effect is inferred from placement."
+    },
+    {
+      "id": "statement:k10-thien-khoi-honor",
+      "subjectId": "star:thien-khoi",
+      "status": "source-backed",
+      "content": "The source groups Thiên Khôi with Thiên Việt in traditional examination/honour vocabulary and named supporting context.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not an exam, reputation, assistance or status prediction."],
+      "baNormalization": "No generalized noble-star effect is inferred."
+    },
+    {
+      "id": "statement:k10-thien-viet-honor",
+      "subjectId": "star:thien-viet",
+      "status": "source-backed",
+      "content": "The source groups Thiên Việt with Thiên Khôi in traditional examination/honour vocabulary and named supporting context.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not an exam, reputation, assistance or status prediction."],
+      "baNormalization": "No generalized noble-star effect is inferred."
+    },
+    {
+      "id": "statement:k10-loc-ton-provision",
+      "subjectId": "star:loc-ton",
+      "status": "source-backed",
+      "content": "The source associates Lộc Tồn with traditional provision, rank and material-resource vocabulary, qualified by context.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a wealth, income or social-status conclusion."],
+      "baNormalization": "Does not assign a score or a direct effect."
+    },
+    {
+      "id": "statement:k10-thien-ma-movement",
+      "subjectId": "star:thien-ma",
+      "status": "source-backed",
+      "content": "The source uses a horse/travel image for Thiên Mã and distinguishes multiple named co-location labels.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "Co-location geometry is not mapped.",
+        "Not a travel, relocation or event prediction."
+      ],
+      "baNormalization": "The labels are not converted into a runtime rule."
+    },
+    {
+      "id": "statement:k10-kinh-duong-adverse",
+      "subjectId": "star:kinh-duong",
+      "status": "source-backed",
+      "content": "The source assigns Kình Dương to traditional adverse/penal vocabulary and makes the description dependent on location and companions.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a health, legal, moral or event conclusion."],
+      "baNormalization": "Excludes personal and stigmatizing source assertions."
+    },
+    {
+      "id": "statement:k10-da-la-adverse",
+      "subjectId": "star:da-la",
+      "status": "source-backed",
+      "content": "The source assigns Đà La to traditional adverse/avoidance vocabulary and makes the description dependent on location and companions.",
+      "sourceRef": "k10-v1-auxiliary-star-attributions",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a health, legal, moral or event conclusion."],
+      "baNormalization": "Excludes personal and stigmatizing source assertions."
+    }
+  ],
+  "coverage": {
+    "majorStarsWithMeaning": 14,
+    "majorStarsCatalogued": 14,
+    "auxiliaryStarsWithMeaning": 10,
+    "auxiliaryStarsCatalogued": 14,
+    "palacesWithSubstantiveMeaning": 0,
+    "palacesCatalogued": 12,
+    "reasoningCandidatesCreated": 0
+  },
+  "openGaps": [
+    "Direct, lawful passage support for neutral foundational meanings of all twelve palaces.",
+    "Meaning passages for the remaining four catalogued auxiliary stars and a reviewed taxonomy.",
+    "Independent, school-classified source families and a reviewed profile before any statement can become a reasoning input."
+  ]
+}

@@ -72,6 +72,14 @@ và tạo dataset AI khi chưa được chấp thuận. Vì vậy cả năm hồ
 `blocked`, Knowledge Yield = 0, không có entity/relation/rule mới hay thay đổi
 runtime; xem `../dev/knowledge-k10-coverage.md`.
 
+HV-K10 Foundational Meaning Expansion (15/10) đọc trực tiếp ba passage bị chặn
+phạm vi trong bản chép Wikisource đã ghim của `紫微斗數全書/卷一`. Dataset mới có
+24 diễn giải trung lập, truy vết được cho 14 chính tinh và 10 phụ tinh;
+đây là tri thức nguồn mô tả truyền thống, không phải rule hay lời luận cá nhân.
+Hệ phái/profile và độc lập lineage vẫn chưa xác định; 12 cung cùng 4 phụ tinh
+còn lại chưa có meaning evidence. Không thay đổi runtime hay production approval;
+xem `../dev/knowledge-k10-meaning-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
