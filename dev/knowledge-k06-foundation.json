@@ -1,0 +1,444 @@
+{
+  "artifactVersion": "hv-k06-foundation-v0.1",
+  "generatedAt": "2026-10-15",
+  "scope": "Foundational vocabulary and methodology, research-only; no calculation or reader-facing inference admission.",
+  "registryVersion": "hv-k06-foundation-sweep-2026-10-15",
+  "defaultProfile": "profile-unresolved",
+  "profilePolicy": "Every catalog item inherits defaultProfile unless a future revision gives it an explicit profile.",
+  "provenanceBoundary": {
+    "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+    "independence": "All items derive from three volumes of one unresolved textual family; they are not independent confirmation or Nam Phái certification.",
+    "rights": "Pinned public Wikisource revisions; retain minimal quotations/locators only. Underlying-text status remains unresolved."
+  },
+  "palaces": [
+    {
+      "id": "palace:menh",
+      "label": "Mệnh",
+      "sourceLabel": "命宫",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; no function is inferred."
+    },
+    {
+      "id": "palace:huynh-de",
+      "label": "Huynh Đệ",
+      "sourceLabel": "兄弟",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; no function is inferred."
+    },
+    {
+      "id": "palace:phu-the",
+      "label": "Phu Thê",
+      "sourceLabel": "妻妾",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Vietnamese modern label is a normalization; source wording is preserved."
+    },
+    {
+      "id": "palace:tu-tuc",
+      "label": "Tử Tức",
+      "sourceLabel": "子女",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Vietnamese modern label is a normalization; source wording is preserved."
+    },
+    {
+      "id": "palace:tai-bach",
+      "label": "Tài Bạch",
+      "sourceLabel": "财帛",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; no function is inferred."
+    },
+    {
+      "id": "palace:tat-ach",
+      "label": "Tật Ách",
+      "sourceLabel": "疾厄",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; no medical conclusion is inferred."
+    },
+    {
+      "id": "palace:thien-di",
+      "label": "Thiên Di",
+      "sourceLabel": "迁移",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Vietnamese modern label is a normalization; no function is inferred."
+    },
+    {
+      "id": "palace:no-boc",
+      "label": "Nô Bộc",
+      "sourceLabel": "奴仆",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Historical label retained for source trace; no modern social interpretation is inferred."
+    },
+    {
+      "id": "palace:quan-loc",
+      "label": "Quan Lộc",
+      "sourceLabel": "官禄",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; substantive candidates remain in K05."
+    },
+    {
+      "id": "palace:dien-trach",
+      "label": "Điền Trạch",
+      "sourceLabel": "田宅",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Vietnamese modern label is a normalization; no outcome is inferred."
+    },
+    {
+      "id": "palace:phuc-duc",
+      "label": "Phúc Đức",
+      "sourceLabel": "福德",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; no value judgement is inferred."
+    },
+    {
+      "id": "palace:phu-mau",
+      "label": "Phụ Mẫu",
+      "sourceLabel": "父母",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-twelve-palaces-list"],
+      "baNormalization": "Canonical palace vocabulary only; no family claim is inferred."
+    }
+  ],
+  "stars": [
+    {
+      "id": "star:zi-wei",
+      "label": "Tử Vi",
+      "sourceLabel": "紫微",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tian-ji",
+      "label": "Thiên Cơ",
+      "sourceLabel": "天机",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tai-yang",
+      "label": "Thái Dương",
+      "sourceLabel": "太阳",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:wu-qu",
+      "label": "Vũ Khúc",
+      "sourceLabel": "武曲",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tian-tong",
+      "label": "Thiên Đồng",
+      "sourceLabel": "天同",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:lian-zhen",
+      "label": "Liêm Trinh",
+      "sourceLabel": "廉贞",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tian-fu",
+      "label": "Thiên Phủ",
+      "sourceLabel": "天府",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tai-yin",
+      "label": "Thái Âm",
+      "sourceLabel": "太阴",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tan-lang",
+      "label": "Tham Lang",
+      "sourceLabel": "贪狼",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:ju-men",
+      "label": "Cự Môn",
+      "sourceLabel": "巨门",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tian-xiang",
+      "label": "Thiên Tướng",
+      "sourceLabel": "天相",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:tian-liang",
+      "label": "Thiên Lương",
+      "sourceLabel": "天梁",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:qi-sha",
+      "label": "Thất Sát",
+      "sourceLabel": "七杀",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    },
+    {
+      "id": "star:po-jun",
+      "label": "Phá Quân",
+      "sourceLabel": "破军",
+      "class": "major-star-candidate",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-major-star-sequence"]
+    }
+  ],
+  "auxiliaryStarFamilies": [
+    {
+      "id": "star-family:literary",
+      "members": ["Văn Xương", "Văn Khúc"],
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"],
+      "scope": "family vocabulary only"
+    },
+    {
+      "id": "star-family:assistants",
+      "members": ["Tả Phụ", "Hữu Bật"],
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"],
+      "scope": "family vocabulary only"
+    },
+    {
+      "id": "star-family:noble",
+      "members": ["Thiên Khôi", "Thiên Việt"],
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"],
+      "scope": "family vocabulary only"
+    },
+    {
+      "id": "star-family:movement-wealth",
+      "members": ["Thiên Mã", "Lộc Tồn"],
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"],
+      "scope": "family vocabulary only"
+    },
+    {
+      "id": "star-family:adverse-pairs",
+      "members": ["Kình Dương", "Đà La", "Hỏa Tinh", "Linh Tinh", "Địa Không", "Địa Kiếp"],
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-auxiliary-families"],
+      "scope": "source listing only; no polarity or inference semantics admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "concept:tam-phuong",
+      "label": "Tam phương",
+      "kind": "spatial-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "definition": "Term explicitly named by the source; geometry is unresolved.",
+      "productUse": "structure-explainer",
+      "graphReadiness": "edge-kind-ready"
+    },
+    {
+      "id": "concept:tu-chinh",
+      "label": "Tứ chính",
+      "kind": "spatial-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "definition": "Term explicitly named by the source; membership is unresolved.",
+      "productUse": "structure-explainer",
+      "graphReadiness": "edge-kind-ready"
+    },
+    {
+      "id": "concept:doi-chieu",
+      "label": "Đối chiếu",
+      "kind": "spatial-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "definition": "Source names it as a relation requiring examination; no geometry or precedence is given.",
+      "productUse": "structure-explainer",
+      "graphReadiness": "edge-kind-ready"
+    },
+    {
+      "id": "concept:hop-chieu",
+      "label": "Hợp chiếu",
+      "kind": "spatial-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "definition": "Source names it as a relation requiring examination; no geometry or precedence is given.",
+      "productUse": "structure-explainer",
+      "graphReadiness": "edge-kind-ready"
+    },
+    {
+      "id": "state:mieu",
+      "label": "Miếu",
+      "kind": "star-state-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-state-context"],
+      "definition": "State term named in context; no universal lookup table is admitted.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "attribute-ready"
+    },
+    {
+      "id": "state:vuong",
+      "label": "Vượng",
+      "kind": "star-state-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-state-context"],
+      "definition": "State term named in context; no universal lookup table is admitted.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "attribute-ready"
+    },
+    {
+      "id": "state:ham",
+      "label": "Hãm",
+      "kind": "star-state-term",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-state-context"],
+      "definition": "Contrasting state term used in the source corpus; no universal lookup table is admitted.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "attribute-ready"
+    },
+    {
+      "id": "concept:tu-hoa",
+      "label": "Tứ Hóa",
+      "kind": "transformation-vocabulary",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v2-four-transformations-table"],
+      "definition": "Source records Lộc, Quyền, Khoa, Kỵ as stem-conditioned transformations.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "typed-node-ready",
+      "blockedFromCalculation": "The source table is not approved as the active profile."
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:trines-with",
+      "sourceTerm": "三方",
+      "graphEdge": "TRINES_WITH",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "evaluationStatus": "blocked-profile-geometry"
+    },
+    {
+      "id": "relation:four-directions-context",
+      "sourceTerm": "四正",
+      "graphEdge": "FOUR_DIRECTIONS_CONTEXT",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "evaluationStatus": "blocked-profile-geometry"
+    },
+    {
+      "id": "relation:opposes",
+      "sourceTerm": "對照",
+      "graphEdge": "OPPOSES",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "evaluationStatus": "blocked-profile-geometry"
+    },
+    {
+      "id": "relation:joined-aspect",
+      "sourceTerm": "合照",
+      "graphEdge": "JOINS_ASPECT",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "evaluationStatus": "blocked-profile-geometry"
+    },
+    {
+      "id": "relation:co-located",
+      "sourceTerm": "同宫/同度",
+      "graphEdge": "CO_LOCATED_WITH",
+      "status": "candidate",
+      "sourceRefs": ["k05-v1-xingsha-lianzhen-quanloc"],
+      "evaluationStatus": "blocked-source-term-mapping"
+    }
+  ],
+  "methodologyRules": [
+    {
+      "id": "method:k06-context-order",
+      "type": "methodology",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v3-reading-order"],
+      "inputs": [
+        "Mệnh facts",
+        "Thân facts",
+        "Thiên Di/Tài Bạch/Quan Lộc relation facts",
+        "state terms"
+      ],
+      "sourceSupportedEffect": "Orders review of named fact groups.",
+      "forbiddenEffect": ["personalised claim", "numeric score", "conflict resolution"],
+      "dslReadiness": "gating-and-order-only"
+    },
+    {
+      "id": "method:k06-state-needs-context",
+      "type": "methodology",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-state-context"],
+      "inputs": ["state term", "supporting/adverse context"],
+      "sourceSupportedEffect": "Requires inspection of state together with sinh-khắc and guarding/illuminating context.",
+      "forbiddenEffect": [
+        "universal state lookup",
+        "favourable/unfavourable score",
+        "personalised claim"
+      ],
+      "dslReadiness": "requires-vocabulary-mapping"
+    },
+    {
+      "id": "method:k06-aspect-context",
+      "type": "methodology",
+      "status": "source-backed",
+      "sourceRefs": ["k06-v1-aspect-terms"],
+      "inputs": ["three-direction/four-direction/opposition/joined-aspect facts"],
+      "sourceSupportedEffect": "Requires retaining named spatial context when reviewing a source configuration.",
+      "forbiddenEffect": ["inferred geometry", "numeric weight", "claim generation"],
+      "dslReadiness": "requires-profile-geometry"
+    }
+  ],
+  "substantiveCandidateRefs": [
+    "k05-taiyang-wenchang-quanloc-001",
+    "k05-xingsha-lianzhen-quanloc-001",
+    "k05-tianxiang-conditioned-quanloc-001"
+  ],
+  "researchHypotheses": [
+    "The current source's ordered twelve-palace list can be mapped to a graph vocabulary without asserting any interpretive function.",
+    "The fourteen names in the placement mnemonic are the canonical primary-star inventory for a future profile mapping; this requires specialist verification.",
+    "Tam phương/tứ chính may be represented as typed edges once a reviewed calculation-profile geometry is supplied."
+  ],
+  "openGaps": [
+    "Independent and explicitly school-classified source family for the same foundational concepts.",
+    "Reviewed profile mapping for all star placements, state tables, Tứ Hóa variants and spatial geometry.",
+    "Lawful page-level material defining modern-safe meanings, exceptions and precedence for substantive rules.",
+    "A complete auxiliary-star catalogue with classification provenance; K06 records only bounded source families."
+  ]
+}

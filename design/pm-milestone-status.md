@@ -41,6 +41,12 @@ chưa map. Cả ba cùng một textual lineage chưa định danh hệ phái; Pr
 Knowledge Yield = 0 và K04B vẫn hoãn. Xem `../dev/knowledge-k05-research.md` và
 `../dev/knowledge-k05-quan-loc-candidates.json`.
 
+HV-K06 (15/10) chuẩn hóa nền tảng gồm 12 cung, 14 chính tinh ứng viên, năm họ
+phụ tinh giới hạn, thuật ngữ trạng thái/không gian/Tứ Hóa và ba methodology gate.
+Đây là catalog research cùng một textual lineage, không phải profile Nam phái
+hay runtime graph/DSL. Các quan hệ hình học, state lookup và Tứ Hóa active vẫn
+blocked; không có rule production mới. Xem `../dev/knowledge-k06-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

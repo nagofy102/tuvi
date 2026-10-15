@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k05-quan-loc-research-2026-10-15",
+  "registryVersion": "hv-k06-foundation-sweep-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -12,7 +12,12 @@
       "publisher": "Chinese Wikisource",
       "publicationYear": null,
       "language": "zh-Hant",
-      "knowledgeScopes": ["palace-placement", "major-star-placement", "auxiliary-star-placement"],
+      "knowledgeScopes": [
+        "palace-placement",
+        "major-star-placement",
+        "auxiliary-star-placement",
+        "transformations"
+      ],
       "schoolClaims": [
         {
           "label": "Nam Phái",
@@ -62,7 +67,7 @@
       "publisher": "Chinese Wikisource",
       "publicationYear": null,
       "language": "zh-Hant",
-      "knowledgeScopes": ["star-symbolism"],
+      "knowledgeScopes": ["star-symbolism", "cross-palace-interpretation"],
       "schoolClaims": [
         {
           "label": "Nam Phái",
@@ -287,9 +292,128 @@
         "The passage is star-specific and does not establish a general Quan Lộc rule.",
         "Miếu/vượng, 左右, 帝座 and the adverse-star vocabulary need a reviewed profile mapping before any evaluation."
       ]
+    },
+    {
+      "passageId": "k06-v2-twelve-palaces-list",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安身命例 > 安十二宫例; pinned revision 1963110, raw wikitext lines 13–14",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "一 命宫、二兄弟、三妻妾、四子女、五财帛、六疾厄、七迁移、八奴仆、九官禄、十田宅、十一福德、十二父母",
+      "supports": ["ordered-twelve-palace-vocabulary"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The list establishes names and order in this source, not modern semantic definitions or a calculation profile."
+      ]
+    },
+    {
+      "passageId": "k06-v2-major-star-sequence",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安身命例 > 安南北斗诸星诀; pinned revision 1963110, raw wikitext lines 29–32",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "紫微天机逆行旁，隔一阳武天同当……天府太阴与贪狼，巨门天相及天梁，七杀空三破军位。",
+      "supports": ["fourteen-major-star-inventory", "source-specific-star-sequence"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The verse is a source-specific placement mnemonic; it does not certify compatibility with the active calculation profile."
+      ]
+    },
+    {
+      "passageId": "k06-v2-auxiliary-families",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安身命例; headings 安文昌文曲星诀 through 天空地劫诀, pinned revision 1963110, raw wikitext lines 34–64",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "安文昌文曲星诀……安左辅右弼星诀……安天魁天钺诀……安天马星诀……安禄存星诀……安擎羊陀罗二星诀……安火铃二星诀……天空地劫诀。",
+      "supports": ["auxiliary-star-family-vocabulary", "source-specific-placement-input-groups"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "This bounded family list is not a complete auxiliary-star catalogue and does not admit any placement calculation."
+      ]
+    },
+    {
+      "passageId": "k06-v2-four-transformations-table",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安身命例 > 安禄权科忌四星变化诀; pinned revision 1963110, raw wikitext lines 57–61",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "安禄权科忌四星变化诀 论生年干……如甲生人廉贞化禄、破军化权、武曲化科、太阳化忌是也。",
+      "supports": ["four-transformations-vocabulary", "stem-conditioned-transformation-method"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The table is recorded as a source variant only; its mapping is not approved as the active Nam Phái calculation profile."
+      ]
+    },
+    {
+      "passageId": "k06-v1-aspect-terms",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "斗數發微論; pinned revision 7913704, raw wikitext lines 129–131",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "四正吉星定為貴，三方殺拱少為奇。對照兮詳凶詳吉，合照兮觀賤觀榮。",
+      "supports": [
+        "three-directions-term",
+        "four-directions-term",
+        "opposition-term",
+        "joined-aspect-term"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The passage names relations but does not define their geometry, membership or conflict precedence."
+      ]
+    },
+    {
+      "passageId": "k06-v1-state-context",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "太微賦 and 諸星問答論 > 問紫微所主若何？; pinned revision 7913704, raw wikitext lines 24 and 219",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "星臨廟旺，再觀生剋之機。……俱看在廟旺之鄉否，有何吉凶之守照。",
+      "supports": ["temple-prosperity-state-terms", "state-requires-context-check"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "No table normalizes state values for every star/palace; this passage cannot determine a state from chart facts."
+      ]
+    },
+    {
+      "passageId": "k06-v3-reading-order",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "談星要論; pinned revision 2268626, raw wikitext lines 8–11",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "第一看命宫吉凶庙旺化吉化忌生克。次看身主吉凶生克。三看迁移财帛官禄三方星辰刑冲克破。",
+      "supports": ["method-order-menh-than-di-tai-quan", "state-and-relation-review-method"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "It is methodology only: no modern claim, numerical score or conflict resolver is supplied."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k06-foundation-passage-registration",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "k06-v2-twelve-palaces-list",
+        "k06-v2-major-star-sequence",
+        "k06-v2-auxiliary-families",
+        "k06-v2-four-transformations-table",
+        "k06-v1-aspect-terms",
+        "k06-v1-state-context",
+        "k06-v3-reading-order"
+      ],
+      "basis": "HV-K06 directly read bounded passages in the three pinned public revisions. The records normalize only source-supported vocabulary, source-specific sequences and methodology; all remain profile-unresolved, same-family research evidence and non-production."
+    },
     {
       "reviewId": "hv-k05-quan-loc-passage-registration",
       "date": "2026-10-15",
