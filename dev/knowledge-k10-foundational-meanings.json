@@ -1,13 +1,13 @@
 {
-  "artifactVersion": "hv-k11-foundational-meanings-v0.2",
+  "artifactVersion": "hv-k12-foundational-meanings-v0.3",
   "generatedAt": "2026-10-15",
   "scope": "Bounded traditional meanings for Knowledge Explorer research. These are not calculation inputs, rules, scores, personalised claims or production content.",
-  "registryVersion": "hv-k11-broad-meaning-coverage-2026-10-15",
+  "registryVersion": "hv-k12-gap-closure-2026-10-15",
   "defaultProfile": "profile-unresolved",
   "provenanceBoundary": {
-    "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
-    "independence": "One pinned textual lineage; no independent school or Nam Phái verification.",
-    "rights": "Minimal, bounded public transcription review; normalized paraphrases only and no retained source full text."
+    "sourceFamilyId": "multiple-research-families-profile-unresolved",
+    "independence": "The Quanshu and Daozang textual families plus related Wikimedia concept references are retained separately; none independently verifies the target school/profile.",
+    "rights": "Minimal, bounded review of public transcriptions and open-licensed encyclopedia revisions; normalized paraphrases only and no retained source full text."
   },
   "knowledgeStatements": [
     {
@@ -619,6 +619,150 @@
       "schoolProfile": "profile-unresolved",
       "limitations": ["No active annual placement, effect or prediction is admitted."],
       "baNormalization": "Temporal reference only."
+    },
+    {
+      "id": "statement:k12-tam-phuong-source-term",
+      "subjectId": "concept:tam-phuong",
+      "status": "source-backed",
+      "content": "The source names Tam phương as a multi-palace examination term used alongside Tứ chính.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "The passage does not define which palaces form the relation or an active geometry."
+      ],
+      "baNormalization": "Concept vocabulary only; the graph relation remains separately represented."
+    },
+    {
+      "id": "statement:k12-tu-chinh-source-term",
+      "subjectId": "concept:tu-chinh",
+      "status": "source-backed",
+      "content": "The source names Tứ chính as a contextual palace relation used in examining a configuration.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Membership, direction and active-profile mapping are not supplied."],
+      "baNormalization": "Concept vocabulary only; no favourable outcome is retained."
+    },
+    {
+      "id": "statement:k12-doi-chieu-source-term",
+      "subjectId": "concept:doi-chieu",
+      "status": "source-backed",
+      "content": "The source uses Đối chiếu for an opposing-view relation whose surrounding context is to be examined.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "The text does not define the geometry, direction or precedence of this relation."
+      ],
+      "baNormalization": "Terminological meaning only, not an inference rule."
+    },
+    {
+      "id": "statement:k12-hop-chieu-source-term",
+      "subjectId": "concept:hop-chieu",
+      "status": "source-backed",
+      "content": "The source uses Hợp chiếu for a joined-aspect relation considered with the wider configuration.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["The text does not define participating palaces, direction or precedence."],
+      "baNormalization": "Terminological meaning only, not an inference rule."
+    },
+    {
+      "id": "statement:k12-yin-yang-relational-pair",
+      "subjectId": "concept:yin-yang",
+      "status": "source-backed",
+      "content": "The reviewed reference presents Âm and Dương as an opposed but mutually related pair, with classification dependent on the comparison context.",
+      "sourceRef": "k12-viwiki-yin-yang-foundation",
+      "sourceLocator": "Âm dương > Các quy luật của triết lý âm và dương; revision 74871160",
+      "schoolProfile": "general-concept-not-tu-vi-profile",
+      "limitations": [
+        "The page carries a missing-sources warning and is not a Tử Vi school authority.",
+        "No correspondence table, sex/gender rule or calculation direction is admitted."
+      ],
+      "baNormalization": "General conceptual meaning only."
+    },
+    {
+      "id": "statement:k12-nap-am-calendar-combination",
+      "subjectId": "concept:nap-am",
+      "status": "source-backed",
+      "content": "The reviewed reference defines Nạp âm as a traditional system relating the five tones and twelve pitch standards to calendrical Five-Phase and stem-branch structures.",
+      "sourceRef": "k12-zhwiki-nayin-foundation",
+      "sourceLocator": "納音 > lead and 源流內容; revision 85992144",
+      "schoolProfile": "general-shushu-concept-not-tu-vi-profile",
+      "limitations": [
+        "This general reference does not validate a Tử Vi calculation profile or a complete sixty-pair mapping.",
+        "Historical applications do not imply an approved interpretation rule."
+      ],
+      "baNormalization": "General conceptual meaning, separated from calculation."
+    },
+    {
+      "id": "statement:k12-relation-co-located-source-use",
+      "subjectId": "relation:co-located",
+      "status": "candidate",
+      "content": "The source uses the same-location term Đồng for stars considered together in Quan Lộc context.",
+      "sourceRef": "k05-v1-xingsha-lianzhen-quanloc",
+      "sourceLocator": "太微賦; revision 7913704, raw line 53",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "The exact mapping of 同 to same palace versus same degree is unresolved.",
+        "The historical punitive conclusion is excluded."
+      ],
+      "baNormalization": "Relation vocabulary only; status remains candidate."
+    },
+    {
+      "id": "statement:k12-relation-state-at-branch-variant",
+      "subjectId": "relation:source-variant-state-at-branch",
+      "status": "source-backed",
+      "content": "The source records star-specific state labels against named earthly branches, forming a source-bound star–branch–state relation.",
+      "sourceRef": "k07-v3-auxiliary-state-variants",
+      "sourceLocator": "諸星分別富貴貧賤夭壽諸局; revision 2268626, selected raw lines 409–589",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "The tables are variants and cannot populate active chart facts without profile review."
+      ],
+      "baNormalization": "Source-qualified relation, not a universal lookup."
+    },
+    {
+      "id": "statement:k12-relation-brackets-examples",
+      "subjectId": "relation:source-described-brackets",
+      "status": "source-backed",
+      "content": "The source illustrates Giáp by placing two named stars on the two sides of Mệnh in specific examples.",
+      "sourceRef": "k07-v3-bracketed-configurations",
+      "sourceLocator": "諸星分別富貴貧賤夭壽諸局; revision 2268626, raw lines 424–432 and 568–587",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "Examples do not establish a general adjacency algorithm or an outcome rule."
+      ],
+      "baNormalization": "Example-bounded spatial relation only."
+    },
+    {
+      "id": "statement:k12-relation-period-review-pair",
+      "subjectId": "relation:period-review-pair",
+      "status": "source-backed",
+      "content": "The source instructs reviewing Đại hạn, Tiểu hạn and Thái Tuế separately and when period contexts meet, establishing a paired-review methodology relation.",
+      "sourceRef": "k08-v3-period-review-terms",
+      "sourceLocator": "論大限十年禍福何如 and 論二限太歲吉凶; revision 2268626, raw lines 106–118",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "No placement formula, scoring, precedence or personalised conclusion is admitted."
+      ],
+      "baNormalization": "Methodology relation only."
+    },
+    {
+      "id": "statement:k12-phu-mau-xiangmao-alias-report",
+      "subjectId": "palace:phu-mau",
+      "status": "candidate",
+      "content": "A secondary modern reference lists Phụ Mẫu in the current twelve-palace sequence and reports Tướng Mạo (相貌) as an alternate name.",
+      "sourceRef": "k12-zhwiki-modern-palaces-and-lineage",
+      "sourceLocator": "紫微斗数 > 安十二宮 and 命身十二宮; revision 93649961",
+      "schoolProfile": "candidate-modern-three-harmony-context",
+      "limitations": [
+        "The page does not provide a sourced substantive meaning passage for Phụ Mẫu.",
+        "An alias report is not proof that the Daozang 相貌 section belongs to or matches the target profile.",
+        "Profile-compatible palace meaning remains unresolved."
+      ],
+      "baNormalization": "Terminology evidence only; excluded from substantive palace-meaning coverage."
     }
   ],
   "coverage": {
@@ -630,17 +774,20 @@
     "palacesWithCanonicalProfileMeaning": 0,
     "palacesWithDisputedSourceVariantMeaning": 11,
     "palacesCatalogued": 12,
-    "conceptsWithMeaning": 7,
+    "conceptsWithMeaning": 13,
     "conceptsCatalogued": 13,
-    "relationsWithMeaning": 4,
+    "relationsWithMeaning": 8,
     "relationsCatalogued": 8,
     "fortunePeriodsWithMeaning": 4,
     "fortunePeriodsCatalogued": 4,
-    "reasoningCandidatesCreated": 0
+    "reasoningCandidatesCreated": 0,
+    "researchCoverageStatements": 65,
+    "profileCompatibleMeaningStatements": 0,
+    "productionEligibleMeaningStatements": 0
   },
   "openGaps": [
-    "A compatible, lawful passage for Phụ Mẫu and canonical-profile meanings for all twelve palaces; the current Daozang evidence is an incompatible source-system variant.",
-    "Meaning evidence for yin/yang, nạp âm, the remaining catalogued concepts and four remaining relation types.",
+    "A compatible, lawful substantive passage for Phụ Mẫu and canonical-profile meanings for all twelve palaces; the secondary alias report does not resolve the incompatible Daozang source-system variant.",
+    "Authoritative Tử Vi-profile evidence for yin/yang, nạp âm and spatial geometry; current additions establish research meaning only.",
     "Independent, school-classified Tử Vi source families and a reviewed profile before any statement can become a reasoning input."
   ]
 }

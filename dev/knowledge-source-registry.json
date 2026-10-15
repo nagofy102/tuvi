@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k11-broad-meaning-coverage-2026-10-15",
+  "registryVersion": "hv-k12-gap-closure-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -561,6 +561,142 @@
         "Not a Nam Phái certification or a runtime source."
       ],
       "supersedes": []
+    },
+    {
+      "sourceId": "viwiki-yin-yang-r74871160",
+      "sourceKind": "website",
+      "title": "Âm dương",
+      "creator": "Vietnamese Wikipedia contributors",
+      "edition": "revision 74871160",
+      "publisher": "Wikimedia Foundation",
+      "publicationYear": "2026",
+      "language": "vi",
+      "knowledgeScopes": ["research-method"],
+      "schoolClaims": [],
+      "access": {
+        "url": "https://vi.wikipedia.org/w/index.php?title=Âm_dương&oldid=74871160",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200 through MediaWiki API; pinned revision content reviewed",
+        "robotsOrTermsNote": "Wikimedia content is available under the page-disclosed CC BY-SA terms; only a bounded passage and independent paraphrase are retained."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "CC BY-SA 4.0 / GFDL as disclosed by Wikimedia",
+        "reusePolicy": "Attribute the pinned page revision; retain only bounded quotation and neutral paraphrase."
+      },
+      "provenance": {
+        "locator": "Lead and Các quy luật của triết lý âm và dương",
+        "revision": "74871160",
+        "contentDigest": null,
+        "retrievalMethod": "MediaWiki revisions API with pinned revision ID",
+        "bibliographicIdentity": "Collaborative general encyclopedia article with a visible missing-sources warning; not a Tử Vi school text."
+      },
+      "independence": {
+        "sourceFamilyId": "wikipedia-general-encyclopedic-lineage",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "Same collaborative encyclopedia family as the K11 Ngũ hành source; it broadens topic coverage but is not an independent Tử Vi lineage."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "The article is flagged as lacking sources.",
+        "It supports general vocabulary only, not a Tử Vi calculation profile or rule."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "zhwiki-nayin-r85992144",
+      "sourceKind": "website",
+      "title": "納音",
+      "creator": "Chinese Wikipedia contributors",
+      "edition": "revision 85992144",
+      "publisher": "Wikimedia Foundation",
+      "publicationYear": "2025",
+      "language": "zh-Hant",
+      "knowledgeScopes": ["research-method", "calendar"],
+      "schoolClaims": [],
+      "access": {
+        "url": "https://zh.wikipedia.org/w/index.php?title=納音&oldid=85992144",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200 through MediaWiki API; pinned revision content and citations reviewed",
+        "robotsOrTermsNote": "Wikimedia content is available under the page-disclosed CC BY-SA terms; only a bounded definition and independent paraphrase are retained."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "CC BY-SA 4.0 / GFDL as disclosed by Wikimedia",
+        "reusePolicy": "Attribute the pinned page revision; retain only bounded quotation and neutral paraphrase."
+      },
+      "provenance": {
+        "locator": "Lead and 源流內容",
+        "revision": "85992144",
+        "contentDigest": null,
+        "retrievalMethod": "MediaWiki revisions API with pinned revision ID",
+        "bibliographicIdentity": "Collaborative general encyclopedia article citing historical and academic references; not a Tử Vi profile specification."
+      },
+      "independence": {
+        "sourceFamilyId": "wikipedia-general-encyclopedic-lineage",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "Same collaborative encyclopedia family as other Wikipedia concept sources; the cited research lineage was not independently ingested."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "General 術數 context does not establish compatibility with the active Tử Vi profile.",
+        "No complete nạp âm table or calculation mapping is admitted."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "zhwiki-ziwei-doushu-r93649961",
+      "sourceKind": "website",
+      "title": "紫微斗数",
+      "creator": "Chinese Wikipedia contributors",
+      "edition": "revision 93649961",
+      "publisher": "Wikimedia Foundation",
+      "publicationYear": "2026",
+      "language": "zh-Hant",
+      "knowledgeScopes": ["palace-placement", "research-method"],
+      "schoolClaims": [
+        {
+          "label": "三合系統（又稱南派）",
+          "claimStatus": "reported-by-third-party",
+          "evidenceNote": "The page reports the name and says this system uses 紫微斗數全書 and related classical works; the exact statement lacks a direct citation and is not treated as profile certification."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikipedia.org/w/index.php?title=紫微斗数&oldid=93649961",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200 through MediaWiki API; pinned revision content reviewed",
+        "robotsOrTermsNote": "Wikimedia content is available under the page-disclosed CC BY-SA terms; only bounded passages and independent paraphrases are retained."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "CC BY-SA 4.0 / GFDL as disclosed by Wikimedia",
+        "reusePolicy": "Attribute the pinned page revision; retain only bounded quotation and neutral paraphrase."
+      },
+      "provenance": {
+        "locator": "歷史, 三合系統（又稱南派）, 安十二宮 and 命身十二宮",
+        "revision": "93649961",
+        "contentDigest": null,
+        "retrievalMethod": "MediaWiki revisions API with pinned revision ID",
+        "bibliographicIdentity": "Collaborative secondary overview; page carries improvement/source-quality warnings and is not a primary school manual."
+      },
+      "independence": {
+        "sourceFamilyId": "wikipedia-ziwei-secondary-lineage",
+        "implementationFamilyId": null,
+        "independenceStatus": "related",
+        "basis": "The page discusses the Quanshu and Daozang families rather than forming an independent textual lineage."
+      },
+      "status": "candidate",
+      "limitations": [
+        "The school and alias statements are secondary and insufficiently cited.",
+        "No calculation profile, palace meaning or production eligibility is established.",
+        "Name equivalence cannot be used to merge the Daozang 相貌 section into the target profile."
+      ],
+      "supersedes": []
     }
   ],
   "passages": [
@@ -1001,9 +1137,75 @@
         "The retained transcription visibly has an ambiguous/possibly incomplete list; K09 records it as a source variant, not a normalized twelve-palace inventory.",
         "It conflicts in vocabulary with the existing source-specific palace list and cannot populate active palace facts."
       ]
+    },
+    {
+      "passageId": "k12-viwiki-yin-yang-foundation",
+      "sourceId": "viwiki-yin-yang-r74871160",
+      "locator": "Các quy luật của triết lý âm và dương; pinned revision 74871160",
+      "language": "vi",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "Không có gì hoàn toàn âm hoặc hoàn toàn dương; trong âm có dương, trong dương có âm.",
+      "supports": ["yin-yang-relational-vocabulary", "comparison-relative-classification"],
+      "profileScope": ["general-concept-not-tu-vi-profile"],
+      "status": "source-backed",
+      "limitations": [
+        "The page carries a missing-sources warning.",
+        "The passage does not support a Tử Vi correspondence table, placement direction or interpretation rule."
+      ]
+    },
+    {
+      "passageId": "k12-zhwiki-nayin-foundation",
+      "sourceId": "zhwiki-nayin-r85992144",
+      "locator": "Lead and 源流內容; pinned revision 85992144",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "納音，是指將五音、十二律納入基於五行、干支的中國傳統曆法之中的一種律曆相合的學說。",
+      "supports": ["nayin-foundational-definition", "nayin-five-phase-stem-branch-context"],
+      "profileScope": ["general-shushu-concept-not-tu-vi-profile"],
+      "status": "source-backed",
+      "limitations": [
+        "The passage is a general definition and does not validate an active calculation profile.",
+        "No complete sixty-pair mapping or interpretation is retained."
+      ]
+    },
+    {
+      "passageId": "k12-zhwiki-modern-palaces-and-lineage",
+      "sourceId": "zhwiki-ziwei-doushu-r93649961",
+      "locator": "歷史, 三合系統（又稱南派）, 安十二宮 and 命身十二宮; pinned revision 93649961",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "命、兄弟、夫妻、子女、財帛、疾厄、遷移、交友、官禄、田宅、福德、父母。……父母宮（又名相貌宮）。",
+      "supports": [
+        "modern-twelve-palace-sequence-report",
+        "father-appearance-alias-report",
+        "reported-three-harmony-southern-label",
+        "daozang-modern-system-distinction"
+      ],
+      "profileScope": ["candidate-modern-three-harmony-context", "profile-unresolved"],
+      "status": "candidate",
+      "limitations": [
+        "Secondary, insufficiently cited evidence cannot certify a school or calculation profile.",
+        "The alias does not establish semantic identity with the Daozang 相貌 passage.",
+        "No substantive meaning for Phụ Mẫu is supplied."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k12-knowledge-gap-closure-review",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "viwiki-yin-yang-r74871160",
+        "zhwiki-nayin-r85992144",
+        "zhwiki-ziwei-doushu-r93649961",
+        "k12-viwiki-yin-yang-foundation",
+        "k12-zhwiki-nayin-foundation",
+        "k12-zhwiki-modern-palaces-and-lineage"
+      ],
+      "basis": "HV-K12 read three pinned public revisions, filled bounded foundational meaning gaps, and retained the Phụ Mẫu/相貌 evidence only as a secondary terminology report. No school/profile compatibility, palace meaning, production rule or runtime input is approved."
+    },
     {
       "reviewId": "hv-k11-broad-meaning-coverage-review",
       "date": "2026-10-15",

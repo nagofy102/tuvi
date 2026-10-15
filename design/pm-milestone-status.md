@@ -88,6 +88,13 @@ profile hiện hành. Một source family Ngũ hành bách khoa mới được t
 không phải nguồn hệ phái Tử Vi. Production Knowledge Yield vẫn bằng 0; xem
 `../dev/knowledge-k11-meaning-coverage.md`.
 
+HV-K12 (15/10) nâng dataset từ 54 lên 65 statement, phủ research meaning cho
+13/13 concept và 8/8 relation đã catalog. Bằng chứng thứ cấp cho thấy hệ hiện đại
+liệt kê Phụ Mẫu và gọi `相貌` là bí danh, đồng thời phân biệt văn bản Đạo Tạng 1607
+với Tử Vi lưu hành; tuy nhiên các claim này chưa đủ nguồn sơ cấp để xác nhận hệ
+phái/profile. Vì vậy meaning cung vẫn 11/12 dị bản `disputed`, profile-compatible
+và production-eligible đều bằng 0. Xem `../dev/knowledge-k12-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

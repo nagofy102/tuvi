@@ -64,6 +64,16 @@ meaning. K11 also registers one general Ngũ hành encyclopedia family, which is
 a Tử Vi school source or an independent validation of the Tử Vi lineage. No K11
 statement is admitted to calculation, reasoning or personalised output.
 
+HV-K12 extends the same dataset to 65 statements and closes the research-meaning
+gaps for all thirteen catalogued concepts and all eight catalogued relations.
+Three pinned Wikimedia revisions add bounded general meanings for Âm dương and
+Nạp âm plus secondary terminology evidence for Phụ Mẫu/`相貌`. The latter also
+reports that the Daozang text differs from modern circulating Tử Vi, but its
+school and alias claims are insufficiently cited. It is therefore `related`, not
+independent profile evidence: substantive palace
+coverage stays 11/12 disputed, profile-compatible coverage stays 0/12, and no
+statement is production-eligible. See `knowledge-k12-coverage.md`.
+
 The consolidated historical provenance covers bibliographic catalogue checks,
 classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07
 research. Full detail remains recoverable from the HV-M01 predecessor paths in
