@@ -560,6 +560,43 @@ boundary; no `BLOCKING` issue was found.
 - NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
   typecheck, build and E2E (research-only data has no production consumer).
 
+## HV-K14-C research-effectiveness audit — after batch 8
+
+The two primary books total 719 pages. Ledger status is 48 `COMPLETED`, 186
+`REVIEW`, 474 `PENDING`, 0 `BLOCKED` and 11 `EXCLUDED`; the 237 substantively
+read pages are the completed/review total, not a measure of admitted knowledge.
+Across Batches 1–8, the dataset contains 13 `ACCEPT_AS_RESEARCH`, 12 `MERGE`,
+13 `REVIEW` and 10 `REJECT` records. Most retained value is methodology,
+source-specific provenance, catalog/conflict evidence and explicit limitations;
+there is no profile-compatible or production-eligible substantive rule.
+
+Coverage is strongest for methodology (23 records) and spatial/palace relations
+(22), then palaces (16), stars (10), star-star contexts (9) and states (5).
+Tứ Hóa (1) and period material (3) are sparse and profile-blocked. The direct
+evidence shows saturation in deterministic personal chart grading, appearance,
+sexuality and occupation/rank outcome catalogs. Gaps with higher prospective value
+are bounded palace contexts outside the saturated career catalog, auxiliary-star
+identity/provenance, and source-described conditions that can be reconciled only
+after profile geometry/assignment work.
+
+Two Completed-range samples were rechecked visually without rereading the books:
+Tân Biên p.34 continues already catalogued major-star/state material and contains
+excluded direct outcomes; Tổng Hợp p.75 supports already retained position/aspect
+methodology but also profile-unresolved day/night and sensitive health claims. No
+unrecorded admissible candidate or provenance failure was found. Extraction is
+`RECOVERABLE`: Tổng Hợp VNI remains navigation-only under image QA. Domain blockers
+are separate: school/profile, geometry, state/exception precedence, period methods
+and auxiliary identities remain unresolved.
+
+The candidate structure is graph/DSL-ready only as research data: stable IDs,
+subjects, locators, conditions, limitations, provenance and dispositions exist.
+It is not implementation-ready because the candidate corpus lacks admitted
+profile-pinned facts, resolved eligibility/exception semantics and approved output
+claims. Next priorities: (1) a bounded non-career palace slice in Tân Biên
+168–224; (2) auxiliary-star identity and provenance where the source has clear
+headings; (3) later Tổng Hợp sections selected for undercovered relations rather
+than sequential chart-grading material.
+
 ## HV-K14-C batch 5 — autonomous continuation
 
 Tổng Hợp PDF/printed pages 108–128 were read as a 21-page batch. Because the VNI
