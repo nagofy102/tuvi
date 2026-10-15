@@ -95,6 +95,13 @@ với Tử Vi lưu hành; tuy nhiên các claim này chưa đủ nguồn sơ c�
 phái/profile. Vì vậy meaning cung vẫn 11/12 dị bản `disputed`, profile-compatible
 và production-eligible đều bằng 0. Xem `../dev/knowledge-k12-coverage.md`.
 
+HV-K13 (15/10) bổ sung 12 contextual statement có điều kiện, phủ cả sáu nhóm
+sao–cung, sao–trạng thái, sao–sao, cung–cung, Tứ Hóa và vận hạn. Bằng chứng đến
+từ sáu passage đã đọc trực tiếp trong hai volume cùng lineage `紫微斗數全書`, nên
+không tạo xác nhận độc lập hoặc tương thích Nam phái. Geometry, state lookup,
+Can-to-Tứ-Hóa, an hạn và precedence vẫn unresolved; 0 statement được phép dùng
+production. Xem `../dev/knowledge-k13-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

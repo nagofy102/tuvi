@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k12-gap-closure-2026-10-15",
+  "registryVersion": "hv-k13-contextual-expansion-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -574,7 +574,7 @@
       "knowledgeScopes": ["research-method"],
       "schoolClaims": [],
       "access": {
-        "url": "https://vi.wikipedia.org/w/index.php?title=Âm_dương&oldid=74871160",
+        "url": "https://vi.wikipedia.org/w/index.php?title=%C3%82m_d%C6%B0%C6%A1ng&oldid=74871160",
         "accessType": "free-public",
         "lastCheckedAt": "2026-10-15",
         "lastObservedStatus": "HTTP 200 through MediaWiki API; pinned revision content reviewed",
@@ -617,7 +617,7 @@
       "knowledgeScopes": ["research-method", "calendar"],
       "schoolClaims": [],
       "access": {
-        "url": "https://zh.wikipedia.org/w/index.php?title=納音&oldid=85992144",
+        "url": "https://zh.wikipedia.org/w/index.php?title=%E7%B4%8D%E9%9F%B3&oldid=85992144",
         "accessType": "free-public",
         "lastCheckedAt": "2026-10-15",
         "lastObservedStatus": "HTTP 200 through MediaWiki API; pinned revision content and citations reviewed",
@@ -666,7 +666,7 @@
         }
       ],
       "access": {
-        "url": "https://zh.wikipedia.org/w/index.php?title=紫微斗数&oldid=93649961",
+        "url": "https://zh.wikipedia.org/w/index.php?title=%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B0&oldid=93649961",
         "accessType": "free-public",
         "lastCheckedAt": "2026-10-15",
         "lastObservedStatus": "HTTP 200 through MediaWiki API; pinned revision content reviewed",
@@ -1188,9 +1188,126 @@
         "The alias does not establish semantic identity with the Daozang 相貌 passage.",
         "No substantive meaning for Phụ Mẫu is supplied."
       ]
+    },
+    {
+      "passageId": "k13-v1-ziwei-context-conditions",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問紫微所主若何; pinned revision 7913704, raw wikitext lines 219–228",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "俱看在廟旺之鄉否，有何吉凶之守照。……若居官祿身命，三宮最要左右守衛。",
+      "supports": ["ziwei-state-context", "ziwei-assistant-context", "ziwei-palace-context"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "Ellipsis joins clauses inside one bounded source entry; exact conditions remain separate in normalized statements.",
+        "No active state table, aspect geometry or personalized conclusion is admitted."
+      ]
+    },
+    {
+      "passageId": "k13-v1-taiyang-palace-state-context",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問太陽所主若何; pinned revision 7913704, raw wikitext lines 266–267",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "乃官祿之樞機。後化貴化祿，最宜在官祿宮。……若限不扶，不可以三合論議。",
+      "supports": ["taiyang-quanloc-context", "taiyang-period-support-condition"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The source's gendered, status, health and event outcomes are excluded.",
+        "Brightness, transformation mapping, period support and aspect geometry remain unresolved."
+      ]
+    },
+    {
+      "passageId": "k13-v1-star-pair-contexts",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問天機 and 問武曲; pinned revision 7913704, raw wikitext lines 251–252 and 280–281",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "或守於身，更逢天梁……與天梁、左右、昌曲交會……與祿馬交馳……諸凶聚而作禍，吉集以成祥。",
+      "supports": [
+        "tianji-tianliang-context",
+        "wuqu-luma-context",
+        "support-opposition-conditions"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "Historical occupations, status and outcome claims are not retained.",
+        "會, 同 and 交馳 are not mapped to active geometry."
+      ]
+    },
+    {
+      "passageId": "k13-v1-four-transformations-context",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問化祿、化權、化科、化忌星所主; pinned revision 7913704, raw wikitext lines 421–436",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "守身命官禄之位，科权相逢……如逢羊陀耗使劫空……二限太岁交临……",
+      "supports": [
+        "four-transformations-context",
+        "transformation-support-opposition",
+        "transformation-period-context"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "No stem-to-transformation mapping, score, precedence or outcome rule is admitted.",
+        "Historical office, gender and misfortune conclusions are excluded."
+      ]
+    },
+    {
+      "passageId": "k13-v3-palace-review-context",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "談星要論; pinned revision 2268626, raw wikitext lines 7–20",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "第一看命宫吉凶庙旺化吉化忌生克。……三看迁移财帛官禄三方星辰刑冲克破。四看福德宫……以福德宫对财帛宫也。",
+      "supports": [
+        "palace-review-order",
+        "palace-context-links",
+        "state-and-transformation-context"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "Review order is source-described methodology, not an approved evaluator sequence.",
+        "The passage does not define active geometry or conflict precedence."
+      ]
+    },
+    {
+      "passageId": "k13-v3-fortune-period-context",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "論二限太歲吉凶 and 論流年太歲吉凶星殺; pinned revision 2268626, raw wikitext lines 109–118",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "须详大限独守吉凶何如，小限独守吉凶何如，太岁独守吉凶何如。……凡太岁看三方对照星辰吉凶何如。",
+      "supports": ["period-separate-and-paired-review", "annual-context-aspect-review"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "No period placement, annual mapping, geometry, weighting or prediction is admitted.",
+        "Source-described evaluation order remains non-production methodology."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k13-contextual-knowledge-review",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "k13-v1-ziwei-context-conditions",
+        "k13-v1-taiyang-palace-state-context",
+        "k13-v1-star-pair-contexts",
+        "k13-v1-four-transformations-context",
+        "k13-v3-palace-review-context",
+        "k13-v3-fortune-period-context"
+      ],
+      "basis": "HV-K13 directly read six bounded passages in two already-pinned revisions and normalized broad contextual relations across star-palace, star-state, star-star, palace-palace, Four Transformations and fortune periods. All evidence belongs to the unresolved 紫微斗數全書 lineage; no profile geometry, calculation mapping, score, personalized claim or production rule is admitted."
+    },
     {
       "reviewId": "hv-k12-knowledge-gap-closure-review",
       "date": "2026-10-15",

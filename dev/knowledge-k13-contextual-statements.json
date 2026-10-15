@@ -1,0 +1,285 @@
+{
+  "artifactVersion": "hv-k13-contextual-knowledge-v0.1",
+  "generatedAt": "2026-10-15",
+  "scope": "Source-bounded contextual knowledge for future graph and DSL research; not calculation data, production rules, scores or personalized readings.",
+  "registryVersion": "hv-k13-contextual-expansion-2026-10-15",
+  "defaultProfile": "profile-unresolved",
+  "provenanceBoundary": {
+    "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
+    "independence": "All K13 statements derive from three volumes of the same named work and do not constitute independent confirmation.",
+    "rights": "Bounded review of pinned public Wikisource revisions; only short locators and independently written neutral paraphrases are retained."
+  },
+  "contextualStatements": [
+    {
+      "id": "statement:k13-ziwei-palace-support-context",
+      "category": "star-palace",
+      "subjectIds": ["star:zi-wei", "palace:menh", "palace:quan-loc"],
+      "relation": "SOURCE_DESCRIBES_STAR_IN_PALACE_CONTEXT",
+      "conditions": [
+        "Tử Vi is considered in Mệnh or Quan Lộc",
+        "Tả Phụ/Hữu Bật support is present"
+      ],
+      "traditionalDescription": "The source treats supporting assistants as an explicit contextual requirement when discussing Tử Vi in the named palace contexts.",
+      "sourceRef": "k13-v1-ziwei-context-conditions",
+      "sourceLocator": "諸星問答論 > 問紫微所主若何; revision 7913704, raw lines 219–228",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "active co-location/aspect geometry",
+        "meaning of the source's three-palace phrase",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No status, occupation or personal outcome is retained."]
+    },
+    {
+      "id": "statement:k13-taiyang-quanloc-period-context",
+      "category": "star-palace",
+      "subjectIds": ["star:tai-yang", "palace:quan-loc"],
+      "relation": "SOURCE_DESCRIBES_STAR_IN_PALACE_CONTEXT",
+      "conditions": [
+        "Thái Dương is considered in Quan Lộc",
+        "support from the relevant period context must also be reviewed"
+      ],
+      "traditionalDescription": "The source associates Thái Dương with Quan Lộc but warns that a three-direction reading should not be applied without period support.",
+      "sourceRef": "k13-v1-taiyang-palace-state-context",
+      "sourceLocator": "諸星問答論 > 問太陽所主若何; revision 7913704, raw lines 266–267",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "brightness/state lookup",
+        "period-support definition",
+        "Tam phương geometry",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No career, rank, family or event conclusion is retained."]
+    },
+    {
+      "id": "statement:k13-ziwei-state-support-context",
+      "category": "star-state",
+      "subjectIds": ["star:zi-wei", "state:mieu", "state:vuong", "state:ham"],
+      "relation": "SOURCE_QUALIFIES_STAR_BY_STATE_AND_SURROUNDING_CONTEXT",
+      "conditions": [
+        "Tử Vi state is reviewed",
+        "supporting and opposing surrounding stars are reviewed"
+      ],
+      "traditionalDescription": "The source distinguishes miếu/vượng from hãm and requires the surrounding supportive or adverse context to be considered with the state.",
+      "sourceRef": "k13-v1-ziwei-context-conditions",
+      "sourceLocator": "諸星問答論 > 問紫微所主若何; revision 7913704, raw lines 219–224",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "source-specific state table",
+        "support/opposition vocabulary",
+        "target-profile compatibility"
+      ],
+      "limitations": ["Does not admit a universal state value or inference polarity."]
+    },
+    {
+      "id": "statement:k13-tianji-state-strength-context",
+      "category": "star-state",
+      "subjectIds": ["star:tian-ji", "state:mieu", "state:vuong", "state:ham"],
+      "relation": "SOURCE_QUALIFIES_STAR_STRENGTH_BY_STATE",
+      "conditions": ["Thiên Cơ is evaluated in a source-described miếu/vượng or hãm context"],
+      "traditionalDescription": "The source contrasts Thiên Cơ as having force in miếu/vượng contexts and lacking force in hãm contexts.",
+      "sourceRef": "k13-v1-star-pair-contexts",
+      "sourceLocator": "諸星問答論 > 問天機所主如何; revision 7913704, raw lines 251–262",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "Thiên Cơ state-by-branch lookup",
+        "meaning and effect of strength",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No trait, occupation or outcome is inferred from the state contrast."]
+    },
+    {
+      "id": "statement:k13-tianji-tianliang-support-context",
+      "category": "star-star",
+      "subjectIds": [
+        "star:tian-ji",
+        "star:tian-liang",
+        "star:ta-phu",
+        "star:huu-bat",
+        "star:wen-chang",
+        "star:wen-qu"
+      ],
+      "relation": "SOURCE_DESCRIBES_STAR_COMBINATION_WITH_SUPPORTS",
+      "conditions": [
+        "Thiên Cơ and Thiên Lương are considered together",
+        "assistant or literary stars may join the context"
+      ],
+      "traditionalDescription": "The source treats the Thiên Cơ–Thiên Lương pairing as context-sensitive and separately names assistant and literary stars as supporting participants.",
+      "sourceRef": "k13-v1-star-pair-contexts",
+      "sourceLocator": "諸星問答論 > 問天機所主如何; revision 7913704, raw lines 251–252",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "whether each phrase means co-location or aspect",
+        "required versus optional supports",
+        "target-profile compatibility"
+      ],
+      "limitations": ["The source's occupation and status outcomes are excluded."]
+    },
+    {
+      "id": "statement:k13-wuqu-luma-opposition-context",
+      "category": "star-star",
+      "subjectIds": ["star:wu-qu", "star:loc-ton", "star:thien-ma", "star:po-jun", "star:tan-lang"],
+      "relation": "SOURCE_CONTRASTS_SUPPORTING_AND_OPPOSING_COMBINATIONS",
+      "conditions": [
+        "Vũ Khúc is evaluated with Lộc/Mã or with Phá Quân/Tham Lang",
+        "other supportive or adverse stars must be retained"
+      ],
+      "traditionalDescription": "The source contrasts a Lộc–Mã context with Phá Quân/Tham Lang contexts and explicitly makes the assessment depend on the wider supportive or adverse grouping.",
+      "sourceRef": "k13-v1-star-pair-contexts",
+      "sourceLocator": "諸星問答論 > 問武曲星所主為何; revision 7913704, raw lines 280–281",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "identity of Lộc in each phrase",
+        "交馳/同度 geometry",
+        "conflict precedence",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No wealth, loss, health or conduct prediction is retained."]
+    },
+    {
+      "id": "statement:k13-core-palace-review-network",
+      "category": "palace-palace",
+      "subjectIds": ["palace:menh", "palace:thien-di", "palace:tai-bach", "palace:quan-loc"],
+      "relation": "SOURCE_GROUPS_PALACES_FOR_CONTEXTUAL_REVIEW",
+      "conditions": [
+        "Mệnh is reviewed first",
+        "Thiên Di, Tài Bạch and Quan Lộc are then reviewed through the source's Tam phương context"
+      ],
+      "traditionalDescription": "The source presents Mệnh and the Thiên Di–Tài Bạch–Quan Lộc group as linked stages of a broader chart review.",
+      "sourceRef": "k13-v3-palace-review-context",
+      "sourceLocator": "談星要論; revision 2268626, raw lines 7–12",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "Tam phương membership and direction",
+        "review precedence semantics",
+        "target-profile compatibility"
+      ],
+      "limitations": [
+        "A source-described review sequence is methodology, not a production reasoning rule."
+      ]
+    },
+    {
+      "id": "statement:k13-phucduc-taibach-opposition-context",
+      "category": "palace-palace",
+      "subjectIds": ["palace:phuc-duc", "palace:tai-bach"],
+      "relation": "SOURCE_DESCRIBES_OPPOSING_PALACE_REVIEW",
+      "conditions": [
+        "Phúc Đức is examined for named transformations, void terms and state",
+        "Tài Bạch is examined as its opposing context in this source"
+      ],
+      "traditionalDescription": "The source explicitly links review of Phúc Đức to an opposing Tài Bạch context while retaining state, transformation and void conditions.",
+      "sourceRef": "k13-v3-palace-review-context",
+      "sourceLocator": "談星要論; revision 2268626, raw line 11",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "active opposition geometry",
+        "meaning of the named void terms",
+        "transformation mapping",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No financial, wellbeing or personal conclusion is retained."]
+    },
+    {
+      "id": "statement:k13-hualu-khoa-quyen-palace-context",
+      "category": "four-transformations",
+      "subjectIds": ["concept:tu-hoa", "palace:menh", "palace:quan-loc"],
+      "relation": "SOURCE_DESCRIBES_TRANSFORMATION_COMBINATION_IN_PALACES",
+      "conditions": [
+        "Hóa Lộc is considered in Mệnh or Quan Lộc",
+        "Hóa Khoa and Hóa Quyền are present in the source-described relation"
+      ],
+      "traditionalDescription": "The source evaluates Hóa Lộc contextually with Hóa Khoa and Hóa Quyền in the named palaces rather than as an isolated label.",
+      "sourceRef": "k13-v1-four-transformations-context",
+      "sourceLocator": "諸星問答論 > 問化祿星所主若何; revision 7913704, raw lines 421–423",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "stem-to-transformation mapping",
+        "相逢 geometry",
+        "which natal/period layer applies",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No office, wealth or favourable outcome is retained."]
+    },
+    {
+      "id": "statement:k13-huaquyen-opposition-context",
+      "category": "four-transformations",
+      "subjectIds": [
+        "concept:tu-hoa",
+        "star:kinh-duong",
+        "star:da-la",
+        "star:dia-khong",
+        "star:dia-kiep"
+      ],
+      "relation": "SOURCE_CONDITIONS_TRANSFORMATION_BY_OPPOSING_STARS",
+      "conditions": [
+        "Hóa Quyền is considered",
+        "Kình Dương, Đà La, void/disruption terms or other named adverse context is present"
+      ],
+      "traditionalDescription": "The source qualifies its Hóa Quyền discussion with an explicit adverse-star/void context, so the transformation cannot be normalized as uniformly favourable.",
+      "sourceRef": "k13-v1-four-transformations-context",
+      "sourceLocator": "諸星問答論 > 問化權星所主若何; revision 7913704, raw lines 425–427",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "mapping of 耗使 and 劫空 to catalog entities",
+        "aspect geometry",
+        "conflict precedence",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No rank, legal event or gendered outcome is retained."]
+    },
+    {
+      "id": "statement:k13-period-separate-paired-review",
+      "category": "fortune-period",
+      "subjectIds": ["period:dai-han", "period:tieu-han", "period:thai-tue"],
+      "relation": "SOURCE_REQUIRES_SEPARATE_AND_PAIRED_PERIOD_REVIEW",
+      "conditions": [
+        "Each named period is reviewed separately",
+        "pairwise meetings and clashes are then reviewed"
+      ],
+      "traditionalDescription": "The source requires Đại hạn, Tiểu hạn and Thái Tuế to be considered both individually and in pairwise context before a judgement.",
+      "sourceRef": "k13-v3-fortune-period-context",
+      "sourceLocator": "論二限太歲吉凶; revision 2268626, raw lines 109–110",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "period placement",
+        "meeting/clash geometry",
+        "evaluation precedence",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No scoring, event or personalised conclusion is admitted."]
+    },
+    {
+      "id": "statement:k13-thaitue-aspect-context",
+      "category": "fortune-period",
+      "subjectIds": ["period:thai-tue", "concept:tam-phuong", "concept:doi-chieu"],
+      "relation": "SOURCE_REVIEWS_PERIOD_THROUGH_SPATIAL_CONTEXT",
+      "conditions": [
+        "Thái Tuế is the annual context under review",
+        "Tam phương and Đối chiếu star contexts are examined"
+      ],
+      "traditionalDescription": "The source directs the annual Thái Tuế review toward stars in Tam phương and Đối chiếu context, without defining their geometry in this passage.",
+      "sourceRef": "k13-v3-fortune-period-context",
+      "sourceLocator": "論流年太歲吉凶星殺; revision 2268626, raw lines 117–118",
+      "schoolProfile": "profile-unresolved",
+      "status": "source-backed",
+      "unresolvedDependencies": [
+        "annual placement",
+        "Tam phương/Đối chiếu geometry",
+        "star polarity and precedence",
+        "target-profile compatibility"
+      ],
+      "limitations": ["No annual prediction or personalized reading is admitted."]
+    }
+  ]
+}

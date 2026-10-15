@@ -1,5 +1,14 @@
 # Reviewed source registry — milestone A
 
+## HV-K13 contextual expansion — 2026-10-15
+
+Six bounded passages in the already pinned `紫微斗數全書` volume-one and
+volume-three revisions support twelve research-only contextual statements across
+star–palace, star–state, star–star, palace–palace, Tứ Hóa and fortune-period
+relations. They add no independent source family, school/profile confirmation,
+geometry, calculation mapping, score or production rule. See
+`knowledge-k13-contextual-statements.json` and `knowledge-k13-coverage.md`.
+
 ## Consolidated source boundary
 
 There are two deliberately separate registry families. `source-registry.json`
