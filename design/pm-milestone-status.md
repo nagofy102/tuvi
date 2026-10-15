@@ -102,6 +102,14 @@ không tạo xác nhận độc lập hoặc tương thích Nam phái. Geometry,
 Can-to-Tứ-Hóa, an hạn và precedence vẫn unresolved; 0 statement được phép dùng
 production. Xem `../dev/knowledge-k13-coverage.md`.
 
+HV-K14 Checkpoint 1 (15/10) đã kiểm kê 3 PDF / 1.022 trang vừa được PO thêm tại
+`9cf5668`: hai sách có cấu trúc chương rõ và một tập luận năm 2009 thiếu trang
+thư mục/phương pháp. Cả ba có text layer, nhưng _Tử Vi Tổng Hợp_ xuất text VNI
+lỗi mã; edition, lineage và quyền xử lý/tái phân phối đều chưa xác minh. Đã lập
+Coverage Map, batch/QA và pilot đa sách; chưa trích xuất statement hay đổi registry.
+Dừng chờ PO duyệt Checkpoint 2 và phạm vi quyền tại
+`../dev/knowledge-k14-book-discovery.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
