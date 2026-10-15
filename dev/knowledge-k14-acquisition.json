@@ -1,0 +1,841 @@
+{
+  "artifactVersion": "hv-k14-controlled-acquisition-v0.1",
+  "generatedAt": "2026-10-16",
+  "scope": "Internal research ledger and candidates for HV-K14 Checkpoint 3 batch 1; not production rules, profile evidence, scores or personalized readings.",
+  "rightsBoundary": "PO authorized internal reading and analysis of the local PDFs. The artifact stores short independent paraphrases and locators, not source passages or converted book text.",
+  "defaultProfile": "profile-unresolved",
+  "sourceIndependence": "unresolved-between-books",
+  "statusDefinitions": {
+    "COMPLETED": "The range was substantively read and its page-level QA is complete.",
+    "PENDING": "The range is mapped but has not been substantively read.",
+    "REVIEW": "The range was read, but source claims, sensitive language, ontology gaps or classification tables require further domain review.",
+    "BLOCKED": "The range cannot currently be read reliably.",
+    "EXCLUDED": "The range is navigation, provenance-only or outside the admitted knowledge scope."
+  },
+  "books": [
+    {
+      "bookId": "book-k14-tan-bien",
+      "title": "Tử Vi Đẩu Số Tân Biên",
+      "creator": "Vân Đằng Thái Thứ Lang",
+      "fileSha256": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
+      "sourceFamilyId": "k14-tan-bien-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rightsStatus": "internal-research-authorized-by-po",
+      "editionStatus": "unverified",
+      "pipeline": {
+        "textLayer": "clean-unicode",
+        "authoritativeLocator": "PDF and aligned printed page",
+        "qaPolicy": "Read section text and compare retained locators plus sampled no-yield pages with rendered PDF pages."
+      }
+    },
+    {
+      "bookId": "book-k14-tong-hop",
+      "title": "Tử Vi Tổng Hợp",
+      "creator": "Nguyễn Phát Lộc",
+      "fileSha256": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37",
+      "sourceFamilyId": "k14-tong-hop-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rightsStatus": "internal-research-authorized-by-po",
+      "editionStatus": "unverified",
+      "pipeline": {
+        "textLayer": "legacy-vni-with-partial-conversion",
+        "authoritativeLocator": "Rendered PDF page; converted text is a navigation aid only",
+        "qaPolicy": "Visually compare every retained candidate locator with the rendered page; do not admit uncertain converted text."
+      }
+    }
+  ],
+  "acquisitionLedger": [
+    {
+      "rangeId": "ledger:tb-001-004",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "1-4",
+      "section": "Cover, contents and preface",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped in Checkpoint 1; bibliographic review remains pending."
+    },
+    {
+      "rangeId": "ledger:tb-005-030",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "5-30",
+      "section": "Part I — chart construction",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Calculation-sensitive; process only in a separately controlled batch."
+    },
+    {
+      "rangeId": "ledger:tb-031-033",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "31-33",
+      "section": "Part II opening, review checklist and terminology",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-2",
+      "note": "Three pilot pages; not reprocessed in batch 1."
+    },
+    {
+      "rangeId": "ledger:tb-034-041",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "34-41",
+      "section": "3.2-3.28 — major-star continuation, selected auxiliary stars and Tứ Hóa",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-3-batch-1",
+      "note": "Eight new pages read; page 34 continues the Tử Vi subsection begun on pilot page 33, so no new Tử Vi baseline candidate was inferred from the continuation alone."
+    },
+    {
+      "rangeId": "ledger:tb-042-051",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "42-51",
+      "section": "3.29-3.85 — auxiliary stars and twelve-stage vocabulary",
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-1",
+      "note": "Ten pages read and visually checked. Many entities are not yet cataloged and numerous claims are medical, event, gender or status predictions; only bounded candidates are retained."
+    },
+    {
+      "rangeId": "ledger:tb-052-123",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "52-123",
+      "section": "Mệnh and Thân",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped but unread for knowledge extraction."
+    },
+    {
+      "rangeId": "ledger:tb-124-157",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "124-157",
+      "section": "Palace sections before Quan Lộc",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped but unread for knowledge extraction."
+    },
+    {
+      "rangeId": "ledger:tb-158-160",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "158-160",
+      "section": "Quan Lộc 8.1-8.8",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-2",
+      "note": "Three pilot pages; not reprocessed in batch 1."
+    },
+    {
+      "rangeId": "ledger:tb-161-224",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "161-224",
+      "section": "Remaining Quan Lộc and palace sections",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Pages 161-167 were mechanically extracted during the pilot but not substantively read and remain pending."
+    },
+    {
+      "rangeId": "ledger:tb-225-247",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "225-247",
+      "section": "Birth season/hour and appendices",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped but unread; contextual and calculation-sensitive."
+    },
+    {
+      "rangeId": "ledger:tb-248-271",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "248-271",
+      "section": "Part III — fortune-period interpretation",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped but unread; placement and precedence remain profile-sensitive."
+    },
+    {
+      "rangeId": "ledger:tb-272-275",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "272-275",
+      "section": "Worked charts",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Future observation-only review; never generalize examples directly into rules."
+    },
+    {
+      "rangeId": "ledger:tb-276-277",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "276-277",
+      "section": "Ebook credit and end page",
+      "status": "EXCLUDED",
+      "checkpoint": "checkpoint-1",
+      "note": "Provenance clue only; no domain extraction planned."
+    },
+    {
+      "rangeId": "ledger:th-001-020",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "1-20",
+      "section": "Opening and Volume I chapter 1",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped but unread for knowledge extraction."
+    },
+    {
+      "rangeId": "ledger:th-021-022",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "21-22",
+      "section": "Chapter 2 opening",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Adjacent to pilot range but not substantively read."
+    },
+    {
+      "rangeId": "ledger:th-023-032",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "23-32",
+      "section": "Analytic, synthetic and dynamic method",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-2",
+      "note": "Ten pilot pages; not reprocessed in batch 1."
+    },
+    {
+      "rangeId": "ledger:th-033-060",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "33-60",
+      "section": "Philosophy and cultural context",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped; internal chapter boundary still requires visual reconciliation."
+    },
+    {
+      "rangeId": "ledger:th-061-068",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "61-68",
+      "section": "Chapter 5 — palace dynamics, aspects, adjacency and period relations",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-3-batch-1",
+      "note": "Eight pages read; all retained locators visually checked."
+    },
+    {
+      "rangeId": "ledger:th-069-070",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "69-70",
+      "section": "Context-dependent palace importance by age, sex and health",
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-1",
+      "note": "Read and visually checked; historical gender, age and health claims are not admitted as reusable personal inferences."
+    },
+    {
+      "rangeId": "ledger:th-071-076",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "71-76",
+      "section": "Chapter 6 — concept, meaning and contextual interpretation of stars",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-3-batch-1",
+      "note": "Six pages read; converted VNI remained imperfect, so candidate wording was verified from page images."
+    },
+    {
+      "rangeId": "ledger:th-077-082",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "77-82",
+      "section": "Vietnamese/Chinese star-count variants and star-rank tables",
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-1",
+      "note": "Six pages read. The author reports variant catalogs and secondary books, but lineage, completeness and numerical/rank semantics remain unverified."
+    },
+    {
+      "rangeId": "ledger:th-083-101",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "83-101",
+      "section": "Remaining chapter 6 star/state material",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped but unread for knowledge extraction."
+    },
+    {
+      "rangeId": "ledger:th-102-103",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "102-103",
+      "section": "Volume II transition",
+      "status": "EXCLUDED",
+      "checkpoint": "checkpoint-1",
+      "note": "Navigation and title transition; no current domain extraction planned."
+    },
+    {
+      "rangeId": "ledger:th-104-107",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "104-107",
+      "section": "Volume II chapter 1 — interpretation method opening",
+      "status": "COMPLETED",
+      "checkpoint": "checkpoint-2",
+      "note": "Four pilot pages; not reprocessed in batch 1."
+    },
+    {
+      "rangeId": "ledger:th-108-128",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "108-128",
+      "section": "Remaining interpretation method",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Pages 108-110 were mechanically extracted during the pilot but not substantively read and remain pending."
+    },
+    {
+      "rangeId": "ledger:th-129-421",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "129-421",
+      "section": "Volume II chapters 2-24",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped thematic configurations and examples; future batches must split at chapter boundaries."
+    },
+    {
+      "rangeId": "ledger:th-422-435",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "422-435",
+      "section": "Concluding chapter",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Mapped methodology/context; unread for extraction."
+    },
+    {
+      "rangeId": "ledger:th-436-442",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "436-442",
+      "section": "Full contents",
+      "status": "EXCLUDED",
+      "checkpoint": "checkpoint-1",
+      "note": "Navigation only; may be used to reconcile section boundaries but not as knowledge evidence."
+    }
+  ],
+  "batch1": {
+    "newPagesProcessed": 40,
+    "ranges": [
+      "ledger:tb-034-041",
+      "ledger:tb-042-051",
+      "ledger:th-061-068",
+      "ledger:th-069-070",
+      "ledger:th-071-076",
+      "ledger:th-077-082"
+    ],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "45,48",
+        "result": "Visually checked; content is mostly uncataloged auxiliary-star descriptions or sensitive event claims and was not silently converted into candidates."
+      },
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "61,69,82",
+        "result": "Visually checked; page 61 is chapter transition/context, page 69 contains sensitive age/sex framing, and page 82 is a secondary classification table requiring review."
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate:k14b1-tb-major-star-state-table",
+      "disposition": "MERGE",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.34-38, 3.2-3.14",
+      "subjectIds": [
+        "star:lian-zhen",
+        "star:tian-tong",
+        "star:wu-qu",
+        "star:tai-yang",
+        "star:tian-ji",
+        "star:tian-fu",
+        "star:tai-yin",
+        "star:tan-lang",
+        "star:ju-men",
+        "star:tian-xiang",
+        "star:tian-liang",
+        "star:qi-sha",
+        "star:po-jun",
+        "state:mieu",
+        "state:vuong",
+        "state:dac-dia",
+        "state:ham"
+      ],
+      "conditions": [
+        "The state labels are read as this book's branch-specific descriptions for the named major stars."
+      ],
+      "neutralStatement": "The source supplies branch-based miếu, vượng, đắc and hãm descriptions for thirteen major stars in the completed continuation of its major-star catalog.",
+      "evidenceType": "source-table-like catalog",
+      "limitations": [
+        "The Tử Vi subsection begins on pilot page 33 and is not re-extracted here.",
+        "No state lookup is activated and no favorable/adverse polarity is generalized across stars."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds Vietnamese-book provenance and explicit branch variants to existing star/state entities; merge rather than duplicate the catalog."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-thien-phu-mitigation-limit",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.36, 3.7 Thiên Phủ",
+      "subjectIds": [
+        "star:tian-fu",
+        "star:kinh-duong",
+        "star:da-la",
+        "star:hoa-tinh",
+        "star:linh-tinh"
+      ],
+      "conditions": ["Thiên Phủ is considered with one or more of Kình, Đà, Hỏa and Linh."],
+      "neutralStatement": "The source describes Thiên Phủ as moderating individual adverse stars but explicitly limits that mitigation when all four named stars are present.",
+      "evidenceType": "author-described conditional exception",
+      "limitations": [
+        "No magnitude, precedence or outcome is assigned.",
+        "The complete four-star condition must not be reduced to separate pairwise rules."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New explicit exception structure relative to K12/K13."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-sun-moon-context-variants",
+      "disposition": "REVIEW",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.35-36, 3.5 Thái Dương and 3.8 Thái Âm",
+      "subjectIds": [
+        "star:tai-yang",
+        "star:tai-yin",
+        "state:mieu",
+        "state:vuong",
+        "state:dac-dia",
+        "state:ham"
+      ],
+      "conditions": [
+        "The source combines positional state with day/night birth context, lunar phase for Thái Âm, and named companion or obstruction stars."
+      ],
+      "neutralStatement": "The source treats Thái Dương and Thái Âm meanings as conditional on state, birth-time context and named co-occurring or obstructing factors.",
+      "evidenceType": "author-described contextual variants",
+      "limitations": [
+        "Lunar-phase, Tuần/Triệt and companion-star dependencies are not fully represented in the current catalog.",
+        "Historical kinship and personal-outcome claims are excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Extends K13's state context but requires missing dependencies before normalization."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-assistant-context-amplifier",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.39, 3.19 Tả Phụ - Hữu Bật",
+      "subjectIds": ["star:ta-phu", "star:huu-bat"],
+      "conditions": [
+        "Tả Phụ or Hữu Bật is interpreted with an existing surrounding set of favorable or adverse stars."
+      ],
+      "neutralStatement": "The source treats the assistant pair as contextual amplifiers rather than as independently favorable in every configuration.",
+      "evidenceType": "author-described methodology",
+      "limitations": [
+        "The source gives no geometry, threshold or weight.",
+        "No polarity is assigned without the surrounding configuration."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Semantically overlaps K13 assistant-conditioned star statements; merge the provenance and amplifier limitation."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-tu-hoa-not-fixed-polarity",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.40-41, 3.23-3.26",
+      "subjectIds": [
+        "concept:tu-hoa",
+        "star:wu-qu",
+        "star:tan-lang",
+        "star:ju-men",
+        "star:lian-zhen"
+      ],
+      "conditions": [
+        "A named Hóa star is read together with a named co-located or joined star set."
+      ],
+      "neutralStatement": "The four Hóa descriptions include both reinforcement and limiting variants, so their source meanings are not presented as context-free fixed polarity.",
+      "evidenceType": "source catalog with named conditional variants",
+      "limitations": [
+        "Can-to-Hóa mapping is not included.",
+        "Medical, legal and event outcomes are excluded; only the contextual dependency is retained."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Broadens K13 Tứ Hóa context without duplicating a specific existing statement."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-thien-ma-combination-family",
+      "disposition": "REVIEW",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.42-43, 3.30 Thiên Mã",
+      "subjectIds": [
+        "star:thien-ma",
+        "star:loc-ton",
+        "star:hoa-tinh",
+        "star:linh-tinh",
+        "star:zi-wei",
+        "star:tian-fu"
+      ],
+      "conditions": [
+        "Thiên Mã appears with one of several explicitly named co-location or aspect combinations."
+      ],
+      "neutralStatement": "The source organizes Thiên Mã interpretation into named combination variants whose meanings change with companion stars and relation type.",
+      "evidenceType": "named configuration family",
+      "limitations": [
+        "Several companion entities and relation terms are not cataloged.",
+        "Occupational, injury, death and status predictions are not admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New family-level observation; blocked from normalized rules by missing entities and sensitive claims."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-twelve-stage-vocabulary",
+      "disposition": "REVIEW",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.49-51, 3.74-3.85",
+      "subjectIds": ["concept:yin-yang", "concept:wu-xing"],
+      "conditions": [
+        "The twelve named stages are used as a sequence in this source's auxiliary-star vocabulary."
+      ],
+      "neutralStatement": "The source presents a twelve-stage sequence from Tràng Sinh through Dưỡng and attaches contextual descriptions to individual stages.",
+      "evidenceType": "source vocabulary sequence",
+      "limitations": [
+        "The current foundation catalog has no stable entities for the twelve stages.",
+        "No placement algorithm or personal effect is admitted from these pages."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Potential catalog gap rather than a rule; requires ontology review before merge."
+    },
+    {
+      "candidateId": "candidate:k14b1-tb-sensitive-auxiliary-claims",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.41-51, selected auxiliary-star descriptions",
+      "subjectIds": [],
+      "conditions": [
+        "The local descriptions directly assert medical, legal, reproductive, violent or event outcomes."
+      ],
+      "neutralStatement": "The reviewed auxiliary-star section contains numerous direct historical outcome claims.",
+      "evidenceType": "source claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack a safe modern interpretation boundary and adequate exception structure.",
+        "They are retained only as a rejection record, not as meanings or rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Rejected; no Knowledge Base statement is created."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-palace-whole-chart-review",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.62-64, A and B.1",
+      "subjectIds": [
+        "palace:menh",
+        "concept:yin-yang",
+        "concept:wu-xing",
+        "relation:opposes",
+        "relation:trines-with"
+      ],
+      "conditions": ["A palace is being interpreted within a complete chart."],
+      "neutralStatement": "The source rejects isolated-palace reading and requires the focal palace to be reviewed within the twelve-palace and aspect context.",
+      "evidenceType": "author-described methodology",
+      "limitations": [
+        "The text's philosophical explanation is not treated as calculation evidence.",
+        "No profile geometry is activated."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Merges with pilot and K13 non-isolation methodology while adding the full chapter context."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-aspect-priority-order",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.64, B.1 Hệ thống phối chiếu",
+      "subjectIds": [
+        "relation:opposes",
+        "relation:trines-with",
+        "relation:joined-aspect",
+        "relation:source-described-brackets"
+      ],
+      "conditions": ["The source's own palace-review method is being described."],
+      "neutralStatement": "The author gives a qualitative review order led by the focal palace, followed by opposing and trine contexts, then nhị hợp and adjacent contexts.",
+      "evidenceType": "author-described ordering",
+      "limitations": [
+        "This is not an approved evaluator order or numerical weight.",
+        "Nhị hợp and adjacency are not active-profile relation mappings."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New explicit qualitative order; pilot recorded the seven-palace set but not this ordering."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-aspect-semantic-exceptions",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.64-66, examples under xung chiếu and tam chiếu",
+      "subjectIds": [
+        "relation:opposes",
+        "relation:trines-with",
+        "palace:phuc-duc",
+        "palace:menh",
+        "palace:tat-ach",
+        "palace:tu-tuc",
+        "palace:dien-trach",
+        "palace:no-boc"
+      ],
+      "conditions": [
+        "A source-described palace relationship is being interpreted semantically rather than merely geometrically."
+      ],
+      "neutralStatement": "The author distinguishes palace networks considered meaningful from others considered partial, weak or exception-prone, and advises against assuming equal semantic force for every geometric relation.",
+      "evidenceType": "author critique with counterexamples",
+      "limitations": [
+        "The source's individual health, inheritance and family examples are not retained as personal claims.",
+        "No geometry is confirmed for the target profile."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New exception-bearing limitation on palace-network semantics."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-adjacency-contextual",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.66-67, b) Thế giáp",
+      "subjectIds": [
+        "relation:source-described-brackets",
+        "palace:menh",
+        "palace:no-boc",
+        "palace:dien-trach",
+        "palace:phu-the",
+        "palace:tat-ach"
+      ],
+      "conditions": [
+        "Adjacent-palace meaning is assessed using the named palace domains and actual context."
+      ],
+      "neutralStatement": "The source treats adjacency as context-dependent: some named adjacencies are described as direct, while others are one-sided or conditional.",
+      "evidenceType": "author-described method with positive and negative examples",
+      "limitations": [
+        "Adjacency has no dedicated active relation entity.",
+        "The examples do not authorize personalized family, health or financial conclusions."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds explicit exceptions to the pilot's unresolved adjacency vocabulary."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-nhi-hop-limited",
+      "disposition": "REVIEW",
+      "knowledgeType": "conflict",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.67, c) Thế nhị hợp",
+      "subjectIds": ["relation:joined-aspect", "palace:menh", "palace:tat-ach", "palace:tu-tuc"],
+      "conditions": [
+        "Nhị hợp is being considered as palace-domain meaning rather than star context."
+      ],
+      "neutralStatement": "The author discounts direct palace-domain meaning from nhị hợp and instead favors reviewing the stars in the paired palaces.",
+      "evidenceType": "author-stated limitation",
+      "limitations": [
+        "The current joined-aspect entity may not be equivalent to the source's nhị hợp term.",
+        "This variant is preserved as a conflict, not selected as the active method."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Potential conflict with broader joined-aspect usage; terminology mapping must be reviewed."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-period-hierarchy",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.67-68, 2.a-2.b",
+      "subjectIds": ["palace:menh", "palace:phuc-duc", "period:dai-han", "period:tieu-han"],
+      "conditions": ["A shorter period is reviewed within broader natal and period contexts."],
+      "neutralStatement": "The source places Mệnh and Thân context above Đại hạn and Đại hạn above Tiểu hạn, while describing the shorter layer as modifying rather than independently overriding the broader layer.",
+      "evidenceType": "author-described hierarchy",
+      "limitations": [
+        "No placement algorithm, numerical precedence or event prediction is admitted.",
+        "The source's age boundaries are not promoted into the target profile."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Merges with the pilot period-nesting candidate and adds an explicit broader-to-shorter hierarchy."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-sensitive-demographic-palace-claims",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.69-70, c) Ý nghĩa toàn diện của một số cung",
+      "subjectIds": [],
+      "conditions": [
+        "The section changes palace importance using historical age, sex and health categories."
+      ],
+      "neutralStatement": "The source proposes context-specific palace priorities for children, women, older adults and ill people.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "The framing contains medical, mortality, gender and dependency assumptions unsuitable for direct modern personalization.",
+        "No safe or profile-compatible transformation is established."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Rejected from the Knowledge Base; retained as a reviewed exclusion."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-star-as-symbolic-factor",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.71-72, A. Quan niệm cần có về các sao",
+      "subjectIds": ["star:zi-wei", "concept:yin-yang", "concept:wu-xing"],
+      "conditions": ["The author's conceptual model of a star is being described."],
+      "neutralStatement": "The author treats star names as conventional labels for human and life factors rather than as literal celestial bodies or deities.",
+      "evidenceType": "author conceptual definition",
+      "limitations": [
+        "This is the author's methodological interpretation, not a verified historical fact about origin.",
+        "It does not validate any star meaning or personalized claim."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New conceptual framing relative to K12/K13."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-nine-meaning-categories",
+      "disposition": "REVIEW",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.72-73, B.1 Chín loại ý nghĩa",
+      "subjectIds": [
+        "star:wen-chang",
+        "star:wen-qu",
+        "star:thien-ma",
+        "star:hoa-tinh",
+        "star:kinh-duong"
+      ],
+      "conditions": ["Star meanings are classified using this author's nine-category taxonomy."],
+      "neutralStatement": "The source classifies star descriptions into bodily, appearance, illness, temperament, occupation, wealth, property, fortune/adversity and object-related categories.",
+      "evidenceType": "author taxonomy",
+      "limitations": [
+        "The taxonomy includes sensitive health, sexuality and event examples that are not admitted.",
+        "Current ontology does not model these nine categories and should not be expanded without architecture review."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New taxonomy candidate; review before any ontology change."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-co-location-and-aspect-strength",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.74, B.2 Ý nghĩa liên đới giữa các sao",
+      "subjectIds": [
+        "relation:co-located",
+        "relation:opposes",
+        "relation:trines-with",
+        "relation:joined-aspect",
+        "relation:source-described-brackets"
+      ],
+      "conditions": ["Multiple stars form a source-described combination."],
+      "neutralStatement": "The author distinguishes stronger direct interaction under co-location from progressively more indirect aspect contexts, while warning that fine-grained distinctions are not always applied consistently.",
+      "evidenceType": "author-described relation hierarchy with caveat",
+      "limitations": [
+        "No numeric strength or active evaluator precedence is admitted.",
+        "The relation labels require target-profile geometry review."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds an explicit caveated relation hierarchy to K13."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-contextual-star-factors",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.74-76, B.2-B.3",
+      "subjectIds": [
+        "relation:co-located",
+        "relation:opposes",
+        "relation:trines-with",
+        "concept:yin-yang",
+        "concept:wu-xing",
+        "state:mieu",
+        "state:ham"
+      ],
+      "conditions": ["A star meaning is being interpreted rather than merely cataloged."],
+      "neutralStatement": "The source requires star meaning to vary with combination, time context, placement, convergence, yin-yang/five-phase fit and real-world context.",
+      "evidenceType": "author-described contextual methodology",
+      "limitations": [
+        "Historical examples are not retained as personal conclusions.",
+        "No factor is assigned a weight, polarity or conflict-resolution algorithm."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Extends the pilot's context-dependence candidate with a bounded factor list."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-vietnamese-chinese-star-catalog-conflict",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "conflict",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.77-80, C.1-C.3 and D.1",
+      "subjectIds": [
+        "star:zi-wei",
+        "star:tian-fu",
+        "star:loc-ton",
+        "star:wen-chang",
+        "star:wen-qu",
+        "star:ta-phu",
+        "star:huu-bat"
+      ],
+      "conditions": [
+        "The source compares star-count and main-star classifications attributed to Vietnamese and Chinese books."
+      ],
+      "neutralStatement": "The author reports a Vietnamese catalog of 111 stars with fourteen main stars and contrasts it with Chinese-source variants of 82, 110 or 123 stars and a nineteen-main-star classification.",
+      "evidenceType": "author bibliographic comparison",
+      "limitations": [
+        "The cited books and counts have not been independently collated in this checkpoint.",
+        "This does not prove a unified Vietnamese school or the target Nam Phái profile."
+      ],
+      "profileStatus": "profile-claim-unverified",
+      "duplicateAssessment": "New explicit catalog and classification conflict; preserve variants instead of reconciling them."
+    },
+    {
+      "candidateId": "candidate:k14b1-th-star-rank-tables",
+      "disposition": "REVIEW",
+      "knowledgeType": "conflict",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.80-82, D. Nhận định về độ số các sao",
+      "subjectIds": [
+        "star:zi-wei",
+        "star:tian-fu",
+        "star:tai-yang",
+        "star:tai-yin",
+        "star:loc-ton",
+        "star:wen-chang",
+        "star:wen-qu",
+        "star:ta-phu",
+        "star:huu-bat"
+      ],
+      "conditions": [
+        "Star strength classifications from the compared source traditions are being recorded as variants."
+      ],
+      "neutralStatement": "The section records competing main/auxiliary and rank classifications and explicitly notes unresolved inconsistencies in the compared tables.",
+      "evidenceType": "secondary classification tables with author caveats",
+      "limitations": [
+        "No rank is accepted as a weight, score or production ordering.",
+        "The embedded tables and cited editions need separate collation before normalization."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Research conflict only; blocked from rule or scoring use."
+    }
+  ],
+  "unresolvedIssues": [
+    {
+      "issueId": "k14-vni-partial-conversion",
+      "bookId": "book-k14-tong-hop",
+      "status": "BLOCKED_FOR_AUTOMATED_ADMISSION",
+      "detail": "The converter improves many VNI sequences but leaves systematic artifacts such as Tưû, hơïp and ngươøi. Rendered pages remain authoritative."
+    },
+    {
+      "issueId": "k14-lineage-between-books",
+      "status": "UNRESOLVED",
+      "detail": "Different titles and authors do not establish independent textual families; no corroboration claim is made."
+    },
+    {
+      "issueId": "k14-missing-auxiliary-entities",
+      "status": "REVIEW",
+      "detail": "Pages 42-51 contain many auxiliary stars and twelve-stage terms absent from the current foundation catalog. They are not added implicitly through candidate statements."
+    },
+    {
+      "issueId": "k14-active-geometry",
+      "status": "UNRESOLVED",
+      "detail": "Xung chiếu, tam chiếu, nhị hợp and adjacency language remains source-described and is not mapped to active profile geometry."
+    }
+  ]
+}

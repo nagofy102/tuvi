@@ -120,6 +120,15 @@ claim cá nhân rủi ro. Dừng trước Checkpoint 3; xem
 `../dev/knowledge-k14-book-discovery.md` và
 `../dev/knowledge-k14-book-pilot.json`.
 
+HV-K14 Checkpoint 3 batch 1 (16/10) đã xử lý thêm 40 trang không trùng pilot:
+Tân Biên 34–51 và Tổng Hợp 61–82. Acquisition Ledger hiện gán trạng thái cho
+toàn bộ page ranges của hai sách chính; lũy kế đã đọc thực chất 63/1.022 trang.
+Batch tạo 9 ACCEPT AS RESEARCH, 4 MERGE, 6 REVIEW và 2 REJECT; không candidate
+nào được nâng thành profile-compatible hoặc production-eligible. VNI vẫn chỉ là
+công cụ điều hướng, ảnh PDF là chuẩn QA. Dừng trước batch 2 để PO duyệt; xem
+`../dev/knowledge-k14-book-discovery.md` và
+`../dev/knowledge-k14-acquisition.json`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

@@ -1,10 +1,10 @@
 # HV-K14 — Book-driven knowledge discovery
 
-Status: **CHECKPOINT 2 COMPLETE — PO REVIEW REQUIRED** (research-only).
-Checkpoint 1 inventoried three PDFs. The approved controlled pilot has now read
-and visually checked 23 representative pages, retained research candidates and
-stopped before library-scale extraction. No profile claim or production rule was
-created.
+Status: **CHECKPOINT 3 BATCH 1 COMPLETE — PO REVIEW REQUIRED** (research-only).
+Checkpoint 1 inventoried three PDFs, Checkpoint 2 piloted 23 pages, and the first
+controlled Checkpoint 3 batch processed 40 additional pages from the two primary
+books. The acquisition ledger and retained candidates are stored in
+`knowledge-k14-acquisition.json`. No profile claim or production rule was created.
 
 ## Book inventory
 
@@ -292,7 +292,110 @@ therefore be planned by semantic section and encoding risk, not raw page count.
 4. Keep Tự Xem 2009 deferred unless stronger bibliography and method evidence is
    provided.
 
+## Checkpoint 3 batch 1 — controlled acquisition result
+
+Checkpoint 3 introduces the page-status ledger in
+`knowledge-k14-acquisition.json`. It imports the completed pilot boundaries,
+keeps mechanically extracted-but-unread pages pending and assigns every mapped
+range in the two primary books one of `COMPLETED`, `PENDING`, `REVIEW`,
+`BLOCKED` or `EXCLUDED`. The ledger is a progress control, not evidence that a
+pending page lacks useful knowledge.
+
+### Batch coverage and ledger
+
+| Book              | New pages read | Batch ranges | Processing result                                                                                         |
+| ----------------- | -------------: | ------------ | --------------------------------------------------------------------------------------------------------- |
+| Tân Biên          |             18 | 34–51        | 34–41 completed; 42–51 reviewed but held for missing auxiliary entities and sensitive claims              |
+| Tổng Hợp          |             22 | 61–82        | 61–68 and 71–76 completed; 69–70 and 77–82 held for demographic claims, lineage and classification review |
+| **Batch 1 total** |         **40** |              | 22 `COMPLETED` pages plus 18 substantively read `REVIEW` pages                                            |
+
+The batch does not overlap pilot pages. Cumulative substantive reading is now
+**63 / 1,022 PDF pages**: 24 pages from Tân Biên, 36 from Tổng Hợp and the
+three-page Tự Xem negative control. This is 63 pages read, not 63 pages admitted
+to the Knowledge Base. No range is currently `BLOCKED`; automated admission of
+unverified converted Tổng Hợp text remains blocked.
+
+### Candidate result and new knowledge
+
+| Disposition          | Count | Batch 1 result                                                                                                                                     |
+| -------------------- | ----: | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ACCEPT_AS_RESEARCH` |     9 | Conditional mitigation, Tứ Hóa context, aspect/adjacency exceptions, symbolic-star framing, contextual factors and a preserved catalog conflict    |
+| `MERGE`              |     4 | Major-star state provenance, assistant amplification, whole-chart review and period hierarchy overlap existing knowledge                           |
+| `REVIEW`             |     6 | Sun/Moon dependencies, Thiên Mã configurations, twelve-stage vocabulary, nhị hợp terminology, meaning taxonomy and rank tables need further review |
+| `REJECT`             |     2 | Sensitive direct auxiliary-star outcomes and demographic/health palace claims are not reusable knowledge                                           |
+
+The strongest additions relative to K12/K13 and the pilot are:
+
+- an explicit Thiên Phủ mitigation exception that preserves the simultaneous
+  four-star condition rather than producing pairwise rules;
+- a source-described qualitative palace/aspect review order, coupled with the
+  author's own counterexamples showing that geometry does not guarantee equal
+  semantic force;
+- explicit contextual limits for adjacency and nhị hợp instead of treating all
+  spatial labels as interchangeable;
+- a broader star-interpretation factor set covering combination, time, placement,
+  convergence, yin-yang/five-phase fit and real-world context without weights;
+- a documented conflict between star counts and main-star classifications
+  attributed by the author to Vietnamese and Chinese book traditions.
+
+No candidate is profile-compatible or production-eligible. The batch adds no
+entity implicitly: the twelve-stage cycle and uncataloged auxiliary stars remain
+ontology-review gaps. Different titles and authors still do not prove independent
+textual families.
+
+### Extraction and page QA
+
+Tân Biên's Unicode layer remained suitable for section reading. Tổng Hợp was
+again passed through the temporary `vietnamese-conversion@2.0.0` reader, but the
+result still contained systematic partial conversions such as `Tưû`, `hơïp` and
+`ngươøi`. Rendered PDF pages therefore remained authoritative, and no converted
+text was committed.
+
+All 40 pages were rendered and inspected as section contact sheets. Every retained
+candidate locator was checked on its page image. Random no-yield checks covered
+Tân Biên pages 45 and 48 and Tổng Hợp pages 61, 69 and 82; their catalog gaps,
+sensitive framing or secondary-table status were recorded instead of being
+silently converted into yield. Pages 34 and 61 also confirm boundary handling:
+page 34 continues the Tử Vi subsection begun on pilot page 33, while page 61 is
+chapter transition/context, so neither was treated as a fresh complete section.
+
+### Proposed batch 2
+
+Keep the next batch at approximately **36–44 pages**, not the maximum 60, because
+Tổng Hợp requires image-level QA:
+
+1. Tân Biên pages 52–69: the opening bounded Mệnh/Thân subsections, with direct
+   personal and medical outcomes held for review.
+2. Tổng Hợp pages 83–101: finish chapter 6 on star states and special cases,
+   treating tables as variants and excluding any calculation/profile promotion.
+3. Do not start Volume II themes or worked charts in the same batch. Reconcile
+   the twelve-stage and missing auxiliary-entity gap before normalizing those
+   vocabularies.
+
+PO should decide whether the star-catalog conflict and twelve-stage vocabulary
+remain isolated in the acquisition dataset or are approved for a later merge into
+the shared research catalog. Batch 2 must not begin without that review.
+
 ## Verification
+
+Checkpoint 3 batch 1:
+
+- PASS: acquisition JSON parses; book, ledger-range and candidate IDs are unique;
+  all book references resolve.
+- PASS: the ledger covers every PDF page of both primary books exactly once with
+  no gaps or overlaps; pilot and batch boundaries reconcile to 63 cumulative
+  substantively read pages.
+- PASS: all non-rejected candidate subject IDs resolve to the K06 foundation
+  catalog; locators, conditions, evidence type, limitations, profile status and
+  duplicate assessment are present.
+- PASS: candidate totals reconcile to 9 `ACCEPT_AS_RESEARCH`, 4 `MERGE`, 6
+  `REVIEW` and 2 `REJECT`; no candidate is profile-compatible or
+  production-eligible.
+- PASS: PDF SHA-256 values match Checkpoint 1; retained locators and random
+  no-yield samples were visually checked, including partial VNI conversion.
+- PASS: targeted Prettier and `git diff --check`.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
+  typecheck, build and E2E (research-only data has no production consumer).
 
 Checkpoint 2:
 
