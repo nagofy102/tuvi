@@ -122,9 +122,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "124-157",
       "section": "Palace sections before Quan Lộc",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Mapped but unread for knowledge extraction."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-6",
+      "note": "Thirty-four pages read and visually checked. The book names Phụ Mẫu, Phúc Đức and Điền Trạch sections, but most contextual claims are historical personal, family, property or ancestral-site outcomes; void-main-star geometry remains unresolved."
     },
     {
       "rangeId": "ledger:tb-158-160",
@@ -411,11 +411,22 @@
       }
     ]
   },
+  "batch6": {
+    "newPagesProcessed": 34,
+    "ranges": ["ledger:tb-124-157"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "125, 132, 140, 146, 154",
+        "result": "Visually checked. The pages contain direct family, health, property, death or ancestral-site claims; none was admitted as a reusable meaning, rule or fixture."
+      }
+    ]
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-5",
+    "checkpointId": "k14c-after-batch-6",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "7dceea6c0ef4078e381c9fafc06a4ee77b7aa3c4",
+    "baseCommit": "c4a8ece1ed4bc42d5d5afefbda8d6625002a8e17",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -427,6 +438,7 @@
       "ledger:tb-052-075",
       "ledger:tb-076-093",
       "ledger:tb-094-123",
+      "ledger:tb-124-157",
       "ledger:tb-158-160",
       "ledger:th-023-032",
       "ledger:th-061-068",
@@ -439,12 +451,11 @@
       "ledger:th-104-107",
       "ledger:th-108-128"
     ],
-    "nextPendingPriority": ["ledger:tb-124-157", "ledger:th-129-149"],
-    "batch5CandidateIds": [
-      "candidate:k14b5-th-multistar-context-merge",
-      "candidate:k14b5-th-period-hierarchy-review",
-      "candidate:k14b5-th-interpretation-limit-accept",
-      "candidate:k14b5-th-sensitive-outcomes-reject"
+    "nextPendingPriority": ["ledger:th-129-149", "ledger:tb-161-224"],
+    "batch6CandidateIds": [
+      "candidate:k14b6-tb-palace-section-scope-merge",
+      "candidate:k14b6-tb-void-main-star-review",
+      "candidate:k14b6-tb-sensitive-palace-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -453,7 +464,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Continue autonomously with a separately bounded Tân Biên palace-section slice; retain visual QA for any Total Hợp return.",
+    "nextAction": "Three-batch aggregate checkpoint saved; continue autonomously with a separately bounded Tổng Hợp slice if context remains safe.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1332,6 +1343,64 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for this VNI-reviewed range; permitted methodology and limitations are recorded separately."
+    },
+    {
+      "candidateId": "candidate:k14b6-tb-palace-section-scope-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.124, 132 and 149, section headings 5 Cung Phụ Mẫu, 6 Cung Phúc Đức and 7 Cung Điền Trạch",
+      "subjectIds": ["palace:phu-mau", "palace:phuc-duc", "palace:dien-trach"],
+      "conditions": [
+        "The book introduces these three named palace sections before its contextual entries."
+      ],
+      "neutralStatement": "The source explicitly organizes separate contextual discussions under Phụ Mẫu, Phúc Đức and Điền Trạch headings, providing additional Vietnamese-book provenance for the existing palace vocabulary.",
+      "evidenceType": "source section structure",
+      "limitations": [
+        "The headings do not by themselves verify target-profile equivalence, palace geometry or any particular interpretive outcome.",
+        "The following direct personal, family, property and ancestral-site claims are excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with the existing palace catalog; this is provenance only, not a new palace meaning or function."
+    },
+    {
+      "candidateId": "candidate:k14b6-tb-void-main-star-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.143, Phúc Đức vô Chính diệu with Nhật/Nguyệt aspect language",
+      "subjectIds": ["palace:phuc-duc", "relation:opposes", "relation:joined-aspect"],
+      "conditions": [
+        "The source discusses a Phúc Đức case described as void of a major star and refers to aspecting stars."
+      ],
+      "neutralStatement": "The book records a void-main-star palace case whose discussion depends on named aspect context rather than the palace label alone.",
+      "evidenceType": "source-described contextual case",
+      "limitations": [
+        "Void-main-star identity and active target-profile geometry remain unresolved.",
+        "The source's direct fortune, lifespan and family claims are excluded; this cannot activate a rule or calculation."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Related to earlier void-main-star review records, but preserves a different palace context without selecting an active geometry."
+    },
+    {
+      "candidateId": "candidate:k14b6-tb-sensitive-palace-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.124-157, Phụ Mẫu, Phúc Đức and Điền Trạch entries",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps placements and combinations to direct parent, family, property, health, death or ancestral-site outcomes."
+      ],
+      "neutralStatement": "The reviewed palace entries contain direct historical claims about parents, family, lifespan, property, misfortune and physical ancestral sites.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "No approved profile or safe modern interpretation policy is supplied.",
+        "The claims must not become a score, fixture, personalized claim or production rule."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the range; only section provenance and a profile-unresolved contextual case are retained separately."
     }
   ],
   "unresolvedIssues": [

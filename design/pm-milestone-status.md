@@ -163,6 +163,14 @@ do tác giả nêu), 1 MERGE, 1 REVIEW cho thứ bậc hạn chưa tương thíc
 đây là `RECOVERABLE`, đã cô lập trong ledger, không là blocker. Không thay
 runtime, calculation, UI hay trạng thái production.
 
+HV-K14-C batch 6 (16/10) đọc thêm Tân Biên 124–157 (34 trang), nâng lũy kế
+lên 209/1.022 trang. Ba batch tự động 4–6 đã xử lý 85 trang, tạo 1 ACCEPT AS
+RESEARCH, 3 MERGE, 3 REVIEW và 3 REJECT. Kết quả chỉ bổ sung provenance/phương
+pháp có giới hạn; không có rule dự đoán dùng được, profile-compatible hay
+production-eligible. Không có blocker về quyền/provenance/schema/ledger; session
+dừng có kiểm soát vì context budget sau checkpoint, với queue kế tiếp Tổng Hợp
+129–149 và resume checkpoint đã lưu.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

@@ -562,6 +562,47 @@ unresolved mechanics are isolated. The next autonomous priority is Tân Biên
 - NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
   typecheck, build and E2E (research-only data has no production consumer).
 
+## HV-K14-C batch 6 — aggregate checkpoint
+
+Tân Biên PDF/printed pages 124–157 were read as a 34-page palace-section batch.
+The section headings add `MERGE` provenance for the existing Phụ Mẫu, Phúc Đức
+and Điền Trạch vocabulary. A void-main-star Phúc Đức case is held in `REVIEW`
+because the source depends on unresolved aspect geometry. The range's direct parent,
+family, property, health, death and ancestral-site claims are retained only as one
+bounded `REJECT` record.
+
+All pages were rendered and visually inspected. No-yield QA covered pages 125, 132,
+140, 146 and 154. The ledger marks the entire range `REVIEW` because its page
+coverage is complete but its contextual mechanics cannot be normalized safely.
+Cumulative substantive reading is **209 / 1,022 PDF pages**: 130 Tân Biên, 76 Tổng
+Hợp and three Tự Xem control pages.
+
+### Three-batch autonomous aggregate (Batches 4–6)
+
+The three batches processed **85 pages**. Knowledge yield is deliberately limited:
+1 `ACCEPT_AS_RESEARCH`, 3 `MERGE`, 3 `REVIEW` and 3 `REJECT`. The retained value is
+traceable methodology, section provenance and explicit incompleteness; no usable
+substantive prediction or target-profile rule emerged. VNI is controlled through
+visual QA, so it remains `RECOVERABLE`; target-profile geometry, period mechanics,
+Khôi/Việt identities and void-main-star terminology remain unresolved. There is no
+`BLOCKING` provenance, rights, ledger or schema failure.
+
+The durable checkpoint directs the next batch to Tổng Hợp 129–149. Autonomous
+continuation remains authorized, but this session stops here because its context
+budget is no longer safe for another complete source-read/QA cycle. No profile or
+production status changed.
+
+### Verification — HV-K14-C batch 6
+
+- PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
+  with no gap or overlap; Batch 6 reconciles to 34 new pages.
+- PASS: hashes match Checkpoint 1; non-rejected subject IDs resolve; the `REVIEW`
+  record has reason, locator, conditions, evidence type, limitations, profile status and duplicate assessment.
+- PASS: retained locators and five no-yield samples were visually checked.
+- PASS: targeted Prettier and `git diff --check`; no profile or production status changed.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
+  typecheck, build and E2E (research-only data has no production consumer).
+
 ## Verification — HV-K14-C batch 3
 
 - PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
