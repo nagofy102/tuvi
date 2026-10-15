@@ -592,6 +592,40 @@ continuation remains authorized, but this session stops here because its context
 budget is no longer safe for another complete source-read/QA cycle. No profile or
 production status changed.
 
+## HV-K14-C batch 7 — knowledge-yield optimization
+
+Tổng Hợp PDF/printed pages 129–149 were read as a 21-page batch, with the VNI
+text used only to navigate and rendered pages used for every retained locator.
+The chapter's broad chart-quality material overlaps existing multi-factor
+methodology. Two `MERGE` records preserve its bounded provenance: a chart-quality
+framework combines concurrent yin-yang, five-phase, palace, star and configuration
+contexts; a second passage connects stated yin-yang/five-phase considerations to
+Mệnh/Thân context. Neither record selects the source's gender, stem/branch,
+precedence or outcome formulation.
+
+The same range contains direct grading of people and charts, physical-appearance
+and sexuality claims; these are one bounded `REJECT` record. No new substantive
+interpretation was admitted. Random no-yield QA covered pages 129, 133, 137, 140,
+143, 146 and 149. Cumulative substantive reading is **230 / 1,022 PDF pages**:
+130 Tân Biên, 97 Tổng Hợp and three Tự Xem control pages.
+
+This batch applies the Knowledge Yield Optimization policy. Its low novelty and
+high overlap show saturation for this broad chart-grading material, not a reason to
+inflate candidates. The next autonomous priority therefore switches breadth-first
+to the pending Tân Biên Quan Lộc section; it must first be split at a verified
+section boundary. VNI remains `RECOVERABLE` under visual QA; no `BLOCKING` issue
+was found.
+
+### Verification — HV-K14-C batch 7
+
+- PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
+  with no gap or overlap; Batch 7 reconciles to 21 new pages.
+- PASS: hashes match Checkpoint 1; non-rejected subject IDs resolve; retained
+  locators and seven no-yield samples were checked against rendered PDF pages.
+- PASS: targeted Prettier and `git diff --check`; no profile or production status changed.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
+  typecheck, build and E2E (research-only data has no production consumer).
+
 ### Verification — HV-K14-C batch 6
 
 - PASS: acquisition JSON parses; ledger ranges cover each primary-book page once

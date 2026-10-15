@@ -307,13 +307,22 @@
       "note": "Twenty-one pages read with rendered-page QA. The source supplies multi-factor and period-review methodology, but VNI remains non-authoritative, time/profile mechanics are unresolved and direct personal outcomes are excluded."
     },
     {
-      "rangeId": "ledger:th-129-421",
+      "rangeId": "ledger:th-129-149",
       "bookId": "book-k14-tong-hop",
-      "pdfPages": "129-421",
-      "section": "Volume II chapters 2-24",
+      "pdfPages": "129-149",
+      "section": "Volume II chapters 2-4 opening — chart quality, appearance and sexuality",
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-7",
+      "note": "Twenty-one pages read with rendered-page QA. VNI remained navigation-only; the range adds only bounded methodology/provenance, while chart grading, appearance and sexuality claims are excluded."
+    },
+    {
+      "rangeId": "ledger:th-150-421",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "150-421",
+      "section": "Volume II chapters 4-24 remainder",
       "status": "PENDING",
       "checkpoint": null,
-      "note": "Mapped thematic configurations and examples; future batches must split at chapter boundaries."
+      "note": "Remaining thematic configurations and examples; future batches must split at chapter boundaries."
     },
     {
       "rangeId": "ledger:th-422-435",
@@ -422,11 +431,30 @@
       }
     ]
   },
+  "batch7": {
+    "newPagesProcessed": 21,
+    "ranges": ["ledger:th-129-149"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "129, 133, 137, 140, 143, 146, 149",
+        "result": "Visually checked against rendered PDF pages. The pages contain broad chart grading, profile-dependent mappings, appearance or sexuality claims; no VNI text or direct personal claim was admitted as reusable knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "No new reusable substantive interpretation was admitted. Two records add source-specific methodological/provenance context only.",
+      "mergeValue": "The author describes chart assessment as involving concurrent yin-yang, five-phase, palace, star and configuration context; a separate passage records a source-specific Mệnh/Thân yin-yang formulation.",
+      "reviewCauses": "VNI remains non-authoritative navigation, and formula/profile compatibility is unresolved; rendered PDF images controlled the evidence risk.",
+      "noYieldReliability": "Seven distributed pages were visually checked; each either supports a bounded retained locator or contains excluded direct personal, physical or sexuality claims.",
+      "topicSaturation": "The broad chart-quality and personal-outcome material overlaps existing multi-factor methodology but adds little admissible knowledge.",
+      "nextPriorityRationale": "Switch breadth-first to the pending Tân Biên Quan Lộc section, a coverage gap with higher product-research relevance, before resuming later Tổng Hợp chapters."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-6",
+    "checkpointId": "k14c-after-batch-7",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "c4a8ece1ed4bc42d5d5afefbda8d6625002a8e17",
+    "baseCommit": "9efd639",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -449,13 +477,14 @@
       "ledger:th-089-092",
       "ledger:th-093-101",
       "ledger:th-104-107",
-      "ledger:th-108-128"
+      "ledger:th-108-128",
+      "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:th-129-149", "ledger:tb-161-224"],
-    "batch6CandidateIds": [
-      "candidate:k14b6-tb-palace-section-scope-merge",
-      "candidate:k14b6-tb-void-main-star-review",
-      "candidate:k14b6-tb-sensitive-palace-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-161-224", "ledger:th-150-421"],
+    "batch7CandidateIds": [
+      "candidate:k14b7-th-whole-chart-context-merge",
+      "candidate:k14b7-th-yin-yang-context-merge",
+      "candidate:k14b7-th-sensitive-chart-and-body-claims-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -464,7 +493,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Three-batch aggregate checkpoint saved; continue autonomously with a separately bounded Tổng Hợp slice if context remains safe.",
+    "nextAction": "Knowledge-yield review recorded. Continue autonomously with a separately bounded Tân Biên Quan Lộc slice, splitting the pending range at a section boundary before reading.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1401,6 +1430,63 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for the range; only section provenance and a profile-unresolved contextual case are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b7-th-whole-chart-context-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.135-136, Chapter 2 chart-quality conditions",
+      "subjectIds": ["concept:yin-yang", "concept:wu-xing", "palace:menh", "relation:co-located"],
+      "conditions": [
+        "The author discusses a chart-quality assessment using palace, star, configuration, yin-yang and five-phase context together."
+      ],
+      "neutralStatement": "The source describes its chart-quality framework as depending on multiple concurrent contexts rather than a palace or star label in isolation.",
+      "evidenceType": "author-described multi-factor methodology",
+      "limitations": [
+        "The source expresses the framework through favorable/adverse chart grading and direct personal outcomes, which are excluded.",
+        "No weighting, classifier, resolver, geometry, calculation profile or personalized conclusion is derived."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with existing multi-factor methodology records; adds a distinct book section and no new executable rule."
+    },
+    {
+      "candidateId": "candidate:k14b7-th-yin-yang-context-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.132-135, Chapter 2 yin-yang and five-phase discussion",
+      "subjectIds": ["concept:yin-yang", "concept:wu-xing", "palace:menh"],
+      "conditions": [
+        "The source relates a stated yin-yang and five-phase formulation to Mệnh and Thân context."
+      ],
+      "neutralStatement": "The source presents yin-yang and five-phase considerations as context-dependent and connects them to Mệnh/Thân discussion rather than treating the labels as self-sufficient.",
+      "evidenceType": "source-described conditional methodology",
+      "limitations": [
+        "The detailed formulation includes historical sex/gender and branch/stem premises, and the target profile does not admit its mapping or precedence.",
+        "This is additional provenance only; it does not validate an assignment, a state lookup or a conclusion."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with existing yin-yang/five-phase contextual records; the source-specific formulation is retained without selecting it."
+    },
+    {
+      "candidateId": "candidate:k14b7-th-sensitive-chart-and-body-claims-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.129-149, Chapters 2-4 opening",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps chart configurations or named stars to broad personal success, health, lifespan, social status, physical appearance or sexuality outcomes."
+      ],
+      "neutralStatement": "The reviewed pages contain direct historical grading of persons and charts, plus physical-appearance and sexuality claims tied to configurations or stars.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "No approved profile, safe modern interpretation policy or reproducible calculation basis supports use of these outcomes.",
+        "They must not become a score, fixture, personalized claim or production rule."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the range; retained multi-factor provenance is recorded separately."
     }
   ],
   "unresolvedIssues": [

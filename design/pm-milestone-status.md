@@ -171,6 +171,14 @@ production-eligible. Không có blocker về quyền/provenance/schema/ledger; s
 dừng có kiểm soát vì context budget sau checkpoint, với queue kế tiếp Tổng Hợp
 129–149 và resume checkpoint đã lưu.
 
+HV-K14-C batch 7 (16/10) áp dụng Knowledge Yield Optimization trên Tổng Hợp
+129–149 (21 trang), nâng lũy kế lên 230/1.022 trang. Batch chỉ có 2 MERGE cho
+provenance/phương pháp đa yếu tố và 1 REJECT cho lời luận phân hạng, ngoại hình,
+tình dục trực tiếp; không tạo tri thức luận đoán thực chất mới. Đây là tín hiệu
+bão hòa của nhóm nội dung này, nên queue tự chuyển breadth-first sang Quan Lộc
+Tân Biên sau khi xác minh ranh giới mục. VNI vẫn là `RECOVERABLE` qua visual QA;
+không có blocker và không thay runtime, calculation, UI hay trạng thái production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
