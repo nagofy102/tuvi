@@ -55,6 +55,15 @@ to `knowledge-k10-foundational-meanings.json`. These statements are
 outcome language, and do not create a rule, score, runtime admission or
 personalised claim.
 
+HV-K11 extends that evolving dataset to 54 statements: all fourteen catalogued
+auxiliary stars, seven foundational concepts, four spatial relations and all four
+period terms now have bounded meaning records. Eleven palace meanings come only
+from the separately registered Daozang-labelled source system and remain
+`disputed`; its twelfth palace is `相貌`, so it does not supply the current Phụ Mẫu
+meaning. K11 also registers one general Ngũ hành encyclopedia family, which is not
+a Tử Vi school source or an independent validation of the Tử Vi lineage. No K11
+statement is admitted to calculation, reasoning or personalised output.
+
 The consolidated historical provenance covers bibliographic catalogue checks,
 classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07
 research. Full detail remains recoverable from the HV-M01 predecessor paths in

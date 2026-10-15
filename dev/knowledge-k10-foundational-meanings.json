@@ -1,8 +1,8 @@
 {
-  "artifactVersion": "hv-k10-foundational-meanings-v0.1",
+  "artifactVersion": "hv-k11-foundational-meanings-v0.2",
   "generatedAt": "2026-10-15",
   "scope": "Bounded traditional meanings for Knowledge Explorer research. These are not calculation inputs, rules, scores, personalised claims or production content.",
-  "registryVersion": "hv-k10-foundational-meaning-expansion-2026-10-15",
+  "registryVersion": "hv-k11-broad-meaning-coverage-2026-10-15",
   "defaultProfile": "profile-unresolved",
   "provenanceBoundary": {
     "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
@@ -264,20 +264,383 @@
       "schoolProfile": "profile-unresolved",
       "limitations": ["Not a health, legal, moral or event conclusion."],
       "baNormalization": "Excludes personal and stigmatizing source assertions."
+    },
+    {
+      "id": "statement:k11-hoa-tinh-martial-fire",
+      "subjectId": "star:hoa-tinh",
+      "status": "source-backed",
+      "content": "The source classifies Hỏa Tinh as a southern-dipper floating star and uses a traditional martial/fire image for it.",
+      "sourceRef": "k11-v1-remaining-auxiliary-attributions",
+      "sourceLocator": "諸星問答論 > 問火星所主若何; revision 7913704, raw lines 460–469",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a temperament, health, occupation or event conclusion."],
+      "baNormalization": "Retains only the source classification and image."
+    },
+    {
+      "id": "statement:k11-linh-tinh-assisting-martial",
+      "subjectId": "star:linh-tinh",
+      "status": "source-backed",
+      "content": "The source classifies Linh Tinh as a southern-dipper assisting star and places it in traditional martial/adverse vocabulary.",
+      "sourceRef": "k11-v1-remaining-auxiliary-attributions",
+      "sourceLocator": "諸星問答論 > 問鈴星所主若何; revision 7913704, raw lines 470–482",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Not a temperament, health, occupation or event conclusion."],
+      "baNormalization": "Retains only the source classification and contextual label."
+    },
+    {
+      "id": "statement:k11-dia-khong-empty-disruption",
+      "subjectId": "star:dia-khong",
+      "status": "source-backed",
+      "content": "The source treats Địa Không together with Địa Kiếp as an adverse empty/disruptive pair whose wording changes with favourable or adverse context.",
+      "sourceRef": "k11-v1-remaining-auxiliary-attributions",
+      "sourceLocator": "諸星問答論 > 問天空地劫所主若何; revision 7913704, raw lines 491–495",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "The source entry is paired, not an independently defined single-star meaning.",
+        "Not a loss, health, status or event prediction."
+      ],
+      "baNormalization": "Uses the modern catalog subject ID while preserving paired-source provenance."
+    },
+    {
+      "id": "statement:k11-dia-kiep-empty-disruption",
+      "subjectId": "star:dia-kiep",
+      "status": "source-backed",
+      "content": "The source treats Địa Kiếp together with Địa Không as an adverse empty/disruptive pair whose wording changes with favourable or adverse context.",
+      "sourceRef": "k11-v1-remaining-auxiliary-attributions",
+      "sourceLocator": "諸星問答論 > 問天空地劫所主若何; revision 7913704, raw lines 491–495",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "The source entry is paired, not an independently defined single-star meaning.",
+        "Not a loss, health, status or event prediction."
+      ],
+      "baNormalization": "Uses the modern catalog subject ID while preserving paired-source provenance."
+    },
+    {
+      "id": "statement:k11-daozang-menh-life-context",
+      "subjectId": "palace:menh",
+      "status": "disputed",
+      "content": "In this distinct source system, the Mệnh section is the primary context for reviewing the person/life configuration together with supporting and adverse stars.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 命宮; revision 8061095, raw lines 362–416",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": [
+        "Not merged into the active twelve-palace profile.",
+        "Not a personality or destiny conclusion."
+      ],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-daozang-tai-bach-resources",
+      "subjectId": "palace:tai-bach",
+      "status": "disputed",
+      "content": "In this source system, the Tài Bạch section organizes statements about material resources, holdings and their increase or depletion.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 二財帛宮; revision 8061095, raw lines 418–488",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": ["Not a wealth prediction or active palace definition."],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-daozang-huynh-de-siblings",
+      "subjectId": "palace:huynh-de",
+      "status": "disputed",
+      "content": "In this source system, the Huynh Đệ section organizes statements about siblings, their cohesion and separation.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 三兄弟宮; revision 8061095, raw lines 490–550",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": ["Not a sibling-count or relationship prediction."],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-daozang-dien-trach-property",
+      "subjectId": "palace:dien-trach",
+      "status": "disputed",
+      "content": "In this source system, the Điền Trạch section organizes statements about household property and inherited or self-established holdings.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 四田宅宮; revision 8061095, raw lines 552–566",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": ["Not a property or inheritance prediction."],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-daozang-tu-tuc-descendants",
+      "subjectId": "palace:tu-tuc",
+      "status": "disputed",
+      "content": "In this source system, the section labelled Nam/Nữ organizes statements about children and descendants.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 五男女宮; revision 8061095, raw lines 568–600",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": [
+        "The source label differs from the current Tử Tức label.",
+        "Not a fertility, sex, number-of-children or family prediction."
+      ],
+      "baNormalization": "Mapped only as a disputed research variant."
+    },
+    {
+      "id": "statement:k11-daozang-no-boc-dependents",
+      "subjectId": "palace:no-boc",
+      "status": "disputed",
+      "content": "In this source system, the Nô Bộc section concerns historical servant/dependent relationships.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 六奴僕宮; revision 8061095, raw lines 602–616",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": [
+        "No modern friendship, employment or social-network equivalence is asserted."
+      ],
+      "baNormalization": "Historical scope retained without modernization."
+    },
+    {
+      "id": "statement:k11-daozang-phu-the-partnership",
+      "subjectId": "palace:phu-the",
+      "status": "disputed",
+      "content": "In this source system, the historical Thê Thiếp section organizes statements about spouse and marital partnership.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 七妻妾宮; revision 8061095, raw lines 618–640",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": [
+        "Historical gender and household assumptions are not carried forward.",
+        "Not a relationship prediction."
+      ],
+      "baNormalization": "Mapped only as a disputed research variant."
+    },
+    {
+      "id": "statement:k11-daozang-tat-ach-health-context",
+      "subjectId": "palace:tat-ach",
+      "status": "disputed",
+      "content": "In this source system, the Tật Ách section is the context for historical statements about illness and bodily vulnerability.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 八疾厄宮; revision 8061095, raw lines 642–676",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": [
+        "Not medical information, diagnosis, risk assessment or lifespan prediction."
+      ],
+      "baNormalization": "Scope description only; all health conclusions are excluded."
+    },
+    {
+      "id": "statement:k11-daozang-thien-di-external-context",
+      "subjectId": "palace:thien-di",
+      "status": "disputed",
+      "content": "In this source system, the Thiên Di section organizes statements about going out, travel and circumstances away from the home setting.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 九遷移宮; revision 8061095, raw lines 678–694",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": ["Not a travel, relocation, safety or event prediction."],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-daozang-quan-loc-office-context",
+      "subjectId": "palace:quan-loc",
+      "status": "disputed",
+      "content": "In this source system, the Quan Lộc section organizes historical statements about official service, rank and occupational standing.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 十官祿宮; revision 8061095, raw lines 696–718",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": [
+        "Historical office vocabulary is not equivalent to a modern career prediction."
+      ],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-daozang-phuc-duc-fortune-context",
+      "subjectId": "palace:phuc-duc",
+      "status": "disputed",
+      "content": "In this source system, the Phúc Đức section organizes historical statements about fortune, benefit and adversity.",
+      "sourceRef": "k11-daozang-palace-sections",
+      "sourceLocator": "術天機 > 十一福德宮; revision 8061095, raw lines 720–738",
+      "schoolProfile": "daozang-source-system-unmapped",
+      "limitations": ["Not a wellbeing, merit, health or life-outcome prediction."],
+      "baNormalization": "Source-system variant only."
+    },
+    {
+      "id": "statement:k11-tu-hoa-four-functions",
+      "subjectId": "concept:tu-hoa",
+      "status": "source-backed",
+      "content": "The source presents Hóa Lộc, Hóa Quyền, Hóa Khoa and Hóa Kỵ as four distinct traditional transformation labels with different symbolic functions.",
+      "sourceRef": "k11-v1-four-transformations-attributions",
+      "sourceLocator": "諸星問答論 > 問化祿、化權、化科、化忌星所主; revision 7913704, raw lines 421–431",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["Does not approve a stem-to-star mapping, effect, score or outcome."],
+      "baNormalization": "A grouped vocabulary meaning, not four active rules."
+    },
+    {
+      "id": "statement:k11-mieu-contextual-strength",
+      "subjectId": "state:mieu",
+      "status": "source-backed",
+      "content": "The source uses Miếu as a placement qualifier whose reading must still be checked with the palace and accompanying favourable/adverse context.",
+      "sourceRef": "k06-v1-state-context",
+      "sourceLocator": "太微賦 and 諸星問答論 > 問紫微所主若何; revision 7913704, raw lines 24 and 219",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No universal lookup, rank order or favourable score is established."],
+      "baNormalization": "Contextual state meaning only."
+    },
+    {
+      "id": "statement:k11-vuong-contextual-strength",
+      "subjectId": "state:vuong",
+      "status": "source-backed",
+      "content": "The source uses Vượng as a placement qualifier whose reading must still be checked with the palace and accompanying favourable/adverse context.",
+      "sourceRef": "k06-v1-state-context",
+      "sourceLocator": "太微賦 and 諸星問答論 > 問紫微所主若何; revision 7913704, raw lines 24 and 219",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No universal lookup, rank order or favourable score is established."],
+      "baNormalization": "Contextual state meaning only."
+    },
+    {
+      "id": "statement:k11-ham-contextual-weakness",
+      "subjectId": "state:ham",
+      "status": "source-backed",
+      "content": "The source uses Hãm as a contrasting placement condition and does not treat it independently from palace and accompanying-star context.",
+      "sourceRef": "k06-v1-state-context",
+      "sourceLocator": "諸星問答論 > 問紫微所主若何; revision 7913704, raw lines 219–225",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No universal lookup, severity or adverse score is established."],
+      "baNormalization": "Contextual state meaning only."
+    },
+    {
+      "id": "statement:k11-dac-dia-source-position",
+      "subjectId": "state:dac-dia",
+      "status": "source-backed",
+      "content": "The source uses Đắc địa as a star-specific position descriptor rather than a universal state attached identically to every star.",
+      "sourceRef": "k07-v3-auxiliary-state-variants",
+      "sourceLocator": "諸星分別富貴貧賤夭壽諸局; revision 2268626, selected raw lines 409–589",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No active branch table or cross-source equivalence is established."],
+      "baNormalization": "Source-specific state vocabulary only."
+    },
+    {
+      "id": "statement:k11-loi-source-position",
+      "subjectId": "state:loi",
+      "status": "source-backed",
+      "content": "The source uses Lợi as a star-specific position descriptor whose equivalence to other state scales remains unresolved.",
+      "sourceRef": "k07-v3-auxiliary-state-variants",
+      "sourceLocator": "諸星分別富貴貧賤夭壽諸局; revision 2268626, selected raw lines 409–589",
+      "schoolProfile": "profile-unresolved",
+      "limitations": [
+        "No active branch table, rank order or cross-source equivalence is established."
+      ],
+      "baNormalization": "Source-specific state vocabulary only."
+    },
+    {
+      "id": "statement:k11-wu-xing-relational-system",
+      "subjectId": "concept:wu-xing",
+      "status": "source-backed",
+      "content": "The reviewed encyclopedia source defines Ngũ hành as a five-phase relational scheme and names generating and overcoming cycles, rather than treating the five terms as only physical substances.",
+      "sourceRef": "k11-viwiki-five-phase-concept",
+      "sourceLocator": "Vietnamese Wikipedia Ngũ hành, revision 75475130, introductory paragraphs",
+      "schoolProfile": "general-traditional-concept",
+      "limitations": [
+        "Does not establish a Tử Vi correspondence, chart fact, effect or personal conclusion."
+      ],
+      "baNormalization": "General background concept, separate from Tử Vi profile admission."
+    },
+    {
+      "id": "statement:k11-relation-trines-context",
+      "subjectId": "relation:trines-with",
+      "status": "source-backed",
+      "content": "The source treats Tam phương as part of the multi-palace context that must be reviewed around a configuration.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["The passage does not define geometry, membership, direction or weight."],
+      "baNormalization": "Relational context only, not an inference."
+    },
+    {
+      "id": "statement:k11-relation-four-directions-context",
+      "subjectId": "relation:four-directions-context",
+      "status": "source-backed",
+      "content": "The source treats Tứ chính as part of the multi-palace context that must be reviewed around a configuration.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["The passage does not define geometry, membership, direction or weight."],
+      "baNormalization": "Relational context only, not an inference."
+    },
+    {
+      "id": "statement:k11-relation-opposition-context",
+      "subjectId": "relation:opposes",
+      "status": "source-backed",
+      "content": "The source names Đối chiếu as a relation whose surrounding favourable/adverse context is to be examined.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["The passage does not define geometry, membership, direction or weight."],
+      "baNormalization": "Relational context only, not an inference."
+    },
+    {
+      "id": "statement:k11-relation-joined-aspect-context",
+      "subjectId": "relation:joined-aspect",
+      "status": "source-backed",
+      "content": "The source names Hợp chiếu as a relation whose surrounding favourable/adverse context is to be examined.",
+      "sourceRef": "k06-v1-aspect-terms",
+      "sourceLocator": "斗數發微論; revision 7913704, raw lines 129–131",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["The passage does not define geometry, membership, direction or weight."],
+      "baNormalization": "Relational context only, not an inference."
+    },
+    {
+      "id": "statement:k11-dai-han-ten-year-layer",
+      "subjectId": "period:dai-han",
+      "status": "source-backed",
+      "content": "The source treats Đại hạn as a distinct ten-year review layer and discusses it separately and together with other period contexts.",
+      "sourceRef": "k08-v3-period-review-terms",
+      "sourceLocator": "論大限十年禍福何如; revision 2268626, raw lines 106–118",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No active placement direction, age mapping or outcome rule is admitted."],
+      "baNormalization": "Temporal-layer meaning only."
+    },
+    {
+      "id": "statement:k11-tieu-han-minor-layer",
+      "subjectId": "period:tieu-han",
+      "status": "source-backed",
+      "content": "The source treats Tiểu hạn as a distinct moving period layer that is reviewed alongside Đại hạn and Thái Tuế context.",
+      "sourceRef": "k08-v3-period-review-terms",
+      "sourceLocator": "論二限太歲吉凶; revision 2268626, raw lines 106–118",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No active placement, duration, age mapping or outcome rule is admitted."],
+      "baNormalization": "Temporal-layer meaning only."
+    },
+    {
+      "id": "statement:k11-luu-nien-annual-layer",
+      "subjectId": "period:luu-nien",
+      "status": "source-backed",
+      "content": "The source uses Lưu niên for an annual moving context, including year-conditioned moving-star vocabulary.",
+      "sourceRef": "k08-v2-fortune-period-vocabulary",
+      "sourceLocator": "安流祿流羊流陀訣 > 論流年太歲; revision 1963110, raw lines 217–219",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No active moving-star mapping or annual prediction is admitted."],
+      "baNormalization": "Temporal vocabulary only."
+    },
+    {
+      "id": "statement:k11-thai-tue-annual-marker",
+      "subjectId": "period:thai-tue",
+      "status": "source-backed",
+      "content": "The source treats Thái Tuế as an annual reference used when reviewing the named period layers and moving-star context.",
+      "sourceRef": "k08-v3-period-review-terms",
+      "sourceLocator": "論二限太歲吉凶 and 論流年太歲吉凶星殺; revision 2268626, raw lines 106–118",
+      "schoolProfile": "profile-unresolved",
+      "limitations": ["No active annual placement, effect or prediction is admitted."],
+      "baNormalization": "Temporal reference only."
     }
   ],
   "coverage": {
     "majorStarsWithMeaning": 14,
     "majorStarsCatalogued": 14,
-    "auxiliaryStarsWithMeaning": 10,
+    "auxiliaryStarsWithMeaning": 14,
     "auxiliaryStarsCatalogued": 14,
-    "palacesWithSubstantiveMeaning": 0,
+    "palacesWithSubstantiveMeaning": 11,
+    "palacesWithCanonicalProfileMeaning": 0,
+    "palacesWithDisputedSourceVariantMeaning": 11,
     "palacesCatalogued": 12,
+    "conceptsWithMeaning": 7,
+    "conceptsCatalogued": 13,
+    "relationsWithMeaning": 4,
+    "relationsCatalogued": 8,
+    "fortunePeriodsWithMeaning": 4,
+    "fortunePeriodsCatalogued": 4,
     "reasoningCandidatesCreated": 0
   },
   "openGaps": [
-    "Direct, lawful passage support for neutral foundational meanings of all twelve palaces.",
-    "Meaning passages for the remaining four catalogued auxiliary stars and a reviewed taxonomy.",
-    "Independent, school-classified source families and a reviewed profile before any statement can become a reasoning input."
+    "A compatible, lawful passage for Phụ Mẫu and canonical-profile meanings for all twelve palaces; the current Daozang evidence is an incompatible source-system variant.",
+    "Meaning evidence for yin/yang, nạp âm, the remaining catalogued concepts and four remaining relation types.",
+    "Independent, school-classified Tử Vi source families and a reviewed profile before any statement can become a reasoning input."
   ]
 }

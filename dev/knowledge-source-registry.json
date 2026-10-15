@@ -1,8 +1,57 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k10-foundational-meaning-expansion-2026-10-15",
+  "registryVersion": "hv-k11-broad-meaning-coverage-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
+    {
+      "sourceId": "viwiki-wuxing-r75475130",
+      "sourceKind": "website",
+      "title": "Ngũ hành",
+      "creator": null,
+      "edition": "Vietnamese Wikipedia revision 75475130",
+      "publisher": "Vietnamese Wikipedia",
+      "publicationYear": null,
+      "language": "vi",
+      "knowledgeScopes": ["research-method"],
+      "schoolClaims": [
+        {
+          "label": "Tử Vi school",
+          "claimStatus": "not-applicable",
+          "evidenceNote": "General five-phase background; it does not establish a Tử Vi school or profile."
+        }
+      ],
+      "access": {
+        "url": "https://vi.wikipedia.org/w/index.php?title=Ng%C5%A9_h%C3%A0nh&oldid=75475130",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200 through MediaWiki API revision 75475130",
+        "robotsOrTermsNote": "Bounded page/revision access only; attribution and share-alike terms apply."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "Wikipedia text is available under CC BY-SA; page history and Wikimedia reuse terms apply.",
+        "reusePolicy": "Retain revision, attribution and a minimal quotation; normalized facts must preserve provenance."
+      },
+      "provenance": {
+        "locator": "Pinned Vietnamese Wikipedia revision 75475130, introductory paragraphs",
+        "revision": "75475130",
+        "contentDigest": null,
+        "retrievalMethod": "Bounded review through the MediaWiki API",
+        "bibliographicIdentity": "Collaboratively edited encyclopedia article, not a Tử Vi treatise or school authority."
+      },
+      "independence": {
+        "sourceFamilyId": "wikipedia-wuxing-encyclopedic-lineage",
+        "implementationFamilyId": null,
+        "independenceStatus": "not-applicable",
+        "basis": "A newly accessed general-concept family; it is not counted as independent validation of the Tử Vi textual lineage."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "Supports only general five-phase vocabulary and cycle concepts.",
+        "Does not support a Tử Vi calculation mapping, star meaning or personal conclusion."
+      ],
+      "supersedes": []
+    },
     {
       "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
       "sourceKind": "transcription",
@@ -738,6 +787,77 @@
       ]
     },
     {
+      "passageId": "k11-v1-remaining-auxiliary-attributions",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問火星、鈴星、天空地劫所主; pinned revision 7913704, raw wikitext lines 458–495",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "火星乃南斗浮星也。……鈴星乃南斗助星也。……二星守身命，遇吉則吉，遇凶則凶。",
+      "supports": [
+        "traditional-remaining-auxiliary-attributions",
+        "context-dependent-star-descriptions"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The source groups 天空 and 地劫 in one entry; separate normalized records retain that shared provenance.",
+        "Historical personal, health, gendered, legal and event assertions are excluded from the knowledge statements."
+      ]
+    },
+    {
+      "passageId": "k11-daozang-palace-sections",
+      "sourceId": "daozang-ziwei-doushu-wikisource-r8061095",
+      "locator": "術天機 > 十二宮 sections; pinned revision 8061095, raw wikitext lines 362–759",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "－命宮……二財帛宮……三兄弟宮……十二相貌宮。",
+      "supports": ["source-variant-palace-contexts", "source-variant-twelve-palace-order"],
+      "profileScope": ["daozang-source-system-unmapped"],
+      "status": "disputed",
+      "limitations": [
+        "This source system orders and labels the palaces differently from the active foundation catalogue.",
+        "Its twelfth section is 相貌 rather than 父母; it does not supply a meaning statement for the current Phụ Mẫu subject.",
+        "The eleven mapped statements are research variants only and must not be merged into the active calculation or interpretation profile."
+      ]
+    },
+    {
+      "passageId": "k11-v1-four-transformations-attributions",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問化祿、化權、化科、化忌星所主; pinned revision 7913704, raw wikitext lines 421–431",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "祿為福德之神。……權星掌判生殺之神。……科星上界應試，主掌文墨之星。……忌為多管之神。",
+      "supports": [
+        "traditional-four-transformations-attributions",
+        "transformation-context-dependence"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The passage provides historical symbolic labels, not an approved stem-to-star transformation table.",
+        "No personal, legal, status, event or fortune-period conclusion is admitted."
+      ]
+    },
+    {
+      "passageId": "k11-viwiki-five-phase-concept",
+      "sourceId": "viwiki-wuxing-r75475130",
+      "locator": "Pinned revision 75475130, introductory paragraphs defining Ngũ hành and the tương sinh/tương khắc sequences",
+      "language": "vi",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "Ngũ hành không chỉ vật chất mà là cách quy ước để xét mối tương tác và quan hệ của vạn vật.",
+      "supports": [
+        "five-phase-concept",
+        "generating-cycle-vocabulary",
+        "overcoming-cycle-vocabulary"
+      ],
+      "profileScope": ["general-traditional-concept"],
+      "status": "source-backed",
+      "limitations": [
+        "General conceptual background only; it does not establish any Tử Vi correspondence or calculation.",
+        "The page is an encyclopedia article, not a school-classified Tử Vi source."
+      ]
+    },
+    {
       "passageId": "k06-v3-reading-order",
       "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
       "locator": "談星要論; pinned revision 2268626, raw wikitext lines 8–11",
@@ -884,6 +1004,20 @@
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k11-broad-meaning-coverage-review",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "viwiki-wuxing-r75475130",
+        "k11-v1-remaining-auxiliary-attributions",
+        "k11-daozang-palace-sections",
+        "k11-v1-four-transformations-attributions",
+        "k11-viwiki-five-phase-concept"
+      ],
+      "basis": "HV-K11 directly read bounded passages in three pinned public revisions. It completes the four missing auxiliary-star meanings, stores eleven current-palace mappings only as a conflicting Daozang source-system variant, adds a neutral Tứ Hóa statement and a general five-phase statement. The Daozang twelfth palace remains unmapped to Phụ Mẫu; no runtime, calculation or personalised rule is admitted."
+    },
     {
       "reviewId": "hv-k10-foundational-meaning-review",
       "date": "2026-10-15",

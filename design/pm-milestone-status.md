@@ -80,6 +80,14 @@ Hệ phái/profile và độc lập lineage vẫn chưa xác định; 12 cung c�
 còn lại chưa có meaning evidence. Không thay đổi runtime hay production approval;
 xem `../dev/knowledge-k10-meaning-coverage.md`.
 
+HV-K11 (15/10) nâng dataset meaning từ 24 lên 54 statement: hoàn tất meaning cho
+14/14 phụ tinh, thêm 7 concept, 4 quan hệ và 4 lớp vận hạn ở mức research-only.
+Mười một cung có meaning từ dị bản Đạo Tạng nhưng đều `disputed`; hệ này dùng
+`相貌` ở mục thứ mười hai nên không tạo meaning cho Phụ Mẫu và không được hòa vào
+profile hiện hành. Một source family Ngũ hành bách khoa mới được tiếp cận, nhưng
+không phải nguồn hệ phái Tử Vi. Production Knowledge Yield vẫn bằng 0; xem
+`../dev/knowledge-k11-meaning-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
