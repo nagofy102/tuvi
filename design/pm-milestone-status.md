@@ -129,6 +129,15 @@ công cụ điều hướng, ảnh PDF là chuẩn QA. Dừng trước batch 2 �
 `../dev/knowledge-k14-book-discovery.md` và
 `../dev/knowledge-k14-acquisition.json`.
 
+HV-K14-C batch 2 (16/10) đã xử lý thêm 34 trang theo ledger có kiểm soát:
+Tân Biên 52–75 và Tổng Hợp 83–92. Lũy kế đọc thực chất là 97/1.022 trang;
+Batch 2 thêm 2 ACCEPT AS RESEARCH, 2 REVIEW và 2 REJECT. Đóng góp chính là
+giới hạn có nguồn cho việc dùng Âm dương–Ngũ hành với nhiều sao và bất đồng
+Tuần/Triệt; không có statement nào được nâng thành profile-compatible hoặc
+production-eligible. VNI của Tổng Hợp vẫn chỉ được dùng để điều hướng và mỗi
+locator giữ lại đã so ảnh PDF. Xem `../dev/knowledge-k14-book-discovery.md` và
+`../dev/knowledge-k14-acquisition.json`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

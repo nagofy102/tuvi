@@ -359,7 +359,7 @@ silently converted into yield. Pages 34 and 61 also confirm boundary handling:
 page 34 continues the Tử Vi subsection begun on pilot page 33, while page 61 is
 chapter transition/context, so neither was treated as a fresh complete section.
 
-### Proposed batch 2
+### Batch 2 proposal (completed under HV-K14-C)
 
 Keep the next batch at approximately **36–44 pages**, not the maximum 60, because
 Tổng Hợp requires image-level QA:
@@ -372,11 +372,87 @@ Tổng Hợp requires image-level QA:
    the twelve-stage and missing auxiliary-entity gap before normalizing those
    vocabularies.
 
-PO should decide whether the star-catalog conflict and twelve-stage vocabulary
-remain isolated in the acquisition dataset or are approved for a later merge into
-the shared research catalog. Batch 2 must not begin without that review.
+The star-catalog conflict and twelve-stage vocabulary remain isolated in the
+acquisition dataset; no shared-catalog merge was performed.
+
+## HV-K14-C batch 2 — risk-based acquisition result
+
+### Batch coverage and ledger
+
+| Book              | New pages read | Batch ranges | Processing result                                                                                     |
+| ----------------- | -------------: | ------------ | ----------------------------------------------------------------------------------------------------- |
+| Tân Biên          |             24 | 52–75        | Read and held in `REVIEW`; the section is dominated by age-, sex-, health- and outcome-framed claims. |
+| Tổng Hợp          |             10 | 83–92        | 83–88 completed; 89–92 reviewed for profile-sensitive geometry and competing Tuần/Triệt accounts.     |
+| **Batch 2 total** |         **34** |              | 6 `COMPLETED` pages plus 28 substantively read `REVIEW` pages.                                        |
+
+This batch does not overlap pilot or batch-1 ranges. Cumulative substantive
+reading is **97 / 1,022 PDF pages**: 48 pages from Tân Biên, 46 from Tổng Hợp
+and the three-page Tự Xem negative control. The ledger still covers each page
+of the two primary books exactly once. `REVIEW` means read and withheld for
+domain/profile reasons; it does not mean the page was skipped.
+
+### Candidate result and knowledge yield
+
+| Disposition          | Count | Result                                                                                                             |
+| -------------------- | ----: | ------------------------------------------------------------------------------------------------------------------ |
+| `ACCEPT_AS_RESEARCH` |     2 | A source-backed limit on multi-star Âm dương–Ngũ hành reasoning and a preserved Tuần/Triệt scope/element conflict. |
+| `MERGE`              |     0 | No candidate was merged into a shared dataset in this batch.                                                       |
+| `REVIEW`             |     2 | Mệnh/Thân age framing and void-main-star opposition need a stable subject/geometry and profile review.             |
+| `REJECT`             |     2 | Direct personal Mệnh/Thân outcomes and numeric Tuần/Triệt examples remain non-reusable.                            |
+
+The reliable addition is negative knowledge with provenance: this source itself
+states that general five-phase relations fail to determine a unique conclusion
+when several stars interact. The Tuần/Triệt section is valuable as an explicit
+disagreement record, not as a formula: one attributed view extends effects to
+aspects, while the author restricts inversion to co-located stars and rejects a
+fixed-element account. No weights, percentages, profile mapping or personal
+reading is created.
+
+### Extraction and QA
+
+All 34 pages were rendered and inspected as contact sheets. Every retained
+candidate locator was checked on the source image; dedicated image checks covered
+Tổng Hợp pages 89–92, where the VNI text layer is not admissible on its own.
+Random no-yield QA covered Tân Biên 54, 61 and 69 plus Tổng Hợp 83, 84 and 92.
+They were retained as no-yield/rejection evidence rather than silently becoming
+star meanings or numerical rules. Tân Biên's Unicode text was readable, but its
+claim surface—not encoding—is the principal admission risk.
+
+### Next bounded batch
+
+The next batch may remain within the approved two-book scope if the ledger and
+QA gates stay clean. A suitable **Batch 3** is 30–38 pages:
+
+1. Tân Biên 76–93, continuing the bounded Mệnh/Thân star material but isolating
+   direct claims and uncataloged auxiliary terms.
+2. Tổng Hợp 93–104, completing the special-case discussion and stopping at the
+   Volume II transition; do not process Volume II method pages in the same batch.
+
+After Batch 3, stop for the promised aggregate checkpoint even if no technical
+blocker appears. Before any shared-catalog merge, PO/BA must decide the stable
+identity for Thân, Tuần/Triệt and void-main-star terminology, and whether any
+source-described geometry is compatible with the target profile.
 
 ## Verification
+
+HV-K14-C batch 2:
+
+- PASS: acquisition JSON parses; book, ledger-range and candidate IDs are unique;
+  book references resolve and each primary-book page is covered once without a
+  gap or overlap.
+- PASS: batch ranges reconcile to 34 pages and cumulative substantive reading
+  reconciles to 97 / 1,022 pages.
+- PASS: all non-rejected candidate subject IDs resolve to the K06 foundation
+  catalog; retained records include locator, conditions, evidence type,
+  limitations, profile status, duplicate assessment and a reason on every
+  `REVIEW` record.
+- PASS: batch totals reconcile to 2 `ACCEPT_AS_RESEARCH`, 0 `MERGE`, 2 `REVIEW`
+  and 2 `REJECT`; none is profile-compatible or production-eligible.
+- PASS: PDF SHA-256 values match Checkpoint 1; all retained locators plus the six
+  random no-yield pages were visually checked.
+- PASS: targeted Prettier and `git diff --check`.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit
+  tests, typecheck, build and E2E (research-only data has no production consumer).
 
 Checkpoint 3 batch 1:
 
