@@ -14,12 +14,14 @@ No source inventory, catalogue hit, partial scan, competitor observation or
 methodology-only rule directly licenses a personalized claim. Independent lineage,
 school/profile compatibility, substantive passage, stated conditions/exceptions,
 and the relevant admission gate are required. K03A3 yielded no usable substantive
-rule; K03A4 provides one trace-only source classification candidate, not runtime
-or K04B authorization. Paid or permissioned material requires PO approval of
-price, licence and allowed use before acquisition.
+rule; K03A4 provides one trace-only source classification candidate. HV-K05 adds
+three bounded Quan Lộc candidates in `knowledge-k05-quan-loc-candidates.json`,
+all from the same unresolved textual family: they are research records, not
+runtime or K04B authorization. Paid or permissioned material requires PO approval
+of price, licence and allowed use before acquisition.
 
 The consolidated historical provenance covers bibliographic catalogue checks,
-classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K03A4
+classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K05
 research. Full detail remains recoverable from the HV-M01 predecessor paths in
 Git; this contract and the JSON artifacts are the active entry point.
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k02-k03-po-review-2026-10-14",
-  "updatedAt": "2026-10-14",
+  "registryVersion": "hv-k05-quan-loc-research-2026-10-15",
+  "updatedAt": "2026-10-15",
   "sources": [
     {
       "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
@@ -239,9 +239,69 @@
       "profileScope": ["profile-unresolved"],
       "status": "source-backed",
       "limitations": ["Hour boundary convention is not resolved by this passage alone."]
+    },
+    {
+      "passageId": "k05-v1-taiyang-wenchang-quanloc",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "太微賦; pinned revision 7913704, raw wikitext line 47",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "太陽會文昌於官祿，皇殿朝班，富貴全美。",
+      "supports": ["taiyang-wenchang-quanloc-traditional-configuration"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The historical status/outcome wording is not a licensed modern personalised claim.",
+        "The passage does not define placement, aspect geometry, state vocabulary or a school profile."
+      ]
+    },
+    {
+      "passageId": "k05-v1-xingsha-lianzhen-quanloc",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "太微賦; pinned revision 7913704, raw wikitext line 53",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "刑殺同廉貞於官祿，枷杻難逃。",
+      "supports": ["xingsha-lianzhen-quanloc-traditional-adverse-configuration"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The text does not define which stars instantiate 刑 and 殺, nor what counts as 同 in a calculation profile.",
+        "Its punitive historical conclusion must not be emitted as a modern event, legal, ability or outcome claim."
+      ]
+    },
+    {
+      "passageId": "k05-v1-tianxiang-conditioned-quanloc",
+      "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+      "locator": "諸星問答論 > 問天相星所主若何？; pinned revision 7913704, raw wikitext lines 321–322",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "此星若臨生旺之鄉，雖不逢帝座，若得左右，則職掌威權。……陷地貪廉武破羊陀殺湊，巧藝安身。",
+      "supports": [
+        "tianxiang-quanloc-support-condition",
+        "tianxiang-quanloc-adverse-configuration"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The passage is star-specific and does not establish a general Quan Lộc rule.",
+        "Miếu/vượng, 左右, 帝座 and the adverse-star vocabulary need a reviewed profile mapping before any evaluation."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k05-quan-loc-passage-registration",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "k05-v1-taiyang-wenchang-quanloc",
+        "k05-v1-xingsha-lianzhen-quanloc",
+        "k05-v1-tianxiang-conditioned-quanloc"
+      ],
+      "basis": "HV-K05 performed a bounded direct reading of the pinned, publicly accessible Wikisource revision. Three minimal quotations were retained as research provenance only; their common textual lineage, unresolved school/profile and non-production boundary remain explicit."
+    },
     {
       "reviewId": "hv-k02-k03-po-vol3-registration",
       "date": "2026-10-14",

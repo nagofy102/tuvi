@@ -8,16 +8,16 @@ Baseline nâng cấp Công việc: `61b1dc6`, ngày 14/10/2026. Đây là bảng
 chứng nhận chuyên môn. Ranh giới tổng hợp hiện hành nằm trong
 `../dev/reading-brief-contract.md`.
 
-| Mốc                       | Trạng thái thực tế                                                    | Điều kiện còn mở                                                                                                 |
-| ------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| A1 — Hồ sơ và truy nguồn  | PM nghiệm thu phạm vi quản trị/truy nguồn                             | Không bao gồm xác thực ấn bản hoặc chứng nhận Nam phái; xem `../dev/calculation-spec.md`                         |
+| Mốc                       | Trạng thái thực tế                                                    | Điều kiện còn mở                                                                                                       |
+| ------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| A1 — Hồ sơ và truy nguồn  | PM nghiệm thu phạm vi quản trị/truy nguồn                             | Không bao gồm xác thực ấn bản hoặc chứng nhận Nam phái; xem `../dev/calculation-spec.md`                               |
 | A2 — Chốt hồ sơ Nam phái  | Đã chốt và triển khai hồ sơ cố định                                   | Lịch Trung Quốc, Tứ Hóa Nam phái, chia nhuận ngày 15, tăng ngày từ 23:00; giới hạn QA tại `../dev/calculation-spec.md` |
-| A3 — Corpus bên ngoài     | Đã thu 4 lá số/2 website, so 140 trường                               | 139 khớp, 1 khác lịch; Mèo Béo công bố Bắc phái, AItuvi chưa rõ; chưa có golden Nam phái                         |
-| B — Tổng hợp có điều kiện | Công việc v7 có diễn giải chính tinh theo cung, tách căn cứ/thực hành | Hai chủ đề còn lại giữ bản cũ; chưa có quy tắc đối nghịch hoặc nghiệm thu rubric toàn bản đọc                    |
-| C — Mở nhóm kiến thức     | Chưa kích hoạt nhóm mới                                               | Khôi–Việt còn dị bản và thiếu phép gán sao được đối chiếu; các nhóm khác cần nguồn và ca kiểm chứng riêng        |
-| D1 — Cách cục             | Chưa triển khai                                                       | Cần điều kiện nhận diện, phá cách và ca gần đúng bị loại                                                         |
-| D2 — Luận vận             | Chưa triển khai                                                       | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                        |
-| D3 — Hỏi tiếp AI          | Chưa triển khai                                                       | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                        |
+| A3 — Corpus bên ngoài     | Đã thu 4 lá số/2 website, so 140 trường                               | 139 khớp, 1 khác lịch; Mèo Béo công bố Bắc phái, AItuvi chưa rõ; chưa có golden Nam phái                               |
+| B — Tổng hợp có điều kiện | Công việc v7 có diễn giải chính tinh theo cung, tách căn cứ/thực hành | Hai chủ đề còn lại giữ bản cũ; chưa có quy tắc đối nghịch hoặc nghiệm thu rubric toàn bản đọc                          |
+| C — Mở nhóm kiến thức     | Chưa kích hoạt nhóm mới                                               | Khôi–Việt còn dị bản và thiếu phép gán sao được đối chiếu; các nhóm khác cần nguồn và ca kiểm chứng riêng              |
+| D1 — Cách cục             | Chưa triển khai                                                       | Cần điều kiện nhận diện, phá cách và ca gần đúng bị loại                                                               |
+| D2 — Luận vận             | Chưa triển khai                                                       | Cần đối chiếu thuật toán thời gian và quy tắc luận; khoảng tuổi Đại hạn không phải dự báo                              |
+| D3 — Hỏi tiếp AI          | Chưa triển khai                                                       | Cần kho nguồn duyệt, kiểm thử từ chối/truy nguồn và đồng ý riêng nếu gửi dữ liệu ra ngoài                              |
 
 ## PO review K02B/K03A2/K04A — 15/10/2026
 
@@ -34,6 +34,12 @@ K03A4 (15/10) chuyển từ inventory sang kiểm tra nội dung thực tế: m�
 substantive có locator được trích xuất từ nguồn cùng lineage cũ, nhưng chỉ được tạo
 trace phân loại lịch sử, không được tạo claim. Hai đường nguồn mới access-blocked;
 K04B vẫn hoãn; trạng thái K03A4 nằm trong `../dev/source-registry.md`.
+
+HV-K05 (15/10) đọc trực tiếp các revision ghim và lưu ba candidate Quan Lộc có
+passage/điều kiện cụ thể; hai là `source-backed`, một bị `blocked` do thuật ngữ
+chưa map. Cả ba cùng một textual lineage chưa định danh hệ phái; Production
+Knowledge Yield = 0 và K04B vẫn hoãn. Xem `../dev/knowledge-k05-research.md` và
+`../dev/knowledge-k05-quan-loc-candidates.json`.
 
 ## Đợt hiện tại — tiếp tục A
 

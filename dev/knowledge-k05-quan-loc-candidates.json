@@ -1,0 +1,226 @@
+{
+  "artifactVersion": "hv-k05-quan-loc-candidates-v0.1",
+  "generatedAt": "2026-10-15",
+  "scope": "Bounded Quan Lộc substantive-rule research; no runtime admission or personalised output.",
+  "registryVersion": "hv-k05-quan-loc-research-2026-10-15",
+  "candidateRules": [
+    {
+      "ruleId": "k05-taiyang-wenchang-quanloc-001",
+      "ruleVersion": "candidate-1",
+      "type": "substantive",
+      "researchStatus": "source-backed",
+      "productionEligible": false,
+      "source": {
+        "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+        "passageId": "k05-v1-taiyang-wenchang-quanloc",
+        "locator": "太微賦; pinned revision 7913704, raw wikitext line 47",
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved"
+      },
+      "schoolProfile": "profile-unresolved",
+      "structure": { "palace": "Quan Lộc", "stars": ["Thái Dương", "Văn Xương"], "relation": "會" },
+      "requiredInputFacts": [
+        "direct locations of Thái Dương and Văn Xương",
+        "their relation to Quan Lộc"
+      ],
+      "eligibility": "Only structurally reviewable after the selected profile defines whether the source's 會 is same-palace, aspect, or another relation.",
+      "sourceSupportedInference": "The source classifies the named Quan Lộc configuration with a favourable traditional status/outcome phrase.",
+      "allowedConclusion": "research trace: historical favourable classification attached to the exact configuration",
+      "forbiddenConclusions": [
+        "personal aptitude",
+        "occupation",
+        "promotion",
+        "wealth",
+        "modern outcome",
+        "personalised claim"
+      ],
+      "limitationsAndExceptions": [
+        "No definition of 會 or placement geometry.",
+        "No stated exception or counterexample in this passage.",
+        "Profile and school remain unresolved."
+      ],
+      "supportingSignals": ["exact two-star configuration", "exact Quan Lộc locator"],
+      "opposingSignals": [
+        "any unresolved relation mapping",
+        "profile mismatch",
+        "unsourced adverse-context precedence"
+      ],
+      "evidenceClarity": "direct-but-underspecified",
+      "sourceTextVsBA": {
+        "sourceText": "Names Thái Dương, Văn Xương and Quan Lộc, then states a favourable traditional outcome.",
+        "baInterpretation": "Treat it as a configuration label only; do not translate classical rank/wealth wording into a contemporary career assertion.",
+        "unsupportedHypotheses": [
+          "whether 會 includes tam phương/tứ chính",
+          "how this interacts with Hóa or miếu/vượng"
+        ]
+      },
+      "examples": {
+        "mayApplyForResearchTrace": "Profile resolves the exact 會 relation and both named stars are present in that relation to Quan Lộc; record the source classification only.",
+        "mustNotApply": "Only one named star is present, the relation is unknown, or a chart uses a profile not mapped to this source."
+      },
+      "proposedTestCaseIds": ["k05-taiyang-wenchang-exact", "k05-taiyang-wenchang-missing-relation"]
+    },
+    {
+      "ruleId": "k05-xingsha-lianzhen-quanloc-001",
+      "ruleVersion": "candidate-1",
+      "type": "substantive-exception",
+      "researchStatus": "blocked",
+      "productionEligible": false,
+      "source": {
+        "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+        "passageId": "k05-v1-xingsha-lianzhen-quanloc",
+        "locator": "太微賦; pinned revision 7913704, raw wikitext line 53",
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved"
+      },
+      "schoolProfile": "profile-unresolved",
+      "structure": {
+        "palace": "Quan Lộc",
+        "starsOrTerms": ["刑", "殺", "Liêm Trinh"],
+        "relation": "同"
+      },
+      "requiredInputFacts": [
+        "Liêm Trinh location",
+        "resolved definitions of 刑 and 殺",
+        "resolved relation denoted by 同",
+        "Quan Lộc location"
+      ],
+      "eligibility": "Blocked: no approved vocabulary maps 刑/殺 or 同 to chart facts for this source profile.",
+      "sourceSupportedInference": "The source assigns an adverse traditional punitive phrase to the named configuration.",
+      "allowedConclusion": "none until terminology and profile are reviewed; provenance may be displayed in a research trace",
+      "forbiddenConclusions": [
+        "legal prediction",
+        "punishment prediction",
+        "criminality",
+        "modern adverse career outcome",
+        "personalised claim"
+      ],
+      "limitationsAndExceptions": [
+        "The three key terms are undefined in the passage.",
+        "No exception or precedence rule is stated.",
+        "The source family and school profile are unresolved."
+      ],
+      "supportingSignals": ["exact source phrase"],
+      "opposingSignals": [
+        "undefined terminology",
+        "punitive historical language",
+        "missing conflict handling"
+      ],
+      "evidenceClarity": "direct-claim-but-not-evaluable",
+      "sourceTextVsBA": {
+        "sourceText": "Names 刑, 殺 and Liêm Trinh at Quan Lộc with a punitive traditional result.",
+        "baInterpretation": "The only defensible use now is a blocked adverse configuration record.",
+        "unsupportedHypotheses": [
+          "which catalogue stars qualify",
+          "whether same palace or an aspect is intended",
+          "a modern equivalent of the outcome"
+        ]
+      },
+      "examples": {
+        "mayApplyForResearchTrace": "A later reviewed profile resolves all three terms; retain this candidate as conflicting evidence, not an outcome rule.",
+        "mustNotApply": "Any chart where 刑/殺 is inferred from a generic list or where 同 is guessed."
+      },
+      "proposedTestCaseIds": ["k05-xingsha-undefined-vocabulary", "k05-xingsha-profile-mismatch"]
+    },
+    {
+      "ruleId": "k05-tianxiang-conditioned-quanloc-001",
+      "ruleVersion": "candidate-1",
+      "type": "substantive-conflict",
+      "researchStatus": "source-backed",
+      "productionEligible": false,
+      "source": {
+        "sourceId": "zwds-quanshu-vol1-wikisource-r7913704",
+        "passageId": "k05-v1-tianxiang-conditioned-quanloc",
+        "locator": "諸星問答論 > 問天相星所主若何？; pinned revision 7913704, raw wikitext lines 321–322",
+        "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved"
+      },
+      "schoolProfile": "profile-unresolved",
+      "structure": {
+        "palace": "Quan Lộc",
+        "focusStar": "Thiên Tướng",
+        "supportCondition": ["sinh vượng", "Tả Phụ/Hữu Bật"],
+        "adverseCondition": [
+          "hãm địa",
+          "Tham Lang",
+          "Liêm Trinh",
+          "Vũ Khúc",
+          "Phá Quân",
+          "Dương/Đà",
+          "sát"
+        ]
+      },
+      "requiredInputFacts": [
+        "Thiên Tướng location",
+        "palace state",
+        "Tả Phụ/Hữu Bật relations",
+        "the listed adverse-star relations",
+        "source-profile vocabulary"
+      ],
+      "eligibility": "Only a research trace is eligible when every source term and relation is explicitly mapped by a future reviewed profile.",
+      "sourceSupportedInference": "The source gives a supportive conditional reading and, separately, an adverse grouped configuration; it does not state how to resolve a mixed case.",
+      "allowedConclusion": "research trace preserving both source-supported condition sets and unresolved conflict",
+      "forbiddenConclusions": [
+        "leadership ability",
+        "job title",
+        "rank",
+        "promotion",
+        "success",
+        "personalised claim"
+      ],
+      "limitationsAndExceptions": [
+        "Does not define the geometry of 得左右 or 殺湊.",
+        "Does not provide conflict precedence when supporting and adverse signals co-occur.",
+        "The school/profile and independence remain unresolved."
+      ],
+      "supportingSignals": ["Thiên Tướng", "sinh vượng", "Tả Phụ/Hữu Bật"],
+      "opposingSignals": [
+        "hãm địa",
+        "the listed adverse-star group",
+        "unknown vocabulary or geometry"
+      ],
+      "evidenceClarity": "direct-conditional-with-unresolved-conflict",
+      "sourceTextVsBA": {
+        "sourceText": "States a support condition involving sinh vượng and 左右, and an adverse grouped configuration at hãm địa.",
+        "baInterpretation": "Model the two condition groups as competing source evidence; fail closed in any mixed or unmapped case.",
+        "unsupportedHypotheses": [
+          "numeric weighting",
+          "priority between groups",
+          "modern behavioural meaning"
+        ]
+      },
+      "examples": {
+        "mayApplyForResearchTrace": "All listed terms are profile-mapped and only one condition group is structurally present; record its source label without a reader-facing claim.",
+        "mustNotApply": "A mixed support/adverse case, absent state facts, or any guessed mapping of source vocabulary."
+      },
+      "proposedTestCaseIds": [
+        "k05-tianxiang-support-only",
+        "k05-tianxiang-mixed-conflict",
+        "k05-tianxiang-unmapped-term"
+      ]
+    }
+  ],
+  "competitorObservations": [
+    {
+      "sourceId": "aituvi-homepage-2026-10-15",
+      "url": "https://aituvi.com/",
+      "access": "HTTP 200; public homepage and robots.txt read directly.",
+      "inputAndProfile": "Homepage requests accurate birth date/time in FAQ but publishes no calculation profile or career-rule algorithm.",
+      "observedClaim": "Markets detailed lifetime interpretation including career; no inspected public passage disclosed a Quan Lộc condition or exception.",
+      "classification": "observed-claim-only",
+      "ruleUse": "not eligible for rule extraction"
+    },
+    {
+      "sourceId": "tuvi-me-homepage-2026-10-15",
+      "url": "https://tuvi.me/vi/",
+      "access": "HTTP 200; public homepage, robots.txt and bounded WordPress search endpoint read directly.",
+      "inputAndProfile": "The site presents research/forum material and says it compiles book sources; no school profile or reproducible Quan Lộc rule was found in the bounded inspection.",
+      "observedClaim": "It frames its material as research and notes ongoing debate, but this is methodology/positioning, not a substantive rule.",
+      "classification": "methodology-observation-only",
+      "ruleUse": "not eligible for rule extraction"
+    }
+  ],
+  "openGaps": [
+    "An independent, bibliographically identified source family with a lawful page-level Quan Lộc passage.",
+    "A reviewed school/profile mapping for miếu/vượng, 會, 同, 得左右 and the adverse-star vocabulary.",
+    "A source-defined precedence/exception rule for mixed supportive and adverse Tianxiang contexts.",
+    "A reproducible competitor calculation profile and published method; homepage claims alone cannot validate an interpretation rule."
+  ]
+}
