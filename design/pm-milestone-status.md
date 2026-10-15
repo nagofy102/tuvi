@@ -138,6 +138,15 @@ production-eligible. VNI của Tổng Hợp vẫn chỉ được dùng để đi
 locator giữ lại đã so ảnh PDF. Xem `../dev/knowledge-k14-book-discovery.md` và
 `../dev/knowledge-k14-acquisition.json`.
 
+HV-K14-C batch 3 (16/10) đã hoàn tất giới hạn checkpoint tự chủ với 27 trang:
+Tân Biên 76–93 và Tổng Hợp 93–101. Lũy kế đọc thực chất là 124/1.022 trang;
+Batch 3 có 1 ACCEPT AS RESEARCH, 2 MERGE, 1 REVIEW và 1 REJECT. Kết quả giữ
+được cấu trúc điều kiện trong nguồn và giới hạn phương pháp cho trường hợp
+Mệnh/Thân vô chính tinh, nhưng không chuẩn hóa Thân, Tuần/Triệt, sao lưu hoặc
+hình học profile. Sau ba batch, K14-C dừng checkpoint tổng hợp chờ PO/BA quyết
+định batch tiếp và contract các thuật ngữ unresolved; không có thay đổi runtime,
+calculation, UI hoặc trạng thái production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

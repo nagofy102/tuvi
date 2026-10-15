@@ -100,13 +100,22 @@
       "note": "Twenty-four pages read and visually checked. Source material is strongly outcome-, age- and gender-framed; only bounded methodology/conflict records are retained, while direct personal claims are rejected."
     },
     {
-      "rangeId": "ledger:tb-076-123",
+      "rangeId": "ledger:tb-076-093",
       "bookId": "book-k14-tan-bien",
-      "pdfPages": "76-123",
-      "section": "Mệnh and Thân",
+      "pdfPages": "76-93",
+      "section": "Mệnh and Thân — Thiên Phủ through opening Thiên Lương subsections",
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-3",
+      "note": "Eighteen pages read and visually checked. The entries consistently condition claims on placement, state and combinations, but their direct outcome, health, sex and status claims remain excluded; only a bounded methodology provenance record is retained."
+    },
+    {
+      "rangeId": "ledger:tb-094-123",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "94-123",
+      "section": "Remaining Mệnh and Thân subsections",
       "status": "PENDING",
       "checkpoint": null,
-      "note": "Mapped but unread for knowledge extraction."
+      "note": "Split after Batch 3; mapped but unread for knowledge extraction."
     },
     {
       "rangeId": "ledger:tb-124-157",
@@ -266,9 +275,9 @@
       "bookId": "book-k14-tong-hop",
       "pdfPages": "93-101",
       "section": "Remaining chapter 6 star/state material",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Mapped but unread for knowledge extraction."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-3",
+      "note": "Nine pages read and visually checked. Pages 93-96 extend the Tuần/Triệt numerical discussion already rejected; pages 97-98 contain bounded moving-star and Mệnh/Thân-master methodology, while pages 99-101 are blank/table material. VNI remained navigation-only."
     },
     {
       "rangeId": "ledger:th-102-103",
@@ -363,6 +372,66 @@
         "result": "Visually checked. Pages 83-84 continue unverified rank/classification material and page 92 is a worked diagram/example; none was admitted as an independent rule or calculation input."
       }
     ]
+  },
+  "batch3": {
+    "newPagesProcessed": 27,
+    "ranges": ["ledger:tb-076-093", "ledger:th-093-101"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "79,84,91",
+        "result": "Visually checked. These pages are dominated by direct sex-, health-, status- and event-outcome claims; none was normalized into a reusable rule or meaning statement."
+      },
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "93,95,100",
+        "result": "Visually checked. Pages 93 and 95 are numerical Tuần/Triệt diagrams/examples already outside reusable scope; page 100 is blank continuation material."
+      }
+    ]
+  },
+  "resumeCheckpoint": {
+    "checkpointId": "k14c-after-batch-3",
+    "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
+    "branchAtSave": "main",
+    "baseCommit": "22bd4959ff9f899cbf78ddede71be39d7ef2624a",
+    "bookHashes": {
+      "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
+      "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
+    },
+    "completedOrReadReviewRanges": [
+      "ledger:tb-031-033",
+      "ledger:tb-034-041",
+      "ledger:tb-042-051",
+      "ledger:tb-052-075",
+      "ledger:tb-076-093",
+      "ledger:tb-158-160",
+      "ledger:th-023-032",
+      "ledger:th-061-068",
+      "ledger:th-069-070",
+      "ledger:th-071-076",
+      "ledger:th-077-082",
+      "ledger:th-083-088",
+      "ledger:th-089-092",
+      "ledger:th-093-101",
+      "ledger:th-104-107"
+    ],
+    "nextPendingPriority": ["ledger:tb-094-123", "ledger:th-108-128"],
+    "batch3CandidateIds": [
+      "candidate:k14b3-tb-contextual-entry-structure-merge",
+      "candidate:k14b3-tb-sensitive-major-star-outcomes",
+      "candidate:k14b3-th-tuan-triet-numerical-critique-merge",
+      "candidate:k14b3-th-moving-star-set-review",
+      "candidate:k14b3-th-menh-than-master-void-case"
+    ],
+    "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
+    "unresolvedIssueIds": [
+      "k14-vni-partial-conversion",
+      "k14-lineage-between-books",
+      "k14-missing-auxiliary-entities",
+      "k14-active-geometry"
+    ],
+    "nextAction": "AGGREGATE_PO_REVIEW_REQUIRED before Batch 4.",
+    "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
     {
@@ -983,6 +1052,116 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Rejected; the relevant scholarly value is preserved separately as an unresolved conflict record."
+    },
+    {
+      "candidateId": "candidate:k14b3-tb-contextual-entry-structure-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.76-93, 4.2.7-4.2.12 (Thiên Phủ through opening Thiên Lương)",
+      "subjectIds": [
+        "palace:menh",
+        "state:mieu",
+        "state:vuong",
+        "state:ham",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "The source describes a major star in Mệnh through a stated position, star-state and concurrent-star context."
+      ],
+      "neutralStatement": "The reviewed entries repeatedly organize a star description by Mệnh placement, stated state, direct co-location or aspect context, then add source-specific conditions; the entries do not support reading any one factor in isolation.",
+      "evidenceType": "repeated source entry structure",
+      "limitations": [
+        "The pages couple this structure to direct health, longevity, sex, status and event outcomes that are excluded.",
+        "They add provenance to existing contextual-methodology records only; no state lookup, geometry, priority or personalized conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with the pilot and batch-1 context-dependence records; this is additional book-specific provenance, not a new general rule."
+    },
+    {
+      "candidateId": "candidate:k14b3-tb-sensitive-major-star-outcomes",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.76-93, 4.2.7-4.2.12",
+      "subjectIds": [],
+      "conditions": [
+        "The source presents direct Mệnh outcomes from named major stars, states and combinations."
+      ],
+      "neutralStatement": "The reviewed entries include personal predictions and value judgments involving health, longevity, sexuality, gender roles, status, occupation, wealth, accidents and legal outcomes.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims do not supply an approved calculation profile or safe modern interpretation policy.",
+        "They must not become a score, fixture, personalized claim or production rule."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for this range; the permitted contextual structure is retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b3-th-tuan-triet-numerical-critique-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "conflict",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.93-96, continuation and conclusion of the Tuần/Triệt critique",
+      "subjectIds": [
+        "concept:yin-yang",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:trines-with"
+      ],
+      "conditions": ["The author critiques fixed numerical estimates for Tuần/Triệt influence."],
+      "neutralStatement": "The continuation states that fixed numerical proportions remain underdetermined because the author considers several palace, star, relational and contextual factors, and frames any broad proportion only as a non-exact guide.",
+      "evidenceType": "author critique of attributed numerical approach",
+      "limitations": [
+        "This extends the Batch-2 Tuần/Triệt conflict record; it does not supply a calculation, weight, percentage or resolver.",
+        "The relevant geometry, terms and profile remain unresolved."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with candidate:k14b2-th-tuan-triet-scope-conflict and the rejected numerical-example record; preserve additional provenance without duplicating the conflict."
+    },
+    {
+      "candidateId": "candidate:k14b3-th-moving-star-set-review",
+      "disposition": "REVIEW",
+      "reviewReason": "source-conflict",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.96-97, 3. Chín sao lưu động",
+      "subjectIds": ["period:luu-nien", "relation:co-located", "relation:joined-aspect"],
+      "conditions": ["The source describes a yearly moving-star set in a period review."],
+      "neutralStatement": "The source presents a yearly moving-star set as relevant only when a moving star is located in or aspects the annual period context, and says its use remains subject to the usual positional and combination considerations.",
+      "evidenceType": "author-described period methodology",
+      "limitations": [
+        "The heading announces nine stars but the immediately supplied list and later examples do not reconcile their membership clearly.",
+        "The active set, placement algorithm, annual-period mapping and geometry are all unresolved; no moving-star calculation or inference is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New source-described annual-review candidate, held because the source-internal set/count discrepancy and profile-dependent mechanics cannot be normalized."
+    },
+    {
+      "candidateId": "candidate:k14b3-th-menh-than-master-void-case",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.97-98, 4. Sao Mệnh Chủ, Sao Thân Chủ",
+      "subjectIds": [
+        "palace:menh",
+        "relation:opposes",
+        "relation:joined-aspect",
+        "relation:source-described-brackets"
+      ],
+      "conditions": [
+        "An attributed account discusses Mệnh or Thân without a major star and proposes a corresponding master-star as an auxiliary review factor."
+      ],
+      "neutralStatement": "The author records an attributed approach that, in a void-main-star Mệnh or Thân case, consults the respective master star together with relevant aspect and bracket contexts; the same section explicitly notes that the master stars' placement is unspecified in the consulted literature.",
+      "evidenceType": "attributed method plus source-acknowledged limitation",
+      "limitations": [
+        "The current catalog has no stable Thân subject, master-star entities or void-main-star identity, and the placement question remains unanswered in the source.",
+        "This cannot activate a calculation, geometry mapping, interpretation rule or personalized claim."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Related to candidate:k14b2-th-void-main-star-opposition-review; preserves a different attributed fallback and its explicit source-level incompleteness."
     }
   ],
   "unresolvedIssues": [

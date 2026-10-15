@@ -420,18 +420,8 @@ claim surface—not encoding—is the principal admission risk.
 
 ### Next bounded batch
 
-The next batch may remain within the approved two-book scope if the ledger and
-QA gates stay clean. A suitable **Batch 3** is 30–38 pages:
-
-1. Tân Biên 76–93, continuing the bounded Mệnh/Thân star material but isolating
-   direct claims and uncataloged auxiliary terms.
-2. Tổng Hợp 93–104, completing the special-case discussion and stopping at the
-   Volume II transition; do not process Volume II method pages in the same batch.
-
-After Batch 3, stop for the promised aggregate checkpoint even if no technical
-blocker appears. Before any shared-catalog merge, PO/BA must decide the stable
-identity for Thân, Tuần/Triệt and void-main-star terminology, and whether any
-source-described geometry is compatible with the target profile.
+The former Batch 3 plan was completed as the aggregate checkpoint below. No
+further batch starts automatically until PO reviews the three-batch checkpoint.
 
 ## Verification
 
@@ -450,6 +440,75 @@ HV-K14-C batch 2:
   and 2 `REJECT`; none is profile-compatible or production-eligible.
 - PASS: PDF SHA-256 values match Checkpoint 1; all retained locators plus the six
   random no-yield pages were visually checked.
+- PASS: targeted Prettier and `git diff --check`.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit
+  tests, typecheck, build and E2E (research-only data has no production consumer).
+
+## HV-K14-C batch 3 — aggregate checkpoint
+
+### Batch coverage and ledger
+
+| Book              | New pages read | Batch range | Processing result                                                                                                                              |
+| ----------------- | -------------: | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tân Biên          |             18 | 76–93       | Read and held in `REVIEW`; the repeated star entries preserve contextual structure, while direct outcome claims are excluded.                  |
+| Tổng Hợp          |              9 | 93–101      | Read and held in `REVIEW`; the Tuần/Triệt continuation, annual-moving-star section and Mệnh/Thân-master discussion require separate treatment. |
+| **Batch 3 total** |         **27** |             | All ranges were visually checked; VNI remained navigation-only.                                                                                |
+
+This does not overlap the pilot or Batches 1–2. Cumulative substantive reading is
+**124 / 1,022 PDF pages**: 66 pages from Tân Biên, 55 from Tổng Hợp and the
+three-page Tự Xem negative control. The acquisition ledger covers each page of
+the two approved primary books exactly once. The remaining queue begins with
+Tân Biên 94–123 and Total Hợp's untouched sections; it is intentionally paused
+at this three-batch checkpoint.
+
+### Candidate result and knowledge yield
+
+| Disposition          | Count | Result                                                                                                                                      |
+| -------------------- | ----: | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ACCEPT_AS_RESEARCH` |     1 | An attributed void-main-star Mệnh/Thân-master fallback, retained chiefly because the source itself records an unresolved placement problem. |
+| `MERGE`              |     2 | Additional provenance for contextual star-entry structure and the already-preserved Tuần/Triệt numerical critique.                          |
+| `REVIEW`             |     1 | The annual moving-star set has an unresolved count/membership discrepancy and lacks a profile-pinned placement method.                      |
+| `REJECT`             |     1 | Direct health, longevity, gender, status, accident and personal-outcome claims across the major-star entries.                               |
+
+The meaningful addition is constrained methodological knowledge, not a usable
+prediction: the book's own presentation repeatedly requires placement, stated
+state and concurrent star context, and its Mệnh/Thân-master discussion explicitly
+leaves a key placement question unanswered. No candidate becomes
+profile-compatible, production-eligible, a calculation input, a weight or a
+personalized reading.
+
+### QA and checkpoint outcome
+
+All 27 pages were rendered and inspected in contact sheets. Every retained
+locator was visually compared to its PDF page; Total Hợp pages 93–98 received
+individual visual review because the VNI layer is not authoritative. Random
+no-yield QA covered Tân Biên 79, 84 and 91 plus Tổng Hợp 93, 95 and 100. The
+three Total Hợp no-yield pages were a numerical diagram/example or blank
+continuation, not silently omitted content.
+
+Across the three autonomous batches, the ledger, hashes, IDs and provenance
+remain consistent. The unresolved blockers remain substantive: stable identities
+for Thân, Tuần/Triệt, moving-star membership and void-main-star terminology;
+target-profile geometry; and the VNI automation boundary. These prevent any
+shared-catalog normalization or runtime use, but do not invalidate the reviewed
+page coverage.
+
+At this promised aggregate checkpoint, stop before Batch 4. PO/BA should decide
+whether to authorize the next breadth-first slice (starting Tân Biên 94–123 and a
+separately bounded Tổng Hợp section) and whether any of the unresolved terms may
+be added to the catalog under a reviewed contract.
+
+## Verification — HV-K14-C batch 3
+
+- PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
+  with no gap or overlap; the Batch 3 ranges reconcile to 27 new pages.
+- PASS: book hashes match Checkpoint 1; non-rejected subject IDs resolve to the
+  existing foundation catalog; every `REVIEW` candidate has a reason, locator,
+  conditions, evidence type, limitations, profile status and duplicate assessment.
+- PASS: all retained candidate locators and six no-yield samples were visually
+  checked; VNI text was not admitted as standalone evidence.
+- PASS: candidate totals reconcile to 1 `ACCEPT_AS_RESEARCH`, 2 `MERGE`, 1
+  `REVIEW` and 1 `REJECT`; no profile or production status changed.
 - PASS: targeted Prettier and `git diff --check`.
 - NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit
   tests, typecheck, build and E2E (research-only data has no production consumer).
