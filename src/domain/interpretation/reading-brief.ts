@@ -1,7 +1,7 @@
 import type { ChartResult, ChartStar } from '../astrology/types';
 import { INTERPRETATION_SOURCES } from './catalog';
 import { INTERPRETATION_VERSION } from './calculate';
-import { KNOWLEDGE_PROFILE, resolvePassage, resolveRule, STAR_PASSAGE_IDS } from './knowledge';
+import { KNOWLEDGE_PROFILE, resolvePassage, resolveRule } from './knowledge';
 import {
   APPROVED_A1_SEMANTIC_KEY,
   resolveApprovedClaimTemplate,
@@ -55,14 +55,6 @@ export interface BuildReadingBriefInput {
   interpretation: InterpretationResult;
   readingId: string;
   topic?: ReadingTopic;
-}
-
-function majorStars(chart: ChartResult, palaceName: string): ChartStar[] {
-  return (
-    chart.palaces
-      .find((palace) => palace.name === palaceName)
-      ?.stars.filter((star) => star.group === 'major') ?? []
-  );
 }
 
 function signalId(palace: string): string {

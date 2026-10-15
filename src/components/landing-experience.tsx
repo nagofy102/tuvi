@@ -22,7 +22,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { normalizeDate, formatDate } from '@/domain/calendar/convert';
 import { MAX_YEAR, MIN_YEAR, type CalendarInput } from '@/domain/calendar/types';
-import type { BirthInput, ChartResult } from '@/domain/astrology/types';
+import type { ChartResult } from '@/domain/astrology/types';
 import { FIXED_LEAP_POLICY, FIXED_ZI_POLICY } from '@/domain/astrology/profile';
 import { ChartWidget } from './horoscope/chart-widget';
 import { CelestialWheel } from './ui/celestial-wheel';
