@@ -113,9 +113,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "94-123",
       "section": "Remaining Mệnh and Thân subsections",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Split after Batch 3; mapped but unread for knowledge extraction."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-4",
+      "note": "Thirty pages read and visually checked. The continued Mệnh/Thân star entries confirm the book's multi-factor entry structure, but direct historical personal outcomes are excluded; Khôi/Việt and several auxiliary identities remain unresolved."
     },
     {
       "rangeId": "ledger:tb-124-157",
@@ -389,11 +389,22 @@
       }
     ]
   },
+  "batch4": {
+    "newPagesProcessed": 30,
+    "ranges": ["ledger:tb-094-123"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "96, 103, 111, 118, 122",
+        "result": "Visually checked. These pages are dominated by direct health, death, sex, gender-role, status, accident, legal and occupation outcomes; none was silently converted into a reusable statement."
+      }
+    ]
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-3",
+    "checkpointId": "k14c-after-batch-4",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "22bd4959ff9f899cbf78ddede71be39d7ef2624a",
+    "baseCommit": "09f8ff28b5f2eca5ca32f82ce38da2cff8be1366",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -404,6 +415,7 @@
       "ledger:tb-042-051",
       "ledger:tb-052-075",
       "ledger:tb-076-093",
+      "ledger:tb-094-123",
       "ledger:tb-158-160",
       "ledger:th-023-032",
       "ledger:th-061-068",
@@ -415,13 +427,11 @@
       "ledger:th-093-101",
       "ledger:th-104-107"
     ],
-    "nextPendingPriority": ["ledger:tb-094-123", "ledger:th-108-128"],
-    "batch3CandidateIds": [
-      "candidate:k14b3-tb-contextual-entry-structure-merge",
-      "candidate:k14b3-tb-sensitive-major-star-outcomes",
-      "candidate:k14b3-th-tuan-triet-numerical-critique-merge",
-      "candidate:k14b3-th-moving-star-set-review",
-      "candidate:k14b3-th-menh-than-master-void-case"
+    "nextPendingPriority": ["ledger:th-108-128", "ledger:tb-124-157"],
+    "batch4CandidateIds": [
+      "candidate:k14b4-tb-contextual-entry-structure-merge",
+      "candidate:k14b4-tb-khoi-viet-review",
+      "candidate:k14b4-tb-sensitive-major-star-outcomes"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -430,7 +440,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "AGGREGATE_PO_REVIEW_REQUIRED before Batch 4.",
+    "nextAction": "Continue autonomously with a separately bounded Tổng Hợp slice; isolate VNI-affected pages through visual QA.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1162,6 +1172,73 @@
       ],
       "profileStatus": "unresolved",
       "duplicateAssessment": "Related to candidate:k14b2-th-void-main-star-opposition-review; preserves a different attributed fallback and its explicit source-level incompleteness."
+    },
+    {
+      "candidateId": "candidate:k14b4-tb-contextual-entry-structure-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.94-123, 4.2.13-4.2.24 (Thiên Lương continuation through Lục Bại)",
+      "subjectIds": [
+        "palace:menh",
+        "state:mieu",
+        "state:vuong",
+        "state:dac-dia",
+        "state:ham",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "The source describes a star in Mệnh through a stated position, state and concurrent-star or aspect context."
+      ],
+      "neutralStatement": "The reviewed continuation retains the same entry structure: placement and stated state are qualified by co-location, aspect context, branch and sometimes age or sex conditions; the book does not present a single factor as sufficient for its own conclusions.",
+      "evidenceType": "repeated source entry structure",
+      "limitations": [
+        "The entries attach this structure to direct health, death, sex, gender-role, status, legal, occupation and event outcomes that are excluded.",
+        "This only adds book-specific provenance to existing contextual-methodology records; it does not activate a state lookup, geometry, priority or personalized conclusion."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with candidate:k14b3-tb-contextual-entry-structure-merge and earlier contextual-methodology records; this is additional coverage, not a new rule."
+    },
+    {
+      "candidateId": "candidate:k14b4-tb-khoi-viet-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.105-106, 4.2.16 Khôi, Việt",
+      "subjectIds": ["relation:co-located", "relation:opposes", "relation:joined-aspect"],
+      "conditions": [
+        "The source discusses Thiên Khôi and Thiên Việt through Mệnh or Thân placement and concurrent-star/aspect contexts."
+      ],
+      "neutralStatement": "The source presents Khôi and Việt as a paired topic and describes their stated contexts using Mệnh/Thân placement, co-location and aspect language.",
+      "evidenceType": "source-described paired-star entry",
+      "limitations": [
+        "Khôi and Việt do not yet have stable foundation identities or a verified placement method under the target profile.",
+        "The page's direct outcome and historical status claims are excluded; this cannot produce an interpretation, calculation input or profile decision."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Related to the pre-existing Khôi/Việt variant and assignment gap; preserve the locator for future controlled catalog work without normalizing the identities."
+    },
+    {
+      "candidateId": "candidate:k14b4-tb-sensitive-major-star-outcomes",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.94-123, 4.2.13-4.2.24",
+      "subjectIds": [],
+      "conditions": [
+        "The source presents direct Mệnh or Thân outcomes from named stars, states, combinations, branch, age or sex conditions."
+      ],
+      "neutralStatement": "The reviewed entries include direct claims about health, lifespan, death, sexuality, gender roles, social status, occupation, wealth, accidents and legal outcomes.",
+      "evidenceType": "historical source claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack an approved calculation profile and safe modern interpretation policy.",
+        "They must not become a score, fixture, personalized claim or production rule."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for this range; permitted methodology and the Khôi/Việt identity gap are retained separately."
     }
   ],
   "unresolvedIssues": [

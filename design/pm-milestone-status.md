@@ -143,9 +143,18 @@ Tân Biên 76–93 và Tổng Hợp 93–101. Lũy kế đọc thực chất là
 Batch 3 có 1 ACCEPT AS RESEARCH, 2 MERGE, 1 REVIEW và 1 REJECT. Kết quả giữ
 được cấu trúc điều kiện trong nguồn và giới hạn phương pháp cho trường hợp
 Mệnh/Thân vô chính tinh, nhưng không chuẩn hóa Thân, Tuần/Triệt, sao lưu hoặc
-hình học profile. Sau ba batch, K14-C dừng checkpoint tổng hợp chờ PO/BA quyết
-định batch tiếp và contract các thuật ngữ unresolved; không có thay đổi runtime,
-calculation, UI hoặc trạng thái production.
+hình học profile. Không có thay đổi runtime, calculation, UI hoặc trạng thái
+production.
+
+Chính sách điều phối HV-K14-C sau batch 3 thay checkpoint chờ PO bằng vòng tự
+tiếp tục khi kết quả là `NORMAL`; vấn đề VNI/OCR, dị bản hoặc candidate `REVIEW`
+là `RECOVERABLE` và phải được cô lập trong ledger. Chỉ vấn đề quyền, provenance,
+toàn vẹn dữ liệu, contract/runtime hoặc không còn phần việc an toàn mới là
+`BLOCKING` cần PO. Batch 4 (16/10) đã áp dụng chính sách này, đọc thêm 30 trang
+Tân Biên 94–123. Lũy kế là 154/1.022 trang; có 1 MERGE, 1 REVIEW (Khôi/Việt
+chưa có identity/phép an theo profile) và 1 REJECT cho nhóm lời luận trực tiếp.
+QA ledger/hash/locator/ID/format qua; không thay runtime, calculation, UI hay
+trạng thái production. Vòng tiếp theo tiếp tục Tổng Hợp theo visual QA bắt buộc.
 
 ## Đợt hiện tại — tiếp tục A
 

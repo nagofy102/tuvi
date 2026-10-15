@@ -493,10 +493,43 @@ target-profile geometry; and the VNI automation boundary. These prevent any
 shared-catalog normalization or runtime use, but do not invalidate the reviewed
 page coverage.
 
-At this promised aggregate checkpoint, stop before Batch 4. PO/BA should decide
-whether to authorize the next breadth-first slice (starting Tân Biên 94–123 and a
-separately bounded Tổng Hợp section) and whether any of the unresolved terms may
-be added to the catalog under a reviewed contract.
+The checkpoint is retained as a quality and coverage review, not a stop gate. Under
+the current HV-K14-C orchestrator policy, normal batches continue autonomously;
+recoverable VNI and terminology issues are isolated in the ledger. PO intervention
+is reserved for blocking rights, provenance, contract or runtime issues.
+
+## HV-K14-C batch 4 — autonomous continuation
+
+Tân Biên PDF/printed pages 94–123 were read as one clean-Unicode, section-bounded
+batch (30 pages). The ledger now marks the range `REVIEW`: 4.2.13–4.2.24 continues
+the Mệnh/Thân star entries from Thiên Lương through Lục Bại. It adds one `MERGE`
+record for the recurring multi-factor entry structure, one `REVIEW` record for the
+Khôi/Việt paired topic because neither identity nor target-profile placement is
+stable, and one `REJECT` record for the range's direct historical personal outcomes.
+
+The range was rendered and visually inspected. Candidate locators were checked
+against the source pages; no-yield QA sampled pages 96, 103, 111, 118 and 122.
+Those pages are outcome-heavy (including health, death, sex, gender-role, status,
+legal, occupation and accident claims), so no unsupported meaning or rule was
+silently admitted. Cumulative substantive reading is **154 / 1,022 PDF pages**:
+96 Tân Biên, 55 Tổng Hợp and three Tự Xem control pages.
+
+This is a `NORMAL` continuation: no provenance, hash, ledger or schema failure was
+found. The next priority is a separately bounded Tổng Hợp slice beginning at
+108–128, with rendered-page QA mandatory because its VNI text remains navigation
+only. No candidate has become profile-compatible or production-eligible.
+
+### Verification — HV-K14-C batch 4
+
+- PASS: acquisition JSON parses; ledger ranges cover each primary-book page once
+  with no gap or overlap; Batch 4 reconciles to 30 new pages.
+- PASS: book hashes match Checkpoint 1; all non-rejected candidate subject IDs
+  resolve to the existing foundation catalog; the `REVIEW` record includes reason,
+  locator, conditions, evidence type, limitations, profile status and duplicate assessment.
+- PASS: all retained locators and five no-yield samples were visually checked.
+- PASS: targeted Prettier and `git diff --check`; no profile or production status changed.
+- NOT RUN BY SCOPE: source-registry audit (registry unchanged), runtime unit tests,
+  typecheck, build and E2E (research-only data has no production consumer).
 
 ## Verification — HV-K14-C batch 3
 
