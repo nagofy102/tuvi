@@ -20,7 +20,7 @@ all from the same unresolved textual family: they are research records, not
 runtime or K04B authorization. Paid or permissioned material requires PO approval
 of price, licence and allowed use before acquisition.
 
-HV-K06–K08 normalize bounded source-backed vocabulary for twelve palaces, fourteen
+HV-K06–K09 normalize bounded source-backed vocabulary for twelve palaces, fourteen
 major-star candidates, fourteen individually identified auxiliary stars, selected
 families, state/aspect terms and methodology. K07 adds source-variant state tables
 and two conditional bracket configurations; K08 adds the ten-stem/twelve-branch
@@ -29,6 +29,13 @@ vocabulary, yin/yang, five-phase/nạp âm terms and four fortune-period terms.
 remain research artifacts: their IDs may support future graph/DSL design, but
 unresolved profile geometry, state tables, transformation variants and every
 period-placement method remain blocked from runtime use.
+
+K09 also registers one separately accessed `紫微斗數` transcription labelled
+`萬曆續道藏` by its page header. Its vocabulary diverges materially from the
+current `紫微斗數全書` records, but its bibliographic relationship is **unknown**:
+it is a second source-family candidate, not an independent confirmation. The two
+retained K09 variants remain source-only/disputed and cannot alias or replace the
+active palace vocabulary.
 
 The consolidated historical provenance covers bibliographic catalogue checks,
 classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07

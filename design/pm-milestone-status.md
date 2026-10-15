@@ -59,6 +59,12 @@ review các hạn ở mức methodology. Tất cả mapping an hạn, chiều t�
 kết luận hạn vẫn `blocked`; không có candidate production hoặc thay đổi runtime.
 Xem `../dev/knowledge-k08-coverage.md`.
 
+HV-K09 (15/10) đăng ký một văn bản `紫微斗數` có page header `萬曆續道藏`, khác
+vocabulary với family `紫微斗數全書`. Quan hệ thư tịch/độc lập chưa xác định nên
+chỉ thêm hai source variants (một `disputed`), không hòa trộn thuật ngữ cung hay
+nâng chất lượng evidence. Số source family **được chứng minh độc lập** vẫn là 0;
+xem `../dev/knowledge-k09-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

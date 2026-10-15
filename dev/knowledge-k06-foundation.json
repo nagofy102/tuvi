@@ -1,13 +1,13 @@
 {
-  "artifactVersion": "hv-k08-foundation-v0.3",
+  "artifactVersion": "hv-k09-foundation-v0.4",
   "generatedAt": "2026-10-15",
   "scope": "Foundational vocabulary and methodology, research-only; no calculation or reader-facing inference admission.",
-  "registryVersion": "hv-k08-breadth-expansion-2026-10-15",
+  "registryVersion": "hv-k09-multisource-foundation-2026-10-15",
   "defaultProfile": "profile-unresolved",
   "profilePolicy": "Every catalog item inherits defaultProfile unless a future revision gives it an explicit profile.",
   "provenanceBoundary": {
-    "sourceFamilyId": "zwds-quanshu-textual-lineage-unresolved",
-    "independence": "All items derive from three volumes of one unresolved textual family; they are not independent confirmation or Nam Phái certification.",
+    "sourceFamilyId": "multiple-unresolved-textual-lineages",
+    "independence": "Most items derive from the 紫微斗數全書 family. K09 adds one separately accessed 道藏-labelled candidate family with unknown independence; no item has independent confirmation or Nam Phái certification.",
     "rights": "Pinned public Wikisource revisions; retain minimal quotations/locators only. Underlying-text status remains unresolved."
   },
   "palaces": [
@@ -322,6 +322,28 @@
       "status": "source-backed",
       "sourceRefs": ["k08-v3-period-review-terms"],
       "evaluationStatus": "blocked-active-profile"
+    }
+  ],
+  "sourceVariants": [
+    {
+      "id": "variant:daozang-palace-label-vocabulary",
+      "label": "Đạo Tạng: dị bản nhãn cung",
+      "kind": "source-vocabulary-variant",
+      "status": "disputed",
+      "sourceRefs": ["k09-daozang-palace-label-variant"],
+      "definition": "A source-specific heading presents palace labels that differ from the current canonical vocabulary and appears ambiguous/incomplete in the transcription.",
+      "graphReadiness": "source-node-only",
+      "constraint": "Do not alias, merge or use these labels as active palace facts until bibliographic collation and profile review establish the source-system relationship."
+    },
+    {
+      "id": "variant:daozang-review-sequence",
+      "label": "Đạo Tạng: trình tự xem xét",
+      "kind": "source-methodology-variant",
+      "status": "source-backed",
+      "sourceRefs": ["k09-daozang-review-sequence"],
+      "definition": "A source-specific ordered list names time, bát tự, stars, vận, hạn, transformations and preferences.",
+      "graphReadiness": "source-node-only",
+      "constraint": "It is retained for comparison only; it cannot alter or combine with existing methodology gates."
     }
   ],
   "stars": [
@@ -869,6 +891,7 @@
     "Lawful page-level material defining modern-safe meanings, exceptions and precedence for substantive rules.",
     "A complete auxiliary-star catalogue with classification provenance; K06 records only bounded source families.",
     "Reviewed mappings for ten stems, twelve branches, yin/yang, five phases, nạp âm and period placement; K08 records vocabulary only.",
-    "Independent, school-classified material for fortune-period methodology and exceptions."
+    "Independent, school-classified material for fortune-period methodology and exceptions.",
+    "Bibliographic collation of the 道藏-labelled K09 source against the 紫微斗數全書 family before treating it as independent or merging vocabulary."
   ]
 }

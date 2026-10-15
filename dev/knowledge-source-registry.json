@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k08-breadth-expansion-2026-10-15",
+  "registryVersion": "hv-k09-multisource-foundation-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -155,6 +155,56 @@
         "Registration confirms the pinned revision and bounded research locators only.",
         "No passage or rule is approved for implementation by this source record.",
         "Vocabulary, calculation profile and philological review remain unresolved."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "daozang-ziwei-doushu-wikisource-r8061095",
+      "sourceKind": "transcription",
+      "title": "紫微斗數",
+      "creator": "陳摶 (attributed by page header)",
+      "edition": "萬曆續道藏 (as identified by page header)",
+      "publisher": "Chinese Wikisource",
+      "publicationYear": null,
+      "language": "zh-Hant",
+      "knowledgeScopes": ["fortune-periods", "research-method", "star-symbolism"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "not-applicable",
+          "evidenceNote": "The page does not identify a Nam Phái profile; source-system relationship is unreviewed."
+        }
+      ],
+      "access": {
+        "url": "https://zh.wikisource.org/w/index.php?title=%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8&oldid=8061095",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-15",
+        "lastObservedStatus": "HTTP 200 through pinned revision raw wikitext",
+        "robotsOrTermsNote": "Only bounded manual passage research is admitted; bulk reuse was not assessed."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "Wikisource site licensing applies to editorial contributions; underlying text, attribution and edition status remain unresolved.",
+        "reusePolicy": "Store a pinned locator and minimal reviewed quotations with attribution; do not bulk-copy the work."
+      },
+      "provenance": {
+        "locator": "Pinned Wikisource revision 8061095, 紫微斗數; page header says 續道藏",
+        "revision": "8061095",
+        "contentDigest": null,
+        "retrievalMethod": "Manual bounded review of pinned raw web transcription",
+        "bibliographicIdentity": "Header attribution and 續道藏 label are page claims; edition identity and relation to 紫微斗數全書 are not independently established."
+      },
+      "independence": {
+        "sourceFamilyId": "daozang-ziwei-doushu-textual-lineage-unverified",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "The title/header and vocabulary differ from the registered 紫微斗數全書 transcription, but no bibliographic collation establishes independent textual lineage."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "This is a separately accessed candidate family, not an established independent vote.",
+        "Its mixed vocabulary must not be merged into the active 12-palace or calculation profile.",
+        "No passage or rule is approved for implementation."
       ],
       "supersedes": []
     },
@@ -492,9 +542,56 @@
         "K08 retains only the methodological ordering/vocabulary, not the passage's outcome language or any prediction rule.",
         "The source does not supply a reviewed active profile, complete period placement mapping or mixed-condition precedence."
       ]
+    },
+    {
+      "passageId": "k09-daozang-review-sequence",
+      "sourceId": "daozang-ziwei-doushu-wikisource-r8061095",
+      "locator": "紫微斗數卷之一 > 論次序; pinned revision 8061095, raw wikitext lines 6–27",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "一定時刻，二起八字，三立格局……六起大運，七起大限，八書化曜，九書喜忌，十排吉凶。",
+      "supports": [
+        "source-specific-review-sequence",
+        "dai-yun-vocabulary",
+        "dai-han-vocabulary",
+        "transformation-vocabulary"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The sequence belongs to a separately accessed, uncollated textual family; it is not merged with existing methodology or calculation behavior.",
+        "The passage supplies no reviewed mapping, profile or modern claim admission."
+      ]
+    },
+    {
+      "passageId": "k09-daozang-palace-label-variant",
+      "sourceId": "daozang-ziwei-doushu-wikisource-r8061095",
+      "locator": "術天機 > 照膽經四言十八飛星直指序 > 十二宮分; pinned revision 8061095, raw wikitext lines 186–190",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "十二宮分：紫微，天虛，天貴，天印，天壽恤天，紅鸾，天庫，天貫，文昌，天福，天祿。",
+      "supports": ["source-specific-palace-label-variant", "unmapped-vocabulary-variant"],
+      "profileScope": ["profile-unresolved"],
+      "status": "disputed",
+      "limitations": [
+        "The retained transcription visibly has an ambiguous/possibly incomplete list; K09 records it as a source variant, not a normalized twelve-palace inventory.",
+        "It conflicts in vocabulary with the existing source-specific palace list and cannot populate active palace facts."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k09-daozang-source-registration",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "daozang-ziwei-doushu-wikisource-r8061095",
+        "k09-daozang-review-sequence",
+        "k09-daozang-palace-label-variant"
+      ],
+      "basis": "HV-K09 directly read two bounded passages in a pinned public transcription with a distinct title/header and vocabulary. Bibliographic independence and source-system relationship remain unknown; the conflicting palace labels are retained as disputed, non-production evidence."
+    },
     {
       "reviewId": "hv-k08-breadth-passage-registration",
       "date": "2026-10-15",
