@@ -27,11 +27,29 @@ knowledge coverage or predictive accuracy. `1985-03-21` remains unresolved; no
 observation vector is silently golden. K03A3 knowledge yield is zero for usable
 substantive rules; K03A4 has no claim/runtime authorization; K04B is postponed.
 
-Required checks for a behavior-preserving change are `npm run typecheck`,
+For a behavior-preserving **runtime** change, required checks are `npm run typecheck`,
 `npm test`, `npm run engine:check`, `npm run format:check`, a production build,
 and Chromium E2E where UI/runtime is touched. Source/reference/competitor/tech
 audits are fail-closed and must report BLOCKED when their Git provenance phase
 cannot execute. Do not claim PASS from their partial invariant output.
+
+## Nguyên tắc chọn mức kiểm thử
+
+Chọn mức kiểm thử theo **loại thay đổi thực tế**, không theo số lượng file hoặc
+tên milestone. Một thay đổi thuộc nhiều loại phải chạy hợp các gate tương ứng.
+Kết quả luôn ghi từng lệnh là PASS, FAIL, BLOCKED hoặc NOT TESTED cùng lý do;
+không suy diễn PASS từ một phần output.
+
+| Loại thay đổi | Gate bắt buộc | Không được suy ra |
+| --- | --- | --- |
+| **Research-only** — registry, catalog, passage/provenance, fixture quan sát hoặc báo cáo; không đổi code/runtime contract | Validate được dữ liệu thay đổi: parse/schema nếu có, ID/reference/provenance/locator resolution, uniqueness và invariant liên quan; `git diff --check`. Khi sửa Source Registry, chạy `npm run audit:sources`; nếu pha Git bị chặn thì ghi BLOCKED, không tắt audit. Chạy test chuyên biệt chỉ khi chính dữ liệu/validator đó có test. | Không mặc định phải build/E2E hoặc gọi dữ liệu research là đúng chuyên môn/production-ready. |
+| **Runtime change** — mã thực thi, schema/contract runtime, calculation, evaluator, UI hoặc cấu hình ảnh hưởng hành vi | Kiểm thử phần mềm theo blast radius: typecheck, unit/integration regression liên quan, engine/invariant check liên quan và format/diff. Chạy production build khi bundle/runtime có thể bị ảnh hưởng; chạy Chromium E2E khi UI hoặc user flow bị ảnh hưởng. Thay đổi calculation, provenance hoặc inference còn phải chạy audit/source/reference/competitor phù hợp theo contract. | Không dùng test hẹp để xác nhận toàn bộ release hoặc độ đúng nghiệp vụ ngoài phạm vi fixture/corpus. |
+| **Release** — bản được đề xuất phát hành/integrate để triển khai | Full supported suite: strict typecheck, unit/integration, engine checks, format/diff, production build, Chromium E2E, và các audit source/reference/competitor/tech liên quan. Thực hiện các release/manual/deploy checks được product scope yêu cầu. | Không được bỏ qua hoặc đổi BLOCKED thành PASS; release bị chặn cho đến khi quyết định risk/exception được PO/PM ghi nhận. |
+
+Research-only vẫn có thể cần escalation lên runtime/release gate nếu thay đổi của nó
+đụng schema đã chạy, fixture golden, source/rule eligibility, calculation profile
+hoặc bất kỳ consumer production nào. Ngược lại, báo cáo research không được mở
+rộng tự động thành một regression suite toàn ứng dụng.
 
 K02B/K03A2/K04A đã bổ sung dữ liệu tái lập bất đồng lịch, 8 case rule phương pháp
 và 6 case evaluator fail-closed. Đây là research/structural test, không phải golden
