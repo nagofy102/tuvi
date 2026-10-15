@@ -30,6 +30,10 @@ candidate from the existing pinned volume-three passage. It enables no claim, ru
 or K04B work; two new-source routes were access-blocked. See
 `knowledge-k03a4-source-pilot.md`.
 
+HV-M01 Phase A inventories all repository Markdown and code-quality findings in
+`repository-consolidation-audit.md`. It is a proposal awaiting Product Owner approval;
+no documentation move/delete/merge or code refactor has started.
+
 ## References
 
 - `knowledge-k02-k03-execution.md`: phạm vi, dependency, worktree/file ownership,
