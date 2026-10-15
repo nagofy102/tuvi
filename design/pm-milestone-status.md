@@ -53,6 +53,12 @@ giáp có ví dụ. Hai candidate cấu trúc giáp được lưu `blocked`; sou
 textual lineage chưa xác định hệ phái, hình học/profile và ưu tiên xung đột chưa
 được map. Không có rule production mới; xem `../dev/knowledge-k07-coverage.md`.
 
+HV-K08 (15/10) mở rộng breadth-first bằng vocabulary 10 Can, 12 Chi, âm dương,
+ngũ hành/nạp âm và Đại hạn/Tiểu hạn/Lưu niên/Thái tuế; đồng thời giữ quan hệ
+review các hạn ở mức methodology. Tất cả mapping an hạn, chiều tính, profile và
+kết luận hạn vẫn `blocked`; không có candidate production hoặc thay đổi runtime.
+Xem `../dev/knowledge-k08-coverage.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

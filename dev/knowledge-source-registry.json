@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k07-foundation-enrichment-2026-10-15",
+  "registryVersion": "hv-k08-breadth-expansion-2026-10-15",
   "updatedAt": "2026-10-15",
   "sources": [
     {
@@ -16,7 +16,8 @@
         "palace-placement",
         "major-star-placement",
         "auxiliary-star-placement",
-        "transformations"
+        "transformations",
+        "fortune-periods"
       ],
       "schoolClaims": [
         {
@@ -28,7 +29,7 @@
       "access": {
         "url": "https://zh.wikisource.org/w/index.php?title=%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%8D%B7%E4%BA%8C&oldid=1963110",
         "accessType": "free-public",
-        "lastCheckedAt": "2026-10-14",
+        "lastCheckedAt": "2026-10-15",
         "lastObservedStatus": "HTTP 200",
         "robotsOrTermsNote": "Manual bounded access only in K01C-Lite; bulk reuse not assessed."
       },
@@ -52,7 +53,7 @@
       },
       "status": "source-backed",
       "limitations": [
-        "Only six bounded passages are admitted in the legacy registry.",
+        "K08 adds bounded foundational and fortune-period vocabulary; it is not approved for active period calculation.",
         "Not a complete chart oracle.",
         "Not independent Nam Phái certification."
       ],
@@ -116,7 +117,7 @@
       "publisher": "Chinese Wikisource",
       "publicationYear": null,
       "language": "zh-Hans",
-      "knowledgeScopes": ["cross-palace-interpretation"],
+      "knowledgeScopes": ["cross-palace-interpretation", "fortune-periods"],
       "schoolClaims": [
         {
           "label": "Nam Phái",
@@ -435,9 +436,77 @@
         "Classical outcome language is preserved for research provenance only; it cannot generate a modern or personalised claim.",
         "Favourable and adverse conditions have no stated mixed-case precedence."
       ]
+    },
+    {
+      "passageId": "k08-v2-cyclical-vocabulary",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安身命例 > 起五行寅例 and 六十花甲子纳音歌; pinned revision 1963110, raw wikitext lines 18–24",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "甲己之岁起丙寅，乙庚之岁起戊寅……戊癸之岁起甲寅。六十花甲子纳音歌：甲子乙丑海中金，丙寅丁卯炉中火……",
+      "supports": [
+        "ten-heavenly-stem-vocabulary",
+        "twelve-earthly-branch-vocabulary",
+        "five-phase-vocabulary",
+        "nayin-vocabulary"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The passage is retained as vocabulary and a source-specific rule reference; it does not approve a calculation mapping, direction or calendar profile.",
+        "The visible opening of the nạp âm verse is not a complete normalized sixty-pair table."
+      ]
+    },
+    {
+      "passageId": "k08-v2-fortune-period-vocabulary",
+      "sourceId": "zwds-quanshu-vol2-wikisource-r1963110",
+      "locator": "安大限诀, 安小限诀 and 安流禄流羊流陀诀; pinned revision 1963110, raw wikitext lines 173–179 and 217–219",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "阳男阴女从命前一宫起顺行……阴男阳女从命后一宫起逆行……安小限诀……安流禄流羊流陀诀 论流年太岁。",
+      "supports": [
+        "dai-han-vocabulary",
+        "tieu-han-vocabulary",
+        "luu-nien-vocabulary",
+        "thai-tue-vocabulary",
+        "yin-yang-vocabulary"
+      ],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The headings establish named source methods, but K08 does not normalize, execute or compare their placement formulas.",
+        "Sex/gender terminology and calculation direction require profile and governance review before any use."
+      ]
+    },
+    {
+      "passageId": "k08-v3-period-review-terms",
+      "sourceId": "zwds-quanshu-vol3-wikisource-r2268626",
+      "locator": "论大限十年祸福何如, 论二限太岁吉凶 and 论流年太岁吉凶星杀; pinned revision 2268626, raw wikitext lines 106–118",
+      "language": "zh-Hans",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "须详大限独守吉凶何如，小限独守吉凶何如，太岁独守吉凶何如。又看大限与小限相逢……",
+      "supports": ["period-review-vocabulary", "separate-and-paired-period-review-methodology"],
+      "profileScope": ["profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "K08 retains only the methodological ordering/vocabulary, not the passage's outcome language or any prediction rule.",
+        "The source does not supply a reviewed active profile, complete period placement mapping or mixed-condition precedence."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k08-breadth-passage-registration",
+      "date": "2026-10-15",
+      "reviewerRole": "PM/AI Research/BA",
+      "action": "registered",
+      "targetIds": [
+        "k08-v2-cyclical-vocabulary",
+        "k08-v2-fortune-period-vocabulary",
+        "k08-v3-period-review-terms"
+      ],
+      "basis": "HV-K08 directly reread bounded passages in two existing pinned public revisions. It records foundational vocabulary and a period-review methodology gate only; every calculation mapping, outcome claim, profile and precedence remains unresolved and non-production."
+    },
     {
       "reviewId": "hv-k07-foundation-passage-registration",
       "date": "2026-10-15",

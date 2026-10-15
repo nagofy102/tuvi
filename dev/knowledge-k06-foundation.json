@@ -1,8 +1,8 @@
 {
-  "artifactVersion": "hv-k07-foundation-v0.2",
+  "artifactVersion": "hv-k08-foundation-v0.3",
   "generatedAt": "2026-10-15",
   "scope": "Foundational vocabulary and methodology, research-only; no calculation or reader-facing inference admission.",
-  "registryVersion": "hv-k07-foundation-enrichment-2026-10-15",
+  "registryVersion": "hv-k08-breadth-expansion-2026-10-15",
   "defaultProfile": "profile-unresolved",
   "profilePolicy": "Every catalog item inherits defaultProfile unless a future revision gives it an explicit profile.",
   "provenanceBoundary": {
@@ -106,6 +106,222 @@
       "status": "source-backed",
       "sourceRefs": ["k06-v2-twelve-palaces-list"],
       "baNormalization": "Canonical palace vocabulary only; no family claim is inferred."
+    }
+  ],
+  "cyclicalVocabulary": [
+    {
+      "id": "stem:jia",
+      "label": "Giáp",
+      "sourceLabel": "甲",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:yi",
+      "label": "Ất",
+      "sourceLabel": "乙",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:bing",
+      "label": "Bính",
+      "sourceLabel": "丙",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:ding",
+      "label": "Đinh",
+      "sourceLabel": "丁",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:wu",
+      "label": "Mậu",
+      "sourceLabel": "戊",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:ji",
+      "label": "Kỷ",
+      "sourceLabel": "己",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:geng",
+      "label": "Canh",
+      "sourceLabel": "庚",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:xin",
+      "label": "Tân",
+      "sourceLabel": "辛",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:ren",
+      "label": "Nhâm",
+      "sourceLabel": "壬",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "stem:gui",
+      "label": "Quý",
+      "sourceLabel": "癸",
+      "kind": "heavenly-stem",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:zi",
+      "label": "Tý",
+      "sourceLabel": "子",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:chou",
+      "label": "Sửu",
+      "sourceLabel": "丑",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:yin",
+      "label": "Dần",
+      "sourceLabel": "寅",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:mao",
+      "label": "Mão",
+      "sourceLabel": "卯",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:chen",
+      "label": "Thìn",
+      "sourceLabel": "辰",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:si",
+      "label": "Tỵ",
+      "sourceLabel": "巳",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:wu",
+      "label": "Ngọ",
+      "sourceLabel": "午",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:wei",
+      "label": "Mùi",
+      "sourceLabel": "未",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:shen",
+      "label": "Thân",
+      "sourceLabel": "申",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:you",
+      "label": "Dậu",
+      "sourceLabel": "酉",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:xu",
+      "label": "Tuất",
+      "sourceLabel": "戌",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    },
+    {
+      "id": "branch:hai",
+      "label": "Hợi",
+      "sourceLabel": "亥",
+      "kind": "earthly-branch",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"]
+    }
+  ],
+  "fortunePeriods": [
+    {
+      "id": "period:dai-han",
+      "label": "Đại hạn",
+      "sourceLabel": "大限",
+      "kind": "fortune-period",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-fortune-period-vocabulary", "k08-v3-period-review-terms"],
+      "evaluationStatus": "blocked-active-profile"
+    },
+    {
+      "id": "period:tieu-han",
+      "label": "Tiểu hạn",
+      "sourceLabel": "小限",
+      "kind": "fortune-period",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-fortune-period-vocabulary", "k08-v3-period-review-terms"],
+      "evaluationStatus": "blocked-active-profile"
+    },
+    {
+      "id": "period:luu-nien",
+      "label": "Lưu niên",
+      "sourceLabel": "流年",
+      "kind": "fortune-period",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-fortune-period-vocabulary"],
+      "evaluationStatus": "blocked-active-profile"
+    },
+    {
+      "id": "period:thai-tue",
+      "label": "Thái tuế",
+      "sourceLabel": "太岁",
+      "kind": "fortune-period",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v3-period-review-terms"],
+      "evaluationStatus": "blocked-active-profile"
     }
   ],
   "stars": [
@@ -474,6 +690,39 @@
       "productUse": "traditional-term-explainer",
       "graphReadiness": "typed-node-ready",
       "blockedFromCalculation": "The source table is not approved as the active profile."
+    },
+    {
+      "id": "concept:yin-yang",
+      "label": "Âm dương",
+      "kind": "foundational-vocabulary",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-fortune-period-vocabulary"],
+      "definition": "The source uses yin/yang categories in a placement context; it does not define a complete correspondence table.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "typed-node-ready",
+      "blockedFromCalculation": "No active correspondence or period-direction rule is admitted."
+    },
+    {
+      "id": "concept:wu-xing",
+      "label": "Ngũ hành",
+      "kind": "foundational-vocabulary",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"],
+      "definition": "The source names a five-phase starting rule and nạp âm vocabulary; mappings remain source-specific.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "typed-node-ready",
+      "blockedFromCalculation": "No active five-phase lookup or derivation is admitted."
+    },
+    {
+      "id": "concept:nap-am",
+      "label": "Nạp âm",
+      "kind": "foundational-vocabulary",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v2-cyclical-vocabulary"],
+      "definition": "A named sexagenary-cycle vocabulary in the source; it is retained without calculating or interpreting a nạp âm result.",
+      "productUse": "traditional-term-explainer",
+      "graphReadiness": "typed-node-ready",
+      "blockedFromCalculation": "The complete mapping, calendar compatibility and profile are unresolved."
     }
   ],
   "relations": [
@@ -534,6 +783,15 @@
       "sourceRefs": ["k07-v3-bracketed-configurations"],
       "evaluationStatus": "blocked-profile-geometry",
       "constraint": "The retained examples describe positions around Mệnh; they do not define a general adjacency algorithm."
+    },
+    {
+      "id": "relation:period-review-pair",
+      "sourceTerm": "大限、小限、太岁相逢/冲",
+      "graphEdge": "REVIEWED_IN_PERIOD_PAIR",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v3-period-review-terms"],
+      "evaluationStatus": "blocked-active-profile-and-precedence",
+      "constraint": "This is source-described review vocabulary only; it does not define period placement, a scoring rule or a personalised conclusion."
     }
   ],
   "methodologyRules": [
@@ -575,6 +833,22 @@
       "sourceSupportedEffect": "Requires retaining named spatial context when reviewing a source configuration.",
       "forbiddenEffect": ["inferred geometry", "numeric weight", "claim generation"],
       "dslReadiness": "requires-profile-geometry"
+    },
+    {
+      "id": "method:k08-periods-reviewed-separately-and-in-pairs",
+      "type": "methodology",
+      "status": "source-backed",
+      "sourceRefs": ["k08-v3-period-review-terms"],
+      "inputs": ["Đại hạn facts", "Tiểu hạn facts", "Thái tuế facts", "period-pair relation facts"],
+      "sourceSupportedEffect": "Retains that the named periods are inspected separately and in named pairs.",
+      "forbiddenEffect": [
+        "period placement",
+        "outcome prediction",
+        "numeric score",
+        "conflict resolution",
+        "personalised claim"
+      ],
+      "dslReadiness": "gating-only; requires active profile and precedence"
     }
   ],
   "substantiveCandidateRefs": [
@@ -593,6 +867,8 @@
     "Independent and explicitly school-classified source family for the same foundational concepts.",
     "Reviewed profile mapping for all star placements, state tables, Tứ Hóa variants and spatial geometry.",
     "Lawful page-level material defining modern-safe meanings, exceptions and precedence for substantive rules.",
-    "A complete auxiliary-star catalogue with classification provenance; K06 records only bounded source families."
+    "A complete auxiliary-star catalogue with classification provenance; K06 records only bounded source families.",
+    "Reviewed mappings for ten stems, twelve branches, yin/yang, five phases, nạp âm and period placement; K08 records vocabulary only.",
+    "Independent, school-classified material for fortune-period methodology and exceptions."
   ]
 }

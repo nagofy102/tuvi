@@ -20,14 +20,15 @@ all from the same unresolved textual family: they are research records, not
 runtime or K04B authorization. Paid or permissioned material requires PO approval
 of price, licence and allowed use before acquisition.
 
-HV-K06/K07 normalize bounded source-backed vocabulary for twelve palaces, fourteen
+HV-K06–K08 normalize bounded source-backed vocabulary for twelve palaces, fourteen
 major-star candidates, fourteen individually identified auxiliary stars, selected
 families, state/aspect terms and methodology. K07 adds source-variant state tables
-and two conditional bracket configurations, each with an explicit source example.
+and two conditional bracket configurations; K08 adds the ten-stem/twelve-branch
+vocabulary, yin/yang, five-phase/nạp âm terms and four fortune-period terms.
 `knowledge-k06-foundation.json` and `knowledge-k07-foundational-candidates.json`
 remain research artifacts: their IDs may support future graph/DSL design, but
-unresolved profile geometry, state tables and transformation variants remain
-blocked from runtime use.
+unresolved profile geometry, state tables, transformation variants and every
+period-placement method remain blocked from runtime use.
 
 The consolidated historical provenance covers bibliographic catalogue checks,
 classical-passage review, corpus intake/crosscheck, K01 inventory and K03A–K07
