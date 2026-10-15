@@ -71,4 +71,4 @@ published worked charts. Do not fill the 200–300 target with engine snapshots 
 call these 36 partial synthetic cases complete charts. Khôi–Việt, opposing signals,
 cách cục and vận readings remain inactive. Mobile >90 and LCP <2.5s remain open;
 technical checks and actual measurements are in
-[test evidence](../test/source-corpus-intake.md).
+the current `test/README.md`.
