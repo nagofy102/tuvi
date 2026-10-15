@@ -1,0 +1,326 @@
+{
+  "artifactVersion": "hv-k14-book-pilot-v0.1",
+  "generatedAt": "2026-10-15",
+  "scope": "Internal research candidates extracted from a controlled multi-book pilot; not production rules, profile evidence, scores or personalized readings.",
+  "defaultProfile": "profile-unresolved",
+  "rightsBoundary": "PO authorized internal reading and analysis of the local PDFs. No long quotation, chapter reproduction or redistribution is admitted.",
+  "books": [
+    {
+      "bookId": "book-k14-tan-bien",
+      "title": "Tử Vi Đẩu Số Tân Biên",
+      "creator": "Vân Đằng Thái Thứ Lang",
+      "fileSha256": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
+      "sourceFamilyId": "k14-tan-bien-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rightsStatus": "internal-research-authorized-by-po",
+      "editionStatus": "unverified"
+    },
+    {
+      "bookId": "book-k14-tong-hop",
+      "title": "Tử Vi Tổng Hợp",
+      "creator": "Nguyễn Phát Lộc",
+      "fileSha256": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37",
+      "sourceFamilyId": "k14-tong-hop-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rightsStatus": "internal-research-authorized-by-po",
+      "editionStatus": "unverified"
+    },
+    {
+      "bookId": "book-k14-tu-xem-2009",
+      "title": "Tự Xem Tử Vi 2009 (title from filename only)",
+      "creator": null,
+      "fileSha256": "093b43681ec474e875ad4c75a90c62f3949b5f1651e80c2f4f737de5097500a7",
+      "sourceFamilyId": "k14-tu-xem-2009-lineage-unresolved",
+      "schoolProfile": "profile-unresolved",
+      "rightsStatus": "internal-research-authorized-by-po",
+      "editionStatus": "bibliographic-identity-unverified"
+    }
+  ],
+  "reviewedRanges": [
+    {
+      "rangeId": "k14-range-tb-method",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "31-33",
+      "printedPages": "31-33",
+      "section": "Phần 2 > Những điều phải chú ý; Định danh; opening of Đặc tính các sao",
+      "pagesSubstantivelyRead": 3,
+      "reason": "Test clean Unicode extraction, methodology preservation and state vocabulary.",
+      "qa": "Text layer checked against the rendered pages; no encoding blocker."
+    },
+    {
+      "rangeId": "k14-range-tb-quan-loc",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "158-160",
+      "printedPages": "158-160",
+      "section": "Phần 2 > 8. Quan Lộc > 8.1-8.8",
+      "pagesSubstantivelyRead": 3,
+      "reason": "Test substantive star-palace and co-location conditions without reading the whole palace chapter.",
+      "qa": "Headings, branch conditions and co-location terms checked against the rendered pages."
+    },
+    {
+      "rangeId": "k14-range-th-method",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "23-32",
+      "printedPages": "23-32",
+      "section": "Volume I > Chương hai > Phương pháp phân tích, tổng hợp và động",
+      "pagesSubstantivelyRead": 10,
+      "reason": "Test palace meanings, cross-palace context, nested periods and context-dependent star meaning.",
+      "qa": "VNI conversion was used only as a reading aid; every retained locator was checked visually against rendered pages 23-32."
+    },
+    {
+      "rangeId": "k14-range-th-interpretation-method",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "104-107",
+      "printedPages": "104-107",
+      "section": "Volume II > Chương một > Thuật giải đoán Tử Vi",
+      "pagesSubstantivelyRead": 4,
+      "reason": "Test explicit methodology, completeness claims and unsupported accuracy assertions.",
+      "qa": "VNI conversion was visually checked against all four rendered pages; the source's 80% assertion was rejected as evidence."
+    },
+    {
+      "rangeId": "k14-range-tx-negative-control",
+      "bookId": "book-k14-tu-xem-2009",
+      "pdfPages": "1-3",
+      "printedPages": null,
+      "section": "Tuổi Tý > Nam Giáp Tý",
+      "pagesSubstantivelyRead": 3,
+      "reason": "Negative-control sample for provenance, method disclosure and personalized-claim risk.",
+      "qa": "The sample begins without title/copyright/method pages and mixes annual, health, legal, relationship and ritual claims."
+    }
+  ],
+  "extractionOnlyRanges": [
+    {
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "61-75",
+      "status": "not-substantively-read",
+      "reason": "Mechanically extracted while locating palace/star boundaries; not admitted as candidate evidence."
+    },
+    {
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "108-110",
+      "status": "not-substantively-read",
+      "reason": "Mechanically extracted with the method range but outside the visually checked pilot boundary."
+    },
+    {
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "34-36,161-167",
+      "status": "not-substantively-read",
+      "reason": "Mechanically extracted with adjacent sections; excluded from pilot yield and candidate counts."
+    },
+    {
+      "bookId": "book-k14-tu-xem-2009",
+      "pdfPages": "4-6",
+      "status": "not-substantively-read",
+      "reason": "Mechanically extracted with the negative-control sample; excluded from pilot yield."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:k14-tb-holistic-review-inputs",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.31-32, 1.1-1.12",
+      "subjectIds": ["palace:menh", "palace:phuc-duc", "concept:tu-hoa", "period:dai-han"],
+      "conditions": ["A chart is being reviewed as a whole rather than a single isolated star."],
+      "neutralStatement": "The source presents a review checklist spanning birth-data relations, Mệnh-Cục, Mệnh-Thân, Phúc Đức, star states, Tứ Hóa, Lục Sát and Đại hạn.",
+      "limitations": [
+        "Checklist order is source-described methodology, not an approved evaluator sequence.",
+        "No polarity, weight or personalized conclusion is retained."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Extends K13 contextual review with Vietnamese-source categories; does not duplicate a production rule."
+    },
+    {
+      "candidateId": "candidate:k14-tb-state-vocabulary",
+      "disposition": "MERGE",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.32-33, 2.1-2.11",
+      "subjectIds": [
+        "state:mieu",
+        "state:vuong",
+        "state:dac-dia",
+        "state:ham",
+        "relation:co-located",
+        "relation:joined-aspect"
+      ],
+      "conditions": ["Terms are used within this book's own explanatory vocabulary."],
+      "neutralStatement": "The source defines miếu, vượng, đắc, bình hòa and hãm as positional states and distinguishes tọa thủ, đồng cung and hội hợp.",
+      "limitations": [
+        "No branch lookup table is admitted.",
+        "The book's hội hợp wording does not resolve active geometry."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Meaning overlaps K07/K10 state and relation catalog; merge provenance rather than create duplicate entities."
+    },
+    {
+      "candidateId": "candidate:k14-tb-ziwei-quanloc-tuong",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.158, 8.1 Tử Vi",
+      "subjectIds": ["palace:quan-loc", "star:zi-wei", "star:tian-xiang", "relation:co-located"],
+      "conditions": ["Tử Vi and Thiên Tướng are co-located in Quan Lộc."],
+      "neutralStatement": "In this named Quan Lộc configuration, the source adds organizational ability and a change from a smaller to a larger career position to its traditional description.",
+      "limitations": [
+        "Historical wording about civil/military status and authority is not modernized or personalized.",
+        "No supporting/opposing stars, state table or exception precedence is supplied in this item."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New relative to K12/K13; K13 links Tử Vi to Quan Lộc only with Tả/Hữu support, not this co-location."
+    },
+    {
+      "candidateId": "candidate:k14-tb-ziwei-quanloc-sat",
+      "disposition": "REVIEW",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.158, 8.1 Tử Vi",
+      "subjectIds": ["palace:quan-loc", "star:zi-wei", "star:qi-sha", "relation:co-located"],
+      "conditions": ["Tử Vi and Thất Sát are co-located in Quan Lộc."],
+      "neutralStatement": "The source associates this configuration with authority and a military occupational context.",
+      "limitations": [
+        "The occupational claim is historical and not suitable for a modern personalized inference without interpretation policy.",
+        "State, support and counter-signals are absent from the local item."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Potentially substantive and new, but retained for domain review rather than accepted as reusable reasoning input."
+    },
+    {
+      "candidateId": "candidate:k14-th-phu-mau-scope",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.23, b) Sự phân biệt 12 cung",
+      "subjectIds": ["palace:phu-mau"],
+      "conditions": ["The palace is described in this Vietnamese book's twelve-palace system."],
+      "neutralStatement": "The source describes Phụ Mẫu as covering parents and the relationship between the chart subject and parents, with a broader historical scope also stated by the author.",
+      "limitations": [
+        "The broader claims about heredity, longevity and life effects are not retained as usable inferences.",
+        "This evidence does not by itself certify the active Nam Phái profile."
+      ],
+      "profileStatus": "profile-compatible-unverified",
+      "duplicateAssessment": "Fills the K12 research-evidence gap for Phụ Mẫu without resolving the earlier Phụ Mẫu/相貌 lineage dispute."
+    },
+    {
+      "candidateId": "candidate:k14-th-twelve-palace-scopes",
+      "disposition": "MERGE",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.23, b) Sự phân biệt 12 cung",
+      "subjectIds": [
+        "palace:menh",
+        "palace:phuc-duc",
+        "palace:quan-loc",
+        "palace:thien-di",
+        "palace:no-boc"
+      ],
+      "conditions": ["Meanings are read as historical palace scopes, not personal conclusions."],
+      "neutralStatement": "The source assigns distinct life-domain scopes to the twelve palaces, including occupation and professional capacity for Quan Lộc, external social context for Thiên Di and close social relations for Nô Bộc.",
+      "limitations": [
+        "Sensitive historical wording is not reproduced as modern advice.",
+        "Profile and source lineage remain unresolved."
+      ],
+      "profileStatus": "profile-compatible-unverified",
+      "duplicateAssessment": "Mostly overlaps existing palace catalog and K11/K12 meanings; merge only new provenance and Phụ Mẫu evidence."
+    },
+    {
+      "candidateId": "candidate:k14-th-six-palace-contexts",
+      "disposition": "REVIEW",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.28, 1. Ý nghĩa liên đới giữa các cung",
+      "subjectIds": [
+        "concept:tam-phuong",
+        "concept:doi-chieu",
+        "relation:trines-with",
+        "relation:opposes"
+      ],
+      "conditions": ["Any palace is reviewed in relation to surrounding palace contexts."],
+      "neutralStatement": "The source says a palace is influenced by an opposing palace, two tam-chiếu palaces, two adjacent palaces and one nhị-hợp palace.",
+      "limitations": [
+        "Nhị hợp and adjacency are not fully represented in the current catalog.",
+        "No branch geometry or active-profile mapping is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Broadens K13 geometry vocabulary but cannot merge until relation entities and profile geometry are reviewed."
+    },
+    {
+      "candidateId": "candidate:k14-th-quan-di-no-review",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.28-29, 5. Tương quan giữa 3 cung Quan, Di, Nô",
+      "subjectIds": ["palace:quan-loc", "palace:thien-di", "palace:no-boc"],
+      "conditions": ["The chart's social and occupational context is under review."],
+      "neutralStatement": "The source groups Quan Lộc, Thiên Di and Nô Bộc for parallel review of occupation, external environment and close social/work relations.",
+      "limitations": [
+        "The stated adjacency is not promoted to active geometry.",
+        "Historical Nô Bộc vocabulary requires contextual handling."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New named three-palace review group relative to K13's Mệnh-Di-Tài-Quan network."
+    },
+    {
+      "candidateId": "candidate:k14-th-period-nesting",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.25-26 and p.31, period hierarchy discussion",
+      "subjectIds": ["period:dai-han", "period:tieu-han", "period:luu-nien"],
+      "conditions": ["A shorter fortune period is interpreted."],
+      "neutralStatement": "The source treats shorter periods as nested within broader periods and warns against evaluating a short period in isolation.",
+      "limitations": [
+        "No placement algorithm, precedence weight, event prediction or accuracy claim is admitted.",
+        "The source's nguyệt/nhật/thời labels are not added as new entities in this pilot."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds an explicit nesting constraint to K13's separate-and-paired period review."
+    },
+    {
+      "candidateId": "candidate:k14-th-star-context-dependence",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.32, 5. Quan niệm động của các sao",
+      "subjectIds": ["relation:co-located", "state:mieu", "state:ham", "concept:wu-xing"],
+      "conditions": ["A star meaning is being interpreted."],
+      "neutralStatement": "The source requires star meaning to be qualified by accompanying stars, position, time context and five-phase relations rather than treated as fixed in isolation.",
+      "limitations": [
+        "Examples involving wealth, health or age are not retained as personal claims.",
+        "No weights or conflict-resolution algorithm are supplied."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Reinforces K13 contextual conditions with an explicit non-isolation methodology; no duplicate entity is created."
+    },
+    {
+      "candidateId": "candidate:k14-th-eighty-percent-accuracy",
+      "disposition": "REJECT",
+      "knowledgeType": "unsupported-claim",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.106, 3. Việc giải đoán chính xác",
+      "subjectIds": [],
+      "conditions": [],
+      "neutralStatement": "The author states an 80% benchmark for a skilled reading.",
+      "limitations": ["No study design, sample, comparator or reproducible evidence is supplied."],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Rejected; it must not become an accuracy metric or product claim."
+    },
+    {
+      "candidateId": "candidate:k14-tx-annual-personalized-claims",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tu-xem-2009",
+      "sourceLocator": "PDF pp.1-3, Tuổi Tý > Nam Giáp Tý",
+      "subjectIds": [],
+      "conditions": ["Birth-year/sex annual profile for 2009."],
+      "neutralStatement": "The sample combines named stars and year signs with career, health, relationship, legal, accident and ritual predictions.",
+      "limitations": [
+        "No verified author, edition, method derivation, profile or exception framework is present.",
+        "Contains high-risk personalized claims and ritual instructions."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Rejected from the Knowledge Base; retained only as a negative-control finding."
+    }
+  ]
+}

@@ -110,6 +110,16 @@ Coverage Map, batch/QA và pilot đa sách; chưa trích xuất statement hay đ
 Dừng chờ PO duyệt Checkpoint 2 và phạm vi quyền tại
 `../dev/knowledge-k14-book-discovery.md`.
 
+HV-K14 Checkpoint 2 (15/10) đã đọc và đối chiếu trực quan 23 trang pilot trong
+ba PDF: 6 trang Tân Biên, 14 trang Tổng Hợp và 3 trang Tự Xem 2009 làm negative
+control. Dataset pilot phân loại 6 ACCEPT AS RESEARCH, 2 MERGE, 2 REVIEW và 2
+REJECT; 12/12 có locator, nhưng 0 candidate được xác nhận tương thích profile hay
+đủ điều kiện production. Chuyển VNI chỉ dùng hỗ trợ đọc và mọi locator Tổng Hợp
+được so ảnh trang; Tự Xem bị loại khỏi KB vì thiếu thư mục/phương pháp và chứa
+claim cá nhân rủi ro. Dừng trước Checkpoint 3; xem
+`../dev/knowledge-k14-book-discovery.md` và
+`../dev/knowledge-k14-book-pilot.json`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
