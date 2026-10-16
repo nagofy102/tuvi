@@ -917,3 +917,95 @@ disability, conduct, sexuality, conflict and death predictions form one bounded
 - PASS: all eight pages visually inspected; no-yield samples p.218, p.221 and p.223.
 - PASS: targeted Prettier and `git diff --check`; source registry unchanged.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
+
+## Knowledge Yield Audit after 291/719 primary-book pages
+
+This audit queries the Checkpoint 2 pilot and Checkpoint 3 acquisition datasets;
+it does not reread PDFs or admit new source claims. It covers **84 candidates**
+from the two primary books only (50 Tân Biên, 34 Tổng Hợp), excluding the single
+Tự Xem 2009 negative-control record. Dispositions reconcile to **26
+ACCEPT_AS_RESEARCH, 14 MERGE, 26 REVIEW and 18 REJECT**. ACCEPT remains a
+research disposition: profile-compatible and production-eligible counts are both
+zero.
+
+The 66 non-rejected records divide by their stored knowledge type as follows:
+
+| Audited class                                                 | Count | What the count establishes                                                                                                                       |
+| ------------------------------------------------------------- | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Specific interpretation content (`substantive` + `exception`) |    15 | Eight position/configuration variants and seven bounded exceptions; only 4 are ACCEPT and 11 remain REVIEW                                       |
+| Methodology-only                                              |    37 | Inputs, review order, cross-palace context, whole-chart qualification and interpretation limits; these cannot directly generate a personal claim |
+| Foundational                                                  |     8 | Palace scope, state/catalog vocabulary and source-specific classification evidence                                                               |
+| Conflict                                                      |     6 | Competing classifications, Tuần/Triệt or geometry positions, plus the p.217 palace-label inconsistency; no side is selected                      |
+
+The strongest evidence is therefore methodological, not a production rule base.
+Repeated source-backed patterns are: whole-chart/non-isolated review; coordination
+of Mệnh, Thân and Phúc Đức with a focal palace; positional/state/co-location/aspect
+qualification of star meaning; and nesting of shorter periods inside broader
+contexts. More specific yield is narrower: Tử Vi configurations in Quan Lộc,
+Thiên Cơ–Thái Âm branch variants in Thiên Di/Tài Bạch/Thê Thiếp, named
+Thiên Phủ and rescue-group limitations, and source-described Vô Chính diệu or
+Tuần/Triệt exceptions. Most of these remain REVIEW because the active geometry,
+placement, state and precedence contracts are unresolved.
+
+### Coverage and semantic duplication
+
+All twelve palace IDs occur in non-rejected evidence, but this is not twelve-palace
+reasoning coverage. Evidence strength is:
+
+- **High methodology coverage:** Mệnh and Phúc Đức recur across whole-chart and
+  focal-palace dependencies.
+- **Moderate contextual coverage:** Quan Lộc, Nô Bộc and Thiên Di have explicit
+  cross-palace relations plus configuration/exception evidence.
+- **Bounded contextual coverage:** Tật Ách, Tài Bạch, Tử Tức, Phu Thê and Huynh
+  Đệ have source-backed opening methods and selected exceptions, but most detailed
+  historical outcomes were rejected.
+- **Scope-only or near-scope-only:** Phụ Mẫu and Điền Trạch have source-backed
+  domain/section evidence but no retained detailed star–palace interpretation.
+
+The most repeated semantic family is “do not read the focal palace or star in
+isolation.” The Tân Biên entry-structure MERGE records for pp.76–93, 94–123 and
+161–167 overlap at that general level, but preserve different section/page scope.
+Likewise, the Nô Bộc, Tật Ách, Tài Bạch, Tử Tức, Phu Thê and Huynh Đệ opening
+methods share Mệnh/Thân/Phúc Đức inputs yet name different additional palaces and
+exceptions. They should be linked as variants, not collapsed into one universal
+rule. No exact duplicate ID or identical normalized statement was found.
+
+### Broad dependencies and next reading order
+
+The widest-impact dependency is **active spatial geometry and opposition input**:
+it affects the six-palace method, aspect priority, and repeated Vô Chính diệu
+records. Next are (1) star-state and branch-placement lookup, (2) Thân identity
+and placement, (3) Tuần/Triệt scope and exception precedence, (4) period placement
+and hierarchy, and (5) unproved lineage/profile compatibility. Tổng Hợp legacy-VNI
+extraction remains an operational blocker for automated admission, not a reason
+to infer missing text. The Tân Biên p.217 Huynh Đệ/Tử Tức label remains a source
+or edition issue.
+
+Recommended reading order, optimized for new knowledge rather than page count:
+
+1. **Tổng Hợp pp.150–173**, split at the mapped chapter starts 153, 155, 159 and 165. This is the best near-term cross-source comparison against the saturated
+   Tân Biên palace openings; visual QA remains mandatory because of VNI.
+2. **Tổng Hợp pp.174–220**, split at 174 and 188. Continue thematic coverage only
+   if the first slice produces configuration/exception evidence rather than more
+   whole-chart paraphrases; stop or redirect at saturation.
+3. **Tân Biên pp.225–247**, by complete appendix/season/hour sections, to address
+   contextual gaps. Keep calculation-sensitive mappings REVIEW and do not change
+   the profile. Read **pp.248–271** only afterward as a separate fortune-period
+   batch because period placement and precedence are unresolved.
+
+Worked charts at Tân Biên pp.272–275 remain observation-only and lower priority.
+Tân Biên pp.5–30 should not be used to resolve the above dependencies inside a
+research-only batch because it is calculation-sensitive and would require a
+separate approved verification task.
+
+### Audit verification
+
+- PASS: both JSON datasets parse; all 84 primary-book candidate IDs are unique.
+- PASS: disposition/type/book totals reconcile; the ledger covers 719 pages once:
+  48 COMPLETED, 243 REVIEW, 417 PENDING and 11 EXCLUDED (291 substantively read).
+- PASS: retained subject references, required provenance/locator fields and
+  unresolved status boundaries remain unchanged.
+- PASS: semantic-family review found overlap requiring linkage, but no exact
+  duplicate normalized statement suitable for automatic merge.
+- NOT RUN BY SCOPE: PDF reread, runtime unit tests, typecheck, build and E2E; this
+  audit changes documentation only and adds no source claim or production data.

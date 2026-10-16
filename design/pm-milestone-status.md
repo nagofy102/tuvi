@@ -235,6 +235,15 @@ p.217 và Vô Chính diệu/xung chiếu tại p.224, cùng 1 REJECT cho lời l
 em, giới, khuyết tật, hành vi và tử vong trực tiếp. Không tự sửa văn bản nguồn,
 không thay runtime, calculation, UI, profile hoặc production.
 
+HV-K14 Knowledge Yield Audit (16/10) đối chiếu 84 candidate của hai sách chính:
+26 ACCEPT_AS_RESEARCH, 14 MERGE, 26 REVIEW và 18 REJECT. Trong 66 record không
+bị loại, chỉ 15 là nội dung luận giải/ngoại lệ cụ thể, so với 37 methodology-only,
+8 foundational và 6 conflict. Cả 12 cung đã có evidence nhưng Phụ Mẫu/Điền Trạch
+vẫn gần như chỉ có scope; geometry, state/branch lookup, Thân, Tuần/Triệt và
+period precedence là dependencies diện rộng. Profile-compatible và
+production-eligible vẫn bằng 0. Ưu tiên tiếp theo là Tổng Hợp 150–173 rồi
+174–220 theo ranh giới chương, trước các phụ lục Tân Biên 225–247.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
