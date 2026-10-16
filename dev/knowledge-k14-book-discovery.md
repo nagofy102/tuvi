@@ -792,3 +792,27 @@ gender and sexuality. No personal conclusion or production rule was admitted.
   samples p.169 and p.172 contained only excluded direct personal claims.
 - PASS: targeted Prettier and `git diff --check`; source registry was unchanged.
 - NOT RUN BY SCOPE: runtime unit tests, typecheck, build and E2E.
+
+## HV-K14-C batch 10 — Thiên Di
+
+Tân Biên pp.174–180 were read and all seven rendered pages visually inspected.
+One `ACCEPT_AS_RESEARCH` methodology candidate preserves the source's explicit
+Mệnh–Thiên Di opposition. A substantive `REVIEW` candidate records the source's
+branch-sensitive Thiên Cơ–Thái Âm co-location variants at Dần and Thân; the same
+pair receives different outward-mobility guidance while both variants mention
+commercial benefit. A second `REVIEW` candidate preserves the p.180
+void-main-star/opposition instruction.
+
+No branch placement, state lookup, active geometry or personal conclusion is
+admitted. One bounded `REJECT` record covers the section's deterministic travel,
+money, accident, legal, death, gender and sexuality predictions. The next clean
+boundary is Tật Ách pp.181–189, which requires strict health/death exclusion.
+
+### Verification — HV-K14-C batch 10
+
+- PASS: JSON, unique IDs, subject references, candidate structure, PDF hash and
+  full 719-page primary ledger consistency.
+- PASS: all seven source pages were visually inspected; no-yield samples p.174,
+  p.178 and p.179 were checked directly.
+- PASS: Prettier and `git diff --check`; source registry was unchanged.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.

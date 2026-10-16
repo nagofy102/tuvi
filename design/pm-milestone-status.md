@@ -194,6 +194,13 @@ cho lời luận xã hội/giới/tình dục trực tiếp. Range 174–224 đ�
 giới sáu cung còn lại; điểm tiếp tục là Thiên Di 174–180. Không thay runtime,
 calculation, UI, profile hoặc trạng thái production.
 
+HV-K14-C batch 10 (16/10) hoàn tất Thiên Di Tân Biên 174–180, nâng lũy kế hai
+sách chính lên 247/719 trang (250/1.022 gồm control). Batch giữ 1 ACCEPT AS
+RESEARCH cho quan hệ Mệnh–Thiên Di, 1 REVIEW substantive cho dị bản Thiên
+Cơ–Thái Âm theo Dần/Thân, 1 REVIEW cho Vô Chính diệu/xung chiếu và 1 REJECT
+cho dự đoán đi lại, tai nạn, tử vong, giới/tình dục. Điểm tiếp tục là Tật Ách
+181–189; không thay runtime, calculation, UI, profile hoặc production status.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
