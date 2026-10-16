@@ -1071,3 +1071,79 @@ gap; continuing it immediately is not recommended from candidate count alone.
   `82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37`.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime or
   production-consumed data changed.
+
+## Research Acceleration Sprint — Tân Biên pp.225–247
+
+All **23 PDF/printed pages** were read and visually checked in eight complete
+content batches: 225; 226–227; 228; 229–233; 234–237; 238–240; 241–243; and
+244–247. The slice adds **20 candidates**: 5 ACCEPT_AS_RESEARCH, 2 MERGE, 5
+REVIEW and 8 REJECT. By stored type these are 4 substantive, 4 exception, 2
+methodology, 2 foundational and 8 rejected personalized-output records. Thus
+**8 specific substantive/exception candidates** were added; ACCEPT remains a
+research disposition and profile-compatible/production-eligible remain zero.
+
+High-value gains are: a cross-chart Tử Tức(parent)–Mệnh(child) comparison named
+by the source; exact placement/relation shapes for selected named configurations;
+an indexed exception layer showing that adverse/support modifiers do not apply
+uniformly; a nạp âm/branch-season qualification of generic five-phase relations;
+and the author's under-twelve uncertainty limit. Methodology coverage also adds
+Phụ Mẫu to an exact Mệnh–Phúc Đức–Phụ Mẫu input group and records topic-specific
+palace groups. The age-to-palace table and season/hour procedures remain REVIEW,
+not fixtures or calculation truth. Direct family/death, rank/wealth, health,
+occupation, crime, child, marriage and body predictions are bounded REJECTs.
+
+Cumulative primary-book coverage is now **338/719 pages**. Primary-book candidate
+counts are **120**: 33 ACCEPT_AS_RESEARCH, 18 MERGE, 38 REVIEW and 31 REJECT.
+The 89 non-rejected records comprise 31 specific substantive/exception, 41
+methodology, 11 foundational and 6 conflict records. Tân Biên pp.225–247 improves
+coverage for Phụ Mẫu context, cross-chart palace relations, named star–palace and
+star–star configurations, modifier exceptions, nạp âm context and period limits;
+it does not resolve active profile geometry, state/branch lookup, Thân, Tứ Hóa,
+Tuần/Triệt or period placement.
+
+### Dependency validation — geometry/xung chiếu
+
+The repository has two distinct layers that must remain separate:
+
+- Runtime editorial geometry is implemented as branch-index offsets: direct `0`,
+  trines `+4/+8`, opposition `+6` modulo 12. It preserves stars at their original
+  palaces, validates 12 unique branch indices, and has unit coverage in
+  `tests/unit/interpretation.test.ts`, `knowledge.test.ts` and
+  `synthesis.test.ts`.
+- The ontology can represent profile-pinned `OPPOSES`, `TRINES_WITH` and
+  `SAME_AXIS_AS` chart facts, but the research sources only establish relation
+  vocabulary and contextual use. They do not independently establish that every
+  `hội`, `hợp chiếu`, `xung chiếu`, `nhị hợp`, `giáp` or Vô Chính diệu borrowing
+  phrase maps to the runtime offsets. No current evidence certifies the runtime
+  geometry as the target Tử Vi profile.
+
+Minimum future verification set, without choosing a profile: twelve-origin
+rotation invariance for `+4/+8/+6`; symmetry and no self-edge for opposition;
+two distinct trines plus one distinct opposition per origin; preservation of
+original star locations; fail-closed handling for missing/duplicate/out-of-range
+branch indices; explicit non-equivalence cases for nhị hợp, giáp and ambiguous
+`hội`; and a Vô Chính diệu case proving that opposition context does not relocate
+or relabel the opposite star. These software cases verify implementation
+consistency only. A separate profile-pinned source/example set is still required
+before domain validation.
+
+### QA optimization and verification
+
+The repeated JSON, ID/reference, locator, duplicate, ledger and PDF-hash checks
+are now consolidated in `scripts/audit-k14-acquisition.mjs`, exposed as
+`npm run audit:k14`. It checks both candidate datasets, the foundation subject
+references, full 719-page ledger coverage/no overlap, checkpoint/batch range
+references, exact normalized-statement duplicates and both pinned PDF hashes.
+Semantic source review and rendered-page comparison remain manual by design.
+No reliable before/after duration measurement exists, so no time-saving ratio is
+claimed; the measurable reduction is replacing the prior multi-command mechanical
+check sequence with one command.
+
+- PASS: `npm run audit:k14` — 121 total records including the Tự Xem negative
+  control; all counts, references, ledger coverage and two PDF hashes reconcile.
+- PASS: every page 225–247 visually inspected; all retained conditions and
+  locators checked against rendered PDF pages.
+- PASS: focused geometry unit tests and the QA audit command are reported in the sprint
+  handoff after execution.
+- NOT RUN BY SCOPE: typecheck, production build and E2E; no runtime or
+  production-consumed data was changed.

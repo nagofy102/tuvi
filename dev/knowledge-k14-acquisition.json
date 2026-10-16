@@ -208,13 +208,76 @@
       "note": "Eight pages read and visually checked. The opening explicitly requires Phúc Đức context for Huynh Đệ, but its next example says Tử Tức and is retained as a textual inconsistency rather than silently corrected. The void-main-star instruction remains profile-unresolved; direct sibling-count, gender, disability, conduct, sexuality and death predictions are excluded."
     },
     {
-      "rangeId": "ledger:tb-225-247",
+      "rangeId": "ledger:tb-225",
       "bookId": "book-k14-tan-bien",
-      "pdfPages": "225-247",
-      "section": "Birth season/hour and appendices",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Mapped but unread; contextual and calculation-sensitive."
+      "pdfPages": "225",
+      "section": "16 — birth season and hour",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-21",
+      "note": "Read and visually checked. The tables and year/hour pairings are calculation-sensitive and unverified; only the stated three-palace context is retained, while direct family and death claims are rejected."
+    },
+    {
+      "rangeId": "ledger:tb-226-227",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "226-227",
+      "section": "17 — Mệnh/Thân classifications",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-22",
+      "note": "Read and visually checked. Named configuration tiers depend on unresolved star groups, states, relations, Mệnh/Cục and yin-yang compatibility; direct rank, wealth and occupation outcomes are excluded."
+    },
+    {
+      "rangeId": "ledger:tb-228",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "228",
+      "section": "18 — Tử Tức supplementary discussion",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-23",
+      "note": "Read and visually checked. The source defines a cross-chart star-set comparison called Truyền tinh/Bất truyền tinh, but identity thresholds and family outcomes remain unresolved or excluded."
+    },
+    {
+      "rangeId": "ledger:tb-229-233",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "229-233",
+      "section": "19 — named configuration catalog and exceptions",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-24",
+      "note": "Five pages read and visually checked. Named patterns preserve exact placement/relation/state conditions and an explicit exception layer; active geometry, missing entities and modifier precedence remain unresolved."
+    },
+    {
+      "rangeId": "ledger:tb-234-237",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "234-237",
+      "section": "20 — contextual review for selected life categories",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-25",
+      "note": "Four pages read and visually checked. Cross-palace input groups are retained as methodology only; health, lifespan, occupation, morality, crime and status conclusions are excluded."
+    },
+    {
+      "rangeId": "ledger:tb-238-240",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "238-240",
+      "section": "21 — child-chart hour and period methods",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-26",
+      "note": "Three pages read and visually checked. The age-to-palace table and hour procedures are calculation-sensitive and not adopted; the author's under-12 uncertainty warning is retained as a historical limitation, not medical guidance."
+    },
+    {
+      "rangeId": "ledger:tb-241-243",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "241-243",
+      "section": "22 — nạp âm context for five-phase relations",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-27",
+      "note": "Three pages read and visually checked. The source explicitly modifies generic five-phase interaction by nạp âm image and branch/season context; mapping and personal relationship outcomes remain unresolved or excluded."
+    },
+    {
+      "rangeId": "ledger:tb-244-247",
+      "bookId": "book-k14-tan-bien",
+      "pdfPages": "244-247",
+      "section": "23 — source-specific symbolic star catalog",
+      "status": "REVIEW",
+      "checkpoint": "research-acceleration-batch-28",
+      "note": "Four pages read and visually checked. Object/food/body symbolism is preserved only as a source-specific taxonomy; direct health, injury, disability, substance and bodily predictions are excluded."
     },
     {
       "rangeId": "ledger:tb-248-271",
@@ -805,11 +868,163 @@
       "nextPriorityRationale": "Redirect to Tân Biên pp.225-247 rather than continue Tổng Hợp pp.174-220 immediately; this slice shows declining admissible novelty and high sensitive-claim QA cost."
     }
   },
+  "batch21": {
+    "newPagesProcessed": 1,
+    "ranges": ["ledger:tb-225"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "225",
+        "result": "Rendered page checked. Unverified season/hour tables and deterministic parent/death outcomes were not admitted; the explicit Mệnh–Phúc Đức–Phụ Mẫu context was retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds a Phụ Mẫu-specific three-palace context to the otherwise sparse retained coverage for that palace.",
+      "mergeValue": "The multi-palace requirement overlaps existing methodology but names a new exact input group.",
+      "reviewCauses": "Season/hour classification, yin-yang placement and outcome mappings are calculation-sensitive and profile-unresolved.",
+      "noYieldReliability": "The complete page was visually inspected.",
+      "topicSaturation": "The single page mixes one reusable context statement with unverified tables and unsafe direct outcomes.",
+      "nextPriorityRationale": "Continue at the complete Mệnh/Thân classification section, pp.226-227."
+    }
+  },
+  "batch22": {
+    "newPagesProcessed": 2,
+    "ranges": ["ledger:tb-226-227"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "226-227",
+        "result": "Both rendered pages checked. Occupation, rank, wealth and lasting-fame claims were excluded; only the tiered configuration structure and its stated downgrade conditions were retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds a named configuration-tier model with positive completeness gates and explicit degradation by missing support, adverse stars or Tuần/Triệt.",
+      "mergeValue": "Extends multi-factor methodology with a bounded tier/exception structure rather than a new personal conclusion.",
+      "reviewCauses": "Group membership, state lookup, relation geometry, Mệnh/Cục interaction and modifier precedence are unresolved.",
+      "noYieldReliability": "Both pages and the section transition were visually inspected.",
+      "topicSaturation": "Detailed job lists repeat unsafe direct outcomes; the structure is more valuable than the conclusions.",
+      "nextPriorityRationale": "Continue at the standalone Tử Tức appendix on p.228."
+    }
+  },
+  "batch23": {
+    "newPagesProcessed": 1,
+    "ranges": ["ledger:tb-228"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "228",
+        "result": "Rendered page checked. Family dependency, health and death claims were excluded; the source-defined cross-chart comparison was retained as research structure."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds the source's Truyền tinh/Bất truyền tinh comparison between a parent's Tử Tức star set and a child's Mệnh star set.",
+      "mergeValue": "No existing candidate compares two charts at this subject/relation level.",
+      "reviewCauses": "The source does not define a similarity threshold, matching algorithm, profile compatibility or safe conclusion.",
+      "noYieldReliability": "The complete page and examples were visually inspected.",
+      "topicSaturation": "One new relation shape is recoverable; the associated family predictions are not reusable.",
+      "nextPriorityRationale": "Continue at the named-configuration catalog, pp.229-233."
+    }
+  },
+  "batch24": {
+    "newPagesProcessed": 5,
+    "ranges": ["ledger:tb-229-233"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "231-232",
+        "result": "Rendered pages checked. Poverty, rank, wealth and event outcomes were excluded; named conditions were sampled against the source and the exception paragraph on p.233 was retained separately."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds a source catalog of named, condition-bearing star/palace patterns and explicit exceptions that prevent uniform modifier treatment.",
+      "mergeValue": "Specific conditions corroborate the need for placement, state and relation facts while p.233 adds non-uniform exception evidence.",
+      "reviewCauses": "Several star identities, bracket/aspect geometry, states, Tuần/Triệt and adverse/support group membership are unresolved.",
+      "noYieldReliability": "All five pages were visually inspected; two catalog pages were sampled as no-admitted-outcome controls.",
+      "topicSaturation": "The catalog is dense but most conclusions are direct status/wealth predictions; retain structure and exceptions, not labels as executable rules.",
+      "nextPriorityRationale": "Continue at the complete selected-category section, pp.234-237."
+    }
+  },
+  "batch25": {
+    "newPagesProcessed": 4,
+    "ranges": ["ledger:tb-234-237"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "235, 237",
+        "result": "Rendered pages checked. Health, lifespan, occupation, religion, morality and crime conclusions were excluded; only explicit cross-palace input groups were retained as methodology."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds topic-specific input groups, including Mệnh–Thân–Quan Lộc for work and Mệnh–Thân–Thiên Di–Tài Bạch–Quan Lộc for trade.",
+      "mergeValue": "Broadens existing focal-palace methodology with exact source-named input sets.",
+      "reviewCauses": "Star/state/aspect predicates remain unresolved and the surrounding conclusions are historically sensitive.",
+      "noYieldReliability": "All four pages were visually inspected, including distributed exclusion samples.",
+      "topicSaturation": "The section mostly repeats direct occupation and trait classification; methodological input sets are the only safe incremental value.",
+      "nextPriorityRationale": "Continue at the complete child-chart section, pp.238-240."
+    }
+  },
+  "batch26": {
+    "newPagesProcessed": 3,
+    "ranges": ["ledger:tb-238-240"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "238-239",
+        "result": "Rendered pages checked. Hour and age-placement algorithms were recorded as blocked calculation evidence only; medical, accident and death predictions were rejected."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds a source-specific under-12 period table and an author-stated warning against confident lifespan judgment before age 12.",
+      "mergeValue": "The warning supplies a bounded uncertainty limit; the period table is retained only as profile-unresolved evidence.",
+      "reviewCauses": "Hour procedures, age-to-palace placement and transition to adult periods require separate calculation verification.",
+      "noYieldReliability": "All three pages and all tables were visually inspected.",
+      "topicSaturation": "The section has high safety and calculation risk; no child health/outcome claim is reusable.",
+      "nextPriorityRationale": "Continue at the nạp âm context section, pp.241-243."
+    }
+  },
+  "batch27": {
+    "newPagesProcessed": 3,
+    "ranges": ["ledger:tb-241-243"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "243",
+        "result": "Rendered page checked. Direct spouse-compatibility outcomes were excluded; only the general contextual modification of five-phase relations was retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds explicit counterexamples showing that generic sinh/khắc/hòa labels are qualified by nạp âm image and branch/season context.",
+      "mergeValue": "Provides an exception-bearing relation pattern beyond the existing foundational nạp âm meaning.",
+      "reviewCauses": "The nạp âm table, branch phases and period inputs are not verified against the target profile.",
+      "noYieldReliability": "All three pages, the complete table and examples were visually inspected.",
+      "topicSaturation": "The contextual principle is novel; relationship predictions are excluded and further examples would add little without profile validation.",
+      "nextPriorityRationale": "Finish the approved slice at the symbolic-star catalog, pp.244-247."
+    }
+  },
+  "batch28": {
+    "newPagesProcessed": 4,
+    "ranges": ["ledger:tb-244-247"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "245-247",
+        "result": "Rendered pages checked. Injury, disease, disability, substance-use and bodily predictions were excluded; the tables were retained only as a source-specific symbolic taxonomy."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds a source-specific object/food/body symbolism taxonomy and explicit co-occurrence variants.",
+      "mergeValue": "The tables broaden symbolic provenance but do not validate a production star catalog or personal inference.",
+      "reviewCauses": "Many auxiliary stars are uncataloged and all placement, co-occurrence and body/health applications remain profile- or safety-unresolved.",
+      "noYieldReliability": "All four pages and every table boundary were visually inspected.",
+      "topicSaturation": "The tables are broad but low-priority for safe reasoning; adjacent period methodology is likely more valuable after dependency validation.",
+      "nextPriorityRationale": "Do not continue mechanically. Compare the sprint's substantive yield and geometry findings before selecting Tân Biên pp.248-271 or a higher-value Tổng Hợp chapter."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14-targeted-after-batch-20",
+    "checkpointId": "k14-acceleration-after-batch-28",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "dab77df",
+    "baseCommit": "c1c2feb",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -831,6 +1046,14 @@
       "ledger:tb-198-207",
       "ledger:tb-208-216",
       "ledger:tb-217-224",
+      "ledger:tb-225",
+      "ledger:tb-226-227",
+      "ledger:tb-228",
+      "ledger:tb-229-233",
+      "ledger:tb-234-237",
+      "ledger:tb-238-240",
+      "ledger:tb-241-243",
+      "ledger:tb-244-247",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -848,11 +1071,10 @@
       "ledger:th-159-165",
       "ledger:th-166-173"
     ],
-    "nextPendingPriority": ["ledger:tb-225-247", "ledger:th-174-421"],
-    "batch20CandidateIds": [
-      "candidate:k14b20-th-fire-star-intensity-taxonomy-review",
-      "candidate:k14b20-th-contextual-temperament-method-merge",
-      "candidate:k14b20-th-sensitive-temperament-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-248-271", "ledger:th-174-421"],
+    "batch28CandidateIds": [
+      "candidate:k14b28-tb-symbolic-star-taxonomy-review",
+      "candidate:k14b28-tb-sensitive-body-health-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -862,7 +1084,7 @@
       "k14-active-geometry",
       "k14-tb217-palace-label-inconsistency"
     ],
-    "nextAction": "Targeted Tổng Hợp pp.150-173 is complete. Prefer Tân Biên pp.225-247 next because the Tổng Hợp slice shows sensitive-topic saturation and declining admissible novelty; keep pp.174-421 pending and split it at chapter boundaries if resumed.",
+    "nextAction": "Research Acceleration Sprint is complete through Tân Biên p.247. Prefer a narrow Tân Biên pp.248-271 period-method batch only after using the geometry audit's minimal cases and keeping every placement/precedence claim unresolved; alternatively target a Tổng Hợp chapter selected for a specific coverage gap rather than reading sequentially.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -2795,6 +3017,467 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for the Chapter 8 opening; the source taxonomy and contextual limitation are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b21-tb-season-hour-cross-palace-method-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.225, 16.3.2 concluding paragraph",
+      "subjectIds": ["palace:menh", "palace:phuc-duc", "palace:phu-mau"],
+      "conditions": [
+        "A source-defined year/hour combination is under review.",
+        "Star influence in Mệnh, Phúc Đức and Phụ Mẫu is considered together."
+      ],
+      "neutralStatement": "The source says its year/hour assertions must be combined with star context from Mệnh, Phúc Đức and Phụ Mẫu rather than read alone.",
+      "evidenceType": "source-described cross-palace methodology",
+      "limitations": [
+        "The season/hour tables and yin-yang placement are unverified calculation inputs.",
+        "No family, health, death or personal outcome is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with multi-palace methodology; adds the first exact retained input group that includes Phụ Mẫu."
+    },
+    {
+      "candidateId": "candidate:k14b21-tb-sensitive-season-hour-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.225, Chapter 16",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps season/hour/year combinations to degree, parental harm or death timing."
+      ],
+      "neutralStatement": "The page contains unverified deterministic family and lifespan outcomes attached to season/hour tables.",
+      "evidenceType": "calculation-sensitive personal claims rejected from reusable knowledge",
+      "limitations": [
+        "The mappings lack target-profile verification and include high-risk family/death claims.",
+        "They must not become fixtures, warnings, readings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 16; the cross-palace limitation is retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b22-tb-menh-than-tiered-configuration-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.226-227, Chapter 17, 17.1-17.4",
+      "subjectIds": [
+        "palace:menh",
+        "concept:yin-yang",
+        "concept:wu-xing",
+        "state:mieu",
+        "state:vuong",
+        "state:dac-dia",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "A source-named major-star grouping is present in Mệnh/Thân context.",
+        "Mệnh–Cục, yin-yang, states and named support groups are evaluated together."
+      ],
+      "neutralStatement": "The source classifies Mệnh/Thân configurations into tiers only after combining major-star grouping, state, supporting stars, Mệnh–Cục interaction and yin-yang compatibility.",
+      "evidenceType": "source-described multi-factor configuration classification",
+      "limitations": [
+        "Thân, Cục, group membership, states and aspect geometry are not validated against the target profile.",
+        "Tier names do not authorize rank, wealth or occupation outcomes."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New explicit tier structure with simultaneous eligibility inputs."
+    },
+    {
+      "candidateId": "candidate:k14b22-tb-tier-downgrade-exception-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.226-227, 17.2 Trung cách and 17.3 Hạ cách",
+      "subjectIds": ["palace:menh", "state:ham", "relation:joined-aspect"],
+      "conditions": [
+        "A favorable grouping is incomplete or isolated.",
+        "Mệnh–Cục conflict, yin-yang mismatch, adverse stars or Tuần/Triệt occur as stated."
+      ],
+      "neutralStatement": "The source treats incomplete support and named adverse modifiers as tier-degrading conditions rather than assuming the major-star grouping is sufficient.",
+      "evidenceType": "source-described configuration exception",
+      "limitations": [
+        "Tuần/Triệt, adverse/support membership, state and precedence remain unresolved.",
+        "No numeric downgrade or personal outcome is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds a tier-specific exception without resolving existing Tuần/Triệt conflicts."
+    },
+    {
+      "candidateId": "candidate:k14b22-tb-sensitive-tier-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.226-227, Chapter 17",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps tiers and star groups to occupation, wealth, rank, religion or fame."
+      ],
+      "neutralStatement": "The tier catalog contains direct historical status, occupation and life-outcome predictions.",
+      "evidenceType": "historical personal claims rejected from reusable knowledge",
+      "limitations": [
+        "No approved profile or safe interpretation policy supports these outcomes.",
+        "They must not become occupational guidance, scores or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 17; eligibility and exception structures are retained."
+    },
+    {
+      "candidateId": "candidate:k14b23-tb-truyen-tinh-cross-chart-relation",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.228, 18.2 first three bullets and examples",
+      "subjectIds": ["palace:tu-tuc", "palace:menh"],
+      "conditions": [
+        "A parent's Tử Tức star set and a child's Mệnh star set are available from separate charts.",
+        "The source compares the sets for substantial similarity or difference."
+      ],
+      "neutralStatement": "The source names a cross-chart comparison as Truyền tinh when many stars correspond and Bất truyền tinh when they differ.",
+      "evidenceType": "source-defined cross-chart relation and examples",
+      "limitations": [
+        "The source gives no similarity threshold, normalization, algorithm or profile validation.",
+        "No family compatibility, health or death conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New cross-chart relation shape; no existing K14 candidate compares these two palace star sets."
+    },
+    {
+      "candidateId": "candidate:k14b23-tb-sensitive-family-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.228, Chapter 18",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps the comparison or Tử Tức quality to family support, compatibility, illness or death."
+      ],
+      "neutralStatement": "The appendix attaches deterministic family, health and death outcomes to the cross-chart comparison.",
+      "evidenceType": "sensitive family claims rejected from reusable knowledge",
+      "limitations": [
+        "These outcomes lack approved profile, validation and safe family-use policy.",
+        "They must not become guidance, health warnings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 18; the relation definition remains research-only."
+    },
+    {
+      "candidateId": "candidate:k14b24-tb-named-placement-combination-family",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.229-230, 19.2.7-19.2.15 selected configurations",
+      "subjectIds": [
+        "palace:menh",
+        "palace:quan-loc",
+        "star:ju-men",
+        "star:tian-ji",
+        "star:tan-lang",
+        "star:hoa-tinh",
+        "star:qi-sha",
+        "star:zi-wei",
+        "star:tian-fu",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "The exact named palace, branch, star and relation conditions are preserved.",
+        "A configuration name alone is insufficient."
+      ],
+      "neutralStatement": "The source distinguishes precise placement/co-location patterns from opposition or joined-aspect patterns, including branch-specific Cự–Cơ, Tham–Hỏa and Thất Sát/Tử–Phủ forms.",
+      "evidenceType": "source-described named configuration family",
+      "limitations": [
+        "Only examples with resolvable subjects are summarized; the catalog is not executable.",
+        "Branch placement, states, geometry and rank/wealth outcomes remain unresolved or excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New named-pattern evidence preserving exact branch/relation shapes."
+    },
+    {
+      "candidateId": "candidate:k14b24-tb-khoa-loc-relation-variants",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.231, 19.2.23-19.2.26",
+      "subjectIds": [
+        "palace:menh",
+        "palace:quan-loc",
+        "relation:joined-aspect",
+        "relation:co-located"
+      ],
+      "conditions": [
+        "The source's named Khoa/Quyền/Lộc or Hóa Lộc/Lộc Tồn members are present.",
+        "The exact relation is distinguished among hội chiếu, co-location and nhị hợp."
+      ],
+      "neutralStatement": "The source records distinct variants for transformation/wealth-star groups according to whether members are joined by aspect, co-located or in nhị hợp relation.",
+      "evidenceType": "source-described relation-sensitive combination variants",
+      "limitations": [
+        "Stable transformation entities, Can mapping, nhị hợp and aspect geometry are unresolved.",
+        "No wealth, rank, score or personal conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New relation-sensitive variant family; it does not create missing Tứ Hóa entities or geometry."
+    },
+    {
+      "candidateId": "candidate:k14b24-tb-configuration-modifier-exceptions-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.233, 19.5 Phụ luận",
+      "subjectIds": ["state:dac-dia", "relation:joined-aspect"],
+      "conditions": [
+        "A listed favorable or adverse configuration is present.",
+        "Tuần/Triệt, adverse stars, bright support or Khoa/Quyền/Lộc occur as stated."
+      ],
+      "neutralStatement": "The source supplies configuration-specific exceptions: some favorable patterns resist adverse-star reduction, while some adverse patterns are mitigated by Tuần/Triệt or favorable support.",
+      "evidenceType": "source-described non-uniform modifier exceptions",
+      "limitations": [
+        "Exception indices, group membership, state lookup and modifier precedence require verification.",
+        "No universal inversion, weight or outcome is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds an indexed exception layer without resolving existing modifier conflicts."
+    },
+    {
+      "candidateId": "candidate:k14b24-tb-sensitive-configuration-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.229-233, Chapter 19",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps named configurations to wealth, poverty, rank, occupation or fortune."
+      ],
+      "neutralStatement": "The catalog attaches deterministic social and financial outcomes to named patterns.",
+      "evidenceType": "historical personal claims rejected from reusable knowledge",
+      "limitations": [
+        "The outcomes lack approved profile and modern validation.",
+        "They must not become financial guidance, status scoring or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 19; pattern structure and exceptions are retained."
+    },
+    {
+      "candidateId": "candidate:k14b25-tb-topic-specific-palace-groups-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.234-236, 20.6 and 20.8-20.14",
+      "subjectIds": [
+        "palace:menh",
+        "palace:phuc-duc",
+        "palace:tat-ach",
+        "palace:quan-loc",
+        "palace:thien-di",
+        "palace:tai-bach",
+        "palace:phu-mau",
+        "palace:phu-the",
+        "palace:tu-tuc"
+      ],
+      "conditions": [
+        "A source-defined life category is under review.",
+        "The exact palace group named for that category is available."
+      ],
+      "neutralStatement": "The source assigns different multi-palace input groups to different topics instead of using one universal focal-palace checklist.",
+      "evidenceType": "source-described topic-specific methodology",
+      "limitations": [
+        "This preserves input scope only; it admits no category conclusions.",
+        "Thân, state and aspect dependencies remain unresolved."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with focal-palace context methods; adds exact topic-dependent palace groups."
+    },
+    {
+      "candidateId": "candidate:k14b25-tb-sensitive-category-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.234-237, Chapter 20",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps configurations to health, lifespan, ability, occupation, religion, morality, crime or status."
+      ],
+      "neutralStatement": "The category section is dominated by deterministic historical classifications of people and outcomes.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims pose health, fairness, legal and identity risks and lack validation.",
+        "They must not become classification, warnings, scores or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 20; only input-scope methodology is retained."
+    },
+    {
+      "candidateId": "candidate:k14b26-tb-child-period-table-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.239, 21.3 Định hạn",
+      "subjectIds": [
+        "period:dai-han",
+        "period:tieu-han",
+        "period:luu-nien",
+        "palace:menh",
+        "palace:tai-bach",
+        "palace:tat-ach",
+        "palace:phu-the",
+        "palace:phuc-duc",
+        "palace:quan-loc",
+        "palace:no-boc",
+        "palace:thien-di",
+        "palace:tu-tuc",
+        "palace:huynh-de",
+        "palace:phu-mau",
+        "palace:dien-trach"
+      ],
+      "conditions": ["The subject is within the source's ages 1-12 child-period scope."],
+      "neutralStatement": "The source gives an age-one-through-twelve palace sequence and switches at age thirteen to its adult period framework.",
+      "evidenceType": "source-described calculation-sensitive period mapping",
+      "limitations": [
+        "The table, age convention, direction, boundary and monthly/daily procedures are unverified.",
+        "It must not alter calculation or interpretation."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New age-bounded period mapping evidence; prior records discuss hierarchy, not this table."
+    },
+    {
+      "candidateId": "candidate:k14b26-tb-under-twelve-uncertainty-limit",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.240, 21.4 Tổng luận",
+      "subjectIds": ["period:tieu-han", "period:luu-nien"],
+      "conditions": ["The source is interpreting a chart before age twelve."],
+      "neutralStatement": "The author presents contradictory examples and advises against confident lifespan judgment before age twelve, limiting the preceding procedures.",
+      "evidenceType": "author-stated uncertainty and counterexamples",
+      "limitations": [
+        "This historical caution is not medical advice and does not validate the calculations.",
+        "No child outcome or production behavior is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New age-specific limitation supported by counterexamples."
+    },
+    {
+      "candidateId": "candidate:k14b26-tb-sensitive-child-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.238-240, Chapter 21",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps birth-hour procedures, palaces or stars to child health, disability, accident, temperament, parental events or death."
+      ],
+      "neutralStatement": "The child-chart section contains high-risk medical, developmental and mortality predictions.",
+      "evidenceType": "child health and death claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack medical validity and profile verification.",
+        "They must not become pediatric guidance, alerts, fixtures or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 21; period evidence and uncertainty limit are separate."
+    },
+    {
+      "candidateId": "candidate:k14b27-tb-nap-am-context-modifies-phase-relation",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.241-243, 22.1-22.2 and examples",
+      "subjectIds": ["concept:nap-am", "concept:wu-xing"],
+      "conditions": [
+        "A generic five-phase sinh, khắc or hòa relation is under review.",
+        "The source's nạp âm image and branch/season context are available."
+      ],
+      "neutralStatement": "The source uses nạp âm image and branch/season context to qualify the strength or expression of a generic five-phase relation, including weak apparent khắc cases.",
+      "evidenceType": "source-described contextual exception with examples",
+      "limitations": [
+        "The nạp âm table and branch/season mapping are unverified.",
+        "No compatibility, period prediction, numeric strength or personal conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New exception-bearing relation evidence beyond foundational nạp âm meaning."
+    },
+    {
+      "candidateId": "candidate:k14b27-tb-sensitive-nap-am-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.242-243, 22.2 So đôi tuổi vợ chồng",
+      "subjectIds": [],
+      "conditions": [
+        "The source applies nạp âm examples to predict spousal compatibility or harm."
+      ],
+      "neutralStatement": "The examples attach direct marital outcomes to unverified nạp âm comparisons.",
+      "evidenceType": "relationship claims rejected from reusable knowledge",
+      "limitations": [
+        "No approved compatibility method or safe relationship policy supports these outcomes.",
+        "They must not become scoring, guidance or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for spousal outcomes; the abstract contextual principle is retained."
+    },
+    {
+      "candidateId": "candidate:k14b28-tb-symbolic-star-taxonomy-review",
+      "disposition": "REVIEW",
+      "reviewReason": "missing-subject-entity",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.244-247, 23.1-23.3 tables",
+      "subjectIds": [
+        "star:tian-ji",
+        "star:tian-xiang",
+        "star:wen-chang",
+        "star:wen-qu",
+        "star:thien-khoi",
+        "star:thien-viet",
+        "star:thien-ma",
+        "star:tan-lang",
+        "star:wu-qu",
+        "star:tian-liang",
+        "star:ju-men",
+        "star:tai-yin",
+        "star:tai-yang",
+        "star:tian-fu",
+        "star:qi-sha",
+        "relation:co-located",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "The object, food or body-symbol table is documented as provenance.",
+        "Named co-occurrence conditions are preserved."
+      ],
+      "neutralStatement": "The source supplies a three-part symbolic taxonomy with co-occurrence variants that change or narrow the base symbol.",
+      "evidenceType": "source-specific symbolic taxonomy",
+      "limitations": [
+        "Many auxiliary stars lack stable entities and the taxonomy is not independently verified.",
+        "No health, injury, diet, substance, body-feature or personal inference is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New taxonomy; it is not merged into the foundation catalog because coverage and safe use are incomplete."
+    },
+    {
+      "candidateId": "candidate:k14b28-tb-sensitive-body-health-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.244-247, Chapter 23",
+      "subjectIds": [],
+      "conditions": [
+        "The source applies symbolic tables to predict diet, substance use, bodily traits, injury, disease or disability."
+      ],
+      "neutralStatement": "The symbolic tables include direct health, injury, disability, substance and body-feature predictions.",
+      "evidenceType": "sensitive body and health claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack medical validity, approved profile and safe policy.",
+        "They must not become health guidance, body classification, warnings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 23; only the taxonomy shape remains under review."
     }
   ],
   "unresolvedIssues": [

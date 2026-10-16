@@ -251,6 +251,15 @@ candidate profile-compatible hoặc production-eligible. Yield giảm rõ ở 16
 do nội dung dự đoán tính cách nhạy cảm và trùng phương pháp ngữ cảnh, nên ưu tiên
 tiếp theo chuyển sang Tân Biên 225–247; Tổng Hợp 174–220 vẫn PENDING.
 
+HV Research Acceleration Sprint (16/10) đã đọc và QA trực quan Tân Biên
+225–247, nâng lũy kế hai sách chính lên 338/719 trang. Tám batch tạo 5 ACCEPT AS
+RESEARCH, 2 MERGE, 5 REVIEW và 8 REJECT; có 8 candidate substantive/exception
+mới nhưng vẫn 0 profile-compatible và 0 production-eligible. Audit geometry xác
+nhận runtime có phép offset biên tập và unit tests, nhưng chưa có evidence độc lập
+profile-pinned để đồng nhất mọi thuật ngữ xung/hội/nhị hợp/giáp với phép đó. QA cơ
+học K14 được gom vào `npm run audit:k14`; không thay calculation, runtime, UI hay
+production contract.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
