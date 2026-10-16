@@ -1223,3 +1223,51 @@ tool change was justified; source semantics and visual comparison remain manual.
   consolidated audit.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; runtime, calculation,
   UI, profile and production-consumed data were unchanged.
+
+## HV-K15 targeted expansion and evidence resolution
+
+Two targeted Tổng Hợp sections were selected from the mapped contents and direct
+page samples: PDF/printed pp.255–264 (Chapter 13, including Phụ Mẫu and Điền
+Trạch counterconditions) and pp.335–345 (Chapter 16 close and Chapter 17 bounded
+modifier/relief conditions). All **21 pages** were read and visually checked;
+the next chapter boundary at p.346 was verified. Chapters 14–16 were not read in
+bulk because their longevity, disease and calamity focus is high-risk and the
+sampled direct outcomes were low-value for reusable knowledge.
+
+The two batches add **9 candidates**: 3 ACCEPT_AS_RESEARCH, 1 MERGE, 3 REVIEW
+and 2 REJECT. All three accepted records are substantive exceptions: Phụ Mẫu
+does not generically transfer an adverse material conclusion to Mệnh; Điền Trạch
+alone is insufficient without Tài Bạch and period context; and a named Tử Vi
+support condition has a source-described Không/Kiếp countercondition. These are
+historical source claims with unresolved profile dependencies, not personal
+predictions or production rules. Coverage increases for Phụ Mẫu–Mệnh,
+Tài Bạch–Điền Trạch, period qualification, star-group counterconditions and
+state-sensitive modifiers. Direct poverty, property-loss, addiction, crime,
+medical, mortality, legal, disaster and supernatural claims are bounded REJECTs.
+
+The baseline **44 REVIEW** records were classified without changing their
+dispositions. Primary stored reasons are 30 profile-unresolved, 4 missing subject
+entities, 3 unclear terms, 2 source conflicts, 1 missing context, 1 ambiguous
+source text, 1 lineage/profile issue and 2 legacy pilot reviews without a typed
+reason. Overlapping dependency tags are recorded in the acquisition dataset.
+The selected geometry group was checked against the new passages: p.256 names
+Tý–Sửu and Ngọ–Mùi for a Phụ Mẫu–Mệnh nhị-hợp example and distinguishes
+adjacency; pp.260–261 give a Điền Vô Chính diệu variant involving Tuần/Triệt and
+bright Nhật/Nguyệt hội chiếu. This sharpens source semantics but supplies neither
+independent lineage nor target-profile geometry/state validation, so **0 REVIEW
+was promoted** and profile-compatible/production-eligible remain zero.
+
+The detailed star catalogs on pp.258–264 and the medical/disaster mappings on
+pp.335–345 are saturated for the current safe-reuse goal. A future batch should
+select a narrow unread section with explicit star–palace or star–star
+counterconditions; it should not proceed sequentially through Chapters 14–16 or
+worked charts without a specific evidence question.
+
+- PASS: all 21 rendered pages and retained locators/conditions visually checked.
+- PASS: `npm run audit:k14` — 145 total records including the negative control;
+  primary counts 38/21/47/38; ledger 48 COMPLETED, 333 REVIEW, 325 PENDING,
+  0 BLOCKED and 13 EXCLUDED; both pinned PDF hashes match.
+- PASS: required fields, IDs/subject references, exact normalized duplicates,
+  provenance/locators, ledger gap/overlap and checkpoint references.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime or
+  production-consumed data changed.

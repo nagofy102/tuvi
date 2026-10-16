@@ -1,7 +1,7 @@
 {
   "artifactVersion": "hv-k14-controlled-acquisition-v0.2",
   "generatedAt": "2026-10-16",
-  "scope": "Internal research ledger and candidates for HV-K14 Checkpoint 3 batches 1-2; not production rules, profile evidence, scores or personalized readings.",
+  "scope": "Internal research ledger and candidates through HV-K15 batch 37; not production rules, profile evidence, scores or personalized readings.",
   "rightsBoundary": "PO authorized internal reading and analysis of the local PDFs. The artifact stores short independent paraphrases and locators, not source passages or converted book text.",
   "defaultProfile": "profile-unresolved",
   "sourceIndependence": "unresolved-between-books",
@@ -541,13 +541,49 @@
       "note": "Eight pages read and visually checked. The author records a source-specific fire-star taxonomy but also rejects a universal single-star rule; direct jealousy, temperament, ego and selfishness predictions are excluded."
     },
     {
-      "rangeId": "ledger:th-174-421",
+      "rangeId": "ledger:th-174-254",
       "bookId": "book-k14-tong-hop",
-      "pdfPages": "174-421",
-      "section": "Volume II chapters 8-24 remainder",
+      "pdfPages": "174-254",
+      "section": "Volume II chapters 8-12 remainder",
       "status": "PENDING",
       "checkpoint": null,
-      "note": "Remaining thematic configurations and examples; future batches must split at chapter boundaries."
+      "note": "Unread thematic configurations; future batches must split at chapter boundaries 188, 221 and 238."
+    },
+    {
+      "rangeId": "ledger:th-255-264",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "255-264",
+      "section": "Chapter 13 — poverty through palaces, Điền Trạch and financial-star conditions",
+      "status": "REVIEW",
+      "checkpoint": "k15-batch-36",
+      "note": "Ten pages read and visually checked. Retained material is limited to inter-palace eligibility, counterconditions and explicit Điền exceptions; direct poverty, property-loss, legal and behavioral predictions are excluded."
+    },
+    {
+      "rangeId": "ledger:th-265-334",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "265-334",
+      "section": "Volume II chapters 14-16 opening",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Unread longevity, illness and calamity material; high-risk content requires narrow section selection and visual QA."
+    },
+    {
+      "rangeId": "ledger:th-335-345",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "335-345",
+      "section": "Chapter 16 close and Chapter 17 — bounded relief conditions",
+      "status": "REVIEW",
+      "checkpoint": "k15-batch-37",
+      "note": "Eleven pages read and visually checked. The retained yield concerns multi-palace qualification and source-described modifier exceptions; medical, mortality, legal and disaster outcomes remain excluded."
+    },
+    {
+      "rangeId": "ledger:th-346-421",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "346-421",
+      "section": "Volume II chapters 18-24",
+      "status": "PENDING",
+      "checkpoint": null,
+      "note": "Unread relationship, family, religious and worked-chart chapters; sensitive historical claims require narrow review."
     },
     {
       "rangeId": "ledger:th-422-435",
@@ -1201,11 +1237,80 @@
       "nextPriorityRationale": "Do not read worked charts mechanically; select a different source section against a defined coverage gap."
     }
   },
+  "batch36": {
+    "newPagesProcessed": 10,
+    "ranges": ["ledger:th-255-264"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "258-259, 262-264",
+        "result": "Rendered pages checked. Long star lists and deterministic poverty, property-loss, addiction, crime and legal outcomes were not normalized into reusable rules; only bounded relation and countercondition shapes were retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds explicit Phụ Mẫu–Mệnh and Tài Bạch–Điền Trạch eligibility/countercondition evidence plus two source-described Điền exceptions.",
+      "mergeValue": "The source narrows when Phụ Mẫu is allowed to affect Mệnh and when a weak Điền statement is insufficient, rather than repeating a generic multi-palace instruction.",
+      "reviewCauses": "Nhị hợp geometry, branch pairing, Vô Chính diệu, Tuần/Triệt, brightness lookup and every personal financial outcome remain unresolved or excluded.",
+      "noYieldReliability": "All ten rendered pages were visually inspected; star-list continuations and the chapter boundary at p.264 were checked.",
+      "topicSaturation": "The star catalogs after the palace-level conditions mostly repeat direct financial, behavioral or legal predictions and are low-yield for safe reusable knowledge.",
+      "nextPriorityRationale": "Do not continue sequentially into longevity/illness chapters; compare the bounded modifier logic in Chapter 17 instead."
+    }
+  },
+  "batch37": {
+    "newPagesProcessed": 11,
+    "ranges": ["ledger:th-335-345"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "335-336, 342-345",
+        "result": "Rendered pages checked. Parent mortality, illness, disaster and supernatural-assistance claims were excluded; the retained records only preserve source-bounded multi-palace and modifier exceptions."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds a source-specific non-universal relief model and a concrete Tử Vi/Tả Hữu versus Không/Kiếp exception.",
+      "mergeValue": "Strengthens existing multi-palace methodology with an explicit warning that Phúc Đức alone is not a universal resolver and that the relevant palace context must also be examined.",
+      "reviewCauses": "Star-group membership, state lookup, Tuần/Triệt, aspect geometry, precedence and sensitive health/disaster semantics remain unresolved.",
+      "noYieldReliability": "All eleven rendered pages were visually inspected, including the Chapter 16 close, Chapter 17 opening and Chapter 18 boundary.",
+      "topicSaturation": "Most named relief-star descriptions map directly to medical or disaster outcomes; further sequential extraction would add unsafe repetition rather than broad coverage.",
+      "nextPriorityRationale": "Prefer an unread section with explicit star–palace or star–star counterconditions; avoid Chapters 14-16 and worked charts unless a narrowly defined evidence question requires them."
+    }
+  },
+  "reviewResolutionAudit": {
+    "baselineReviewCount": 44,
+    "classificationMethod": "Existing reviewReason is the primary mutually exclusive label; secondary dependency tags are overlapping text-supported facets and must not be summed as a disposition total.",
+    "primaryReasonCounts": {
+      "profile-unresolved": 30,
+      "missing-context": 1,
+      "term-unclear": 3,
+      "source-conflict": 2,
+      "source-text-ambiguous": 1,
+      "missing-subject-entity": 4,
+      "lineage-and-profile-unresolved": 1,
+      "legacy-pilot-without-reviewReason": 2
+    },
+    "secondaryDependencyCounts": {
+      "missing-evidence-or-entity": 13,
+      "variant-or-edition": 18,
+      "profile": 37,
+      "geometry": 18,
+      "state": 24,
+      "calendar-placement-or-period": 18,
+      "historical-language-or-sensitive-outcome": 33,
+      "source-conflict-or-ambiguity": 11
+    },
+    "selectedResolutionGroup": "geometry / relation terminology / Vô Chính diệu",
+    "newEvidence": [
+      "Tổng Hợp PDF p.256 explicitly limits a Phụ Mẫu–Mệnh nhị-hợp claim to Tý–Sửu and Ngọ–Mùi and distinguishes it from adjacency.",
+      "Tổng Hợp PDF pp.260-261 gives a Vô Chính diệu Điền exception conditioned on Tuần/Triệt and bright Nhật/Nguyệt hội chiếu."
+    ],
+    "dispositionChanges": [],
+    "resolutionResult": "No prior REVIEW changed disposition. The new passages sharpen source semantics but do not establish independent lineage, active target-profile geometry, state lookup or profile compatibility."
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14-independent-validation-after-batch-35",
+    "checkpointId": "k15-targeted-expansion-after-batch-37",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "03cd5df",
+    "baseCommit": "f042295",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -1257,10 +1362,17 @@
       "ledger:th-153-154",
       "ledger:th-155-158",
       "ledger:th-159-165",
-      "ledger:th-166-173"
+      "ledger:th-166-173",
+      "ledger:th-255-264",
+      "ledger:th-335-345"
     ],
-    "nextPendingPriority": ["ledger:th-174-421", "ledger:tb-272-275"],
-    "batch35CandidateIds": ["candidate:k14b35-tb-death-funeral-predictions-reject"],
+    "nextPendingPriority": ["ledger:th-174-254", "ledger:th-265-334", "ledger:th-346-421"],
+    "batch37CandidateIds": [
+      "candidate:k15b37-th-phuc-not-universal-resolver-merge",
+      "candidate:k15b37-th-ziwei-assistant-void-exception",
+      "candidate:k15b37-th-bright-sun-moon-relief-review",
+      "candidate:k15b37-th-sensitive-relief-outcomes-reject"
+    ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
       "k14-vni-partial-conversion",
@@ -1269,7 +1381,7 @@
       "k14-active-geometry",
       "k14-tb217-palace-label-inconsistency"
     ],
-    "nextAction": "Tân Biên pp.248-271 are complete. The star-by-period catalog is saturated and placement/profile dependencies block promotion. Select a Tổng Hợp section against a concrete geometry, period-precedence or missing-entity gap; treat Tân Biên worked charts pp.272-275 as observation-only if separately prioritized.",
+    "nextAction": "K15 completed targeted Tổng Hợp pp.255-264 and 335-345. Chapter 13 star lists and Chapter 17 medical/disaster mappings are saturated for safe reuse. Next select a narrow unread section with explicit star–palace or star–star counterconditions; geometry and Vô Chính diệu remain unresolved pending independent profile-pinned evidence.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -4005,6 +4117,192 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Explicit exclusion boundary for Chapter 5; no reusable candidate retained."
+    },
+    {
+      "candidateId": "candidate:k15b36-th-phu-mau-menh-scope-exception",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.255-256, Chapter 13 A.2 Cung Phụ Mẫu",
+      "subjectIds": ["palace:phu-mau", "palace:menh"],
+      "conditions": [
+        "A claim tries to transfer a Phụ Mẫu financial condition to Mệnh.",
+        "The source-stated spatial relationship and the distinct scope of Phụ Mẫu are preserved."
+      ],
+      "neutralStatement": "The source rejects a generic inference from an adverse Phụ Mẫu condition to personal poverty and only describes a stronger Phụ Mẫu–Mệnh interaction under a narrower named relation.",
+      "evidenceType": "source-described palace-scope countercondition",
+      "limitations": [
+        "The financial framing is historical and is not admitted as a personal prediction.",
+        "The named nhị-hợp relation remains source vocabulary, not active target-profile geometry."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds a Phụ Mẫu-specific negative eligibility condition; earlier records only required broad multi-palace review."
+    },
+    {
+      "candidateId": "candidate:k15b36-th-tai-dien-joint-eligibility-exception",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.257-258, Chapter 13 A.6 Cung Điền and A.8 Các cung Hạn",
+      "subjectIds": ["palace:tai-bach", "palace:dien-trach"],
+      "conditions": [
+        "A conclusion is being drawn from Điền Trạch alone.",
+        "Tài Bạch and the relevant period context have not yet been examined."
+      ],
+      "neutralStatement": "The source states that an adverse Điền Trạch condition alone is insufficient for its broader material conclusion; Tài Bạch must also be considered, while a favorable period may change only the bounded period assessment.",
+      "evidenceType": "source-described inter-palace eligibility and period countercondition",
+      "limitations": [
+        "No wealth, poverty, property or timing prediction is admitted.",
+        "Period placement, strength thresholds and precedence remain unresolved."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New explicit Tài Bạch–Điền Trạch insufficiency test, narrower than the existing general multi-factor methodology."
+    },
+    {
+      "candidateId": "candidate:k15b36-th-phu-mau-nhi-hop-geometry-review",
+      "disposition": "REVIEW",
+      "reviewReason": "lineage-and-profile-unresolved",
+      "knowledgeType": "conflict",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.256, Chapter 13 A.2 Cung Phụ Mẫu",
+      "subjectIds": ["palace:phu-mau", "palace:menh", "relation:joined-aspect"],
+      "conditions": [
+        "The source uses nhị hợp for Phụ Mẫu and Mệnh.",
+        "It names Tý–Sửu and Ngọ–Mùi and separately discusses adjacency."
+      ],
+      "neutralStatement": "The source gives a branch-specific Phụ Mẫu–Mệnh nhị-hợp example and distinguishes that relation from simple adjacency.",
+      "evidenceType": "source-described geometry vocabulary with explicit branch examples",
+      "limitations": [
+        "The current joined-aspect entity is not proven equivalent to this source term.",
+        "The book is not independently profile-pinned and no runtime geometry is activated."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Sharpens the earlier limited nhị-hợp review with exact palace and branch examples; it does not resolve the terminology conflict."
+    },
+    {
+      "candidateId": "candidate:k15b36-th-dien-void-tuan-triet-sun-moon-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.260-261, Chapter 13 B.1 Cách nghèo về Điền Trạch",
+      "subjectIds": [
+        "palace:dien-trach",
+        "star:tai-yang",
+        "star:tai-yin",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "Điền Trạch is described as Vô Chính diệu.",
+        "Tuần or Triệt is present and bright Nhật/Nguyệt is described as hội chiếu."
+      ],
+      "neutralStatement": "The source records a Điền Trạch exception in which Tuần/Triệt and bright Nhật/Nguyệt hội chiếu alter the default Vô Chính diệu assessment.",
+      "evidenceType": "source-described void-main-star modifier exception",
+      "limitations": [
+        "Vô Chính diệu and Tuần/Triệt lack stable admitted entities.",
+        "Brightness lookup, hội-chiếu geometry, precedence and all property outcomes remain unresolved or excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds an exact Điền-specific modifier set; kept separate from other palace Vô Chính diệu reviews because its conditions differ."
+    },
+    {
+      "candidateId": "candidate:k15b36-th-sensitive-poverty-property-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.258-264, Chapter 13 B.1-B.4",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps star lists to deterministic poverty, property loss, addiction, crime, imprisonment or litigation outcomes."
+      ],
+      "neutralStatement": "The chapter's detailed star catalogs include deterministic financial, behavioral and legal predictions.",
+      "evidenceType": "sensitive historical outcomes rejected from reusable knowledge",
+      "limitations": [
+        "These claims are unvalidated, historically framed and unsuitable for personalized guidance.",
+        "They do not become rules, scores, fixtures or modern conclusions."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the chapter's direct outcome lists; only reusable eligibility and exception shapes are retained."
+    },
+    {
+      "candidateId": "candidate:k15b37-th-phuc-not-universal-resolver-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.337-339, Chapter 17 B Cách giải họa qua các cung",
+      "subjectIds": ["palace:phuc-duc", "palace:menh"],
+      "conditions": [
+        "A favorable Phúc Đức condition is proposed as a universal override.",
+        "The relevant palace and other source-named chart contexts have not been evaluated."
+      ],
+      "neutralStatement": "The source denies that Phúc Đức alone universally cancels an adverse condition and requires the relevant palace context and broader chart factors to be considered.",
+      "evidenceType": "source-described multi-palace limitation",
+      "limitations": [
+        "No metaphysical rescue claim or personal outcome is admitted.",
+        "The passage supplies no executable weighting or precedence rule."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with existing Mệnh–Thân–Phúc Đức methodology; adds an explicit anti-override limitation."
+    },
+    {
+      "candidateId": "candidate:k15b37-th-ziwei-assistant-void-exception",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.340, Chapter 17 C.1 Chính tinh, Tử Vi",
+      "subjectIds": ["star:zi-wei", "star:ta-phu", "star:dia-khong", "star:dia-kiep"],
+      "conditions": [
+        "Tử Vi is described as đắc địa and accompanied by the source's assistant-star condition.",
+        "Địa Không or Địa Kiếp is also present."
+      ],
+      "neutralStatement": "The source treats the stated assistant-star support for Tử Vi as non-universal and says the Không/Kiếp condition defeats that support unless a further source-named modifier is present.",
+      "evidenceType": "source-described star-group countercondition",
+      "limitations": [
+        "Hữu Bật and Tuần/Triệt are not stable admitted subjects in the foundation catalog.",
+        "State lookup, co-occurrence geometry, group completeness and precedence remain unresolved; no disaster or personal conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New concrete support-versus-countercondition shape; not a universal rescue rule and not executable."
+    },
+    {
+      "candidateId": "candidate:k15b37-th-bright-sun-moon-relief-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.342, Chapter 17 C.1 Thái Dương, Thái Âm sáng sủa",
+      "subjectIds": ["star:tai-yang", "star:tai-yin"],
+      "conditions": [
+        "Nhật or Nguyệt is described as bright under the source's state model.",
+        "The source's time-of-birth and companion-star modifiers are preserved."
+      ],
+      "neutralStatement": "The source assigns a favorable modifying role to bright Nhật/Nguyệt but makes its scope depend on source-specific state, birth-time and companion conditions.",
+      "evidenceType": "source-described state-sensitive modifier",
+      "limitations": [
+        "Brightness, birth-time compatibility and companion precedence are not validated for the target profile.",
+        "Medical, bodily and personal outcomes from the surrounding passage are excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Extends existing Nhật/Nguyệt state variants into a bounded modifier context; remains review because the state resolver is absent."
+    },
+    {
+      "candidateId": "candidate:k15b37-th-sensitive-relief-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.335-345, Chapter 16 close and Chapter 17",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps palaces or stars to parent mortality, disease, disability, disaster, imprisonment or supernatural rescue."
+      ],
+      "neutralStatement": "The section contains deterministic medical, mortality, legal, disaster and supernatural-assistance claims.",
+      "evidenceType": "high-risk outcomes rejected from reusable knowledge",
+      "limitations": [
+        "The claims are not suitable for modern personalized output and lack validated profile support.",
+        "Only bounded methodology and modifier structures are retained separately."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Explicit exclusion boundary for direct calamity and relief outcomes; no rule or score is admitted."
     }
   ],
   "unresolvedIssues": [

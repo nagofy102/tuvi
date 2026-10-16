@@ -270,6 +270,16 @@ trúc cùng lời luận nhạy cảm. Evidence hiện có chưa chứng minh ha
 giáp/Vô Chính diệu vẫn unresolved; không thay calculation, runtime, UI hay
 production contract.
 
+HV-K15 Targeted Knowledge Expansion & Evidence Resolution (16/10) đã đọc và QA
+trực quan Tổng Hợp 255–264 và 335–345, nâng lũy kế đọc thực chất lên 383/719
+trang. Hai batch tạo 3 ACCEPT AS RESEARCH, 1 MERGE, 3 REVIEW và 2 REJECT; ba
+ACCEPT đều là substantive exception về phạm vi Phụ Mẫu–Mệnh, điều kiện chung
+Tài Bạch–Điền Trạch và phản điều kiện của một nhóm sao. Đã phân nhóm 44 REVIEW
+baseline và đối chiếu nhóm geometry/Vô Chính diệu; passage mới làm rõ từ ngữ
+nguồn nhưng không chứng minh lineage độc lập, state lookup hay target profile,
+nên không đổi disposition nào. Profile-compatible và production-eligible vẫn
+bằng 0; không thay calculation, runtime, UI hay production contract.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
