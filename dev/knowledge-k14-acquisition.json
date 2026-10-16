@@ -379,10 +379,55 @@
       "note": "Twenty-one pages read with rendered-page QA. VNI remained navigation-only; the range adds only bounded methodology/provenance, while chart grading, appearance and sexuality claims are excluded."
     },
     {
-      "rangeId": "ledger:th-150-421",
+      "rangeId": "ledger:th-150-152",
       "bookId": "book-k14-tong-hop",
-      "pdfPages": "150-421",
-      "section": "Volume II chapters 4-24 remainder",
+      "pdfPages": "150-152",
+      "section": "Chapter 4 conclusion — contextual and suppressing factors",
+      "status": "REVIEW",
+      "checkpoint": "targeted-expansion-batch-16",
+      "note": "Three pages read and visually checked. The source gives bounded modifier and Tuần/Triệt caveats, but the surrounding sexuality and relationship claims remain excluded and profile compatibility is unresolved."
+    },
+    {
+      "rangeId": "ledger:th-153-154",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "153-154",
+      "section": "Chapter 5 opening — food and drink star contexts",
+      "status": "REVIEW",
+      "checkpoint": "targeted-expansion-batch-17",
+      "note": "Two pages read and visually checked. The section supplies explicit Mệnh/Thân/aspect eligibility and named co-occurrence variants; missing auxiliary entities and direct consumption claims keep them in research review."
+    },
+    {
+      "rangeId": "ledger:th-155-158",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "155-158",
+      "section": "Chapter 5 conclusion and Chapter 6 — rhetoric combinations",
+      "status": "REVIEW",
+      "checkpoint": "targeted-expansion-batch-18",
+      "note": "Four pages read and visually checked. Named rhetoric-star combinations provide specific relation evidence, while branch/state mappings, occupations, health and personal-trait outcomes remain unresolved or excluded."
+    },
+    {
+      "rangeId": "ledger:th-159-165",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "159-165",
+      "section": "Chapter 7 — synthetic adverse-character configurations",
+      "status": "REVIEW",
+      "checkpoint": "targeted-expansion-batch-19",
+      "note": "Seven pages read and visually checked. The useful yield is whole-chart gating, a Không/Kiếp context exception and an attributed Phá Quân branch variant; criminal, moral, legal and violent predictions are excluded."
+    },
+    {
+      "rangeId": "ledger:th-166-173",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "166-173",
+      "section": "Chapter 8 opening — contextual temperament categories",
+      "status": "REVIEW",
+      "checkpoint": "targeted-expansion-batch-20",
+      "note": "Eight pages read and visually checked. The author records a source-specific fire-star taxonomy but also rejects a universal single-star rule; direct jealousy, temperament, ego and selfishness predictions are excluded."
+    },
+    {
+      "rangeId": "ledger:th-174-421",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "174-421",
+      "section": "Volume II chapters 8-24 remainder",
       "status": "PENDING",
       "checkpoint": null,
       "note": "Remaining thematic configurations and examples; future batches must split at chapter boundaries."
@@ -665,11 +710,106 @@
       "nextPriorityRationale": "The approved 181-224 range is complete; resume planning must use the remaining ledger and current breadth-first priorities."
     }
   },
+  "batch16": {
+    "newPagesProcessed": 3,
+    "ranges": ["ledger:th-150-152"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "150, 152",
+        "result": "Both rendered pages were checked directly. Historical sexuality, relationship and life-outcome claims were excluded; only explicit modifier limits were retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Two specific modifier forms were retained: a named Liêm Trinh–Tham Lang co-location modifier and a non-uniform Tuần/Triệt limitation.",
+      "mergeValue": "The Tuần/Triệt passage adds degree, duration and case-by-case limits to the existing scope conflict without resolving it.",
+      "reviewCauses": "Hóa Kị and Tuần/Triệt identities, activation, state, duration and modifier precedence remain unresolved; the topic is historically sensitive.",
+      "noYieldReliability": "All three pages were visually inspected, including the excluded continuation on p.150 and contextual discussion on p.152.",
+      "topicSaturation": "The sexuality chapter is saturated with direct personal claims; later reading should not return to it without a safe interpretation policy.",
+      "nextPriorityRationale": "Continue at the clean Chapter 5 boundary on p.153."
+    }
+  },
+  "batch17": {
+    "newPagesProcessed": 2,
+    "ranges": ["ledger:th-153-154"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "153, 154",
+        "result": "Both rendered pages were checked directly. Narrative cultural claims and deterministic consumption outcomes were excluded from reusable knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The source states an explicit Mệnh/Thân/aspect eligibility gate and distinguishes Thiên Trù alone from named co-occurrence variants.",
+      "mergeValue": "The records add concrete star–context and star–star shapes rather than another whole-chart-only statement.",
+      "reviewCauses": "Several named auxiliary stars are absent from the foundation catalog, and active aspect geometry remains unresolved.",
+      "noYieldReliability": "Both pages were visually inspected and every retained name/condition was checked against the rendered source.",
+      "topicSaturation": "The narrow topic has useful relation shapes but low product relevance and many direct personal claims.",
+      "nextPriorityRationale": "Continue through the Chapter 5 conclusion and complete Chapter 6 at p.158."
+    }
+  },
+  "batch18": {
+    "newPagesProcessed": 4,
+    "ranges": ["ledger:th-155-158"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "155, 157",
+        "result": "Rendered pages were checked directly. Medical, occupation and broad personality outcomes were excluded; only bounded state and combination evidence was retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "One explicit family of rhetoric-star pair/group combinations and one branch/state variant were retained.",
+      "mergeValue": "The combination passage adds named co-location/aspect variants to the existing general multi-star methodology.",
+      "reviewCauses": "Auxiliary-star identities, branch/state lookup and active chính/hợp chiếu geometry remain unresolved.",
+      "noYieldReliability": "All four pages were visually inspected; pp.155 and 157 were explicit exclusion samples.",
+      "topicSaturation": "The chapter yields specific combinations but its direct occupation and ability predictions are not reusable.",
+      "nextPriorityRationale": "Move to the Chapter 7 boundary at p.159."
+    }
+  },
+  "batch19": {
+    "newPagesProcessed": 7,
+    "ranges": ["ledger:th-159-165"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "159, 162, 165",
+        "result": "Rendered pages were checked directly. Criminal, violent, legal and moral-character predictions were excluded; the retained records preserve only gating, context exceptions and an attributed variant."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The range adds a practical-context exception for Địa Không–Địa Kiếp and a source-attributed Phá Quân branch/stem variant.",
+      "mergeValue": "The chapter opening corroborates whole-chart synthesis but does not justify a new universal methodology rule.",
+      "reviewCauses": "State and branch/stem lookup, active geometry, lineage dependence on Tân Biên and safe handling of moral/legal claims remain unresolved.",
+      "noYieldReliability": "All seven pages were visually inspected, with three distributed exclusion samples.",
+      "topicSaturation": "The detailed catalog is dominated by unsafe deterministic character and crime predictions; further adjacent extraction has low admissible yield.",
+      "nextPriorityRationale": "Continue at the first full page of Chapter 8, p.166; p.165 was kept with Chapter 7 because its upper portion completes that chapter."
+    }
+  },
+  "batch20": {
+    "newPagesProcessed": 8,
+    "ranges": ["ledger:th-166-173"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "166, 170, 173",
+        "result": "Rendered pages were checked directly. Direct jealousy, anger, ego and selfishness predictions were excluded; p.170 was also checked as a low-text classification page."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The range adds a source-specific fire-star intensity taxonomy but no profile-compatible interpretation.",
+      "mergeValue": "The author explicitly says convergence, relation context and external causes prevent a universal one-star rule, adding topic-specific provenance to existing contextual methodology.",
+      "reviewCauses": "Many taxonomy members are uncataloged; element assignment, state lookup, relation geometry and historical trait framing remain unresolved.",
+      "noYieldReliability": "All eight pages were visually inspected, including the list-only pages and three distributed exclusion samples.",
+      "topicSaturation": "The section is dominated by deterministic personality claims and adds limited safe value beyond one taxonomy and one contextual caveat.",
+      "nextPriorityRationale": "Redirect to Tân Biên pp.225-247 rather than continue Tổng Hợp pp.174-220 immediately; this slice shows declining admissible novelty and high sensitive-claim QA cost."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-15",
+    "checkpointId": "k14-targeted-after-batch-20",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "23bdce9",
+    "baseCommit": "dab77df",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -701,14 +841,18 @@
       "ledger:th-093-101",
       "ledger:th-104-107",
       "ledger:th-108-128",
-      "ledger:th-129-149"
+      "ledger:th-129-149",
+      "ledger:th-150-152",
+      "ledger:th-153-154",
+      "ledger:th-155-158",
+      "ledger:th-159-165",
+      "ledger:th-166-173"
     ],
-    "nextPendingPriority": ["ledger:tb-225-247", "ledger:tb-248-271"],
-    "batch15CandidateIds": [
-      "candidate:k14b15-tb-huynh-de-phuc-duc-method",
-      "candidate:k14b15-tb-palace-label-inconsistency-review",
-      "candidate:k14b15-tb-huynh-de-void-main-star-review",
-      "candidate:k14b15-tb-sensitive-sibling-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-225-247", "ledger:th-174-421"],
+    "batch20CandidateIds": [
+      "candidate:k14b20-th-fire-star-intensity-taxonomy-review",
+      "candidate:k14b20-th-contextual-temperament-method-merge",
+      "candidate:k14b20-th-sensitive-temperament-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -718,7 +862,7 @@
       "k14-active-geometry",
       "k14-tb217-palace-label-inconsistency"
     ],
-    "nextAction": "The approved Tân Biên pp.181-224 range is complete. If research resumes under the broader autonomous scope, verify the next section boundary at p.225 against the ledger before opening another batch.",
+    "nextAction": "Targeted Tổng Hợp pp.150-173 is complete. Prefer Tân Biên pp.225-247 next because the Tổng Hợp slice shows sensitive-topic saturation and declining admissible novelty; keep pp.174-421 pending and split it at chapter boundaries if resumed.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -2296,6 +2440,361 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only contextual methodology, the textual conflict and unresolved opposition structure are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b16-th-liem-tham-hoa-ky-modifier-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.151, D. Những sao khắc chế tình dục, Hóa Kị",
+      "subjectIds": ["star:lian-zhen", "star:tan-lang", "relation:co-located"],
+      "conditions": [
+        "Liêm Trinh and Tham Lang form the source's named combination.",
+        "Hóa Kị is co-located with that combination."
+      ],
+      "neutralStatement": "The source describes co-located Hóa Kị as reducing an adverse aspect it assigns to the Liêm Trinh–Tham Lang combination.",
+      "evidenceType": "source-described star-combination modifier",
+      "limitations": [
+        "Hóa Kị is not represented by a stable foundation entity in the current dataset, and its placement/activation is not validated.",
+        "The surrounding sexuality and moral-character outcomes are not admitted as personalized claims or production rules."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New bounded three-factor modifier; it does not duplicate the existing general Tuần/Triệt conflict."
+    },
+    {
+      "candidateId": "candidate:k14b16-th-tuan-triet-nonuniform-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.152, D. Những sao khắc chế tình dục, Triệt/Tuần",
+      "subjectIds": ["relation:co-located"],
+      "conditions": [
+        "Tuần or Triệt is described as accompanying the focal star group.",
+        "The source is comparing the two modifiers rather than assigning a universal inversion."
+      ],
+      "neutralStatement": "The source distinguishes Triệt from Tuần by stated degree and duration of restraint, then says the combination does not support one universal conclusion and must be judged case by case.",
+      "evidenceType": "author-stated modifier distinction and limitation",
+      "limitations": [
+        "Tuần/Triệt identity, duration, scope and precedence are unresolved in the target profile.",
+        "No sexuality, virtue, relationship or event conclusion is retained."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds topic-specific degree/duration and case-by-case evidence to the existing Tuần/Triệt scope conflict; retained separately as an exception, not a resolution."
+    },
+    {
+      "candidateId": "candidate:k14b16-th-sensitive-sexuality-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.150-152, Chapter 4 conclusion",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps named stars, palaces or modifiers to sexuality, fidelity, health, relationship or moral-character outcomes."
+      ],
+      "neutralStatement": "The reviewed conclusion contains deterministic historical claims about sexuality, fidelity, health and moral character.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims reflect historical sexual and gender framing and lack an approved profile or safe interpretation policy.",
+        "They must not become health or relationship guidance, scores, personalized claims, fixtures or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Extends the bounded Chapter 4 exclusion through its conclusion; the two retained modifier structures are recorded separately."
+    },
+    {
+      "candidateId": "candidate:k14b17-th-thien-tru-eligibility-review",
+      "disposition": "REVIEW",
+      "reviewReason": "missing-subject-entity",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.153-154, Chapter 5, B. Những sao ăn nhậu, opening and Thiên Trù",
+      "subjectIds": ["palace:menh", "relation:opposes", "relation:trines-with"],
+      "conditions": [
+        "Thiên Trù is in Mệnh, Thân or a source-described aspect context to Mệnh/Thân.",
+        "The source's food/drink topic is being evaluated."
+      ],
+      "neutralStatement": "The source makes its Thiên Trù interpretation eligible only through Mệnh, Thân or stated aspect context rather than treating the star label as sufficient everywhere.",
+      "evidenceType": "source-described star–palace eligibility",
+      "limitations": [
+        "Thiên Trù and Thân lack stable subject entities in the current foundation dataset.",
+        "Active aspect geometry and all direct consumption or health outcomes remain unresolved or excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New topic-specific eligibility gate; related to contextual-star methodology but more concrete than a whole-chart statement."
+    },
+    {
+      "candidateId": "candidate:k14b17-th-thien-tru-companion-variants-review",
+      "disposition": "REVIEW",
+      "reviewReason": "missing-subject-entity",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.154, Chapter 5, Thiên Trù with Hóa Lộc, Tấu Thư and Lực Sĩ",
+      "subjectIds": ["relation:co-located"],
+      "conditions": [
+        "Thiên Trù is combined with one of the source's named companion stars.",
+        "The source distinguishes each companion variant from Thiên Trù alone."
+      ],
+      "neutralStatement": "The source assigns different traditional refinements to Thiên Trù when combined with Hóa Lộc, Tấu Thư or Lực Sĩ, showing that the companion star changes the described form rather than merely repeating the base label.",
+      "evidenceType": "source-described star–star variants",
+      "limitations": [
+        "The named stars are not all represented by stable foundation entities, and no placement or profile mapping is validated.",
+        "Direct appetite, alcohol, health or personal-behavior claims are not admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New named companion family; no equivalent Thiên Trù candidate exists in the K14 dataset."
+    },
+    {
+      "candidateId": "candidate:k14b17-th-consumption-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.153-154, Chapter 5 opening",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps named stars to appetite, alcohol use, bodily capacity, social behavior or material outcomes."
+      ],
+      "neutralStatement": "The reviewed opening contains direct historical predictions about consumption habits, bodily capacity and social behavior.",
+      "evidenceType": "historical personal claims rejected from reusable knowledge",
+      "limitations": [
+        "No health validity, approved profile or safe personalization policy supports these outcomes.",
+        "They must not become health guidance, addiction claims, scores, personalized readings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the Chapter 5 opening; only eligibility and companion structure are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b18-th-rhetoric-combination-family",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.158, Chapter 6, B. Những sao hùng biện phối trí",
+      "subjectIds": [
+        "star:wen-chang",
+        "star:wen-qu",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:trines-with"
+      ],
+      "conditions": [
+        "Two or more named rhetoric stars occur by co-location, chính chiếu or hợp chiếu as stated by the source.",
+        "The exact named pair or group, not an arbitrary star set, is present."
+      ],
+      "neutralStatement": "The source provides named pair and group variants in which combined rhetoric stars are described as contributing distinct, complementary qualities rather than a single repeated meaning.",
+      "evidenceType": "source-described named star-combination family",
+      "limitations": [
+        "Several named stars lack stable foundation entities and active chính/hợp chiếu geometry is unresolved.",
+        "No ability score, occupation, social influence or personalized conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New specific combination family; general multi-star methodology exists, but no prior candidate records these named rhetoric variants."
+    },
+    {
+      "candidateId": "candidate:k14b18-th-bach-ho-khoc-hu-state-variant-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.156, Chapter 6, Bạch Hổ and Thiên Khốc/Thiên Hư",
+      "subjectIds": ["state:dac-dia", "state:ham", "relation:source-variant-state-at-branch"],
+      "conditions": [
+        "The source's Bạch Hổ or Thiên Khốc/Thiên Hư subject is evaluated at the named branches.",
+        "The source distinguishes đắc địa from hãm địa variants."
+      ],
+      "neutralStatement": "The source changes its traditional rhetoric description for Bạch Hổ and Thiên Khốc/Thiên Hư according to named branch and state variants, including an adverse-language variant under hãm địa.",
+      "evidenceType": "source-described branch/state variant",
+      "limitations": [
+        "The named auxiliary stars and branch/state lookup are not fully represented or validated in the current profile.",
+        "No occupation, political ability, honesty or personal-character prediction is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New source-specific state/branch variant; it does not duplicate the major-star state table."
+    },
+    {
+      "candidateId": "candidate:k14b18-th-health-occupation-ability-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.155-158, Chapters 5-6",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps named stars or combinations to disease, alcohol harm, occupation, intelligence, persuasion or social-status outcomes."
+      ],
+      "neutralStatement": "The reviewed pages contain direct historical health, occupation, ability and status predictions.",
+      "evidenceType": "historical personal claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack health validity, an approved profile and an approved personalization policy.",
+        "They must not become medical advice, aptitude scoring, career guidance, personalized readings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for direct outcomes; the named combination and state structures are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b19-th-whole-chart-adverse-method-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.159-161, Chapter 7, A-C",
+      "subjectIds": [
+        "palace:menh",
+        "palace:phuc-duc",
+        "palace:quan-loc",
+        "palace:tai-bach",
+        "palace:thien-di",
+        "palace:phu-the",
+        "palace:no-boc",
+        "palace:tat-ach"
+      ],
+      "conditions": [
+        "The source is discussing a synthetic adverse-character configuration.",
+        "Multiple palaces, repeated stars, stated states and relations are reviewed together."
+      ],
+      "neutralStatement": "The source explicitly says this configuration cannot be inferred from one palace or star and requires repeated multi-palace and multi-star evidence before any conclusion.",
+      "evidenceType": "author-described synthetic methodology",
+      "limitations": [
+        "The source's criminal, moral, legal and fate outcomes are excluded.",
+        "No threshold, geometry, state resolver or personal conclusion is derived."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with existing whole-chart and non-isolation methodology; adds this chapter's explicit repeated-evidence constraint."
+    },
+    {
+      "candidateId": "candidate:k14b19-th-khong-kiep-context-exception",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.163, Chapter 7, Địa Không/Địa Kiếp hãm địa",
+      "subjectIds": ["star:dia-khong", "star:dia-kiep", "state:ham"],
+      "conditions": [
+        "Địa Không and Địa Kiếp are discussed under the source's hãm địa framing.",
+        "Their practical context or 'chỗ dụng' is known."
+      ],
+      "neutralStatement": "The source supplies an explicit contextual exception: it says the pair's interpretation changes with practical setting and cannot by itself establish the chapter's adverse-character conclusion outside the whole-chart context.",
+      "evidenceType": "author-stated use-context exception",
+      "limitations": [
+        "The source's warfare, violence and moral-character examples are not retained.",
+        "State lookup and profile compatibility remain unresolved; this exception is not executable."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New named-pair context exception; it adds concrete scope to the general non-isolation method."
+    },
+    {
+      "candidateId": "candidate:k14b19-th-pha-quan-attributed-branch-variant-review",
+      "disposition": "REVIEW",
+      "reviewReason": "lineage-and-profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.162, Chapter 7, Phá Quân hãm địa",
+      "subjectIds": ["star:po-jun", "state:ham", "relation:source-variant-state-at-branch"],
+      "conditions": [
+        "Phá Quân is under the source's hãm địa framing.",
+        "The stated heavenly-stem group and branch placement match one of the attributed variants."
+      ],
+      "neutralStatement": "The author attributes to Thái Thứ Lang several stem-and-branch variants that soften one stated adverse dimension of hãm-state Phá Quân while not removing every adverse description.",
+      "evidenceType": "source-attributed branch/stem exception",
+      "limitations": [
+        "This is a lineage link to Tân Biên, not independent corroboration; the edition wording and mapping require comparison.",
+        "Stem/branch placement, state lookup and all moral, legal or event conclusions remain unresolved or excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New cross-book attribution candidate; it must be compared with the cited lineage rather than counted as independent evidence."
+    },
+    {
+      "candidateId": "candidate:k14b19-th-crime-morality-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.159-165, Chapter 7",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps named stars, states, palaces or combinations to criminality, deceit, violence, corruption, imprisonment, morality or victim outcomes."
+      ],
+      "neutralStatement": "The reviewed chapter contains deterministic historical criminal, moral, legal and violent predictions.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "These claims pose serious fairness and harm risks and lack an approved calculation profile or safe interpretation policy.",
+        "They must not become risk classification, legal guidance, warnings, scores, personalized readings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 7; only synthetic gating, one context exception and one attributed variant are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b20-th-fire-star-intensity-taxonomy-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "foundational",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.168-171, Chapter 8, B. Cách nóng nảy",
+      "subjectIds": [
+        "concept:wu-xing",
+        "state:ham",
+        "star:dia-khong",
+        "star:dia-kiep",
+        "star:hoa-tinh",
+        "star:linh-tinh",
+        "star:lian-zhen",
+        "star:tai-yang",
+        "star:thien-khoi",
+        "star:thien-viet",
+        "star:thien-ma"
+      ],
+      "conditions": [
+        "The source's own fire-associated star classification is being documented.",
+        "The source distinguishes its heavier and moderate groups and separately notes non-fire stars."
+      ],
+      "neutralStatement": "The source records a two-tier taxonomy of fire-associated stars for its temperament discussion, distinguishes malefic from benefic members, and notes additional non-fire stars it treats similarly.",
+      "evidenceType": "source-specific classification",
+      "limitations": [
+        "Many members are absent from the foundation catalog, and element/state assignments are not validated against the target profile.",
+        "The taxonomy is preserved as provenance only and does not authorize a temperament score or personal conclusion."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New source-specific taxonomy; it is not merged with the engine or treated as a verified star-element catalog."
+    },
+    {
+      "candidateId": "candidate:k14b20-th-contextual-temperament-method-merge",
+      "disposition": "MERGE",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.168-171, Chapter 8, B. Cách nóng nảy, conclusion",
+      "subjectIds": [
+        "concept:wu-xing",
+        "relation:co-located",
+        "relation:opposes",
+        "relation:trines-with",
+        "state:ham"
+      ],
+      "conditions": [
+        "The source's temperament category is being reviewed.",
+        "Star count, state, convergence, co-location/aspect context and external circumstances are considered together."
+      ],
+      "neutralStatement": "The author says the category cannot be reduced to one star or a universal rule because stated intensity depends on state, accumulation, relations and surrounding circumstances.",
+      "evidenceType": "author-described qualitative limitation",
+      "limitations": [
+        "No quantitative weight, active geometry, state resolver or temperament conclusion is admitted.",
+        "Historical behavior, violence and legal outcomes in the surrounding text are excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "MERGE with multi-factor and non-isolation methodology; adds a topic-specific qualitative-rule limitation."
+    },
+    {
+      "candidateId": "candidate:k14b20-th-sensitive-temperament-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.166-173, Chapter 8 opening",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps named stars or groups to jealousy, anger, ego, selfishness, relationship conduct, violence or legal outcomes."
+      ],
+      "neutralStatement": "The reviewed pages contain deterministic historical personality, relationship, violence and legal predictions.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The framing contains gender stereotypes and high-risk character judgments without an approved profile or safe interpretation policy.",
+        "It must not become personality scoring, relationship guidance, violence warnings, personalized readings or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the Chapter 8 opening; the source taxonomy and contextual limitation are retained separately."
     }
   ],
   "unresolvedIssues": [

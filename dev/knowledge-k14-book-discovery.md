@@ -1009,3 +1009,65 @@ separate approved verification task.
   duplicate normalized statement suitable for automatic merge.
 - NOT RUN BY SCOPE: PDF reread, runtime unit tests, typecheck, build and E2E; this
   audit changes documentation only and adds no source claim or production data.
+
+## Targeted expansion — Tổng Hợp pp.150–173
+
+All 24 PDF/printed pages were read and visually checked against the rendered
+source; the legacy-VNI text layer remained navigation-only. Actual section
+boundaries produced five complete batches: 150–152, 153–154, 155–158, 159–165
+and 166–173. Page 165 completes Chapter 7 in its upper portion and opens Chapter
+8 only at the bottom, so it remains with the Chapter 7 batch while Chapter 8
+extraction starts on the first full page, p.166.
+
+| Batch | Pages | ACCEPT | MERGE | REVIEW | REJECT | New specific content (`substantive` + `exception`) |
+| ----- | ----: | -----: | ----: | -----: | -----: | -------------------------------------------------: |
+| 16    |     3 |      0 |     0 |      2 |      1 |                                                  2 |
+| 17    |     2 |      0 |     0 |      2 |      1 |                                                  2 |
+| 18    |     4 |      1 |     0 |      1 |      1 |                                                  2 |
+| 19    |     7 |      1 |     1 |      1 |      1 |                                                  2 |
+| 20    |     8 |      0 |     1 |      1 |      1 |                                                  0 |
+| Total |    24 |      2 |     2 |      7 |      5 |                                                  8 |
+
+The eight specific research candidates cover: a Liêm Trinh–Tham Lang–Hóa Kị
+modifier; non-uniform Tuần/Triệt degree/duration; Thiên Trù eligibility and
+companion variants; named rhetoric-star combinations; Bạch Hổ/Khốc Hư
+branch-state variants; a Địa Không–Địa Kiếp use-context exception; and an
+attributed Phá Quân stem/branch variant. None is profile-compatible or
+production-eligible. Two additional MERGE records preserve whole-chart and
+qualitative-context limits, while one foundational REVIEW records the source's
+fire-star taxonomy without adopting it into the active catalog.
+
+Direct sexuality, consumption/health, occupation/ability, criminal/moral/legal,
+and personality/violence claims were bounded into five REJECT records. No
+candidate was inferred from the foundational meanings alone. The widest
+remaining dependencies are active aspect geometry, missing auxiliary-star
+entities, branch/state lookup, Tuần/Triệt precedence and the lineage link where
+Tổng Hợp explicitly attributes a Phá Quân variant to Thái Thứ Lang.
+
+This slice raises cumulative primary-book reading to **315/719 pages** and the
+two-book candidate total to **100**: 28 ACCEPT_AS_RESEARCH, 16 MERGE, 33 REVIEW
+and 23 REJECT. Of 77 non-rejected records, 23 are specific interpretation or
+exception content, 39 methodology-only, 9 foundational and 6 conflict. Research
+coverage increased for star–star combinations, star–palace/aspect eligibility,
+state/branch variants and context-sensitive exceptions; it did not add reliable
+coverage for a new palace.
+
+Knowledge yield falls sharply in pp.166–173: the safe novelty is one unresolved
+taxonomy plus an already-known contextual caveat, while QA cost is dominated by
+high-risk deterministic personality claims. The evidence therefore supports
+switching next to **Tân Biên pp.225–247**. Tổng Hợp pp.174–220 remains pending
+and may be resumed by chapter only if later coverage analysis shows a higher-value
+gap; continuing it immediately is not recommended from candidate count alone.
+
+### Verification — targeted expansion
+
+- PASS: all 24 rendered pages visually inspected; retained locators checked
+  against source and distributed excluded/no-yield samples recorded per batch.
+- PASS: JSON parse/format, candidate ID uniqueness, required fields, subject
+  references, provenance/locators and exact normalized-statement duplicates.
+- PASS: 719-page ledger has no gap/overlap and reconciles to 48 COMPLETED, 267
+  REVIEW, 393 PENDING and 11 EXCLUDED; 315 pages are substantively read.
+- PASS: PDF SHA-256 remains
+  `82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37`.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime or
+  production-consumed data changed.

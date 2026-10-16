@@ -244,6 +244,13 @@ period precedence là dependencies diện rộng. Profile-compatible và
 production-eligible vẫn bằng 0. Ưu tiên tiếp theo là Tổng Hợp 150–173 rồi
 174–220 theo ranh giới chương, trước các phụ lục Tân Biên 225–247.
 
+HV-K14 targeted expansion (16/10) đã đọc và QA trực quan Tổng Hợp 150–173, nâng
+lũy kế lên 315/719 trang. Năm batch tạo 2 ACCEPT AS RESEARCH, 2 MERGE, 7 REVIEW
+và 5 REJECT; trong đó có 8 candidate substantive/exception mới nhưng không có
+candidate profile-compatible hoặc production-eligible. Yield giảm rõ ở 166–173
+do nội dung dự đoán tính cách nhạy cảm và trùng phương pháp ngữ cảnh, nên ưu tiên
+tiếp theo chuyển sang Tân Biên 225–247; Tổng Hợp 174–220 vẫn PENDING.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
