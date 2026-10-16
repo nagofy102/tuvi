@@ -194,9 +194,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "208-216",
       "section": "Thê Thiếp 14",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Verified section boundary; unread for completed QA in this checkpoint."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-14",
+      "note": "Nine pages read and visually checked. The opening requires Mệnh, Thân, Phúc Đức, Quan Lộc and Nô Bộc context before Thê Thiếp/Phu Quân detail; a branch-sensitive star pair remains profile-unresolved, while direct relationship, gender, sexuality, violence and death predictions are excluded."
     },
     {
       "rangeId": "ledger:tb-217-224",
@@ -627,11 +627,30 @@
       "nextPriorityRationale": "Continue at Thê Thiếp pp.208-216."
     }
   },
+  "batch14": {
+    "newPagesProcessed": 9,
+    "ranges": ["ledger:tb-208-216"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "209, 213, 215",
+        "result": "Visually checked. These pages predominantly contain direct marriage, gender, sexuality, violence, separation or death predictions; none was admitted as reusable personal knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The opening names five contextual domains for the relationship palace and assigns Quan Lộc/Nô Bộc an explicit role when the source discusses later unions.",
+      "mergeValue": "A third palace-specific Thiên Cơ–Thái Âm branch variant supplies comparative provenance without establishing a universal pair rule.",
+      "reviewCauses": "Thân identity, branch placement, state lookup, relation geometry, historical gender framing and modifier precedence remain unresolved.",
+      "noYieldReliability": "All nine pages were visually inspected; three distributed pages dominated by excluded sensitive claims were sampled explicitly.",
+      "topicSaturation": "The deterministic relationship catalog is unsafe and repetitive; only contextual methodology and one branch-sensitive variant are retained.",
+      "nextPriorityRationale": "Continue at Huynh Đệ pp.217-224."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-13",
+    "checkpointId": "k14c-after-batch-14",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "e7bfc9a",
+    "baseCommit": "ef02b71",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -651,6 +670,7 @@
       "ledger:tb-181-189",
       "ledger:tb-190-197",
       "ledger:tb-198-207",
+      "ledger:tb-208-216",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -663,11 +683,11 @@
       "ledger:th-108-128",
       "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:tb-208-216", "ledger:tb-217-224"],
-    "batch13CandidateIds": [
-      "candidate:k14b13-tb-tu-tuc-contextual-method",
-      "candidate:k14b13-tb-tu-tuc-void-main-star-review",
-      "candidate:k14b13-tb-sensitive-child-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-217-224"],
+    "batch14CandidateIds": [
+      "candidate:k14b14-tb-the-thiep-cross-palace-method",
+      "candidate:k14b14-tb-thien-co-thai-am-branch-variant-review",
+      "candidate:k14b14-tb-sensitive-relationship-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -676,7 +696,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Continue autonomously with Thê Thiếp at PDF/printed pp.208-216; stop before Huynh Đệ p.217 until QA is complete.",
+    "nextAction": "Continue autonomously with Huynh Đệ at PDF/printed pp.217-224; stop at the end of the approved 181-224 range after QA is complete.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -2102,6 +2122,72 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only contextual methodology and unresolved opposition structure are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b14-tb-the-thiep-cross-palace-method",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.208, Thê Thiếp (Phu Quân) opening",
+      "subjectIds": [
+        "palace:phu-the",
+        "palace:menh",
+        "palace:phuc-duc",
+        "palace:quan-loc",
+        "palace:no-boc"
+      ],
+      "conditions": [
+        "The source is preparing to interpret stars in Thê Thiếp/Phu Quân.",
+        "Mệnh, Thân, Phúc Đức, Quan Lộc and Nô Bộc are reviewed and coordinated first."
+      ],
+      "neutralStatement": "The source requires the relationship palace to be interpreted with Mệnh, Thân, Phúc Đức, Quan Lộc and Nô Bộc context, and assigns Quan Lộc and Nô Bộc additional contextual use for later unions.",
+      "evidenceType": "source-described cross-palace methodology",
+      "limitations": [
+        "Thân identity, active relation geometry, modifier precedence and the historical later-union framing are unresolved.",
+        "No marriage, compatibility, separation, gender or life-event conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New relationship-palace dependency structure; it must not be generalized beyond the source's stated context."
+    },
+    {
+      "candidateId": "candidate:k14b14-tb-thien-co-thai-am-branch-variant-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.210-211, Thê Thiếp 14.6 and 14.8",
+      "subjectIds": ["palace:phu-the", "star:tian-ji", "star:tai-yin", "relation:co-located"],
+      "conditions": [
+        "Thiên Cơ and Thái Âm are co-located in the relationship palace.",
+        "The source distinguishes the pair at Thân from the pair at Dần."
+      ],
+      "neutralStatement": "The source gives contrasting ease and difficulty variants for the same Thiên Cơ–Thái Âm pair according to its stated branch placement in the relationship palace.",
+      "evidenceType": "source-described branch-sensitive star-pair variant",
+      "limitations": [
+        "Branch placement, star state, calculation profile and activation conditions are unresolved.",
+        "Historical gender roles and direct relationship outcomes are not admitted as personal claims or executable rules."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Related to the Batch 10 and 12 pair variants but adds a distinct palace context; it must not be merged into a universal pair rule."
+    },
+    {
+      "candidateId": "candidate:k14b14-tb-sensitive-relationship-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.208-216, Thê Thiếp (Phu Quân) 14.1-14.54",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps configurations to marriage timing or count, partner character or status, gender roles, sexuality, infidelity, separation, violence or death outcomes."
+      ],
+      "neutralStatement": "The reviewed relationship section is dominated by direct historical predictions about partners, marriage, sexuality, violence and family outcomes.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims reflect historical gender assumptions and lack an approved calculation profile and safe interpretation policy.",
+        "They must not become relationship guidance, abuse or death warnings, scores, fixtures, personalized claims or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only contextual methodology and one unresolved branch variant are retained separately."
     }
   ],
   "unresolvedIssues": [

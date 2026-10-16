@@ -221,6 +221,13 @@ REJECT cho lời luận sinh sản, con cái, giới, sức khỏe và hành vi 
 tiếp tục là Thê Thiếp 208–216; không thay runtime, calculation, UI, profile hoặc
 production.
 
+HV-K14-C batch 14 (16/10) hoàn tất Thê Thiếp/Phu Quân 208–216, nâng lũy kế hai
+sách chính lên 283/719 trang. Batch giữ 1 ACCEPT AS RESEARCH cho dependency
+Mệnh–Thân–Phúc Đức–Quan Lộc–Nô Bộc, 1 REVIEW cho dị bản Thiên Cơ–Thái Âm
+theo chi và 1 REJECT cho lời luận hôn nhân, giới, tình dục, bạo lực và tử vong.
+Điểm tiếp tục là Huynh Đệ 217–224; không thay runtime, calculation, UI, profile
+hoặc production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

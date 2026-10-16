@@ -876,3 +876,23 @@ bounded `REJECT`. Next boundary: Thê Thiếp 208–216.
 - PASS: all ten pages visually inspected; no-yield samples p.200, p.203 and p.206.
 - PASS: targeted Prettier and `git diff --check`; source registry unchanged.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
+
+## HV-K14-C batch 14 — Thê Thiếp (Phu Quân)
+
+Tân Biên pp.208–216 were read and all nine rendered pages visually inspected.
+One `ACCEPT_AS_RESEARCH` methodology record preserves the source's requirement
+to coordinate the relationship palace with Mệnh, Thân, Phúc Đức, Quan Lộc and
+Nô Bộc. One substantive `REVIEW` records the branch-sensitive Thiên Cơ–Thái Âm
+variants at Thân and Dần in this palace context.
+
+Thân identity, branch placement, state lookup, active geometry, historical
+gender framing and modifier precedence remain unresolved. Direct marriage,
+gender, sexuality, infidelity, violence, separation and death predictions form
+one bounded `REJECT`. Next boundary: Huynh Đệ 217–224.
+
+### Verification — HV-K14-C batch 14
+
+- PASS: JSON, IDs/references, candidate structure, PDF hash and 719-page ledger.
+- PASS: all nine pages visually inspected; no-yield samples p.209, p.213 and p.215.
+- PASS: targeted Prettier and `git diff --check`; source registry unchanged.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
