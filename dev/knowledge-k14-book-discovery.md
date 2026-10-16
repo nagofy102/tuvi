@@ -835,3 +835,24 @@ geometry and precedence remain unresolved. Next boundary: Tài Bạch 190–197.
 - PASS: all nine pages visually inspected; no-yield samples p.183, p.186 and p.188.
 - PASS: Prettier and `git diff --check`; source registry unchanged.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
+
+## HV-K14-C batch 12 — Tài Bạch
+
+Tân Biên pp.190–197 were read and all eight rendered pages visually inspected.
+One `ACCEPT_AS_RESEARCH` methodology record preserves the source's instruction
+to review Mệnh, Thân, Phúc Đức, Quan Lộc and Thiên Di before interpreting Tài
+Bạch. A substantive `REVIEW` records the branch-sensitive Thiên Cơ–Thái Âm
+variants at Thân and Dần; another `REVIEW` preserves the p.197 void-main-star
+opposition method and its named Tuần/Triệt and bright Nhật/Nguyệt exceptions.
+
+Branch placement, state lookup, active geometry, Vô Chính diệu eligibility and
+exception precedence remain unresolved. Direct wealth, poverty, gambling,
+conduct, gender, legal and death predictions form one bounded `REJECT`. Next
+boundary: Tử Tức 198–207.
+
+### Verification — HV-K14-C batch 12
+
+- PASS: JSON, IDs/references, candidate structure, PDF hash and 719-page ledger.
+- PASS: all eight pages visually inspected; no-yield samples p.193, p.195 and p.196.
+- PASS: targeted Prettier and `git diff --check`; source registry unchanged.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.

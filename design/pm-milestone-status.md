@@ -207,6 +207,13 @@ lên 256/719 trang. Batch giữ 1 ACCEPT AS RESEARCH cho dependency Mệnh–Th�
 cùng 1 REJECT cho toàn bộ dự đoán y tế, tai nạn và tử vong. Điểm tiếp tục là
 Tài Bạch 190–197; không thay runtime, calculation, UI, profile hoặc production.
 
+HV-K14-C batch 12 (16/10) hoàn tất Tài Bạch 190–197, nâng lũy kế hai sách chính
+lên 264/719 trang. Batch giữ 1 ACCEPT AS RESEARCH cho dependency Mệnh–Thân–Phúc
+Đức–Quan Lộc–Thiên Di, 2 REVIEW cho dị bản Thiên Cơ–Thái Âm theo chi và Vô Chính
+diệu/xung chiếu có ngoại lệ, cùng 1 REJECT cho lời luận tài chính, hành vi và sự
+kiện trực tiếp. Điểm tiếp tục là Tử Tức 198–207; không thay runtime, calculation,
+UI, profile hoặc production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

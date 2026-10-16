@@ -176,9 +176,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "190-197",
       "section": "Tài Bạch 12.1-12.56",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Verified section boundary; unread for completed QA in this checkpoint."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-12",
+      "note": "Eight pages read and visually checked. The section requires Mệnh, Thân, Phúc Đức, Quan Lộc and Thiên Di context before Tài Bạch detail; branch-sensitive and void-main-star variants remain profile-unresolved, while direct wealth and conduct predictions are excluded."
     },
     {
       "rangeId": "ledger:tb-198-207",
@@ -589,11 +589,30 @@
       "nextPriorityRationale": "Continue at Tài Bạch pp.190-197."
     }
   },
+  "batch12": {
+    "newPagesProcessed": 8,
+    "ranges": ["ledger:tb-190-197"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "193, 195, 196",
+        "result": "Visually checked. These pages predominantly map star configurations to direct wealth, poverty, gambling, conduct, gender or legal outcomes; none was admitted as reusable personal knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The opening names five contextual domains for Tài Bạch, and the section provides a branch-sensitive same-pair variant plus a palace-specific void-main-star exception.",
+      "mergeValue": "The cross-palace instruction extends existing multi-factor methodology with explicit Quan Lộc and Thiên Di dependencies.",
+      "reviewCauses": "Thân identity, branch placement, state lookup, active opposition/aspect geometry, void-main-star eligibility and Tuần/Triệt precedence remain profile-unresolved.",
+      "noYieldReliability": "All eight pages were visually inspected; three distributed pages dominated by excluded deterministic outcomes were sampled explicitly.",
+      "topicSaturation": "The direct wealth and conduct catalog is not reusable; contextual gating, branch variation and exception structure remain the useful yield.",
+      "nextPriorityRationale": "Continue at Tử Tức pp.198-207."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-11",
+    "checkpointId": "k14c-after-batch-12",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "9b821b0",
+    "baseCommit": "f8de051",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -611,6 +630,7 @@
       "ledger:tb-168-173",
       "ledger:tb-174-180",
       "ledger:tb-181-189",
+      "ledger:tb-190-197",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -623,11 +643,12 @@
       "ledger:th-108-128",
       "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:tb-190-197", "ledger:tb-198-207"],
-    "batch11CandidateIds": [
-      "candidate:k14b11-tb-tat-ach-cross-palace-method",
-      "candidate:k14b11-tb-rescue-loss-exception-review",
-      "candidate:k14b11-tb-sensitive-health-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-198-207", "ledger:tb-208-216"],
+    "batch12CandidateIds": [
+      "candidate:k14b12-tb-tai-bach-cross-palace-method",
+      "candidate:k14b12-tb-thien-co-thai-am-branch-variant-review",
+      "candidate:k14b12-tb-tai-bach-void-main-star-review",
+      "candidate:k14b12-tb-sensitive-wealth-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -636,7 +657,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Continue autonomously with Tài Bạch at PDF/printed pp.190-197; stop before Tử Tức p.198 until QA is complete.",
+    "nextAction": "Continue autonomously with Tử Tức at PDF/printed pp.198-207; stop before Thê Thiếp p.208 until QA is complete.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1915,6 +1936,93 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for the entire section; only the cross-palace method and one unresolved mitigation exception are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b12-tb-tai-bach-cross-palace-method",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.190, Tài Bạch opening",
+      "subjectIds": [
+        "palace:tai-bach",
+        "palace:menh",
+        "palace:phuc-duc",
+        "palace:quan-loc",
+        "palace:thien-di"
+      ],
+      "conditions": [
+        "The source is preparing to interpret stars in Tài Bạch.",
+        "Mệnh, Thân, Phúc Đức, Quan Lộc and Thiên Di are reviewed before the detailed entries."
+      ],
+      "neutralStatement": "The source treats Tài Bạch interpretation as conditional on Mệnh, Thân, Phúc Đức, Quan Lộc and Thiên Di context, which may modify the apparent palace signal.",
+      "evidenceType": "source-described cross-palace methodology",
+      "limitations": [
+        "Thân identity, active relation geometry and precedence among the named contexts are unresolved.",
+        "No wealth, poverty, conduct or event conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New Tài Bạch-specific dependency structure; it extends the general multi-factor method with explicit Quan Lộc and Thiên Di context."
+    },
+    {
+      "candidateId": "candidate:k14b12-tb-thien-co-thai-am-branch-variant-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.191-192, Tài Bạch 12.6 and 12.8",
+      "subjectIds": ["palace:tai-bach", "star:tian-ji", "star:tai-yin", "relation:co-located"],
+      "conditions": [
+        "Thiên Cơ and Thái Âm are co-located in Tài Bạch.",
+        "The source distinguishes the pair at Thân from the pair at Dần."
+      ],
+      "neutralStatement": "The source gives contrasting continuity and difficulty variants for the same Thiên Cơ–Thái Âm pair according to its stated branch placement in Tài Bạch.",
+      "evidenceType": "source-described branch-sensitive star-pair variant",
+      "limitations": [
+        "Branch placement, star state, calculation profile and activation conditions are unresolved.",
+        "The historical financial outcomes are not admitted as personal claims or executable rules."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Related to the Batch 10 Thiên Di pair, but this is a distinct palace context and must not be merged into a universal pair rule."
+    },
+    {
+      "candidateId": "candidate:k14b12-tb-tai-bach-void-main-star-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.197, Tài Bạch 12.56",
+      "subjectIds": ["palace:tai-bach", "relation:opposes", "relation:joined-aspect"],
+      "conditions": [
+        "The source describes Tài Bạch as having no major star.",
+        "An opposing major star is used as contextual input, with separately named Tuần/Triệt and bright Nhật/Nguyệt cases."
+      ],
+      "neutralStatement": "For the source's void-main-star Tài Bạch case, an opposing major star is consulted and the source names additional Tuần/Triệt and bright Nhật/Nguyệt exceptions.",
+      "evidenceType": "source-described opposition method with named exceptions",
+      "limitations": [
+        "Void-main-star eligibility, active opposition/aspect geometry, star brightness and Tuần/Triệt precedence are unresolved.",
+        "No financial conclusion is admitted and the candidate is not executable."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Palace-specific corroborating form of the source's opposition method; retained as REVIEW because its exceptions and geometry are unresolved."
+    },
+    {
+      "candidateId": "candidate:k14b12-tb-sensitive-wealth-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.190-197, Tài Bạch 12.1-12.56",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps configurations to wealth, poverty, inheritance, gambling, conduct, crime, gender, lifespan or death outcomes."
+      ],
+      "neutralStatement": "The reviewed Tài Bạch section contains many direct historical financial, conduct, gender, legal and life-event predictions.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack an approved calculation profile and a safe interpretation policy.",
+        "They must not become financial guidance, warnings, scores, fixtures, personalized claims or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only the contextual method and unresolved variants are retained separately."
     }
   ],
   "unresolvedIssues": [
