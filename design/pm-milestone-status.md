@@ -201,6 +201,12 @@ Cơ–Thái Âm theo Dần/Thân, 1 REVIEW cho Vô Chính diệu/xung chiếu v�
 cho dự đoán đi lại, tai nạn, tử vong, giới/tình dục. Điểm tiếp tục là Tật Ách
 181–189; không thay runtime, calculation, UI, profile hoặc production status.
 
+HV-K14-C batch 11 (16/10) hoàn tất Tật Ách 181–189, nâng lũy kế hai sách chính
+lên 256/719 trang. Batch giữ 1 ACCEPT AS RESEARCH cho dependency Mệnh–Thân–Phúc
+Đức và cơ chế cứu giải/tác họa, 1 REVIEW cho ngoại lệ mất/đảo vai trò cứu giải,
+cùng 1 REJECT cho toàn bộ dự đoán y tế, tai nạn và tử vong. Điểm tiếp tục là
+Tài Bạch 190–197; không thay runtime, calculation, UI, profile hoặc production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

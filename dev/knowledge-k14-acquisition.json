@@ -167,9 +167,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "181-189",
       "section": "Tật Ách 11.1-11.2",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Verified section boundary; unread for completed QA in this checkpoint."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-11",
+      "note": "Nine pages read and visually checked. The section requires Mệnh, Thân and Phúc Đức context plus comparison of rescue and harm groups before Tật Ách detail; all direct health, disability, accident, legal and death predictions are excluded."
     },
     {
       "rangeId": "ledger:tb-190-197",
@@ -570,11 +570,30 @@
       "nextPriorityRationale": "Continue at Tật Ách pp.181-189, with heightened exclusion of health and death predictions."
     }
   },
+  "batch11": {
+    "newPagesProcessed": 9,
+    "ranges": ["ledger:tb-181-189"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "183, 186, 188",
+        "result": "Visually checked. These pages contain direct disease, disability, accident, legal, reproductive or death predictions; none was admitted as reusable personal knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The opening provides an explicit three-palace modifier method and a source-stated mitigation-loss exception.",
+      "mergeValue": "The rescue-versus-harm comparison adds a concrete ordering constraint to existing multi-factor methodology.",
+      "reviewCauses": "Thân identity, state lookup, aspect membership, star-group membership and precedence remain profile-unresolved.",
+      "noYieldReliability": "All nine pages were visually inspected; three distributed pages dominated by excluded medical and death claims were sampled explicitly.",
+      "topicSaturation": "The disease catalog is unsafe and non-reusable; only its cross-palace gating and mitigation structure is retained.",
+      "nextPriorityRationale": "Continue at Tài Bạch pp.190-197."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-10",
+    "checkpointId": "k14c-after-batch-11",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "91766fc",
+    "baseCommit": "9b821b0",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -591,6 +610,7 @@
       "ledger:tb-161-167",
       "ledger:tb-168-173",
       "ledger:tb-174-180",
+      "ledger:tb-181-189",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -603,12 +623,11 @@
       "ledger:th-108-128",
       "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:tb-181-189", "ledger:tb-190-197"],
-    "batch10CandidateIds": [
-      "candidate:k14b10-tb-thien-di-menh-opposition-method",
-      "candidate:k14b10-tb-thien-co-thai-am-branch-variant-review",
-      "candidate:k14b10-tb-thien-di-void-main-star-review",
-      "candidate:k14b10-tb-sensitive-travel-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-190-197", "ledger:tb-198-207"],
+    "batch11CandidateIds": [
+      "candidate:k14b11-tb-tat-ach-cross-palace-method",
+      "candidate:k14b11-tb-rescue-loss-exception-review",
+      "candidate:k14b11-tb-sensitive-health-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -617,7 +636,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Continue autonomously with Tật Ách at PDF/printed pp.181-189; apply strict health/death-claim exclusion and stop before Tài Bạch p.190 until QA is complete.",
+    "nextAction": "Continue autonomously with Tài Bạch at PDF/printed pp.190-197; stop before Tử Tức p.198 until QA is complete.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -1836,6 +1855,66 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for the section; its cross-palace method and unresolved variants are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b11-tb-tat-ach-cross-palace-method",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.181, Tật Ách opening",
+      "subjectIds": ["palace:tat-ach", "palace:menh", "palace:phuc-duc", "relation:joined-aspect"],
+      "conditions": [
+        "The source is preparing to interpret stars in Tật Ách.",
+        "Mệnh, Thân and Phúc Đức plus stated rescue and harm groups are reviewed first."
+      ],
+      "neutralStatement": "The source explicitly requires Tật Ách to be evaluated with Mệnh, Thân and Phúc Đức context, then compares stated rescue and harm influences before detailed entries.",
+      "evidenceType": "source-described cross-palace and modifier methodology",
+      "limitations": [
+        "Thân identity, active aspect geometry, state lookup, group membership and precedence are unresolved.",
+        "No disease, disability, accident, lifespan or death conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New Tật Ách-specific dependency structure; related to general multi-factor methodology but adds three named contextual domains and mitigation ordering."
+    },
+    {
+      "candidateId": "candidate:k14b11-tb-rescue-loss-exception-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.181, Tật Ách 11.1.4 Lộc Tồn, Hóa Lộc, Bác Sĩ",
+      "subjectIds": ["palace:tat-ach", "relation:co-located", "concept:tu-hoa"],
+      "conditions": [
+        "The stated rescue group Lộc Tồn, Hóa Lộc and Bác Sĩ is present in the Tật Ách context.",
+        "Many malefic stars are stated to intrude on the same context."
+      ],
+      "neutralStatement": "The source states that this named rescue group loses its mitigating role, and may become harmful, when many malefic stars intrude.",
+      "evidenceType": "source-described mitigation-loss exception",
+      "limitations": [
+        "Star identity, group membership, state, intrusion relation and precedence are not admitted for the target profile.",
+        "The source's medical and danger conclusions remain excluded and the exception is not executable."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New bounded mitigation-loss exception; it does not establish a general rule for all rescue stars or palaces."
+    },
+    {
+      "candidateId": "candidate:k14b11-tb-sensitive-health-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.181-189, Tật Ách 11.1-11.2",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps configurations to disease, disability, reproductive, accident, legal, violence, lifespan or death outcomes."
+      ],
+      "neutralStatement": "The reviewed Tật Ách section is dominated by direct historical medical, disability, accident, legal and death predictions.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack clinical validity, an approved calculation profile and a safe interpretation policy.",
+        "They must not become health advice, warnings, scores, fixtures, personalized claims or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for the entire section; only the cross-palace method and one unresolved mitigation exception are retained separately."
     }
   ],
   "unresolvedIssues": [

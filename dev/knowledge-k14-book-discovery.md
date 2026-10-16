@@ -816,3 +816,22 @@ boundary is Tật Ách pp.181–189, which requires strict health/death exclusio
   p.178 and p.179 were checked directly.
 - PASS: Prettier and `git diff --check`; source registry was unchanged.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
+
+## HV-K14-C batch 11 — Tật Ách
+
+Tân Biên pp.181–189 were read and all nine rendered pages visually inspected.
+One `ACCEPT_AS_RESEARCH` methodology record preserves the source's requirement
+to review Mệnh, Thân and Phúc Đức plus rescue/harm influences before Tật Ách
+detail. One `REVIEW` exception records that the named Lộc Tồn–Hóa Lộc–Bác Sĩ
+mitigation group loses, and may reverse, its role under many stated malefics.
+
+The complete medical, disability, accident, legal, reproductive and death catalog
+is one bounded `REJECT`. Thân identity, group membership, state lookup, aspect
+geometry and precedence remain unresolved. Next boundary: Tài Bạch 190–197.
+
+### Verification — HV-K14-C batch 11
+
+- PASS: JSON, IDs/references, candidate structure, PDF hash and 719-page ledger.
+- PASS: all nine pages visually inspected; no-yield samples p.183, p.186 and p.188.
+- PASS: Prettier and `git diff --check`; source registry unchanged.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
