@@ -185,9 +185,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "198-207",
       "section": "Tử Tức 13.1-13.3",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Verified section boundary; unread for completed QA in this checkpoint."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-13",
+      "note": "Ten pages read and visually checked. The opening makes Tử Tức relative to Phúc Đức, Mệnh and Thân and describes contextual reversal; the void-main-star instruction remains profile-unresolved, while direct fertility, child-count, gender, health and conduct predictions are excluded."
     },
     {
       "rangeId": "ledger:tb-208-216",
@@ -608,11 +608,30 @@
       "nextPriorityRationale": "Continue at Tử Tức pp.198-207."
     }
   },
+  "batch13": {
+    "newPagesProcessed": 10,
+    "ranges": ["ledger:tb-198-207"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "200, 203, 206",
+        "result": "Visually checked. These pages contain direct child-count, fertility, disability, conduct, gender or supernatural predictions; none was admitted as reusable personal knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The opening explicitly labels its detailed judgments relative and describes how Phúc Đức, Mệnh and Thân context can offset the apparent Tử Tức signal.",
+      "mergeValue": "The palace-specific void-main-star instruction adds provenance for the source's repeated opposition method.",
+      "reviewCauses": "Thân identity, active opposition/aspect geometry, void-main-star eligibility, state lookup and modifier precedence remain profile-unresolved.",
+      "noYieldReliability": "All ten pages were visually inspected; three distributed pages dominated by excluded sensitive claims were sampled explicitly.",
+      "topicSaturation": "The child-count and fertility catalog is unsafe and non-reusable; only contextual methodology and unresolved geometry are retained.",
+      "nextPriorityRationale": "Continue at Thê Thiếp pp.208-216."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-12",
+    "checkpointId": "k14c-after-batch-13",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "f8de051",
+    "baseCommit": "e7bfc9a",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -631,6 +650,7 @@
       "ledger:tb-174-180",
       "ledger:tb-181-189",
       "ledger:tb-190-197",
+      "ledger:tb-198-207",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -643,12 +663,11 @@
       "ledger:th-108-128",
       "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:tb-198-207", "ledger:tb-208-216"],
-    "batch12CandidateIds": [
-      "candidate:k14b12-tb-tai-bach-cross-palace-method",
-      "candidate:k14b12-tb-thien-co-thai-am-branch-variant-review",
-      "candidate:k14b12-tb-tai-bach-void-main-star-review",
-      "candidate:k14b12-tb-sensitive-wealth-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-208-216", "ledger:tb-217-224"],
+    "batch13CandidateIds": [
+      "candidate:k14b13-tb-tu-tuc-contextual-method",
+      "candidate:k14b13-tb-tu-tuc-void-main-star-review",
+      "candidate:k14b13-tb-sensitive-child-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -657,7 +676,7 @@
       "k14-missing-auxiliary-entities",
       "k14-active-geometry"
     ],
-    "nextAction": "Continue autonomously with Tử Tức at PDF/printed pp.198-207; stop before Thê Thiếp p.208 until QA is complete.",
+    "nextAction": "Continue autonomously with Thê Thiếp at PDF/printed pp.208-216; stop before Huynh Đệ p.217 until QA is complete.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -2023,6 +2042,66 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only the contextual method and unresolved variants are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b13-tb-tu-tuc-contextual-method",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.198, Tử Tức opening before 13.1",
+      "subjectIds": ["palace:tu-tuc", "palace:phuc-duc", "palace:menh", "relation:joined-aspect"],
+      "conditions": [
+        "The source is preparing to interpret stars in Tử Tức.",
+        "Phúc Đức, Mệnh and Thân plus stated favorable and adverse influences are reviewed first."
+      ],
+      "neutralStatement": "The source labels the detailed Tử Tức judgments relative and states that Phúc Đức, Mệnh and Thân context may offset the apparent favorable or adverse palace signal.",
+      "evidenceType": "source-described cross-palace modifier methodology",
+      "limitations": [
+        "Thân identity, active aspect geometry, state lookup and modifier precedence are unresolved.",
+        "No fertility, child-count, gender, health, conduct or life-event conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New Tử Tức-specific contextual override statement; related to general multi-factor methodology without creating a universal override rule."
+    },
+    {
+      "candidateId": "candidate:k14b13-tb-tu-tuc-void-main-star-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.207, Tử Tức 13.3.68 Vô Chính diệu",
+      "subjectIds": ["palace:tu-tuc", "relation:opposes"],
+      "conditions": [
+        "The source describes Tử Tức as having no major star.",
+        "A major star in opposition is available as contextual input."
+      ],
+      "neutralStatement": "For the source's void-main-star Tử Tức case, the opposing major star is consulted as though it occupied the palace.",
+      "evidenceType": "source-described opposition method",
+      "limitations": [
+        "Void-main-star eligibility, active opposition geometry, star state and profile compatibility are unresolved.",
+        "No child-related conclusion is admitted and the candidate is not executable."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Palace-specific corroborating form of the source's repeated opposition method; not promoted or merged into a universal executable rule."
+    },
+    {
+      "candidateId": "candidate:k14b13-tb-sensitive-child-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.198-207, Tử Tức 13.1-13.3.68",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps configurations to fertility, child count or sex, disability, illness, miscarriage, conduct, sexuality, family status or supernatural outcomes."
+      ],
+      "neutralStatement": "The reviewed Tử Tức section is dominated by direct historical predictions about reproduction, children and family outcomes.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims lack medical validity, an approved calculation profile and a safe interpretation policy.",
+        "They must not become reproductive guidance, health claims, warnings, scores, fixtures, personalized claims or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only contextual methodology and unresolved opposition structure are retained separately."
     }
   ],
   "unresolvedIssues": [

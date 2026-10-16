@@ -214,6 +214,13 @@ diệu/xung chiếu có ngoại lệ, cùng 1 REJECT cho lời luận tài chín
 kiện trực tiếp. Điểm tiếp tục là Tử Tức 198–207; không thay runtime, calculation,
 UI, profile hoặc production.
 
+HV-K14-C batch 13 (16/10) hoàn tất Tử Tức 198–207, nâng lũy kế hai sách chính
+lên 274/719 trang. Batch giữ 1 ACCEPT AS RESEARCH cho phương pháp điều chỉnh
+Tử Tức theo Phúc Đức–Mệnh–Thân, 1 REVIEW cho Vô Chính diệu/xung chiếu và 1
+REJECT cho lời luận sinh sản, con cái, giới, sức khỏe và hành vi trực tiếp. Điểm
+tiếp tục là Thê Thiếp 208–216; không thay runtime, calculation, UI, profile hoặc
+production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

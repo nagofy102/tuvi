@@ -856,3 +856,23 @@ boundary: Tử Tức 198–207.
 - PASS: all eight pages visually inspected; no-yield samples p.193, p.195 and p.196.
 - PASS: targeted Prettier and `git diff --check`; source registry unchanged.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
+
+## HV-K14-C batch 13 — Tử Tức
+
+Tân Biên pp.198–207 were read and all ten rendered pages visually inspected.
+One `ACCEPT_AS_RESEARCH` methodology record preserves the opening's explicit
+warning that its detailed judgments are relative and may be modified by Phúc
+Đức, Mệnh and Thân context. One `REVIEW` preserves the p.207 void-main-star
+instruction to consult the opposing major star.
+
+Thân identity, state lookup, active geometry, Vô Chính diệu eligibility and
+modifier precedence remain unresolved. Direct fertility, child-count, gender,
+health, disability, conduct, sexuality and supernatural predictions form one
+bounded `REJECT`. Next boundary: Thê Thiếp 208–216.
+
+### Verification — HV-K14-C batch 13
+
+- PASS: JSON, IDs/references, candidate structure, PDF hash and 719-page ledger.
+- PASS: all ten pages visually inspected; no-yield samples p.200, p.203 and p.206.
+- PASS: targeted Prettier and `git diff --check`; source registry unchanged.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
