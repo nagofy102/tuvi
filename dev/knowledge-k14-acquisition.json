@@ -203,9 +203,9 @@
       "bookId": "book-k14-tan-bien",
       "pdfPages": "217-224",
       "section": "Huynh Đệ 15",
-      "status": "PENDING",
-      "checkpoint": null,
-      "note": "Verified section boundary; unread for completed QA in this checkpoint."
+      "status": "REVIEW",
+      "checkpoint": "checkpoint-3-batch-15",
+      "note": "Eight pages read and visually checked. The opening explicitly requires Phúc Đức context for Huynh Đệ, but its next example says Tử Tức and is retained as a textual inconsistency rather than silently corrected. The void-main-star instruction remains profile-unresolved; direct sibling-count, gender, disability, conduct, sexuality and death predictions are excluded."
     },
     {
       "rangeId": "ledger:tb-225-247",
@@ -646,11 +646,30 @@
       "nextPriorityRationale": "Continue at Huynh Đệ pp.217-224."
     }
   },
+  "batch15": {
+    "newPagesProcessed": 8,
+    "ranges": ["ledger:tb-217-224"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tan-bien",
+        "pdfPages": "218, 221, 223",
+        "result": "Visually checked. These pages contain direct sibling-count, disability, poverty, conduct, sexuality, family conflict or death predictions; none was admitted as reusable personal knowledge."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "The opening explicitly names Phúc Đức as a required context for Huynh Đệ and labels the detailed judgments relative.",
+      "mergeValue": "The p.224 void-main-star instruction adds palace-specific provenance for the source's repeated opposition method.",
+      "reviewCauses": "The p.217 example unexpectedly names Tử Tức, while active opposition geometry, void-main-star eligibility, state lookup and modifier precedence remain unresolved.",
+      "noYieldReliability": "All eight pages were visually inspected; three distributed pages dominated by excluded sensitive claims were sampled explicitly.",
+      "topicSaturation": "The sibling-count and conduct catalog is unsafe and repetitive; only contextual methodology, the textual inconsistency and unresolved geometry are retained.",
+      "nextPriorityRationale": "The approved 181-224 range is complete; resume planning must use the remaining ledger and current breadth-first priorities."
+    }
+  },
   "resumeCheckpoint": {
-    "checkpointId": "k14c-after-batch-14",
+    "checkpointId": "k14c-after-batch-15",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "ef02b71",
+    "baseCommit": "23bdce9",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -671,6 +690,7 @@
       "ledger:tb-190-197",
       "ledger:tb-198-207",
       "ledger:tb-208-216",
+      "ledger:tb-217-224",
       "ledger:th-023-032",
       "ledger:th-061-068",
       "ledger:th-069-070",
@@ -683,20 +703,22 @@
       "ledger:th-108-128",
       "ledger:th-129-149"
     ],
-    "nextPendingPriority": ["ledger:tb-217-224"],
-    "batch14CandidateIds": [
-      "candidate:k14b14-tb-the-thiep-cross-palace-method",
-      "candidate:k14b14-tb-thien-co-thai-am-branch-variant-review",
-      "candidate:k14b14-tb-sensitive-relationship-outcomes-reject"
+    "nextPendingPriority": ["ledger:tb-225-247", "ledger:tb-248-271"],
+    "batch15CandidateIds": [
+      "candidate:k14b15-tb-huynh-de-phuc-duc-method",
+      "candidate:k14b15-tb-palace-label-inconsistency-review",
+      "candidate:k14b15-tb-huynh-de-void-main-star-review",
+      "candidate:k14b15-tb-sensitive-sibling-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
       "k14-vni-partial-conversion",
       "k14-lineage-between-books",
       "k14-missing-auxiliary-entities",
-      "k14-active-geometry"
+      "k14-active-geometry",
+      "k14-tb217-palace-label-inconsistency"
     ],
-    "nextAction": "Continue autonomously with Huynh Đệ at PDF/printed pp.217-224; stop at the end of the approved 181-224 range after QA is complete.",
+    "nextAction": "The approved Tân Biên pp.181-224 range is complete. If research resumes under the broader autonomous scope, verify the next section boundary at p.225 against the ledger before opening another batch.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -2188,6 +2210,92 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only contextual methodology and one unresolved branch variant are retained separately."
+    },
+    {
+      "candidateId": "candidate:k14b15-tb-huynh-de-phuc-duc-method",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.217, Huynh Đệ opening, first and third paragraphs",
+      "subjectIds": ["palace:huynh-de", "palace:phuc-duc"],
+      "conditions": [
+        "The source is preparing to interpret stars in Huynh Đệ.",
+        "Phúc Đức is reviewed before the detailed entries."
+      ],
+      "neutralStatement": "The source explicitly requires Phúc Đức context before interpreting Huynh Đệ and labels the detailed judgments relatively accurate rather than absolute.",
+      "evidenceType": "source-described cross-palace methodology",
+      "limitations": [
+        "The following source paragraph contains a separate unresolved Tử Tức label and is not silently normalized into this statement.",
+        "Active relations, state lookup and modifier precedence remain unresolved; no sibling outcome is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New Huynh Đệ-specific dependency statement; related to general multi-factor methodology without resolving the adjacent label inconsistency."
+    },
+    {
+      "candidateId": "candidate:k14b15-tb-palace-label-inconsistency-review",
+      "disposition": "REVIEW",
+      "reviewReason": "source-text-ambiguous",
+      "knowledgeType": "conflict",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.217, Huynh Đệ opening, second paragraph",
+      "subjectIds": [
+        "palace:huynh-de",
+        "palace:tu-tuc",
+        "palace:phuc-duc",
+        "relation:joined-aspect"
+      ],
+      "conditions": [
+        "The passage appears under the Huynh Đệ heading.",
+        "Its example explicitly names Tử Tức and Phúc Đức while discussing sibling-count and family separation outcomes."
+      ],
+      "neutralStatement": "The source paragraph under Huynh Đệ explicitly names Tử Tức in its contextual example; the intended subject cannot be corrected from context alone.",
+      "evidenceType": "source textual inconsistency",
+      "limitations": [
+        "It is unresolved whether this is a typographical error, a cross-palace dependency or an edition artifact.",
+        "No relation or outcome may be activated until another edition or authoritative correction is checked."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New source-level conflict; retained separately rather than merging it into the accepted Phúc Đức methodology."
+    },
+    {
+      "candidateId": "candidate:k14b15-tb-huynh-de-void-main-star-review",
+      "disposition": "REVIEW",
+      "reviewReason": "profile-unresolved",
+      "knowledgeType": "methodology",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed p.224, Huynh Đệ 15.2.47 Vô Chính diệu",
+      "subjectIds": ["palace:huynh-de", "relation:opposes"],
+      "conditions": [
+        "The source describes Huynh Đệ as having no major star.",
+        "A major star in opposition is available as contextual input."
+      ],
+      "neutralStatement": "For the source's void-main-star Huynh Đệ case, the opposing major star is consulted as though it occupied the palace.",
+      "evidenceType": "source-described opposition method",
+      "limitations": [
+        "Void-main-star eligibility, active opposition geometry, star state and profile compatibility are unresolved.",
+        "No sibling-related conclusion is admitted and the candidate is not executable."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Palace-specific corroborating form of the source's repeated opposition method; not promoted into a universal executable rule."
+    },
+    {
+      "candidateId": "candidate:k14b15-tb-sensitive-sibling-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tan-bien",
+      "sourceLocator": "PDF/printed pp.217-224, Huynh Đệ 15.1-15.2.47",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps configurations to sibling count or sex, disability, illness, poverty, conduct, sexuality, family conflict, separation or death outcomes."
+      ],
+      "neutralStatement": "The reviewed Huynh Đệ section is dominated by direct historical predictions about siblings and family outcomes.",
+      "evidenceType": "sensitive historical claims rejected from reusable knowledge",
+      "limitations": [
+        "The claims reflect historical gender and disability assumptions and lack an approved calculation profile and safe interpretation policy.",
+        "They must not become family guidance, health claims, warnings, scores, fixtures, personalized claims or production rules."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for direct outcomes in the section; only contextual methodology, the textual conflict and unresolved opposition structure are retained separately."
     }
   ],
   "unresolvedIssues": [
@@ -2211,6 +2319,12 @@
       "issueId": "k14-active-geometry",
       "status": "UNRESOLVED",
       "detail": "Xung chiếu, tam chiếu, nhị hợp and adjacency language remains source-described and is not mapped to active profile geometry."
+    },
+    {
+      "issueId": "k14-tb217-palace-label-inconsistency",
+      "bookId": "book-k14-tan-bien",
+      "status": "REVIEW",
+      "detail": "Under the Huynh Đệ heading on PDF/printed p.217, the contextual example explicitly names Tử Tức. The dataset does not silently correct it; another edition or authoritative erratum is required."
     }
   ]
 }

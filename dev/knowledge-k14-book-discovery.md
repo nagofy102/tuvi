@@ -896,3 +896,24 @@ one bounded `REJECT`. Next boundary: Huynh Đệ 217–224.
 - PASS: all nine pages visually inspected; no-yield samples p.209, p.213 and p.215.
 - PASS: targeted Prettier and `git diff --check`; source registry unchanged.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.
+
+## HV-K14-C batch 15 — Huynh Đệ
+
+Tân Biên pp.217–224 were read and all eight rendered pages visually inspected.
+One `ACCEPT_AS_RESEARCH` methodology record preserves the explicit Phúc Đức
+dependency and the source's relative-not-absolute qualification. Two `REVIEW`
+records preserve (1) the p.217 source inconsistency where a Huynh Đệ example
+explicitly names Tử Tức and (2) the p.224 void-main-star opposition method.
+
+The Tử Tức label was not silently corrected; another edition or authoritative
+erratum is required. Active geometry, Vô Chính diệu eligibility, state lookup
+and modifier precedence also remain unresolved. Direct sibling-count, gender,
+disability, conduct, sexuality, conflict and death predictions form one bounded
+`REJECT`. This completes the approved pp.181–224 range.
+
+### Verification — HV-K14-C batch 15
+
+- PASS: JSON, IDs/references, candidate structure, PDF hash and 719-page ledger.
+- PASS: all eight pages visually inspected; no-yield samples p.218, p.221 and p.223.
+- PASS: targeted Prettier and `git diff --check`; source registry unchanged.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E.

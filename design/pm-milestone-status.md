@@ -228,6 +228,13 @@ theo chi và 1 REJECT cho lời luận hôn nhân, giới, tình dục, bạo l�
 Điểm tiếp tục là Huynh Đệ 217–224; không thay runtime, calculation, UI, profile
 hoặc production.
 
+HV-K14-C batch 15 (16/10) hoàn tất Huynh Đệ 217–224 và toàn bộ phạm vi được
+giao 181–224, nâng lũy kế hai sách chính lên 291/719 trang. Batch giữ 1 ACCEPT
+AS RESEARCH cho dependency Phúc Đức, 2 REVIEW cho bất nhất nhãn Tử Tức tại
+p.217 và Vô Chính diệu/xung chiếu tại p.224, cùng 1 REJECT cho lời luận anh chị
+em, giới, khuyết tật, hành vi và tử vong trực tiếp. Không tự sửa văn bản nguồn,
+không thay runtime, calculation, UI, profile hoặc production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
