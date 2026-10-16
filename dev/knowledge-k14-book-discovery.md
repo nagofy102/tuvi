@@ -1147,3 +1147,79 @@ check sequence with one command.
   handoff after execution.
 - NOT RUN BY SCOPE: typecheck, production build and E2E; no runtime or
   production-consumed data was changed.
+
+## Knowledge expansion and independent validation — Tân Biên pp.248–271
+
+All **24 PDF pages** were read and visually checked in seven bounded batches:
+248–249, 250–253, 254, 255–260, 261–266, 267–269 and 270–271. Printed numbering
+matches PDF pages through 253, then Part III restarts at printed p.4 on PDF p.254
+and reaches printed p.21 on PDF p.271. The
+slice adds **15 candidates**: 2 ACCEPT_AS_RESEARCH, 2 MERGE, 6 REVIEW and 5
+REJECT. Stored types are 3 substantive, 3 exception, 3 methodology, 1 conflict
+and 5 rejected personalized-output records. The two newly accepted specific
+research candidates are the natal–period star-family/state variants on pp.250–251
+and the Hóa Lộc–Lộc Tồn aspect-versus-co-location exception on p.260. ACCEPT is
+not profile compatibility or production approval; both remain zero.
+
+Other retained gains are nested decade/year/month qualification, a
+Mệnh–period-palace five-phase exception, an intra-period Nam/Bắc Đẩu timing
+claim, an age-bounded Tuần/Triệt variant, period-specific Vô Chính diệu
+opposition handling, and moving/fixed-star relation shapes. Calculation-sensitive
+placement, star-family membership, state lookup, Thân, Tuần/Triệt precedence,
+moving-star identity and every personal outcome remain unresolved or excluded.
+Pages 270–271 add no reusable knowledge: death timing and funeral-symbol claims
+are an explicit exclusion boundary.
+
+The star-by-period catalog on pp.255–266 is saturated for the current research
+goal. Most rows repeat an already-known state-plus-companion form and differ only
+through high-risk health, death, legal, gender, rank or wealth predictions. It
+would be misleading to create one candidate per row. Cumulative primary-book
+coverage is now **362/719 pages** and primary candidates total **135**: 35
+ACCEPT_AS_RESEARCH, 20 MERGE, 44 REVIEW and 36 REJECT.
+
+### Independent geometry evidence state
+
+The validation inventory still separates three layers:
+
+- implementation: the current editorial reader uses branch offsets `+4/+8` for
+  trines and `+6` for opposition, preserves source star locations and rejects an
+  invalid 12-palace geometry;
+- unit expectations: focused tests verify those implementation properties, not a
+  historical or Nam-phái profile;
+- source evidence: the Chinese-lineage passages name tam phương, tứ chính, đối
+  chiếu and hợp chiếu without defining geometry; Tổng Hợp describes qualitative
+  xung/tam/nhị-hợp/giáp distinctions; Tân Biên explicitly calls Thiên Di opposite
+  Mệnh and repeatedly consults an opposing major star for Vô Chính diệu cases.
+
+The two Vietnamese books have unresolved lineage, edition and target-profile
+identity, so they cannot be counted as proven independent corroboration. Current
+evidence supports preserving the relation vocabulary and candidate semantics but
+does **not** validate a universal mapping from `hội`, `hợp chiếu`, `nhị hợp`,
+`giáp` or every Vô Chính diệu phrase to the runtime offsets.
+
+Profile-pinned verification should minimally cover: all 12 origin branches for
+the proposed `+4/+8/+6` relations; Thiên Di–Mệnh opposition examples; a
+Vô Chính diệu case where opposite stars remain at their source palace; explicit
+nhị-hợp and two-sided/one-sided giáp counterexamples; and one same-named
+moving/fixed-star co-location case. Each case needs an edition/page locator,
+calculation profile, complete input, expected relation facts and an explicit
+non-equivalence assertion. Until that corpus exists, geometry remains unresolved.
+
+### QA efficiency and verification
+
+`npm run audit:k14` is not hard-coded to this sprint or to a fixed last batch: it
+discovers all `batch<number>` records, validates their ledger references, covers
+the full pinned 719-page corpus and checks both PDF hashes. The book IDs and page
+totals are intentionally pinned corpus invariants, not sprint assumptions. No
+tool change was justified; source semantics and visual comparison remain manual.
+
+- PASS: all 24 rendered pages inspected; retained locators and conditions checked,
+  with no-yield/exclusion samples recorded for every multi-page batch.
+- PASS: `npm run audit:k14` — 136 records including the Tự Xem negative control;
+  primary counts 35/20/44/36; ledger 48 COMPLETED, 312 REVIEW, 346 PENDING,
+  0 BLOCKED and 13 EXCLUDED; both pinned PDF hashes match.
+- PASS: JSON parse, required fields, ID/subject references, exact normalized
+  duplicates, ledger gaps/overlaps and batch/checkpoint references through the
+  consolidated audit.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; runtime, calculation,
+  UI, profile and production-consumed data were unchanged.

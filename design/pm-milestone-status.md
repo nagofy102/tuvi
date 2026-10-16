@@ -260,6 +260,16 @@ profile-pinned để đồng nhất mọi thuật ngữ xung/hội/nhị hợp/g
 học K14 được gom vào `npm run audit:k14`; không thay calculation, runtime, UI hay
 production contract.
 
+HV Knowledge Expansion & Independent Validation (16/10) đã đọc và QA trực quan
+Tân Biên 248–271, nâng lũy kế hai sách chính lên 362/719 trang. Bảy batch tạo 2
+ACCEPT AS RESEARCH substantive/exception, 2 MERGE, 6 REVIEW và 5 REJECT; lũy
+kế hai sách là 135 candidate (35/20/44/36), vẫn 0 profile-compatible và 0
+production-eligible. Catalog sao nhập hạn 255–266 đã bão hòa vì chủ yếu lặp cấu
+trúc cùng lời luận nhạy cảm. Evidence hiện có chưa chứng minh hai sách Việt Nam
+độc lập lineage hoặc xác nhận geometry target profile, nên xung/tam hợp/nhị hợp/
+giáp/Vô Chính diệu vẫn unresolved; không thay calculation, runtime, UI hay
+production contract.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
