@@ -280,6 +280,13 @@ nguồn nhưng không chứng minh lineage độc lập, state lookup hay target
 nên không đổi disposition nào. Profile-compatible và production-eligible vẫn
 bằng 0; không thay calculation, runtime, UI hay production contract.
 
+HV-K16 (16/10) đánh giá khả năng biểu diễn của 10 candidate substantive/exception
+đã `ACCEPT_AS_RESEARCH`: 2 Expressible dưới dạng gate từ chối/đủ điều kiện,
+6 Partially expressible và 2 Blocked do thiếu ngưỡng hoặc atomic condition. Đây
+chỉ là feasibility research; các book locator chưa thay thế passage/source/rule
+registry mà ReadingBrief yêu cầu. Không đổi disposition; profile-compatible và
+production-eligible vẫn bằng 0. Xem `../dev/knowledge-k14-book-discovery.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

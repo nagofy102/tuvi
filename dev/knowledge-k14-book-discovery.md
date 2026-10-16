@@ -1271,3 +1271,75 @@ worked charts without a specific evidence question.
   provenance/locators, ledger gap/overlap and checkpoint references.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime or
   production-consumed data changed.
+
+## HV-K16 knowledge usability pilot
+
+This research-only pilot sampled **10 ACCEPT_AS_RESEARCH** candidates from both
+books. Selection favored different inference shapes: star-group exceptions,
+Tứ Hóa context, palace geometry, cross-chart comparison, placement families,
+period/state interaction and negative eligibility conditions. Every locator was
+checked against its rendered PDF page. `Expressible` below means only that the
+source-stated research shape can be represented without inventing another
+predicate; it does not mean profile-compatible, user-approved or production-ready.
+
+| Candidate                                                  | Source locator                          | Research rule shape                                                                                               | Usability             | Missing or unsafe boundary                                                                                                                     |
+| ---------------------------------------------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `candidate:k14b1-tb-thien-phu-mitigation-limit`            | Tân Biên p.36, 3.7                      | Thiên Phủ plus named adverse-star set; all-four case limits the preceding mitigation                              | Partially expressible | `gặp` does not define a profile-pinned relation/scope; the individual versus complete-set branches need atomic extraction                      |
+| `candidate:k14b1-tb-tu-hoa-not-fixed-polarity`             | Tân Biên pp.40–41, 3.23–3.26            | Named Hóa meanings vary with named accompanying stars                                                             | Blocked               | One aggregate record covers several different variants; stable Hóa identities, Can mapping and one condition/conclusion per variant are absent |
+| `candidate:k14b1-th-aspect-semantic-exceptions`            | Tổng Hợp pp.64–66                       | A geometric palace relation does not automatically have equal semantic force                                      | Partially expressible | Useful as an eligibility guard, but the allowed/weak/exception networks and target-profile geometry are not enumerated as executable facts     |
+| `candidate:k14b18-th-rhetoric-combination-family`          | Tổng Hợp p.158                          | Exact named pairs/groups under co-location or source-named aspect relations contribute complementary meanings     | Partially expressible | Several stars lack stable IDs; chính/hợp chiếu geometry and one conclusion per named group remain unresolved                                   |
+| `candidate:k14b19-th-khong-kiep-context-exception`         | Tổng Hợp p.163                          | Không–Kiếp under hãm framing requires the source's practical-use context and whole-chart review                   | Partially expressible | `chỗ dụng` has no normalized input fact; state lookup/profile and permitted neutral conclusion need specialist definition                      |
+| `candidate:k14b23-tb-truyen-tinh-cross-chart-relation`     | Tân Biên p.228, 18.2                    | Compare a parent's Tử Tức star set with a child's Mệnh star set                                                   | Blocked               | `nhiều sao giống nhau` supplies no threshold, canonical-set normalization or missing-data policy; none may be invented                         |
+| `candidate:k14b26-tb-under-twelve-uncertainty-limit`       | Tân Biên p.240, 21.4                    | When the interpreted age is below twelve, suppress a confident lifespan conclusion                                | Expressible           | Can be a fail-closed exclusion only; period calculation remains unverified and no child outcome is admitted                                    |
+| `candidate:k14b30-tb-natal-period-star-family-state`       | Tân Biên pp.250–251, 2.4.1              | Compare named natal/period star families and branch on stated period-star state                                   | Partially expressible | Family membership, Thân, period placement and state lookup are unresolved; the bundled variants need separate atomic records                   |
+| `candidate:k15b36-th-tai-dien-joint-eligibility-exception` | Tổng Hợp pp.257–258, Chapter 13 A.6/A.8 | Do not infer the source's material conclusion from Điền alone; require Tài and qualify the bounded period context | Expressible           | Represents a negative eligibility gate, not a positive wealth/property claim; period precedence remains unresolved                             |
+| `candidate:k15b37-th-ziwei-assistant-void-exception`       | Tổng Hợp p.340, Chapter 17 C.1          | A named Tử Vi support condition is defeated by Không/Kiếp unless a further named modifier is present              | Partially expressible | Hữu Bật and Tuần/Triệt are not stable admitted subjects; state, relation, group completeness and precedence remain unresolved                  |
+
+The result is **2 Expressible, 6 Partially expressible and 2 Blocked**. The two
+Expressible records are suppression/eligibility guards, not claim-generating
+rules. No disposition was changed and both profile-compatible and
+production-eligible counts remain zero.
+
+An illustrative, non-DSL representation of the Điền–Tài guard is sufficient to
+show the usable shape without changing a contract:
+
+```json
+{
+  "candidateId": "candidate:k15b36-th-tai-dien-joint-eligibility-exception",
+  "requires": ["palace:dien-trach", "palace:tai-bach", "period-context"],
+  "forbidsInferenceWhen": ["dien-trach-only"],
+  "allowedConclusion": "source-bounded eligibility only",
+  "unresolved": ["period-placement", "period-precedence", "profile"]
+}
+```
+
+By contrast, Truyền tinh is blocked despite having clear subjects and provenance:
+the phrase `nhiều sao giống nhau` cannot be converted into a comparison threshold.
+Any count, percentage, weighting or normalization would be researcher-created.
+
+### Traceability and extraction implications
+
+The current records can support a **research inference trace** from candidate ID
+to book ID, PDF hash, locator, subjects, conditions, limitations and disposition.
+They cannot yet satisfy `ReadingBriefV1`: that contract requires a resolvable
+approved rule/version, passage IDs, Source Registry IDs, chart-backed signal IDs,
+an immutable approved template and an admitted calculation profile. K14 book IDs
+and page locators are acquisition provenance, not those production registry
+objects. A representable candidate must therefore still fail closed before a
+personalized claim.
+
+Future extraction batches should: split catalogs/families into one atomic
+condition–conclusion–exception unit; record the exact relation vocabulary instead
+of normalizing `gặp`, `hội` or `chiếu`; state explicit negative eligibility and
+non-application cases; list every unresolved lookup/threshold/precedence input;
+and distinguish a source conclusion from a researcher-safe paraphrase. BA and a
+Tử Vi specialist must decide the canonical identity of missing stars/Tứ Hóa,
+relation geometry, state lookup, period precedence, threshold semantics and the
+permitted symbolic claim surface before any engine design.
+
+- PASS: rendered-page semantic QA for all 10 selected locators.
+- PASS: candidate IDs, dispositions, subject references, locators, PDF hashes,
+  ledger and duplicate invariants through `npm run audit:k14`.
+- PASS: formatting and `git diff --check` for the research report/status change.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; dataset, runtime,
+  calculation, profile and production contracts were unchanged.
