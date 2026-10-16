@@ -763,3 +763,32 @@ Checkpoint 1 baseline:
 - PASS: Prettier and `git diff --check`.
 - NOT RUN BY SCOPE: JSON/schema/source audit (no registry/dataset change), runtime
   tests, typecheck, build and E2E (documentation-only Checkpoint 1).
+
+## HV-K14-C batch 9 — Nô Bộc
+
+The broad pending range was reconciled to source headings and split without
+crossing palace sections: Nô Bộc 168–173, Thiên Di 174–180, Tật Ách 181–189,
+Tài Bạch 190–197, Tử Tức 198–207, Thê Thiếp 208–216 and Huynh Đệ 217–224.
+Pages 168–173 were then reread from the PDF and all six rendered pages were
+visually inspected; no temporary note from the prior session was treated as QA.
+
+The batch retains one `ACCEPT_AS_RESEARCH` methodology candidate: section 9.1
+explicitly combines the stated Mệnh and Nô Bộc configurations/states before
+auxiliary detail. Two exceptions remain `REVIEW`: p.171 treats an opposing major
+star as contextual input for a stated void-main-star case, while p.173 describes
+a Tuần/Triệt reversal of the section's bright/dim assessment. Active geometry,
+state lookup, Tuần/Triệt identity and precedence remain profile-unresolved. One
+bounded `REJECT` record covers direct claims about servants, friends, morality,
+gender and sexuality. No personal conclusion or production rule was admitted.
+
+### Verification — HV-K14-C batch 9
+
+- PASS: acquisition JSON parses; primary-book ledger covers every page once with
+  no gap or overlap; Batch 9 reconciles to six new pages.
+- PASS: candidate IDs are unique; non-rejected subjects resolve; every retained
+  candidate has locator, conditions, evidence type, limitations, profile status
+  and duplicate assessment.
+- PASS: all six source pages and retained locators were visually checked; no-yield
+  samples p.169 and p.172 contained only excluded direct personal claims.
+- PASS: targeted Prettier and `git diff --check`; source registry was unchanged.
+- NOT RUN BY SCOPE: runtime unit tests, typecheck, build and E2E.

@@ -186,6 +186,14 @@ cho catalog nghề nghiệp/chức vị trực tiếp. Do yield thấp và rủi
 tự chuyển sang lát cắt cung không phải Quan Lộc trong 168–224. Không có blocker,
 không thay runtime, calculation, UI hay trạng thái production.
 
+HV-K14-C batch 9 (16/10) đọc và QA lại từ nguồn Tân Biên 168–173, hoàn tất cung
+Nô Bộc và nâng lũy kế hai sách chính lên 240/719 trang (243/1.022 nếu tính ba
+trang control). Batch giữ 1 ACCEPT AS RESEARCH cho phương pháp kết hợp Mệnh–Nô
+Bộc, 2 REVIEW cho Vô Chính diệu/xung chiếu và ngoại lệ Tuần–Triệt, cùng 1 REJECT
+cho lời luận xã hội/giới/tình dục trực tiếp. Range 174–224 đã được chia đúng ranh
+giới sáu cung còn lại; điểm tiếp tục là Thiên Di 174–180. Không thay runtime,
+calculation, UI, profile hoặc trạng thái production.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
