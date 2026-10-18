@@ -1,7 +1,7 @@
 {
   "artifactVersion": "hv-k14-controlled-acquisition-v0.2",
-  "generatedAt": "2026-10-16",
-  "scope": "Internal research ledger and candidates through HV-K15 batch 37; not production rules, profile evidence, scores or personalized readings.",
+  "generatedAt": "2026-10-18",
+  "scope": "Internal research ledger and candidates through HV-K17 batch 38; not production rules, profile evidence, scores or personalized readings.",
   "rightsBoundary": "PO authorized internal reading and analysis of the local PDFs. The artifact stores short independent paraphrases and locators, not source passages or converted book text.",
   "defaultProfile": "profile-unresolved",
   "sourceIndependence": "unresolved-between-books",
@@ -541,10 +541,19 @@
       "note": "Eight pages read and visually checked. The author records a source-specific fire-star taxonomy but also rejects a universal single-star rule; direct jealousy, temperament, ego and selfishness predictions are excluded."
     },
     {
-      "rangeId": "ledger:th-174-254",
+      "rangeId": "ledger:th-174-181",
       "bookId": "book-k14-tong-hop",
-      "pdfPages": "174-254",
-      "section": "Volume II chapters 8-12 remainder",
+      "pdfPages": "174-181",
+      "section": "Chapter 8 close and Chapter 9 opening — academic star combinations and counterconditions",
+      "status": "REVIEW",
+      "checkpoint": "k17-batch-38",
+      "note": "Eight pages read and visually checked. Retained knowledge is limited to source-described star/state/relation conditions and counterconditions; deterministic rank, occupation, examination, gender and personal-ability outcomes remain excluded."
+    },
+    {
+      "rangeId": "ledger:th-182-254",
+      "bookId": "book-k14-tong-hop",
+      "pdfPages": "182-254",
+      "section": "Volume II chapters 9-12 remainder",
       "status": "PENDING",
       "checkpoint": null,
       "note": "Unread thematic configurations; future batches must split at chapter boundaries 188, 221 and 238."
@@ -1275,6 +1284,25 @@
       "nextPriorityRationale": "Prefer an unread section with explicit star–palace or star–star counterconditions; avoid Chapters 14-16 and worked charts unless a narrowly defined evidence question requires them."
     }
   },
+  "batch38": {
+    "newPagesProcessed": 8,
+    "ranges": ["ledger:th-174-181"],
+    "qaSamplesWithoutRetainedKnowledge": [
+      {
+        "bookId": "book-k14-tong-hop",
+        "pdfPages": "174-175, 180-181",
+        "result": "Rendered pages checked. Historical speech, gender, occupation, examination-result and rank claims were not normalized into reusable rules; only explicit star/state/relation conditions and counterconditions were retained."
+      }
+    ],
+    "knowledgeYieldReview": {
+      "novelty": "Adds three positive, source-bounded inference shapes: bright Nhật/Nguyệt at or aspecting Mệnh with modifiers, two exact co-located star pairs under đắc-địa state, and a state reversal with auxiliary-star compensation.",
+      "mergeValue": "The new records move beyond generic multi-factor methodology by preserving exact subjects, relation vocabulary, state branches and stated modifiers.",
+      "reviewCauses": "Brightness/state lookup, Mệnh/aspect geometry, birth-time compatibility, stable auxiliary-star identities and source-profile compatibility remain unresolved.",
+      "noYieldReliability": "All eight rendered pages were visually inspected; the Chapter 8 close, Chapter 9 boundary, the academic-star catalog and the transition into field-specific claims were checked.",
+      "topicSaturation": "Pages 180-181 turn toward deterministic blockers and occupation mappings; continuing sequentially is lower value than a different chapter with explicit counterconditions.",
+      "nextPriorityRationale": "Prefer a narrow section near the Chapter 10/11 boundary after p.188, or return to a named K16 gap only when a locator search reveals an explicit missing definition."
+    }
+  },
   "reviewResolutionAudit": {
     "baselineReviewCount": 44,
     "classificationMethod": "Existing reviewReason is the primary mutually exclusive label; secondary dependency tags are overlapping text-supported facets and must not be summed as a disposition total.",
@@ -1307,10 +1335,10 @@
     "resolutionResult": "No prior REVIEW changed disposition. The new passages sharpen source semantics but do not establish independent lineage, active target-profile geometry, state lookup or profile compatibility."
   },
   "resumeCheckpoint": {
-    "checkpointId": "k15-targeted-expansion-after-batch-37",
+    "checkpointId": "k17-evidence-gap-after-batch-38",
     "mission": "Internal, research-only breadth-first acquisition from the two PO-authorized primary books; no production or profile promotion.",
     "branchAtSave": "main",
-    "baseCommit": "f042295",
+    "baseCommit": "9ddff10",
     "bookHashes": {
       "book-k14-tan-bien": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
       "book-k14-tong-hop": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37"
@@ -1363,15 +1391,16 @@
       "ledger:th-155-158",
       "ledger:th-159-165",
       "ledger:th-166-173",
+      "ledger:th-174-181",
       "ledger:th-255-264",
       "ledger:th-335-345"
     ],
-    "nextPendingPriority": ["ledger:th-174-254", "ledger:th-265-334", "ledger:th-346-421"],
-    "batch37CandidateIds": [
-      "candidate:k15b37-th-phuc-not-universal-resolver-merge",
-      "candidate:k15b37-th-ziwei-assistant-void-exception",
-      "candidate:k15b37-th-bright-sun-moon-relief-review",
-      "candidate:k15b37-th-sensitive-relief-outcomes-reject"
+    "nextPendingPriority": ["ledger:th-182-254", "ledger:th-265-334", "ledger:th-346-421"],
+    "batch38CandidateIds": [
+      "candidate:k17b38-th-bright-sun-moon-learning-conditions",
+      "candidate:k17b38-th-co-located-academic-pairs",
+      "candidate:k17b38-th-state-reversal-auxiliary-compensation",
+      "candidate:k17b38-th-deterministic-academic-outcomes-reject"
     ],
     "qaStatus": "PASS targeted research-only validation; visual locator QA complete; no runtime checks run by scope.",
     "unresolvedIssueIds": [
@@ -1381,7 +1410,7 @@
       "k14-active-geometry",
       "k14-tb217-palace-label-inconsistency"
     ],
-    "nextAction": "K15 completed targeted Tổng Hợp pp.255-264 and 335-345. Chapter 13 star lists and Chapter 17 medical/disaster mappings are saturated for safe reuse. Next select a narrow unread section with explicit star–palace or star–star counterconditions; geometry and Vô Chính diệu remain unresolved pending independent profile-pinned evidence.",
+    "nextAction": "K17 completed Tổng Hợp pp.174-181 and found three source-bounded positive inference shapes. The eight K16 gaps remain unresolved after targeted locator review; geometry/state/profile dependencies still need independent profile-pinned evidence. Next prefer a narrow post-p.188 section with explicit counterconditions rather than continuing occupation/examination catalogs.",
     "tokenMetrics": "NOT_AVAILABLE"
   },
   "candidates": [
@@ -4252,17 +4281,17 @@
       "sourceLocator": "PDF/printed p.340, Chapter 17 C.1 Chính tinh, Tử Vi",
       "subjectIds": ["star:zi-wei", "star:ta-phu", "star:dia-khong", "star:dia-kiep"],
       "conditions": [
-        "Tử Vi is described as đắc địa and accompanied by the source's assistant-star condition.",
-        "Địa Không or Địa Kiếp is also present."
+        "Tử Vi is described as đắc địa and accompanied by the source's named favorable-star group.",
+        "One or more of the source-named adverse stars Kình, Đà, Không or Kiếp is also present."
       ],
-      "neutralStatement": "The source treats the stated assistant-star support for Tử Vi as non-universal and says the Không/Kiếp condition defeats that support unless a further source-named modifier is present.",
+      "neutralStatement": "The source treats favorable-star support for Tử Vi as non-universal: it says the named adverse-star group can suppress the stated protective effect and warns against mixing the favorable and adverse groups.",
       "evidenceType": "source-described star-group countercondition",
       "limitations": [
-        "Hữu Bật and Tuần/Triệt are not stable admitted subjects in the foundation catalog.",
-        "State lookup, co-occurrence geometry, group completeness and precedence remain unresolved; no disaster or personal conclusion is admitted."
+        "Hữu Bật, Hóa Khoa, Khôi and Việt from the favorable group are not all stable admitted subjects in this record.",
+        "State lookup, the source's 'đứng chung/pha trộn' relation, group completeness and precedence remain unresolved; no disaster or personal conclusion is admitted."
       ],
       "profileStatus": "unresolved",
-      "duplicateAssessment": "New concrete support-versus-countercondition shape; not a universal rescue rule and not executable."
+      "duplicateAssessment": "New concrete support-versus-countercondition shape; K17 corrected the earlier paraphrase that had incorrectly imported Tuần/Triệt from the preceding Thiên Tướng paragraph."
     },
     {
       "candidateId": "candidate:k15b37-th-bright-sun-moon-relief-review",
@@ -4303,6 +4332,98 @@
       ],
       "profileStatus": "not-applicable",
       "duplicateAssessment": "Explicit exclusion boundary for direct calamity and relief outcomes; no rule or score is admitted."
+    },
+    {
+      "candidateId": "candidate:k17b38-th-bright-sun-moon-learning-conditions",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.176, Chapter 9 B.1, Thái Dương, Thái Âm sáng sủa",
+      "subjectIds": ["star:tai-yang", "star:tai-yin", "palace:menh"],
+      "conditions": [
+        "Bright Thái Dương or Thái Âm is at Mệnh or described by the source as chiếu Mệnh.",
+        "The source's day/night birth modifier and any additional named academic-star support are preserved."
+      ],
+      "neutralStatement": "The source associates bright Nhật/Nguyệt at or aspecting Mệnh with a traditional learning/intellectual meaning, strengthens that meaning when other academic stars accompany them, and distinguishes day-compatible Dương from night-compatible Âm.",
+      "evidenceType": "source-described positive inference with state, relation and birth-time modifiers",
+      "limitations": [
+        "Brightness lookup, chiếu-Mệnh geometry and day/night compatibility are not validated for the target profile.",
+        "No degree, examination result, ability score or personalized educational conclusion is admitted."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "Adds an exact positive condition/modifier chain; earlier Nhật/Nguyệt records preserve context or relief roles but not this bounded learning inference."
+    },
+    {
+      "candidateId": "candidate:k17b38-th-co-located-academic-pairs",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "substantive",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.176, Chapter 9 B.1, Thiên Cơ–Thiên Lương and Thiên Cơ–Cự Môn đồng cung",
+      "subjectIds": [
+        "star:tian-ji",
+        "star:tian-liang",
+        "star:ju-men",
+        "state:dac-dia",
+        "relation:co-located"
+      ],
+      "conditions": [
+        "Thiên Cơ and Thiên Lương are co-located and described as đắc địa or better.",
+        "Alternatively, Thiên Cơ and Cự Môn are co-located at the source-named Mão or Dậu positions, preserving the source's preference for Mão."
+      ],
+      "neutralStatement": "The source gives two specific co-located star-pair variants with traditional learning/research meanings and makes the Cơ–Cự variant branch-sensitive rather than universal.",
+      "evidenceType": "source-described positive star–star inference with state and branch conditions",
+      "limitations": [
+        "State and branch-placement lookup are not independently validated for the target profile.",
+        "Occupation, degree, political, legal and personal-ability outcomes are excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New exact co-located pair variants; existing records do not preserve both the đắc-địa gate and the Mão/Dậu asymmetry."
+    },
+    {
+      "candidateId": "candidate:k17b38-th-state-reversal-auxiliary-compensation",
+      "disposition": "ACCEPT_AS_RESEARCH",
+      "knowledgeType": "exception",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed p.177, Chapter 9 B.1, conclusion after Cơ–Nguyệt–Đồng–Lương",
+      "subjectIds": [
+        "star:tian-ji",
+        "star:tai-yin",
+        "star:tian-tong",
+        "star:tian-liang",
+        "state:dac-dia",
+        "state:ham"
+      ],
+      "conditions": [
+        "The source-listed academic major-star families are interpreted under their stated favorable or hãm states.",
+        "If the family is hãm, the source requires numerous academic auxiliary stars before describing compensation."
+      ],
+      "neutralStatement": "The source reverses its traditional learning assessment between favorable and hãm states and supplies a bounded compensation condition: a hãm major-star family is not treated as restored without a numerous academic auxiliary-star gathering.",
+      "evidenceType": "source-described state reversal with explicit compensation condition",
+      "limitations": [
+        "The source does not define a numeric threshold for 'numerous' or a complete canonical auxiliary-star set.",
+        "State lookup and every degree, delay or personalized educational outcome remain unresolved or excluded."
+      ],
+      "profileStatus": "unresolved",
+      "duplicateAssessment": "New positive/negative branch plus compensation structure; it is narrower than the generic rule that star meaning changes with state and companions."
+    },
+    {
+      "candidateId": "candidate:k17b38-th-deterministic-academic-outcomes-reject",
+      "disposition": "REJECT",
+      "knowledgeType": "personalized-output",
+      "bookId": "book-k14-tong-hop",
+      "sourceLocator": "PDF/printed pp.175-181, Chapter 9 opening through E.1",
+      "subjectIds": [],
+      "conditions": [
+        "The source maps academic stars or obstruction stars to deterministic degree, examination, occupation, rank, gender or personal-ability outcomes."
+      ],
+      "neutralStatement": "The section includes historically framed deterministic educational, examination, occupational and status predictions.",
+      "evidenceType": "historical personalized outcomes rejected from reusable knowledge",
+      "limitations": [
+        "These conclusions lack validated profile support and are unsuitable for modern personalized output.",
+        "Only separately recorded symbolic condition, modifier and exception shapes are retained."
+      ],
+      "profileStatus": "not-applicable",
+      "duplicateAssessment": "Bounded exclusion for Chapter 9's direct outcome catalog; it does not reject the three separately retained research shapes."
     }
   ],
   "unresolvedIssues": [

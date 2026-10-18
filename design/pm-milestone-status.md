@@ -287,6 +287,16 @@ chỉ là feasibility research; các book locator chưa thay thế passage/sourc
 registry mà ReadingBrief yêu cầu. Không đổi disposition; profile-compatible và
 production-eligible vẫn bằng 0. Xem `../dev/knowledge-k14-book-discovery.md`.
 
+HV-K17 (18/10) kiểm tra lại 8 gap K16 và đọc/QA trực quan Tổng Hợp 174–181,
+nâng lũy kế lên 391/719 trang. Không gap nào được đóng bằng evidence mới; một
+paraphrase p.340 được sửa để bỏ Tuần/Triệt vốn thuộc đoạn Thiên Tướng liền trước.
+Batch mới thêm 3 substantive/exception `ACCEPT_AS_RESEARCH` có điều kiện về
+Nhật/Nguyệt, hai cặp Cơ–Lương/Cơ–Cự và state reversal/auxiliary compensation,
+cùng 1 REJECT cho lời luận học vị/nghề nghiệp trực tiếp. Dataset hiện có 149
+records; profile-compatible và production-eligible vẫn bằng 0. Geometry là nhóm
+dependency được chọn cho scope kiểm chứng độc lập, chưa được công nhận theo
+runtime hiện có. Xem `../dev/knowledge-k14-book-discovery.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

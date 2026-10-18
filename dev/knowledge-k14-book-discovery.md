@@ -1293,7 +1293,7 @@ predicate; it does not mean profile-compatible, user-approved or production-read
 | `candidate:k14b26-tb-under-twelve-uncertainty-limit`       | Tân Biên p.240, 21.4                    | When the interpreted age is below twelve, suppress a confident lifespan conclusion                                | Expressible           | Can be a fail-closed exclusion only; period calculation remains unverified and no child outcome is admitted                                    |
 | `candidate:k14b30-tb-natal-period-star-family-state`       | Tân Biên pp.250–251, 2.4.1              | Compare named natal/period star families and branch on stated period-star state                                   | Partially expressible | Family membership, Thân, period placement and state lookup are unresolved; the bundled variants need separate atomic records                   |
 | `candidate:k15b36-th-tai-dien-joint-eligibility-exception` | Tổng Hợp pp.257–258, Chapter 13 A.6/A.8 | Do not infer the source's material conclusion from Điền alone; require Tài and qualify the bounded period context | Expressible           | Represents a negative eligibility gate, not a positive wealth/property claim; period precedence remains unresolved                             |
-| `candidate:k15b37-th-ziwei-assistant-void-exception`       | Tổng Hợp p.340, Chapter 17 C.1          | A named Tử Vi support condition is defeated by Không/Kiếp unless a further named modifier is present              | Partially expressible | Hữu Bật and Tuần/Triệt are not stable admitted subjects; state, relation, group completeness and precedence remain unresolved                  |
+| `candidate:k15b37-th-ziwei-assistant-void-exception`       | Tổng Hợp p.340, Chapter 17 C.1          | A named favorable-star support condition for Tử Vi is limited by a named adverse-star group                       | Partially expressible | Several favorable-group stars lack stable subjects; state, `đứng chung/pha trộn` scope, group completeness and precedence remain unresolved    |
 
 The result is **2 Expressible, 6 Partially expressible and 2 Blocked**. The two
 Expressible records are suppression/eligibility guards, not claim-generating
@@ -1343,3 +1343,81 @@ permitted symbolic claim surface before any engine design.
 - PASS: formatting and `git diff --check` for the research report/status change.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; dataset, runtime,
   calculation, profile and production contracts were unchanged.
+
+## HV-K17 evidence gap closure and positive inference research
+
+K17 rechecked the **6 Partially expressible + 2 Blocked** K16 records against
+their cited passages and ran a locator search across the two authorized books.
+The search located related vocabulary for review; it was not treated as evidence
+until the cited page was checked. No source passage supplied an omitted threshold,
+complete atomic variant set or independent target-profile definition, so **0/8
+gaps were closed** and no prior usability or disposition changed. Direct visual
+QA did identify and correct one earlier paraphrase: the p.340 Tử Vi paragraph
+does not contain Tuần/Triệt; those terms belong to the preceding Thiên Tướng
+paragraph. The candidate remains accepted research evidence, but now records only
+the favorable group versus Kình/Đà/Không/Kiếp countercondition actually stated.
+
+| K16 candidate                                          | Missing evidence class                                                                | Directly checked evidence                                                | K17 result                                                                                                   |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `candidate:k14b1-tb-thien-phu-mitigation-limit`        | Exact scope of `gặp`; atomic one-star/all-four branches                               | Tân Biên p.36; related Thiên Phủ locator hits in Tổng Hợp                | Partial unchanged; no relation definition or precedence                                                      |
+| `candidate:k14b1-tb-tu-hoa-not-fixed-polarity`         | Stable Hóa identities, Can mapping and one variant per condition                      | Tân Biên pp.40–41; Tổng Hợp Tứ Hóa locator hits                          | Blocked unchanged; related text does not provide a target-profile mapping                                    |
+| `candidate:k14b1-th-aspect-semantic-exceptions`        | Enumerated semantic network plus profile geometry                                     | Tổng Hợp pp.64–66 and the p.256 nhị-hợp clarification                    | Partial unchanged; source vocabulary is sharper but geometry remains unproved                                |
+| `candidate:k14b18-th-rhetoric-combination-family`      | Missing star identities, atomic groups and chính/hợp-chiếu geometry                   | Tổng Hợp p.158; Chapter 9 pp.174–181 checked for related academic groups | Partial unchanged; new groups are separate evidence, not a resolver                                          |
+| `candidate:k14b19-th-khong-kiep-context-exception`     | Executable meaning of `chỗ dụng` and state lookup                                     | Tổng Hợp p.163                                                           | Partial unchanged; military/wartime examples clarify scope but do not define an exhaustive context taxonomy  |
+| `candidate:k14b23-tb-truyen-tinh-cross-chart-relation` | Similarity threshold, set normalization and missing-data policy                       | Tân Biên p.228 plus whole-book locator search                            | Blocked unchanged; no threshold was found and none was invented                                              |
+| `candidate:k14b30-tb-natal-period-star-family-state`   | Family membership, Thân, period placement and state lookup                            | Tân Biên pp.250–251 and related pp.255–266                               | Partial unchanged; catalog repetition does not validate the missing calculations                             |
+| `candidate:k15b37-th-ziwei-assistant-void-exception`   | Missing favorable-group identities, relation scope, group completeness and precedence | Tổng Hợp p.340 (plus p.341 boundary check)                               | Partial unchanged; corrected the prior Tuần/Triệt paraphrase, but no independently validated resolver exists |
+
+### Positive inference batch 38
+
+Tổng Hợp **pp.174–181** were read and visually checked as one bounded batch. The
+range closes Chapter 8, opens Chapter 9 and then moves from academic-star
+conditions toward deterministic examinations and occupation claims. Three
+positive inference candidates were accepted for research:
+
+- `candidate:k17b38-th-bright-sun-moon-learning-conditions`: bright Nhật/Nguyệt
+  at or source-described as chiếu Mệnh, with day/night and supporting-star modifiers
+  (p.176);
+- `candidate:k17b38-th-co-located-academic-pairs`: exact Cơ–Lương and Cơ–Cự
+  co-location variants with state/branch conditions (p.176);
+- `candidate:k17b38-th-state-reversal-auxiliary-compensation`: favorable versus
+  hãm state reversal, with a source-stated but unquantified auxiliary-star
+  compensation condition (p.177).
+
+These are **3 ACCEPT_AS_RESEARCH substantive/exception records**, not profile
+compatible claims. One bounded REJECT records the section's deterministic degree,
+examination, occupation, rank, gender and personal-ability conclusions. The batch
+adds star–palace, star–star, state, branch, birth-time, aspect and compensation
+coverage, while brightness/state lookup, geometry, auxiliary identities and
+source-profile compatibility remain unresolved. Pages 180–181 begin a low-yield
+catalog of blockers and occupation mappings, so sequential reading should not be
+preferred without a narrower evidence question.
+
+### Profile-validation scope
+
+The widest reusable dependency remains **spatial relation geometry**. A future
+validation package needs a lawfully usable, edition-pinned source that explicitly
+defines the target Vietnamese/Nam-profile branch pairs for opposition and trines,
+and separately defines or rejects equivalence for `hội`, `hợp chiếu`, `nhị hợp`
+and `giáp`. It must not use current runtime offsets as the oracle.
+
+The minimum fixture set is: all twelve origin branches; expected two trine and one
+opposition relation facts per origin; explicit nhị-hợp and one-/two-sided giáp
+counterexamples; one Mệnh–Thiên Di example; and one Vô Chính diệu example in which
+the opposite star remains at its original palace. Every fixture needs full input,
+profile and source revision, page locator, expected relation facts and explicit
+non-equivalence assertions. Expected output is relation facts only—never a
+personalized interpretation. Until such a corpus exists, all eight K16 records and
+all three new positive candidates fail closed for chart use.
+
+Cumulative primary-book coverage is now **391/719 pages**. The dataset contains
+**149 total records** (148 from the two primary books): 41 ACCEPT_AS_RESEARCH,
+21 MERGE, 47 REVIEW and 40 REJECT overall. Profile-compatible and
+production-eligible remain zero.
+
+- PASS: rendered-page QA for Tổng Hợp pp.174–181 and direct recheck of the eight
+  K16 passage locators.
+- PASS: `npm run audit:k14` — JSON, IDs/subjects, provenance/locators, duplicate,
+  ledger, checkpoint and both pinned PDF hashes reconcile.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime,
+  calculation, profile or production contract changed.
