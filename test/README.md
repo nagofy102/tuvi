@@ -33,6 +33,18 @@ and Chromium E2E where UI/runtime is touched. Source/reference/competitor/tech
 audits are fail-closed and must report BLOCKED when their Git provenance phase
 cannot execute. Do not claim PASS from their partial invariant output.
 
+### HV-P4/P4.1 graph/rule shadow — 2026-10-18
+
+- Graph tests cover 12 palaces, placements, states, period context, stable output,
+  opposite/trine/adjacent wraparound, duplicate prevention, metadata and invalid input.
+- Evaluator tests cover match, non-match, missing data, unverified dependency/relation,
+  rule eligibility, exception, modifier, conflict and absence of eligible rules.
+- Shadow integration tests prove the established `InterpretationReport` remains byte-for-byte
+  equivalent as a value and research/test rules cannot emit production claims. The feature
+  flag defaults off; enabled mode has no bundled production rules.
+- These are software behavior checks. They do not certify a Nam Phai profile, source
+  interpretation, adjacency semantics or any research candidate for production.
+
 ## Nguyên tắc chọn mức kiểm thử
 
 Chọn mức kiểm thử theo **loại thay đổi thực tế**, không theo số lượng file hoặc

@@ -323,6 +323,16 @@ thể so sánh vì chưa có operator/định nghĩa thực thi tương ứng. K
 không tạo golden, không nâng profile-compatible/production-eligible. Xem
 `../test/knowledge-k20-geometry-cases.json` và báo cáo K14.
 
+HV-P4/P4.1 (18/10) triển khai vertical slice Graph Model và rule evaluator có
+type safety: chart thật được chuyển thành node/edge có provenance, evaluator trả
+trạng thái fail-closed cùng inference trace, và pipeline mới được nối vào
+`InterpretationPanel` ở chế độ shadow mặc định tắt. Không có research candidate
+nào được đưa vào runtime; không có rule production mới, không thay
+`InterpretationReport`, Reading Brief v1, calculation hoặc profile. Quan hệ
+adjacent và mọi thuật ngữ miền chưa duyệt vẫn bị chặn khỏi rule cần evidence đã
+xác minh. Cờ chẩn đoán là `NEXT_PUBLIC_HV_GRAPH_SHADOW=1`; output production cũ
+vẫn là nguồn hiển thị duy nhất.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

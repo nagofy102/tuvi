@@ -142,3 +142,20 @@ Published catalog/profile versions are append-only; use a new version for correc
 
 The four initial steps alone do not fulfill all production requirements. Deployment also needs
 observability, backups/restore, retention/deletion, abuse controls, provider failures and security review.
+
+## Graph and rule shadow boundary
+
+HV-P4/P4.1 adds an in-memory `ChartResult -> ChartGraph -> RuleEvaluation -> InferenceTrace`
+path under `src/domain/graph`, `src/domain/rules` and
+`src/domain/interpretation/shadow-pipeline.ts`. The graph keeps chart facts separate from
+derived geometry and labels relation evidence. Opposite/trine are approved only for
+structural testing; adjacency remains unverified. Unverified relations cannot satisfy a
+verified rule condition.
+
+`InterpretationPanel` uses the pipeline wrapper, but `NEXT_PUBLIC_HV_GRAPH_SHADOW` defaults
+to `0`. When set to `1`, graph evaluation runs locally and diagnostically; its result is not
+copied into `InterpretationReport` or Reading Brief. No production graph rule ships in this
+increment, so enabled shadow mode returns `NO_ELIGIBLE_RULES`. Test-only rules are injected
+explicitly. Research-only status always fails closed even if inconsistent eligibility flags
+are supplied. The calculation engine, public `InterpretationReport` and Reading Brief v1
+contracts are unchanged.

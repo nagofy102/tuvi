@@ -3,9 +3,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { BookOpen, Compass, Heart, Wallet } from 'lucide-react';
 import type { ChartResult } from '@/domain/astrology/types';
-import { calculateInterpretation } from '@/domain/interpretation/calculate';
 import { INTERPRETATION_SOURCES } from '@/domain/interpretation/catalog';
 import { buildCareerReadingBrief } from '@/domain/interpretation/reading-brief';
+import {
+  graphShadowEnabled,
+  runInterpretationPipeline,
+} from '@/domain/interpretation/shadow-pipeline';
 import type {
   ContextualInsight,
   CareerNarrative,
@@ -514,7 +517,14 @@ export function InterpretationPanel({
   chart: ChartResult;
   isExample: boolean;
 }) {
-  const report = useMemo(() => calculateInterpretation(chart), [chart]);
+  const pipeline = useMemo(
+    () =>
+      runInterpretationPipeline(chart, {
+        shadowMode: graphShadowEnabled(process.env.NEXT_PUBLIC_HV_GRAPH_SHADOW),
+      }),
+    [chart],
+  );
+  const report = pipeline.interpretation;
   const [concern, setConcern] = useState<ReadingConcern>('career');
   const [readingIdentity, setReadingIdentity] = useState<{
     chart: ChartResult;
