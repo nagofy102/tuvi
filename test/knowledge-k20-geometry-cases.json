@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "knowledge-k20-geometry-cases-v0.1",
+  "status": "research-only-not-golden",
+  "notice": "Expected relations are transcribed from the cited book diagrams or text, never from runtime output. These cases do not certify nam-phai-chinese-lunar-v1, production eligibility, operator equivalence or calculation accuracy.",
+  "sourceArtifacts": [
+    {
+      "sourceId": "k19-tu-vi-dau-so-tan-bien-local-a075aaa0",
+      "sha256": "a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
+      "passageId": "k19-tan-bien-relation-diagrams"
+    },
+    {
+      "sourceId": "k19-tu-vi-tong-hop-local-82f242d4",
+      "sha256": "82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37",
+      "passageIds": ["k19-tong-hop-relation-semantics", "k19-tong-hop-vo-chinh-dieu-conditions"]
+    }
+  ],
+  "runtimeComparisonBoundary": {
+    "observedImplementation": "Current interpretation geometry selects offsets +4 and +8 as trine and +6 as opposition over the runtime's canonical twelve-branch order.",
+    "notImplementedOrNotComparable": [
+      "nhị hợp",
+      "giáp",
+      "hội chiếu as a source-defined semantic operator",
+      "qualitative precedence",
+      "Vô Chính diệu modifiers"
+    ],
+    "oraclePolicy": "Runtime observations are compared after source expectations are recorded; they never supply or correct expected values."
+  },
+  "cases": [
+    {
+      "caseId": "k20-tb-tam-chieu-than-ty-thin",
+      "classification": "diagram-supported-research-case",
+      "relation": "tam-chiếu",
+      "input": "Thân",
+      "sourceExpected": ["Tý", "Thìn"],
+      "locator": "Tân Biên, §9.1, printed/PDF p.18, first diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": ["Tý", "Thìn"],
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-tam-chieu-ty-suu-dau",
+      "classification": "diagram-supported-research-case",
+      "relation": "tam-chiếu",
+      "input": "Tỵ",
+      "sourceExpected": ["Sửu", "Dậu"],
+      "locator": "Tân Biên, §9.1, printed/PDF p.18, second diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": ["Sửu", "Dậu"],
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-tam-chieu-dan-ngo-tuat",
+      "classification": "diagram-supported-research-case",
+      "relation": "tam-chiếu",
+      "input": "Dần",
+      "sourceExpected": ["Ngọ", "Tuất"],
+      "locator": "Tân Biên, §9.1, printed/PDF p.18, third diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": ["Ngọ", "Tuất"],
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-tam-chieu-hoi-mao-mui",
+      "classification": "diagram-supported-research-case",
+      "relation": "tam-chiếu",
+      "input": "Hợi",
+      "sourceExpected": ["Mão", "Mùi"],
+      "locator": "Tân Biên, §9.1, printed/PDF p.19, continuation diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": ["Mão", "Mùi"],
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-xung-ty-ngo",
+      "classification": "diagram-supported-research-case",
+      "relation": "xung-chiếu",
+      "input": "Tý",
+      "sourceExpected": "Ngọ",
+      "locator": "Tân Biên, §9.2, printed/PDF p.19, first diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": "Ngọ",
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-xung-mao-dau",
+      "classification": "diagram-supported-research-case",
+      "relation": "xung-chiếu",
+      "input": "Mão",
+      "sourceExpected": "Dậu",
+      "locator": "Tân Biên, §9.2, printed/PDF p.19, first diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": "Dậu",
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-xung-suu-mui",
+      "classification": "diagram-supported-research-case",
+      "relation": "xung-chiếu",
+      "input": "Sửu",
+      "sourceExpected": "Mùi",
+      "locator": "Tân Biên, §9.2, printed/PDF p.19, second diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": "Tân Biên p.20 summary prose instead calls Tý the xung-chiếu palace for Sửu; that statement is retained separately as disputed.",
+      "runtimeObserved": "Mùi",
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-xung-thin-tuat",
+      "classification": "diagram-supported-research-case",
+      "relation": "xung-chiếu",
+      "input": "Thìn",
+      "sourceExpected": "Tuất",
+      "locator": "Tân Biên, §9.2, printed/PDF p.19, second diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": "Tuất",
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-xung-dan-than",
+      "classification": "diagram-supported-research-case",
+      "relation": "xung-chiếu",
+      "input": "Dần",
+      "sourceExpected": "Thân",
+      "locator": "Tân Biên, §9.2, printed/PDF p.20, continuation diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": "Thân",
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-xung-ty-hoi",
+      "classification": "diagram-supported-research-case",
+      "relation": "xung-chiếu",
+      "input": "Tỵ",
+      "sourceExpected": "Hợi",
+      "locator": "Tân Biên, §9.2, printed/PDF p.20, continuation diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": "Hợi",
+      "runtimeComparison": "PASS"
+    },
+    {
+      "caseId": "k20-tb-nhi-hop-ty-suu",
+      "classification": "diagram-supported-research-case",
+      "relation": "nhị-hợp",
+      "input": "Tý",
+      "sourceExpected": "Sửu",
+      "locator": "Tân Biên, §9.3, printed/PDF p.20, diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-nhi-hop-ngo-mui",
+      "classification": "diagram-supported-research-case",
+      "relation": "nhị-hợp",
+      "input": "Ngọ",
+      "sourceExpected": "Mùi",
+      "locator": "Tân Biên, §9.3, printed/PDF p.20, diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-nhi-hop-dan-hoi",
+      "classification": "diagram-supported-research-case",
+      "relation": "nhị-hợp",
+      "input": "Dần",
+      "sourceExpected": "Hợi",
+      "locator": "Tân Biên, §9.3, printed/PDF p.20, diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-nhi-hop-mao-tuat",
+      "classification": "diagram-supported-research-case",
+      "relation": "nhị-hợp",
+      "input": "Mão",
+      "sourceExpected": "Tuất",
+      "locator": "Tân Biên, §9.3, printed/PDF p.20, diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-nhi-hop-thin-dau",
+      "classification": "diagram-supported-research-case",
+      "relation": "nhị-hợp",
+      "input": "Thìn",
+      "sourceExpected": "Dậu",
+      "locator": "Tân Biên, §9.3, printed/PDF p.20, diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-nhi-hop-ty-than",
+      "classification": "diagram-supported-research-case",
+      "relation": "nhị-hợp",
+      "input": "Tỵ",
+      "sourceExpected": "Thân",
+      "locator": "Tân Biên, §9.3, printed/PDF p.20, diagram",
+      "evidenceDirectness": "direct-diagram",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-th-hoi-chieu-scope",
+      "classification": "text-supported-research-case",
+      "relation": "hội-chiếu",
+      "input": "one focal palace",
+      "sourceExpected": "the opposing palace and two tam-chiếu palaces form the source's four-palace hội-chiếu context",
+      "locator": "Tổng Hợp, Chapter 5, printed/PDF pp.63–65",
+      "evidenceDirectness": "direct-text-definition-with-examples",
+      "internalConflict": "The source warns that some palace-name correlations inside this geometry are weak, one-directional or have exceptions.",
+      "runtimeObserved": "Runtime gathers direct +4/+8/+6 context, but does not define hội-chiếu as a source-authoritative operator.",
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-th-giap-adjacency",
+      "classification": "text-supported-research-case",
+      "relation": "giáp",
+      "input": "one focal palace",
+      "sourceExpected": "the two immediately adjacent palaces flank the focal palace; semantic force varies by example and may be one-sided or weak",
+      "locator": "Tổng Hợp, Chapter 5, printed/PDF pp.66–67",
+      "evidenceDirectness": "direct-text-definition-with-examples",
+      "internalConflict": null,
+      "runtimeObserved": null,
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-th-relation-precedence",
+      "classification": "text-supported-research-case",
+      "relation": "qualitative-precedence",
+      "input": "one focal palace and its related palaces",
+      "sourceExpected": ["focal", "opposing", "two tam-chiếu", "nhị-hợp", "two adjacent"],
+      "locator": "Tổng Hợp, Chapter 5, printed/PDF p.64; Chapter 7, printed/PDF p.115",
+      "evidenceDirectness": "direct-text-ordering",
+      "internalConflict": "The same chapter limits many palace-name semantics and provides no numeric weights or complete conflict-resolution algorithm.",
+      "runtimeObserved": "Runtime labels direct/trine/opposition but has no source-equivalent precedence evaluator.",
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-th-vo-chinh-dieu-base",
+      "classification": "text-supported-research-case",
+      "relation": "Vô-Chính-diệu eligibility",
+      "input": "palace without a principal star tọa thủ",
+      "sourceExpected": "classify the palace as Vô Chính diệu before separately considering source-listed modifiers",
+      "locator": "Tổng Hợp, Chapter 7, printed/PDF pp.110–111",
+      "evidenceDirectness": "direct-text-definition",
+      "internalConflict": null,
+      "runtimeObserved": "Runtime detects zero major stars, but the source passage does not atomically pin the exact principal-star identity set to the active profile.",
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-summary-four-relations",
+      "classification": "text-supported-research-case",
+      "relation": "source-reading-scope",
+      "input": "one focal palace",
+      "sourceExpected": "review two tam-chiếu palaces, one xung-chiếu palace and one nhị-hợp palace",
+      "locator": "Tân Biên, §9.4, printed/PDF p.20",
+      "evidenceDirectness": "direct-summary-text",
+      "internalConflict": "The immediately following Sửu example misidentifies Tý as xung chiếu relative to the source's own p.19 diagram.",
+      "runtimeObserved": "Runtime supplies two trines and one opposition but has no nhị-hợp operator.",
+      "runtimeComparison": "NOT-COMPARABLE"
+    },
+    {
+      "caseId": "k20-tb-disputed-suu-xung-ty",
+      "classification": "disputed-case",
+      "relation": "xung-chiếu",
+      "input": "Sửu",
+      "sourceExpected": "Tý",
+      "locator": "Tân Biên, §9.4 example, printed/PDF p.20",
+      "evidenceDirectness": "direct-text-example",
+      "internalConflict": "Tân Biên §9.2 p.19 diagram instead shows Sửu–Mùi as xung chiếu; §9.3 p.20 diagram shows Sửu–Tý as nhị hợp.",
+      "runtimeObserved": "Mùi",
+      "runtimeComparison": "DIFF",
+      "admission": "excluded-from-undisputed-expected-set"
+    },
+    {
+      "caseId": "k20-th-vo-chinh-dieu-modifiers",
+      "classification": "insufficient-evidence-case",
+      "relation": "Vô-Chính-diệu modifiers",
+      "input": "Vô Chính diệu palace with possible Tuần/Triệt, Không, bright Nhật/Nguyệt or opposite principal star",
+      "sourceExpected": null,
+      "locator": "Tổng Hợp, printed/PDF pp.89–90 and 110–111",
+      "evidenceDirectness": "direct-conditions-but-incomplete-executable-definition",
+      "internalConflict": "The passages do not fully define state lookup, exact principal-star set, modifier precedence or whether an opposite star is contextual rather than relocated.",
+      "runtimeObserved": "Runtime keeps opposite stars in their original palaces and does not implement the complete source modifier semantics.",
+      "runtimeComparison": "NOT-COMPARABLE"
+    }
+  ],
+  "summary": {
+    "classificationCounts": {
+      "diagram-supported-research-case": 16,
+      "text-supported-research-case": 5,
+      "disputed-case": 1,
+      "insufficient-evidence-case": 1
+    },
+    "runtimeComparisonCounts": {
+      "PASS": 10,
+      "DIFF": 1,
+      "NOT-COMPARABLE": 12
+    },
+    "profileCompatible": 0,
+    "productionEligible": 0,
+    "goldenFixtures": 0
+  }
+}

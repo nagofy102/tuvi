@@ -1422,6 +1422,66 @@ production-eligible remain zero.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime,
   calculation, profile or production contract changed.
 
+## HV-K20 source-derived geometry verification
+
+K20 visually rechecked every diagram in Tân Biên pp.17–20 and the registered
+Tổng Hợp passages at pp.63–67, 89–90, 110–111 and 115. Expected values were
+transcribed before runtime comparison into
+`../test/knowledge-k20-geometry-cases.json`; the file is explicitly
+`research-only-not-golden` and does not change any candidate disposition or
+profile status.
+
+### Source cases and runtime comparison
+
+| Case class                      |  Count | Runtime PASS | Runtime DIFF | NOT-COMPARABLE |
+| ------------------------------- | -----: | -----------: | -----------: | -------------: |
+| Diagram-supported research case |     16 |           10 |            0 |              6 |
+| Text-supported research case    |      5 |            0 |            0 |              5 |
+| Disputed case                   |      1 |            0 |            1 |              0 |
+| Insufficient-evidence case      |      1 |            0 |            0 |              1 |
+| **Total**                       | **23** |       **10** |        **1** |         **12** |
+
+The ten PASS observations are bounded to four diagrammed tam-chiếu groups and
+six diagrammed xung-chiếu pairs. They agree extensionally with the current
+runtime's `+4/+8/+6` selection, but do not certify its Nam-phái profile or the
+semantic equivalence of every relation term. The six diagrammed nhị-hợp pairs
+are NOT-COMPARABLE because runtime has no such operator; they are not silently
+mapped to 六合. Hội chiếu, giáp, qualitative precedence and Vô Chính diệu
+modifiers are also NOT-COMPARABLE because runtime lacks a source-equivalent
+operator or the passages lack a complete executable definition.
+
+### Preserved source conflict
+
+Tân Biên §9.2 p.19 diagrams Sửu–Mùi as xung chiếu. Its §9.3 p.20 diagram pairs
+Sửu–Tý as nhị hợp, while the §9.4 prose example on the same page calls Tý the
+xung-chiếu palace for Sửu. K20 preserves all three assertions. Runtime observes
+Mùi as the opposite of Sửu, so the prose-only case is recorded as DIFF and
+excluded from the undisputed expected set. No editorial correction was made.
+
+### Decision boundary
+
+BA/Tử Vi specialist can review the diagram-level membership of the four
+tam-chiếu groups and six xung-chiếu pairs as bounded research evidence. The six
+nhị-hợp pairs are also directly diagram-supported, but terminology equivalence,
+directionality and target-profile adoption remain blocked. Hội chiếu versus
+hợp/chính/đối chiếu, one- or two-sided giáp semantics, Vô Chính diệu modifiers,
+relation precedence, edition identity and passage-level lineage remain
+unresolved. Consequently there are still zero profile-compatible cases, zero
+production-eligible cases and zero golden fixtures.
+
+- PASS: visual/source QA for every cited PDF page; both pinned PDF SHA-256
+  digests match the registry.
+- PASS: research-case JSON parse, IDs, classification/comparison counts,
+  provenance/locator resolution and source-expected/runtime-observation
+  separation; `npm run audit:sources`, `npm run audit:k14`, targeted Prettier
+  and `git diff --check`.
+- PASS: targeted current-runtime observation check,
+  `npx vitest run tests/unit/interpretation.test.ts` (30/30); this confirms the
+  compared implementation behavior, not source or profile correctness.
+- NOT RUN BY SCOPE: full runtime suite, typecheck, build and E2E; K20 only
+  records a read-only comparison and changes no source code, runtime contract,
+  calculation profile or production data.
+
 ## HV-K19 authoritative source resolution
 
 K19 first rechecked all 15 registered sources, then performed bounded direct

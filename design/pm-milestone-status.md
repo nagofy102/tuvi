@@ -315,6 +315,14 @@ edition/lineage và không tự nhận profile Nam phái. Không tạo golden fi
 không nâng profile-compatible/production-eligible; các quyết định thuật ngữ và
 profile vẫn chờ BA/Tử Vi specialist. Xem `../dev/knowledge-k14-book-discovery.md`.
 
+HV-K20 (18/10) kiểm tra trực quan lại toàn bộ sơ đồ Tân Biên pp.17–20 và passage
+Tổng Hợp đã đăng ký, lưu 23 ca đối chiếu research-only: 16 diagram-supported,
+5 text-supported, 1 disputed và 1 insufficient-evidence. Runtime khớp 10 ca
+Tam/Xung, khác 1 câu văn Sửu–Tý vốn mâu thuẫn với chính sơ đồ, và 12 ca không
+thể so sánh vì chưa có operator/định nghĩa thực thi tương ứng. Không sửa engine,
+không tạo golden, không nâng profile-compatible/production-eligible. Xem
+`../test/knowledge-k20-geometry-cases.json` và báo cáo K14.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
