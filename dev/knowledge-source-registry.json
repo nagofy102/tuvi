@@ -1,7 +1,7 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k13-contextual-expansion-2026-10-15",
-  "updatedAt": "2026-10-15",
+  "registryVersion": "hv-k18-geometry-evidence-2026-10-18",
+  "updatedAt": "2026-10-18",
   "sources": [
     {
       "sourceId": "viwiki-wuxing-r75475130",
@@ -697,6 +697,50 @@
         "Name equivalence cannot be used to merge the Daozang 相貌 section into the target profile."
       ],
       "supersedes": []
+    },
+    {
+      "sourceId": "zhwiki-earthly-branches-r94685149",
+      "sourceKind": "website",
+      "title": "地支",
+      "creator": "Chinese Wikipedia contributors",
+      "edition": "revision 94685149",
+      "publisher": "Wikimedia Foundation",
+      "publicationYear": "2026",
+      "language": "zh-Hant",
+      "knowledgeScopes": ["research-method", "palace-placement"],
+      "schoolClaims": [],
+      "access": {
+        "url": "https://zh.wikipedia.org/w/index.php?title=%E5%9C%B0%E6%94%AF&oldid=94685149",
+        "accessType": "free-public",
+        "lastCheckedAt": "2026-10-18",
+        "lastObservedStatus": "HTTP 200 through MediaWiki revisions API; pinned revision content reviewed",
+        "robotsOrTermsNote": "Wikimedia content is available under the page-disclosed CC BY-SA terms; only bounded relation lists and an independent paraphrase are retained."
+      },
+      "rights": {
+        "status": "open-license",
+        "license": "CC BY-SA 4.0 / GFDL as disclosed by Wikimedia",
+        "reusePolicy": "Attribute the pinned page revision; retain only bounded quotation and normalized relation facts."
+      },
+      "provenance": {
+        "locator": "組合 section; pinned revision 94685149",
+        "revision": "94685149",
+        "contentDigest": null,
+        "retrievalMethod": "MediaWiki revisions API with pinned revision ID",
+        "bibliographicIdentity": "Collaborative general encyclopedia article about Earthly Branches; not a Tử Vi manual or school-profile specification."
+      },
+      "independence": {
+        "sourceFamilyId": "wikipedia-general-encyclopedic-lineage",
+        "implementationFamilyId": null,
+        "independenceStatus": "independent",
+        "basis": "The pinned relation list is independent of the repository runtime and the two K14 Vietnamese books, but it belongs to the same broad Wikipedia family as other foundational concept sources and does not validate a Tử Vi school."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "The relation list has no inline citation in the checked section.",
+        "It validates general Earthly-Branch triples/pairs only, not Tử Vi hội chiếu, giáp, Vô Chính diệu or the active Nam-phái profile.",
+        "No production calculation profile or golden fixture is admitted from this source."
+      ],
+      "supersedes": []
     }
   ],
   "passages": [
@@ -1290,9 +1334,37 @@
         "No period placement, annual mapping, geometry, weighting or prediction is admitted.",
         "Source-described evaluation order remains non-production methodology."
       ]
+    },
+    {
+      "passageId": "k18-zhwiki-earthly-branch-relations",
+      "sourceId": "zhwiki-earthly-branches-r94685149",
+      "locator": "組合 section; pinned revision 94685149",
+      "language": "zh-Hant",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "地支三合：申子辰……巳酉丑……寅午戌……亥卯未……地支相沖：子午……丑未……寅申……卯酉……辰戌……巳亥……",
+      "supports": [
+        "general-earthly-branch-trine-groups",
+        "general-earthly-branch-opposition-pairs",
+        "general-earthly-branch-six-harmony-pairs"
+      ],
+      "profileScope": ["general-earthly-branch-relations-not-tu-vi-profile"],
+      "status": "source-backed",
+      "limitations": [
+        "The source lists relation membership but does not define Tử Vi palace semantics or aspect precedence.",
+        "The checked section lacks an inline citation, so it is supporting evidence rather than a golden oracle.",
+        "Lục hợp must not be silently equated with the Vietnamese-book term nhị hợp without specialist/profile approval."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k18-independent-geometry-evidence-review",
+      "date": "2026-10-18",
+      "reviewerRole": "PM/BA/Tu Vi Specialist/QA",
+      "action": "registered",
+      "targetIds": ["zhwiki-earthly-branches-r94685149", "k18-zhwiki-earthly-branch-relations"],
+      "basis": "HV-K18 pinned and directly reviewed a runtime-independent Earthly-Branch relation list. It corroborates the membership pattern represented by +4/+8 trines and +6 opposition and supplies distinct six-harmony pairs, but it is an uncited general encyclopedia section rather than a Vietnamese/Nam-profile Tử Vi specification. Hội chiếu, giáp and Vô Chính diệu remain unresolved; no fixture, profile compatibility or production eligibility was promoted."
+    },
     {
       "reviewId": "hv-k13-contextual-knowledge-review",
       "date": "2026-10-15",

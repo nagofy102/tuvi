@@ -1421,3 +1421,77 @@ production-eligible remain zero.
   ledger, checkpoint and both pinned PDF hashes reconcile.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime,
   calculation, profile or production contract changed.
+
+## HV-K18 independent profile and geometry validation
+
+K18 separated three evidence layers before comparison: (1) cyclic geometry of
+the twelve Earthly Branches, (2) source-specific Tử Vi interpretation terms, and
+(3) calculation policies such as calendar, star placement and school profile.
+Only layer 1 gained new independent-of-runtime evidence. The active runtime
+profile remains `nam-phai-chinese-lunar-v1`, but its calendar, leap-month,
+late-Tý, Tứ Hóa and star-placement decisions do not establish interpretation
+geometry and were not used as evidence here.
+
+### Evidence matrix
+
+| Relation      | Direct evidence and locator                                                                                                                                                           | Independent/profile assessment                                                                                                                                                                         | Concrete expected relation facts                                              | K18 result                                |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- | ----------------------------------------- |
+| Tam hợp       | Chinese Wikipedia `地支`, revision `94685149`, `組合`: 申–子–辰, 巳–酉–丑, 寅–午–戌, 亥–卯–未                                                                                         | Independent of runtime and the two K14 books; general Earthly-Branch source, not Tử Vi/Nam-profile; checked section has no inline citation                                                             | For any member, the other two are offsets +4/+8 in the canonical Tý→Hợi order | **CORROBORATED AT GENERAL GEOMETRY ONLY** |
+| Xung/đối      | Same pinned `組合` section: 子–午, 丑–未, 寅–申, 卯–酉, 辰–戌, 巳–亥                                                                                                                  | Same boundary; does not prove that every book occurrence of `xung chiếu`, `đối chiếu` or `đối cung` has identical semantics                                                                            | Each listed pair is separated by six branch positions                         | **CORROBORATED AT GENERAL GEOMETRY ONLY** |
+| Nhị hợp       | Same section lists the distinct 六合 pairs 子–丑, 寅–亥, 卯–戌, 辰–酉, 巳–申, 午–未; Tổng Hợp p.67 visually shows the corresponding paired layout                                     | General pair membership is externally corroborated, but equivalence of 六合 and the book's `nhị hợp`, directionality and target profile are not stated by the independent source                       | Candidate pair set only; not an admitted Tử Vi expected output                | **PARTIAL / TERMINOLOGY BLOCKED**         |
+| Giáp          | Tổng Hợp pp.66–67 describes two adjacent palaces and gives examples; `紫微斗數全書/卷三` revision `2268626` gives explicit flanking examples such as Mệnh at Sửu with adjacent Tý/Dần | Both Tử Vi sources use flanking language, but lineage independence and a complete profile definition are unproved                                                                                      | Adjacency hypothesis is reviewable, not golden                                | **BLOCKED**                               |
+| Hội chiếu     | Tổng Hợp p.64 groups one xung and two tam-chiếu palaces as a four-palace context; Quanshu uses `會`, `合照`, `拱照`, `沖照` non-uniformly                                             | No independent profile source proves these terms are one operator or fixes inclusion/precedence                                                                                                        | None                                                                          | **BLOCKED**                               |
+| Vô Chính diệu | Quanshu volume 3 and both Vietnamese books discuss no-main-star cases with three-direction/opposite context and exceptions                                                            | No independent profile-pinned definition identifies the exact principal-star set, borrowing semantics, state/Tuần–Triệt precedence or whether an opposite star is merely context rather than relocated | None                                                                          | **BLOCKED**                               |
+
+The general relation source is registered as
+`zhwiki-earthly-branches-r94685149`, passage
+`k18-zhwiki-earthly-branch-relations`. It is a separate implementation lineage
+and legally reusable under the disclosed Wikimedia licence, but it is not an
+independent Tử Vi school authority. The lack of an inline citation in the checked
+section prevents treating it as a golden oracle.
+
+### Runtime comparison and fixture decision
+
+The externally listed Tam-hợp groups and Xung pairs are extensionally consistent
+with runtime offsets `+4/+8/+6` over the canonical twelve-branch order. The
+listed Lục-hợp pairs are not representable by any one of those three offsets,
+which confirms that the runtime must not collapse nhị hợp into trine/opposition.
+This is a **no-observed-difference comparison for the bounded pair sets**, not a
+certification of the active profile or of interpretation semantics.
+
+No golden fixture was created. A profile-pinned golden requires an authoritative,
+edition-pinned Vietnamese/Nam-profile source that states the branch order, the
+relation pairs, term equivalences/non-equivalences and exceptions. The current
+independent source is general and uncited at the relevant list; the book sources'
+lineage relationship is unresolved. Creating expected output from the runtime or
+silently naming this source `nam-phai-chinese-lunar-v1` would violate the
+independence gate.
+
+### Profile decisions still required
+
+- **Described but not independently certified:** runtime calendar/profile ID,
+  branch-index order and implemented `+4/+8/+6` behavior.
+- **Legacy-only:** `iztro-default-vietnamese-lunar-v2` remains isolated for
+  historical audit evidence and cannot validate or override the active profile.
+- **Can close only as general geometry evidence:** Tam-hợp group membership and
+  opposite-pair membership; this does not close candidate profile dependencies.
+- **Still open:** whether `nhị hợp` equals 六合 for the target profile; the exact
+  operator for `hội/hội chiếu/hợp chiếu`; one- versus two-sided `giáp`; principal
+  star identity and contextual borrowing for Vô Chính diệu; relation precedence.
+- **Specialist decision needed:** nominate a target Vietnamese/Nam-profile
+  edition or expert-reviewed source clause, define canonical branch order and
+  relation vocabulary, and decide whether general Địa-Chi evidence may support a
+  profile clause or remains background only.
+
+No candidate disposition, profile compatibility or production eligibility was
+changed. The 391/719-page acquisition ledger and 149-record K17 dataset are
+unchanged.
+
+- PASS: pinned MediaWiki revision/locator and rights metadata checked directly.
+- PASS: visual source QA for Tổng Hợp pp.64, 66–67 and direct pinned Quanshu
+  locator review for relation/Vô Chính diệu vocabulary.
+- PASS: direct AJV registry-schema validation plus source/passage ID, reference
+  and provenance checks; `npm run audit:sources`, formatting and
+  `git diff --check`.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime,
+  calculation, profile or production contract changed.

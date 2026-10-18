@@ -297,6 +297,15 @@ records; profile-compatible và production-eligible vẫn bằng 0. Geometry là
 dependency được chọn cho scope kiểm chứng độc lập, chưa được công nhận theo
 runtime hiện có. Xem `../dev/knowledge-k14-book-discovery.md`.
 
+HV-K18 (18/10) tách geometry Địa Chi khỏi thuật ngữ luận giải và calculation
+profile. Nguồn công khai ghim revision độc lập với runtime xác nhận tập Tam hợp
+và các cặp tương xung tương ứng với `+4/+8/+6`, đồng thời liệt kê Lục hợp như một
+tập cặp riêng; tuy nhiên đây là nguồn bách khoa tổng quát, mục liên quan không có
+inline citation và không chứng nhận Tử Vi Nam phái. Vì vậy không tạo golden
+fixture, không nâng profile-compatible/production-eligible; hội chiếu, giáp, nhị
+hợp tương đương Lục hợp và Vô Chính diệu vẫn cần nguồn profile-pinned cùng quyết
+định chuyên môn. Xem `../dev/knowledge-k14-book-discovery.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`
