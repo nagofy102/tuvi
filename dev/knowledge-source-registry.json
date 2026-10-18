@@ -1,6 +1,6 @@
 {
   "schemaVersion": "knowledge-source-registry-v0.1",
-  "registryVersion": "hv-k18-geometry-evidence-2026-10-18",
+  "registryVersion": "hv-k19-authoritative-source-resolution-2026-10-18",
   "updatedAt": "2026-10-18",
   "sources": [
     {
@@ -741,6 +741,106 @@
         "No production calculation profile or golden fixture is admitted from this source."
       ],
       "supersedes": []
+    },
+    {
+      "sourceId": "k19-tu-vi-dau-so-tan-bien-local-a075aaa0",
+      "sourceKind": "book",
+      "title": "Tử Vi Đẩu Số Tân Biên",
+      "creator": "Vân Đằng Thái Thứ Lang",
+      "edition": "PDF cover claims Sài Gòn, 1956; exact publisher and edition chain unverified",
+      "publisher": null,
+      "publicationYear": "1956",
+      "language": "vi",
+      "knowledgeScopes": ["palace-placement", "cross-palace-interpretation", "research-method"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "The checked title, preface and relation chapter do not declare a Nam-phái school/profile."
+        }
+      ],
+      "access": {
+        "url": "https://thienco.vn/tu-vi-dau-so-tan-bien-van-dang-thai-thu-lang.html",
+        "accessType": "unknown",
+        "lastCheckedAt": "2026-10-18",
+        "lastObservedStatus": "Local PO-authorized research PDF inspected; 277 pages; SHA-256 pinned below",
+        "robotsOrTermsNote": "PO authorization covers internal Knowledge Base research only; it does not authorize republication of book text."
+      },
+      "rights": {
+        "status": "permission-granted",
+        "license": null,
+        "reusePolicy": "Internal research authorized by PO; retain short paraphrases and locators only, with no full-text republication or production use."
+      },
+      "provenance": {
+        "locator": "Local /book PDF; cover, preface and printed/PDF pp.17–20",
+        "revision": null,
+        "contentDigest": "sha256:a075aaa01d34f04fafb494912341745bfad30d30ca61e61ec13e6892b121dbf2",
+        "retrievalMethod": "Direct PDF text review plus rendered-page visual QA",
+        "bibliographicIdentity": "Cover names the author and Sài Gòn 1956; footer and final-page ebook credits show later digital mediation. Publisher, physical exemplar and edition chain remain unverified."
+      },
+      "independence": {
+        "sourceFamilyId": "k14-tan-bien-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "A named Vietnamese authorial compilation, but its textual dependence on classical works and relationship to later Vietnamese books have not been collated."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "Supports the author's illustrated relation system, not certification of the active Nam-phái profile.",
+        "Printed p.20 contains an internal Sửu example inconsistency: the prose names Tý as both xung and nhị-hợp while the immediately preceding diagram places Sửu opposite Mùi.",
+        "No independent edition authentication or production eligibility is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "sourceId": "k19-tu-vi-tong-hop-local-82f242d4",
+      "sourceKind": "book",
+      "title": "Tử Vi Tổng Hợp",
+      "creator": "Nguyễn Phát Lộc",
+      "edition": "PDF running title; preface dated Vĩnh Long, 18/09/1974; exact publisher and edition chain unverified",
+      "publisher": null,
+      "publicationYear": "1974",
+      "language": "vi",
+      "knowledgeScopes": ["cross-palace-interpretation", "formations", "research-method"],
+      "schoolClaims": [
+        {
+          "label": "Nam Phái",
+          "claimStatus": "unverified",
+          "evidenceNote": "The checked passages present the author's synthesis and cite other authors, but do not declare an edition-pinned Nam-phái profile."
+        }
+      ],
+      "access": {
+        "url": "https://metaisach.com/tu-vi-tong-hop/",
+        "accessType": "unknown",
+        "lastCheckedAt": "2026-10-18",
+        "lastObservedStatus": "Local PO-authorized research PDF inspected; 442 pages; SHA-256 pinned below",
+        "robotsOrTermsNote": "PO authorization covers internal Knowledge Base research only; it does not authorize republication of book text."
+      },
+      "rights": {
+        "status": "permission-granted",
+        "license": null,
+        "reusePolicy": "Internal research authorized by PO; retain short paraphrases and locators only, with no full-text republication or production use."
+      },
+      "provenance": {
+        "locator": "Local /book PDF; printed/PDF pp.63–67, 89–90, 110–111 and 115",
+        "revision": null,
+        "contentDigest": "sha256:82f242d44a1173c7c9963b88adde529f57c20bbbb3b6267159e86f3204378a37",
+        "retrievalMethod": "Direct PDF review with rendered-page visual QA; legacy VNI text used only for navigation",
+        "bibliographicIdentity": "Running title names author/work and preface supplies a 1974 date; dantocking.com footer and PDF metadata show later digital mediation. Publisher, physical exemplar and edition chain remain unverified."
+      },
+      "independence": {
+        "sourceFamilyId": "k14-tong-hop-lineage-unresolved",
+        "implementationFamilyId": null,
+        "independenceStatus": "unknown",
+        "basis": "A different named Vietnamese author, but the work cites and discusses other Tử Vi authors, including Thái Thứ Lang elsewhere; passage-level independence from Tân Biên is not established."
+      },
+      "status": "source-backed",
+      "limitations": [
+        "The relation hierarchy is qualitative authorial methodology, not a numeric precedence contract.",
+        "The book explicitly treats some giáp/hội relations as weak, one-directional or context-dependent; adjacency alone is insufficient for a universal semantic rule.",
+        "Vô Chính diệu conditions depend on unresolved star identity, brightness, Tuần/Triệt and profile semantics."
+      ],
+      "supersedes": []
     }
   ],
   "passages": [
@@ -1354,9 +1454,86 @@
         "The checked section lacks an inline citation, so it is supporting evidence rather than a golden oracle.",
         "Lục hợp must not be silently equated with the Vietnamese-book term nhị hợp without specialist/profile approval."
       ]
+    },
+    {
+      "passageId": "k19-tan-bien-relation-diagrams",
+      "sourceId": "k19-tu-vi-dau-so-tan-bien-local-a075aaa0",
+      "locator": "Part I, §9 Định hướng chiếu, printed/PDF pp.17–20; relation diagrams on pp.18–20",
+      "language": "vi",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "Tam chiếu: ba cung chiếu lẫn nhau. Xung chiếu: hai cung đối nhau, chiếu lẫn nhau. §9.3 supplies the nhị-hợp diagram.",
+      "supports": [
+        "source-defined-tam-chieu-groups",
+        "source-defined-opposite-palace-pairs",
+        "source-defined-nhi-hop-pairs",
+        "source-reading-scope"
+      ],
+      "profileScope": ["authorial-vietnamese-system-profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The source does not call its system Nam Phái or equate nhị hợp with 六合.",
+        "The p.20 prose example contradicts the p.19 opposition diagram for Sửu; diagram-level pair sets require specialist approval before fixture use.",
+        "Hội chiếu, giáp and cross-relation precedence are not fully defined here."
+      ]
+    },
+    {
+      "passageId": "k19-tong-hop-relation-semantics",
+      "sourceId": "k19-tu-vi-tong-hop-local-82f242d4",
+      "locator": "Chapter 5, printed/PDF pp.63–67: phối chiếu, hội chiếu, thế giáp and thế nhị hợp; p.115 §4 Vị trí các sao",
+      "language": "vi",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "The author ranks the focal palace, opposing palace, two trine palaces, nhị-hợp palace and two adjacent palaces, then qualifies many giáp and nhị-hợp semantics as contextual or weak.",
+      "supports": [
+        "source-defined-hoi-chieu-scope",
+        "source-defined-giap-adjacency",
+        "source-defined-nhi-hop-pairs",
+        "source-qualitative-relation-precedence",
+        "source-semantic-exceptions"
+      ],
+      "profileScope": ["nguyen-phat-loc-authorial-method-profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The author provides qualitative importance only, not numeric weights or deterministic conflict resolution.",
+        "The text rejects universal palace-name semantics for many giáp/nhị-hợp cases; star context remains required.",
+        "Passage-level independence from Tân Biên is not established."
+      ]
+    },
+    {
+      "passageId": "k19-tong-hop-vo-chinh-dieu-conditions",
+      "sourceId": "k19-tu-vi-tong-hop-local-82f242d4",
+      "locator": "Chapter 6, printed/PDF p.89; Chapter 7, printed/PDF pp.110–111",
+      "language": "vi",
+      "textPolicy": "minimal-quotation-reviewed",
+      "quote": "The author defines the case by absence of a principal star in the palace and gives separate Tuần/Triệt, Không and bright Nhật/Nguyệt or opposite-principal-star conditions.",
+      "supports": [
+        "source-defined-void-main-star-eligibility",
+        "source-defined-void-main-star-modifiers",
+        "source-defined-void-main-star-exceptions"
+      ],
+      "profileScope": ["nguyen-phat-loc-authorial-method-profile-unresolved"],
+      "status": "source-backed",
+      "limitations": [
+        "The exact fourteen-star identity set is inferred from nearby catalog context rather than restated atomically in this passage.",
+        "Brightness lookup and Tuần/Triệt semantics remain disputed and profile-unresolved.",
+        "The passage does not establish whether an opposite principal star is relocated or only interpreted contextually."
+      ]
     }
   ],
   "reviewEvents": [
+    {
+      "reviewId": "hv-k19-authoritative-source-resolution-review",
+      "date": "2026-10-18",
+      "reviewerRole": "BA/Tu Vi Specialist/Research QA",
+      "action": "registered",
+      "targetIds": [
+        "k19-tu-vi-dau-so-tan-bien-local-a075aaa0",
+        "k19-tu-vi-tong-hop-local-82f242d4",
+        "k19-tan-bien-relation-diagrams",
+        "k19-tong-hop-relation-semantics",
+        "k19-tong-hop-vo-chinh-dieu-conditions"
+      ],
+      "basis": "HV-K19 visually reviewed the pinned local PDFs and reused the already-pinned classical transcriptions. The Vietnamese books give direct authorial definitions and examples for relation vocabulary, qualitative ordering and Vô Chính diệu, but neither declares the active Nam-phái profile and their passage-level independence is unproved. Tân Biên p.20 also contains a prose/diagram inconsistency. Evidence is therefore registered for BA/specialist review only; no fixture, profile compatibility, disposition or production eligibility was promoted."
+    },
     {
       "reviewId": "hv-k18-independent-geometry-evidence-review",
       "date": "2026-10-18",

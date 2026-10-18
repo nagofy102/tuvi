@@ -306,6 +306,15 @@ fixture, không nâng profile-compatible/production-eligible; hội chiếu, gi�
 hợp tương đương Lục hợp và Vô Chính diệu vẫn cần nguồn profile-pinned cùng quyết
 định chuyên môn. Xem `../dev/knowledge-k14-book-discovery.md`.
 
+HV-K19 (18/10) kiểm kê 15 nguồn hiện có và đăng ký đúng hai PDF sách đã được PO
+cho phép nghiên cứu, nâng registry lên 17 nguồn/40 passage/14 review event. Tân
+Biên pp.17–20 định nghĩa bằng sơ đồ Tam/Xung/Nhị hợp; Tổng Hợp pp.63–67, 89 và
+110–111 cung cấp Hội chiếu, Giáp, thứ tự định tính và điều kiện Vô Chính diệu.
+Tuy nhiên Tân Biên p.20 có lỗi văn bản mâu thuẫn với sơ đồ, hai PDF chưa xác thực
+edition/lineage và không tự nhận profile Nam phái. Không tạo golden fixture,
+không nâng profile-compatible/production-eligible; các quyết định thuật ngữ và
+profile vẫn chờ BA/Tử Vi specialist. Xem `../dev/knowledge-k14-book-discovery.md`.
+
 ## Đợt hiện tại — tiếp tục A
 
 Phần dưới là lịch sử đợt `0958a68`. Quyết định mới trên baseline `49512a2`

@@ -1422,6 +1422,73 @@ production-eligible remain zero.
 - NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime,
   calculation, profile or production contract changed.
 
+## HV-K19 authoritative source resolution
+
+K19 first rechecked all 15 registered sources, then performed bounded direct
+review of the already approved local books and pinned classical transcriptions.
+No new external work was admitted: the two local PDFs are now registered as
+the research artifacts actually read, distinct from their earlier website
+preview records. Their hashes remain the K14 hashes. Tân Biên identifies Vân
+Đằng Thái Thứ Lang and claims “Sài Gòn - 1956”; Tổng Hợp identifies Nguyễn Phát
+Lộc and has a preface dated 18/09/1974. Neither PDF authenticates its publisher,
+physical exemplar or edition chain, and neither checked passage declares a
+Nam-phái profile.
+
+| Group         | Direct evidence and locator                                                                                                                                                                                                              | Best available authority                                                                             | Agreement / disagreement                                                                                                                                                                 | Decision readiness                                                                                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hội chiếu     | Tổng Hợp pp.63–65 treats hội chiếu as the focal palace plus its opposing and two tam-chiếu palaces; Quanshu vol.1 revision `7913704`, lines 130–131 separately names `四正`, `三方`, `對照`, `合照`                                      | Tổng Hợp is the clearest Vietnamese authorial definition; Quanshu is older vocabulary evidence       | Both require cross-palace review, but the classical text does not prove that `會`, `合照`, `拱照` and Vietnamese “hội chiếu” are one operator                                            | BA may approve the four-palace scope only for a Nguyễn Phát Lộc profile; active Nam-profile mapping remains **UNRESOLVED**                                      |
+| Giáp          | Tổng Hợp pp.66–67 explicitly examines the two adjacent palaces and says some configurations are strong, some one-directional and some weak; Quanshu vol.3 revision `2268626` supplies named flanking examples                            | Tổng Hợp is strongest for geometry plus semantic limits                                              | Adjacency is consistent with the classical examples; neither lineage defines a universal outcome from adjacency alone                                                                    | Two-sided adjacency can be proposed as a research relation; semantic inference and target-profile adoption remain **UNRESOLVED**                                |
+| Nhị hợp       | Tân Biên p.20 provides all six paired branches diagrammatically; Tổng Hợp p.67 reproduces the same six pair classes and limits palace-name semantics; general `地支` revision `94685149` lists the same 六合 pairs                       | Tân Biên gives the clearest Vietnamese diagram; the general source corroborates pair membership only | Pair sets agree. No checked authoritative passage explicitly states Vietnamese “nhị hợp” = Chinese `六合`, and the two Vietnamese works are not proved independent                       | Pair membership is suitable for specialist approval under a named authorial profile, but equivalence/name and active Nam-profile adoption remain **UNRESOLVED** |
+| Vô Chính diệu | Quanshu vol.3 lines 15–24 defines a Mệnh case with no `正曜` and reviews tam-phương context; Tổng Hợp pp.89 and 110–111 defines absence of a principal star and gives Tuần/Triệt, Không, bright Nhật/Nguyệt and opposite-star conditions | Tổng Hợp is the most explicit conditional Vietnamese treatment                                       | Sources agree on absence plus contextual review, but do not jointly fix the exact principal-star set, state lookup, Tuần/Triệt precedence or whether the opposite star is merely context | Eligibility wording may be proposed for an Nguyễn Phát Lộc research profile; executable target-profile semantics remain **BLOCKED**                             |
+| Precedence    | Tổng Hợp p.64 gives focal palace > opposing palace > two tam-chiếu palaces > nhị hợp > adjacent palaces; p.66–67 adds semantic exceptions; p.115 later says thủ > chiếu, xung > tam, tam > giáp/nhị-hợp                                  | Tổng Hợp is the only checked source with an explicit qualitative order                               | This is one author's qualitative method, not a numeric weight or complete conflict resolver; Tân Biên p.20 includes all relation classes but gives no ordering                           | BA may retain it as methodology, not an evaluator rule; mixed-signal and modifier precedence remain **BLOCKED**                                                 |
+
+### Source-quality and fixture decision
+
+The strongest current candidate for a Vietnamese geometry clause is Tân Biên
+§9, printed/PDF pp.17–20. Visual QA confirms the diagrams, including the six
+nhị-hợp pairs. It also exposes a material internal defect: the prose example on
+p.20 says Sửu uses Tý for both xung and nhị-hợp, whereas the p.19 diagram places
+Sửu opposite Mùi and the p.20 diagram pairs Sửu with Tý. The diagram agrees with
+the general Earthly-Branch evidence, but selecting it over the prose is an
+editorial correction that requires specialist approval, not an automatic golden.
+
+Tổng Hợp is the strongest available source for contextual semantics and
+qualitative ordering, but it is explicitly a synthesis and elsewhere names other
+authors, including Thái Thứ Lang. Different authorship therefore cannot be
+counted as independent passage lineage without bibliographic collation. The
+Wikisource Quanshu volumes are one related work family; the Wikipedia relation
+list is general and uncited at the relevant section; the Daozang text uses a
+different system and is not applicable as Nam-profile corroboration.
+
+No golden fixture was created. A fixture becomes defensible only after BA/Tử Vi
+specialist (1) chooses an edition-pinned target authority, (2) records whether
+the Tân Biên p.20 prose error is corrected by its diagrams, (3) approves or
+rejects `nhị hợp = 六合`, (4) defines whether hội/hợp/chính/đối chiếu are aliases
+or distinct operators, and (5) specifies the fourteen principal stars plus
+Tuần/Triệt/state and opposite-star semantics for Vô Chính diệu. Runtime output
+was not inspected as an expected answer.
+
+Recommended next evidence step: obtain a library catalogue or scan of the
+physical title/copyright pages for the claimed 1956 and 1974 editions, then
+collate §9/p.20 and pp.63–67 against a second authenticated printing. If a
+Vietnamese specialist selects one authorial system as the target profile, create
+small research fixtures for the four tam-chiếu groups, six opposite pairs and
+six nhị-hợp pairs from the approved diagrams; keep hội/giáp semantics and Vô
+Chính diệu modifiers out of golden data until their exceptions are separately
+pinned.
+
+No candidate disposition, profile compatibility or production eligibility was
+changed. The 391/719 acquisition ledger and 149-record dataset remain unchanged.
+
+- PASS: visual QA of Tân Biên pp.18–20 and Tổng Hợp pp.64, 66–67, 89–90,
+  110–111 and 115; direct pinned-revision review of Quanshu volumes 1/3, Daozang and the
+  modern secondary lineage page.
+- PASS: source/passages schema, IDs, references, provenance, PDF hashes,
+  `npm run audit:sources`, `npm run audit:k14`, targeted formatting and
+  `git diff --check`.
+- NOT RUN BY SCOPE: runtime tests, typecheck, build and E2E; no runtime,
+  calculation, active profile or production contract changed.
+
 ## HV-K18 independent profile and geometry validation
 
 K18 separated three evidence layers before comparison: (1) cyclic geometry of
